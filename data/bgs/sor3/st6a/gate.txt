@@ -1,0 +1,39 @@
+name			St6_Gate
+type			none
+subject_to_wall	0
+subject_to_minz	0
+shadow			0
+setlayer		-170
+offscreenkill	5000
+antigravity		100
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/rooms.c
+
+anim spawn
+	loop	0
+	delay	64
+	offset	50 100
+	frame	data/bgs/sor3/st6a/gate00.png
+
+anim idle #CLOSE
+	loop	0
+	delay	8
+	offset	50 100
+	frame	data/bgs/sor3/st6a/gate00.png
+
+anim follow1 #OPEN
+	loop	0
+	delay	8
+	offset	50 100
+	delay	180
+	sound data/sounds/sor1_gate.wav
+	@cmd dasher 0 0.5 0
+	frame	data/bgs/sor3/st6a/gate00.png
+	delay  200
+	@cmd spawn01 "P1X" -10 -90 0 4
+	@cmd spawn01 "P1X" 10 -90 0 4
+	frame	data/bgs/sor3/st6a/gate00.png
+		delay	300
+	@cmd dasher 0 0 0
+	@cmd spawn01 "BasicX3" 0 -90 0 4
+	frame	data/bgs/sor3/st6a/gate00.png

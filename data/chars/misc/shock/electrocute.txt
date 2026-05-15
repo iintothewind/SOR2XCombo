@@ -1,0 +1,30 @@
+name			Electrocute
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity 	100
+alpha			4
+toflip			1
+onspawnscript	data/scripts/onspawn/graphics.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	2
+	offset	94 44
+	frame	data/chars/misc/shock/shock00.png
+	frame	data/chars/misc/shock/shock01.png
+	frame	data/chars/misc/shock/shock02.png
+	frame	data/chars/misc/shock/shock03.png
+	frame	data/chars/misc/shock/shock04.png
+	frame	data/chars/misc/shock/shock05.png
+	frame	data/chars/misc/shock/shock06.png
+	frame	data/chars/misc/shock/shock07.png
+	frame	data/chars/misc/shock/shock08.png
+	frame	data/chars/misc/shock/shock09.png
+	frame	data/chars/misc/shock/shock10.png
+	frame	data/chars/misc/shock/shock11.png
+	frame	data/chars/misc/shock/shock12.png
+	@cmd suicide
+	frame	data/chars/misc/shock/empty.png

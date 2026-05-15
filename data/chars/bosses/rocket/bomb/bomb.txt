@@ -1,0 +1,203 @@
+name				Rocket_Bomb #THROWNED
+type				npc
+health				1
+nolife				1
+lifespan			6
+death				1
+nomove				1 0
+gfxshadow			1 1
+stealth				2
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onmoveascript		data/scripts/onmove/rocket_bomb.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	followanim 3
+	followcond 1
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	1 3 19
+	delay	80
+	offset	25 33
+	sound	data/sounds/grenade1.wav
+	burn 21 18 8 15 16 1 1 0 0 36
+	dropv 4 4 0
+	frame	data/chars/bosses/rocket/bomb/bomb00.png
+		delay	32
+		seta 	40
+	frame	data/chars/bosses/rocket/bomb/bomb00.png
+	frame	data/chars/bosses/rocket/bomb/bomb01.png
+		delay	4
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	42
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	44
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	46
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	48
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	46
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	44
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	42
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	40
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	38
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	36
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	34
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	32
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	34
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	36
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	38
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+
+anim follow1
+	followanim 3
+	followcond 1
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	1 3 19
+	delay	80
+	offset	25 33
+	sound	data/sounds/grenade1.wav
+	burn 21 18 8 15 16 1 1 0 0 36
+	dropv 4 4 0
+	frame	data/chars/bosses/rocket/bomb/bomb00.png
+		delay	32
+		seta 	40
+	frame	data/chars/bosses/rocket/bomb/bomb00.png
+	frame	data/chars/bosses/rocket/bomb/bomb01.png
+		delay	4
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	42
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	44
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	46
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	48
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	46
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	44
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	42
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	40
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	38
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	36
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	34
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	32
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	34
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	36
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	38
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+
+anim follow2
+	followanim 3
+	followcond 1
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	1 3 19
+	delay	80
+	offset	25 33
+	sound	data/sounds/grenade1.wav
+	burn 21 18 8 15 16 1 1 0 0 36
+	dropv 4 4 0
+	frame	data/chars/bosses/rocket/bomb/bomb00.png
+		delay	32
+		seta 	40
+	frame	data/chars/bosses/rocket/bomb/bomb00.png
+	frame	data/chars/bosses/rocket/bomb/bomb01.png
+		delay	4
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	42
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	44
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	46
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	48
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	46
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	44
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	42
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	40
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	38
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	36
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	34
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	32
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	34
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+		seta 	36
+	frame	data/chars/bosses/rocket/bomb/bomb02.png
+		seta 	38
+	frame	data/chars/bosses/rocket/bomb/bomb03.png
+
+anim follow3 #EXPLOSION
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	25 33
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/rocket/bomb/empty.png
+	burn 0 0 50 50 16 1 1 0 0 36
+	dropv 4 4 0
+	frame	data/chars/bosses/rocket/bomb/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/rocket/bomb/empty.png
+
+anim death #EXPLOSION
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	25 33
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/rocket/bomb/empty.png
+	burn -20 -20 90 90 150 1 1 0 0 36
+	dropv 4 4 0
+	frame	data/chars/bosses/rocket/bomb/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/rocket/bomb/empty.png

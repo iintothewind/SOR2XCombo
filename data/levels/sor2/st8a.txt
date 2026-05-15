@@ -1,0 +1,166 @@
+loadingbg	data/bgs/loading2.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor2/st8a/bk00.png		1 1 0 0 0 0 1 1 0
+panel		data/bgs/sor2/st8a/_map.png		none	none
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		480
+stagenumber 8
+spawn1		60 20 300
+spawn2		90 40 300
+spawn3		120 20 300
+spawn4		150 40 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		Stage 3
+load		RouteS 3
+load		Route_Up 3
+load		Route_Right 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		Vase 1
+flip		1
+coords		200 205 0
+at			0
+
+spawn		Vase 1
+flip		1
+coords		400 205 0
+at			0
+
+spawn		Vase 1
+flip		1
+coords		558 205 0
+at			0
+
+spawn		Vase 1
+flip		1
+coords		700 205 0
+at			0
+
+spawn		ParticleX 1
+flip		0
+coords		550 260 0
+at			50
+
+spawn		GalsiaB 1
+map			4
+weapon		Knife 1
+flip		1
+coords		600 230 0
+at			50
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		-100 230 0
+at			50
+
+spawn		JackB 1
+map			4
+flip		1
+coords		-100 230 0
+at			50
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		-100 230 0
+at			50
+
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			80
+
+
+spawn		DonovanB 1
+map			4
+weapon		Pipe 1
+flip		1
+coords		600 260 0
+at			100
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		BossX1 1
+map			4
+flip		1
+3pspawn
+coords		-100 260 0
+at			100
+
+
+spawn		JackB 1
+map			4
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		BongoB 1
+map			4
+flip		1
+coords		-100 260 0
+at			100
+
+group		4 4
+at			280
+
+spawn		BearB 1
+map			4
+flip		0
+coords		400 230 300
+at			280
+
+spawn		ParticleX 1
+flip		0
+coords		550 230 0
+at			280
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+group		2 2
+at			500
+
+spawn		RouteS 1
+flip		1
+coords		999 999 0
+at			500
+
+spawn		Route_Up 1
+flip		1
+coords		316 202 40
+at			500
+
+spawn		Route_Right 1
+flip		1
+coords		461 225 0
+at			500

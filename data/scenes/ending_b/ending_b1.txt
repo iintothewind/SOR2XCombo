@@ -1,0 +1,35 @@
+name			Ending_B1 #FADE-IN (BLACK)
+type			text
+subtype			noskip
+setlayer		1000000001
+shadow			0
+ondrawscript	data/scripts/ondraw/endings.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	32
+	offset	0 0
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod alpha 6
+	drawmethod channel 0.9
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod alpha 6
+	drawmethod channel 0.8
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.7
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.6
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.5
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.4
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.3
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.2
+	frame	data/scenes/ending_b/endb23.png
+	drawmethod channel 0.1
+	frame	data/scenes/ending_b/endb23.png
+	@cmd suicide
+	frame	data/scenes/ending_b/endb23.png

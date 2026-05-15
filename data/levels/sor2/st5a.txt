@@ -1,0 +1,235 @@
+loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st5a/_empty.png	0.8 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st5a/bg00.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg02.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg03.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg04.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg05.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg06.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg05.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg04.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg03.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg02.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st5a/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+panel			data/bgs/sor2/st5a/_map.png		none	none
+frontpanel		data/bgs/sor2/st5a/fp00.png
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+rock			1
+stagenumber 	5
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor2_st5a.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		1093 216 -459 -421 -370 -370 18 5000
+
+#########################################################################################
+
+load		Stage 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		250 270 0
+at			0
+
+spawn		Box_A 1
+flip		1
+coords		300 270 0
+at			0
+
+spawn		Box_A 1
+flip		1
+coords		630 215 0
+at			0
+
+spawn		GalsiaB 1
+map			3
+weapon		Knife 1
+flip		1
+coords		600 260 0
+at			1
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-100 230 0
+at			1
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		-100 230 0
+at			1
+
+spawn		DonovanB 1
+map			3
+weapon		Pipe 1
+flip		1
+coords		600 260 0
+at			50
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		-100 260 0
+at			50
+
+spawn		BigBenX 1
+map			2
+flip		0
+coords		350 230 300
+at			225
+
+spawn		BigBenX 1
+map			2
+flip		1
+coords		400 230 300
+at			225
+
+wait
+at			250
+
+group		4 4
+at			225
+
+spawn		BruceB 1
+map			3
+flip		1
+coords		600 260 0
+at			225
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-100 230 0
+at			225
+
+spawn		BossX1 1
+map			3
+flip		1
+coords		-100 260 0
+at			225
+
+spawn		BossX1 1
+map			3
+2pspawn
+flip		1
+coords		-100 260 0
+at			225
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-100 230 0
+at			225
+
+#########################################################################################
+
+group		1000 1000
+at			300
+
+spawn		Box_A 1
+flip		1
+coords		725 270 0
+at			300
+
+spawn		Box_A 1
+flip		1
+coords		750 240 0
+at			300
+
+spawn		BongoX 1
+map			2
+flip		1
+coords		600 230 0
+at			300
+
+spawn		BasicX1 1
+map			3
+flip		1
+coords		-50 230 0
+at			400
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		-50 270 0
+at			500
+
+spawn		Hakuyo_Wait 1
+map			2
+flip		0
+coords		950 230 0
+at			500
+
+spawn		BongoX 1
+map			3
+flip		1
+coords		600 230 0
+at			700
+
+spawn		HakuyoX 1
+map			3
+flip		0
+coords		400 240 300
+at			800
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			1000
+
+group		4 4
+at			1000
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 230 0
+at			1000
+
+spawn		BruceB 1
+map			3
+flip		1
+coords		-100 260 0
+at			1000
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 230 0
+at			1000
+
+spawn		BossX1 1
+map			3
+flip		1
+coords		-100 260 0
+at			1000
+
+spawn		BossX1 1
+map			3
+2pspawn
+flip		1
+coords		-100 260 0
+at			1000

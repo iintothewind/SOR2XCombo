@@ -1,0 +1,125 @@
+name				St6_Laser1
+type				none
+subject_to_platform	0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+candamage			player enemy
+nolife				1
+shadow				0
+antigravity			100
+alpha				3
+ondoattackscript	data/scripts/ondoattack/lasers.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 80
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 109 75 262 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser01.png
+
+anim follow1
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 96
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 77 91 326 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser02.png
+
+anim follow2
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 112
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 45 107 390 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser03.png
+
+anim follow3
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 128
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 13 123 454 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser04.png
+
+anim follow4
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 144
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 0 139 480 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser05.png
+
+anim follow5
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 160
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 0 155 480 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser06.png
+
+anim follow6
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 176
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 0 171 480 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser07.png
+
+anim follow7
+	fastattack 0
+	jugglecost 20
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1
+	delay	32
+	offset	240 192
+	frame	data/bgs/sor3/st6c/laser00.png
+		delay	5
+	shock 0 187 480 5 4 3 0 0 0 24
+	frame	data/bgs/sor3/st6c/laser08.png

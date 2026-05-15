@@ -1,0 +1,42 @@
+name				Wall
+type				obstacle
+health				1 #SCRIPT
+nolife				1
+gfxshadow			1 1
+death				1
+noatflash			1
+flash				Flash
+onspawnscript		data/scripts/onspawn/wall.c
+animationscript		data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/wall.c
+
+anim idle
+	loop	0
+	delay	64
+	offset	100 167
+	bbox 	68 57 64 112 112
+	platform 58 58 146 146 112 1000
+	frame	data/chars/obstacles/wall00.png
+	
+anim follow1
+	loop	1
+	delay	64
+	offset	100 167
+	bbox 	68 57 64 112 112
+	platform 58 58 146 146 112 1000
+	frame	data/chars/obstacles/wall01.png
+	
+anim follow2
+	loop	1
+	delay	64
+	offset	100 167
+	bbox 	68 57 64 112 112
+	platform 58 58 146 146 112 1000
+	frame	data/chars/obstacles/wall02.png
+	
+anim death
+	fshadow 0
+	loop	0
+	delay	128
+	offset	100 167
+	frame	data/chars/obstacles/wall03.png

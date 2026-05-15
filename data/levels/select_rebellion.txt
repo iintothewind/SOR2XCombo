@@ -1,0 +1,2 @@
+allowselect Galsia Donovan Signal Fog Hakuyo Kusanagi Raven Big-Ben Electra_ Jack Slum Vice Garnet Macleod Tiger P-1 Bongo Electra Ash Bruce Roo Barbon Jet Zamza Abadede R._Bear Particle Shiva Mr._X Monalisa Break Yamato Robot_X Jet_ Shiva_ Neo._X Harakiri Tracker Ringmaster
+background	data/bgs/select_rebellion.png

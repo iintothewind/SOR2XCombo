@@ -1,0 +1,90 @@
+##MAIN
+name				AbadedeS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/abadede/idle00.png data/chars/bosses/abadede/alter1.png
+remap				data/chars/bosses/abadede/idle00.png data/chars/bosses/abadede/alter2.png
+remap				data/chars/bosses/abadede/idle00.png data/chars/bosses/abadede/alter3.png
+remap				data/chars/bosses/abadede/idle00.png data/chars/bosses/abadede/alter3.png
+remap				data/chars/bosses/abadede/idle00.png data/chars/bosses/abadede/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	152 199
+	frame	data/chars/bosses/abadede/run00.png
+	frame	data/chars/bosses/abadede/run00.png
+	frame	data/chars/bosses/abadede/run01.png
+	frame	data/chars/bosses/abadede/run02.png
+	frame	data/chars/bosses/abadede/run03.png
+	frame	data/chars/bosses/abadede/run04.png
+	frame	data/chars/bosses/abadede/run00.png
+	frame	data/chars/bosses/abadede/run00.png
+
+anim freespecial3 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	152 199
+	frame	data/chars/bosses/abadede/run00.png
+	frame	data/chars/bosses/abadede/run01.png
+	frame	data/chars/bosses/abadede/run02.png
+	frame	data/chars/bosses/abadede/run03.png
+	frame	data/chars/bosses/abadede/run04.png
+	frame	data/chars/bosses/abadede/run00.png
+
+anim follow1
+	loop	0
+	delay	1000
+	offset	152 199
+	frame	data/chars/bosses/abadede/slam00.png
+	frame	data/chars/bosses/abadede/slam01.png
+	frame	data/chars/bosses/abadede/slam02.png
+	frame	data/chars/bosses/abadede/slam03.png
+	frame	data/chars/bosses/abadede/slam03.png
+	frame	data/chars/bosses/abadede/slam03.png
+	frame	data/chars/bosses/abadede/slam00.png
+	frame	data/chars/bosses/abadede/slam01.png
+	frame	data/chars/bosses/abadede/slam02.png
+	frame	data/chars/bosses/abadede/slam03.png
+	frame	data/chars/bosses/abadede/slam03.png
+	frame	data/chars/bosses/abadede/slam03.png
+	frame	data/chars/bosses/abadede/grabatk02.png
+	frame	data/chars/bosses/abadede/special00.png
+	frame	data/chars/bosses/abadede/special01.png
+	frame	data/chars/bosses/abadede/special01.png
+	frame	data/chars/bosses/abadede/special02.png
+	frame	data/chars/bosses/abadede/special02.png
+	frame	data/chars/bosses/abadede/special03.png
+
+anim follow7 #counter
+	loop	0
+	delay	1000
+	offset	152 199
+	frame	data/chars/bosses/abadede/blitz00.png
+	frame	data/chars/bosses/abadede/blitz00.png
+	frame	data/chars/bosses/abadede/blitz00.png
+	frame	data/chars/bosses/abadede/blitz01.png
+	frame	data/chars/bosses/abadede/blitz01.png
+	frame	data/chars/bosses/abadede/blitz02.png
+	frame	data/chars/bosses/abadede/blitz03.png
+	frame	data/chars/bosses/abadede/blitz04.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	152 199
+	frame	data/chars/bosses/abadede/block00.png
+	frame	data/chars/bosses/abadede/block00.png
+	frame	data/chars/bosses/abadede/block00.png
+	frame	data/chars/bosses/abadede/block00.png
+	frame	data/chars/bosses/abadede/block00.png
+	frame	data/chars/bosses/abadede/block00.png

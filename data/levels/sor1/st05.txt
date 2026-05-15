@@ -1,0 +1,853 @@
+loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor1/st05/Back01.png
+bglayer		data/bgs/sor1/st05/bk00.png		0.8 1 0 0 0 0 -1 1 1 0 1 0 0 0 1
+bglayer		data/bgs/sor1/st05/bk01.png		0.6 1 0 0 0 0 -1 1 1 0 3 0.1 1.2 0 3
+panel		data/bgs/sor1/st05/Pn01.png
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+rock		1
+order		a
+settime		0
+stagenumber 5
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+
+cameratype 1
+
+#########################################################################################
+
+light		-128 -128
+at			0
+
+shadowcolor -2
+at			0
+
+shadowalpha 6
+at			0
+
+#########################################################################################
+
+load		Stage 3
+#load		RouteS 3
+#load		Route_Down 3
+#load		Route_Right 3
+load		St1_Rain 3
+load		St1_Drop 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		St1_Drop 1
+flip		1
+coords		-119 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		-119 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		201 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		201 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		521 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		521 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		841 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		841 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1161 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1161 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1481 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1481 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1801 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1801 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2121 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2121 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2441 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2441 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2761 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2761 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3081 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3081 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3401 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3401 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3721 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3721 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		4041 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		4041 230
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		4361 155
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		4361 230
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		1 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		481 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		961 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		1441 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		1921 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		2401 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		2881 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		3361 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		3841 200
+at			0
+
+spawn		St1_Rain 1
+map			1
+flip		1
+coords		4020 200
+at			0
+
+#########################################################################################
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		550 200 0
+at			1
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			3
+flip		0
+coords		600 200 0
+at			50
+
+spawn		SignalX 1
+map			3
+flip		0
+coords		-100 200 0
+at			100
+
+spawn		ElectraX 1
+map			3
+flip		0
+coords		700 200 0
+at			150
+
+spawn		BasicX1 1
+map			3
+flip		0
+coords		-50 260 0
+at			200
+
+spawn		ReineX 1
+map			3
+flip		0
+coords		550 200 0
+at			250
+
+spawn		BigBenX 1
+map			3
+flip		0
+coords		-100 260 0
+at			250
+
+wait
+at			288
+
+group		4 4
+at			288
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			3
+flip		0
+coords		550 220 0
+at			288
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			4
+flip		0
+coords		600 240 0
+at			288
+
+spawn		JackB 1
+weapon		Knife 1
+map			4
+flip		0
+coords		650 260 0
+at			288
+
+spawn		JackB 1
+weapon		Knife 1
+map			4
+flip		0
+coords		-50 260 0
+at			288
+
+spawn		KusanagiB 1
+weapon	Kunai 1
+map			3
+flip		0
+coords		-100 260 0
+at			288
+
+spawn		KusanagiB 1
+weapon	Kunai 1
+map			4
+flip		0
+coords		550 220 0
+at			288
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			4
+flip		0
+coords		600 240 0
+at			288
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			4
+flip		0
+coords		650 260 0
+at			288
+
+#########################################################################################
+
+group		1000 1000
+at			300
+
+spawn		Barrel_B 1
+flip		1
+coords		520 220 0
+at			300
+
+spawn		Barrel_B 1
+flip		1
+coords		600 220 0
+at			300
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			3
+flip		0
+coords		550 200 0
+at			600
+
+spawn		SignalX 1
+map			3
+flip		0
+coords		-100 200 0
+at			700
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		-50 260 0
+at			800
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			3
+flip		0
+coords		550 200 0
+at			900
+
+wait
+at			1059
+
+group		1 1
+at			1059
+
+group		8 8
+at			1059
+
+spawn		GalsiaB 1
+map			4
+weapon		Knife 1
+flip		0
+coords		550 200 0
+at			1059
+
+spawn		GalsiaB 1
+map			4
+weapon		Knife 1
+flip		0
+coords		550 220 0
+at			1059
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			3
+flip		0
+coords		550 240 0
+at			1059
+
+spawn		GalsiaB 1
+map			3
+weapon		Knife 1
+flip		0
+coords		550 260 0
+at			1059
+
+spawn		KusanagiB 1
+map			4
+weapon	Sword 1
+flip		0
+coords		-50 200 0
+at			1059
+
+spawn		KusanagiB 1
+map			4
+weapon	Sword 1
+flip		0
+coords		-50 220 0
+at			1059
+
+spawn		KusanagiB 1
+map			4
+weapon	Sword 1
+flip		0
+coords		-50 240 0
+at			1059
+
+spawn		KusanagiB 1
+map			4
+weapon	Sword 1
+flip		0
+coords		-50 260 0
+at			1059
+
+#########################################################################################
+
+group		1000 1000
+at			1100
+
+spawn		Barrel_B 1
+flip		1
+coords		1012 220 0
+at			1100
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		550 200 0
+at			1200
+
+spawn		ElectraX 1
+map			3
+flip		0
+coords		550 240 0
+at			1200
+
+spawn		HakuyoX 1
+map			3
+flip		0
+coords		550 220 0
+at			1300
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		550 260 0
+at			1400
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			3
+flip		0
+coords		-50 200 0
+at			1500
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		-50 260 0
+at			1600
+
+spawn		SignalX 1
+map			3
+flip		0
+coords		-100 200 0
+at			1700
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		400 200 0
+at			1750
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		-50 260 0
+at			1750
+
+wait
+at			1824
+
+group		4 4
+at			1824
+
+spawn		BossX1 1
+map			3
+flip		0
+coords		-50 260 0
+at			1824
+
+spawn		BongoX 1
+map			3
+flip		0
+coords		550 200 0
+at			1824
+
+#########################################################################################
+
+wait
+at      2600
+
+
+group		1000 1000
+at			1850
+
+spawn		Barrel_B 1
+flip		1
+coords		1107 220 0
+at			1850
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			4
+flip		1
+coords		550 163 0
+at			1915
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			4
+flip		0
+coords		650 163 0
+at			1915
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			4
+flip		0
+coords		750 163 0
+at			1915
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			4
+flip		0
+coords		850 163 0
+at			1915
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			4
+flip		0
+coords		950 163 0
+at			1915
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		-50 260 0
+at			2000
+
+spawn		SignalX 1
+map			3
+flip		0
+coords		-50 260 0
+at			2100
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			3
+flip		0
+coords		550 200 0
+at			2550
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		600 260 0
+at			2550
+
+group		1 1
+at			2592
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		600 200 0
+at			2592
+
+#########################################################################################
+
+wait
+at			3200
+
+
+group		1000 1000
+at			2650
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			1
+flip		0
+coords		750 163 0
+at			2650
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			1
+flip		0
+coords		825 163 0
+at			2650
+
+spawn		HakuyoX 1 #HAKUYO JUMP
+map			1
+flip		0
+coords		900 163 0
+at			2650
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		550 200 0
+at			2700
+
+spawn		RavenX 1
+map			3
+flip		0
+coords		600 200 0
+at			2700
+
+spawn		HakuyoX 1
+map			3
+flip		0
+coords		650 200 0
+at			2700
+
+spawn		ReineX 1
+map			3
+flip		0
+coords		700 200 0
+at			2800
+
+spawn		ElectraX 1
+map			3
+flip		0
+coords		-50 260 0
+at			3000
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			3
+flip		0
+coords		-100 260 0
+at			3000
+
+spawn		KusanagiB 1
+weapon	Kunai 1
+map			3
+flip		0
+coords		-150 260 0
+at			3000
+
+wait
+at			3363
+
+group		5 5
+at			3363
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		550 220 0
+at			3363
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		550 240 0
+at			3363
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			3
+flip		0
+coords		550 260 0
+at			3363
+
+spawn		SignalX 1
+map			3
+flip		0
+coords		-50 220 0
+at			3363
+
+spawn		BigBenX 1
+map			3
+flip		0
+coords		-100 240 0
+at			3363
+
+#########################################################################################
+
+wait
+at      3900
+
+group		4 4
+at			3900
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			3
+flip		0
+coords		550 200 0
+at			3500
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			3
+flip		0
+coords		550 220 0
+at			3600
+
+spawn		BasicX1 1
+map			3
+flip		0
+coords		-50 220 0
+at			3600
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		550 200 0
+at			3700
+
+spawn		BasicX2 1
+map			3
+flip		0
+coords		550 240 0
+at			3750
+
+spawn		BasicX1 1
+map			3
+flip		0
+coords		-50 200 0
+at			3800
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		-50 240 0
+at			3850
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			3
+flip		0
+coords		-50 260 0
+at			3900
+
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			4019
+
+group		1000 1000
+at			4019
+
+spawn		Barrel_B 1
+flip		1
+coords	180 200 300
+at			0
+
+group		4 4
+at			4019
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			3
+flip		0
+coords		550 200 0
+at			4019
+
+spawn		SignalX 1
+map			3
+flip		0
+coords		550 240 0
+at			4019
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		-50 220 0
+at			4019
+
+group		4 4
+at			4019
+
+spawn		BearB 1
+flip		0
+boss   1
+map			4
+coords		550 205 0
+at			4019
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+#group		2 2
+#at			4020
+
+#spawn		RouteS 1
+#flip		1
+#coords		999 999 0
+#at			4020
+
+#spawn		Route_Right 1
+#flip		1
+#coords		460 200 0
+#at			4020
+
+#spawn		Route_Down 1
+#flip		1
+#coords		234 294 0
+#at			4020

@@ -1,0 +1,411 @@
+loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st2c/_empty.png	1 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st2c/bg00.png		0.8 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st2c/bg01.png		0.8 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st2c/bg02.png		0.8 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st2c/bg03.png		0.8 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st2c/water00.png	0.8 1 0 175 0 0 1 1 1 0 1 5 300 0.5
+panel			data/bgs/sor2/st2c/_map.png		none	none
+frontpanel		data/bgs/sor2/st2c/fp00.png
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber 	2
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor2_st2c.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		0 275 -1000 -1000 50 50 38 5000
+
+#########################################################################################
+
+load		St2_Lamp 3
+
+#########################################################################################
+
+spawn		St2_Lamp 1
+flip		1
+coords		1 180 0
+at			0
+
+#########################################################################################
+
+spawn		1up
+flip		1
+coords		20 220 0
+at			0
+
+spawn		Roadblock_A 1
+flip		1
+coords		240 240 0
+at			0
+
+spawn		Roadblock_A 1
+flip		1
+coords		470 270 0
+at			0
+
+spawn		Roadblock_A 1
+flip		1
+coords		500 230 0
+at			0
+
+spawn		JackB 1
+map			1
+flip		0
+coords		600 260 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		0
+coords		650 260 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		700 260 0
+at			0
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		-100 260 0
+at			50
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 260 0
+at			50
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 230 0
+at			50
+
+wait
+at			350
+
+group		4 4
+at			50
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			50
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 260 0
+at			100
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-100 230 0
+at			100
+
+spawn		BongoB 1
+map			0
+flip		1
+coords		600 260 0
+at			200
+
+spawn		JackB 1
+map			1
+flip		1
+coords		-100 230 0
+at			200
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 260 0
+at			250
+
+spawn		KusanagiB 1
+map			1
+weapon		Sword 1
+flip		1
+coords		-100 260 0
+at			250
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-100 230 0
+at			300
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 260 0
+at			300
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 230 0
+at			300
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		600 260 350
+at			320
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		600 260 350
+at			320
+
+#########################################################################################
+
+group		1000 1000
+at			360
+
+spawn		Roadblock_A 1
+flip		1
+coords		620 250 0
+at			360
+
+spawn		Roadblock_A 1
+flip		1
+coords		520 230 0
+at			360
+
+spawn		Roadblock_A 1
+flip		1
+coords		570 270 0
+at			360
+
+group		4 4
+at			400
+
+spawn		GalsiaB 1
+map			2
+flip		1
+coords		520 240 0
+at			400
+
+spawn		JackB 1
+map			2
+flip		1
+coords		-100 240 0
+at			400
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		-100 240 0
+at			400
+
+spawn		GalsiaB 1
+map			2
+flip		1
+coords		900 240 0
+at			400
+
+spawn		DonovanB 1
+map			2
+flip		1
+coords		-100 240 0
+at			400
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 220 0
+at			400
+
+spawn		JackB 1
+map			1
+flip		1
+coords		-100 260 0
+at			400
+
+spawn		BongoB 1
+map			1
+flip		1
+coords		-150 240 0
+at			400
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			400
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-250 220 0
+at			400
+
+spawnscript data/scripts/levelspawn/music_boss2.c
+at			795
+
+spawn		JetB 1
+map			4
+flip		1
+boss		1
+coords		-100 240 200
+at			795
+
+spawn		JetX 1
+flip		4
+coords		600 240 200
+at			795
+
+#########################################################################################
+
+group		4 4
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		HakuyoX 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BongoB 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BigBenX 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		BongoB 1
+map			1
+flip		1
+coords		-100 260 0
+at			795
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			795
+
+spawn		Signal_Bottle 1
+map			1
+flip		1
+coords		-100 260 0
+at			795

@@ -1,0 +1,46 @@
+name			St1_Chains
+type			panel
+shadow			0
+speed			5
+scroll			-0.5
+setlayer		1010
+ondrawscript	data/scripts/ondraw/chains.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	8
+	offset	1 180
+	frame	data/bgs/sor3/st1a/chains00.png
+	
+anim follow1
+	loop	0
+	delay	8
+	offset	1 180
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains01.png
+	frame	data/bgs/sor3/st1a/chains02.png
+	frame	data/bgs/sor3/st1a/chains01.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains04.png
+	frame	data/bgs/sor3/st1a/chains05.png
+	frame	data/bgs/sor3/st1a/chains04.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains01.png
+	frame	data/bgs/sor3/st1a/chains02.png
+	frame	data/bgs/sor3/st1a/chains01.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains04.png
+	frame	data/bgs/sor3/st1a/chains05.png
+	frame	data/bgs/sor3/st1a/chains04.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains01.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains04.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains01.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	frame	data/bgs/sor3/st1a/chains04.png
+	frame	data/bgs/sor3/st1a/chains00.png
+	@cmd aniChange 0 "ANI_IDLE"
+	frame	data/bgs/sor3/st1a/chains00.png

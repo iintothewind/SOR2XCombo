@@ -1,0 +1,15 @@
+name			St8_Doctor
+type			none
+shadow			0
+setlayer		-10
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	12
+	offset	32 44
+	@cmd dasher -0.5 0 0
+	@cmd offScreenKill 50 0
+	frame	data/bgs/sor3/st8c/doctor00.png
+	@cmd offScreenKill 50 0
+	frame	data/bgs/sor3/st8c/doctor01.png

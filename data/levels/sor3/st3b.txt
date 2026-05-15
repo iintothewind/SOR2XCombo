@@ -1,0 +1,123 @@
+loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st3b/_empty.png	0 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor3/st3b/bg00.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg01.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg02.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg03.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg04.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg05.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg06.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg05.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg04.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg03.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg02.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st3b/bg01.png		0.4 1 0 0 0 0 -1 1 0
+panel			data/bgs/sor3/st3b/_map.png		none	none
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+direction		left
+stagenumber		3
+spawn1			90 10 300
+spawn2			90 20 300
+spawn3			90 30 300
+spawn4			90 40 300
+updatescript	data/scripts/updatelevel/sor3_st3b.c
+
+#########################################################################################
+
+light		128 128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		St3_Column 3
+
+#########################################################################################
+
+spawn		St3_Column 1
+flip		1
+coords		-950 240 0
+at			0
+
+#########################################################################################
+
+spawn		Bulldozer 1
+flip		0
+coords		520 230 0
+at			0
+
+spawn		Wall 1
+mp			10
+flip		1
+coords		200 268 0
+at			0
+
+spawn		Wall 1
+mp			20
+flip		1
+coords		100 268 0
+at			0
+
+spawn		Wall 1
+mp			30
+flip		1
+coords		0 268 0
+at			0
+
+spawn		Wall 1
+mp			40
+flip		1
+coords		-100 268 0
+at			0
+
+spawn		Wall 1
+mp			50
+flip		1
+coords		-200 268 0
+at			0
+
+spawn		Wall 1
+mp			60
+flip		1
+coords		-300 268 0
+at			0
+
+spawn		Wall 1
+mp			70
+flip		1
+coords		-400 268 0
+at			0
+
+spawn		Wall 1
+mp			80
+flip		1
+coords		-500 268 0
+at			0
+
+spawn		Wall 1
+mp			90
+flip		1
+coords		-600 268 0
+at			0
+
+spawn		Wall 1
+mp			100
+flip		1
+coords		-700 268 0
+at			0
+
+spawn		Wall 1
+mp			110
+flip		1
+coords		-800 268 0
+at			0
+
+spawn		Wall 1
+mp			120
+flip		1
+coords		-870 268 0
+at			0

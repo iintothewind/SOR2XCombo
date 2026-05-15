@@ -1,0 +1,92 @@
+##MAIN
+name				Moto_Repeat #REPEAT BIKE UNTIL GET HIT
+type				enemy
+subtype				biker
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##ENERGY
+mp					1
+mprate  			1 #SCRIPT
+
+##MISC
+atchain				0
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+
+##SCRIPTS
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/moto.c
+onspawnscript		data/scripts/onspawn/moto.c
+onpainscript		data/scripts/ondeath/moto.c
+animationscript		data/scripts/animation/default.c
+
+##ICONS
+icon				data/chars/enemies/fog/icon.png 1
+
+##REMAPS
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter1.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter2.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter3.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter4.png
+
+##LOADS
+load				FogB
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	4
+	offset	145 179
+	frame	data/chars/enemies/fog/mounted00.png
+
+anim idle
+	fastattack 1
+	jugglecost 2
+	forcedirection 0
+	otg 1
+	loop	1
+	delay	6
+	offset	145 179
+	bbox 	123 101 47 80
+	hitfx	data/sounds/HighPunch.wav
+	attack 99 135 101 46 24 1 1 0 0 12
+	frame	data/chars/enemies/fog/mounted00.png
+	frame	data/chars/enemies/fog/mounted01.png
+
+anim follow1
+	fastattack 1
+	jugglecost 2
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	6
+	offset	145 179
+	bbox 	123 101 47 80
+	hitfx	data/sounds/HighPunch.wav
+	attack 99 135 101 46 24 1 1 0 0 12
+	frame	data/chars/enemies/fog/mounted00.png
+	frame	data/chars/enemies/fog/mounted01.png
+
+anim pain
+	fastattack 1
+	jugglecost 2
+	forcedirection 0
+	otg 1
+	loop	1
+	delay	8
+	offset	145 179
+	hitfx	data/sounds/HighPunch.wav
+	attack 99 135 101 46 24 1 1 0 0 12
+	frame	data/chars/enemies/fog/unmounted00.png
+	frame	data/chars/enemies/fog/unmounted01.png

@@ -1,0 +1,21 @@
+name			St6_LaserGrid
+type			none
+shadow			0
+alpha			1
+offscreenkill	5000
+
+anim idle #BLUE LOCK
+	loop	1
+	delay	2
+	offset	63 88
+	frame	data/bgs/sor3/st6a/laser00.png
+		delay	3
+	frame	data/bgs/sor3/st6a/laser02.png
+	
+anim follow1 #RED LOCK
+	loop	1
+	delay	2
+	offset	63 88
+	frame	data/bgs/sor3/st6a/laser01.png
+		delay	3
+	frame	data/bgs/sor3/st6a/laser02.png

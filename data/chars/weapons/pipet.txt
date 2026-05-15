@@ -1,0 +1,68 @@
+name			PipeT #THROWNED
+type			none
+subtype			weapon
+nolife			1
+lifespan		4
+offscreenkill	50
+remove			0
+jugglepoints	99
+gfxshadow		1 1
+noatflash 		1
+flash			NoFlash
+didhitscript	data/scripts/didhit/default.c
+ondrawscript	data/scripts/ondraw/weapons.c
+onfallscript	data/scripts/onfall/weapons.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	fastattack 1
+	forcedirection -1
+	otg 1
+	hitflash flash
+	loop	1
+	delay	4
+	offset	51 55
+	bbox 	25 48 52 7
+	hitfx	data/sounds/Pipe.wav
+	attack 25 48 52 7 16 1 0 0 10 24
+	frame	data/chars/weapons/pipe00.png
+	attack 45 48 12 12 16 1 0 0 10 24
+	bbox 	45 48 12 12
+	sound	data/sounds/Whoosh4.wav
+	frame	data/chars/weapons/pipe01.png
+	attack 46 28 8 51 16 1 0 0 10 24
+	bbox 	46 28 8 51
+	frame	data/chars/weapons/pipe02.png
+	attack 45 48 12 12 16 1 0 0 10 24
+	bbox 	45 48 12 12
+	frame	data/chars/weapons/pipe03.png
+	attack 23 49 51 7 16 1 0 0 10 24
+	bbox 	23 49 51 7
+	frame	data/chars/weapons/pipe04.png
+	attack 45 48 12 12 16 1 0 0 10 24
+	bbox 	45 48 12 12
+	frame	data/chars/weapons/pipe05.png
+	attack 46 28 8 51 16 1 0 0 10 24
+	bbox 	46 28 8 51
+	frame	data/chars/weapons/pipe06.png
+	attack 45 48 12 12 16 1 0 0 10 24
+	bbox 	45 48 12 12
+	frame	data/chars/weapons/pipe07.png
+
+anim fall
+	landframe 9
+	loop	1 1 9
+	delay	4
+	offset	51 55
+	sound	data/sounds/Clash3.wav
+	frame	data/chars/weapons/pipe07.png
+	sound	data/sounds/Whoosh4.wav
+	frame	data/chars/weapons/pipe00.png
+	frame	data/chars/weapons/pipe01.png
+	frame	data/chars/weapons/pipe02.png
+	frame	data/chars/weapons/pipe03.png
+	frame	data/chars/weapons/pipe04.png
+	frame	data/chars/weapons/pipe05.png
+	frame	data/chars/weapons/pipe06.png
+	frame	data/chars/weapons/pipe07.png
+	frame	data/chars/weapons/pipe08.png

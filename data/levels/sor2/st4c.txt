@@ -1,0 +1,294 @@
+loadingbg	data/bgs/loading1.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor2/st4c/bg00.png
+panel		data/bgs/sor2/st4c/_map.png		none	none
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		0
+vbgspeed	12 0
+stagenumber 4
+spawn1		200 20 300
+spawn2		230 40 300
+spawn3		260 20 300
+spawn4		290 40 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		0 285 -1000 -1000 240 65 80 5000
+
+wall		240 285 0 175 1175 1175 80 5000
+
+wall 		0 220 0 0 480 480 10 5000
+
+#########################################################################################
+
+group		1 4
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		200 260 300
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		260 260 400
+at			0
+
+spawn		BruceB 1
+map			2
+flip		0
+coords		220 260 500
+at			0
+
+spawn		BongoX 1
+map			2
+flip		0
+coords		220 260 500
+at			0
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		280 260 300
+at			0
+
+spawn		BossX1 1
+map			4
+flip		1
+2pspawn
+coords		280 260 300
+at			0
+
+#########################################################################################
+
+group		1 2
+at			0
+
+spawn		HakuyoX 1
+map			3
+flip		0
+coords		200 260 300
+at			0
+
+spawn		HakuyoX 1
+map			3
+flip		1
+coords		280 260 300
+at			0
+
+#########################################################################################
+
+group		1 4
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		200 260 300
+at			0
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		260 260 400
+at			0
+
+
+spawn		BongoX 1
+map			2
+flip		0
+coords		200 260 300
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		260 260 400
+at			0
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		280 260 300
+at			0
+
+spawn		BossX1 1
+map			4
+flip		1
+2pspawn
+coords		280 260 300
+at			0
+
+#########################################################################################
+
+group		1 4
+at			0
+
+spawn		Apple 1
+flip		1
+coords		150 260 300
+at			0
+
+spawn		Egg 1
+flip		1
+coords		200 260 300
+at			0
+
+spawn		Chicken 1
+flip		1
+coords		250 260 300
+at			0
+
+spawn		ZamzaB 1
+map			4
+flip		1
+coords		280 260 300
+at			0
+
+#########################################################################################
+
+group		1 4
+at			0
+
+spawn		BruceB 1
+map			2
+flip		0
+coords		200 260 300
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		280 260 600
+at			0
+
+spawn		HakuyoX 1
+map			3
+flip		0
+coords		210 260 700
+at			0
+
+spawn		HakuyoX 1
+map			3
+flip		1
+coords		270 260 800
+at			0
+
+spawn		BossX1 1
+map			2
+flip		0
+coords		220 260 300
+at			0
+
+spawn		BossX1 1
+map			2
+flip		0
+2pspawn
+coords		220 260 300
+at			0
+
+#########################################################################################
+
+group		1 4
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		200 260 300
+at			0
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		260 260 400
+at			0
+
+spawn		BongoX 1
+map			2
+flip		1
+coords		280 260 600
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		210 260 700
+at			0
+
+spawn		BossX1 1
+map			2
+flip		1
+coords		270 260 300
+at			0
+
+spawn		BossX1 1
+map			2
+2pspawn
+flip		1
+coords		270 260 300
+at			0
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			0
+
+
+group		1 4
+at			0
+
+spawn		KusanagiB 1
+weapon	Sword 1
+map			4
+flip		0
+coords		200 260 300
+at			0
+
+spawn		BruceB 1
+map			2
+flip		0
+coords		220 260 500
+at			0
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			4
+flip		1
+coords		260 260 400
+at			0
+
+spawn		BongoX 1
+map			2
+flip		0
+coords		220 260 500
+at			0
+
+spawn		BossX1 1
+map			1
+flip		1
+coords		260 260 300
+at			0
+
+spawn		BossX1 1
+map			1
+2pspawn
+flip		1
+coords		260 260 300
+at			0
+
+spawn		HakuyoX 1
+map			3
+flip		1
+coords		280 260 300
+at			0

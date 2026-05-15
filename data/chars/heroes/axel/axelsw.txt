@@ -1,0 +1,134 @@
+##MAIN
+name				AxelSW
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter1.png
+remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter2.png
+remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter3.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special201.png
+	frame	data/chars/heroes/axel/sword/special204.png
+	frame	data/chars/heroes/axel/sword/special205.png
+
+anim freespecial2 #SUPER
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/run00.png
+	frame	data/chars/heroes/axel/run01.png
+	frame	data/chars/heroes/axel/run02.png
+	frame	data/chars/heroes/axel/run03.png
+	frame	data/chars/heroes/axel/run04.png
+	frame	data/chars/heroes/axel/run05.png
+
+anim freespecial7
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/rage00.png
+	frame	data/chars/heroes/axel/rage04.png
+	frame	data/chars/heroes/axel/rage05.png
+	frame	data/chars/heroes/axel/rage06.png
+	frame	data/chars/heroes/axel/special211.png
+	frame	data/chars/heroes/axel/special212.png
+	frame	data/chars/heroes/axel/special213.png
+
+anim riseattack
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/dodge00.png
+	frame	data/chars/heroes/axel/dodge01.png
+	frame	data/chars/heroes/axel/dodge02.png
+	frame	data/chars/heroes/axel/dodge03.png
+	frame	data/chars/heroes/axel/dodge04.png
+	frame	data/chars/heroes/axel/dodge05.png
+
+anim runattack #SWORD BLITZ
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/sword/runatk00.png
+	frame	data/chars/heroes/axel/sword/runatk01.png
+	frame	data/chars/heroes/axel/sword/runatk01.png
+	frame	data/chars/heroes/axel/sword/special205.png
+
+anim follow1 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/sword/runatk01.png
+	frame	data/chars/heroes/axel/sword/special206.png
+	frame	data/chars/heroes/axel/sword/special206.png
+	frame	data/chars/heroes/axel/sword/special206.png
+	frame	data/chars/heroes/axel/sword/special206.png
+
+anim follow3 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/bosses/shiva/rage00.png
+	frame	data/chars/heroes/axel/special04.png
+	frame	data/chars/heroes/axel/special04.png
+	frame	data/chars/heroes/axel/special04.png
+	frame	data/chars/heroes/axel/special04.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/block00.png
+	frame	data/chars/heroes/axel/rage00.png
+	frame	data/chars/heroes/axel/rage04.png
+	frame	data/chars/heroes/axel/rage04.png
+	frame	data/chars/heroes/axel/rage05.png
+	frame	data/chars/heroes/axel/rage05.png
+	frame	data/chars/heroes/axel/rage06.png
+	frame	data/chars/heroes/axel/special211.png
+	frame	data/chars/heroes/axel/special212.png
+	frame	data/chars/heroes/axel/special213.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/dodge00.png
+	frame	data/chars/heroes/axel/dodge01.png
+	frame	data/chars/heroes/axel/dodge02.png
+	frame	data/chars/heroes/axel/dodge03.png
+	frame	data/chars/heroes/axel/dodge04.png
+	frame	data/chars/heroes/axel/dodge05.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	62 126
+	frame	data/chars/heroes/axel/dodge00.png
+	frame	data/chars/heroes/axel/dodge01.png
+	frame	data/chars/heroes/axel/dodge02.png
+	frame	data/chars/heroes/axel/dodge03.png
+	frame	data/chars/heroes/axel/dodge04.png
+	frame	data/chars/heroes/axel/dodge05.png

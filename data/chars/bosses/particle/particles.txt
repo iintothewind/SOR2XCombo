@@ -1,0 +1,86 @@
+##MAIN
+name				ParticleS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/particle/idle00.png data/chars/bosses/particle/alter1.png
+remap				data/chars/bosses/particle/idle00.png data/chars/bosses/particle/alter2.png
+remap				data/chars/bosses/particle/idle00.png data/chars/bosses/particle/alter3.png
+remap				data/chars/bosses/particle/idle00.png data/chars/bosses/particle/alter3.png
+remap				data/chars/bosses/particle/idle00.png data/chars/bosses/particle/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/particle/laser00.png
+	frame	data/chars/bosses/particle/laser01.png
+	frame	data/chars/bosses/particle/laser02.png
+	frame	data/chars/bosses/particle/laser03.png
+	frame	data/chars/bosses/particle/laser04.png
+	frame	data/chars/bosses/particle/laser05.png
+	frame	data/chars/bosses/particle/laser06.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser07.png
+	frame	data/chars/bosses/particle/laser08.png
+	frame	data/chars/bosses/particle/laser09.png
+	frame	data/chars/bosses/particle/laser10.png
+	frame	data/chars/bosses/particle/laser11.png
+	frame	data/chars/bosses/particle/laser12.png
+	frame	data/chars/bosses/particle/laser13.png
+	frame	data/chars/bosses/particle/laser14.png
+	frame	data/chars/bosses/particle/laser15.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/particle/a100.png
+	frame	data/chars/bosses/particle/a101.png
+	frame	data/chars/bosses/particle/a102.png
+	frame	data/chars/bosses/particle/a103.png
+	frame	data/chars/bosses/particle/a104.png
+	frame	data/chars/bosses/particle/a105.png
+	frame	data/chars/bosses/particle/a106.png
+	frame	data/chars/bosses/particle/a107.png
+	frame	data/chars/bosses/particle/a108.png
+	frame	data/chars/bosses/particle/a109.png
+	frame	data/chars/bosses/particle/a108.png
+	frame	data/chars/bosses/particle/a107.png
+	frame	data/chars/bosses/particle/a106.png
+	frame	data/chars/bosses/particle/a105.png
+	frame	data/chars/bosses/particle/a104.png
+	frame	data/chars/bosses/particle/a103.png
+	frame	data/chars/bosses/particle/a102.png
+	frame	data/chars/bosses/particle/a101.png
+	frame	data/chars/bosses/particle/a100.png
+
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/particle/walk00.png
+	frame	data/chars/bosses/particle/walk01.png
+	frame	data/chars/bosses/particle/walk00.png
+	frame	data/chars/bosses/particle/walk01.png
+	frame	data/chars/bosses/particle/walk00.png

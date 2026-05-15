@@ -1,0 +1,30 @@
+name			Destruction_B #NON DAMAGE EXPLOSION, DECORATION ONLY
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	3
+	offset	25 25
+	sound	data/sounds/Explosion.wav
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/chars/misc/explosion/original/explosion00.png
+	@cmd shoot "Blast" 0 0 0 -1 0 -1
+	@cmd shoot "Blast" 0 0 1 1 0 1
+	frame	data/chars/misc/explosion/original/explosion00.png
+		delay	6
+	@cmd shoot "Blast" 0 0 0 -1 0 1
+	@cmd shoot "Blast" 0 0 1 1 0 -1
+	frame	data/chars/misc/explosion/original/explosion01.png
+	@cmd shoot "Blast" 0 0 0 1 0 -1
+	@cmd shoot "Blast" 0 0 1 -1 0 1
+	frame	data/chars/misc/explosion/original/explosion02.png
+	@cmd shoot "Blast" 0 0 0 1 0 1
+	@cmd shoot "Blast" 0 0 1 -1 0 -1
+	frame	data/chars/misc/explosion/original/explosion03.png
+	@cmd suicide
+	frame	data/chars/misc/explosion/original/explosion03.png

@@ -1,0 +1,92 @@
+name		St7_Tv
+type		none
+shadow		0
+antigravity	100
+
+anim idle
+	loop	1 80 82
+	delay	16
+	offset	1 168
+	frame	data/bgs/sor3/st7c/tv00.png
+	frame	data/bgs/sor3/st7c/tv01.png
+	frame	data/bgs/sor3/st7c/tv00.png
+	frame	data/bgs/sor3/st7c/tv01.png
+	frame	data/bgs/sor3/st7c/tv00.png
+	frame	data/bgs/sor3/st7c/tv01.png
+	frame	data/bgs/sor3/st7c/tv00.png
+	frame	data/bgs/sor3/st7c/tv01.png
+	frame	data/bgs/sor3/st7c/tv00b.png
+	frame	data/bgs/sor3/st7c/tv01b.png
+	frame	data/bgs/sor3/st7c/tv00b.png
+	frame	data/bgs/sor3/st7c/tv01b.png
+	frame	data/bgs/sor3/st7c/tv00b.png
+	frame	data/bgs/sor3/st7c/tv01b.png
+	frame	data/bgs/sor3/st7c/tv00b.png
+	frame	data/bgs/sor3/st7c/tv01b.png
+		delay	4
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv02.png
+	frame	data/bgs/sor3/st7c/tv03.png
+	frame	data/bgs/sor3/st7c/tv04.png
+	frame	data/bgs/sor3/st7c/tv05.png

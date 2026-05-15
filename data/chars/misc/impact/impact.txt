@@ -1,0 +1,43 @@
+name			Impact
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+alpha			1
+toflip			1
+onspawnscript	data/scripts/onspawn/graphics.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	1
+	offset	160 91
+	sound	data/sounds/Impact.wav
+	frame	data/chars/misc/impact/impact00.png
+	frame	data/chars/misc/impact/impact01.png
+	frame	data/chars/misc/impact/impact02.png
+	frame	data/chars/misc/impact/impact03.png
+	frame	data/chars/misc/impact/impact04.png
+	frame	data/chars/misc/impact/impact05.png
+	frame	data/chars/misc/impact/impact06.png
+	frame	data/chars/misc/impact/impact07.png
+	frame	data/chars/misc/impact/impact08.png
+	frame	data/chars/misc/impact/impact09.png
+	frame	data/chars/misc/impact/impact10.png
+	frame	data/chars/misc/impact/impact11.png
+	frame	data/chars/misc/impact/impact12.png
+	frame	data/chars/misc/impact/impact13.png
+	frame	data/chars/misc/impact/impact14.png
+	frame	data/chars/misc/impact/impact15.png
+	frame	data/chars/misc/impact/impact16.png
+	frame	data/chars/misc/impact/impact17.png
+	frame	data/chars/misc/impact/impact18.png
+	frame	data/chars/misc/impact/impact19.png
+	frame	data/chars/misc/impact/impact20.png
+	frame	data/chars/misc/impact/impact21.png
+	frame	data/chars/misc/impact/impact22.png
+	frame	data/chars/misc/impact/impact23.png
+	frame	data/chars/misc/impact/impact24.png
+	@cmd suicide
+	frame	data/chars/misc/impact/impact24.png

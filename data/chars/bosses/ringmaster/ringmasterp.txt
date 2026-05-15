@@ -1,0 +1,609 @@
+##MAIN
+name				Ringmaster
+type				player
+secret				0 1
+
+##LIFE
+health				400
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			0 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				69
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2
+weapons				none none none none Ringmaster
+modelflag			3
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bounce				1
+bflash				Block
+death				2
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+ondrawscript		data/scripts/ondraw/ringmaster.c
+onspawnscript		data/scripts/onspawn/player.c
+onfallscript		data/scripts/onfall/default.c
+onpainscript		data/scripts/onpain/default.c
+animationscript	 	data/scripts/animation/default.c
+keyscript			data/scripts/key/ringmaster.c
+takedamagescript	data/scripts/takedamage/default.c
+script				data/scripts/updateentity/ringmaster.c
+
+##ICONS
+icon				data/chars/bosses/ringmaster/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/BossDie1.wav
+
+##REMAPS
+remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter1.png
+remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter2.png
+remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter3.png
+remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter4.png
+
+##COMMANDS
+com 				d f a2		freespecial		#RAGE MISSILE
+com 				a2 + s		freespecial		#RAGE MISSILE
+com 				a2 s		freespecial		#RAGE MISSILE
+
+##LOADS
+load				Ringmaster_Missile
+load				RingmasterS
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim waiting
+	fshadow 0
+	loop	1
+	delay	16
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/idle00.png
+	frame	data/chars/bosses/ringmaster/idle01.png
+	frame	data/chars/bosses/ringmaster/idle02.png
+	frame	data/chars/bosses/ringmaster/idle03.png
+
+anim select
+	fshadow 0
+	loop	0
+	delay	100000
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/idle00.png
+		delay	24
+	frame	data/chars/bosses/ringmaster/idle00.png
+	frame	data/chars/bosses/ringmaster/idle00.png
+
+anim idle
+	loop	1
+	delay	18
+	offset	139 200
+	bbox 	124 142 26 59
+	frame	data/chars/bosses/ringmaster/idle00.png
+	frame	data/chars/bosses/ringmaster/idle01.png
+	frame	data/chars/bosses/ringmaster/idle02.png
+	frame	data/chars/bosses/ringmaster/idle03.png
+
+anim chargeattack
+	chargetime 9999
+	loop	0
+	delay	1
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/idle00.png
+
+anim walk
+	loop	1
+	delay	14
+	offset	139 200
+	bbox 	124 142 26 59
+	frame	data/chars/bosses/ringmaster/walk00.png
+	frame	data/chars/bosses/ringmaster/walk01.png
+	frame	data/chars/bosses/ringmaster/walk02.png
+	frame	data/chars/bosses/ringmaster/walk03.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	loop	1
+	delay	10
+	offset	139 200
+	bbox 	124 142 26 59
+	frame	data/chars/bosses/ringmaster/walk00.png
+	frame	data/chars/bosses/ringmaster/walk01.png
+	frame	data/chars/bosses/ringmaster/walk02.png
+	frame	data/chars/bosses/ringmaster/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	139 200
+	bbox 	133 142 26 59
+	frame	data/chars/bosses/ringmaster/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	139 200
+	bbox 	124 142 26 59
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	139 200
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/ringmaster/jump00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	139 200
+	bbox 	120 142 26 59
+	frame	data/chars/bosses/ringmaster/jumpdelay00.png
+
+anim jump
+	loop	1 1 3
+	delay	4
+	offset	139 200
+	bbox 	124 132 26 59
+	sound	data/sounds/Wind3.wav
+	frame	data/chars/bosses/ringmaster/jump00.png
+	frame	data/chars/bosses/ringmaster/jump01.png
+	frame	data/chars/bosses/ringmaster/jump02.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	139 200
+	bbox 	124 132 26 59
+	@cmd jump 1
+	frame	data/chars/bosses/ringmaster/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	139 200
+	bbox 	120 142 26 59
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/ringmaster/jumpland00.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	139 200
+	bbox 	124 142 26 59
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+	frame	data/chars/bosses/ringmaster/grabbed00.png
+	frame	data/chars/bosses/ringmaster/grabbed01.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	139 200
+	bbox 	119 142 26 59
+	frame	data/chars/bosses/ringmaster/pain00.png
+	frame	data/chars/bosses/ringmaster/pain01.png
+	frame	data/chars/bosses/ringmaster/pain00.png
+	frame	data/chars/bosses/ringmaster/pain01.png
+	frame	data/chars/bosses/ringmaster/pain00.png
+	frame	data/chars/bosses/ringmaster/pain01.png
+	frame	data/chars/bosses/ringmaster/pain00.png
+	frame	data/chars/bosses/ringmaster/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	139 200
+	bbox 	120 142 26 59
+	frame	data/chars/bosses/ringmaster/pain200.png
+	frame	data/chars/bosses/ringmaster/pain201.png
+	frame	data/chars/bosses/ringmaster/pain200.png
+	frame	data/chars/bosses/ringmaster/pain201.png
+	frame	data/chars/bosses/ringmaster/pain200.png
+	frame	data/chars/bosses/ringmaster/pain201.png
+	frame	data/chars/bosses/ringmaster/pain200.png
+	frame	data/chars/bosses/ringmaster/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	139 200
+	bbox 	117 140 36 59
+	frame	data/chars/bosses/ringmaster/fall00.png
+		delay	8
+	bbox 	102 183 67 20
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	139 200
+	bbox 	117 140 36 59
+	frame	data/chars/bosses/ringmaster/fall00.png
+		delay	8
+	bbox 	102 183 67 20
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	139 200
+	bbox 	117 140 36 59
+	frame	data/chars/bosses/ringmaster/fall00.png
+		delay	8
+	bbox 	102 183 67 20
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/fall600.png
+	frame	data/chars/bosses/ringmaster/fall601.png
+	frame	data/chars/bosses/ringmaster/fall602.png
+	frame	data/chars/bosses/ringmaster/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/fall700.png
+	frame	data/chars/bosses/ringmaster/fall701.png
+	frame	data/chars/bosses/ringmaster/fall702.png
+	frame	data/chars/bosses/ringmaster/fall703.png
+	frame	data/chars/bosses/ringmaster/fall704.png
+	frame	data/chars/bosses/ringmaster/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	139 200
+	bbox 	117 140 36 59
+	hitfx	data/sounds/MediumKick.wav
+	attack 117 140 36 59 4 1 0 0 20 12
+	frame	data/chars/bosses/ringmaster/fall00.png
+		delay	999
+	frame	data/chars/bosses/ringmaster/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	102 183 67 20
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	139 200
+	bbox 	122 148 28 53
+	hitfx	data/sounds/MediumKick.wav
+	attack 122 148 28 53 4 1 0 0 20 12
+	frame	data/chars/bosses/ringmaster/fall900.png
+		delay	999
+	frame	data/chars/bosses/ringmaster/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	102 183 67 20
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/fall01.png
+	frame	data/chars/bosses/ringmaster/fall01.png
+	frame	data/chars/bosses/ringmaster/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	139 200
+	frame	data/chars/bosses/ringmaster/rise00.png
+	frame	data/chars/bosses/ringmaster/rise01.png
+	frame	data/chars/bosses/ringmaster/rise01.png
+	frame	data/chars/bosses/ringmaster/rise02.png
+
+anim attack1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	139 200
+	bbox 	112 142 26 59
+	hitfx	data/sounds/StrongPunch.wav
+	frame	data/chars/bosses/ringmaster/a100.png
+		delay	8
+	attack 126 124 31 38 4 0 0 0 30 12
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/ringmaster/a101.png
+	hitfx	data/sounds/Pipe.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/ringmaster/a101.png
+	attack 124 161 59 15 8 0 0 0 25 12
+	bbox 	114 142 26 59
+	frame	data/chars/bosses/ringmaster/a102.png
+
+anim attack2 #SLIDE ATTACK
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	139 200
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Wind3.wav
+	frame	data/chars/bosses/ringmaster/slide00.png
+	frame	data/chars/bosses/ringmaster/slide01.png
+		delay	4
+	@cmd dasher 1 0 0
+	@cmd keyMove 0 2.5
+	attack 108 148 73 55 32 1 0 0 30 12
+	frame	data/chars/bosses/ringmaster/slide02.png
+	attack 94 148 87 55 32 1 0 0 25 12
+	frame	data/chars/bosses/ringmaster/slide03.png
+	@cmd looper 2 5
+		delay	8
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/ringmaster/slide01.png
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/ringmaster/slide00.png
+
+anim grabattack #STICK ATTACK
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	139 200
+	bbox 	133 142 26 59
+	hitfx	data/sounds/StrongPunch.wav
+	frame	data/chars/bosses/ringmaster/grabatk00.png
+		delay	8
+	attack 144 124 31 38 4 0 0 0 20 12
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/ringmaster/grabatk01.png
+	hitfx	data/sounds/Pipe.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/ringmaster/grabatk01.png
+	attack 145 141 55 22 8 1 0 0 40 12
+	frame	data/chars/bosses/ringmaster/grabatk02.png
+
+anim grabattack2 #STICK ATTACK
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	139 200
+	bbox 	133 142 26 59
+	hitfx	data/sounds/StrongPunch.wav
+	frame	data/chars/bosses/ringmaster/grabatk00.png
+		delay	8
+	attack 144 124 31 38 4 0 0 0 20 12
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/ringmaster/grabatk01.png
+	hitfx	data/sounds/Pipe.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/ringmaster/grabatk01.png
+	attack 145 141 55 22 8 1 0 0 40 12
+	frame	data/chars/bosses/ringmaster/grabatk02.png
+
+anim jumpattack
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	139 200
+	bbox 	124 132 26 59
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Wind3.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/bosses/ringmaster/jump00.png
+	bbox 	107 145 56 63
+	sound	data/voices/Attack1.wav
+	frame	data/chars/bosses/ringmaster/fall602.png
+	attack 130 157 33 55 8 1 0 0 35 24
+	frame	data/chars/bosses/ringmaster/fall602.png
+
+anim special #SINGLE MISSILE
+	range 120 360
+	rangea 0 100
+	energycost 20 1 6
+	@cmd healStart
+	loop	0
+	delay	8
+	offset	139 200
+	sound	data/voices/Attack2.wav
+	bbox 	127 147 24 55
+	frame	data/chars/bosses/ringmaster/missile00.png
+	bbox 	127 180 44 21
+	frame	data/chars/bosses/ringmaster/missile01.png
+	frame	data/chars/bosses/ringmaster/missile02.png
+	frame	data/chars/bosses/ringmaster/missile03.png
+	@cmd shoot "Ringmaster_Missile" 25 25 -1 1 0 0
+	@cmd spawnToss "Smoke" 25 25 1 0 1 0
+	frame	data/chars/bosses/ringmaster/missile02.png
+		delay	32
+	frame	data/chars/bosses/ringmaster/missile01.png
+
+anim special2 #SLIDE ATTACK
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 20 1 6
+	@cmd healStart
+	loop	0
+	delay	12
+	offset	139 200
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Wind3.wav
+	frame	data/chars/bosses/ringmaster/slide00.png
+	frame	data/chars/bosses/ringmaster/slide01.png
+		delay	4
+	@cmd dasher 5 0 0
+	@cmd keyMove 0 2.5
+	attack 108 148 73 55 32 1 0 0 30 12
+	frame	data/chars/bosses/ringmaster/slide02.png
+	attack 94 148 87 55 32 1 0 0 25 12
+	frame	data/chars/bosses/ringmaster/slide03.png
+	@cmd looper 2 5
+		delay	8
+	@cmd dasher 2.5 0 0
+	frame	data/chars/bosses/ringmaster/slide01.png
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/ringmaster/slide00.png
+
+anim freespecial #RAGE TRIPLE MISSILE
+	energycost 60 1 6
+	loop	0
+	delay	20
+	offset	139 200
+	@cmd spawnBind "Rage" 0 0 -1
+	frame	data/chars/bosses/ringmaster/missile00.png
+		delay	4
+	frame	data/chars/bosses/ringmaster/missile01.png
+	frame	data/chars/bosses/ringmaster/missile02.png
+		delay	8
+	@cmd shoot "Ringmaster_Missile" 25 25 -1 1 0 0
+	@cmd spawnToss "Smoke" 25 25 1 0 1 0
+	frame	data/chars/bosses/ringmaster/missile03.png
+	frame	data/chars/bosses/ringmaster/missile02.png
+	@cmd shoot "Ringmaster_Missile" 25 25 -1 1 0 0
+	@cmd spawnToss "Smoke" 25 25 1 0 1 0
+	frame	data/chars/bosses/ringmaster/missile03.png
+	frame	data/chars/bosses/ringmaster/missile02.png
+	@cmd shoot "Ringmaster_Missile" 25 25 -1 1 0 0
+	@cmd spawnToss "Smoke" 25 25 1 0 1 0
+	frame	data/chars/bosses/ringmaster/missile03.png
+	frame	data/chars/bosses/ringmaster/missile02.png
+	frame	data/chars/bosses/ringmaster/missile01.png
+	frame	data/chars/bosses/ringmaster/missile00.png
+
+anim follow7 #COUNTER
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 40 1 6
+	loop	0
+	delay	12
+	offset	139 200
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Wind3.wav
+	frame	data/chars/bosses/ringmaster/slide00.png
+	@cmd spawn01 "Counter" 0 0 1
+	@cmd block 0
+	frame	data/chars/bosses/ringmaster/slide01.png
+		delay	4
+	@cmd dasher 1 0 0
+	@cmd keyMove 0 2.5
+	attack 108 148 73 55 32 1 0 0 10 12
+	frame	data/chars/bosses/ringmaster/slide02.png
+	attack 94 148 87 55 32 1 0 0 10 12
+	frame	data/chars/bosses/ringmaster/slide03.png
+	@cmd looper 2 5
+		delay	8
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/ringmaster/slide01.png
+	@cmd dasher 0.5 0 0
+	bbox 	127 147 24 55
+	frame	data/chars/bosses/ringmaster/slide00.png
+
+anim follow11 #BLOCK
+	loop	0
+	delay	12
+	offset	139 200
+	bbox 	124 142 33 59
+	@cmd block 1
+	frame	data/chars/bosses/ringmaster/block00.png
+	@cmd keyLoop "attack3" 0
+	@cmd block 0
+	frame	data/chars/bosses/ringmaster/block00.png
+
+anim follow12 #PARRY
+	loop	0
+	delay	24
+	offset	139 200
+	bbox 	124 142 33 59
+	@cmd block 1
+	frame	data/chars/bosses/ringmaster/block00.png

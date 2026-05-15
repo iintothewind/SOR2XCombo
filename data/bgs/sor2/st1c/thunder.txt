@@ -1,0 +1,26 @@
+name			St1_Thunder
+type			none
+shadow			0
+setlayer		1000
+animationscript data/scripts/animation/default.c
+
+load			St1_Thunder_B
+
+anim idle
+	loop	1
+	delay	2000
+	offset	1200 1200
+	@cmd graphics "original" "St1_Thunder_B"
+	frame	data/bgs/sor2/st1c/thunder01.png
+		delay	6
+	@cmd sampleRandom SAMPLE_THUNDER 50 SAMPLE_THUNDER2 50 0
+	drawmethod alpha 1
+	frame	data/bgs/sor2/st1c/thunder00.png
+	drawmethod alpha 3
+	frame	data/bgs/sor2/st1c/thunder00.png
+	drawmethod alpha 6
+	frame	data/bgs/sor2/st1c/thunder00.png
+	drawmethod alpha 3
+	frame	data/bgs/sor2/st1c/thunder00.png
+	drawmethod alpha 6
+	frame	data/bgs/sor2/st1c/thunder00.png

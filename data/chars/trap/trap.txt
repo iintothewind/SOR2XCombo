@@ -1,0 +1,72 @@
+name				Trap
+type				trap
+subType			chase
+nolife				1
+shadow				0
+antigravity			100
+#setlayer			-3
+candamage			player
+hostile			  player
+ondoattackscript	data/scripts/ondoattack/default.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	followanim 2
+	followcond 1
+	loop	0
+	delay	8
+	offset	25 250
+	attack 13 237 24 13 0 0 1 1 0 12
+	frame	data/chars/trap/trap00.png
+
+anim attack1
+	followanim 2
+	followcond 1
+	range 0 100
+	rangez -20 20
+	fastattack 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	25 250
+	@cmd target 5 3
+	@cmd dashTarget
+	attack 13 237 24 13 0 0 1 1 0 12
+	frame	data/chars/trap/trap05.png
+
+anim follow2
+	loop	0
+	delay	16
+	offset	25 250
+	sound	data/sounds/Throw.wav
+	@cmd setLayer 0
+	@cmd grabStart2
+	@cmd position 1 0 0 -1 0
+	frame	data/chars/trap/trap02.png
+		offset	25 300
+		delay	8
+	@cmd leaper 0 0.5 0
+	@cmd position 4 0 5 -1 0
+	frame	data/chars/trap/trap02.png
+	@cmd leaper 0 1 0
+	@cmd position 4 0 5 -1 0
+	frame	data/chars/trap/trap02.png
+	@cmd leaper 0 2 0
+	@cmd position 4 0 5 -1 0
+	frame	data/chars/trap/trap02.png
+	@cmd leaper 0 4 0
+	@cmd position 4 0 5 -1 0
+	frame	data/chars/trap/trap02.png
+	@cmd leaper 0 8 0
+	@cmd position 4 0 5 -1 0
+	frame	data/chars/trap/trap02.png
+		delay	32
+	@cmd leaper 0 5 0
+	@cmd position 4 0 5 -1 0
+	frame	data/chars/trap/trap02.png
+		delay	8
+	@cmd throw 40 2 0.5 0.5 0 0
+	frame	data/chars/trap/trap02.png
+	@cmd suicide
+	frame	data/chars/trap/trap02.png

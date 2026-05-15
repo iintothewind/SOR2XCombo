@@ -1,0 +1,19 @@
+name			TigerX
+type			none
+lifespan		0.001
+shadow			0
+alpha			1
+onspawnscript 	data/scripts/onspawn/tigerx.c
+
+remap			data/chars/random/empty0.png data/chars/random/empty1.png
+remap			data/chars/random/empty0.png data/chars/random/empty2.png
+remap			data/chars/random/empty0.png data/chars/random/empty3.png
+remap			data/chars/random/empty0.png data/chars/random/empty4.png
+
+load			TigerB
+
+anim idle
+	loop	0
+	delay	1
+	offset	50 72
+	frame	data/chars/random/empty0.png

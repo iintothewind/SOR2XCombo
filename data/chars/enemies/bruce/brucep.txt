@@ -1,0 +1,452 @@
+##MAIN
+name				Bruce
+type				player
+secret				0 1
+
+##LIFE
+health				400
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				80
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none Bruce
+modelflag			3
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+ondrawscript		data/scripts/ondraw/default.c
+onspawnscript		data/scripts/onspawn/player.c
+animationscript	 	data/scripts/animation/default.c
+keyscript			data/scripts/key/bruce.c
+takedamagescript	data/scripts/takedamage/default.c
+script				data/scripts/updateentity/bruce.c
+
+##ICONS
+icon				data/chars/enemies/bruce/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/Die2.wav
+
+##REMAPS
+remap				data/chars/enemies/bruce/idle00.png data/chars/enemies/bruce/alter1.png
+remap				data/chars/enemies/bruce/idle00.png data/chars/enemies/bruce/alter2.png
+remap				data/chars/enemies/bruce/idle00.png data/chars/enemies/bruce/alter3.png
+remap				data/chars/enemies/bruce/idle00.png data/chars/enemies/bruce/alter3.png
+remap				data/chars/enemies/bruce/idle00.png data/chars/enemies/bruce/alter2.png
+
+##LOADS
+load				BruceS
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim waiting
+	fshadow 0
+	loop	1
+	delay	16
+	offset	117 180
+	frame	data/chars/enemies/bruce/idle00.png
+
+anim select
+	fshadow 0
+	loop	0
+	delay	100000
+	offset	117 180
+	frame	data/chars/enemies/bruce/idle00.png
+		delay	24
+	frame	data/chars/enemies/bruce/idle00.png
+	frame	data/chars/enemies/bruce/idle00.png
+
+anim idle
+	loop	1
+	delay	24
+	offset	117 180
+	bbox 	106 108 19 74
+	frame	data/chars/enemies/bruce/idle00.png
+	frame	data/chars/enemies/bruce/idle01.png
+
+anim chargeattack
+	chargetime 9999
+	loop	0
+	delay	1
+	offset	117 180
+	frame	data/chars/enemies/bruce/idle00.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	117 180
+	bbox 	106 108 19 74
+	frame	data/chars/enemies/bruce/walk00.png
+	frame	data/chars/enemies/bruce/walk01.png
+	frame	data/chars/enemies/bruce/walk02.png
+	frame	data/chars/enemies/bruce/walk03.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	loop	1
+	delay	12
+	offset	117 180
+	bbox 	106 108 19 74
+	frame	data/chars/enemies/bruce/walk00.png
+	frame	data/chars/enemies/bruce/walk01.png
+	frame	data/chars/enemies/bruce/walk02.png
+	frame	data/chars/enemies/bruce/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	117 180
+	frame	data/chars/enemies/bruce/get00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	117 180
+	bbox 	102 121 23 61
+	frame	data/chars/enemies/bruce/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	117 180
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/bruce/jump00.png
+	frame	data/chars/enemies/bruce/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	117 180
+	bbox 	109 123 23 59
+	frame	data/chars/enemies/bruce/jumpdelay00.png
+
+anim jump
+	loop	0
+	delay	30
+	offset	117 180
+	bbox 	112 99 17 68
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/bruce/jump00.png
+	bbox 	107 108 22 67
+	frame	data/chars/enemies/bruce/jump01.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	117 180
+	bbox 	112 99 17 68
+	@cmd jump 1
+	frame	data/chars/enemies/bruce/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	117 180
+	bbox 	109 123 23 59
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/bruce/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	117 180
+	bbox 	107 120 23 62
+	frame	data/chars/enemies/bruce/pain00.png
+	frame	data/chars/enemies/bruce/pain01.png
+	frame	data/chars/enemies/bruce/pain00.png
+	frame	data/chars/enemies/bruce/pain01.png
+	frame	data/chars/enemies/bruce/pain00.png
+	frame	data/chars/enemies/bruce/pain01.png
+	frame	data/chars/enemies/bruce/pain00.png
+	frame	data/chars/enemies/bruce/pain01.png
+	frame	data/chars/enemies/bruce/pain00.png
+	frame	data/chars/enemies/bruce/pain01.png
+	frame	data/chars/enemies/bruce/pain00.png
+	frame	data/chars/enemies/bruce/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	117 180
+	bbox 	103 112 24 67
+	frame	data/chars/enemies/bruce/pain200.png
+	frame	data/chars/enemies/bruce/pain201.png
+	frame	data/chars/enemies/bruce/pain200.png
+	frame	data/chars/enemies/bruce/pain201.png
+	frame	data/chars/enemies/bruce/pain200.png
+	frame	data/chars/enemies/bruce/pain201.png
+	frame	data/chars/enemies/bruce/pain200.png
+	frame	data/chars/enemies/bruce/pain201.png
+	frame	data/chars/enemies/bruce/pain200.png
+	frame	data/chars/enemies/bruce/pain201.png
+	frame	data/chars/enemies/bruce/pain200.png
+	frame	data/chars/enemies/bruce/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	117 180
+	bbox 	94 120 35 36
+	frame	data/chars/enemies/bruce/fall00.png
+		delay	8
+	bbox 	74 163 84 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	117 180
+	bbox 	94 120 35 36
+	frame	data/chars/enemies/bruce/fall00.png
+		delay	8
+	bbox 	74 163 84 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	117 180
+	bbox 	94 120 35 36
+	frame	data/chars/enemies/bruce/fall00.png
+		delay	8
+	bbox 	74 163 84 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	117 180
+	frame	data/chars/enemies/bruce/fall600.png
+	frame	data/chars/enemies/bruce/fall601.png
+	frame	data/chars/enemies/bruce/fall602.png
+	frame	data/chars/enemies/bruce/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	117 180
+	frame	data/chars/enemies/bruce/fall700.png
+	frame	data/chars/enemies/bruce/fall701.png
+	frame	data/chars/enemies/bruce/fall702.png
+	frame	data/chars/enemies/bruce/fall703.png
+	frame	data/chars/enemies/bruce/fall704.png
+	frame	data/chars/enemies/bruce/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	117 180
+	bbox 	94 120 35 36
+	hitfx	data/sounds/MediumKick.wav
+	attack 94 120 35 36 4 1 0 0 20 12
+	frame	data/chars/enemies/bruce/fall00.png
+		delay	999
+	frame	data/chars/enemies/bruce/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	74 163 84 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	117 180
+	bbox 	105 125 24 55
+	hitfx	data/sounds/MediumKick.wav
+	attack 105 125 24 55 4 1 0 0 20 12
+	frame	data/chars/enemies/bruce/fall900.png
+		delay	999
+	frame	data/chars/enemies/bruce/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	74 163 84 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	117 180
+	frame	data/chars/enemies/bruce/fall01.png
+	frame	data/chars/enemies/bruce/fall01.png
+	frame	data/chars/enemies/bruce/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	117 180
+	frame	data/chars/enemies/bruce/rise00.png
+	frame	data/chars/enemies/bruce/rise01.png
+	frame	data/chars/enemies/bruce/rise00.png
+	frame	data/chars/enemies/bruce/rise02.png
+
+anim riseattack
+	range 40 120
+	rangea 0 0
+	rangez -24 24
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	hitflash Impact
+	otg 1
+	loop	0
+	delay	24
+	offset	117 180
+	bbox 	121 131 31 53
+	hitfx	data/sounds/HighKick.wav
+	bbox 105 126 35 53
+	frame	data/chars/enemies/bruce/jumpdelay00.png
+	@cmd target 4 2
+	@cmd leapTarget 2
+	@cmd jump 1
+	bbox 	104 103 35 43
+	attack 98 114 37 32 9 1 0 0 35 24
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/bruce/fjumpatk01.png
+
+anim attack1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	117 180
+	bbox 	106 108 19 74
+	hitfx	data/sounds/Whip.wav
+	sound	data/sounds/Whoosh2.wav
+	frame	data/chars/enemies/bruce/a100.png
+	frame	data/chars/enemies/bruce/a101.png
+	frame	data/chars/enemies/bruce/a102.png
+	frame	data/chars/enemies/bruce/a103.png
+	attack 125 122 122 17 8 0 0 0 10 12
+	frame	data/chars/enemies/bruce/a104.png
+
+anim special
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	energycost 40 2 5
+	@cmd healStart
+	loop	0
+	delay	6
+	offset	117 180
+	bbox 	106 108 19 74
+	hitfx	data/sounds/Whip2.wav
+	sound	data/sounds/Whoosh2.wav
+	frame	data/chars/enemies/bruce/a300.png
+	frame	data/chars/enemies/bruce/a301.png
+	frame	data/chars/enemies/bruce/a302.png
+	frame	data/chars/enemies/bruce/a303.png
+	frame	data/chars/enemies/bruce/a304.png
+		delay	18
+	attack 125 123 96 58 24 1 0 0 10 12
+	frame	data/chars/enemies/bruce/a305.png
+		delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/bruce/a306.png
+
+anim special2
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	energycost 40 2 5
+	@cmd healStart
+	loop	0
+	delay	6
+	offset	117 180
+	bbox 	106 108 19 74
+	hitfx	data/sounds/Whip2.wav
+	sound	data/sounds/Whoosh2.wav
+	frame	data/chars/enemies/bruce/a200.png
+	frame	data/chars/enemies/bruce/a201.png
+	frame	data/chars/enemies/bruce/a202.png
+	frame	data/chars/enemies/bruce/a203.png
+	bbox 	113 122 30 60
+	frame	data/chars/enemies/bruce/a204.png
+		delay	18
+	attack 143 132 157 17 24 1 0 0 20 12
+	frame	data/chars/enemies/bruce/a205.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	2
+	offset	117 180
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/bruce/dodge00.png
+	frame	data/chars/enemies/bruce/dodge00.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/bruce/dodge01.png
+
+anim dodge
+	@cmd lockAni "dodgeType" "sor2x"
+	@cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
+	@cmd lockAni "dodgeType" "off"
+	loop	0
+	delay	2
+	offset	117 180
+	sound	data/sounds/Jumping.wav
+	@cmd leaper 0 1.5 0
+	@cmd keyMove 1.5 1.5
+	frame	data/chars/enemies/bruce/dodge00.png
+	frame	data/chars/enemies/bruce/dodge00.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/bruce/dodge01.png

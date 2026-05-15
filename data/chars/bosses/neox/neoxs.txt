@@ -1,0 +1,59 @@
+##MAIN
+name				NeoxS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter1.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter3.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter4.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter2.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial #RAGE
+	loop	0
+	delay	1000
+	offset	120 192
+	frame	data/chars/bosses/neox/missile00.png
+	frame	data/chars/bosses/neox/missile01.png
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	frame	data/chars/bosses/neox/missile02.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	120 192
+	frame	data/chars/bosses/neox/dash00.png
+	frame	data/chars/bosses/neox/dash01.png
+	frame	data/chars/bosses/neox/dash02.png
+	frame	data/chars/bosses/neox/dash03.png
+	frame	data/chars/bosses/neox/dash04.png
+	frame	data/chars/bosses/neox/dash04.png
+	frame	data/chars/bosses/neox/dash05.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	120 192
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle13.png

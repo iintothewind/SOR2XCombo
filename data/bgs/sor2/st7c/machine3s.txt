@@ -1,0 +1,15 @@
+name			St7_Machine3S
+type			none
+shadow			0
+antigravity 	100
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	42
+	offset	1 64
+	@cmd dasher -0.05 0 0
+	platform 0 126 186 312 64 0.001
+	frame	data/bgs/sor2/st7c/_empty.png
+	@cmd suicide
+	frame	data/bgs/sor2/st7c/_empty.png

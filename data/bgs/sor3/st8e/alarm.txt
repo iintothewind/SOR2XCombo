@@ -1,0 +1,63 @@
+name	  	 	St8_Alarm #ENTITY TO START RED ALERT AFTER BEATING NEOX IN ST8E, OR TO START GREEN ALERT AFTER BEATING NEOX MISSILE
+type	  	 	none
+shadow	  	 	0
+setlayer	 	1000
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	64
+	offset	1 276
+	drawmethod alpha 1
+	@cmd aniVar "ANI_FOLLOW1" "alarm" 1
+	@cmd aniVar "ANI_FOLLOW2" "alarm" 2
+	frame	data/bgs/sor3/st8e/alarm00.png
+	
+anim follow1
+	loop	1
+	delay	8
+	offset	1 276
+	sound	data/sounds/Alarm.wav
+	drawmethod alpha 6
+	drawmethod channel 0 0.4 0.8
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.3 0.6
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.2 0.4
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.1 0.2
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0 0
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.1 0.2
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.2 0.4
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.3 0.6
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.4 0.8
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.5 1
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.5 1
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0.5 1
+	frame	data/bgs/sor3/st8e/alarm00.png
+	
+anim follow2
+	loop	1 12 13
+	delay	16
+	offset	1 276
+	sound	data/sounds/Alarm.wav
+	drawmethod alpha 6
+	drawmethod channel 0.4 0 0.8
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0.3 0 0.6
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0.2 0 0.4
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0.1 0 0.2
+	frame	data/bgs/sor3/st8e/alarm00.png
+	drawmethod channel 0 0 0
+	@cmd suicide
+	frame	data/bgs/sor3/st8e/alarm00.png

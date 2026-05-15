@@ -1,0 +1,42 @@
+name				St6_Panel_Up
+type				enemy
+subtype				notgrab
+subject_to_wall		0
+health				1000000
+nolife				1
+nomove				1 1
+nodrop				2
+shadow				0
+noatflash			1
+flash				Flash
+stealth				2
+offscreenkill		5000
+animationscript		data/scripts/animation/default.c
+
+anim idle #ENABLED
+	loop	1
+	delay	24
+	offset	49 76
+	bbox	37 14 21 69
+	platform 27 85 0 0 52 41 11 1000
+	@cmd aniEcount 1 openborconstant("ANI_FOLLOW1") 5
+	frame	data/bgs/sor3/st6a/panel00.png
+	@cmd aniEcount 1 openborconstant("ANI_FOLLOW1") 5
+	frame	data/bgs/sor3/st6a/panel04.png
+	
+anim follow1 #DISABLED
+	loop	1
+	delay	24
+	offset	49 76
+	platform 27 85 0 0 52 41 11 1000
+	@cmd aniEcount 0 openborconstant("ANI_IDLE") 4
+	frame	data/bgs/sor3/st6a/panel00.png
+	@cmd aniEcount 0 openborconstant("ANI_IDLE") 4
+	frame	data/bgs/sor3/st6a/panel06.png
+
+anim pain #GET HIT
+	loop	0
+	delay	64
+	offset	49 76
+	platform 27 85 0 0 52 41 11 1000
+	frame	data/bgs/sor3/st6a/panel05.png

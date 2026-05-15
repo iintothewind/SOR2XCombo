@@ -1,0 +1,49 @@
+loadingbg		data/bgs/loading1.png 		1 -81 248 480 999 999 0
+background		data/bgs/route/bk00.png		1 1 0 0 0 0 1 1 1
+bglayer			data/bgs/route/bg00.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 4
+bglayer			data/bgs/route/bg01.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 2
+bglayer			data/bgs/route/bg02.png		0.5 1 0 0 0 0 -1 1 1 0 1 3 10 0.3
+bglayer			data/bgs/route/bg03.png		1 1 0 0 0 0 1 1 1
+panel			data/bgs/route/_map.png		none	none
+fglayer			data/bgs/border.png 		1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+bgspeed			1 0
+stagenumber 	0
+type			1 0 0
+spawn1			240 20 300
+spawn2			240 40 300
+spawn3			240 60 300
+spawn4			240 80 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		Level_Menu 3
+load		Route_Left
+load    Route_Down
+load		Route_Right
+
+#########################################################################################
+
+spawn		Route_Left 1
+flip		1
+coords		20 200 0
+at			0
+
+spawn		Route_Down 1
+flip		1
+coords		220 250 0
+at			0
+
+spawn		Route_Right 1
+flip		1
+coords		461 200 0
+at			0

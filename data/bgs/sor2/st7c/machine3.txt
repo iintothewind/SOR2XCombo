@@ -1,0 +1,17 @@
+name			St7_Machine3
+type			none
+shadow			0
+setlayer		-10
+offscreenkill	6000
+animationscript	data/scripts/animation/default.c
+
+load			St7_Machine3S
+
+anim idle
+	loop	1
+	delay	14
+	offset	1 64
+	@cmd spawn01 "St7_Machine3S" 0 0 0
+	frame	data/bgs/sor2/st7c/machine00.png
+	frame	data/bgs/sor2/st7c/machine01.png
+	frame	data/bgs/sor2/st7c/machine02.png

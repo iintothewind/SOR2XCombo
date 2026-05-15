@@ -1,0 +1,26 @@
+name			Signal_Bottle3 #BROKEN
+type			npc
+subject_to_wall 0
+health			1
+nolife			1
+offscreenkill	50
+nomove			1 1
+bounce 			1
+noquake 		1
+gfxshadow		1 1
+stealth			2
+animationscript	data/scripts/animation/default.c
+	
+anim idle
+	bouncefactor 3
+	loop	0
+	delay	1
+	offset	25 35
+	@cmd hurtSelf 1
+	frame	data/chars/enemies/signal/bottle/bottle05.png
+	
+anim fall
+	loop	0
+	delay	12
+	offset	25 35
+	frame	data/chars/enemies/signal/bottle/bottle05.png

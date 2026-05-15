@@ -1,0 +1,675 @@
+loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st7c/bk00.png		0.4 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor2/st7c/bg00.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg01.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg02.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg03.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg04.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg03.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg02.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor2/st7c/bg01.png		0 1 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+panel			data/bgs/sor2/st7c/_map.png		none	none
+frontpanel		data/bgs/sor2/st7c/fp00.png
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber		7
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor2_st7c.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+basemap		0 300 5600 200 0.001 0.001
+
+wall		1443 239 -504 -441 -287 -287 31 5000
+
+wall		2366 239 -504 -441 -287 -287 31 5000
+
+wall		3780 239 -504 -441 -287 -287 31 5000
+
+wall		4864 239 -504 -441 -287 -287 31 5000
+
+wall		5162 239 -504 -441 -287 -287 31 5000
+
+wall		5331 239 -504 -441 -287 -287 31 5000
+
+#########################################################################################
+
+load		St7_Cannon 3
+load		St7_Machine3 3
+
+#########################################################################################
+
+spawn		St7_Cannon 1
+flip		1
+aggression	200
+coords		1112 271 0
+at			0
+
+spawn		St7_Cannon 1
+flip		1
+aggression	200
+coords		2035 271 0
+at			0
+
+spawn		St7_Cannon 1
+flip		1
+aggression	200
+coords		3449 271 0
+at			0
+
+spawn		St7_Cannon 1
+flip		1
+aggression	200
+coords		4533 271 0
+at			0
+
+spawn		St7_Cannon 1
+flip		1
+aggression	200
+coords		4831 271 0
+at			0
+
+spawn		St7_Cannon 1
+flip		1
+aggression	200
+coords		5000 271 0
+at			0
+
+spawn		St7_Machine3 1
+flip		1
+coords		196 276 0
+at			0
+
+spawn		St7_Machine3 1
+flip		1
+coords		1664 276 0
+at			0
+
+spawn		St7_Machine3 1
+flip		1
+coords		3489 276 0
+at			0
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		550 265 0
+at			0
+
+spawn		Box_A 1
+flip		1
+coords		900 265 0
+at			0
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			1
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		800 230 0
+at			100
+
+wait
+at			490
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		550 260 0
+at			450
+
+spawn		GalsiaB 1
+map			3
+weapon		Knife 1
+flip		1
+coords		-50 260 0
+at			450
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		550 260 0
+at			450
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		-50 260 0
+at			450
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		850 265 0
+at			500
+
+spawn		HakuyoB 1
+map			3
+flip		1
+coords		550 260 0
+at			500
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-50 260 0
+at			600
+
+spawn		HakuyoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			600
+
+spawn		HakuyoX 1
+map			3
+flip		1
+coords		550 230 0
+at			700
+
+spawn		HakuyoX 1
+map			3
+flip		1
+coords		550 260 0
+at			800
+
+spawn		HakuyoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			900
+
+wait
+at			1000
+
+group		4 4
+at			950
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		550 230 0
+at			950
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		600 260 0
+at			950
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		600 260 0
+at			950
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		-100 260 0
+at			950
+
+group		1 2
+at			950
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		550 230 0
+at			950
+
+spawn		BigBenX 1
+map			4
+flip		1
+coords		550 230 0
+at			950
+
+spawn		BigBenX 1
+map			4
+flip		1
+coords		600 260 0
+at			950
+
+#########################################################################################
+
+group		1000 1000
+at			1010
+
+spawn		Box_A 1
+flip		1
+coords		650 265 0
+at			1010
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			1010
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			1300
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		600 260 0
+at			1300
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			1650
+
+wait
+at			2100
+
+group		4 4
+at			2050
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		550 230 0
+at			2050
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		-50 260 0
+at			2050
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		600 230 0
+at			2050
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		600 230 0
+at			2050
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		-100 260 0
+at			2050
+
+#########################################################################################
+
+group		1000 1000
+at			2150
+
+spawn		Box_A 1
+flip		1
+coords		550 265 0
+at			2150
+
+spawn		Box_A 1
+flip		1
+coords		1050 265 0
+at			2150
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			2300
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		550 230 0
+at			2400
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			2500
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		550 230 0
+at			2600
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		550 260 0
+at			2700
+
+wait
+at			3100
+
+group		3 3
+at			3050
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			3050
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			3050
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			3050
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-50 260 0
+at			3050
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			3050
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			3050
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			3050
+
+spawn		GalsiaB 1
+map			3
+weapon		Knife 1
+flip		1
+coords		600 260 0
+at			3050
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			3050
+
+
+group		1 1
+at			3050
+
+spawn		ZamzaB 1
+map			4
+flip		1
+coords		550 260 0
+at			3050
+
+#########################################################################################
+
+group		1000 1000
+at			3150
+
+spawn		Box_A 1
+flip		1
+coords		650 265 0
+at			3150
+
+spawn		Box_A 1
+flip		1
+coords		950 265 0
+at			3150
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		550 230 0
+at			3200
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		550 230 0
+at			3200
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		600 230 0
+at			3400
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		550 230 0
+at			3600
+
+spawn		ReineX 1
+map			4
+flip		1
+coords		550 230 0
+at			3800
+
+spawn		Box_A 1
+flip		1
+coords		650 265 0
+at			4000
+
+wait
+at			4215
+
+group		4 4
+at			4200
+
+spawn		HakuyoX 1
+map			4
+flip		1
+coords		550 260 0
+at			4200
+
+spawn		HakuyoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			4200
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		550 260 0
+at			4200
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		550 260 0
+at			4200
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		-50 260 0
+at			4200
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-50 260 0
+at			4200
+
+#########################################################################################
+
+group		1000 1000
+at			4300
+
+spawn		Box_A 1
+flip		1
+coords		640 265 0
+at			4300
+
+spawn		Box_A 1
+flip		1
+coords		950 265 0
+at			4300
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			4350
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			4450
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 260 0
+at			4550
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-50 230 0
+at			4650
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			4750
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			4800
+
+
+group		4 4
+at			5000
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		550 260 0
+at			5000
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		-50 260 0
+at			5000
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		550 260 0
+at			5000
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-50 260 0
+at			5000
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		550 260 0
+at			5000
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		-50 260 0
+at			5000
+
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		550 260 0
+at			5000
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-50 260 0
+at			5000
+
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		550 260 0
+at			5000
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-50 260 0
+at			5000
+
+
+spawn		SignalX 1
+map			4
+flip		1
+coords		650 260 0
+at			5000
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		-150 260 0
+at			5000
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-150 260 0
+at			5000
+
+group		1 1
+at			5001
+
+spawnscript data/scripts/levelspawn/music_boss1.c
+at			5001
+
+spawn		RingmasterB 1
+map			4
+flip		0
+boss		1
+coords		350 240 300
+at			5001

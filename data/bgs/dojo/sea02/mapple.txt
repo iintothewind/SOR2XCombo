@@ -1,0 +1,32 @@
+name			Mapple
+type			none
+shadow			0
+alpha			1
+setlayer		1000
+animationscript data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	24
+	offset	0 0
+	frame	data/bgs/dojo/sea02/mapple00.png
+	frame	data/bgs/dojo/sea02/mapple01.png
+	frame	data/bgs/dojo/sea02/mapple02.png
+	frame	data/bgs/dojo/sea02/mapple03.png
+	frame	data/bgs/dojo/sea02/mapple04.png
+	frame	data/bgs/dojo/sea02/mapple05.png
+	frame	data/bgs/dojo/sea02/mapple06.png
+	frame	data/bgs/dojo/sea02/mapple07.png
+	frame	data/bgs/dojo/sea02/mapple08.png
+	frame	data/bgs/dojo/sea02/mapple09.png
+	frame	data/bgs/dojo/sea02/mapple10.png
+	frame	data/bgs/dojo/sea02/mapple11.png
+	frame	data/bgs/dojo/sea02/mapple12.png
+	frame	data/bgs/dojo/sea02/mapple13.png
+	frame	data/bgs/dojo/sea02/mapple14.png
+	frame	data/bgs/dojo/sea02/mapple15.png
+	frame	data/bgs/dojo/sea02/mapple16.png
+	frame	data/bgs/dojo/sea02/mapple17.png
+	frame	data/bgs/dojo/sea02/mapple18.png
+	frame	data/bgs/dojo/sea02/mapple19.png
+	frame	data/bgs/dojo/sea02/mapple20.png

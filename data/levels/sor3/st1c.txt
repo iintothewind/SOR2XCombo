@@ -1,0 +1,168 @@
+loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor3/st1c/bk00.png		0.85 1 0 0 0 0 -1 1 0 0 0 0 0 0 0
+bglayer		data/bgs/sor3/st1c/bg00.png		0.5 1 0 0 0 0 -1 1 1 0 1 3 10 0.3
+bglayer		data/bgs/sor3/st1c/bg01.png		0.5 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.2
+bglayer		data/bgs/sor3/st1c/bg02.png		0.5 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.4
+bglayer		data/bgs/sor3/st1c/bg03.png		0.5 1 0 -20 0 0 -1 1 1 0 0 0 0 0 0.8
+bglayer		data/bgs/sor3/st1c/bg04.png		0.5 1 0 -40 0 0 -1 1 1 0 0 0 0 0 0.4
+water		data/bgs/sor3/st1c/bg05.png		0.5
+panel		data/bgs/sor3/st1c/_map.png		none	none
+fglayer		data/bgs/sor3/st1c/fg00.png		0 -0.4 0 0 0 0 1 -1 1 1 0 0 0 0 0 0 1
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+noslow		1
+settime		480
+bgspeed		1 0
+stagenumber 1
+spawn1		60 20 300
+spawn2		90 40 300
+spawn3		120 20 300
+spawn4		150 40 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		St1_Cat 3
+
+#########################################################################################
+
+spawn		St1_Cat 1
+flip		1
+coords		1 180 0
+at			0
+
+#########################################################################################
+
+spawn		Trash 1
+flip		1
+coords		180 220 0
+at			0
+
+spawn		Barrel_B 1
+flip		1
+coords		320 220 0
+at			0
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			0
+
+wait
+at			0
+
+group		4 4
+at			0
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		600 230 0
+at			0
+
+spawn		Donovan_Wait 1
+map			2
+flip		0
+coords		420 220 0
+at			0
+
+spawn		Electra_Wait 1
+map			0
+flip		0
+coords		460 240 0
+at			0
+
+spawn		Donovan_Wait 1
+map			2
+flip		0
+coords		420 260 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		0
+coords		-100 260 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 230 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BongoX 1
+map			1
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BossX1 1
+map			1
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BossX1 1
+map			1
+2pspawn
+flip		1
+coords		-100 230 0
+at			0
+
+
+spawn		ElectraX 1
+map			1
+flip		0
+coords		-100 260 0
+at			0
+
+#########################################################################################
+
+group		1000 1000
+at			10
+
+spawn		Barrel_B 1
+flip		1
+coords		720 220 0
+at			10
+
+spawn		Barrel_B 1
+flip		1
+coords		740 270 0
+at			10
+
+spawn		Shiva_Bot_Flee 1
+map			4
+flip		0
+boss		1
+coords		520 240 0
+at			300

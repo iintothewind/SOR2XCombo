@@ -1,0 +1,13 @@
+button moveleft 0.11 0.22 0.08 3
+button moveright 0.33 0.22 0.08 3
+button moveup 0.22 0.33 0.08 3
+button movedown 0.22 0.11 0.08 3
+button special 0.38 0.14 0.07 2
+button attack3 0.22 0.14 0.07 2
+button attack4 0.08 0.225 0.07 2
+button attack2 0.38 0.31 0.07 2
+button attack 0.22 0.31 0.07 2
+button jump 0.52 0.225 0.07 2
+button esc 0.73 0.10 0.08 3
+button start 0.93 0.10 0.08 3
+button screenshot 0.83 0.25 0.08 3

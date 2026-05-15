@@ -1,0 +1,1036 @@
+##MAIN
+name				Zan_
+type				npc
+subtype				follow
+
+##LIFE
+health				400
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			5 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-3 #-1/-2/-3
+height				83
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2
+weapons				none none none none
+modelflag			3
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				wander #NPC ONLY
+escapehits			2 #NPC ONLY
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+death				1
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/zan.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+ondrawscript		data/scripts/ondraw/zan.c
+onspawnscript		data/scripts/onspawn/partner.c
+ondeathscript		data/scripts/ondeath/partner.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/armor.c
+thinkscript			data/scripts/think/partner.c
+script				data/scripts/updateentity/zan.c
+
+##ICONS
+icon				data/chars/heroes/zan/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Zan1.wav
+
+##REMAPS
+remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter1.png
+remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter2.png
+remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter3.png
+
+##LOADS
+load				Zan_Shot
+load				Zan_Shot_B
+load				ZanS
+load				Zan_Bike_
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	130 164
+	frame	data/chars/heroes/zan/idle00.png
+
+anim idle
+	range	0 481
+	rangea	-999 999
+	rangez	-999 999
+	loop	1
+	delay	18
+	offset	130 164
+	bbox 	115 85 27 81
+	frame	data/chars/heroes/zan/idle00.png
+	frame	data/chars/heroes/zan/idle01.png
+	frame	data/chars/heroes/zan/idle02.png
+	frame	data/chars/heroes/zan/idle03.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	130 164
+	bbox 	126 83 16 83
+	frame	data/chars/heroes/zan/walk00.png
+	frame	data/chars/heroes/zan/walk01.png
+	frame	data/chars/heroes/zan/walk02.png
+	frame	data/chars/heroes/zan/walk03.png
+	frame	data/chars/heroes/zan/walk04.png
+	frame	data/chars/heroes/zan/walk05.png
+
+anim backwalk
+	loop	1
+	delay	18
+	offset	130 164
+	bbox 	126 83 16 83
+	frame	data/chars/heroes/zan/walk05.png
+	frame	data/chars/heroes/zan/walk04.png
+	frame	data/chars/heroes/zan/walk03.png
+	frame	data/chars/heroes/zan/walk02.png
+	frame	data/chars/heroes/zan/walk01.png
+	frame	data/chars/heroes/zan/walk00.png
+
+anim run
+	loop	1
+	delay	4
+	offset	130 164
+	bbox 	121 100 31 67
+	sound	data/sounds/Run4.wav
+	frame	data/chars/heroes/zan/run00.png
+	frame	data/chars/heroes/zan/run01.png
+
+anim get
+	loop	0
+	delay	16
+	offset	130 164
+	frame	data/chars/heroes/zan/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	130 164
+	bbox 	116 81 26 85
+	@cmd vaultStuck
+	frame	data/chars/heroes/zan/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	130 164
+	bbox 	116 101 30 65
+	frame	data/chars/heroes/zan/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	130 164
+	@cmd landSafe
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/heroes/zan/jump01.png
+	frame	data/chars/heroes/zan/jump02.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	130 164
+	bbox 	121 100 31 67
+	frame	data/chars/heroes/zan/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	12
+	offset	130 164
+	bbox 	121 81 30 67
+	@cmd jump 1
+	frame	data/chars/heroes/zan/jump00.png
+	frame	data/chars/heroes/zan/jump01.png
+	frame	data/chars/heroes/zan/jump02.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	130 164
+	bbox 	121 100 31 67
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/jumpland00.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	130 164
+	bbox 	116 101 30 65
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+	frame	data/chars/heroes/zan/grabbed00.png
+	frame	data/chars/heroes/zan/grabbed01.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	130 164
+	bbox 	122 87 23 79
+	frame	data/chars/heroes/zan/pain00.png
+	frame	data/chars/heroes/zan/pain01.png
+	frame	data/chars/heroes/zan/pain00.png
+	frame	data/chars/heroes/zan/pain01.png
+	frame	data/chars/heroes/zan/pain00.png
+	frame	data/chars/heroes/zan/pain01.png
+	frame	data/chars/heroes/zan/pain00.png
+	frame	data/chars/heroes/zan/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	130 164
+	bbox 	123 103 28 63
+	frame	data/chars/heroes/zan/pain200.png
+	frame	data/chars/heroes/zan/pain201.png
+	frame	data/chars/heroes/zan/pain200.png
+	frame	data/chars/heroes/zan/pain201.png
+	frame	data/chars/heroes/zan/pain200.png
+	frame	data/chars/heroes/zan/pain201.png
+	frame	data/chars/heroes/zan/pain200.png
+	frame	data/chars/heroes/zan/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	130 164
+	bbox 	107 113 53 35
+	frame	data/chars/heroes/zan/fall00.png
+		delay	8
+	bbox 	98 137 89 28
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	130 164
+	bbox 	107 113 53 35
+	frame	data/chars/heroes/zan/fall00.png
+		delay	8
+	bbox 	98 137 89 28
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	130 164
+	bbox 	107 113 53 35
+	frame	data/chars/heroes/zan/fall00.png
+		delay	8
+	bbox 	98 137 89 28
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	130 164
+	frame	data/chars/heroes/zan/fall600.png
+	frame	data/chars/heroes/zan/fall601.png
+	frame	data/chars/heroes/zan/fall602.png
+	frame	data/chars/heroes/zan/fall603.png
+		delay	8
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	130 164
+	frame	data/chars/heroes/zan/fall700.png
+	frame	data/chars/heroes/zan/fall701.png
+	frame	data/chars/heroes/zan/fall702.png
+	frame	data/chars/heroes/zan/fall703.png
+	frame	data/chars/heroes/zan/fall704.png
+	frame	data/chars/heroes/zan/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	130 164
+	bbox 	107 113 53 35
+	hitfx	data/sounds/MediumKick.wav
+	attack 107 113 53 35 4 1 0 0 20 12
+	frame	data/chars/heroes/zan/fall00.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/heroes/zan/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	98 137 89 28
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	130 164
+	bbox 	115 113 35 54
+	hitfx	data/sounds/MediumKick.wav
+	attack 115 113 35 54 4 1 0 0 20 12
+	frame	data/chars/heroes/zan/fall900.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/heroes/zan/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	98 137 89 28
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/heroes/zan/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	130 164
+	frame	data/chars/heroes/zan/fall01.png
+	frame	data/chars/heroes/zan/fall01.png
+	frame	data/chars/heroes/zan/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	130 164
+	frame	data/chars/heroes/zan/rise00.png
+	frame	data/chars/heroes/zan/rise01.png
+	frame	data/chars/heroes/zan/rise00.png
+	frame	data/chars/heroes/zan/rise02.png
+
+anim riseattack
+	range 60 120
+	loop	0
+	delay	2
+	offset	130 164
+	@cmd flipRandom
+	@cmd antiHole 120 "flip"
+	@cmd invinc 2
+	@cmd dasher 2 0 0
+	@cmd copyMove
+	frame	data/chars/heroes/zan/dodge00.png
+		delay	8
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge01.png
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge02.png
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge03.png
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge04.png
+		delay	16
+	@cmd dasher 0 0 0
+	frame	data/chars/heroes/zan/dodge05.png
+
+anim attack1
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 164
+	bbox 	125 84 21 82
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	#attack 62 61 999 999 99999 0 0 0 5 999 #DEBUG TEST
+	frame	data/chars/heroes/zan/a100.png
+	attack 139 96 62 22 2 0 0 0 25 12
+	bbox 	125 87 29 79
+	frame	data/chars/heroes/zan/a101.png
+
+anim attack2
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	130 164
+	bbox 	125 84 21 82
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/heroes/zan/a200.png
+	attack 152 94 53 69 3 0 0 0 25 12
+	bbox 	130 92 31 74
+	frame	data/chars/heroes/zan/a201.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/a201.png
+	attack 165 94 55 69 5 1 0 0 30 12
+	dropv 2.5 1 0
+	bbox 	136 92 30 74
+	frame	data/chars/heroes/zan/a202.png
+	@cmd rageCancel 80 160 30 60 30 "ANI_FREESPECIAL" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	125 84 21 82
+	frame	data/chars/heroes/zan/a203.png
+
+anim grabattack #SHAKE SLAM
+	attackone 0
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	16
+	offset	130 164
+	@cmd grabStart
+	@cmd position 5 20 40 0 0
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/grabatk00.png
+		delay	8
+	@cmd position 5 5 50 0 0
+	frame	data/chars/heroes/zan/grabatk01.png
+	@cmd position 5 -25 45 0 0
+	frame	data/chars/heroes/zan/grabatk02.png
+	@cmd position 5 5 50 0 0
+	frame	data/chars/heroes/zan/grabatk01.png
+	@cmd position 5 -25 45 0 0
+	frame	data/chars/heroes/zan/grabatk02.png
+	@cmd position 5 5 50 0 0
+	frame	data/chars/heroes/zan/grabatk01.png
+	@cmd position 5 -25 45 0 0
+	frame	data/chars/heroes/zan/grabatk02.png
+	@cmd position 5 5 50 0 0
+	frame	data/chars/heroes/zan/grabatk01.png
+	@cmd position 5 20 40 0 0
+	frame	data/chars/heroes/zan/grabatk00.png
+	@cmd position 4 30 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/heroes/zan/grabatk03.png
+	@cmd slam 12 2 -2 2 0 0
+	frame	data/chars/heroes/zan/grabatk03.png
+		delay	8
+	@cmd clearL
+	frame	data/chars/heroes/zan/grabatk03.png
+
+anim grabattack2 #VAULT FRONT TO BACK
+	loop	0
+	delay	8
+	offset	100 220
+	frame	data/chars/heroes/zan/vault00.png
+	frame	data/chars/heroes/zan/vault01.png
+	frame	data/chars/heroes/zan/vault02.png
+	frame	data/chars/heroes/zan/vault03.png
+	frame	data/chars/heroes/zan/vault04.png
+		delay	2
+		offset	130 164
+	@cmd vaultFix
+	frame	data/chars/heroes/zan/grab00.png
+	@cmd cancelVault "ANI_GRABDOWN2"
+	bbox 	114 105 11 76
+	frame	data/chars/heroes/zan/grab00.png
+
+anim grabup2 #VAULT BACK TO FRONT
+	loop	0
+	delay	8
+	offset	100 220
+	frame	data/chars/heroes/zan/vault00.png
+	frame	data/chars/heroes/zan/vault01.png
+	frame	data/chars/heroes/zan/vault02.png
+	frame	data/chars/heroes/zan/vault03.png
+	frame	data/chars/heroes/zan/vault04.png
+		delay	2
+		offset	130 164
+	@cmd vaultFix
+	frame	data/chars/heroes/zan/idle00.png
+	bbox 	117 109 19 72
+	frame	data/chars/heroes/zan/idle00.png
+
+anim grabforward #STOMACH BREAKER
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	130 164
+	bbox 	123 81 24 85
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/heroes/zan/fgrabatk00.png
+	frame	data/chars/heroes/zan/fgrabatk01.png
+	frame	data/chars/heroes/zan/fgrabatk02.png
+	attack2 127 89 48 21 4 0 0 0 5 12
+	frame	data/chars/heroes/zan/fgrabatk03.png
+
+anim grabforward2 #HEAD BREAKER
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	130 164
+	bbox 	120 81 26 85
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/heroes/zan/fgrabatk200.png
+	frame	data/chars/heroes/zan/fgrabatk201.png
+	attack2 133 88 49 41 8 1 0 0 20 12
+	bbox 	125 87 27 79
+	frame	data/chars/heroes/zan/fgrabatk202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	120 101 26 65
+	frame	data/chars/heroes/zan/fgrabatk203.png
+
+anim grabbackward #FRONT THROW
+	loop	0
+	delay	24
+	offset	130 164
+	@cmd grabStart
+	@cmd position 5 35 40 0 0
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/throw00.png
+		delay	6
+	@cmd position 4 -35 80 0 0
+	frame	data/chars/heroes/zan/throw01.png
+		delay	12
+	@cmd throw 12 2 2 1 0 0
+	frame	data/chars/heroes/zan/throw02.png
+	@cmd clearL
+	frame	data/chars/heroes/zan/throw02.png
+
+anim grabdown2 #BACK THROW
+	loop	0
+	delay	24
+	offset	130 164
+	@cmd grabStart
+	@cmd position 5 30 30 0 1
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/throw200.png
+		delay	6
+	@cmd position 3 25 40 0 0
+	frame	data/chars/heroes/zan/throw201.png
+	@cmd position 4 -15 60 0 0
+	frame	data/chars/heroes/zan/throw202.png
+	@cmd throw 12 2 -2 1 0 0
+	frame	data/chars/heroes/zan/throw202.png
+		delay	16
+	@cmd clearL
+	frame	data/chars/heroes/zan/throw203.png
+
+anim jumpattack #JUMP STATIC/FORWARD
+	range 60 80
+	rangea -100 100
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	130 164
+	bbox 	121 81 30 67
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/Jumping2.wav
+	@cmd antiHole 120 "reset"
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/heroes/zan/jump00.png
+	frame	data/chars/heroes/zan/jump01.png
+	frame	data/chars/heroes/zan/jump02.png
+		delay	6
+	bbox 	120 97 38 38
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/heroes/zan/fjumpatk00.png
+	sound	data/voices/Zan2.wav
+	frame	data/chars/heroes/zan/fjumpatk01.png
+	attack 120 97 38 38 4 0 0 0 20 12
+	bbox 	120 97 38 38
+	frame	data/chars/heroes/zan/fjumpatk02.png
+	hitfx	data/sounds/HighKick.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/fjumpatk03.png
+	attack 120 97 38 48 4 1 0 0 20 12
+	bbox 	107 89 38 44
+	frame	data/chars/heroes/zan/fjumpatk04.png
+
+anim jumpattack2 #JUMP DOWN
+	range 60 80
+	rangea -100 100
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	130 164
+	bbox 	121 81 30 67
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/Jumping2.wav
+	@cmd antiHole 120 "reset"
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/heroes/zan/jump00.png
+	frame	data/chars/heroes/zan/jump01.png
+	frame	data/chars/heroes/zan/jump02.png
+		delay	6
+	bbox 	127 82 19 60
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/heroes/zan/jumpatk200.png
+	attack 112 61 35 42 4 0 0 0 20 12
+	sound	data/voices/Zan2.wav
+	frame	data/chars/heroes/zan/jumpatk201.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	127 89 28 50
+	frame	data/chars/heroes/zan/jumpatk202.png
+	attack 141 96 57 22 4 0 0 0 20 12
+	frame	data/chars/heroes/zan/jumpatk203.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/jumpatk203.png
+	attack 141 99 33 54 4 0 0 0 20 12
+	frame	data/chars/heroes/zan/jumpatk204.png
+
+anim special #DEFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	4
+	offset	130 164
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Shock.wav
+	frame	data/chars/heroes/zan/special00.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	hitflash Shock
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	shock 98 78 72 88 8 3 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	frame	data/chars/heroes/zan/special03.png
+
+anim special2 #DEFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	4
+	offset	130 164
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Shock.wav
+	frame	data/chars/heroes/zan/special00.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	attack 98 78 72 88 2 0 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	hitflash Shock
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	shock 98 78 72 88 8 3 0 0 5 12
+	frame	data/chars/heroes/zan/special01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special02.png
+	frame	data/chars/heroes/zan/special03.png
+
+anim freespecial #RAGE ORB
+	range 120 180
+	rangea 0 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	energycost 60 1 6
+	loop	0
+	delay	20
+	offset	130 164
+	@cmd spawnBind "Rage" 0 0 -1
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/rage00.png
+		delay	4
+	frame	data/chars/heroes/zan/rage01.png
+	frame	data/chars/heroes/zan/rage02.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+	frame	data/chars/heroes/zan/rage03.png
+	@cmd shoot "Zan_Shot" 100 50 0 2 0 0 "dual"
+	sound	data/sounds/LaserShot.wav
+	frame	data/chars/heroes/zan/rage04.png
+		delay	8
+	frame	data/chars/heroes/zan/rage03.png
+	frame	data/chars/heroes/zan/rage01.png
+
+#anim freespecial2 #SUPER
+#	fastattack 1
+#	jugglecost 3
+#	forcedirection -1
+#	otg 1
+#	followanim 5
+#	followcond 4
+#	attackone 1
+#	energycost 5 1 6
+#	loop	0
+#	delay	4
+#	offset	130 164
+#	hitfx	data/sounds/HighKick.wav
+#	sound	data/sounds/Slide2.wav
+#	@cmd dasher 0 0 0
+#	attack 137 104 41 44 0 0 1 1 0 12
+#	seal 1 1
+#	frame	data/chars/heroes/zan/slide00.png
+#	sound	data/voices/Zan4.wav
+#	attack 137 104 41 44 0 0 1 1 0 12
+#	seal 1 1
+#	frame	data/chars/heroes/zan/slide01.png
+#	attack 137 104 41 44 0 0 1 1 0 12
+#	seal 1 1
+#	frame	data/chars/heroes/zan/slide02.png
+#	attack 137 104 41 44 0 0 1 1 0 12
+#	seal 1 1
+#	frame	data/chars/heroes/zan/slide01.png
+#	attack 137 104 41 44 0 0 1 1 0 12
+#	seal 1 1
+#	frame	data/chars/heroes/zan/slide02.png
+#	@cmd dasher 0
+#	frame	data/chars/heroes/zan/slide00.png
+
+anim freespecial2 #SUPER
+	range 40 220
+	rangea 0 80
+	rangez -5 5
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	attackone 1
+	energycost 5 1 6
+	loop	0
+	delay	2
+	offset	130 164
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/voices/Zan2.wav
+	@cmd dasher 0 0 0
+	bbox 	124 84 20 82
+	frame	data/chars/heroes/zan/s01.png
+	bbox 	103 89 24 77
+	frame	data/chars/heroes/zan/s02.png
+	offset	35 164
+	delay 3
+	bbox 	25 105 30 60
+	attack 25 105 90 60 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/heroes/zan/s03.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s03.png
+	delay 3
+	attack 25 105 103 60 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/heroes/zan/s04.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s04.png
+	delay 3
+	attack 25 105 118 60 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/heroes/zan/s05.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s05.png
+	delay 3
+	attack 25 105 137 60 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/heroes/zan/s06.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s06.png
+	delay 4
+	attack 25 105 155 60 1 0 1 1 0 36
+	seal 1 1
+	frame	data/chars/heroes/zan/s07.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s07.png
+	delay 4
+	attack 25 105 174 60 1 0 1 1 0 36
+	seal 1 1
+	frame	data/chars/heroes/zan/s08.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s08.png
+	delay 5
+	attack 25 105 216 60 1 0 1 1 0 36
+	seal 1 1
+	frame	data/chars/heroes/zan/s09.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/s09.png
+	delay 5
+	attack 25 105 250 60 1 0 1 1 0 36
+	seal 1 1
+	frame	data/chars/heroes/zan/s10.png
+
+
+
+anim freespecial3 #SLIDE
+	range 60 90
+	rangea 0 60
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 164
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Slide2.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/heroes/zan/slide00.png
+	attack 137 98 42 56 4 1 0 0 20 12
+	bbox 130 102 32 64
+	sound	data/voices/Zan2.wav
+	frame	data/chars/heroes/zan/slide01.png
+	frame	data/chars/heroes/zan/slide00.png
+	frame	data/chars/heroes/zan/slide01.png
+	frame	data/chars/heroes/zan/slide02.png
+
+anim freespecial4 #OFFENSIVE SPECIAL
+	range 60 90
+	rangea 0 60
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	4
+	offset	130 164
+	bbox 	124 84 20 82
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Shock.wav
+	frame	data/chars/heroes/zan/special200.png
+	bbox 	103 89 24 77
+	sound	data/voices/Zan3.wav
+	frame	data/chars/heroes/zan/special201.png
+	bbox 	146 105 43 61
+	frame	data/chars/heroes/zan/special202.png
+	attack 155 96 83 33 4 0 0 0 10 12
+	frame	data/chars/heroes/zan/special203.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special202.png
+	attack 155 96 83 33 4 0 0 0 10 12
+	frame	data/chars/heroes/zan/special203.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special202.png
+	attack 155 96 83 33 4 0 0 0 10 12
+	frame	data/chars/heroes/zan/special203.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special202.png
+	attack 155 96 83 33 4 0 0 0 10 12
+	frame	data/chars/heroes/zan/special203.png
+	hitflash Shock
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special202.png
+	shock 155 96 83 33 4 3 0 0 10 12
+	frame	data/chars/heroes/zan/special203.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/special202.png
+
+anim follow7 #COUNTER
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 10 1 6
+	loop	0
+	delay	4
+	offset	130 164
+	hitfx	data/sounds/HighKick.wav
+	frame	data/chars/heroes/zan/block00.png
+	@cmd spawn01 "Counter" 0 0 1
+	@cmd block 0
+	@cmd dasher 4 0 0
+	attack 137 104 41 44 15 1 0 0 20 12
+	dropv 1.5 1 0
+	sound	data/sounds/Slide2.wav
+	frame	data/chars/heroes/zan/slide00.png
+	sound	data/voices/Zan2.wav
+	frame	data/chars/heroes/zan/slide01.png
+	frame	data/chars/heroes/zan/slide02.png
+	@cmd dasher -1 0 0
+	@cmd target 0 4
+	@cmd dashTarget
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/zan/slide00.png
+	frame	data/chars/heroes/zan/slide01.png
+	frame	data/chars/heroes/zan/slide02.png
+	@cmd dasher 4 0 0
+	attack 137 104 41 44 15 1 0 0 20 12
+	dropv 1.5 1 0
+	bbox 130 102 32 64
+	frame	data/chars/heroes/zan/slide00.png
+	frame	data/chars/heroes/zan/slide01.png
+	frame	data/chars/heroes/zan/slide02.png
+
+anim dodge
+	range 0 160
+	rangea 0 100
+	rangez -48 48
+	loop	0
+	delay	2
+	offset	130 164
+	@cmd antiHole 120 "flip"
+	@cmd dashRandom 1 1
+	@cmd copyMove
+	frame	data/chars/heroes/zan/dodge00.png
+		delay	8
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge01.png
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge02.png
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge03.png
+	@cmd pasteMove
+	frame	data/chars/heroes/zan/dodge04.png
+	@cmd dasher 0 0 0
+	frame	data/chars/heroes/zan/dodge05.png
+
+anim block
+	range 0 160
+	rangea 0 100
+	rangez -48 48
+	loop	0
+	delay	96
+	offset	130 164
+	bbox 	104 96 28 70
+	frame	data/chars/heroes/zan/block00.png

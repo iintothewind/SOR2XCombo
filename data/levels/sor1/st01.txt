@@ -1,0 +1,729 @@
+loadingbg		data/bgs/loading5.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor1/st01/Back01.png 1 1 0 0 0 0 1 1 1
+panel		data/bgs/sor1/st01/Pn01.png
+frontpanel      data/bgs/sor1/st01/Front01.png
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		0
+stagenumber 1
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+
+cameratype 1
+cameraoffset 0 -30
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowcolor   64_64_64
+at             0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		Stage 3
+load		L01 3
+load		L02 3
+load		L03 3
+load		L04 3
+load		L05 3
+load		L06 3
+load		L07 3
+load		Barl 3
+load		Cafe 3
+load		Porta 3
+load		St1_Rain 3
+load		St1_Drop 3
+load		St1_Ray 3
+load		St1_Thunder 3
+load		Cabine 2
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		St1_Drop 1
+flip		1
+coords		-119 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		-119 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		201 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		201 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		521 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		521 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		841 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		841 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1161 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1161 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1481 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1481 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1801 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1801 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2121 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2121 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2441 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2441 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2761 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		2761 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3081 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3081 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3401 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3401 195
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3721 120
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		3721 195
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		1 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		481 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		961 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		1441 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		1921 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		2401 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		2881 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		3361 200
+at			0
+
+spawn		St1_Rain 1
+flip		1
+coords		3841 200
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		1 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		481 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		961 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		1441 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		1921 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		2401 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		2881 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		3361 1
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		3841 1
+at			0
+
+spawn		St1_Thunder 1
+flip		1
+coords		1 1
+at			0
+
+#########################################################################################
+
+spawn  L01 1
+coords  0  0
+Flip 1
+at  0
+
+spawn  L02 1
+coords  497  0
+Flip 1
+at  0
+
+spawn  L07 1
+coords  497  0
+Flip 1
+at  0
+
+spawn  L03 1
+coords  1013  0
+Flip 1
+at  0
+
+spawn  Barl 1
+coords  1328  0
+Flip 1
+at  0
+
+spawn  Cafe 1
+coords  1464  2
+Flip 1
+at  0
+
+spawn  L04 1
+coords  1603  0
+Flip 1
+at  0
+
+spawn  L05 1
+coords  2052  0
+Flip 1
+at  0
+
+spawn  L06 1
+coords  2319  0
+Flip 1
+at  0
+
+spawn  Barl 1
+coords  1834  0
+Flip 1
+at  0
+
+spawn  Cafe 1
+coords  1862  66
+Flip 1
+at  0
+
+spawn  L07 1
+coords  2805  0
+Flip 1
+at  0
+
+spawn  Cafe 1
+coords  3124  17
+Flip 1
+at  0
+
+spawn  Cafe 1
+coords  3220  17
+Flip 1
+at  0
+
+spawn  L02 1
+coords  3328  0
+Flip 1
+at  0
+
+spawn  Cafe 1
+coords  3602  64
+Flip 1
+at  0
+
+spawn  Cafe 1
+coords  3780  64
+Flip 1
+at  0
+
+#########################################################################################
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		520 220 0
+at			1
+
+spawn		BasicX1 1
+map			3
+flip		0
+coords		520 220 0
+at			50
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			4
+flip		0
+coords		520 220 0
+at			100
+
+spawn		BasicX3 1
+map			2
+flip		0
+coords		-100 220 0
+at			100
+
+wait
+at			288
+
+group		4 4
+at			288
+
+spawn		BruceB 1
+map			2
+flip		0
+coords		-100 220 0
+at			288
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		550 220 0
+at			288
+
+spawn		BasicX2 1
+map			2
+flip		0
+coords		-50 220 0
+at			288
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		600 220 0
+at			288
+
+#########################################################################################
+
+group		1000 1000
+at			300
+
+spawn		Cabine 1
+flip		1
+coords		930 210 0
+at			305
+
+spawn		Cabine 1
+flip		1
+coords		1115 210 0
+at			305
+
+spawn		BasicX1 1
+map			4
+flip		0
+coords		550 220 0
+at			400
+
+spawn		SignalX 1
+map			2
+flip		0
+coords		-50 220 0
+at			800
+
+wait
+at			1072
+
+group		4 4
+at			1072
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			2
+flip		0
+coords		-50 240 0
+at			1072
+
+spawn		BasicX2 1
+map			2
+flip		0
+coords		550 220 0
+at			1072
+
+spawn		BasicX2 1
+map			2
+flip		0
+coords		600 220 0
+at			1072
+
+spawn		BasicX3 1
+map			2
+flip		0
+coords		-100 220 0
+at			1072
+
+#########################################################################################
+
+group		1000 1000
+at			1100
+
+spawn		Cabine 1
+flip		1
+coords		540 210 0
+at			1150
+
+spawn		Cabine 1
+flip		1
+coords		930 210 0
+at			1150
+
+spawn		Cabine 1
+flip		1
+coords		1000 210 0
+at			1150
+
+spawn		Cabine 1
+flip		1
+coords		1070 210 0
+at			1150
+
+spawn		BasicX3 1
+map			2
+flip		0
+coords		-50 220 0
+at			1200
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			4
+flip		0
+coords		520 220 0
+at			1300
+
+spawn  Porta 1
+coords  224  0
+Flip 1
+at  1399
+
+spawn		KusanagiB 1
+weapon		Kunai 1
+map			3
+flip		0
+coords		-50 220 0
+at			1500
+
+wait
+at			1810
+
+group		4 4
+at			1810
+
+spawn		BongoX 1
+map			4
+2pspawn
+flip		0
+coords		520 220 0
+at			1810
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			3
+flip		0
+coords		-50 220 0
+at			1810
+
+spawn		ReineX 1
+map			3
+flip		0
+coords		-100 220 0
+at			1810
+
+spawn		ElectraX 1
+map			3
+flip		0
+coords		-100 220 0
+at			1810
+
+spawn		SignalX 1
+map			3
+2pspawn
+flip		0
+coords		-50 220 0
+at			1810
+
+spawn		KusanagiB 1
+weapon		Sword 1
+map			3
+flip		0
+coords		-50 220 0
+at			1810
+
+#########################################################################################
+
+group		1000 1000
+at			1850
+
+spawn		Cabine 1
+flip		1
+coords		1010 210 0
+at			1900
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		-50 220 0
+at			2100
+
+spawn		GalsiaB 1
+weapon		Knife 1
+map			4
+flip		0
+coords		520 220 0
+at			2200
+
+spawn  Porta 1
+Flip 1
+coords  159  0
+at  2440
+
+wait
+at			2510
+
+group		4 4
+at			2510
+
+spawn		BasicX3 1
+map			2
+flip		0
+coords		-50 220 0
+at			2510
+
+spawn		BasicX2 1
+map			2
+flip		0
+coords		-100 220 0
+at			2510
+
+spawn		KusanagiB 1
+weapon		Kunai 1
+map			4
+flip		0
+coords		-50 220 0
+at			2510
+
+spawn		KusanagiB 1
+weapon		Sword 1
+map			4
+flip		0
+coords		-50 220 0
+at			2510
+
+#########################################################################################
+
+group		1000 1000
+at			2550
+
+spawn		Cabine 1
+flip		1
+coords		1010 210 0
+at			2600
+
+spawn		BasicX1 1
+map			3
+flip		0
+coords		520 220 0
+at			2700
+
+spawn		DonovanB 1
+weapon		Pipe 1
+map			3
+flip		0
+coords		-50 220 0
+at			2800
+
+spawn		KusanagiB 1
+weapon		Kunai 1
+map			4
+flip		0
+coords		520 220 0
+at			3100
+
+spawn  Porta 1
+coords  183  0
+Flip 1
+at  3200
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			3363
+
+group		4 4
+at			3363
+
+spawn		KusanagiB 1
+weapon		Kunai 1
+map			4
+flip		0
+coords		550 220 0
+at			3363
+
+spawn		BasicX2 1
+map			4
+flip		0
+coords		-50 220 0
+at			3363
+
+spawn		BasicX3 1
+map			4
+flip		0
+coords		600 240 0
+at			3363
+
+spawn		KusanagiB 1
+weapon		Sword 1
+map			4
+flip		0
+coords		-100 240 0
+at			3363
+
+group		2 2
+at			3363
+
+spawn		BruceB 1
+map			4
+flip		0
+coords		520 220 100
+at			3363
+
+spawn		BigBenB 1
+map			4
+flip		0
+coords		-100 220 100
+at			3363
+
+group		4 4
+at			3363
+
+spawn		BreakB 1
+map			4
+flip		0
+boss		1
+coords		550 230 300
+at			3363

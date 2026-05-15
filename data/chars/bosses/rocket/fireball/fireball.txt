@@ -1,0 +1,48 @@
+name				Rocket_FireBall
+type				none
+health				1
+nolife				1
+lifespan			2
+offscreenkill		50
+remove				0
+shadow				0
+antigravity			100
+alpha				1
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+#ondrawscript		data/scripts/ondraw/Rocket_FireBall.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	54 50
+	hitfx	data/sounds/StrongPunch.wav
+	burn 41 38 22 23 12 1 0 0 16 60
+	dropv 1 1 0
+	seal 1 1
+	@cmd spawnToss "Smoke" -10 0 0 0 1 0
+	frame	data/chars/bosses/rocket/fireball/fireball00.png
+	frame	data/chars/bosses/rocket/fireball/fireball01.png
+	burn 41 38 22 23 12 1 0 0 16 36
+	dropv 1 1 0
+	seal 1 1
+	frame	data/chars/bosses/rocket/fireball/fireball02.png
+	frame	data/chars/bosses/rocket/fireball/fireball03.png
+	burn 41 38 22 23 12 1 0 0 16 36
+	dropv 1 1 0
+	seal 1 1
+	frame	data/chars/bosses/rocket/fireball/fireball04.png
+	frame	data/chars/bosses/rocket/fireball/fireball05.png
+	burn 41 38 22 23 12 1 0 0 16 36
+	dropv 1 1 0
+	seal 1 1
+	frame	data/chars/bosses/rocket/fireball/fireball06.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/rocket/fireball/fireball07.png
+	@cmd suicide
+	frame	data/chars/bosses/rocket/fireball/empty.png

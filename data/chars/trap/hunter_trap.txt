@@ -1,0 +1,67 @@
+name				Hunter_Trap
+type				npc
+subType			weapon
+health				1
+nolife				1
+lifespan			3
+death				  1
+nomove				1 0
+shadow				0
+stealth				2
+#setlayer			-3
+offscreenkill	50
+candamage			player
+hostile			  player
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript	data/scripts/ondraw/weapons.c
+onfallscript	data/scripts/onfall/weapons.c
+animationscript		data/scripts/animation/default.c
+script				data/scripts/updateentity/Hunter_Trap.c
+
+anim idle
+	followanim 2
+	followcond 1
+	loop	0
+	delay	8
+	offset	25 250
+	attack 13 237 24 13 0 0 1 1 0 12
+	frame	data/chars/trap/trap01.png
+
+anim follow1
+	followanim 2
+	followcond 1
+	loop	0
+	delay	8
+	offset	25 250
+	attack 13 237 24 13 0 0 1 1 0 12
+	frame	data/chars/trap/trap03.png
+
+anim follow2
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	offset	25 33
+	delay	48
+	sound	data/sounds/bip2.wav
+	@cmd spawnBind "Bang" 0 0 1
+	@cmd suicide
+	frame	data/chars/trap/empty.png
+
+anim death #EXPLOSION
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	offset	25 33
+	sound	data/sounds/bip2.wav
+	delay	48
+	@cmd spawnBind "Bang" 0 0 1
+	#burn -85 -55 220 160 125 1 1 0 0 60
+	#dropv 4 4 0
+	@cmd suicide
+	frame	data/chars/trap/empty.png

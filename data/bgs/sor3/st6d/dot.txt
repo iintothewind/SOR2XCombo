@@ -1,0 +1,33 @@
+name				St6_Dot
+type				none
+subject_to_platform	0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+candamage			player enemy
+nolife				1
+shadow				0
+antigravity			100
+offscreenkill		10
+ondoattackscript	data/scripts/ondoattack/lasers.c
+onspawnscript		data/scripts/onspawn/new_type.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	8
+	offset	4 4
+	@cmd aniChange 2 openborconstant("ANI_ATTACK1")
+	frame	data/bgs/sor3/st6d/dot00.png
+
+anim attack1
+	fastattack 0
+	jugglecost 60
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	0
+	delay	-1000
+	offset	4 4
+	shock 0 0 8 8 4 30 1 0 0 48
+	frame	data/bgs/sor3/st6d/dot00.png

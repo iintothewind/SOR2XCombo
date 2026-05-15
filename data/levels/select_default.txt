@@ -1,0 +1,2 @@
+allowselect Axel Blaze Max Sammy Adam Zan Shiva_ Shiva Electra_ Bison Chunli Kage Lee
+background	data/bgs/select_default.png

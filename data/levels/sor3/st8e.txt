@@ -1,0 +1,63 @@
+loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st8e/_empty.png	1 1 0 0 0 0 -1 1 1
+bglayer			data/bgs/sor3/st8e/bg00.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg02.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg03.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg04.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg05.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg04.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg03.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg02.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st8e/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+panel			data/bgs/sor3/st8e/_map.png		none	none
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+noslow			1
+settime		480
+stagenumber 	8
+spawn1			200 20 300
+spawn2			230 40 300
+spawn3			260 20 300
+spawn4			290 40 300
+updatescript	data/scripts/updatelevel/sor3_st8e.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+#load		St8_Alarm 3
+load		St8_Emergency 3
+load		St8_Liquid 3
+
+#########################################################################################
+
+#spawn		St8_Alarm 1
+#flip		1
+#coords		1 276 0
+#at			0
+
+spawn		St8_Emergency 1
+flip		1
+coords		1 140 0
+at			0
+
+spawn		St8_Liquid 1
+flip		1
+coords		244 130 0
+at			0
+
+#########################################################################################
+
+spawn		Neox_Death 1
+map			4
+boss    1
+flip		0
+coords		550 230 0
+at			0

@@ -1,0 +1,357 @@
+##MAIN
+name				Axel_Sword
+type				none
+
+##LIFE
+health				0
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					0
+mprate  			5 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			0 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-2 #-1/-2/-3
+height				74
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bflash				Block
+
+##SCRIPTS
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+
+##ICONS
+icon				data/chars/heroes/axel/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/Axel1.wav
+
+##REMAPS
+remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter1.png
+remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter2.png
+remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter3.png
+
+##COMMANDS
+com 				a2	a2		freespecial		#RAGE
+com 				d f a2		freespecial		#RAGE
+com 				a2 + s		freespecial		#RAGE
+com 				a2 s		freespecial		#RAGE
+com 				f f a2		freespecial2	#SUPER
+
+##LOADS
+knife				SwordT
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	62 126
+	bbox 	50 55 23 74
+	frame	data/chars/heroes/axel/sword/idle00.png
+	frame	data/chars/heroes/axel/sword/idle01.png
+	frame	data/chars/heroes/axel/sword/idle02.png
+	frame	data/chars/heroes/axel/sword/idle03.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	62 126
+	bbox 	54 49 20 79
+	frame	data/chars/heroes/axel/sword/walk00.png
+	frame	data/chars/heroes/axel/sword/walk01.png
+	frame	data/chars/heroes/axel/sword/walk02.png
+	frame	data/chars/heroes/axel/sword/walk03.png
+	frame	data/chars/heroes/axel/sword/walk04.png
+	frame	data/chars/heroes/axel/sword/walk05.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	cancel 0 5 0 a2 freespecial2
+	loop	1
+	delay	14
+	offset	62 126
+	bbox 	61 60 20 68
+	frame	data/chars/heroes/axel/sword/run00.png
+	frame	data/chars/heroes/axel/sword/run01.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/heroes/axel/sword/run02.png
+	frame	data/chars/heroes/axel/sword/run03.png
+	frame	data/chars/heroes/axel/sword/run04.png
+	sound	data/sounds/Run2.wav
+	@cmd clearL
+	frame	data/chars/heroes/axel/sword/run05.png
+
+anim get
+	loop	0
+	delay	16
+	offset	62 126
+	frame	data/chars/heroes/axel/sword/get00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	62 126
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/heroes/axel/sword/jump00.png
+	frame	data/chars/heroes/axel/sword/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	62 126
+	bbox 	52 70 25 58
+	frame	data/chars/heroes/axel/sword/jumpdelay00.png
+
+anim jump
+	loop	0
+	delay	30
+	offset	62 126
+	bbox 	56 50 19 61
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/heroes/axel/sword/jump00.png
+	frame	data/chars/heroes/axel/sword/jump01.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	62 126
+	bbox 	56 50 19 61
+	@cmd jump 1
+	frame	data/chars/heroes/axel/sword/jump00.png
+	frame	data/chars/heroes/axel/sword/jump01.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	62 126
+	bbox 	52 70 25 58
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/heroes/axel/sword/jumpland00.png
+
+anim attack1
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	8
+	offset	62 126
+	bbox 	55 48 18 81
+	hitfx	data/sounds/Cutter.wav
+	sound	data/sounds/Whoosh2.wav
+	frame	data/chars/heroes/axel/sword/a100.png
+	attack 110 47 4 4 36 1 0 0 30 12
+	bbox 	49 51 20 78
+	frame	data/chars/heroes/axel/sword/a101.png
+	attack 77 94 64 4 36 1 0 0 30 12
+	bbox 	69 61 26 67
+	frame	data/chars/heroes/axel/sword/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	72 64 27 64
+	frame	data/chars/heroes/axel/sword/a103.png
+
+anim attack3
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	62 126
+	bbox 	55 51 20 77
+	hitfx	data/sounds/MediumKick.wav
+	frame	data/chars/heroes/axel/sword/a300.png
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/heroes/axel/sword/a301.png
+	bbox 	49 62 27 66
+	attack 62 73 58 23 16 0 0 0 10 12
+	frame	data/chars/heroes/axel/sword/a302.png
+	sound	data/sounds/HighAttack.wav
+	bbox 	55 51 20 77
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/axel/sword/a303.png
+		delay	12
+	hitfx	data/sounds/HighKick.wav
+	bbox 	49 62 27 66
+	attack 64 60 48 33 16 1 0 0 10 12
+	frame	data/chars/heroes/axel/sword/a304.png
+		delay	8
+	bbox 	55 51 20 77
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/axel/sword/a305.png
+	frame	data/chars/heroes/axel/sword/a306.png
+
+anim attackboth #THROW SWORD
+	throwframe 2 9999
+	loop	0
+	delay	8
+	offset	62 126
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/a101.png
+	@cmd throWeapon 55 27 -1 2 0 0
+	frame	data/chars/heroes/axel/sword/a104.png
+		delay	16
+	frame	data/chars/heroes/axel/sword/a105.png
+
+anim runattack #SWORD BLITZ
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	6
+	offset	62 126
+	hitfx	data/sounds/Cutter.wav
+	sound	data/voices/Axel2.wav
+	frame	data/chars/heroes/axel/sword/runatk00.png
+		delay 24
+	@cmd dasher 8 0 0
+	attack 50 60 30 67 2 1 0 0 30 36
+	seal 1 1
+	sound	data/sounds/Shring5.wav
+	frame	data/chars/heroes/axel/sword/rage00.png
+		delay 8
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/axel/sword/runatk01.png
+	frame	data/chars/heroes/axel/sword/special205.png
+
+anim follow1 #RAGE STRIKE
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash RainBloodHit
+	loop	0
+	delay	16
+	offset	62 126
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/heroes/axel/sword/rage00.png
+		delay	4
+	@cmd dasher 0 0 0
+	attack -200 0 220 127 5 0 0 0 5 36
+	seal 1 1
+	frame	data/chars/heroes/axel/sword/special205.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/axel/sword/special205.png
+	@cmd looper 1 9
+	attack -200 0 220 127 100 1 0 0 5 36
+	seal 1 1
+	frame	data/chars/heroes/axel/sword/special205.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/axel/sword/special205.png
+
+anim special2 #OFFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 10 1 6
+	@cmd healStart
+	hitflash BloodHit
+	loop	0
+	delay	2
+	offset	62 126
+	hitfx	data/sounds/Cutter.wav
+	sound	data/voices/Axel2.wav
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	bbox 	68 59 26 69
+	attack 77 57 79 43 36 1 0 0 20 12
+	sound	data/sounds/Shring2.wav
+	frame	data/chars/heroes/axel/sword/special201.png
+	bbox 	69 63 29 65
+	attack 155 61 21 65 36 1 0 0 20 12
+	frame	data/chars/heroes/axel/sword/special202.png
+		delay	12
+	attack 163 72 29 43 36 1 0 0 20 12
+	frame	data/chars/heroes/axel/sword/special203.png
+
+anim freespecial #RAGE SWORD
+	energycost 30 1 6
+	loop	0
+	delay	2
+	offset	62 126
+	sound	data/voices/Axel2.wav
+	@cmd spawnBind "Rage" 0 0 -1
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	frame	data/chars/heroes/axel/sword/special200.png
+	frame	data/chars/heroes/axel/sword/a100.png
+	sound	data/sounds/Shring3.wav
+	frame	data/chars/heroes/axel/sword/special201.png
+	@cmd shoot "Axel_Slash" 95 40 0 3 0 0
+	frame	data/chars/heroes/axel/sword/special204.png
+		delay	32
+	frame	data/chars/heroes/axel/sword/special205.png
+
+anim follow11 #BLOCK
+	@cmd checkBlock
+	loop	0
+	delay	12
+	offset	62 126
+	bbox 	50 61 22 68
+	@cmd block 1
+	@cmd blockCost
+	frame	data/chars/heroes/axel/sword/block00.png
+	@cmd keyLoop "attack3" 0
+	@cmd keyLoop "special" 0
+	@cmd block 0
+	frame	data/chars/heroes/axel/sword/block00.png
+
+anim follow12 #PARRY
+	loop	0
+	delay	24
+	offset	62 126
+	bbox 	50 61 22 68
+	@cmd block 1
+	frame	data/chars/heroes/axel/sword/block00.png

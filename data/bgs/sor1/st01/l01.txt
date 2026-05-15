@@ -1,0 +1,17 @@
+name			L01 #GROUND
+type			None
+offscreenkill		9999
+setlayer 5
+
+animationscript data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	20
+	offset	0 0
+	frame	data/bgs/sor1/st01/L101.png
+	frame	data/bgs/sor1/st01/L102.png
+	frame	data/bgs/sor1/st01/L103.png
+	@cmd offScreenKill 800 0
+	frame	data/bgs/sor1/st01/L104.png
+

@@ -1,0 +1,931 @@
+##STAGE COMPLETE/HISCORE
+Hiscorebg		1
+Completebg		1
+Showrushbonus 	1
+Showcomplete 	999	999	999	999	999	999
+Clearbonus 		3 	109 102 109 162 109 222 109	282	109
+Lifebonus 		15 	129 102 129	162 129	222 129	282	129
+Rushbonus 		11 	149 102 149 162 149 222 149	282	149
+Totalscore 		3 	169 102 169 162 169 222 169	282	169
+Scbonuses 		1000 500 100	1
+
+##MUSIC/SFX
+Noslowfx 		1
+
+##MISC
+Loadingbg		1 -81 248 480 999 999 0
+Equalairpause	1
+
+##MAIN HUD
+Lbarsize 		88 5 1 1 0 -500 -500 1 -500
+Mpbarsize 		0 0 1 1 0 -500 -500 1 -500
+Rush			1 1 HIT 1 1 _
+Timeloc 		999 999 0 0 1
+Scoreformat 	0
+
+##PLAYERS HUD
+p1smenu			100 999	69 	121
+p2smenu			200 999 368	121
+p3smenu			300 999 69	256
+p4smenu			400 999 368	256
+
+p1icon			1 	1
+p2icon			121 1
+p3icon			241 1
+p4icon			361 1
+
+p1namej 		24 	1 24  10 19  1
+p2namej 		144 1 144 10 139 1
+p3namej 		264 1 264 10 259 1
+p4namej 		384 1 384 10 379 1
+
+p1score 		24 	1 999 999 24  10
+p2score 		144 1 999 999 144 10
+p3score 		264 1 999 999 264 10
+p4score 		384 1 999 999 384 10
+
+p1life			1 	20
+p2life			121 20
+p3life			241 20
+p4life			361 20
+
+p1lifex 		93 	21 9
+p2lifex 		213 21 9
+p3lifex 		333 21 9
+p4lifex 		453 21 9
+
+p1lifen 		100 12 3
+p2lifen 		220 12 4
+p3lifen 		340 12 5
+p4lifen 		460 12 6
+
+p1mp			999	999
+p2mp			999	999
+p3mp			999 999
+p4mp			999 999
+
+mp1icon			999 999
+mp2icon			999 999
+mp3icon			999 999
+mp4icon			999 999
+
+p1rush			2 	74 30  74 999 999 999 999
+p2rush			122 74 150 74 999 999 999 999
+p3rush			242 74 270 74 999 999 999 999
+p4rush			362 74 390 74 999 999 999 999
+
+e1icon			1 	29
+e2icon			121 29
+e3icon			241 29
+e4icon			361 29
+
+e1name			24 	38
+e2name			144 38
+e3name			264 38
+e4name			384 38
+
+e1life			1 	48
+e2life			121 48
+e3life			241 48
+e4life			361 48
+
+##SET0
+set				Arcade
+maxplayers		4
+nosame			0 0
+lives			9
+credits			9
+typemp 			1
+cansave			2
+musicoverlap	1
+skipselect
+select			data/levels/select_default.txt
+
+#USED TO TEST SCENES ONLY, MAINTAIN ALWAYS DEACTIVATED AFTER ALL TESTS
+#scene			data/scenes/ending_c.txt
+#next
+
+#-------------ROUTES----------------#
+
+#STAGE 0
+branch			route
+z				180 270
+file			data/levels/route.txt 		#SELECT ROUTE
+
+#USED TO CREATE FULL UNLOCKED SAVE, MAINTAIN ALWAYS DEACTIVATED AFTER THE TASK IS FINISHED
+#next
+#end
+
+#-------------SOR1------------------#
+
+#STAGE 1
+branch			sor1_st01
+z			122 270
+file			data/levels/sor1/st01.txt
+next
+
+#STAGE 2
+branch			sor1_st02
+z			130 270
+file			data/levels/sor1/st02.txt
+next
+
+#STAGE 3
+branch			sor1_st03
+z			162 268
+file			data/levels/sor1/st03.txt
+next
+
+#STAGE 4
+branch			sor1_st04
+z			184 270
+file			data/levels/sor1/st04.txt
+next
+
+#STAGE 5
+branch			sor1_st05
+z			163 294
+file			data/levels/sor1/st05.txt
+next
+
+#STAGE 6
+branch			sor1_st06
+z			185 270
+file			data/levels/sor1/st06.txt
+next
+
+#STAGE 7
+branch			sor1_st07
+z			188 270
+file			data/levels/sor1/st07.txt
+next
+
+#STAGE 8
+branch			sor1_st08
+z			148 270
+file			data/levels/sor1/st08.txt
+next
+
+#ENDINGS
+scene			data/scenes/ending_b.txt
+scene			data/scenes/gameover.txt
+end
+
+#-------------SOR2------------------#
+
+#STAGE 1
+branch			sor2_st1a
+z				150 466
+file			data/levels/sor2/st1a.txt 	#STREETS A
+branch			sor2_st1b
+z				220 270
+file			data/levels/sor2/st1b.txt	#BAR
+branch			sor2_st1c
+z				220 270
+file			data/levels/sor2/st1c.txt	#BAR EXIT BARBON
+next
+
+#STAGE 2
+branch			sor2_st2a
+z				216 270
+file			data/levels/sor2/st2a.txt	#BRIDGE A
+branch			sor2_st2b
+z				220 270
+file			data/levels/sor2/st2b.txt	#TRUCK
+branch			sor2_st2c
+z				216 270
+file			data/levels/sor2/st2c.txt	#BRIDGE B JET
+next
+
+#STAGE 3
+branch			sor2_st3a
+z				180 270
+file			data/levels/sor2/st3a.txt	#PARK A
+branch			sor2_st3b
+z				140 426
+file			data/levels/sor2/st3b.txt	#ARCADE
+branch			sor2_st3c
+z				220 270
+file			data/levels/sor2/st3c.txt	#PIRATES 1F
+branch			sor2_st3d
+z				220 270
+file			data/levels/sor2/st3d.txt	#PIRATES 2F
+branch			sor2_st3e
+z				234 270
+file			data/levels/sor2/st3e.txt	#PIRATES 3F
+branch			sor2_st3f
+z				180 270
+file			data/levels/sor2/st3f.txt	#PARK B
+branch			sor2_st3g
+z				180 270
+file			data/levels/sor2/st3g.txt	#ALIEN CAVE ZAMZA
+next
+branch			sor2_st3h
+z				190 270
+file			data/levels/sor2/st3h.txt	#LAVA BRIDGE
+branch			sor2_st3i
+z				170 270
+file			data/levels/sor2/st3i.txt	#TRACKER'S LAIR
+next
+
+#STAGE 4
+branch			sor2_st4a
+z				220 270
+file			data/levels/sor2/st4a.txt	#STADIUM ENTRANCE
+branch			sor2_st4b
+z				220 270
+file			data/levels/sor2/st4b.txt	#STADIUM
+branch			sor2_st4c
+z				230 270
+file			data/levels/sor2/st4c.txt	#STADIUM ELEVATOR
+branch			sor2_st4d
+z				180 260
+file			data/levels/sor2/st4d.txt	#RING ABADEDE
+next
+
+#STAGE 5
+branch			sor2_st5a
+z				208 270
+file			data/levels/sor2/st5a.txt	#SHIP FLOOR B2
+branch			sor2_st5b
+z				208 270
+file			data/levels/sor2/st5b.txt	#SHIP FLOOR B1
+branch			sor2_st5c
+z				230 270
+file			data/levels/sor2/st5c.txt	#SHIP MAIN FLOOR BEAR
+next
+
+#STAGE 6
+branch			sor2_st6a
+z				180 270
+file			data/levels/sor2/st6a.txt	#BEACH
+branch			sor2_st6b
+z				152 461
+file			data/levels/sor2/st6b.txt	#ABANDONED ROAD HARAKIRI
+next
+
+#STAGE 7
+branch			sor2_st7a
+z				216 270
+file			data/levels/sor2/st7a.txt	#INDUSTRY
+branch			sor2_st7b
+z				216 270
+file			data/levels/sor2/st7b.txt	#INDUSTRY ELEVATOR PARTICLE
+next
+branch			sor2_st7c
+z				216 270
+file			data/levels/sor2/st7c.txt	#INDUSTRY - SOR1 RINGMASTER
+next
+
+#STAGE 8
+branch			sor2_st8a
+z				205 270
+file			data/levels/sor2/st8a.txt	#BUILDING ELEVATOR HALL
+branch			sor2_st8b
+z				200 270
+file			data/levels/sor2/st8b.txt	#BUILDING ELEVATOR SHIVA/MR.X
+next
+
+#ENDINGS
+branch			sor2_ending_a
+scene			data/scenes/ending_a.txt
+scene			data/scenes/gameover.txt
+end
+
+#-------------ROUTES----------------#
+
+#STAGE 0
+branch			route
+z				180 270
+file			data/levels/route.txt 		#EMPTY LEVEL TO ADJUST "LEVEL SELECT" SCRIPT COUNTER ONLY
+
+#-------------SOR3------------------#
+
+#STAGE 1
+branch			sor3_st1a
+z				178 270
+file			data/levels/sor3/st1a.txt 	#SEAPORT STORAGE
+branch			sor3_st1b
+z				168 270
+file			data/levels/sor3/st1b.txt 	#SEAPORT ASH
+branch			sor3_st1c
+z				216 270
+file			data/levels/sor3/st1c.txt 	#SEAPORT SHIVA
+next
+
+#STAGE 2
+branch			sor3_st2a
+z				170 270
+file			data/levels/sor3/st2a.txt 	#STREETS MALL
+branch			sor3_st2b
+z				170 270
+file			data/levels/sor3/st2b.txt 	#DANCE CLUB
+branch			sor3_st2c
+z				200 270
+file			data/levels/sor3/st2c.txt 	#DANCE CLUB BAR MONA/LISA
+next
+
+#STAGE 3
+branch			sor3_st3a
+z				226 270
+file			data/levels/sor3/st3a.txt 	#CONSTRUCTION
+branch			sor3_st3b
+z				226 270
+file			data/levels/sor3/st3b.txt 	#BULLDOZER
+branch			sor3_st3c
+z				220 270
+file			data/levels/sor3/st3c.txt 	#CONSTRUCTION ELEVATOR BREAK
+next
+
+#STAGE 4
+branch			sor3_st4a
+z				216 270
+file			data/levels/sor3/st4a.txt 	#TRAIN STATION
+branch			sor3_st4b
+z				226 270
+file			data/levels/sor3/st4b.txt 	#TRAIN STATION TUNNEL
+branch			sor3_st4c
+z				220 270
+file			data/levels/sor3/st4c.txt 	#SAMURAI TEMPLE
+next
+
+#STAGE 5
+branch			sor3_st5a
+z				220 270
+file			data/levels/sor3/st5a.txt 	#TEMPLE ROOM A
+branch			sor3_st5b
+z				220 270
+file			data/levels/sor3/st5b.txt 	#TEMPLE ROOM B
+branch			sor3_st5c
+z				220 270
+file			data/levels/sor3/st5c.txt 	#TEMPLE ROOM C
+branch			sor3_st5d
+z				226 270
+file			data/levels/sor3/st5d.txt 	#TEMPLE ELEVATOR HALL
+branch			sor3_st5e
+z				210 270
+file			data/levels/sor3/st5e.txt 	#TEMPLE ELEVATOR MR.X
+next
+
+#STAGE 6
+branch			sor3_st6a
+z				165 270
+file			data/levels/sor3/st6a.txt	#SKYSCRAPER ELEVATOR
+branch			sor3_st6b
+z				216 270
+file			data/levels/sor3/st6b.txt	#SKYSCRAPER ROOM 1 - COMPUTERS
+branch			sor3_st6c
+z				170 270
+file			data/levels/sor3/st6c.txt	#SKYSCRAPER ROOM 2 - NORMAL
+branch			sor3_st6d
+z				180 270
+file			data/levels/sor3/st6d.txt	#SKYSCRAPER ROOM 3 - NORMAL
+branch			sor3_st6e
+z				180 270
+file			data/levels/sor3/st6e.txt	#SKYSCRAPER ROOM 4 - NORMAL
+branch			sor3_st6f
+z				180 270
+file			data/levels/sor3/st6f.txt	#SKYSCRAPER ROOM 5 - NORMAL
+branch			sor3_st6g
+z				206 270
+file			data/levels/sor3/st6g.txt	#SKYSCRAPER EXIT ROOF - JET
+next
+
+#STAGE 7
+branch			sor3_st7a
+z				220 270
+file			data/levels/sor3/st7a.txt 	#OUTSIDE MANSION
+branch			sor3_st7b
+z				175 262
+file			data/levels/sor3/st7b.txt 	#INSIDE MANSION
+branch			sor3_st7c
+z				216 270
+file			data/levels/sor3/st7c.txt 	#PRESS ROOM SHIVA
+next
+branch			sor3_st7d
+z				195 270
+file			data/levels/sor3/st7d.txt 	#SOR3 BIKE STAGE (ARCADE MODE ONLY)
+next
+branch			sor3_st7e
+z				220 270
+file			data/levels/sor3/st7e.txt	#SOR3 TRUCK (REBELLION MODE ONLY - USED TO AVOID BIKE STAGE)
+next
+
+#STAGE 8
+branch			sor3_st8a
+z				216 270
+file			data/levels/sor3/st8a.txt 	#FOREST
+branch			sor3_st8b
+z				221 270
+file			data/levels/sor3/st8b.txt	#FACTORY ELEVATOR
+branch			sor3_st8c
+z				170 270
+file			data/levels/sor3/st8c.txt 	#FACTORY ROBOTX
+branch			sor3_st8d
+z				215 270
+file			data/levels/sor3/st8d.txt 	#DR.ZERO LAB
+branch			sor3_st8e
+z				155 270
+file			data/levels/sor3/st8e.txt 	#NEO.X ROOM
+next
+
+#ENDINGS
+branch			sor3_ending_b
+scene			data/scenes/ending_b.txt
+scene			data/scenes/gameover.txt
+end
+branch			sor3_ending_c
+scene			data/scenes/ending_c.txt
+scene			data/scenes/gameover.txt
+end
+
+##SET1
+set				Survival
+ifcomplete		1
+maxplayers		4
+nosame			0 0
+lives			1
+credits			9
+typemp 			1
+cansave			0
+skipselect
+select			data/levels/select_default.txt
+
+#-------------CONFIGURATION---------#
+
+#STAGE 0
+branch			survival_config						#LV00 - SURVIVAL CONFIGURATION SCREEN
+z				180 260
+file			data/levels/survival/survival_config.txt
+
+#-------------LEVELS----------------#
+
+#MODE A
+branch			survival_a							#LV01 - SURVIVAL TYPE A, SINGLE ENEMIES
+z				180 260
+file			data/levels/survival/survival_a.txt
+next
+scene			data/scenes/gameover.txt
+end
+
+#MODE B
+branch			survival_b							#LV02 - SURVIVAL TYPE B, GROUP OF ENEMIES
+z				180 260
+file			data/levels/survival/survival_b.txt
+next
+scene			data/scenes/gameover.txt
+end
+
+#MODE C
+branch			survival_c1							#LV03 - SURVIVAL TYPE C, BATTLE ROYALE WITH BOSSES ONLY
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 1
+branch			survival_c2
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 2
+branch			survival_c3
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 3
+branch			survival_c4
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 4
+branch			survival_c5
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 5
+branch			survival_c6
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 6
+branch			survival_c7
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 7
+branch			survival_c8
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 8
+branch			survival_c9
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 9
+branch			survival_c10
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 10
+branch			survival_c11
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 11
+branch			survival_c12
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 12
+branch			survival_c13
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 13
+branch			survival_c14
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 14
+branch			survival_c15
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 15
+branch			survival_c16
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 16
+branch			survival_c17
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 17
+branch			survival_c18
+z				180 270
+file			data/levels/survival/survival_c.txt			#ROUND 18
+next
+scene			data/scenes/gameover.txt
+end
+
+##SET2
+set				Rebellion
+ifcomplete		99
+maxplayers		4
+nosame			0 0
+lives			3
+credits			9
+typemp 			1
+cansave			2
+musicoverlap	1
+skipselect
+noshowcomplete 1
+select			data/levels/select_rebellion.txt
+
+#-------------ROUTES----------------#
+
+#STAGE 0
+branch			route
+z				180 270
+file			data/levels/route.txt 		#SELECT ROUTE
+
+#-------------SOR1------------------#
+
+#STAGE 1
+branch			sor1_st01
+z			122 270
+file			data/levels/sor1/st01.txt
+next
+
+#STAGE 2
+branch			sor1_st02
+z			130 270
+file			data/levels/sor1/st02.txt
+next
+
+#STAGE 3
+branch			sor1_st03
+z			162 268
+file			data/levels/sor1/st03.txt
+next
+
+#STAGE 4
+branch			sor1_st04
+z			184 270
+file			data/levels/sor1/st04.txt
+next
+
+#STAGE 5
+branch			sor1_st05
+z			163 294
+file			data/levels/sor1/st05.txt
+next
+
+#STAGE 6
+branch			sor1_st06
+z			185 270
+file			data/levels/sor1/st06.txt
+next
+
+#STAGE 7
+branch			sor1_st07
+z			188 270
+file			data/levels/sor1/st07.txt
+next
+
+#STAGE 8
+branch			sor1_st08
+z			148 270
+file			data/levels/sor1/st08.txt
+next
+
+#ENDINGS
+scene			data/scenes/ending_b.txt
+scene			data/scenes/gameover.txt
+end
+
+
+#-------------SOR2------------------#
+
+#STAGE 1
+branch			sor2_st1a
+z				150 466
+file			data/levels/sor2/st1a.txt 	#STREETS A
+branch			sor2_st1b
+z				220 270
+file			data/levels/sor2/st1b.txt	#BAR
+branch			sor2_st1c
+z				220 270
+file			data/levels/sor2/st1c.txt	#BAR EXIT BARBON
+next
+
+#STAGE 2
+branch			sor2_st2a
+z				216 270
+file			data/levels/sor2/st2a.txt	#BRIDGE A
+branch			sor2_st2b
+z				220 270
+file			data/levels/sor2/st2b.txt	#TRUCK
+branch			sor2_st2c
+z				216 270
+file			data/levels/sor2/st2c.txt	#BRIDGE B JET
+next
+
+#STAGE 3
+branch			sor2_st3a
+z				180 270
+file			data/levels/sor2/st3a.txt	#PARK A
+branch			sor2_st3b
+z				140 426
+file			data/levels/sor2/st3b.txt	#ARCADE
+branch			sor2_st3c
+z				220 270
+file			data/levels/sor2/st3c.txt	#PIRATES 1F
+branch			sor2_st3d
+z				220 270
+file			data/levels/sor2/st3d.txt	#PIRATES 2F
+branch			sor2_st3e
+z				234 270
+file			data/levels/sor2/st3e.txt	#PIRATES 3F
+branch			sor2_st3f
+z				180 270
+file			data/levels/sor2/st3f.txt	#PARK B
+branch			sor2_st3g
+z				180 270
+file			data/levels/sor2/st3g.txt	#ALIEN CAVE ZAMZA
+next
+branch			sor2_st3h
+z				190 270
+file			data/levels/sor2/st3h.txt	#LAVA BRIDGE
+branch			sor2_st3i
+z				170 270
+file			data/levels/sor2/st3i.txt	#TRACKER'S LAIR
+next
+
+#STAGE 4
+branch			sor2_st4a
+z				220 270
+file			data/levels/sor2/st4a.txt	#STADIUM ENTRANCE
+branch			sor2_st4b
+z				220 270
+file			data/levels/sor2/st4b.txt	#STADIUM
+branch			sor2_st4c
+z				230 270
+file			data/levels/sor2/st4c.txt	#STADIUM ELEVATOR
+branch			sor2_st4d
+z				180 260
+file			data/levels/sor2/st4d.txt	#RING ABADEDE
+next
+
+#STAGE 5
+branch			sor2_st5a
+z				208 270
+file			data/levels/sor2/st5a.txt	#SHIP FLOOR B2
+branch			sor2_st5b
+z				208 270
+file			data/levels/sor2/st5b.txt	#SHIP FLOOR B1
+branch			sor2_st5c
+z				230 270
+file			data/levels/sor2/st5c.txt	#SHIP MAIN FLOOR BEAR
+next
+
+#STAGE 6
+branch			sor2_st6a
+z				180 270
+file			data/levels/sor2/st6a.txt	#BEACH
+branch			sor2_st6b
+z				152 461
+file			data/levels/sor2/st6b.txt	#ABANDONED ROAD HARAKIRI
+next
+
+#STAGE 7
+branch			sor2_st7a
+z				216 270
+file			data/levels/sor2/st7a.txt	#INDUSTRY
+branch			sor2_st7b
+z				216 270
+file			data/levels/sor2/st7b.txt	#INDUSTRY ELEVATOR PARTICLE
+next
+branch			sor2_st7c
+z				216 270
+file			data/levels/sor2/st7c.txt	#INDUSTRY - SOR1 RINGMASTER
+next
+
+#STAGE 8
+branch			sor2_st8a
+z				205 270
+file			data/levels/sor2/st8a.txt	#BUILDING ELEVATOR HALL
+branch			sor2_st8b
+z				200 270
+file			data/levels/sor2/st8b.txt	#BUILDING ELEVATOR SHIVA/MR.X
+next
+
+#ENDINGS
+branch			sor2_ending_a
+scene			data/scenes/ending_a.txt
+scene			data/scenes/gameover.txt
+end
+
+#-------------ROUTES----------------#
+
+#STAGE 0
+branch			route
+z				180 270
+file			data/levels/route.txt 		#EMPTY LEVEL TO ADJUST "LEVEL SELECT" SCRIPT COUNTER ONLY
+
+#-------------SOR3------------------#
+
+#STAGE 1
+branch			sor3_st1a
+z				178 270
+file			data/levels/sor3/st1a.txt 	#SEAPORT STORAGE
+branch			sor3_st1b
+z				168 270
+file			data/levels/sor3/st1b.txt 	#SEAPORT ASH
+branch			sor3_st1c
+z				216 270
+file			data/levels/sor3/st1c.txt 	#SEAPORT SHIVA
+next
+
+#STAGE 2
+branch			sor3_st2a
+z				170 270
+file			data/levels/sor3/st2a.txt 	#STREETS MALL
+branch			sor3_st2b
+z				170 270
+file			data/levels/sor3/st2b.txt 	#DANCE CLUB
+branch			sor3_st2c
+z				200 270
+file			data/levels/sor3/st2c.txt 	#DANCE CLUB BAR MONA/LISA
+next
+
+#STAGE 3
+branch			sor3_st3a
+z				226 270
+file			data/levels/sor3/st3a.txt 	#CONSTRUCTION
+branch			sor3_st3b
+z				226 270
+file			data/levels/sor3/st3b.txt 	#BULLDOZER
+branch			sor3_st3c
+z				220 270
+file			data/levels/sor3/st3c.txt 	#CONSTRUCTION ELEVATOR BREAK
+next
+
+#STAGE 4
+branch			sor3_st4a
+z				216 270
+file			data/levels/sor3/st4a.txt 	#TRAIN STATION
+branch			sor3_st4b
+z				226 270
+file			data/levels/sor3/st4b.txt 	#TRAIN STATION TUNNEL
+branch			sor3_st4c
+z				220 270
+file			data/levels/sor3/st4c.txt 	#SAMURAI TEMPLE
+next
+
+#STAGE 5
+branch			sor3_st5a
+z				220 270
+file			data/levels/sor3/st5a.txt 	#TEMPLE ROOM A
+branch			sor3_st5b
+z				220 270
+file			data/levels/sor3/st5b.txt 	#TEMPLE ROOM B
+branch			sor3_st5c
+z				220 270
+file			data/levels/sor3/st5c.txt 	#TEMPLE ROOM C
+branch			sor3_st5d
+z				226 270
+file			data/levels/sor3/st5d.txt 	#TEMPLE ELEVATOR HALL
+branch			sor3_st5e
+z				210 270
+file			data/levels/sor3/st5e.txt 	#TEMPLE ELEVATOR MR.X
+next
+
+#STAGE 6
+branch			sor3_st6a
+z				165 270
+file			data/levels/sor3/st6a.txt	#SKYSCRAPER ELEVATOR
+branch			sor3_st6b
+z				216 270
+file			data/levels/sor3/st6b.txt	#SKYSCRAPER ROOM 1 - COMPUTERS
+branch			sor3_st6c
+z				170 270
+file			data/levels/sor3/st6c.txt	#SKYSCRAPER ROOM 2 - NORMAL
+branch			sor3_st6d
+z				180 270
+file			data/levels/sor3/st6d.txt	#SKYSCRAPER ROOM 3 - NORMAL
+branch			sor3_st6e
+z				180 270
+file			data/levels/sor3/st6e.txt	#SKYSCRAPER ROOM 4 - NORMAL
+branch			sor3_st6f
+z				180 270
+file			data/levels/sor3/st6f.txt	#SKYSCRAPER ROOM 5 - NORMAL
+branch			sor3_st6g
+z				206 270
+file			data/levels/sor3/st6g.txt	#SKYSCRAPER EXIT ROOF - JET
+next
+
+#STAGE 7
+branch			sor3_st7a
+z				220 270
+file			data/levels/sor3/st7a.txt 	#OUTSIDE MANSION
+branch			sor3_st7b
+z				175 262
+file			data/levels/sor3/st7b.txt 	#INSIDE MANSION
+branch			sor3_st7c
+z				216 270
+file			data/levels/sor3/st7c.txt 	#PRESS ROOM SHIVA
+next
+branch			sor3_st7d
+z				195 270
+file			data/levels/sor3/st7d.txt 	#SOR3 BIKE STAGE (ARCADE MODE ONLY)
+next
+branch			sor3_st7e
+z				220 270
+file			data/levels/sor3/st7e.txt	#SOR3 TRUCK (REBELLION MODE ONLY - USED TO AVOID BIKE STAGE)
+next
+
+#STAGE 8
+branch			sor3_st8a
+z				216 270
+file			data/levels/sor3/st8a.txt 	#FOREST
+branch			sor3_st8b
+z				221 270
+file			data/levels/sor3/st8b.txt	#FACTORY ELEVATOR
+branch			sor3_st8c
+z				170 270
+file			data/levels/sor3/st8c.txt 	#FACTORY ROBOTX
+branch			sor3_st8d
+z				215 270
+file			data/levels/sor3/st8d.txt 	#DR.ZERO LAB
+branch			sor3_st8e
+z				155 270
+file			data/levels/sor3/st8e.txt 	#NEO.X ROOM
+next
+
+#ENDINGS
+branch			sor3_ending_b
+scene			data/scenes/ending_b.txt
+scene			data/scenes/gameover.txt
+end
+branch			sor3_ending_c
+scene			data/scenes/ending_c.txt
+scene			data/scenes/gameover.txt
+end
+
+
+##SET3
+set				Dojo
+ifcomplete		0
+maxplayers		4
+nosame			0 0
+lives			  1
+credits			99
+typemp 			1
+cansave			0
+skipselect
+select			data/levels/select_default.txt
+
+#-------------CONFIGURATION---------#
+
+#STAGE 0
+branch			dojo_config
+z				180 260
+file			data/levels/dojo/dojo_config.txt
+
+#-------------LEVELS----------------#
+
+branch  Dojo
+z			210 272
+file  data/levels/dojo/dojo.txt
+next
+scene			data/scenes/gameover.txt
+end
+
+branch  Sea01
+z			210 272
+file  data/levels/dojo/sea01.txt
+next
+scene			data/scenes/gameover.txt
+end
+
+branch  Sea02
+z			210 272
+file  data/levels/dojo/sea02.txt
+next
+scene			data/scenes/gameover.txt
+end
+
+branch  ChinaTown
+z			210 272
+file  data/levels/dojo/chinatown.txt
+next
+scene			data/scenes/gameover.txt
+end

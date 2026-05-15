@@ -1,0 +1,12 @@
+*.png
+*.jpg
+*.gif
+*.wav
+*.exe
+*.pak
+
+Pak/
+Logs/
+Saves/
+Screenshots
+Music/

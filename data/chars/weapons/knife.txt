@@ -1,0 +1,49 @@
+name			Knife #GROUND
+type			item
+subtype			weapon
+candamage		player enemy npc
+nolife			1
+lifespan		45
+typeshot 		0
+weaploss    2
+weapnum			1
+shootnum 		3
+counter			9
+gfxshadow		1 1
+offscreenkill	50
+ondrawscript	data/scripts/ondraw/weapons.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	200
+	offset	25 27
+	bbox 	16 24 19 3
+	nodrawmethod
+	frame	data/chars/weapons/knife08.png
+		delay	6
+	drawmethod tintmode 1
+	drawmethod tintcolor 150_150_150
+	frame	data/chars/weapons/knife08.png
+
+anim follow1
+	landframe 8
+	loop	1 0 8
+	delay	2
+	offset	25 27
+	itembox 10023 10023 5 5
+	#itembox 15 15 21 21
+	sound	data/sounds/Whoosh.wav
+	@cmd wall 0
+	frame	data/chars/weapons/knife00.png
+	frame	data/chars/weapons/knife01.png
+	frame	data/chars/weapons/knife02.png
+	frame	data/chars/weapons/knife03.png
+	frame	data/chars/weapons/knife04.png
+	frame	data/chars/weapons/knife05.png
+	frame	data/chars/weapons/knife06.png
+	frame	data/chars/weapons/knife07.png
+	@cmd wall 1
+	@cmd antiWall 40 -40 -1
+	@cmd aniChange 1 "ANI_IDLE"
+	frame	data/chars/weapons/knife08.png

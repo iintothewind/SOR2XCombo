@@ -1,0 +1,22 @@
+name	  	 		St8_Ray
+type	  	 		none
+candamage 	 		player npc
+nolife	 	 		1
+shadow	  	 		0
+ondoattackscript	data/scripts/ondoattack/default.c
+didhitscript		data/scripts/didhit/zero.c
+ondrawscript		data/scripts/ondraw/zero.c
+
+anim idle
+	fastattack 0
+	jugglecost 46
+	forcedirection 0
+	hitflash Shock
+	loop	1
+	delay	3
+	offset	1 170
+	shock 101 175 278 10 40 3 1 0 0 48
+	frame	data/bgs/sor3/st8d/ray00.png
+		delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/bgs/sor3/st8d/ray01.png

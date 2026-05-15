@@ -1,0 +1,20 @@
+name			Counter
+type			none
+shadow			0
+alpha			1
+onspawnscript	data/scripts/onspawn/graphics.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	4
+	offset	120 444
+	sound	data/sounds/Counter.wav
+	frame	data/chars/misc/counter/counter00.png
+	frame	data/chars/misc/counter/counter01.png
+	frame	data/chars/misc/counter/counter02.png
+	frame	data/chars/misc/counter/counter03.png
+	frame	data/chars/misc/counter/counter04.png
+	frame	data/chars/misc/counter/counter05.png
+	@cmd suicide
+	frame	data/chars/misc/counter/counter05.png

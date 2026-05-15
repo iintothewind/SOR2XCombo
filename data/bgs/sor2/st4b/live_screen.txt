@@ -1,0 +1,12 @@
+name		St4_Live_Screen
+type		panel
+speed		5
+scroll		-0.7
+shadow		0
+script		data/scripts/updateentity/live_screen.c
+
+anim idle
+	loop	0
+	delay	2
+	offset	1 180
+	frame	data/bgs/sor2/st4b/_empty.png

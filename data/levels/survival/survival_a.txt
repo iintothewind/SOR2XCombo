@@ -1,0 +1,969 @@
+loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st4d/_empty.png	0.8 1 0 0 0 0 1 1 0 0
+bglayer			data/bgs/sor2/st4d/bg00.png		0.4 1 0 0 0 0 1 1 1
+bglayer			data/bgs/sor2/st4d/bg01.png		0.4 1 0 0 0 0 1 1 1
+bglayer			data/bgs/sor2/st4d/bg02.png		0.4 1 0 0 0 0 1 1 1
+bglayer			data/bgs/sor2/st4d/bg03.png		0.4 1 0 0 0 0 1 1 1
+panel			data/bgs/sor2/st4d/_map2.png	none	none
+frontpanel		data/bgs/sor2/st4d/fp00.png
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+direction		left
+spawn1			270 20 300
+spawn2			240 40 300
+spawn3			210 20 300
+spawn4			180 40 300
+updatescript	data/scripts/updatelevel/sor2_st4d.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		Fight 3
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/flip_dir.c
+at			0
+
+#spawnscript data/scripts/levelspawn/sample.c
+#at			0
+
+spawn		Fight 1
+flip		1
+coords		-120 0 0
+at			0
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		110 180 0
+at			0
+
+spawn		Barrel_A 1
+flip		1
+coords		200 180 0
+at			0
+
+spawn		Bin_A 1
+flip		1
+coords		290 180 0
+at			0
+
+spawn		Tire 1
+flip		1
+coords		380 180 0
+at			0
+
+spawn		Box_C 1
+flip		1
+coords		110 260 0
+at			0
+
+spawn		Barrel_B 1
+flip		1
+coords		200 260 0
+at			0
+
+spawn		Bin_B 1
+flip		1
+coords		290 260 0
+at			0
+
+spawn		Floater 1
+flip		1
+coords		380 260 0
+at			0
+
+spawn		Knife
+flip		0
+coords		230 200 0
+at			0
+
+spawn		Sword
+flip		0
+coords		230 220 0
+at			0
+
+spawn		Kunai
+flip		0
+coords		300 200 0
+at			0
+
+spawn		Pipe
+flip		0
+coords		300 220 0
+at			0
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/next.c
+at      0
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		440 200 200
+at			0
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		40 200 250
+at			0
+
+spawn		BossX1 1
+map			4
+3pspawn
+flip		0
+coords		440 220 300
+at			0
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			0
+
+wait
+at			0
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			6
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		440 220 200
+at			6
+
+spawn		BarbonB 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			6
+
+spawn		BarbonB 1
+map			4
+3pspawn
+flip		1
+coords		40 220 300
+at			6
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			6
+
+wait
+at			6
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			9
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 220 200
+at			9
+
+spawn		JetB 1
+map			4
+2pspawn
+flip		0
+coords		40 220 250
+at			9
+
+spawn		JetB 1
+map			4
+3pspawn
+flip		1
+coords		440 220 300
+at			9
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		40 220 350
+at			9
+
+wait
+at			9
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			12
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		440 220 200
+at			12
+
+spawn		ZamzaB 1
+map			4
+2pspawn
+flip		0
+coords		40 220 250
+at			12
+
+spawn		ZamzaB 1
+map			4
+3pspawn
+flip		1
+coords		40 220 300
+at			12
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		40 220 350
+at			12
+
+wait
+at			12
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			15
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 220 200
+at			15
+
+spawn		AbadedeB 1
+map			4
+2pspawn
+flip		1
+coords		40 220 250
+at			15
+
+spawn		AbadedeB 1
+map			4
+3pspawn
+flip		0
+coords		440 220 300
+at			15
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			15
+
+wait
+at			15
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			18
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		440 220 200
+at			18
+
+spawn		BearB 1
+map			4
+2pspawn
+flip		1
+coords		40 220 250
+at			18
+
+spawn		BearB 1
+map			4
+3pspawn
+flip		0
+coords		40 220 300
+at			18
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			18
+
+wait
+at			18
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			21
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 220 200
+at			21
+
+spawn		HarakiriB 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			21
+
+spawn		HarakiriB 1
+map			4
+3pspawn
+flip		1
+coords		440 220 300
+at			21
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			21
+
+wait
+at			21
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			22
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 200 200
+at			22
+
+spawn		Musashi 1
+map			4
+2pspawn
+flip		0
+coords		440 200 250
+at			22
+
+spawn		Musashi 1
+map			4
+3pspawn
+flip		1
+coords		40 220 300
+at			2
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			22
+
+wait
+at			22
+
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			24
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		440 220 200
+at			24
+
+spawn		ParticleB 1
+map			4
+2pspawn
+flip		1
+coords		40 220 250
+at			24
+
+spawn		ParticleB 1
+map			4
+3pspawn
+flip		0
+coords		40 220 300
+at			24
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			24
+
+wait
+at			24
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			27
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 220 200
+at			27
+
+spawn		ShivaB 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			27
+
+spawn		ShivaB 1
+map			4
+3pspawn
+flip		1
+coords		440 220 300
+at			27
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			27
+
+wait
+at			27
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			30
+
+spawn		BreakB 1
+map			4
+flip		0
+coords		440 220 200
+at			30
+
+spawn		BreakB 1
+map			4
+flip		1
+coords		40 220 250
+at			30
+
+spawn		MrxB 1
+map			4
+3pspawn
+flip		0
+coords		40 220 300
+at			30
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			30
+
+wait
+at			30
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			33
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 200 200
+at			33
+
+spawn		AshB 1
+map			4
+2pspawn
+flip		0
+coords		440 200 250
+at			33
+
+spawn		AshB 1
+map			4
+3pspawn
+flip		1
+coords		40 220 300
+at			33
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			33
+
+wait
+at			33
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			36
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		440 200 200
+at			36
+
+spawn		BruceB 1
+map			4
+2pspawn
+flip		1
+coords		40 200 250
+at			36
+
+spawn		RooB 1
+map			4
+2pspawn
+flip		1
+coords		40 230 250
+at			36
+
+spawn		BossX1 1
+map			4
+3pspawn
+flip		0
+coords		440 220 300
+at			36
+
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			36
+
+wait
+at			36
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			39
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		440 220 200
+at			39
+
+spawn		MonalisaB 1
+map			4
+2pspawn
+flip		1
+coords		40 220 220
+at			39
+
+spawn		MonalisaB 1
+map			3
+2pspawn
+flip		1
+coords		40 240 220
+at			39
+
+spawn		BossX1 1
+map			4
+3pspawn
+flip		0
+coords		40 220 300
+at			39
+
+spawn		BossX1 1
+map			3
+4pspawn
+flip		1
+coords		40 230 320
+at			39
+
+wait
+at			39
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			42
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 220 200
+at			42
+
+spawn		BreakB 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			42
+
+spawn		BreakB 1
+map			4
+3pspawn
+flip		1
+coords		440 220 300
+at			42
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			42
+
+wait
+at			42
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			45
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		440 220 200
+at			45
+
+spawn		YamatoB 1
+map			4
+2pspawn
+flip		1
+coords		40 220 250
+at			45
+
+spawn		YamatoB 1
+map			4
+3pspawn
+flip		0
+coords		40 220 300
+at			45
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			45
+
+wait
+at			45
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			48
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 220 200
+at		  48
+
+spawn		RobotxB 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			48
+
+spawn		RobotxB 1
+map			4
+3pspawn
+flip		1
+coords		440 220 300
+at			48
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			48
+
+wait
+at			48
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			49
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		40 200 200
+at			49
+
+spawn		HarakiriD 1
+map			4
+2pspawn
+flip		0
+coords		440 200 250
+at			49
+
+spawn		HarakiriB 1
+map			4
+3pspawn
+flip		1
+coords		40 220 300
+at			49
+
+spawn		YamatoB 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			49
+
+wait
+at			49
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			51
+
+spawn		AbadedeB 1
+map			4
+flip		0
+coords		440 220 200
+at			51
+
+spawn		BearB 1
+map			4
+flip		0
+coords		440 220 200
+at			51
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		40 220 250
+at			51
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		40 220 350
+at			51
+
+wait
+at			51
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			54
+
+spawn		HarakiriB 1
+map			4
+flip		1
+coords		40 220 200
+at			54
+
+spawn		YamatoB 1
+map			4
+flip		1
+coords		40 220 200
+at			54
+
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			54
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		0
+coords		440 220 350
+at			54
+
+wait
+at			54
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			57
+
+spawn		HarakiriB 1
+map			4
+flip		0
+coords		440 220 200
+at			57
+
+spawn		HarakiriD 1
+map			4
+flip		0
+coords		440 220 200
+at			57
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		440 220 250
+at			57
+
+spawn		BossX1 1
+map			4
+4pspawn
+flip		1
+coords		440 220 350
+at			57
+
+wait
+at			57
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			60
+
+spawn		YamatoB 1
+map			4
+flip		1
+coords		440 220 200
+at			60
+
+spawn		Musashi 1
+map			4
+flip		1
+coords		420 220 200
+at			60
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+coords		440 220 250
+at			60
+
+spawn		BossX1 1
+map			4
+3pspawn
+flip		1
+coords		40 220 300
+at			60
+
+wait
+at			60
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			98
+
+spawn		BreakB 1
+map			4
+flip		1
+boss		1
+coords		40 220 200
+at			98
+
+spawn		Shiva_BotB 1
+map			4
+flip		1
+boss		1
+coords		40 200 200
+at			98
+
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+boss		1
+coords		40 220 250
+at			98
+
+spawn		BossX1 1
+map			4
+3pspawn
+flip		1
+boss		1
+coords		440 220 300
+at			98
+
+
+wait
+at			98
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/nextGO.c
+at			99
+
+spawn		ShivaB 1
+map			4
+flip		1
+boss		1
+coords		40 220 200
+at			99
+
+spawn		Shiva_BotB 1
+map			4
+flip		1
+boss		1
+coords		40 200 200
+at			99
+
+
+spawn		BreakB 1
+map			4
+flip		0
+boss		1
+coords		40 220 250
+at			99
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+boss		1
+coords		440 220 300
+at			99
+
+spawn		BossX1 1
+map			4
+3pspawn
+flip		0
+boss		1
+coords		40 220 350
+at			99

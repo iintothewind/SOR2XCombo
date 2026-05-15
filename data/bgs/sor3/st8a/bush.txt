@@ -1,0 +1,42 @@
+name			St8_Bush
+type			obstacle
+hostile			player
+health			1
+nomove			1 1
+shadow			0
+stealth			2
+animationscript	data/scripts/animation/default.c
+
+load			Kusanagi_Bush
+
+anim idle
+	loop	1
+	delay	32
+	offset	32 40
+	@cmd aniXpos 400 0 "ANI_FOLLOW1"
+	frame	data/bgs/sor3/st8a/bush00.png
+	frame	data/bgs/sor3/st8a/bush00.png
+	
+anim follow1
+	loop	0
+	delay	16
+	offset	32 40
+	frame	data/bgs/sor3/st8a/bush00.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush02.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush00.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush02.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush00.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush02.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush00.png
+	frame	data/bgs/sor3/st8a/bush01.png
+	frame	data/bgs/sor3/st8a/bush02.png
+	@cmd setVar "bush" 1
+	frame	data/bgs/sor3/st8a/bush01.png
+	@cmd suicide
+	frame	data/bgs/sor3/st8a/bush00.png

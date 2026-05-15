@@ -1,0 +1,59 @@
+name				Barrel_Roll
+type				enemy
+subtype				notgrab
+candamage			player enemy npc obstacle
+subject_to_platform 0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+health				1
+nolife				1
+bounce 				1
+noquake 			1
+nomove				1 0
+remove				0
+jugglepoints		99
+facing				1
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+noatflash			1
+flash				Flash
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/barrel.c
+onspawnscript		data/scripts/onspawn/barrel.c
+animationscript 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/obstacles.c
+
+diesound			data/sounds/Iron.wav
+
+anim idle
+	bouncefactor 1.3
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	8
+	offset	100 167
+	bbox 	71 138 59 31
+	hitfx	data/sounds/HighPunch.wav
+	attack 71 138 59 31 24 1 1 0 10 12
+	frame	data/chars/obstacles/barrel02.png
+	@cmd offScreenKill 50 0
+	frame	data/chars/obstacles/barrel02.png
+	frame	data/chars/obstacles/barrel03.png
+	frame	data/chars/obstacles/barrel04.png
+	frame	data/chars/obstacles/barrel05.png
+	@cmd looper 1 12
+	@cmd suicide
+	frame	data/chars/obstacles/barrel05.png
+
+anim fall
+	loop	0
+	delay	128
+	offset	100 167
+	@cmd dasher "NULL()" "NULL()" 0
+	frame	data/chars/obstacles/barrel06.png
+	@cmd suicide
+	frame	data/chars/obstacles/barrel06.png

@@ -1,0 +1,11 @@
+name			BlockadeZ #ENTITY USED TO WORK SAME AS A DEFAULT ENGINE BLOCKADE IN X AXIS, BUT FOR Z AXIS
+type			panel
+shadow			0
+ondrawscript	data/scripts/ondraw/blockadeZ.c
+
+anim idle
+	loop	0
+	delay	16
+	offset	1 1
+	platform -1000 -1000 2000 2000 200 1000
+	frame	data/chars/obstacles/empty.png

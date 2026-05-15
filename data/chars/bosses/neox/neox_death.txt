@@ -1,0 +1,928 @@
+##MAIN
+name				Neox_Death
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-3 #-1/-2/-3
+height				89
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 2 3 4
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bounce				1
+aimove				chase #ENEMY ONLY
+escapehits			2 #ENEMY ONLY
+death				2
+noatflash 			1
+flash				Flash
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/neox.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+ondrawscript		data/scripts/ondraw/neox.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/neox.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/armor_robots.c
+thinkscript			data/scripts/think/neox.c
+script				data/scripts/updateentity/neox.c
+
+##ICONS
+icon				data/chars/bosses/neox/icon.png 1
+
+##DIESOUND
+diesound			data/voices/justice12.wav
+
+##REMAPS
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter1.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter3.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter4.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter2.png
+remap				data/chars/bosses/neox/idle00.png data/chars/bosses/neox/alter1.png
+
+##LOADS
+load				Neox_Missile
+load				Neox_Missile_Fake
+load				NeoxS
+load				BossX1
+
+##CUSTOM HEADER
+nodieblink			3
+ondeathscript		data/scripts/ondeath/neox.c
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim death #EXPLOSION
+	loop	0
+	delay	16
+	offset	125 192
+	@cmd spawnBind "Explosion" 0 15 1
+	frame	data/chars/bosses/neox/fall01.png
+	@cmd spawnBind "Explosion" -30 15 1
+	frame	data/chars/bosses/neox/fall01.png
+	@cmd spawnBind "Explosion" 30 15 1
+	frame	data/chars/bosses/neox/fall01.png
+	@cmd spawnBind "Explosion" 0 15 1
+	frame	data/chars/bosses/neox/fall01.png
+		delay	32
+	@cmd slowMotion 0
+	frame	data/chars/bosses/neox/fall01.png
+#		delay	32
+#	frame	data/chars/bosses/neox/rise00.png
+#	frame	data/chars/bosses/neox/rise01.png
+#		delay	4
+#	@cmd dashRandom 4 2
+#	frame	data/chars/bosses/neox/idle00.png
+#	frame	data/chars/bosses/neox/idle01.png
+#	frame	data/chars/bosses/neox/idle00.png
+#	frame	data/chars/bosses/neox/idle01.png
+#		delay	32
+#	@cmd dasher 0 0 0
+#	sound	data/voices/Attack7.wav
+#	frame	data/chars/bosses/neox/missile01.png
+#	@cmd shoot "Neox_Missile_Fake" 15 50 -1 1 0 0
+#	@cmd spawnToss "Smoke" 15 70 1 0 1 0
+#	frame	data/chars/bosses/neox/missile02.png
+#		delay	2
+#	@cmd leaper -0.5 2 0
+#	frame	data/chars/bosses/neox/fall00.png
+#	frame	data/chars/bosses/neox/fall00.png
+#	@cmd landFrame
+#		delay	600
+#	sound	data/sounds/Jumpland3.wav
+#	frame	data/chars/bosses/neox/fall01.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	125 192
+	frame	data/chars/bosses/neox/idle00.png
+
+anim idle
+	loop	1
+	delay	3
+	offset	125 192
+	bbox 	109 108 47 87
+	frame	data/chars/bosses/neox/idle00.png
+	frame	data/chars/bosses/neox/idle01.png
+	frame	data/chars/bosses/neox/idle00.png
+	frame	data/chars/bosses/neox/idle01.png
+	bbox 	102 108 40 82
+	frame	data/chars/bosses/neox/idle02.png
+	frame	data/chars/bosses/neox/idle03.png
+	frame	data/chars/bosses/neox/idle02.png
+	frame	data/chars/bosses/neox/idle03.png
+	bbox 	105 108 22 82
+	frame	data/chars/bosses/neox/idle04.png
+	frame	data/chars/bosses/neox/idle05.png
+	frame	data/chars/bosses/neox/idle04.png
+	frame	data/chars/bosses/neox/idle05.png
+	bbox 	95 107 46 83
+	frame	data/chars/bosses/neox/idle06.png
+	frame	data/chars/bosses/neox/idle07.png
+	frame	data/chars/bosses/neox/idle06.png
+	frame	data/chars/bosses/neox/idle07.png
+	bbox 	102 106 42 87
+	frame	data/chars/bosses/neox/idle08.png
+	frame	data/chars/bosses/neox/idle09.png
+	frame	data/chars/bosses/neox/idle08.png
+	frame	data/chars/bosses/neox/idle09.png
+	bbox 	113 106 27 91
+	frame	data/chars/bosses/neox/idle10.png
+	frame	data/chars/bosses/neox/idle11.png
+	frame	data/chars/bosses/neox/idle10.png
+	frame	data/chars/bosses/neox/idle11.png
+	bbox 	110 105 42 92
+	frame	data/chars/bosses/neox/idle12.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle12.png
+	frame	data/chars/bosses/neox/idle13.png
+
+anim walk
+	loop	1
+	delay	3
+	offset	125 192
+	bbox 	109 108 47 87
+	frame	data/chars/bosses/neox/idle00.png
+	frame	data/chars/bosses/neox/idle01.png
+	frame	data/chars/bosses/neox/idle00.png
+	frame	data/chars/bosses/neox/idle01.png
+	bbox 	102 108 40 82
+	frame	data/chars/bosses/neox/idle02.png
+	frame	data/chars/bosses/neox/idle03.png
+	frame	data/chars/bosses/neox/idle02.png
+	frame	data/chars/bosses/neox/idle03.png
+	bbox 	105 108 22 82
+	frame	data/chars/bosses/neox/idle04.png
+	frame	data/chars/bosses/neox/idle05.png
+	frame	data/chars/bosses/neox/idle04.png
+	frame	data/chars/bosses/neox/idle05.png
+	bbox 	95 107 46 83
+	frame	data/chars/bosses/neox/idle06.png
+	frame	data/chars/bosses/neox/idle07.png
+	frame	data/chars/bosses/neox/idle06.png
+	frame	data/chars/bosses/neox/idle07.png
+	bbox 	102 106 42 87
+	frame	data/chars/bosses/neox/idle08.png
+	frame	data/chars/bosses/neox/idle09.png
+	frame	data/chars/bosses/neox/idle08.png
+	frame	data/chars/bosses/neox/idle09.png
+	bbox 	113 106 27 91
+	frame	data/chars/bosses/neox/idle10.png
+	frame	data/chars/bosses/neox/idle11.png
+	frame	data/chars/bosses/neox/idle10.png
+	frame	data/chars/bosses/neox/idle11.png
+	bbox 	110 105 42 92
+	frame	data/chars/bosses/neox/idle12.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle12.png
+	frame	data/chars/bosses/neox/idle13.png
+
+anim run
+	loop	1
+	delay	3
+	offset	125 192
+	bbox 	109 108 47 87
+	frame	data/chars/bosses/neox/idle00.png
+	frame	data/chars/bosses/neox/idle01.png
+	frame	data/chars/bosses/neox/idle00.png
+	frame	data/chars/bosses/neox/idle01.png
+	bbox 	102 108 40 82
+	frame	data/chars/bosses/neox/idle02.png
+	frame	data/chars/bosses/neox/idle03.png
+	frame	data/chars/bosses/neox/idle02.png
+	frame	data/chars/bosses/neox/idle03.png
+	bbox 	105 108 22 82
+	frame	data/chars/bosses/neox/idle04.png
+	frame	data/chars/bosses/neox/idle05.png
+	frame	data/chars/bosses/neox/idle04.png
+	frame	data/chars/bosses/neox/idle05.png
+	bbox 	95 107 46 83
+	frame	data/chars/bosses/neox/idle06.png
+	frame	data/chars/bosses/neox/idle07.png
+	frame	data/chars/bosses/neox/idle06.png
+	frame	data/chars/bosses/neox/idle07.png
+	bbox 	102 106 42 87
+	frame	data/chars/bosses/neox/idle08.png
+	frame	data/chars/bosses/neox/idle09.png
+	frame	data/chars/bosses/neox/idle08.png
+	frame	data/chars/bosses/neox/idle09.png
+	bbox 	113 106 27 91
+	frame	data/chars/bosses/neox/idle10.png
+	frame	data/chars/bosses/neox/idle11.png
+	frame	data/chars/bosses/neox/idle10.png
+	frame	data/chars/bosses/neox/idle11.png
+	bbox 	110 105 42 92
+	frame	data/chars/bosses/neox/idle12.png
+	frame	data/chars/bosses/neox/idle13.png
+	frame	data/chars/bosses/neox/idle12.png
+	frame	data/chars/bosses/neox/idle13.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	125 192
+	bbox 	102 114 44 82
+	sound	data/voices/justice06.wav
+	frame	data/chars/bosses/neox/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	8
+	offset	125 192
+	bbox 	107 117 41 80
+	frame	data/chars/bosses/neox/jumpgrab00.png
+	bbox 	110 124 40 74
+	frame	data/chars/bosses/neox/jumpgrab01.png
+	bbox 	109 118 39 79
+	frame	data/chars/bosses/neox/jumpgrab02.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	125 192
+	bbox 	111 101 35 94
+	@cmd jump 1
+	frame	data/chars/bosses/neox/jumpgrab04.png
+
+anim jumpland
+	loop	0
+	delay	8
+	offset	125 192
+	bbox 	111 107 35 93
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/jumpgrab06.png
+	bbox 	109 118 39 79
+	frame	data/chars/bosses/neox/jumpgrab07.png
+	bbox 	110 124 40 74
+	frame	data/chars/bosses/neox/jumpgrab08.png
+	bbox 	107 117 41 80
+	frame	data/chars/bosses/neox/jumpgrab09.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	125 192
+	bbox 	102 114 44 82
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	125 192
+	bbox 	108 108 32 88
+	frame	data/chars/bosses/neox/pain00.png
+	frame	data/chars/bosses/neox/pain01.png
+	frame	data/chars/bosses/neox/pain00.png
+	frame	data/chars/bosses/neox/pain01.png
+	frame	data/chars/bosses/neox/pain00.png
+	frame	data/chars/bosses/neox/pain01.png
+	frame	data/chars/bosses/neox/pain00.png
+	frame	data/chars/bosses/neox/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	125 192
+	bbox 	102 114 44 82
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+	frame	data/chars/bosses/neox/pain200.png
+	frame	data/chars/bosses/neox/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	125 192
+	bbox 	96 108 57 62
+	frame	data/chars/bosses/neox/fall00.png
+		delay	8
+	bbox 	75 148 89 46
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	125 192
+	bbox 	96 108 57 62
+	frame	data/chars/bosses/neox/fall00.png
+		delay	8
+	bbox 	75 148 89 46
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	125 192
+	bbox 	96 108 57 62
+	frame	data/chars/bosses/neox/fall00.png
+		delay	8
+	bbox 	75 148 89 46
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	125 192
+	frame	data/chars/bosses/neox/fall600.png
+	frame	data/chars/bosses/neox/fall601.png
+	frame	data/chars/bosses/neox/fall602.png
+	frame	data/chars/bosses/neox/fall603.png
+		delay	8
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	125 192
+	frame	data/chars/bosses/neox/fall700.png
+	frame	data/chars/bosses/neox/fall701.png
+	frame	data/chars/bosses/neox/fall702.png
+	frame	data/chars/bosses/neox/fall703.png
+	frame	data/chars/bosses/neox/fall704.png
+	frame	data/chars/bosses/neox/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	125 192
+	bbox 	96 108 57 62
+	hitfx	data/sounds/MediumKick.wav
+	attack 96 108 57 62 4 1 0 0 20 12
+	frame	data/chars/bosses/neox/fall00.png
+		delay	999
+	frame	data/chars/bosses/neox/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	75 148 89 46
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	125 192
+	bbox 	108 127 42 66
+	hitfx	data/sounds/MediumKick.wav
+	attack 108 127 42 66 4 1 0 0 20 12
+	frame	data/chars/bosses/neox/fall900.png
+		delay	999
+	frame	data/chars/bosses/neox/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	75 148 89 46
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/fall01.png
+
+anim death #EXPLOSION
+	loop	0
+	delay	64
+	offset	125 192
+	frame	data/chars/bosses/neox/fall01.png
+		delay	16
+	@cmd spawnBind "Explosion" -15 15 1
+	frame	data/chars/bosses/neox/fall01.png
+	@cmd spawnBind "Explosion" 15 15 1
+	frame	data/chars/bosses/neox/fall01.png
+	frame	data/chars/bosses/neox/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	125 192
+	frame	data/chars/bosses/neox/rise00.png
+	frame	data/chars/bosses/neox/rise01.png
+
+anim riseattack
+	range 60 160
+	rangea 0 100
+	rangez -24 24
+	attackone 1
+	fastattack 1
+	forcedirection -1
+	loop	0
+	delay	1
+	offset	125 192
+	sound	data/sounds/Stealth.wav
+	@cmd dasher 0 0 0
+	drawmethod alpha 6
+	drawmethod channel 1.9 1.4 0
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.4 0 1.5
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.6 1.8 0
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.2 0 1.8
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.7 1.5 0
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.3 0 1.2
+	frame	data/chars/bosses/neox/idle13.png
+	@cmd stealthCamo 250 0 0
+	frame	data/chars/bosses/neox/idle13.png
+		delay	2
+	@cmd targetMove -150 0 0
+	frame	data/chars/bosses/neox/idle13.png
+		delay	1
+	@cmd stealthCamo 250 0 0
+	drawmethod alpha 6
+	drawmethod channel 1.3 0 1.2
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/neox/idle13.png
+	nodrawmethod
+	frame	data/chars/bosses/neox/idle13.png
+	delay	20
+	sound	data/voices/justice11.wav
+	frame	data/chars/bosses/neox/missile00.png
+	frame	data/chars/bosses/neox/missile01.png
+	@cmd shoot "Neox_Missile" 15 65 1 1.3 0 0
+	@cmd spawnToss "Smoke" 5 65 1 0 1 0
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	@cmd shoot "Neox_Missile" 15 65 1 1.3 0
+	@cmd spawnToss "Smoke" 5 65 1 0 1 0
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	@cmd shoot "Neox_Missile" 15 65 1 1.3 0
+	@cmd spawnToss "Smoke" 5 65 1 0 1 0
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+
+anim attack1 #JAB
+	range 0 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	loop	0
+	delay	4
+	offset	125 192
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/justice00.wav
+	frame	data/chars/bosses/neox/a100.png
+	frame	data/chars/bosses/neox/a101.png
+	attack 125 125 65 65 8 0 0 0 10 12
+	frame	data/chars/bosses/neox/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/neox/a103.png
+	frame	data/chars/bosses/neox/a104.png
+
+anim attack2 #PUNCH
+	range 0 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	loop	0
+	delay	4
+	offset	125 192
+	#bbox 	110 105 42 92
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/voices/justice01.wav
+	frame	data/chars/bosses/neox/a200.png
+	#bbox 	105 105 46 91
+	frame	data/chars/bosses/neox/a201.png
+	bbox 	112 105 33 87
+	frame	data/chars/bosses/neox/a202.png
+	#bbox 	116 105 30 83
+	frame	data/chars/bosses/neox/a203.png
+	delay	6
+	attack 120 110 70 75 4 0 0 0 10 12
+	#bbox 	110 107 38 82
+	frame	data/chars/bosses/neox/a204.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	116 105 30 83
+	frame	data/chars/bosses/neox/a205.png
+	bbox 	110 105 42 92
+	frame	data/chars/bosses/neox/a206.png
+
+anim attack3 #PUNCH
+	range 0 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	loop	0
+	delay	4
+	offset	125 192
+	#bbox 	110 105 42 92
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/voices/justice03.wav
+	frame	data/chars/bosses/neox/a300.png
+	#bbox 	110 104 36 91
+	frame	data/chars/bosses/neox/a301.png
+	#bbox 	112 107 38 84
+	frame	data/chars/bosses/neox/a302.png
+	delay	6
+	attack 120 113 70 65 4 0 0 0 10 12
+	#bbox 	109 113 41 69
+	frame	data/chars/bosses/neox/a303.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	112 107 38 84
+	frame	data/chars/bosses/neox/a304.png
+	bbox 	110 105 42 92
+	frame	data/chars/bosses/neox/a305.png
+
+anim attack4 #LOW KICK
+	range 0 60
+	rangea 0 60
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	125 192
+	#bbox 	104 109 32 88
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/justice04.wav
+	frame	data/chars/bosses/neox/a400.png
+	#bbox 	100 111 34 86
+	frame	data/chars/bosses/neox/a401.png
+	@cmd dasher 3 0 0
+	#bbox 	97 117 35 85
+	frame	data/chars/bosses/neox/a402.png
+	#bbox 	101 116 36 86
+	frame	data/chars/bosses/neox/a403.png
+		delay	16
+	attack 130 150 70 50 3 0 1 1 0 12
+	#bbox 	112 118 37 84
+	frame	data/chars/bosses/neox/a404.png
+		delay	8
+	@cmd dasher 1 0 0
+	bbox 	97 117 35 85
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	101 116 36 86
+	frame	data/chars/bosses/neox/a405.png
+	@cmd dasher 0 0 0
+	bbox 	100 111 34 86
+	frame	data/chars/bosses/neox/a406.png
+
+anim freespecial9 #HAMMER PUNCH
+	range 0 60
+	rangea 20 120
+	rangez -12 12
+	jugglecost 1
+	energycost -24 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	125 192
+	#bbox 	102 104 33 91
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/voices/justice05.wav
+	frame	data/chars/bosses/neox/a500.png
+	frame	data/chars/bosses/neox/a501.png
+	frame	data/chars/bosses/neox/a502.png
+	frame	data/chars/bosses/neox/a503.png
+	attack 120 86 100 105 3 0 1 1 0 36
+	frame	data/chars/bosses/neox/a504.png
+		delay	16
+	attack 120 112 105 80 3 0 1 1 0 36
+	#bbox 	107 118 34 78
+	frame	data/chars/bosses/neox/a505.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	102 104 33 91
+	frame	data/chars/bosses/neox/a506.png
+
+anim special #GRAB SPECIAL
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	energycost -25 1 6
+	hitflash escape
+	loop	0
+	delay	32
+	offset	125 192
+	attack 107 109 55 32 3 0 1 1 0 12
+	sound	data/voices/justice09.wav
+	frame	data/chars/bosses/neox/special00.png
+
+anim follow1 #GRAB BREAKER
+	loop	0
+	delay	32
+	offset	125 192
+	@cmd grabStart2
+	@cmd position 1 20 0 -1 -1
+	sound	data/sounds/Throw.wav
+	frame	data/chars/bosses/neox/special01.png
+		delay	48
+	@cmd position 5 20 50 -1 0
+	@cmd spawn01 "Flash" 22 90 1
+	sound	data/sounds/MediumKick.wav
+	frame	data/chars/bosses/neox/special02.png
+	@cmd position 5 20 50 -1 0
+	@cmd spawn01 "Flash" 22 90 1
+	sound	data/sounds/MediumKick.wav
+	frame	data/chars/bosses/neox/special02.png
+	@cmd position 5 20 50 -1 0
+	@cmd spawn01 "Flash" 22 90 1
+	sound	data/sounds/MediumKick.wav
+	frame	data/chars/bosses/neox/special02.png
+		delay	16
+	@cmd slam 35 1 -2 2.5 0 0
+	@cmd spawn01 "Flash" 22 90 0
+	sound	data/sounds/MediumKick.wav
+	frame	data/chars/bosses/neox/special02.png
+	delay	8
+	@cmd clearL
+	frame	data/chars/bosses/neox/special02.png
+	frame	data/chars/bosses/neox/special02.png
+
+anim follow3 #GRAB Bomb
+	forcedirection -1
+	loop	0
+	delay	16
+	offset	125 192
+	@cmd spawnBind "Destruction" 70 125 1
+	burn 125 30 115 115 15 1 1 0 15 36
+	dropv 4 4 0
+	@cmd clearL
+	frame	data/chars/bosses/neox/special02.png
+
+anim special2 #GRAB SPECIAL
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	energycost -25 1 6
+	hitflash escape
+	loop	0
+	delay	32
+	offset	125 192
+	attack 107 109 55 32 3 0 1 1 0 12
+	sound	data/voices/justice09.wav
+	frame	data/chars/bosses/neox/special00.png
+
+anim freespecial #RAGE MISSILE
+	range 60 240
+	rangea 0 100
+	rangez -999 999
+	energycost 60 1 6
+	loop	0
+	delay	20
+	offset	125 192
+	@cmd spawnBind "Rage" 0 -1 0
+	sound	data/voices/justice11.wav
+	frame	data/chars/bosses/neox/missile00.png
+	frame	data/chars/bosses/neox/missile01.png
+	@cmd shoot "Neox_Missile" 15 65 1 1 0 0
+	@cmd spawnToss "Smoke" 5 65 1 0 1 0
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	@cmd shoot "Neox_Missile" 15 65 1 1 0 0
+	@cmd spawnToss "Smoke" 5 65 1 0 1 0
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+	@cmd shoot "Neox_Missile" 15 65 1 1 0 0
+	@cmd spawnToss "Smoke" 5 65 1 0 1 0
+	frame	data/chars/bosses/neox/missile02.png
+	frame	data/chars/bosses/neox/missile01.png
+
+anim freespecial2 #JUMP GRAB
+	range 60 120
+	rangea 0 0
+	rangez -36 36
+	energycost 25 1 6
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	8
+	offset	125 192
+	bbox 	107 117 41 80
+	frame	data/chars/bosses/neox/jumpgrab00.png
+	bbox 	110 124 40 74
+	frame	data/chars/bosses/neox/jumpgrab01.png
+	bbox 	109 118 39 79
+	frame	data/chars/bosses/neox/jumpgrab02.png
+	@cmd targetJump
+	@cmd leapJump
+	bbox 	111 107 35 93
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/bosses/neox/jumpgrab03.png
+	bbox 	111 101 35 94
+	frame	data/chars/bosses/neox/jumpgrab04.png
+		delay	2
+	attack 112 123 45 47 3 0 1 1 0 12
+	dropv 0 1 0
+	bbox 	103 90 40 85
+	sound	data/voices/justice07.wav
+	frame	data/chars/bosses/neox/jumpgrab05.png
+	frame	data/chars/bosses/neox/jumpgrab05.png
+	@cmd landFrame
+		delay	12
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	111 107 35 93
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/jumpgrab06.png
+	bbox 	109 118 39 79
+	frame	data/chars/bosses/neox/jumpgrab07.png
+	bbox 	110 124 40 74
+	frame	data/chars/bosses/neox/jumpgrab08.png
+	bbox 	107 117 41 80
+	frame	data/chars/bosses/neox/jumpgrab09.png
+
+anim follow2 #JUMP THROW
+	loop	0
+	delay	16
+	offset	125 192
+	@cmd jump 0
+	@cmd grabStart2
+	@cmd position 3 -20 35 -1 -1
+	@cmd leaper 2 -1 0
+	sound	data/sounds/Throw2.wav
+	frame	data/chars/bosses/neox/throw01.png
+	@cmd position 3 -20 35 -1 0
+	frame	data/chars/bosses/neox/throw01.png
+	@cmd position 4 90 50 1 0
+	frame	data/chars/bosses/neox/throw02.png
+	@cmd slam 35 2 -5 3 0 0
+	frame	data/chars/bosses/neox/throw02.png
+	frame	data/chars/bosses/neox/throw02.png
+	@cmd landFrame
+		delay	12
+		move	48
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/jumpgrab07.png
+		move	0
+	frame	data/chars/bosses/neox/jumpgrab08.png
+	@cmd clearL
+	frame	data/chars/bosses/neox/jumpgrab09.png
+
+anim freespecial3 #DASH
+	range 60 120
+	rangea 0 100
+	rangez -36 36
+	fastattack 1
+	jugglecost 1
+	energycost 20 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	125 192
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/justice10.wav
+	frame	data/chars/bosses/neox/dash00.png
+	frame	data/chars/bosses/neox/dash01.png
+	frame	data/chars/bosses/neox/dash02.png
+	@cmd target 4 2
+	frame	data/chars/bosses/neox/dash03.png
+		delay	2
+	@cmd leapTarget 2
+	attack 118 99 47 71 3 0 1 1 0 12
+	#bbox 	118 99 34 71
+	frame	data/chars/bosses/neox/dash04.png
+	frame	data/chars/bosses/neox/dash04.png
+	@cmd landFrame
+		delay	12
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	104 109 32 88
+	sound	data/sounds/Jumpland3.wav
+	frame	data/chars/bosses/neox/dash05.png
+
+anim follow7 #COUNTER
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	125 192
+	@cmd mpCost -60
+	@cmd rageCancel 20 80 0 60 20 "ANI_RISEATTACK" "random"
+	@cmd targetMove -50 0 0
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/justice10.wav
+	frame	data/chars/bosses/neox/dash00.png
+	frame	data/chars/bosses/neox/dash01.png
+	frame	data/chars/bosses/neox/dash02.png
+	@cmd target 7 1
+	frame	data/chars/bosses/neox/dash03.png
+		delay	2
+	@cmd leapTarget 1
+	#bbox 	118 99 34 71
+	attack 118 99 47 71 3 0 1 1 0 12
+	dropv 4 1
+	frame	data/chars/bosses/neox/dash04.png
+	frame	data/chars/bosses/neox/dash04.png
+	@cmd landFrame
+		delay	12
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	104 109 32 88
+	sound	data/sounds/Jumpland3.wav
+	#@cmd rageCancel 20 150 0 100 20 "ANI_FREESPECIAL" "hit"
+	frame	data/chars/bosses/neox/dash05.png
+
+anim block
+	range 0 100
+	rangea 0 100
+	rangez -36 36
+	@cmd dasher 0 0 0
+	loop	0
+	delay	96
+	offset	125 192
+	bbox 	105 114 50 68
+	frame	data/chars/bosses/neox/block00.png
+
+anim dodge
+	range 0 80
+	rangea 0 100
+	rangez -24 24
+	loop	0
+	delay	1
+	offset	125 192
+	sound	data/sounds/Stealth.wav
+	@cmd dasher 0 0 0
+	drawmethod alpha 6
+	drawmethod channel 1.9 1.4 0
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.4 0 1.5
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.6 1.8 0
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.2 0 1.8
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.7 1.5 0
+	frame	data/chars/bosses/neox/idle13.png
+	drawmethod channel 1.3 0 1.2
+	frame	data/chars/bosses/neox/idle13.png
+	@cmd stealthCamo 250 0 0
+	frame	data/chars/bosses/neox/idle13.png
+		delay	2
+	@cmd targetMove -100 0 0
+	frame	data/chars/bosses/neox/idle13.png
+		delay	1
+	@cmd stealthCamo 250 0 0
+	drawmethod alpha 6
+	drawmethod channel 1.3 0 1.2
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/neox/idle13.png
+	nodrawmethod
+	@cmd rageCancel 20 150 0 100 20 "ANI_FREESPECIAL" "random"
+	frame	data/chars/bosses/neox/idle13.png

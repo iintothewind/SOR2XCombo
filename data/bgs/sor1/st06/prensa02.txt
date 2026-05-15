@@ -1,0 +1,66 @@
+name			Prensa02 #GROUND
+type			None
+offscreenkill		9999
+candamage		player enemy npc obstacle
+setlayer 81
+nolife 1
+noname 1
+stealth				2
+
+animationscript data/scripts/animation/default.c
+
+anim idle
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	loop	1
+	offset	0 265
+	delay  8
+	quakeframe 19 2 2
+	hitflash impact
+	frame	data/bgs/sor1/st06/P201.png
+	frame  data/bgs/sor1/st06/P200.png
+	frame	data/bgs/sor1/st06/P201.png
+	frame	data/bgs/sor1/st06/P200.png
+	frame	data/bgs/sor1/st06/P201.png
+	frame	data/bgs/sor1/st06/P200.png
+	frame	data/bgs/sor1/st06/P201.png
+	frame	data/bgs/sor1/st06/P200.png
+	frame	data/bgs/sor1/st06/P201.png
+	frame	data/bgs/sor1/st06/P200.png
+	frame	data/bgs/sor1/st06/P201.png
+	frame	data/bgs/sor1/st06/P200.png
+	frame	data/bgs/sor1/st06/P201.png
+		delay  4
+	attack3  151  120  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P202.png
+	attack3  188  152  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P203.png
+	attack3  151  151  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P204.png
+	attack3  188  194  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P205.png
+	attack3  151  197  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P206.png
+        Sound   Data/sounds/estrondo.wav
+	attack3  188  239  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P207.png
+	attack3  151  234  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P208.png
+	attack3  188  254  60  30  180  7  1  0  0  21
+	frame	data/bgs/sor1/st06/P209.png
+		delay  58
+		Attack  0
+	frame  data/bgs/sor1/st06/P209.png
+		delay  8
+	frame	data/bgs/sor1/st06/P208.png
+	frame	data/bgs/sor1/st06/P207.png
+	frame	data/bgs/sor1/st06/P206.png
+	frame	data/bgs/sor1/st06/P205.png
+	frame	data/bgs/sor1/st06/P204.png
+	frame	data/bgs/sor1/st06/P203.png
+	frame	data/bgs/sor1/st06/P202.png
+        delay	150
+	@cmd offScreenKill 500 0
+	frame	data/bgs/sor1/st06/P201.png

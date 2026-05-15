@@ -1,0 +1,55 @@
+name				shuriken #THROWNED
+type				none
+nolife				1
+lifespan			2
+offscreenkill		50
+remove				1
+jugglepoints		50
+gfxshadow			1 1
+noatflash 			1
+flash				NoFlash
+#didhitscript		data/scripts/didhit/ftkunai.c
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/weapons.c
+#ondrawscript		data/scripts/ondraw/harakiri_star.c
+onfallscript		data/scripts/onfall/weapons.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	1
+	delay	4
+	offset	22 27
+	#drawmethod tintmode 1
+	#drawmethod tintcolor 255_255_0
+	bbox 	14 18 17 17
+	hitfx	data/sounds/Cutter.wav
+	attack 14 18 17 17 25 1 0 0 10 24
+	dropv 3.7 1 0
+	frame	data/chars/bosses/harakiri/star/star00.png
+	frame	data/chars/bosses/harakiri/star/star01.png
+	frame	data/chars/bosses/harakiri/star/star02.png
+	#nodrawmethod
+	frame	data/chars/bosses/harakiri/star/star03.png
+
+anim fall
+	landframe 5
+	loop	1 1 5
+	delay	4
+	offset	22 27
+	#drawmethod tintmode 1
+	#drawmethod tintcolor 255_255_0
+	shadowcoords 22 35
+	sound	data/sounds/Clash2.wav
+	frame	data/chars/bosses/harakiri/star/star00.png
+	frame	data/chars/bosses/harakiri/star/star00.png
+	frame	data/chars/bosses/harakiri/star/star01.png
+	frame	data/chars/bosses/harakiri/star/star02.png
+	frame	data/chars/bosses/harakiri/star/star03.png
+	#nodrawmethod
+	frame	data/chars/bosses/harakiri/star/star01.png

@@ -1,0 +1,1813 @@
+##MAIN
+name				SOR2_Electra
+type				npc
+subtype			chase
+
+##LIFE
+health				999
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		36 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##ENERGY
+mp					120
+mprate  			5 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				79
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 2 3
+weapons				none none none none
+modelflag			3
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bounce				1
+aimove				wander #NPC ONLY
+escapehits			2 #NPC ONLY
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+death				2
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/reine.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/Jumping.c
+onblocksscript		data/scripts/onblocks/Jumping.c
+onmoveascript		data/scripts/onmove/default.c
+onspawnscript		data/scripts/onspawn/partner.c
+ondeathscript		data/scripts/ondeath/partner.c
+ondrawscript		data/scripts/ondraw/electra.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/partner.c
+script				data/scripts/updateentity/reine.c
+
+##ICONS
+icon				data/chars/enemies/reine/icon.png 1
+
+##DIESOUND
+diesound			data/voices/girl_cry2.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter1.png
+remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter2.png
+remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter3.png
+remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter4.png
+
+##LOADS
+load				Reine_Shock
+load				Reine_Whip
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	130 190
+	frame	data/chars/enemies/reine/idle01.png
+
+anim idle
+	range	0 481
+	rangea	-999 999
+	rangez	-999 999
+	loop	1
+	delay	24
+	offset	130 190
+	bbox 	122 115 16 77
+	frame	data/chars/enemies/reine/idle01.png
+	frame	data/chars/enemies/reine/idle01.png
+	frame	data/chars/enemies/reine/idle01.png
+	frame	data/chars/enemies/reine/idle01.png
+	frame	data/chars/enemies/reine/idle01.png
+	@cmd looper 0 9
+	frame	data/chars/enemies/reine/idle02.png
+	sound	data/voices/morrigan05.wav
+	frame	data/chars/enemies/reine/idle03.png
+	frame	data/chars/enemies/reine/idle04.png
+	frame	data/chars/enemies/reine/idle05.png
+	frame	data/chars/enemies/reine/idle06.png
+	frame	data/chars/enemies/reine/idle07.png
+		delay	32
+	@cmd mpCost -999
+	frame	data/chars/enemies/reine/idle08.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	130 190
+	bbox 	122 115 16 77
+	frame	data/chars/enemies/reine/walk000.png
+	frame	data/chars/enemies/reine/walk001.png
+	frame	data/chars/enemies/reine/walk002.png
+	frame	data/chars/enemies/reine/walk003.png
+	frame	data/chars/enemies/reine/walk004.png
+	frame	data/chars/enemies/reine/walk005.png
+
+anim run
+	loop	1 1
+	delay	12
+	offset	130 190
+	bbox 	117 136 46 49
+	frame	data/chars/enemies/reine/run00.png
+	sound	data/sounds/Run.wav
+	bbox 	122 123 30 43
+	frame	data/chars/enemies/reine/run01.png
+	bbox 	130 127 22 42
+	frame	data/chars/enemies/reine/run02.png
+	bbox 	129 137 29 40
+	frame	data/chars/enemies/reine/run03.png
+	sound	data/sounds/Run2.wav
+	bbox 	133 123 30 40
+	frame	data/chars/enemies/reine/run04.png
+	bbox 	130 127 24 44
+	frame	data/chars/enemies/reine/run05.png
+
+anim get
+	loop	0
+	delay	16
+	offset	130 190
+	frame	data/chars/enemies/reine/get00.png
+
+anim grab
+	range 0 60
+	rangea 0 0
+	loop	0
+	delay	16
+	offset	130 190
+	bbox 	124 116 20 76
+	@cmd vaultStuck
+	frame	data/chars/enemies/reine/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	130 190
+	bbox 	123 120 19 72
+	sound	data/voices/girl_pain2.wav
+	frame	data/chars/enemies/reine/grabbed00.png
+
+anim land
+	loop	0
+	delay	12
+	offset	130 190
+	@cmd landSafe
+	frame	data/chars/enemies/reine/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	130 190
+	bbox 	117 131 31 61
+	frame	data/chars/enemies/reine/jumpdelay00.png
+
+anim walkoff
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	130 190
+	bbox 	116 129 28 36
+	hitfx	data/sounds/HighKick.wav
+	@cmd jump 1
+	attack 116 144 68 30 4 1 0 0 10 12
+	frame	data/chars/enemies/reine/jumpatk01.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	130 190
+	bbox 	121 106 18 69
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/reine/jumpland01.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	130 190
+	bbox 	119 121 21 69
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	130 190
+	bbox 	121 122 16 70
+	frame	data/chars/enemies/reine/pain00.png
+	frame	data/chars/enemies/reine/pain01.png
+	frame	data/chars/enemies/reine/pain00.png
+	frame	data/chars/enemies/reine/pain01.png
+	frame	data/chars/enemies/reine/pain00.png
+	frame	data/chars/enemies/reine/pain01.png
+	frame	data/chars/enemies/reine/pain00.png
+	frame	data/chars/enemies/reine/pain01.png
+	frame	data/chars/enemies/reine/pain00.png
+	frame	data/chars/enemies/reine/pain01.png
+	frame	data/chars/enemies/reine/pain00.png
+	frame	data/chars/enemies/reine/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	130 190
+	bbox 	119 121 21 69
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+	frame	data/chars/enemies/reine/pain200.png
+	frame	data/chars/enemies/reine/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	130 190
+	bbox 	118 127 29 42
+	frame	data/chars/enemies/reine/fall00.png
+		delay	8
+	@cmd cancelFall 50 "ANI_LAND"
+	bbox 	102 174 77 18
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/reine/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	130 190
+	bbox 	118 127 29 42
+	frame	data/chars/enemies/reine/fall00.png
+		delay	8
+	bbox 	102 174 77 18
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/reine/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	130 190
+	bbox 	118 127 29 42
+	frame	data/chars/enemies/reine/fall00.png
+		delay	8
+	bbox 	102 174 77 18
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/reine/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	130 190
+	frame	data/chars/enemies/reine/fall600.png
+	frame	data/chars/enemies/reine/fall601.png
+	frame	data/chars/enemies/reine/fall602.png
+	frame	data/chars/enemies/reine/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/reine/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	130 190
+	frame	data/chars/enemies/reine/fall700.png
+	frame	data/chars/enemies/reine/fall701.png
+	frame	data/chars/enemies/reine/fall702.png
+	frame	data/chars/enemies/reine/fall703.png
+	frame	data/chars/enemies/reine/fall704.png
+	frame	data/chars/enemies/reine/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	130 190
+	bbox 	118 127 29 42
+	hitfx	data/sounds/MediumKick.wav
+	attack 118 127 29 42 4 1 0 0 20 12
+	frame	data/chars/enemies/reine/fall00.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/enemies/reine/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	102 174 77 18
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/girl_pain5.wav
+	frame	data/chars/enemies/reine/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	130 190
+	bbox 	112 144 22 46
+	hitfx	data/sounds/MediumKick.wav
+	attack 112 144 22 46 4 1 0 0 20 12
+	frame	data/chars/enemies/reine/fall900.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/enemies/reine/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	102 174 77 18
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/girl_pain5.wav
+	frame	data/chars/enemies/reine/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	130 190
+	frame	data/chars/enemies/reine/fall01.png
+	frame	data/chars/enemies/reine/fall01.png
+	frame	data/chars/enemies/reine/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	130 190
+	frame	data/chars/enemies/reine/rise00.png
+	frame	data/chars/enemies/reine/rise01.png
+	frame	data/chars/enemies/reine/rise00.png
+	frame	data/chars/enemies/reine/rise02.png
+
+anim riseattack
+	range 40 120
+	rangea 0 0
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	hitflash Impact
+	loop	0
+	delay	3
+	offset	130 190
+	hitfx	data/sounds/HighKick.wav
+	frame	data/chars/enemies/reine/rise00.png
+	@cmd target 5 2
+	@cmd leapTarget 2
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/reine/rise02.png
+	frame	data/chars/enemies/reine/rise03.png
+	frame	data/chars/enemies/reine/jump02.png
+	bbox 	125 125 17 47
+	attack8 125 151 25 16 15 1 0 0 30 12
+	dropv 3 5 0
+	sound	data/sounds/SpecialAttack7.wav
+	frame	data/chars/enemies/reine/jumpatk01.png
+		delay	2
+	frame	data/chars/enemies/reine/jumpatk01.png
+	@cmd landFrame
+		delay	12
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	121 129 15 63
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/reine/jumpland01.png
+
+anim attack1
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/shring5.wav
+	bbox 	127 126 30 55
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a600.png
+	delay	6
+	bbox 	134 127 30 56
+	attack 145 125 80 60 9 0 0 0 25 24
+	frame	data/chars/enemies/reine/a601.png
+	delay	2
+	bbox 	131 124 27 58
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a602.png
+	bbox 	130 123 22 56
+	frame	data/chars/enemies/reine/a603.png
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/shring5.wav
+	delay	6
+	bbox 	134 130 27 50
+	attack 145 125 80 60 9 0 0 0 25 24
+	frame	data/chars/enemies/reine/a604.png
+	delay	3
+	bbox 	130 129 28 60
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a605.png
+	bbox 	122 126 25 64
+	frame	data/chars/enemies/reine/a606.png
+
+anim attack2
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	@cmd keyMove 1 0
+	hitfx	data/sounds/Cutter.wav
+	sound	data/sounds/shring5.wav
+	bbox 	129 151 26 40
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a607.png
+	bbox 	129 146 25 45
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a608.png
+	delay	6
+	bbox 	122 147 25 43
+	attack2 130 80 140 110 12 0 0 0 30 36
+	frame	data/chars/enemies/reine/a609.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a609.png
+	delay	6
+	bbox 	122 147 25 43
+	attack2 130 80 140 110 12 0 0 0 30 36
+	frame	data/chars/enemies/reine/a609.png
+	delay	2
+	bbox 	122 147 25 43
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a610.png
+
+anim attack3
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	@cmd rageCancel 20 60 0 0 0 "ANI_FOLLOW5" "random"
+	@cmd keyMove 1 0
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/Jill07.wav
+	bbox 122 113 18 78
+	frame	data/chars/enemies/reine/a200.png
+	bbox 123 112 24 76
+	frame	data/chars/enemies/reine/a201.png
+	delay 4
+	bbox 119 113 24 78
+	attack 137 131 60 60 15 1 0 0 30 24
+	dropv 3.7 1 0
+	frame	data/chars/enemies/reine/a202.png
+	@cmd rageCancel 0 75 0 160 0 "ANI_UPPER" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a202.png
+	delay 5
+	attack 131 106 60 85 25 1 0 0 30 24
+	dropv 3.7 1 0
+	frame	data/chars/enemies/reine/a203.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a203.png
+
+anim attackboth #BACK ATTACK
+	range -40 -20
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	6
+	offset	130 190
+	bbox 	121 113 22 78
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/reine/aboth00.png
+	bbox 	117 115 19 77
+	frame	data/chars/enemies/reine/aboth01.png
+		delay	12
+	bbox 	118 121 27 73
+	attack 86 111 37 51 5 1 0 0 15 24
+	frame	data/chars/enemies/reine/aboth02.png
+		delay	6
+	bbox 	120 118 24 74
+	attack 73 126 47 50 5 1 0 0 15 24
+	frame	data/chars/enemies/reine/aboth03.png
+	bbox 	116 115 20 76
+	frame	data/chars/enemies/reine/aboth04.png
+	bbox 	112 113 21 80
+	frame	data/chars/enemies/reine/aboth05.png
+
+anim runattack #UPPER
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 190
+	hitfx	data/sounds/Whip.wav
+	sound	data/voices/Jill09.wav
+	bbox 	122 120 22 72
+	frame	data/chars/enemies/reine/s200.png
+	bbox 	122 127 24 44
+	frame	data/chars/enemies/reine/s201.png
+	delay	3
+	@cmd dasher 1.5 0 0
+	attack 145 127 37 42 10 0 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s203.png
+	attack 145 127 37 42 10 0 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s204.png
+	hitfx	data/sounds/Whip2.wav
+	bbox 122 112 23 80
+	@cmd dasher 1.5 0 0
+	delay	5
+	@cmd leaper 0 2.5 0
+	attack 140 152 25 38 15 1 0 0 20 24
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 131 94 65 45 25 1 0 0 20 24
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s206.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s206.png
+	attack 123 90 65 28 15 1 0 0 20 24
+	dropv 3 0 0
+	frame	data/chars/enemies/reine/s207.png
+	@cmd landFrame
+	delay	8
+	frame	data/chars/enemies/reine/s208.png
+
+anim grabattack #WHIP
+	@cmd dasher 0
+	attackone 0
+	fastattack 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	@cmd dasher 0 0 0
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Whip01.wav
+	frame	data/chars/enemies/reine/a100.png
+	frame	data/chars/enemies/reine/a101.png
+	frame	data/chars/enemies/reine/a102.png
+	delay	4
+	#bbox 	125 130 24 60
+	attack 146 120 63 70 5 0 1 0 30 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a403.png
+	delay 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	127 129 25 61
+	frame	data/chars/enemies/reine/a404.png
+	frame	data/chars/enemies/reine/a405.png
+	frame	data/chars/enemies/reine/a406.png
+	frame	data/chars/enemies/reine/a407.png
+	delay	3
+	hitfx	data/sounds/Whip2.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a100.png
+	frame	data/chars/enemies/reine/a101.png
+	frame	data/chars/enemies/reine/a102.png
+	delay	4
+	#bbox 	125 130 24 60
+	attack 146 120 63 70 5 0 1 0 30 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a403.png
+	delay 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	127 129 25 61
+	frame	data/chars/enemies/reine/a404.png
+	frame	data/chars/enemies/reine/a405.png
+	frame	data/chars/enemies/reine/a406.png
+	frame	data/chars/enemies/reine/a407.png
+	delay	3
+	hitfx	data/sounds/Whip2.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a100.png
+	frame	data/chars/enemies/reine/a101.png
+	frame	data/chars/enemies/reine/a102.png
+	delay	4
+	#bbox 	125 130 24 60
+	attack 146 120 63 70 5 0 1 0 30 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a403.png
+	delay 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	127 129 25 61
+	frame	data/chars/enemies/reine/a404.png
+	frame	data/chars/enemies/reine/a405.png
+	frame	data/chars/enemies/reine/a406.png
+	frame	data/chars/enemies/reine/a407.png
+	delay	3
+	hitfx	data/sounds/Whip2.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a100.png
+	frame	data/chars/enemies/reine/a101.png
+	frame	data/chars/enemies/reine/a102.png
+	delay	4
+	#bbox 	125 130 24 60
+	attack 146 120 63 70 5 0 1 0 30 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a403.png
+	delay 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	127 129 25 61
+	frame	data/chars/enemies/reine/a404.png
+	frame	data/chars/enemies/reine/a405.png
+	frame	data/chars/enemies/reine/a406.png
+	frame	data/chars/enemies/reine/a407.png #31
+	delay	3
+	hitfx	data/sounds/Whip2.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a100.png
+	frame	data/chars/enemies/reine/a101.png
+	frame	data/chars/enemies/reine/a102.png
+	delay	4
+	#bbox 	125 130 24 60
+	shock 146 120 63 70 25 1 1 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/a403.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 	127 129 25 61
+	frame	data/chars/enemies/reine/a404.png
+	frame	data/chars/enemies/reine/a405.png
+	frame	data/chars/enemies/reine/a406.png
+	@cmd rageCancel 60 140 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 60 140 0 100 20 "ANI_FREESPECIAL4" "hit"
+	@cmd rageCancel 0 75 0 160 15 "ANI_UPPER" "hit"
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	@cmd clearL
+	frame	data/chars/enemies/reine/a407.png
+
+
+
+anim grabforward ##KNEE
+	@cmd dasher 0
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	bbox 	130 121 29 51
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/LowAttack.wav
+	frame	data/chars/enemies/reine/grabatk00.png
+	attack2 135 130 50 40 5 0 0 0 30 12
+	seal 1 1
+	frame	data/chars/enemies/reine/grabatk01.png
+	bbox 	130 125 23 49
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/grab00.png
+	@cmd looper 0 3
+	frame	data/chars/enemies/reine/grabatk00.png
+	delay	5
+	attack 135 130 50 40 25 1 0 0 30 12
+	seal 1 1
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/grabatk01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/grab00.png
+	@cmd grabEnd
+	@cmd clearL
+	frame	data/chars/enemies/reine/idle01.png
+
+anim grabbackward ##BANG
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	130 190
+	@cmd grabStart2
+	frame	data/chars/enemies/reine/fck00.png
+	delay	32
+	@cmd position 1 12 -1 0 -1
+	@cmd spawn01 "Dust" 20 0 1
+	attack 100 161 72 26 3 0 0 10 12
+	sound	data/voices/fck_002.wav
+	frame	data/chars/enemies/reine/fck01.png
+	frame	data/chars/enemies/reine/fck02.png
+	@cmd looper 1 1
+	@cmd slam 200 1 -1 4 0 0
+	frame	data/chars/enemies/reine/fck03.png
+	sound	data/voices/girl_cry2.wav
+	@cmd position 1 12 -1 0 -1
+	@cmd hpCost -150
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/fck00.png
+	@cmd grabEnd
+	@cmd clearL
+		delay	64
+	frame	data/chars/enemies/reine/rise02.png
+
+anim follow5
+	loop	0
+	delay	16
+	offset	130 190
+	@cmd landGrab
+	frame	data/chars/enemies/reine/a105.png
+
+anim jumpattack
+	range 40 120
+	rangea 0 0
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 190
+	bbox 	116 129 28 36
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/enemies/reine/jumpatk00.png
+	attack 126 154 52 19 9 1 0 0 30 12
+	sound	data/voices/Attack8.wav
+	frame	data/chars/enemies/reine/jumpatk00.png
+
+anim jumpattack2
+	range 40 120
+	rangea 0 0
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 190
+	bbox 	125 112 26 66
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/enemies/reine/jump02.png
+	attack 125 151 25 16 9 1 0 0 30 12
+	sound	data/voices/Attack8.wav
+	frame	data/chars/enemies/reine/jumpatk01.png
+
+anim special #WHIP DANCE
+	range 40 120
+	rangea 0 100
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	3
+	offset	138 192
+	@cmd dasher 0
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Jill08.wav
+	frame	data/chars/enemies/reine/s100.png
+	frame	data/chars/enemies/reine/s101.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s110.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s110.png
+	delay 5
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd rageCancel 50 150 0 160 20 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 50 150 0 160 5 "ANI_FREESPECIAL2" "hit"
+	frame	data/chars/enemies/reine/s111.png
+
+
+anim special2 #WHIP DANCE
+	range 40 120
+	rangea 0 100
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	3
+	offset	138 192
+	@cmd dasher 0
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Jill08.wav
+	frame	data/chars/enemies/reine/s100.png
+	frame	data/chars/enemies/reine/s101.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 40 100 190 95 16 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s110.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s110.png
+	delay 5
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd rageCancel 50 150 0 160 20 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 50 150 0 160 5 "ANI_FREESPECIAL2" "hit"
+	frame	data/chars/enemies/reine/s111.png
+
+
+anim freespecial #SHOCK
+	range 50 120
+	rangea 0 60
+	rangez -15 15
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 60 1 6
+	otg 1
+	loop	0
+	delay	2
+	offset	130 190
+	hitfx	data/sounds/Shock2.wav
+	sound	data/voices/Viper09.wav
+	@cmd spawnBind "Rage" 0 0 -1
+	frame	data/chars/enemies/reine/s300.png
+	shock 155 120 37 72 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/s301.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s301.png
+	shock 155 120 45 72 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/s302.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s302.png
+	shock 155 120 70 72 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/s303.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s303.png
+	shock 155 120 130 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1.5 0
+	frame	data/chars/enemies/reine/s304.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s304.png
+	delay	8
+	shock 155 120 140 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s305.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s305.png
+	delay	3
+	@cmd dasher 5 0 0
+	shock 137 115 35 80 7 1 0 0 20 36
+	seal 1 1
+	dropv 1 1.5 0
+	frame	data/chars/enemies/reine/s400.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s400.png
+	shock 137 115 41 80 7 1 0 0 20 36
+	seal 1 1
+	dropv 2 1.5 0
+	frame	data/chars/enemies/reine/s401.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s401.png
+	shock 137 115 43 80 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 2 0
+	frame	data/chars/enemies/reine/s402.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s402.png
+	shock 131 115 50 80 7 1 0 0 30 36
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s403.png
+	@cmd dasher 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s403.png
+	delay	2
+	hitfx	data/sounds/Whip.wav
+	sound	data/voices/Whip02.wav
+	frame	data/chars/enemies/reine/s100.png
+	frame	data/chars/enemies/reine/s101.png
+	attack 66 100 53 70 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 60 120 72 72 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 70 147 130 50 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 130 141 75 64 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 130 95 70 82 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 131 83 60 82 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 130 90 70 85 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 65 122 67 80 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 62 105 142 65 5 1 0 0 20 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s110.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s110.png
+	@cmd looper 20 2
+	hitfx	data/sounds/Whip2.wav
+	frame	data/chars/enemies/reine/s101.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s102.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s103.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s104.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s105.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s106.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s107.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s108.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s109.png
+	attack 40 100 190 95 7 1 0 0 30 24
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s110.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s110.png
+	delay 5
+	@cmd rageCancel 50 150 0 160 20 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 50 150 0 160 5 "ANI_FREESPECIAL2" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s111.png
+
+anim freespecial2 #GRAB RUN
+	range 50 120
+	rangea 0 0
+	rangez -9 9
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 190
+	hitfx	data/sounds/Throw2.wav
+	sound	data/voices/Viper01.wav
+	@cmd block 1
+	bbox 	119 113 22 77
+	frame	data/chars/enemies/reine/idle01.png
+	@cmd block 0
+		delay	12
+	bbox 	117 136 46 49
+	@cmd target 3 2
+	@cmd dashTarget
+	attack 125 100 52 90 1 0 1 1 0 24
+	frame	data/chars/enemies/reine/run00.png
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run01.png
+	sound	data/sounds/Run.wav
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run02.png
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run03.png
+	@cmd dasher 0.5 0 0
+	frame	data/chars/enemies/reine/run04.png
+	sound	data/sounds/Run2.wav
+	@cmd dasher 0 0 0
+	@cmd clearL
+	frame	data/chars/enemies/reine/run05.png
+
+anim freespecial3 #BLITZ RUN
+	range 60 120
+	rangea 0 0
+	rangez -24 24
+	energycost 20 1 6
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	1
+	offset	130 190
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Viper01.wav
+	@cmd block 1
+	bbox 	119 113 22 77
+	frame	data/chars/enemies/reine/idle01.png
+	@cmd block 0
+		delay	12
+	bbox 	117 136 46 49
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run00.png
+	delay	4
+	sound	data/sounds/Run.wav
+	@cmd cancel 30 60 0 100 -24 24 "ANI_UPPER"
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run01.png
+	@cmd cancel 30 60 0 100 -24 24 "ANI_UPPER"
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run02.png
+	@cmd cancel 30 60 0 100 -24 24 "ANI_UPPER"
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run03.png
+	@cmd cancel 30 60 0 100 -24 24 "ANI_UPPER"
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run04.png
+	@cmd cancel 30 60 0 100 -24 24 "ANI_UPPER"
+	@cmd dashTarget
+	frame	data/chars/enemies/reine/run05.png
+	@cmd dasher 0 0 0
+	@cmd clearL
+	frame	data/chars/enemies/reine/run00.png
+
+anim freespecial4 #WHIP SHOOT
+	range 60 150
+	rangea 0 0
+	rangez -5 5
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 10 1 6
+	otg 1
+	loop	0
+	delay	2
+	offset	130 190
+	@cmd dasher 0
+	hitfx	data/sounds/Shock2.wav
+	sound	data/voices/Jill08.wav
+	bbox 	120 123 22 70
+	frame	data/chars/enemies/reine/s300.png
+	bbox 	130 134 24 59
+	shock 135 120 57 72 9 0 0 0 20 36
+	seal 1 1
+	frame	data/chars/enemies/reine/s301.png
+	delay	1
+	shock 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s301.png
+	delay	2
+	shock 135 120 67 72 9 0 0 0 20 36
+	seal 1 1
+	frame	data/chars/enemies/reine/s302.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s302.png
+	delay	2
+	shock 135 120 90 72 9 0 0 0 20 36
+	seal 1 1
+	frame	data/chars/enemies/reine/s303.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s303.png
+	delay	2
+	shock 135 120 150 72 9 0 0 0 25 36
+	seal 1 1
+	dropv 2 1.5 0
+	frame	data/chars/enemies/reine/s304.png
+	delay	1
+	@cmd rageCancel 60 140 0 100 60 "ANI_FREESPECIAL" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s304.png
+	delay	2
+	shock 135 120 165 72 15 1 0 0 25 36
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s305.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s305.png
+	offset	223 178
+	delay	2
+	shock 223 107 185 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1.2 0
+	frame	data/chars/enemies/reine/s306.png
+	delay	1
+	@cmd rageCancel 50 150 0 160 20 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 50 150 0 160 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s306.png
+	delay	2
+	shock 223 107 205 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1.2 0
+	frame	data/chars/enemies/reine/s307.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s307.png
+	delay	4
+	shock 223 107 225 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s308.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s308.png
+	delay	6
+	shock 223 107 245 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s309.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s309.png
+	delay	8
+	shock 223 107 255 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s310.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s310.png
+
+
+
+anim freespecial5 #WHIP GRAB
+	range 40 220
+	rangea 0 80
+	rangez -5 5
+	attackone 1
+	jugglecost 3
+	forcedirection -1
+	energycost -15 1 6
+	otg 1
+	loop	0
+	delay	4
+	offset	130 190
+	@cmd dasher 0
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Viper01.wav
+	bbox 	120 123 22 70
+	frame	data/chars/enemies/reine/s300.png
+	bbox 	130 134 24 59
+	attack 135 120 57 72 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/s301.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s301.png
+	delay	4
+	attack 135 120 67 72 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/s302.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s302.png
+	delay	4
+	attack 135 120 90 72 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/s303.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s303.png
+	delay	4
+	attack 135 120 150 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1 0
+	frame	data/chars/enemies/reine/s304.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s304.png
+	delay	4
+	attack 135 120 165 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1 0
+	frame	data/chars/enemies/reine/s305.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s305.png
+	offset	223 178
+	delay	4
+	attack 223 107 185 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1.2 0
+	frame	data/chars/enemies/reine/s306.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s306.png
+	delay	4
+	attack 223 107 205 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 2 1.2 0
+	frame	data/chars/enemies/reine/s307.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s307.png
+	delay	4
+	attack 223 107 225 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s308.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s308.png
+	delay	4
+	attack 223 107 245 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s309.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s309.png
+	delay	4
+	attack 223 107 255 72 1 0 1 1 0 24
+	seal 1 1
+	dropv 3 1.5 0
+	frame	data/chars/enemies/reine/s310.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s310.png
+
+
+anim freespecial6 #upper missile
+	range 60 300
+	rangea 20 160
+	rangez -30 30
+	fastattack 0
+	energycost -24 1 6
+	loop	0
+	offset	130 190
+	@cmd dasher 0 0 0
+	sound	data/voices/Viper11.wav
+	delay	9
+	bbox 	121 121 30 70
+	frame	data/chars/enemies/reine/shoot03.png
+	delay	12
+	bbox 	120 117 25 75
+	@cmd shoot "sumissile" 30 75 0 2 2 0
+	sound	data/sounds/Whoosh.wav
+	frame	data/chars/enemies/reine/shoot05.png
+	delay	64
+	bbox 	115 117 25 75
+	@cmd dasher -0.2 0 0
+	frame	data/chars/enemies/reine/shoot06.png
+
+anim freespecial7 #WHIP AIR GRAB
+	range 40 240
+	rangea 5 160
+	rangez -9 9
+	attackone 1
+	jugglecost 3
+	energycost -5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Viper01.wav
+	@cmd dasher 0
+	bbox 	120 121 30 75
+	frame	data/chars/enemies/reine/a306.png
+	bbox 	120 125 30 70
+	frame	data/chars/enemies/reine/a307.png
+	frame	data/chars/enemies/reine/a308.png
+	frame	data/chars/enemies/reine/a309.png
+	bbox 	121 121 30 72
+	frame	data/chars/enemies/reine/a309.png
+	bbox 	125 121 30 73
+	frame	data/chars/enemies/reine/a310.png
+	bbox 	125 122 30 71
+	delay	1
+	attack 135 123 55 48 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a311.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a311.png
+	delay	1
+	attack 135 115 60 44 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a312.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a312.png
+	delay	1
+	attack 135 111 68 45 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a313.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a313.png
+	delay	1
+	attack 135 100 95 47 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a314.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a314.png
+	delay	1
+	attack 135 95 105 42 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a315.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a315.png
+	delay	1
+	attack 135 70 95 75 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a316.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a316.png
+	delay	1
+	attack 135 60 105 80 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a317.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a317.png
+	delay	1
+	attack 135 45 130 80 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a318.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a318.png
+	delay	1
+	attack 135 10 165 120 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a319.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a319.png
+	delay	1
+	attack 135 0 165 120 1 0 1 1 0 24
+	seal 1 1
+	frame	data/chars/enemies/reine/a320.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/a320.png
+
+
+
+
+
+anim upper
+	range 20 50
+	rangea 20 120
+	rangez -9 9
+	fastattack 1
+	jugglecost 0
+	energycost 15 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	130 190
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Viper07.wav
+	bbox 	122 120 22 72
+	frame	data/chars/enemies/reine/s200.png
+	bbox 	122 127 24 44
+	frame	data/chars/enemies/reine/s201.png
+	@cmd dasher 0 0 0
+	attack 145 127 37 42 5 0 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s203.png
+	bbox 122 112 23 80
+	delay	5
+	@cmd leaper 1 2.5 0
+	attack 131 109 60 83 7 1 0 0 20 24
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 131 94 65 60 9 1 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s206.png
+	@cmd rageCancel 0 75 0 160 0 "ANI_UPPER" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s206.png
+	attack 123 90 60 50 9 1 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s207.png
+	@cmd landFrame
+	delay	8
+	@cmd rageCancel 60 140 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 60 140 0 100 20 "ANI_FREESPECIAL4" "hit"
+	@cmd rageCancel 50 150 0 160 20 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 50 150 0 160 5 "ANI_FREESPECIAL2" "hit"
+	@cmd clearL
+	frame	data/chars/enemies/reine/s208.png
+
+anim follow7 #COUNTER
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	130 190
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Jill09.wav
+	bbox 	122 120 22 72
+	frame	data/chars/enemies/reine/s200.png
+	bbox 	122 127 24 44
+	frame	data/chars/enemies/reine/s201.png
+	delay	3
+	@cmd dasher 1.5 0 0
+	attack 145 127 37 42 15 0 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s203.png
+	attack 145 127 37 42 15 0 0 0 20 24
+	dropv 3 1 0
+	@cmd dasher 1 0 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s204.png
+	hitfx	data/sounds/Whip2.wav
+	bbox 122 112 23 80
+	@cmd dasher 0 0 0
+	@cmd rageCancel 50 120 0 100 60 "ANI_FREESPECIAL" "hit"
+	delay	5
+	@cmd leaper 0 2.5 0
+	attack 131 109 60 83 15 1 0 0 20 24
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 131 94 65 60 20 1 0 0 20 24
+	dropv 4 1 0
+	frame	data/chars/enemies/reine/s206.png
+	@cmd rageCancel 0 75 0 160 0 "ANI_UPPER" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s206.png
+	attack 123 90 60 50 15 1 0 0 20 24
+	dropv 3 0 0
+	frame	data/chars/enemies/reine/s207.png
+	@cmd landFrame
+	delay	8
+	@cmd rageCancel 50 150 0 160 20 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 50 150 0 160 5 "ANI_FREESPECIAL2" "hit"
+	@cmd clearL
+	frame	data/chars/enemies/reine/s208.png
+
+
+anim follow8 #AERIAL SPECIAL
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	4
+	offset	130 190
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/Jill09.wav
+	bbox 	122 120 22 72
+	frame	data/chars/enemies/reine/s200.png
+	bbox 	122 127 24 44
+	frame	data/chars/enemies/reine/s201.png
+	delay	3
+	@cmd dasher 1.5 0 0
+	attack 145 127 37 42 5 0 0 0 20 24
+	dropv 1 1 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s203.png
+	attack 145 127 37 42 5 0 0 0 20 24
+	dropv 1 1 0
+	@cmd dasher 1 0 0
+	frame	data/chars/enemies/reine/s202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/enemies/reine/s204.png
+	hitfx	data/sounds/Whip2.wav
+	bbox 122 112 23 80
+	@cmd dasher 0 0 0
+	delay	5
+	@cmd leaper 0 2.5 0
+	attack 131 109 60 83 7 1 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s205.png
+	attack 131 94 65 60 9 1 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s206.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/reine/s206.png
+	attack 123 90 60 50 9 1 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/enemies/reine/s207.png
+	@cmd landFrame
+	delay	8
+	frame	data/chars/enemies/reine/s208.png
+
+anim follow9 #AERIAL RECOVER
+	loop	0
+	delay	12
+	offset	130 190
+	sound	data/sounds/SpecialAttack5.wav
+	@cmd landSafe
+	@cmd invinc 2
+	@cmd leaper -1.3 1.6 0
+	frame	data/chars/enemies/reine/jump00.png
+	frame	data/chars/enemies/reine/jump01.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	2
+	offset	130 190
+	@cmd copyMove
+	frame	data/chars/enemies/reine/roll00.png
+		delay	6
+	@cmd pasteMovex 1.5
+	frame	data/chars/enemies/reine/roll01.png
+	@cmd pasteMovex 1.5
+	frame	data/chars/enemies/reine/roll02.png
+	@cmd pasteMovex 1.5
+	frame	data/chars/enemies/reine/roll03.png
+	@cmd pasteMovex 1.5
+	frame	data/chars/enemies/reine/roll00.png
+	@cmd pasteMovex 1.5
+	frame	data/chars/enemies/reine/roll01.png
+	delay	8
+	@cmd dasher 0 0 0
+	@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold"
+	#@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
+	#@cmd keyAni "special" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
+	frame	data/chars/enemies/reine/rise03.png
+
+
+anim follow11 #BLOCK
+	loop	0
+	delay	12
+	offset	130 190
+	bbox 	112 113 33 78
+	@cmd dasher 0 0 0
+	@cmd block 1
+	frame	data/chars/enemies/reine/block00.png
+	@cmd keyLoop "attack3" 0
+	@cmd block 0
+	frame	data/chars/enemies/reine/block00.png
+
+anim follow12 #PARRY
+	loop	0
+	delay	24
+	offset	127 179
+	bbox 	112 113 33 78
+	@cmd dasher 0 0 0
+	@cmd block 1
+	frame	data/chars/enemies/reine/block00.png
+
+
+anim block
+	range 0 100
+	rangea 0 100
+	rangez -24 24
+	@cmd dasher 0 0 0
+	loop	0
+	delay	96
+	offset	130 190
+	bbox 	123 114 24 79
+	frame	data/chars/enemies/reine/block00.png
+
+anim dodge
+	@cmd lockAni "dodgeType" "sor2x"
+	@cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
+	@cmd lockAni "dodgeType" "off"
+	loop	0
+	delay	2
+	offset	130 190
+	@cmd dashRandom 1.5 1.5
+	@cmd copyMove
+	frame	data/chars/enemies/reine/roll00.png
+		delay	6
+	@cmd pasteMove
+	frame	data/chars/enemies/reine/roll01.png
+	@cmd pasteMove
+	frame	data/chars/enemies/reine/roll02.png
+	@cmd pasteMove
+	frame	data/chars/enemies/reine/roll03.png
+	@cmd pasteMove
+	frame	data/chars/enemies/reine/roll00.png
+	@cmd pasteMove
+	frame	data/chars/enemies/reine/roll02.png
+		delay	12
+	@cmd dasher 0 0 0
+	@cmd invinc 2
+	@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold"
+	#@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
+	#@cmd keyAni "special" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
+	frame	data/chars/enemies/reine/rise03.png

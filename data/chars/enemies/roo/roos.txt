@@ -1,0 +1,113 @@
+##MAIN
+name				RooS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+palette       data/chars/enemies/roo/idle00.png
+alternatepal  data/chars/enemies/roo/alter1.png
+alternatepal  data/chars/enemies/roo/alter2.png
+alternatepal  data/chars/enemies/roo/alter3.png
+alternatepal  data/chars/enemies/roo/idle00.png
+alternatepal  data/chars/enemies/roo/alter4.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim riseattack
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/dodge00.png
+	frame	data/chars/enemies/roo/dodge01.png
+	frame	data/chars/enemies/roo/dodge02.png
+	frame	data/chars/enemies/roo/dodge03.png
+	frame	data/chars/enemies/roo/dodge04.png
+	frame	data/chars/enemies/roo/dodge05.png
+
+anim special #DEFENSIVE SPECIAL
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/special00.png
+	frame	data/chars/enemies/roo/special01.png
+	frame	data/chars/enemies/roo/special02.png
+	frame	data/chars/enemies/roo/special03.png
+	frame	data/chars/enemies/roo/special03.png
+	frame	data/chars/enemies/roo/special04.png
+	frame	data/chars/enemies/roo/special04.png
+	frame	data/chars/enemies/roo/special05.png
+	frame	data/chars/enemies/roo/special05.png
+	frame	data/chars/enemies/roo/special06.png
+	frame	data/chars/enemies/roo/special06.png
+	frame	data/chars/enemies/roo/special07.png
+
+anim special2 #DEFENSIVE SPECIAL
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/special00.png
+	frame	data/chars/enemies/roo/special01.png
+	frame	data/chars/enemies/roo/special02.png
+	frame	data/chars/enemies/roo/special03.png
+	frame	data/chars/enemies/roo/special03.png
+	frame	data/chars/enemies/roo/special04.png
+	frame	data/chars/enemies/roo/special04.png
+	frame	data/chars/enemies/roo/special05.png
+	frame	data/chars/enemies/roo/special05.png
+	frame	data/chars/enemies/roo/special06.png
+	frame	data/chars/enemies/roo/special06.png
+	frame	data/chars/enemies/roo/special07.png
+
+anim freespecial2
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/run00.png
+	frame	data/chars/enemies/roo/run01.png
+	frame	data/chars/enemies/roo/run02.png
+	frame	data/chars/enemies/roo/run03.png
+	frame	data/chars/enemies/roo/run00.png
+
+anim freespecial9
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/special00.png
+	frame	data/chars/enemies/roo/special01.png
+	frame	data/chars/enemies/roo/special02.png
+	frame	data/chars/enemies/roo/special03.png
+	frame	data/chars/enemies/roo/special03.png
+	frame	data/chars/enemies/roo/special04.png
+	frame	data/chars/enemies/roo/special04.png
+	frame	data/chars/enemies/roo/special05.png
+	frame	data/chars/enemies/roo/special05.png
+	frame	data/chars/enemies/roo/special06.png
+	frame	data/chars/enemies/roo/special06.png
+	frame	data/chars/enemies/roo/special07.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/dodge00.png
+	frame	data/chars/enemies/roo/dodge01.png
+	frame	data/chars/enemies/roo/dodge02.png
+	frame	data/chars/enemies/roo/dodge03.png
+	frame	data/chars/enemies/roo/dodge04.png
+	frame	data/chars/enemies/roo/dodge05.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	159 180
+	frame	data/chars/enemies/roo/dodge00.png
+	frame	data/chars/enemies/roo/dodge01.png
+	frame	data/chars/enemies/roo/dodge02.png
+	frame	data/chars/enemies/roo/dodge03.png
+	frame	data/chars/enemies/roo/dodge04.png
+	frame	data/chars/enemies/roo/dodge05.png

@@ -1,0 +1,52 @@
+name				Fog_Grenade #THROWNED
+type				none
+nolife				1
+lifespan			1.5
+offscreenkill		50
+noquake 			1
+gfxshadow			1 1
+bounce 				1
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/weapons.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	bouncefactor 2
+	loop	1 1
+	delay	4
+	offset	25 22
+	sound	data/sounds/grenade1.wav
+	frame	data/chars/enemies/fog/grenade/grenade00.png
+	frame	data/chars/enemies/fog/grenade/grenade00.png
+	frame	data/chars/enemies/fog/grenade/grenade01.png
+	frame	data/chars/enemies/fog/grenade/grenade02.png
+	frame	data/chars/enemies/fog/grenade/grenade03.png
+	frame	data/chars/enemies/fog/grenade/grenade04.png
+	frame	data/chars/enemies/fog/grenade/grenade05.png
+	frame	data/chars/enemies/fog/grenade/grenade06.png
+	frame	data/chars/enemies/fog/grenade/grenade07.png
+
+anim follow1
+	bouncefactor 2
+	loop	1 1
+	delay	4
+	offset	25 22
+	sound	data/sounds/grenade1.wav
+	frame	data/chars/enemies/fog/grenade/grenade00.png
+	frame	data/chars/enemies/fog/grenade/grenade00.png
+	frame	data/chars/enemies/fog/grenade/grenade07.png
+	frame	data/chars/enemies/fog/grenade/grenade06.png
+	frame	data/chars/enemies/fog/grenade/grenade05.png
+	frame	data/chars/enemies/fog/grenade/grenade04.png
+	frame	data/chars/enemies/fog/grenade/grenade03.png
+	frame	data/chars/enemies/fog/grenade/grenade02.png
+	frame	data/chars/enemies/fog/grenade/grenade01.png
+
+anim fall #EXPLOSION
+	loop	0
+	delay	2
+	offset	25 22
+	@cmd spawnBind "Explosion" 0 0 1
+	frame	data/chars/enemies/fog/grenade/empty.png
+	@cmd suicide
+	frame	data/chars/enemies/fog/grenade/empty.png

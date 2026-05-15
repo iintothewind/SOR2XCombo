@@ -1,0 +1,64 @@
+loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
+panel		data/bgs/dojo/sea01/panel.png
+fglayer		data/bgs/dojo/sea01/sunshine.png 450 1 1 0 0 0 0 1 1 0 1
+bglayer		data/bgs/dojo/sea01/back.png 1 1 0 -45 0 0 1 1 1
+direction	both
+order			a
+scrollspeed 0.5
+
+type			0
+settime		0
+notime		1
+noslow		1
+stagenumber		2
+
+spawn1  60 120 0
+spawn2  60 150 0
+spawn3  120 120 0
+spawn4  120 150 0
+
+light		128 -128
+at			0
+
+shadowcolor   64_64_64
+at             0
+
+shadowalpha 2
+at			0
+
+
+load  sea01 3
+load	Fight 3
+
+spawn		Fight 1
+flip		1
+coords		-120 0 0
+at			0
+
+spawn	sea01 1
+flip	1
+map	1
+coords	0 240
+at	0
+
+spawn	sea01 1
+map	1
+coords	480 240
+at	0
+
+spawn	sea01 1
+map	1
+coords	960 240
+at	0
+
+spawn	sea01 1
+map	1
+coords	1440 240
+at	0
+
+spawn   DojoX
+coords  550 180 0
+boss		1
+at	    0
+
+

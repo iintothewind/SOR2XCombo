@@ -1,0 +1,23 @@
+##MAIN
+name			Route_Right
+type			item
+subject_to_wall 0
+
+##MISC
+shadow			0
+antigravity		100
+setlayer		1000
+
+##SCRIPTS
+ondrawscript	data/scripts/ondraw/menu_route.c
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	48
+	offset	15 26
+	sound	data/sounds/Go.wav
+	platform 10 500 0 0 100 100 1000 1000
+	frame	data/bgs/route/arrow_right.png
+	frame	data/bgs/route/empty.png

@@ -1,0 +1,102 @@
+name			St7_Elevator #ELEVATOR ANIMATED BGLAYER
+type			none
+shadow			0
+setlayer		-50
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/st7_elevator.c
+
+load			Fog_Grenadier
+load			St7_ElevatorS
+
+anim idle
+	loop	0
+	delay	449
+	offset	1 1229
+	@cmd spawnParent "St7_ElevatorS" 0 0 0
+	@cmd autoLife 50
+	frame	data/bgs/sor2/st7b/bg03.png
+	frame	data/bgs/sor2/st7b/bg03.png
+	
+anim follow1
+	loop	0
+	delay	416
+	offset	1 1229
+	sound	data/sounds/elevator.wav
+	@cmd leaper -0.28 0 0.28
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor2/st7b/bg03.png
+	@cmd leaper 0 0 0
+	frame	data/bgs/sor2/st7b/bg03.png
+	frame	data/bgs/sor2/st7b/bg03.png
+	
+anim follow2
+	loop	0
+	delay	416
+	offset	1 1229
+	sound	data/sounds/elevator.wav
+	@cmd leaper -0.26 0 0.26
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor2/st7b/bg03.png
+	@cmd leaper 0 0 0
+	frame	data/bgs/sor2/st7b/bg03.png
+	frame	data/bgs/sor2/st7b/bg03.png
+	
+anim follow3
+	loop	0
+	delay	416
+	offset	1 1229
+	sound	data/sounds/elevator.wav
+	@cmd leaper 0 0 0.25
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor2/st7b/bg03.png
+		delay	1024
+	@cmd leaper 0 0 0
+	frame	data/bgs/sor2/st7b/bg03.png
+		delay	128
+	@cmd spawn01 "Fog_Grenadier" 650 0 -438
+	frame	data/bgs/sor2/st7b/bg03.png
+	@cmd spawn01 "Fog_Grenadier" 550 0 -438
+	frame	data/bgs/sor2/st7b/bg03.png
+	frame	data/bgs/sor2/st7b/bg03.png
+
+anim follow4
+	loop	0
+	delay	416
+	offset	1 1229
+	sound	data/sounds/elevator.wav
+	@cmd leaper 0 0 0.25
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor2/st7b/bg03.png
+	@cmd leaper 0 0 0
+	@cmd disableLayer "bglayer" 2
+	frame	data/bgs/sor2/st7b/bg03.png
+	frame	data/bgs/sor2/st7b/bg03.png
+
+anim follow5
+	loop	0
+	delay	416
+	offset	1 1229
+	sound	data/sounds/elevator.wav
+	@cmd leaper 0 0 0.50
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	frame	data/bgs/sor2/st7b/bg03.png
+		delay	128
+	@cmd leaper 0 0 0
+	@cmd removeWall 0
+	@cmd zeroWait
+	@cmd disableLayer "bglayer" 1
+	frame	data/bgs/sor2/st7b/bg03.png

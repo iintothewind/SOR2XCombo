@@ -1,0 +1,101 @@
+name			Destruction #NON DAMAGE EXPLOSION, DECORATION ONLY
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+alpha			1
+onspawnscript	data/scripts/onspawn/graphics.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	2
+	offset	404 299
+	sound	data/sounds/Explosion.wav
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/chars/misc/explosion/explosion00.png
+	frame	data/chars/misc/explosion/explosion01.png
+	frame	data/chars/misc/explosion/explosion02.png
+	frame	data/chars/misc/explosion/explosion03.png
+	frame	data/chars/misc/explosion/explosion04.png
+	frame	data/chars/misc/explosion/explosion05.png
+	frame	data/chars/misc/explosion/explosion06.png
+	frame	data/chars/misc/explosion/explosion07.png
+	frame	data/chars/misc/explosion/explosion08.png
+	frame	data/chars/misc/explosion/explosion09.png
+	frame	data/chars/misc/explosion/explosion10.png
+	frame	data/chars/misc/explosion/explosion11.png
+	frame	data/chars/misc/explosion/explosion12.png
+	frame	data/chars/misc/explosion/explosion13.png
+	frame	data/chars/misc/explosion/explosion14.png
+	frame	data/chars/misc/explosion/explosion15.png
+	frame	data/chars/misc/explosion/explosion16.png
+	frame	data/chars/misc/explosion/explosion17.png
+	frame	data/chars/misc/explosion/explosion18.png
+	frame	data/chars/misc/explosion/explosion19.png
+	frame	data/chars/misc/explosion/explosion20.png
+	frame	data/chars/misc/explosion/explosion21.png
+	frame	data/chars/misc/explosion/explosion22.png
+	frame	data/chars/misc/explosion/explosion23.png
+	frame	data/chars/misc/explosion/explosion24.png
+	frame	data/chars/misc/explosion/explosion25.png
+	frame	data/chars/misc/explosion/explosion26.png
+	frame	data/chars/misc/explosion/explosion27.png
+	frame	data/chars/misc/explosion/explosion28.png
+	frame	data/chars/misc/explosion/explosion29.png
+	frame	data/chars/misc/explosion/explosion30.png
+	frame	data/chars/misc/explosion/explosion31.png
+	frame	data/chars/misc/explosion/explosion32.png
+	frame	data/chars/misc/explosion/explosion33.png
+	frame	data/chars/misc/explosion/explosion34.png
+	frame	data/chars/misc/explosion/explosion35.png
+	frame	data/chars/misc/explosion/explosion36.png
+	frame	data/chars/misc/explosion/explosion37.png
+	frame	data/chars/misc/explosion/explosion38.png
+	frame	data/chars/misc/explosion/explosion39.png
+	frame	data/chars/misc/explosion/explosion40.png
+	frame	data/chars/misc/explosion/explosion41.png
+	frame	data/chars/misc/explosion/explosion42.png
+	frame	data/chars/misc/explosion/explosion43.png
+	frame	data/chars/misc/explosion/explosion44.png
+	frame	data/chars/misc/explosion/explosion45.png
+	frame	data/chars/misc/explosion/explosion46.png
+	frame	data/chars/misc/explosion/explosion47.png
+	frame	data/chars/misc/explosion/explosion48.png
+	frame	data/chars/misc/explosion/explosion49.png
+	frame	data/chars/misc/explosion/explosion50.png
+	frame	data/chars/misc/explosion/explosion51.png
+	frame	data/chars/misc/explosion/explosion52.png
+	frame	data/chars/misc/explosion/explosion53.png
+	frame	data/chars/misc/explosion/explosion54.png
+	frame	data/chars/misc/explosion/explosion55.png
+	frame	data/chars/misc/explosion/explosion56.png
+	frame	data/chars/misc/explosion/explosion57.png
+	frame	data/chars/misc/explosion/explosion58.png
+	frame	data/chars/misc/explosion/explosion59.png
+	frame	data/chars/misc/explosion/explosion60.png
+	frame	data/chars/misc/explosion/explosion61.png
+	frame	data/chars/misc/explosion/explosion62.png
+	frame	data/chars/misc/explosion/explosion63.png
+	frame	data/chars/misc/explosion/explosion64.png
+	frame	data/chars/misc/explosion/explosion65.png
+	frame	data/chars/misc/explosion/explosion66.png
+	frame	data/chars/misc/explosion/explosion67.png
+	frame	data/chars/misc/explosion/explosion68.png
+	frame	data/chars/misc/explosion/explosion69.png
+	frame	data/chars/misc/explosion/explosion70.png
+	frame	data/chars/misc/explosion/explosion71.png
+	frame	data/chars/misc/explosion/explosion72.png
+	frame	data/chars/misc/explosion/explosion73.png
+	frame	data/chars/misc/explosion/explosion74.png
+	frame	data/chars/misc/explosion/explosion75.png
+	frame	data/chars/misc/explosion/explosion76.png
+	frame	data/chars/misc/explosion/explosion77.png
+	frame	data/chars/misc/explosion/explosion78.png
+	frame	data/chars/misc/explosion/explosion79.png
+	frame	data/chars/misc/explosion/explosion80.png
+	frame	data/chars/misc/explosion/explosion81.png
+	frame	data/chars/misc/explosion/explosion82.png
+	@cmd suicide
+	frame	data/chars/misc/explosion/empty.png

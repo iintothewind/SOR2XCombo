@@ -1,0 +1,701 @@
+##MAIN
+name				Ash
+type				player
+secret				0 1
+
+##LIFE
+health				400
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		36 #36/33/30
+grabfinish 			0 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				93
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2 3
+weapons				none none none none Ash
+modelflag			3
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+ondrawscript		data/scripts/ondraw/default.c
+onspawnscript		data/scripts/onspawn/player.c
+onfallscript		data/scripts/onfall/default.c
+animationscript	 	data/scripts/animation/default.c
+keyscript			data/scripts/key/default.c
+takedamagescript	data/scripts/takedamage/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/ash/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/Die2.wav
+
+##REMAPS
+remap				data/chars/enemies/ash/idle00.png data/chars/enemies/ash/alter1.png
+remap				data/chars/enemies/ash/idle00.png data/chars/enemies/ash/alter2.png
+remap				data/chars/enemies/ash/idle00.png data/chars/enemies/ash/alter3.png
+
+##COMMANDS
+com 				a2	freespecial 	#LAUGH
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim waiting
+	fshadow 0
+	loop	1
+	delay	12
+	offset	171 188
+	frame	data/chars/enemies/ash/idle00.png
+	frame	data/chars/enemies/ash/idle01.png
+	frame	data/chars/enemies/ash/idle02.png
+	frame	data/chars/enemies/ash/idle03.png
+	frame	data/chars/enemies/ash/idle04.png
+	frame	data/chars/enemies/ash/idle05.png
+
+anim select
+	fshadow 0
+	loop	0
+	delay	100000
+	offset	171 188
+	frame	data/chars/enemies/ash/idle00.png
+		delay	24
+	frame	data/chars/enemies/ash/idle00.png
+	frame	data/chars/enemies/ash/idle00.png
+
+anim idle
+	loop	1
+	delay	12
+	offset	171 188
+	bbox 	159 100 23 90
+	frame	data/chars/enemies/ash/idle00.png
+	frame	data/chars/enemies/ash/idle01.png
+	frame	data/chars/enemies/ash/idle02.png
+	frame	data/chars/enemies/ash/idle03.png
+	frame	data/chars/enemies/ash/idle04.png
+	frame	data/chars/enemies/ash/idle05.png
+
+anim chargeattack
+	chargetime 9999
+	loop	0
+	delay	1
+	offset	171 188
+	frame	data/chars/enemies/ash/idle00.png
+
+anim walk
+	loop	1
+	delay	20
+	offset	171 188
+	bbox 	163 103 25 87
+	sound	data/sounds/Run.wav
+	frame	data/chars/enemies/ash/walk00.png
+	frame	data/chars/enemies/ash/walk01.png
+	frame	data/chars/enemies/ash/walk02.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/enemies/ash/walk03.png
+	frame	data/chars/enemies/ash/walk04.png
+	frame	data/chars/enemies/ash/walk05.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	loop	1
+	delay	8
+	offset	171 188
+	bbox 	163 103 25 87
+	sound	data/sounds/Run.wav
+	frame	data/chars/enemies/ash/run00.png
+	frame	data/chars/enemies/ash/run01.png
+	frame	data/chars/enemies/ash/run02.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/enemies/ash/run03.png
+	frame	data/chars/enemies/ash/run04.png
+	frame	data/chars/enemies/ash/run05.png
+
+anim get
+	loop	0
+	delay	16
+	offset	171 188
+	frame	data/chars/enemies/ash/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	171 188
+	bbox 	155 106 24 84
+	frame	data/chars/enemies/ash/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	171 188
+	bbox 	157 121 33 69
+	frame	data/chars/enemies/ash/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	171 188
+	@cmd landSafe
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/enemies/ash/jump00.png
+
+anim jumpdelay
+	loop	0
+	delay	8
+	offset	171 188
+	bbox 	154 147 36 43
+	frame	data/chars/enemies/ash/jumpdelay00.png
+	bbox 	156 123 37 67
+	frame	data/chars/enemies/ash/jumpdelay01.png
+	bbox 	167 100 23 90
+	frame	data/chars/enemies/ash/jumpdelay02.png
+
+anim jump
+	loop	0
+	delay	30
+	offset	171 188
+	bbox 	168 92 20 87
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/enemies/ash/jump00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	171 188
+	bbox 	168 92 20 87
+	@cmd jump 1
+	frame	data/chars/enemies/ash/jump00.png
+
+anim jumpland
+	loop	0
+	delay	8
+	offset	171 188
+	bbox 	156 123 37 67
+	sound	data/sounds/Jumpland2.wav
+	frame	data/chars/enemies/ash/jumpland00.png
+	bbox 	167 100 23 90
+	frame	data/chars/enemies/ash/jumpland01.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	171 188
+	bbox 	133 115 47 75
+	frame	data/chars/enemies/ash/pain00.png
+	frame	data/chars/enemies/ash/pain01.png
+	frame	data/chars/enemies/ash/pain00.png
+	frame	data/chars/enemies/ash/pain01.png
+	frame	data/chars/enemies/ash/pain00.png
+	frame	data/chars/enemies/ash/pain01.png
+	frame	data/chars/enemies/ash/pain00.png
+	frame	data/chars/enemies/ash/pain01.png
+	frame	data/chars/enemies/ash/pain00.png
+	frame	data/chars/enemies/ash/pain01.png
+	frame	data/chars/enemies/ash/pain00.png
+	frame	data/chars/enemies/ash/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	171 188
+	bbox 	146 111 36 79
+	frame	data/chars/enemies/ash/pain200.png
+	frame	data/chars/enemies/ash/pain201.png
+	frame	data/chars/enemies/ash/pain200.png
+	frame	data/chars/enemies/ash/pain201.png
+	frame	data/chars/enemies/ash/pain200.png
+	frame	data/chars/enemies/ash/pain201.png
+	frame	data/chars/enemies/ash/pain200.png
+	frame	data/chars/enemies/ash/pain201.png
+	frame	data/chars/enemies/ash/pain200.png
+	frame	data/chars/enemies/ash/pain201.png
+	frame	data/chars/enemies/ash/pain200.png
+	frame	data/chars/enemies/ash/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	171 188
+	bbox 	143 118 55 44
+	frame	data/chars/enemies/ash/fall00.png
+		delay	8
+	bbox 	128 167 81 23
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/ash/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	171 188
+	bbox 	143 118 55 44
+	frame	data/chars/enemies/ash/fall00.png
+		delay	8
+	bbox 	128 167 81 23
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/ash/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	171 188
+	bbox 	143 118 55 44
+	frame	data/chars/enemies/ash/fall00.png
+		delay	8
+	bbox 	128 167 81 23
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/ash/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	171 188
+	frame	data/chars/enemies/ash/fall600.png
+	frame	data/chars/enemies/ash/fall601.png
+	frame	data/chars/enemies/ash/fall602.png
+	frame	data/chars/enemies/ash/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/ash/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	171 188
+	frame	data/chars/enemies/ash/fall700.png
+	frame	data/chars/enemies/ash/fall701.png
+	frame	data/chars/enemies/ash/fall702.png
+	frame	data/chars/enemies/ash/fall703.png
+	frame	data/chars/enemies/ash/fall704.png
+	frame	data/chars/enemies/ash/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	171 188
+	bbox 	143 118 55 44
+	hitfx	data/sounds/MediumKick.wav
+	attack 143 118 55 44 4 1 0 0 20 12
+	frame	data/chars/enemies/ash/fall00.png
+		delay	999
+	frame	data/chars/enemies/ash/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	128 167 81 23
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/ash/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	171 188
+	bbox 	157 125 39 64
+	hitfx	data/sounds/MediumKick.wav
+	attack 157 125 39 64 4 1 0 0 20 12
+	frame	data/chars/enemies/ash/fall900.png
+		delay	999
+	frame	data/chars/enemies/ash/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	128 167 81 23
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/ash/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	171 188
+	frame	data/chars/enemies/ash/fall01.png
+	frame	data/chars/enemies/ash/fall01.png
+	frame	data/chars/enemies/ash/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	171 188
+	frame	data/chars/enemies/ash/rise00.png
+	frame	data/chars/enemies/ash/rise01.png
+	frame	data/chars/enemies/ash/rise02.png
+	frame	data/chars/enemies/ash/rise03.png
+
+anim attack1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	171 188
+	bbox 	149 103 25 87
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/ash/a100.png
+	bbox 	155 103 25 87
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 2 0 0 0 15 12
+	frame	data/chars/enemies/ash/a102.png
+
+anim attack2
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	171 188
+	bbox 	149 103 25 87
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/ash/a100.png
+	bbox 	155 103 25 87
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 2 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 2 0 0 0 15 12
+	frame	data/chars/enemies/ash/a102.png
+
+anim attack3
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	171 188
+	bbox 	149 103 25 87
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/ash/a100.png
+	bbox 	155 103 25 87
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 2 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 2 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 2 0 0 0 30 12
+	frame	data/chars/enemies/ash/a102.png
+
+anim attackboth #BACK ATTACK
+	fastattack 1
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	8
+	offset	171 188
+	bbox 	155 103 25 87
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/ash/throw00.png
+	bbox 	146 103 25 87
+	frame	data/chars/enemies/ash/throw01.png
+	bbox 	139 105 25 85
+	frame	data/chars/enemies/ash/throw02.png
+		delay	32
+	attack 81 150 88 25 4 1 0 0 10 12
+	bbox 	96 138 73 52
+	frame	data/chars/enemies/ash/throw03.png
+		delay	8
+	bbox 	139 105 25 85
+	frame	data/chars/enemies/ash/throw04.png
+
+anim grabattack #FRONT SLAM
+	loop	0
+	delay	8
+	offset	171 188
+	@cmd grabStart
+	@cmd position 5 20 40 0 0
+	frame	data/chars/enemies/ash/slam00.png
+		delay	32
+	@cmd position 5 -10 40 0 0
+	frame	data/chars/enemies/ash/slam01.png
+		delay	8
+	@cmd position 3 0 40 0 0
+	frame	data/chars/enemies/ash/slam02.png
+	@cmd position 4 30 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/enemies/ash/slam03.png
+	@cmd slam 12 2 -1.5 3 0 0
+	@cmd leaper -1 3 0
+	frame	data/chars/enemies/ash/slam03.png
+		delay	2
+	frame	data/chars/enemies/ash/slam03.png
+	@cmd landFrame
+		delay	8
+	sound	data/sounds/Jumpland2.wav
+	frame	data/chars/enemies/ash/jumpland00.png
+	@cmd clearL
+	frame	data/chars/enemies/ash/jumpland01.png
+
+anim grabattack2 #FRONT SLAM
+	loop	0
+	delay	8
+	offset	171 188
+	@cmd grabStart
+	@cmd position 5 20 40 0 0
+	frame	data/chars/enemies/ash/slam00.png
+		delay	32
+	@cmd position 5 -10 40 0 0
+	frame	data/chars/enemies/ash/slam01.png
+		delay	8
+	@cmd position 3 0 40 0 0
+	frame	data/chars/enemies/ash/slam02.png
+	@cmd position 4 30 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/enemies/ash/slam03.png
+	@cmd slam 12 2 -1.5 3 0 0
+	@cmd leaper -1 3 0
+	frame	data/chars/enemies/ash/slam03.png
+		delay	2
+	frame	data/chars/enemies/ash/slam03.png
+	@cmd landFrame
+		delay	8
+	sound	data/sounds/Jumpland2.wav
+	frame	data/chars/enemies/ash/jumpland00.png
+	@cmd clearL
+	frame	data/chars/enemies/ash/jumpland01.png
+
+anim grabbackward #THROW
+	loop	0
+	delay	8
+	offset	171 188
+	@cmd grabStart
+	@cmd position 5 20 40 0 0
+	frame	data/chars/enemies/ash/throw00.png
+	@cmd position 5 -10 40 0 0
+	frame	data/chars/enemies/ash/throw01.png
+	@cmd position 2 -30 75 0 0
+	frame	data/chars/enemies/ash/throw02.png
+	@cmd position 4 -90 15 0 0
+	frame	data/chars/enemies/ash/throw03.png
+		delay	32
+	@cmd throw 12 2 2 2 0 0
+	frame	data/chars/enemies/ash/throw03.png
+		delay	8
+	@cmd clearL
+	frame	data/chars/enemies/ash/throw04.png
+
+anim jumpattack
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	171 188
+	bbox 	151 94 33 75
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/ash/jumpatk00.png
+	attack 134 138 84 46 4 1 0 0 20 12
+	sound	data/voices/Ash1.wav
+	frame	data/chars/enemies/ash/jumpatk00.png
+
+anim runattack #BLITZ
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	171 188
+	bbox 	149 103 25 87
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	@cmd dasher 2 0 0
+	frame	data/chars/enemies/ash/a100.png
+	@cmd dasher 2 0 0
+	bbox 	155 103 25 87
+	sound	data/voices/Ash1.wav
+	frame	data/chars/enemies/ash/a101.png
+	@cmd dasher 2 0 0
+	attack 164 120 46 16 2 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	@cmd dasher 1 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/ash/a101.png
+	@cmd dasher 1 0 0
+	attack 164 120 46 16 2 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	@cmd dasher 0.5 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/ash/a101.png
+		delay	12
+	@cmd dasher 0 0 0
+	attack 164 120 46 16 2 1 0 0 30 12
+	frame	data/chars/enemies/ash/a102.png
+
+anim special #PUNCH
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 40 1 6
+	@cmd healStart
+	loop	0
+	delay	6
+	offset	171 188
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/ash/a100.png
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 4 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	155 103 25 87
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 4 0 0 0 10 12
+	frame	data/chars/enemies/ash/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/ash/a101.png
+	attack 164 120 46 16 4 1 0 0 30 12
+	frame	data/chars/enemies/ash/a102.png
+
+anim special2 #GRAB RUN
+	followanim 1
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 40 1 6
+	@cmd healStart
+	loop	0
+	delay	8
+	offset	171 188
+	bbox 	163 103 25 87
+	sound	data/sounds/Run.wav
+	frame	data/chars/enemies/ash/walk00.png
+	frame	data/chars/enemies/ash/walk01.png
+	frame	data/chars/enemies/ash/walk02.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/enemies/ash/walk03.png
+	frame	data/chars/enemies/ash/walk04.png
+	frame	data/chars/enemies/ash/walk05.png
+		delay	4
+	sound	data/sounds/Run.wav
+	frame	data/chars/enemies/ash/walk00.png
+	frame	data/chars/enemies/ash/walk01.png
+	frame	data/chars/enemies/ash/walk02.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/enemies/ash/walk03.png
+	frame	data/chars/enemies/ash/walk04.png
+	frame	data/chars/enemies/ash/walk05.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	attack 163 103 25 87 0 0 1 1 0 12
+	dropv 0 1 0
+	bbox 	0 0 0 0
+	sound	data/sounds/Run.wav
+	frame	data/chars/enemies/ash/walk00.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk01.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk02.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	sound	data/sounds/Run2.wav
+	frame	data/chars/enemies/ash/walk03.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk04.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk05.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/enemies/ash/walk00.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk01.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk02.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	sound	data/sounds/Run2.wav
+	frame	data/chars/enemies/ash/walk03.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk04.png
+	@cmd dasher 4 0 0
+	@cmd keyMove 0 4
+	frame	data/chars/enemies/ash/walk05.png
+	@cmd dasher 0 0 0
+	frame	data/chars/enemies/ash/walk00.png
+
+anim follow1 #ANIMATION FOR DOGRAB ONLY
+	loop	0
+	delay	16
+	offset	171 188
+	@cmd doGrab 1
+	frame	data/chars/enemies/ash/grab00.png
+
+anim freespecial #LAUGH
+	loop	0
+	delay	12
+	offset	171 188
+	bbox 	159 100 23 90
+	sound	data/voices/Ash1.wav
+	frame	data/chars/enemies/ash/laugh00.png
+	frame	data/chars/enemies/ash/laugh01.png
+	frame	data/chars/enemies/ash/laugh02.png
+	frame	data/chars/enemies/ash/laugh01.png
+	frame	data/chars/enemies/ash/laugh02.png
+	frame	data/chars/enemies/ash/laugh01.png
+	frame	data/chars/enemies/ash/laugh02.png
+	frame	data/chars/enemies/ash/laugh00.png

@@ -1,0 +1,15 @@
+renamekey		Moveup		Up
+renamekey		Movedown	Down
+renamekey		Moveleft	Left
+renamekey		Moveright	Right
+renamekey		Attack		Attack
+renamekey		Attack2		Energy
+renamekey		Attack3		Dodge/Block
+renamekey		Attack4		Extra_Button
+renamekey		Jump		Jump
+renamekey		Special		Special
+renamekey		Start		Start
+renamekey	  Screenshot	Select
+fontmonospace	0 0 0 0 0 0 0 0 0 0
+
+

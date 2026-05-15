@@ -1,0 +1,353 @@
+##MAIN
+name				KageS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+palette       data/chars/bosses/kage/idle00.png
+alternatepal  data/chars/bosses/kage/alter1.png
+alternatepal  data/chars/bosses/kage/alter2.png
+alternatepal  data/chars/bosses/kage/alter3.png
+alternatepal  data/chars/bosses/kage/alter4.png
+alternatepal  data/chars/bosses/kage/idle00.png
+
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim grabattack #GRAB KICK
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/a200.png
+	frame	data/chars/bosses/kage/a201.png
+	frame	data/chars/bosses/kage/a202.png
+	frame	data/chars/bosses/kage/a203.png
+	frame	data/chars/bosses/kage/a204.png
+	frame	data/chars/bosses/kage/a205.png
+	frame	data/chars/bosses/kage/a206.png
+	frame	data/chars/bosses/kage/a207.png
+	frame	data/chars/bosses/kage/a208.png
+	frame	data/chars/bosses/kage/a209.png
+	frame	data/chars/bosses/kage/a210.png
+	frame	data/chars/bosses/kage/a211.png
+	frame	data/chars/bosses/kage/a212.png
+	frame	data/chars/bosses/kage/a213.png
+
+anim grabbackward2 #IZUNA DROP
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/grabup03.png
+	frame	data/chars/bosses/kage/grabup03.png
+	frame	data/chars/bosses/kage/grabup03.png
+	frame	data/chars/bosses/kage/grabup03.png
+	frame	data/chars/bosses/kage/drop00.png
+	frame	data/chars/bosses/kage/drop00.png
+	frame	data/chars/bosses/kage/drop00.png
+	frame	data/chars/bosses/kage/fjump00.png
+	frame	data/chars/bosses/kage/fjump01.png
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump07.png
+	frame	data/chars/bosses/kage/fjump08.png
+	frame	data/chars/bosses/kage/fjump09.png
+	frame	data/chars/bosses/kage/idle00.png
+
+anim grabup #IZUNA DROP
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/grabup04.png
+	frame	data/chars/bosses/kage/grabup04.png
+	frame	data/chars/bosses/kage/grabup04.png
+	frame	data/chars/bosses/kage/grabup04.png
+	frame	data/chars/bosses/kage/drop00.png
+	frame	data/chars/bosses/kage/drop00.png
+	frame	data/chars/bosses/kage/drop00.png
+	frame	data/chars/bosses/kage/fjump00.png
+	frame	data/chars/bosses/kage/fjump01.png
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump07.png
+	frame	data/chars/bosses/kage/fjump08.png
+	frame	data/chars/bosses/kage/fjump09.png
+	frame	data/chars/bosses/kage/idle00.png
+
+anim grabdown #rapid slash
+	loop	0
+	delay	1000
+	offset	280 179
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s421.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s422.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s423.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s422.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s421.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s424.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s425.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s426.png
+	frame	data/chars/bosses/kage/s420.png
+	frame	data/chars/bosses/kage/s427.png
+	frame	data/chars/bosses/kage/s420.png
+	offset	240 179
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	frame	data/chars/bosses/kage/s113.png
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	frame	data/chars/bosses/kage/s126.png
+	frame	data/chars/bosses/kage/s127.png
+
+
+anim grabdown2 #GRAB KICK
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/a200.png
+	frame	data/chars/bosses/kage/a201.png
+	frame	data/chars/bosses/kage/a202.png
+	frame	data/chars/bosses/kage/a203.png
+	frame	data/chars/bosses/kage/a204.png
+	frame	data/chars/bosses/kage/a205.png
+	frame	data/chars/bosses/kage/a206.png
+	frame	data/chars/bosses/kage/a207.png
+	frame	data/chars/bosses/kage/a208.png
+	frame	data/chars/bosses/kage/a209.png
+	frame	data/chars/bosses/kage/a210.png
+	frame	data/chars/bosses/kage/a211.png
+	frame	data/chars/bosses/kage/a212.png
+	frame	data/chars/bosses/kage/a213.png
+
+anim runattack #SLASH
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/runatk00.png
+	frame	data/chars/bosses/kage/runatk01.png
+	frame	data/chars/bosses/kage/runatk06.png
+	frame	data/chars/bosses/kage/runatk01.png
+	frame	data/chars/bosses/kage/runatk02.png
+	frame	data/chars/bosses/kage/runatk03.png
+	frame	data/chars/bosses/kage/runatk04.png
+	frame	data/chars/bosses/kage/runatk05.png
+	frame	data/chars/bosses/kage/runatk06.png
+	frame	data/chars/bosses/kage/runatk07.png
+	frame	data/chars/bosses/kage/runatk08.png
+	frame	data/chars/bosses/kage/runatk09.png
+	frame	data/chars/bosses/kage/idle00.png
+
+anim riseattack
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/roll00.png
+	frame	data/chars/bosses/kage/roll01.png
+	frame	data/chars/bosses/kage/roll02.png
+	frame	data/chars/bosses/kage/roll03.png
+	frame	data/chars/bosses/kage/roll04.png
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run03.png
+	frame	data/chars/bosses/kage/fjump00.png
+	frame	data/chars/bosses/kage/jumpatk04.png
+	frame	data/chars/bosses/kage/jumpatk04.png
+	frame	data/chars/bosses/kage/land00.png
+
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run01.png
+
+anim freespecial2 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/run00.png
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run02.png
+	frame	data/chars/bosses/kage/run03.png
+	frame	data/chars/bosses/kage/run04.png
+	frame	data/chars/bosses/kage/run00.png
+
+anim follow1 #RAGE COMBO
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/a400.png
+	frame	data/chars/bosses/kage/a401.png
+	frame	data/chars/bosses/kage/a403.png
+	frame	data/chars/bosses/kage/a403.png
+	frame	data/chars/bosses/kage/a105.png
+	frame	data/chars/bosses/kage/a300.png
+	frame	data/chars/bosses/kage/a301.png
+	frame	data/chars/bosses/kage/a302.png
+	frame	data/chars/bosses/kage/a303.png
+	frame	data/chars/bosses/kage/a304.png
+	frame	data/chars/bosses/kage/a305.png
+	frame	data/chars/bosses/kage/a306.png
+	frame	data/chars/bosses/kage/a307.png
+	frame	data/chars/bosses/kage/a308.png
+	frame	data/chars/bosses/kage/a400.png
+	frame	data/chars/bosses/kage/a401.png
+	frame	data/chars/bosses/kage/a402.png
+	frame	data/chars/bosses/kage/a403.png
+	frame	data/chars/bosses/kage/a404.png
+	frame	data/chars/bosses/kage/a405.png
+	frame	data/chars/bosses/kage/a500.png
+	frame	data/chars/bosses/kage/a501.png
+	frame	data/chars/bosses/kage/a502.png
+	frame	data/chars/bosses/kage/a503.png
+	frame	data/chars/bosses/kage/a504.png
+	frame	data/chars/bosses/kage/a505.png
+	frame	data/chars/bosses/kage/a506.png
+	frame	data/chars/bosses/kage/a507.png
+	frame	data/chars/bosses/kage/a508.png
+	frame	data/chars/bosses/kage/a509.png
+	frame	data/chars/bosses/kage/a510.png
+	frame	data/chars/bosses/kage/a513.png
+	frame	data/chars/bosses/kage/a514.png
+	frame	data/chars/bosses/kage/a517.png
+	frame	data/chars/bosses/kage/s100.png
+	frame	data/chars/bosses/kage/s101.png
+	frame	data/chars/bosses/kage/s102.png
+	frame	data/chars/bosses/kage/s103.png
+	frame	data/chars/bosses/kage/s104.png
+	frame	data/chars/bosses/kage/s105.png
+	frame	data/chars/bosses/kage/s105.png
+	frame	data/chars/bosses/kage/s106.png
+	frame	data/chars/bosses/kage/s107.png
+	frame	data/chars/bosses/kage/s108.png
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	frame	data/chars/bosses/kage/s113.png
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	frame	data/chars/bosses/kage/s126.png
+	frame	data/chars/bosses/kage/s127.png
+
+anim follow3 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/empty.png
+	frame	data/chars/bosses/kage/s405.png
+	frame	data/chars/bosses/kage/s406.png
+	frame	data/chars/bosses/kage/s407.png
+	frame	data/chars/bosses/kage/s408.png
+	offset	240 179
+	frame	data/chars/bosses/kage/s411.png
+	frame	data/chars/bosses/kage/s412.png
+	frame	data/chars/bosses/kage/s413.png
+	frame	data/chars/bosses/kage/s414.png
+	frame	data/chars/bosses/kage/s415.png
+	frame	data/chars/bosses/kage/s416.png
+	frame	data/chars/bosses/kage/s417.png
+
+
+anim follow7 #DASH SLASH
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/run00.png
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/s100.png
+	frame	data/chars/bosses/kage/s101.png
+	frame	data/chars/bosses/kage/s102.png
+	frame	data/chars/bosses/kage/s103.png
+	frame	data/chars/bosses/kage/s104.png
+	frame	data/chars/bosses/kage/s105.png
+	frame	data/chars/bosses/kage/s105.png
+	frame	data/chars/bosses/kage/s106.png
+	frame	data/chars/bosses/kage/s107.png
+	frame	data/chars/bosses/kage/s108.png
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	frame	data/chars/bosses/kage/s113.png
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	frame	data/chars/bosses/kage/s126.png
+	frame	data/chars/bosses/kage/s127.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/land00.png
+	frame	data/chars/bosses/kage/roll00.png
+	frame	data/chars/bosses/kage/roll01.png
+	frame	data/chars/bosses/kage/roll02.png
+	frame	data/chars/bosses/kage/roll03.png
+	frame	data/chars/bosses/kage/roll04.png
+	frame	data/chars/bosses/kage/land00.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/land00.png
+	frame	data/chars/bosses/kage/roll00.png
+	frame	data/chars/bosses/kage/roll01.png
+	frame	data/chars/bosses/kage/roll02.png
+	frame	data/chars/bosses/kage/roll03.png
+	frame	data/chars/bosses/kage/roll04.png
+	frame	data/chars/bosses/kage/land00.png

@@ -1,0 +1,13 @@
+name			St3_Entrance3
+type			none	
+shadow			0
+animationscript data/scripts/animation/default.c
+
+load			St3_Entrance3S
+
+anim idle
+	loop	0
+	delay	6
+	offset	1 180
+	@cmd spawn01 "St3_Entrance3S" 580 120 20
+	frame	data/bgs/sor2/st3a/roof00.png

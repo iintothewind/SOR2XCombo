@@ -1,0 +1,77 @@
+name			St6_Elevator_Sor3
+type			none
+subject_to_wall	0
+subject_to_minz	0
+subject_to_maxz	0
+shadow			0
+offscreenkill	5000
+setlayer		-150
+onmovezscript	data/scripts/onmove/elevators.c
+onspawnscript	data/scripts/onspawn/elevators.c
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/elevators.c
+
+load			St6_Panel_Down
+load			St6_Panel_Up
+load			St6_Rooms
+load			St6_Exit
+load			St6_Locks
+load			St6_Gate
+load			St6_Gas
+load			St6_General
+load			St6_LaserGrid
+load			P1X
+load			BasicX3
+
+anim spawn
+	loop	0
+	delay	8
+	offset	1487 1104
+	frame	data/bgs/sor3/st6a/bg01.png
+	@cmd spawnScreenZ "P1X" -120 0 -60 4
+	@cmd spawnScreenZ "P1X" -100 0 -40 4
+	@cmd spawnScreenZ "BasicX3" -120 0 -20 4
+	frame	data/bgs/sor3/st6a/bg01.png
+
+anim idle
+	loop	0
+	delay	8
+	offset	1487 1104
+	@cmd resetScroll
+	frame	data/bgs/sor3/st6a/bg01.png
+	@cmd resetScroll
+	frame	data/bgs/sor3/st6a/bg01.png
+
+anim follow1 #MOVE DOWN
+	loop	0
+	delay	12
+	offset	1487 1104
+	sound data/sounds/sor3_elevator.wav
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor3/st6a/bg01.png
+		delay	-1000
+	@cmd dasher 0 0 -0.4
+	frame	data/bgs/sor3/st6a/bg01.png
+		delay	48
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound data/sounds/sor3_elevator2.wav
+	sound data/sounds/sor2_elevator2.wav
+	frame	data/bgs/sor3/st6a/bg01.png
+	frame	data/bgs/sor3/st6a/bg01.png
+
+anim follow2 #MOVE UP
+	loop	0
+	delay	12
+	offset	1487 1104
+	sound data/sounds/sor3_elevator.wav
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor3/st6a/bg01.png
+		delay	-1000
+	@cmd dasher 0 0 0.4
+	frame	data/bgs/sor3/st6a/bg01.png
+		delay	48
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound data/sounds/sor3_elevator2.wav
+	sound data/sounds/sor2_elevator2.wav
+	frame	data/bgs/sor3/st6a/bg01.png
+	frame	data/bgs/sor3/st6a/bg01.png

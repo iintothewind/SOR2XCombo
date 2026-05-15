@@ -1,0 +1,25 @@
+name				Particle_Laser
+type				none
+health				1
+nolife				1
+lifespan			2
+offscreenkill		50
+remove				1
+shadow				0
+antigravity			100
+didhitscript		data/scripts/didhit/default.c
+ondrawscript		data/scripts/ondraw/particle_laser.c
+ondoattackscript	data/scripts/ondoattack/default.c
+
+anim idle
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	26 26
+	hitfx	data/sounds/StrongPunch.wav
+	attack 0 22 50 7 16 1 0 0 0 12
+	frame	data/chars/bosses/particle/laser/laser00.png

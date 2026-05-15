@@ -1,0 +1,67 @@
+name				St6_Laser3
+type				npc
+subtype				notgrab
+subject_to_platform	0
+hostile				player npc
+candamage			player enemy npc obstacle
+health				1
+nolife				1
+speed				6
+facing				1
+aimove				chase
+nodrop				2
+ondoattackscript	data/scripts/ondoattack/lasers.c
+ondrawscript		data/scripts/ondraw/laser.c
+onspawnscript		data/scripts/onspawn/new_type.c
+animationscript		data/scripts/animation/default.c
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle #CHASE
+	loop	1
+	delay	2
+	offset	71 180
+		seta	120
+	frame	data/bgs/sor3/st6e/laser00.png
+		delay	3
+	frame	data/bgs/sor3/st6e/laser01.png
+
+anim attack1 #CHASE
+	range 0 5
+	rangea -999 999
+	rangeb -999 999
+	rangez -1 1
+	loop	0
+	delay	2
+	offset	71 180
+		seta	120
+	frame	data/bgs/sor3/st6e/laser00.png
+		delay	3
+	frame	data/bgs/sor3/st6e/laser01.png
+		delay	2
+	frame	data/bgs/sor3/st6e/laser00.png
+		delay	3
+	@cmd setIdle
+	frame	data/bgs/sor3/st6e/laser01.png
+
+anim follow1 #ATTACK
+	fastattack 0
+	jugglecost 60
+	forcedirection 0
+	otg 1
+	hitflash Shock
+	loop	0
+	delay	3
+	offset	71 180
+	sound data/sounds/sor3_laser3.wav
+		seta	120
+	shock 67 171 8 129 4 30 1 0 0 16
+	frame	data/bgs/sor3/st6e/laser02.png
+	frame	data/bgs/sor3/st6e/laser03.png
+	frame	data/bgs/sor3/st6e/laser02.png
+	frame	data/bgs/sor3/st6e/laser03.png
+	frame	data/bgs/sor3/st6e/laser02.png
+	frame	data/bgs/sor3/st6e/laser03.png
+	frame	data/bgs/sor3/st6e/laser02.png
+	@cmd setIdle
+	frame	data/bgs/sor3/st6e/laser03.png

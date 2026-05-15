@@ -1,0 +1,2401 @@
+##MAIN
+name				LeeB
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##ENERGY
+mp					120
+mprate  			5 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				84
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 2 3 4 5
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+escapehits			2 #ENEMY ONLY
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+death				2
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/lee.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/jumping.c
+onblocksscript		data/scripts/onblocks/jumping.c
+onmoveascript		data/scripts/onmove/default.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+ondrawscript		data/scripts/ondraw/lee.c
+onspawnscript		data/scripts/onspawn/lee.c
+onfallscript		data/scripts/onfall/default.c
+onpainscript		data/scripts/onpain/default.c
+animationscript	 	data/scripts/animation/default.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/lee.c
+script				data/scripts/updateentity/lee.c
+
+##ICONS
+icon				data/chars/bosses/lee/icon.png 1
+
+##DIESOUND
+diesound data/voices/lee23.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+
+##REMAPS
+palette       data/chars/bosses/lee/idle25.png
+alternatepal  data/chars/bosses/lee/alter1.png
+alternatepal  data/chars/bosses/lee/alter2.png
+alternatepal  data/chars/bosses/lee/alter3.png
+alternatepal  data/chars/bosses/lee/alter4.png
+alternatepal  data/chars/bosses/lee/idle25.png
+
+##LOADS
+load				LeeS
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	240 180
+	frame	data/chars/bosses/lee/idle00.png
+	@cmd rndMusicPlay "wong_feihung.ogg"
+	frame	data/chars/bosses/lee/idle00.png
+
+anim waiting
+	loop	1
+	delay	20
+	offset	240 180
+	bbox 	226 98 28 81
+	frame	data/chars/bosses/lee/idle20.png
+	frame	data/chars/bosses/lee/idle21.png
+	frame	data/chars/bosses/lee/idle22.png
+	frame	data/chars/bosses/lee/idle23.png
+	frame	data/chars/bosses/lee/idle24.png
+	@cmd looper 0 9
+	frame	data/chars/bosses/lee/idle25.png
+	delay	16
+	frame	data/chars/bosses/lee/idle00.png
+	frame	data/chars/bosses/lee/idle01.png
+	frame	data/chars/bosses/lee/idle02.png
+	frame	data/chars/bosses/lee/idle03.png
+	frame	data/chars/bosses/lee/idle04.png
+	frame	data/chars/bosses/lee/idle05.png
+	frame	data/chars/bosses/lee/idle06.png
+	sound	data/voices/lee16.wav
+	frame	data/chars/bosses/lee/idle07.png
+	frame	data/chars/bosses/lee/idle08.png
+	frame	data/chars/bosses/lee/idle09.png
+	frame	data/chars/bosses/lee/idle10.png
+	delay	2
+	frame	data/chars/bosses/lee/idle11.png
+	frame	data/chars/bosses/lee/idle12.png
+	frame	data/chars/bosses/lee/idle13.png
+	frame	data/chars/bosses/lee/idle14.png
+	frame	data/chars/bosses/lee/idle15.png
+	@cmd looper 16 4
+	frame	data/chars/bosses/lee/idle16.png
+	delay	20
+	bbox 	227 105 30 74
+	frame	data/chars/bosses/lee/idle17.png
+	frame	data/chars/bosses/lee/idle18.png
+	frame	data/chars/bosses/lee/idle19.png
+	frame	data/chars/bosses/lee/idle20.png
+	frame	data/chars/bosses/lee/idle21.png
+	frame	data/chars/bosses/lee/idle22.png
+	frame	data/chars/bosses/lee/idle23.png
+	frame	data/chars/bosses/lee/idle24.png
+	frame	data/chars/bosses/lee/idle25.png
+	delay	16
+	bbox 	227 110 30 70
+	frame	data/chars/bosses/lee/win000.png
+	frame	data/chars/bosses/lee/win001.png
+	bbox 	225 118 35 63
+	frame	data/chars/bosses/lee/win002.png
+	bbox 	234 126 30 55
+	frame	data/chars/bosses/lee/win003.png
+	frame	data/chars/bosses/lee/win004.png
+	frame	data/chars/bosses/lee/win005.png
+	bbox 	226 119 30 60
+	frame	data/chars/bosses/lee/win006.png
+	bbox 	227 100 30 80
+	frame	data/chars/bosses/lee/win007.png
+	bbox 	223 99 30 80
+	frame	data/chars/bosses/lee/win008.png
+	bbox 	206 107 30 70
+	frame	data/chars/bosses/lee/win009.png
+	bbox 	200 119 30 60
+	sound	data/sounds/Iron5.wav
+	frame	data/chars/bosses/lee/win010.png
+	frame	data/chars/bosses/lee/win011.png
+	frame	data/chars/bosses/lee/win012.png
+	frame	data/chars/bosses/lee/win013.png
+	bbox 	213 99 30 80
+	frame	data/chars/bosses/lee/win014.png
+	bbox 	234 99 30 80
+	frame	data/chars/bosses/lee/win015.png
+	bbox 	256 109 30 70
+	frame	data/chars/bosses/lee/win016.png
+	bbox 	266 120 30 60
+	sound	data/sounds/Iron5.wav
+	frame	data/chars/bosses/lee/win017.png
+	frame	data/chars/bosses/lee/win018.png
+	frame	data/chars/bosses/lee/win019.png
+	frame	data/chars/bosses/lee/win020.png
+	bbox 	223 100 30 80
+	frame	data/chars/bosses/lee/win021.png
+	frame	data/chars/bosses/lee/win022.png
+	bbox 	226 99 30 80
+	frame	data/chars/bosses/lee/win023.png
+	frame	data/chars/bosses/lee/win024.png
+	frame	data/chars/bosses/lee/win025.png
+	sound	data/sounds/Clash5.wav
+	frame	data/chars/bosses/lee/win026.png
+	frame	data/chars/bosses/lee/win027.png
+	frame	data/chars/bosses/lee/win028.png
+	frame	data/chars/bosses/lee/win029.png
+	frame	data/chars/bosses/lee/win030.png
+
+
+anim idle
+	loop	1
+	delay	20
+	offset	240 180
+	bbox 	226 98 28 81
+	frame	data/chars/bosses/lee/idle20.png
+	frame	data/chars/bosses/lee/idle21.png
+	frame	data/chars/bosses/lee/idle22.png
+	frame	data/chars/bosses/lee/idle23.png
+	frame	data/chars/bosses/lee/idle24.png
+	@cmd looper 0 4
+	frame	data/chars/bosses/lee/idle25.png
+	delay	16
+	frame	data/chars/bosses/lee/idle00.png
+	frame	data/chars/bosses/lee/idle01.png
+	frame	data/chars/bosses/lee/idle02.png
+	frame	data/chars/bosses/lee/idle03.png
+	frame	data/chars/bosses/lee/idle04.png
+	frame	data/chars/bosses/lee/idle05.png
+	frame	data/chars/bosses/lee/idle06.png
+	sound	data/voices/lee16.wav
+	frame	data/chars/bosses/lee/idle07.png
+	frame	data/chars/bosses/lee/idle08.png
+	frame	data/chars/bosses/lee/idle09.png
+	frame	data/chars/bosses/lee/idle10.png
+	delay	2
+	frame	data/chars/bosses/lee/idle11.png
+	frame	data/chars/bosses/lee/idle12.png
+	frame	data/chars/bosses/lee/idle13.png
+	frame	data/chars/bosses/lee/idle14.png
+	frame	data/chars/bosses/lee/idle15.png
+	@cmd looper 16 4
+	frame	data/chars/bosses/lee/idle16.png
+	delay	20
+	bbox 	227 105 30 74
+	frame	data/chars/bosses/lee/idle17.png
+	frame	data/chars/bosses/lee/idle18.png
+	frame	data/chars/bosses/lee/idle19.png
+	frame	data/chars/bosses/lee/idle20.png
+	frame	data/chars/bosses/lee/idle21.png
+	frame	data/chars/bosses/lee/idle22.png
+	frame	data/chars/bosses/lee/idle23.png
+	frame	data/chars/bosses/lee/idle24.png
+	frame	data/chars/bosses/lee/idle25.png
+	delay	16
+	bbox 	227 110 30 70
+	frame	data/chars/bosses/lee/win000.png
+	frame	data/chars/bosses/lee/win001.png
+	bbox 	225 118 35 63
+	frame	data/chars/bosses/lee/win002.png
+	bbox 	234 126 30 55
+	frame	data/chars/bosses/lee/win003.png
+	frame	data/chars/bosses/lee/win004.png
+	frame	data/chars/bosses/lee/win005.png
+	bbox 	226 119 30 60
+	frame	data/chars/bosses/lee/win006.png
+	bbox 	227 100 30 80
+	frame	data/chars/bosses/lee/win007.png
+	bbox 	223 99 30 80
+	frame	data/chars/bosses/lee/win008.png
+	bbox 	206 107 30 70
+	frame	data/chars/bosses/lee/win009.png
+	bbox 	200 119 30 60
+	sound	data/sounds/Iron5.wav
+	frame	data/chars/bosses/lee/win010.png
+	frame	data/chars/bosses/lee/win011.png
+	frame	data/chars/bosses/lee/win012.png
+	frame	data/chars/bosses/lee/win013.png
+	bbox 	213 99 30 80
+	frame	data/chars/bosses/lee/win014.png
+	bbox 	234 99 30 80
+	frame	data/chars/bosses/lee/win015.png
+	bbox 	256 109 30 70
+	frame	data/chars/bosses/lee/win016.png
+	bbox 	266 120 30 60
+	sound	data/sounds/Iron5.wav
+	frame	data/chars/bosses/lee/win017.png
+	frame	data/chars/bosses/lee/win018.png
+	frame	data/chars/bosses/lee/win019.png
+	frame	data/chars/bosses/lee/win020.png
+	bbox 	223 100 30 80
+	frame	data/chars/bosses/lee/win021.png
+	frame	data/chars/bosses/lee/win022.png
+	bbox 	226 99 30 80
+	sound	data/sounds/Clash5.wav
+	frame	data/chars/bosses/lee/win023.png
+	frame	data/chars/bosses/lee/win024.png
+	frame	data/chars/bosses/lee/win025.png
+	sound	data/sounds/Clash5.wav
+	frame	data/chars/bosses/lee/win026.png
+	frame	data/chars/bosses/lee/win027.png
+	frame	data/chars/bosses/lee/win028.png
+	frame	data/chars/bosses/lee/win029.png
+	@cmd hpCost -999
+	@cmd mpCost -999
+	frame	data/chars/bosses/lee/win030.png
+
+anim select
+	fshadow 0
+	loop	0
+	delay	100000
+	offset	240 180
+	frame	data/chars/bosses/lee/idle25.png
+	delay	12
+	frame	data/chars/bosses/lee/idle00.png
+	frame	data/chars/bosses/lee/idle01.png
+	frame	data/chars/bosses/lee/idle02.png
+	frame	data/chars/bosses/lee/idle03.png
+	frame	data/chars/bosses/lee/idle04.png
+	frame	data/chars/bosses/lee/idle05.png
+	frame	data/chars/bosses/lee/idle06.png
+	frame	data/chars/bosses/lee/idle07.png
+	frame	data/chars/bosses/lee/idle08.png
+	frame	data/chars/bosses/lee/idle09.png
+	frame	data/chars/bosses/lee/idle10.png
+	delay	2
+	frame	data/chars/bosses/lee/idle11.png
+	frame	data/chars/bosses/lee/idle12.png
+	frame	data/chars/bosses/lee/idle13.png
+	frame	data/chars/bosses/lee/idle14.png
+	frame	data/chars/bosses/lee/idle15.png
+	@cmd looper 12 4
+	frame	data/chars/bosses/lee/idle16.png
+	delay	16
+	bbox 	227 105 30 74
+	frame	data/chars/bosses/lee/idle17.png
+	frame	data/chars/bosses/lee/idle18.png
+	frame	data/chars/bosses/lee/idle19.png
+	frame	data/chars/bosses/lee/idle20.png
+	frame	data/chars/bosses/lee/idle21.png
+	frame	data/chars/bosses/lee/idle22.png
+	frame	data/chars/bosses/lee/idle23.png
+	frame	data/chars/bosses/lee/idle24.png
+	frame	data/chars/bosses/lee/idle25.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	240 180
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/walk00.png
+	frame	data/chars/bosses/lee/walk01.png
+	frame	data/chars/bosses/lee/walk02.png
+	frame	data/chars/bosses/lee/walk03.png
+	frame	data/chars/bosses/lee/walk04.png
+	frame	data/chars/bosses/lee/walk05.png
+	frame	data/chars/bosses/lee/walk06.png
+	frame	data/chars/bosses/lee/walk07.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	cancel 0 3 0 a2 freespecial2
+	loop	1 2 7
+	delay	7
+	offset	240 180
+	bbox 226 110 30 70
+	frame	data/chars/bosses/lee/run00.png
+	frame	data/chars/bosses/lee/run01.png
+	bbox 238 114 35 60
+	frame	data/chars/bosses/lee/run02.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/lee/run03.png
+	frame	data/chars/bosses/lee/run04.png
+	frame	data/chars/bosses/lee/run05.png
+	frame	data/chars/bosses/lee/run06.png
+	frame	data/chars/bosses/lee/run07.png
+	bbox 223 105 30 75
+	frame	data/chars/bosses/lee/run08.png
+	bbox 225 109 30 70
+	frame	data/chars/bosses/lee/run09.png
+	frame	data/chars/bosses/lee/run10.png
+	frame	data/chars/bosses/lee/run11.png
+	bbox 223 105 30 75
+	frame	data/chars/bosses/lee/run12.png
+	frame	data/chars/bosses/lee/run13.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/run14.png
+	frame	data/chars/bosses/lee/run15.png
+	frame	data/chars/bosses/lee/run16.png
+
+anim backrun
+	@cmd lockAni "runType" "off"
+	cancel 0 3 0 a2 freespecial2
+	loop	1 2 7
+	delay	7
+	offset	240 180
+	bbox 226 110 30 70
+	frame	data/chars/bosses/lee/run00.png
+	frame	data/chars/bosses/lee/run01.png
+	bbox 238 114 35 60
+	frame	data/chars/bosses/lee/run02.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/lee/run03.png
+	frame	data/chars/bosses/lee/run04.png
+	frame	data/chars/bosses/lee/run05.png
+	frame	data/chars/bosses/lee/run06.png
+	frame	data/chars/bosses/lee/run07.png
+	bbox 223 105 30 75
+	frame	data/chars/bosses/lee/run08.png
+	bbox 225 109 30 70
+	frame	data/chars/bosses/lee/run09.png
+	frame	data/chars/bosses/lee/run10.png
+	frame	data/chars/bosses/lee/run11.png
+	bbox 223 105 30 75
+	frame	data/chars/bosses/lee/run12.png
+	frame	data/chars/bosses/lee/run13.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/run14.png
+	frame	data/chars/bosses/lee/run15.png
+	frame	data/chars/bosses/lee/run16.png
+
+anim get
+	loop	0
+	delay	16
+	offset	240 180
+	frame	data/chars/bosses/lee/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	240 180
+	#bbox 226 105 30 75
+	@cmd vaultStuck
+	frame	data/chars/bosses/lee/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	240 180
+	bbox 	226 120 30 60
+	sound	data/voices/lee12.wav
+	frame	data/chars/bosses/lee/grabbed00.png
+
+anim land
+	loop	0
+	delay	12
+	offset	240 180
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/lee/jump04.png
+	frame	data/chars/bosses/lee/jump05.png
+	frame	data/chars/bosses/lee/jump06.png
+	frame	data/chars/bosses/lee/jump07.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	240 180
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/jump00.png
+
+anim jump
+	loop	0
+	delay	8
+	offset	240 180
+	bbox 	226 113 30 66
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/lee/jump00.png
+	bbox 	224 94 30 80
+	frame	data/chars/bosses/lee/jump01.png
+	bbox 	224 95 30 72
+	frame	data/chars/bosses/lee/jump02.png
+	bbox 	224 101 30 60
+	frame	data/chars/bosses/lee/jump03.png
+	bbox 	226 106 30 52
+	frame	data/chars/bosses/lee/jump04.png
+	bbox 	224 95 30 72
+	frame	data/chars/bosses/lee/jump05.png
+	bbox 	224 94 30 80
+	frame	data/chars/bosses/lee/jump06.png
+
+anim walkoff
+	loop	0
+	delay	6
+	offset	240 180
+	bbox 	226 113 30 66
+	sound	data/sounds/Jumping.wav
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/fjump00.png
+	bbox 	224 94 30 80
+	frame	data/chars/bosses/lee/fjump01.png
+	bbox 	224 95 30 72
+	frame	data/chars/bosses/lee/fjump02.png
+	bbox 	224 101 30 60
+	frame	data/chars/bosses/lee/fjump03.png
+	bbox 	226 106 30 52
+	frame	data/chars/bosses/lee/fjump04.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/lee/fjump05.png
+	frame	data/chars/bosses/lee/fjump06.png
+	frame	data/chars/bosses/lee/fjump07.png
+	frame	data/chars/bosses/lee/fjump08.png
+	frame	data/chars/bosses/lee/fjump09.png
+	frame	data/chars/bosses/lee/fjump10.png
+	bbox 	233 93 30 85
+	frame	data/chars/bosses/lee/fjump11.png
+	@cmd landFrame
+	bbox 	233 90 30 88
+	frame	data/chars/bosses/lee/fjump12.png
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/fjump13.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/fjump14.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	240 180
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/jump00.png
+
+anim forwardjump
+	loop	0
+	delay	5
+	offset	240 180
+	sound	data/sounds/Jumping.wav
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/fjump00.png
+	bbox 	224 94 30 80
+	frame	data/chars/bosses/lee/fjump01.png
+	bbox 	224 95 30 72
+	frame	data/chars/bosses/lee/fjump02.png
+	bbox 	224 101 30 60
+	frame	data/chars/bosses/lee/fjump03.png
+	bbox 	226 106 30 52
+	frame	data/chars/bosses/lee/fjump04.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/lee/fjump05.png
+	frame	data/chars/bosses/lee/fjump06.png
+	frame	data/chars/bosses/lee/fjump07.png
+	frame	data/chars/bosses/lee/fjump08.png
+	frame	data/chars/bosses/lee/fjump09.png
+	frame	data/chars/bosses/lee/fjump10.png
+	bbox 	233 93 30 85
+	frame	data/chars/bosses/lee/fjump11.png
+	@cmd landFrame
+	bbox 	233 90 30 88
+	frame	data/chars/bosses/lee/fjump12.png
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/fjump13.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/fjump14.png
+
+
+anim runjump
+	loop	0
+	delay	6
+	offset	240 180
+	sound	data/sounds/Jumping.wav
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/fjump00.png
+	bbox 	224 94 30 80
+	frame	data/chars/bosses/lee/fjump01.png
+	bbox 	224 95 30 72
+	frame	data/chars/bosses/lee/fjump02.png
+	bbox 	224 101 30 60
+	frame	data/chars/bosses/lee/fjump03.png
+	bbox 	226 106 30 52
+	frame	data/chars/bosses/lee/fjump04.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/lee/fjump05.png
+	frame	data/chars/bosses/lee/fjump06.png
+	frame	data/chars/bosses/lee/fjump07.png
+	frame	data/chars/bosses/lee/fjump08.png
+	frame	data/chars/bosses/lee/fjump09.png
+	frame	data/chars/bosses/lee/fjump10.png
+	bbox 	233 93 30 85
+	frame	data/chars/bosses/lee/fjump11.png
+	@cmd landFrame
+	bbox 	233 90 30 88
+	frame	data/chars/bosses/lee/fjump12.png
+	bbox 	226 113 30 66
+	frame	data/chars/bosses/lee/fjump13.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/fjump14.png
+
+anim guardbreak
+	loop	0
+	delay	6
+	offset	240 180
+	bbox 226 110 30 70
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/bosses/lee/pain200.png
+	bbox 226 115 30 65
+	frame	data/chars/bosses/lee/pain201.png
+	bbox 226 120 30 60
+	frame	data/chars/bosses/lee/pain202.png
+	frame	data/chars/bosses/lee/pain203.png
+	bbox 226 114 30 65
+	frame	data/chars/bosses/lee/pain204.png
+	bbox 226 109 30 70
+	frame	data/chars/bosses/lee/pain205.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/pain206.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	240 180
+	bbox 222 108 30 74
+	frame	data/chars/bosses/lee/pain100.png
+	bbox 227 105 30 75
+	frame	data/chars/bosses/lee/pain101.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/pain102.png
+	frame	data/chars/bosses/lee/pain103.png
+	frame	data/chars/bosses/lee/pain104.png
+	frame	data/chars/bosses/lee/pain105.png
+	frame	data/chars/bosses/lee/pain106.png
+	frame	data/chars/bosses/lee/pain107.png
+	frame	data/chars/bosses/lee/pain108.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	240 180
+	bbox 226 110 30 70
+	frame	data/chars/bosses/lee/pain200.png
+	bbox 226 115 30 65
+	frame	data/chars/bosses/lee/pain201.png
+	bbox 226 120 30 60
+	frame	data/chars/bosses/lee/pain202.png
+	frame	data/chars/bosses/lee/pain203.png
+	bbox 226 114 30 65
+	frame	data/chars/bosses/lee/pain204.png
+	bbox 226 109 30 70
+	frame	data/chars/bosses/lee/pain205.png
+		bbox 226 105 30 75
+	frame	data/chars/bosses/lee/pain206.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	240 180
+	bbox 	203 90 90 80
+	frame	data/chars/bosses/lee/fall00.png
+  delay	12
+	sound	data/sounds/Falling.wav
+	bbox 	221 110 35 55
+	frame	data/chars/bosses/lee/fall05.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall06.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall07.png
+	bbox 	207 145 100 35
+	frame	data/chars/bosses/lee/fall08.png
+	bbox 	207 158 100 25
+	frame	data/chars/bosses/lee/fall09.png
+
+anim burn #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	240 180
+	bbox 	203 90 90 80
+	frame	data/chars/bosses/lee/fall00.png
+  delay	12
+	sound	data/sounds/Falling.wav
+	bbox 	221 110 35 55
+	frame	data/chars/bosses/lee/fall05.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall06.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall07.png
+	bbox 	207 145 100 35
+	frame	data/chars/bosses/lee/fall08.png
+	bbox 	207 158 100 25
+	frame	data/chars/bosses/lee/fall09.png
+
+anim shock #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	240 180
+	bbox 	203 90 90 80
+	frame	data/chars/bosses/lee/fall00.png
+  delay	12
+	sound	data/sounds/Falling.wav
+	bbox 	221 110 35 55
+	frame	data/chars/bosses/lee/fall05.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall06.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall07.png
+	bbox 	207 145 100 35
+	frame	data/chars/bosses/lee/fall08.png
+	bbox 	207 158 100 25
+	frame	data/chars/bosses/lee/fall09.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	240 180
+	frame	data/chars/bosses/lee/fall600.png
+	frame	data/chars/bosses/lee/fall601.png
+	frame	data/chars/bosses/lee/fall602.png
+	frame	data/chars/bosses/lee/fall603.png
+	delay	12
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/lee/fall05.png
+	frame	data/chars/bosses/lee/fall06.png
+	frame	data/chars/bosses/lee/fall07.png
+	frame	data/chars/bosses/lee/fall08.png
+	frame	data/chars/bosses/lee/fall09.png
+
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	240 180
+	frame	data/chars/bosses/lee/fall700.png
+	frame	data/chars/bosses/lee/fall701.png
+	frame	data/chars/bosses/lee/fall702.png
+	frame	data/chars/bosses/lee/fall703.png
+	frame	data/chars/bosses/lee/fall704.png
+	frame	data/chars/bosses/lee/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	240 180
+	bbox 	203 90 90 80
+	hitfx	data/sounds/MediumKick.wav
+	attack 203 90 90 80 4 1 0 0 20 12
+	frame	data/chars/bosses/lee/fall00.png
+		delay	999
+	frame	data/chars/bosses/lee/fall00.png
+  delay	12
+	sound	data/sounds/Falling.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	221 110 35 55
+	frame	data/chars/bosses/lee/fall05.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall06.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall07.png
+	bbox 	207 145 100 35
+	frame	data/chars/bosses/lee/fall08.png
+	bbox 	207 158 100 25
+	frame	data/chars/bosses/lee/fall09.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	240 180
+	bbox 	52 90 32 35
+	hitfx	data/sounds/MediumKick.wav
+	attack 203 102 70 70 4 1 0 0 20 12
+	frame	data/chars/bosses/lee/fall900.png
+		delay	999
+	frame	data/chars/bosses/lee/fall900.png
+  delay	12
+	sound	data/sounds/Falling.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	221 110 35 55
+	frame	data/chars/bosses/lee/fall05.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall06.png
+	bbox 	207 140 100 40
+	frame	data/chars/bosses/lee/fall07.png
+	bbox 	207 145 100 35
+	frame	data/chars/bosses/lee/fall08.png
+	bbox 	207 158 100 25
+	frame	data/chars/bosses/lee/fall09.png
+
+anim death
+	loop	0
+	delay	16
+	offset	240 180
+	frame	data/chars/bosses/lee/fall06.png
+	frame	data/chars/bosses/lee/fall07.png
+	frame	data/chars/bosses/lee/fall08.png
+	frame	data/chars/bosses/lee/fall09.png
+
+anim rise
+	loop	0
+	delay	12
+	offset	240 180
+	@cmd recoverGp
+	frame	data/chars/bosses/lee/rise00.png
+	frame	data/chars/bosses/lee/rise01.png
+	frame	data/chars/bosses/lee/rise02.png
+	frame	data/chars/bosses/lee/rise03.png
+	delay 2
+	frame	data/chars/bosses/lee/rise04.png
+	frame	data/chars/bosses/lee/rise05.png
+	delay	12
+	frame	data/chars/bosses/lee/rise06.png
+	frame	data/chars/bosses/lee/rise07.png
+	frame	data/chars/bosses/lee/rise08.png
+	frame	data/chars/bosses/lee/rise09.png
+
+anim riseattack
+	range 40 120
+	rangea 0 0
+	rangez -24 24
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	240 180
+	sound	data/voices/lee36.wav
+	hitfx	data/sounds/StrongPunch.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/s200.png
+	bbox 235 105 30 75
+	frame	data/chars/bosses/lee/s201.png
+	bbox 253 115 30 65
+	frame	data/chars/bosses/lee/s202.png
+	bbox 253 125 30 55
+	frame	data/chars/bosses/lee/s203.png
+	delay	5
+	@cmd target 3 2
+	@cmd dashTarget
+	bbox 245 135 50 45
+	attack 240 120 65 60 7 1 0 0 15 24
+	frame	data/chars/bosses/lee/s204.png
+	delay	2
+	hitfx	data/sounds/Whip2.wav
+	@cmd target 2 2
+	@cmd dashTarget
+	bbox 256 123 30 55
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s205.png
+	hitfx	data/sounds/Whip2.wav
+	@cmd target 1.5 1.5
+	@cmd dashTarget
+	@cmd rageCancel 20 150 0 150 5 "ANI_FOLLOW20" "hit"
+	delay	5
+	bbox 254 120 30 60
+	attack 250 120 65 60 7 1 0 0 15 24
+	frame	data/chars/bosses/lee/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 250 118 30 60
+	frame	data/chars/bosses/lee/s207.png
+	hitfx	data/sounds/burn.wav
+	delay	5
+	@cmd target 1 1
+	@cmd dashTarget
+	burn 235 60 120 120 9 1 0 0 20 24
+	frame	data/chars/bosses/lee/s208x.png
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s209.png
+	delay	6
+	bbox 250 112 30 67
+	frame	data/chars/bosses/lee/s210.png
+	bbox 236 109 30 70
+	frame	data/chars/bosses/lee/s211.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/s212.png
+	frame	data/chars/bosses/lee/s213.png
+
+anim attack1
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	2
+	offset	240 180
+	@cmd mpCost -10
+	sound	data/voices/lee03.wav
+	bbox 226 106 30 75
+	frame	data/chars/bosses/lee/a300.png
+	bbox 228 109 30 70
+	frame	data/chars/bosses/lee/a301.png
+	bbox 246 111 30 70
+	frame	data/chars/bosses/lee/a302.png
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighPunch.wav
+	bbox 241 110 30 70
+	attack 240 120 70 60 5 0 0 0 25 36
+	frame	data/chars/bosses/lee/a303.png
+	frame	data/chars/bosses/lee/a304.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/a305.png
+	bbox 241 108 30 70
+	frame	data/chars/bosses/lee/a306.png
+	bbox 226 106 30 75
+	frame	data/chars/bosses/lee/a307.png
+	frame	data/chars/bosses/lee/a308.png
+
+anim attack2
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	2
+	offset	240 180
+	@cmd mpCost -10
+	sound	data/voices/lee06.wav
+	bbox 226 123 30 57
+	frame	data/chars/bosses/lee/a400.png
+	frame	data/chars/bosses/lee/a401.png
+	bbox 226 126 30 54
+	frame	data/chars/bosses/lee/a402.png
+	sound	data/sounds/LowAttack.wav
+	hitfx	data/sounds/LowPunch.wav
+	bbox 240 129 30 50
+	attack2 240 100 90 80 5 0 0 0 20 36
+	frame	data/chars/bosses/lee/a403.png
+	frame	data/chars/bosses/lee/a404.png
+	bbox 230 127 30 54
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/a405.png
+	bbox 234 123 30 57
+	frame	data/chars/bosses/lee/a406.png
+	bbox 226 123 30 57
+	frame	data/chars/bosses/lee/a407.png
+
+anim attack3
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	2
+	offset	240 180
+	@cmd mpCost -10
+	bbox 226 102 30 77
+	sound	data/voices/lee04.wav
+	frame	data/chars/bosses/lee/a500.png
+	frame	data/chars/bosses/lee/a501.png
+	frame	data/chars/bosses/lee/a502.png
+	hitfx	data/sounds/HighKick.wav
+	bbox 222 99 30 80
+	attack 240 104 80 75 7 0 0 0 35 24
+	frame	data/chars/bosses/lee/a503.png
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 240 102 80 77 7 0 0 0 35 24
+	frame	data/chars/bosses/lee/a504.png
+	bbox 226 102 30 77
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/a505.png
+	frame	data/chars/bosses/lee/a506.png
+	frame	data/chars/bosses/lee/a507.png
+	frame	data/chars/bosses/lee/a508.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/a509.png
+
+
+anim attack4
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	2
+	@cmd mpCost -10
+	offset	240 180
+	sound	data/voices/lee40.wav
+	hitfx	data/sounds/LowKick.wav
+	bbox 226 120 30 59
+	frame	data/chars/bosses/lee/a600.png
+	frame	data/chars/bosses/lee/a601.png
+	bbox 226 124 30 55
+	frame	data/chars/bosses/lee/a602.png
+	bbox 226 130 30 50
+	frame	data/chars/bosses/lee/a603.png
+	attack2 230 130 101 50 5 0 0 0 20 36
+	frame	data/chars/bosses/lee/a604.png
+	attack2 230 132 102 50 5 0 0 0 20 36
+	frame	data/chars/bosses/lee/a605.png
+	attack2 230 129 90 60 5 0 0 0 20 36
+	frame	data/chars/bosses/lee/a606.png
+	bbox 230 125 30 50
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/a607.png
+	bbox 226 123 30 55
+	frame	data/chars/bosses/lee/a608.png
+	@cmd looper 0 1
+	frame	data/chars/bosses/lee/a609.png
+	frame	data/chars/bosses/lee/a609.png
+
+
+anim attack5
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	240 180
+	@cmd mpCost -10
+	@cmd rageCancel 20 60 0 0 0 "ANI_FOLLOW5" "random"
+	sound	data/voices/lee06.wav
+	hitfx	data/sounds/HighKick.wav
+	bbox 226 103 30 77
+	frame	data/chars/bosses/lee/a700.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/a701.png
+	frame	data/chars/bosses/lee/a702.png
+	frame	data/chars/bosses/lee/a703.png
+	frame	data/chars/bosses/lee/a704.png
+	attack8 235 97 70 80 9 1 0 0 35 36
+	frame	data/chars/bosses/lee/a705.png
+	attack8 240 105 70 75 9 1 0 0 35 36
+	frame	data/chars/bosses/lee/a706.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "random"
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 226 110 30 70
+	frame	data/chars/bosses/lee/a707.png
+	bbox 226 110 30 60
+	frame	data/chars/bosses/lee/a708.png
+	sound	data/voices/lee36.wav
+	hitfx	data/sounds/HighKick.wav
+	bbox 236 112 30 67
+	frame	data/chars/bosses/lee/a709.png
+	bbox 236 119 30 60
+	frame	data/chars/bosses/lee/a710.png
+	bbox 236 113 30 65
+	frame	data/chars/bosses/lee/a711.png
+	bbox 236 109 30 70
+	attack8 244 109 93 70 7 1 0 0 35 30
+	frame	data/chars/bosses/lee/a712.png
+	frame	data/chars/bosses/lee/a713.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 230 105 30 75
+	frame	data/chars/bosses/lee/a714.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/a715.png
+	frame	data/chars/bosses/lee/a716.png
+	@cmd dasher 0 0 0
+	@cmd rageCancel 60 150 0 10 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 60 0 150 20 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 60 0 150 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	frame	data/chars/bosses/lee/a717.png
+
+
+anim attackboth #BACK ATTACK
+	range -20 -40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	4
+	offset	240 180
+	sound	data/voices/lee38.wav
+	hitfx	data/sounds/Whip.wav
+	bbox 226 103 30 75
+	frame	data/chars/bosses/lee/ab11.png
+	frame	data/chars/bosses/lee/ab12.png
+	bbox 215 102 30 77
+	frame	data/chars/bosses/lee/ab13.png
+	bbox 200 106 30 75
+	frame	data/chars/bosses/lee/ab14.png
+	delay	6
+	attack 133 105 95 75 7 1 0 0 35 24
+	frame	data/chars/bosses/lee/ab15.png
+	frame	data/chars/bosses/lee/ab16.png
+	delay	3
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/ab17.png
+	bbox 226 103 30 75
+	frame	data/chars/bosses/lee/ab18.png
+	frame	data/chars/bosses/lee/ab19.png
+	frame	data/chars/bosses/lee/ab20.png
+	frame	data/chars/bosses/lee/ab21.png
+	frame	data/chars/bosses/lee/ab22.png
+
+anim follow20 #Flaming Blast
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	240 180
+	sound	data/voices/lee37.wav
+	hitfx	data/sounds/StrongPunch.wav
+	@cmd target 3 1
+	@cmd dashTarget
+	#bbox 226 105 30 75
+	frame	data/chars/bosses/lee/s300.png
+	frame	data/chars/bosses/lee/s301.png
+	@cmd target 3 1
+	@cmd dashTarget
+	#bbox 240 108 30 72
+	frame	data/chars/bosses/lee/s302.png
+	bbox 250 117 35 62
+	frame	data/chars/bosses/lee/s303.png
+	@cmd target 2 1
+	@cmd dashTarget
+	frame	data/chars/bosses/lee/s304.png
+	@cmd target 1 1
+	@cmd dashTarget
+	#bbox 245 129 50 50
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s305.png
+	delay	5
+	#bbox 240 123 43 57
+	attack 225 120 65 60 5 1 0 0 15 24
+	dropv 3 1.5 0
+	frame	data/chars/bosses/lee/s306.png
+	delay	3
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 244 120 40 60
+	frame	data/chars/bosses/lee/s307.png
+	@cmd dasher 0 0 0
+	hitflash Impact
+	sound	data/sounds/Explosion.wav
+	hitfx	data/sounds/burn.wav
+	delay	6
+	#bbox 245 119 35 60
+	burn 240 65 150 115 35 1 0 0 20 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s308x.png
+	frame	data/chars/bosses/lee/s309x.png
+	@cmd rageCancel 20 60 0 150 20 "ANI_FREESPECIAL6" "random"
+	@cmd rageCancel 0 120 0 150 15 "ANI_FREESPECIAL3" "random"
+	#bbox 250 112 30 67
+	frame	data/chars/bosses/lee/s310x.png
+	#bbox 236 109 30 70
+	frame	data/chars/bosses/lee/s311x.png
+	delay	5
+	attack 0 0 0 0 0 0 0 0 0 0
+	#bbox 250 112 30 67
+	frame	data/chars/bosses/lee/s312.png
+	#bbox 236 107 30 73
+	frame	data/chars/bosses/lee/s313.png
+	#bbox 226 105 30 75
+	frame	data/chars/bosses/lee/s314.png
+	@cmd mpCost -10
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	frame	data/chars/bosses/lee/s315.png
+
+
+anim follow21 #Flaming Spin Kick #2
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 20 1 6
+	otg 1
+	loop	0
+	delay	10
+	offset	240 180
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r005.png
+	@cmd leaper 1.5 2.5 0
+	delay	5
+	bbox 245 100 55 45
+	frame	data/chars/bosses/lee/r006.png
+	burn 240 81 120 100 5 1 0 0 20 24
+	seal 1 1
+	dropv 1 1 0
+	frame	data/chars/bosses/lee/r007.png
+	delay	1
+	hitfx	data/sounds/burn.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r008.png
+	delay	5
+	burn 240 81 120 100 7 1 0 0 25 24
+	seal 1 1
+	dropv 1 1 0
+	frame	data/chars/bosses/lee/r009x.png
+	@cmd rageCancel 15 100 0 120 0 "ANI_FOLLOW22" "hit"
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r010.png
+	bbox 255 107 40 50
+	frame	data/chars/bosses/lee/r011.png
+	delay	5
+	bbox 235 115 30 55
+	burn 240 81 120 100 9 1 0 0 35 24
+	seal 1 1
+	dropv 2 1 0
+	frame	data/chars/bosses/lee/r012x.png
+	@cmd rageCancel 20 150 0 120 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 20 150 0 120 0 "ANI_JUMPATTACK2" "hit"
+	delay	1
+	bbox 226 97 30 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r013.png
+	@cmd landFrame
+	delay	3
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r014.png
+	frame	data/chars/bosses/lee/r015.png
+	frame	data/chars/bosses/lee/r016.png
+	frame	data/chars/bosses/lee/r017.png
+	frame	data/chars/bosses/lee/r018.png
+	frame	data/chars/bosses/lee/r019.png
+	@cmd rageCancel 30 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 30 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/r020.png
+
+anim follow22 #Flaming Spin Kick #3
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 20 1 6
+	otg 1
+	loop	0
+	delay	10
+	offset	240 180
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r005.png
+	@cmd leaper 1.5 2.5 0
+	delay	5
+	bbox 245 100 55 45
+	frame	data/chars/bosses/lee/r006.png
+	burn 240 81 120 100 15 1 0 0 15 24
+	seal 1 1
+	dropv 1 0 0
+	frame	data/chars/bosses/lee/r007.png
+	@cmd rageCancel 20 100 0 120 15 "ANI_FREESPECIAL3" "hit"
+	delay	1
+	hitfx	data/sounds/burn.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r008.png
+	delay	5
+	burn 240 81 120 100 20 1 0 0 15 24
+	seal 1 1
+	dropv 1.5 0 0
+	frame	data/chars/bosses/lee/r009x.png
+	@cmd rageCancel 20 150 0 120 15 "ANI_FREESPECIAL3" "hit"
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r010.png
+	bbox 255 107 40 50
+	frame	data/chars/bosses/lee/r011.png
+	delay	5
+	sound	data/voices/lee33.wav
+	bbox 235 115 30 55
+	burn 240 81 120 100 25 1 0 0 20 24
+	seal 1 1
+	dropv 2 0 0
+	frame	data/chars/bosses/lee/r012x.png
+	@cmd rageCancel 20 150 0 120 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 20 150 0 120 0 "ANI_JUMPATTACK2" "hit"
+	delay	1
+	bbox 226 97 30 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r013.png
+	@cmd landFrame
+	delay	3
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r014.png
+	frame	data/chars/bosses/lee/r015.png
+	frame	data/chars/bosses/lee/r016.png
+	frame	data/chars/bosses/lee/r017.png
+	frame	data/chars/bosses/lee/r018.png
+	frame	data/chars/bosses/lee/r019.png
+	@cmd rageCancel 30 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 30 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/r020.png
+
+anim grabbackward #ONE INCH Blast
+	@cmd dasher 0
+	@cmd flip
+	jugglecost 2
+	forcedirection -1
+	attackone 0
+	otg 1
+	loop	0
+	delay	3
+	offset	240 180
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/lee05.wav
+	@cmd mpCost -10
+	@cmd grabStart
+	@cmd position 0 45 -1 0 -1
+	frame	data/chars/bosses/lee/ga200.png
+	@cmd position 0 45 -1 0 -1
+	frame	data/chars/bosses/lee/ga201.png
+	@cmd position 0 50 -1 0 -1
+	frame	data/chars/bosses/lee/ga202.png
+	@cmd position 0 50 -1 0 -1
+	frame	data/chars/bosses/lee/ga203.png
+	@cmd position 0 50 -1 0 -1
+	frame	data/chars/bosses/lee/ga204.png
+	sound	data/sounds/StrongPunch.wav
+	delay	8
+	@cmd position 0 60 -1 0 -1
+	attack8 240 120 65 60 15 1 0 0 35 24
+	frame	data/chars/bosses/lee/ga205.png
+	@cmd slam 30 1 -0.5 4 0 0
+	@cmd spawn01 "Impact" 65 40 -1
+	@cmd grabEnd
+	frame	data/chars/bosses/lee/ga206.png
+	frame	data/chars/bosses/lee/ga207.png
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/ga208.png
+	@cmd rageCancel 20 100 0 150 20 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 60 0 150 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "random"
+	@cmd rageCancel 60 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/lee/ga209.png
+
+#anim grabdown #Shadowless Dive Kicks
+#	@cmd dasher 0
+#	attackone 0
+#	fastattack 1
+#	jugglecost 2
+#	forcedirection -1
+#	otg 1
+#	loop	0
+#	delay	6
+#	offset	240 180
+#	sound	data/voices/lee35.wav
+#	hitfx	data/sounds/StrongPunch.wav
+#	@cmd mpCost -10
+#	@cmd grabEnd
+#	@cmd leaper 0 3 0
+#	#bbox 	210 100 30 65
+#	attack2 225 130 65 50 5 1 1 0 25 24
+#	seal 1 1
+#	frame	data/chars/bosses/lee/j500.png
+#	delay 2
+#	attack 0 0 0 0 0 0 0 0 0 0
+#	frame	data/chars/bosses/lee/j501.png
+#	frame	data/chars/bosses/lee/j502.png
+#	frame	data/chars/bosses/lee/j503.png
+#	frame	data/chars/bosses/lee/j504.png
+#	@cmd leaper 0 1 0
+#	#bbox 	195 120 50 40
+#	delay 3
+#	attack 229 135 70 45 1 1 1 0 5 24
+#	seal 1 1
+#	frame	data/chars/bosses/lee/j505.png
+#	attack 0 0 0 0 0 0 0 0 0 0
+#	frame	data/chars/bosses/lee/j506.png
+#	attack 229 135 75 45 1 1 1 0 5 24
+#	seal 1 1
+#	frame	data/chars/bosses/lee/j507.png
+#	@cmd looper 5 4
+#	attack 0 0 0 0 0 0 0 0 0 0
+#	frame	data/chars/bosses/lee/j508.png
+#	#bbox 	205 120 60 45
+#	delay 6
+#	attack8 240 135 72 44 25 1 1 0 20 24
+#	dropv 3 1
+#	seal 1 1
+#	frame	data/chars/bosses/lee/j505.png
+#	attack 0 0 0 0 0 0 0 0 0 0
+#	frame	data/chars/bosses/lee/j506.png
+#	attack8 240 135 77 45 35 1 1 0 25 24
+#	dropv 3 1
+#	seal 1 1
+#	frame	data/chars/bosses/lee/j507.png
+#	@cmd rageCancel 20 60 0 150 15 "ANI_FREESPECIAL3" "random"
+#	attack 0 0 0 0 0 0 0 0 0 0
+#	frame	data/chars/bosses/lee/j508.png
+#	#bbox 	215 115 60 60
+#	delay 6
+#	frame	data/chars/bosses/lee/j509.png
+#	@cmd landFrame
+#	#bbox 	226 100 30 80
+#	frame	data/chars/bosses/lee/j510.png
+#	frame	data/chars/bosses/lee/j511.png
+#	frame	data/chars/bosses/lee/j512.png
+#	frame	data/chars/bosses/lee/j513.png
+#	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+#	@cmd clearL
+#	frame	data/chars/bosses/lee/j514.png
+
+anim grabdown #Shadowless Dive Kicks
+	@cmd dasher 0
+	attackone 0
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 180
+	sound	data/voices/lee35.wav
+	hitfx	data/sounds/StrongPunch.wav
+	#bbox 	210 100 30 65
+	attack 235 90 110 60 3 0 1 0 25 24
+	seal 1 1
+	frame	data/chars/bosses/lee/j520.png
+	delay 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/j521.png
+	attack 235 90 110 60 3 0 1 0 25 24
+	frame	data/chars/bosses/lee/j522.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/j523.png
+	frame	data/chars/bosses/lee/j524.png
+	#bbox 	195 120 50 40
+	delay 3
+	attack 225 90 70 50 3 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/lee/j525.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/j526.png
+	attack 225 90 70 50 3 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/lee/j527.png
+	@cmd looper 5 4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/j528.png
+	#bbox 	205 120 60 45
+	delay 6
+	burn 235 90 110 60 15 0 1 0 25 24
+	dropv 3 1
+	seal 1 1
+	frame	data/chars/bosses/lee/j525.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/j526.png
+	burn 235 90 110 60 25 1 1 0 25 24
+	dropv 3 1
+	seal 1 1
+	frame	data/chars/bosses/lee/j527.png
+	@cmd rageCancel 20 60 0 150 15 "ANI_FREESPECIAL3" "random"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/j528.png
+	#bbox 	215 115 60 60
+	delay 6
+	frame	data/chars/bosses/lee/j529.png
+	#bbox 	226 100 30 80
+	frame	data/chars/bosses/lee/j530.png
+	frame	data/chars/bosses/lee/j531.png
+	frame	data/chars/bosses/lee/j532.png
+	frame	data/chars/bosses/lee/j533.png
+	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/lee/j534.png
+
+
+anim jumpattack2 #Air Grab
+	range 40 120
+	rangea 0 0
+	rangez -999 999
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	240 180
+	bbox 	225 80 35 60
+	@cmd mpCost -10
+	@cmd targetJump
+	@cmd leapJump
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/lee06.wav
+	frame	data/chars/bosses/lee/j300.png
+	bbox 	225 92 35 60
+	frame	data/chars/bosses/lee/j301.png
+	delay	8
+	bbox 	225 100 35 50
+	attack 230 100 130 75 1 0 1 1 0 24
+	frame	data/chars/bosses/lee/j302.png
+	frame	data/chars/bosses/lee/j303.png
+
+anim special #Fan Attack
+	range 20 60
+	rangea 0 0
+	rangez -5 5
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	energycost 25 1 6
+	otg 1
+	loop	0
+	delay	6
+	offset	240 180
+	hitfx	data/sounds/Whip2.wav
+	@cmd mpCost -20
+	sound	data/voices/lee38.wav
+	frame	data/chars/bosses/lee/s100.png
+	frame	data/chars/bosses/lee/s101.png
+	delay	8
+	attack 240 120 80 60 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s102.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s102.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	delay	8
+	attack 240 115 80 65 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s103.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s103.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	delay	8
+	attack 170 85 145 95 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s104.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s104.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	delay	8
+	attack 170 95 145 85 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s105.png
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s106.png
+	frame	data/chars/bosses/lee/s107.png
+	frame	data/chars/bosses/lee/s108.png
+	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "random"
+	@cmd rageCancel 60 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/s109.png
+
+anim special2 #Fan Attack
+	range 20 60
+	rangea 0 0
+	rangez -5 5
+	fastattack 1
+	jugglecost 1
+	forcedirection 0
+	energycost 25 1 6
+	otg 1
+	loop	0
+	delay	6
+	offset	240 180
+	@cmd mpCost -20
+	hitfx	data/sounds/Whip2.wav
+	sound	data/voices/lee38.wav
+	frame	data/chars/bosses/lee/s100.png
+	frame	data/chars/bosses/lee/s101.png
+	delay	8
+	attack 240 120 80 60 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s102.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s102.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	delay	8
+	attack 240 115 80 65 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s103.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s103.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	delay	8
+	attack 170 85 145 95 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s104.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s104.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "hit"
+	delay	8
+	attack 170 95 145 85 7 1 0 0 25 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/s105.png
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s106.png
+	frame	data/chars/bosses/lee/s107.png
+	frame	data/chars/bosses/lee/s108.png
+	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "random"
+	@cmd rageCancel 60 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/s109.png
+
+anim freespecial #Tenchireimeikyaku
+	range 80 120
+	rangea 225 280
+	rangez -9 9
+	followanim 2
+	followcond 1
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 60 1 6
+	otg 1
+	loop	0
+	delay	2
+	offset	240 180
+	@cmd spawnBind "Rage" 0 0 -1
+	sound	data/voices/lee47.wav
+	frame	data/chars/bosses/lee/s300.png
+	frame	data/chars/bosses/lee/s301.png
+	frame	data/chars/bosses/lee/s302.png
+	frame	data/chars/bosses/lee/s303.png
+	delay	32
+	@cmd dasher 3 0 0
+	attack 240 100 54 80 2 0 0 0 0 18
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/bosses/lee/s304.png
+	delay	2
+	@cmd dasher 1 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s305.png
+
+anim follow2 #RAGE COMBO
+	@cmd dasher 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 60 1 6
+	otg 1
+	loop	0
+	delay	1
+	offset	240 180
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/lee/r100.png
+	frame	data/chars/bosses/lee/r101.png
+	frame	data/chars/bosses/lee/r102.png
+	delay	3
+	attack 255 110 60 70 1 0 0 0 10 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r103.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r104.png
+	frame	data/chars/bosses/lee/r105.png
+	frame	data/chars/bosses/lee/r106.png
+	frame	data/chars/bosses/lee/r107.png
+	frame	data/chars/bosses/lee/r108.png
+	frame	data/chars/bosses/lee/r109.png
+	delay	3
+	sound	data/sounds/MediumAttack.wav
+	hitfx	data/sounds/MediumKick.wav
+	attack 240 119 88 60 1 0 0 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r110.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r111.png
+	frame	data/chars/bosses/lee/r112.png
+	frame	data/chars/bosses/lee/r113.png
+	frame	data/chars/bosses/lee/r114.png
+	frame	data/chars/bosses/lee/r115.png
+	delay	3
+	sound	data/sounds/LowAttack.wav
+	hitfx	data/sounds/LowKick.wav
+	attack 240 130 88 50 1 0 0 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r116.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r117.png
+	delay	3
+	sound	data/sounds/LowAttack.wav
+	hitfx	data/sounds/LowKick.wav
+	attack 240 130 88 50 1 0 0 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r118.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r119.png
+	frame	data/chars/bosses/lee/r120.png
+	frame	data/chars/bosses/lee/r121.png
+	frame	data/chars/bosses/lee/r122.png
+	frame	data/chars/bosses/lee/r123.png
+	delay	3
+	sound	data/sounds/LowAttack.wav
+	hitfx	data/sounds/LowKick.wav
+	attack 235 130 90 50 1 0 0 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r124.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r125.png
+	frame	data/chars/bosses/lee/r126.png
+	frame	data/chars/bosses/lee/r127.png
+	frame	data/chars/bosses/lee/r128.png
+	frame	data/chars/bosses/lee/r129.png
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 235 105 85 75 1 0 0 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r130.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r131.png
+	frame	data/chars/bosses/lee/r132.png
+	frame	data/chars/bosses/lee/r133.png
+	frame	data/chars/bosses/lee/r134.png
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 245 77 90 100 1 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r135.png #35
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r135.png
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 245 77 90 100 1 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r136.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r136.png
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 245 120 90 60 1 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r137.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r138.png
+	frame	data/chars/bosses/lee/r139.png
+	frame	data/chars/bosses/lee/r140.png #42
+	frame	data/chars/bosses/lee/r141.png
+	frame	data/chars/bosses/lee/r142.png
+	frame	data/chars/bosses/lee/r143.png
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 245 109 82 70 3 1 1 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r144.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r145.png
+	frame	data/chars/bosses/lee/r146.png
+	frame	data/chars/bosses/lee/r147.png
+	frame	data/chars/bosses/lee/r148.png #50
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	attack 245 103 90 75 3 1 1 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/lee/r149.png
+	@cmd leaper 1 6 0
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r150.png
+	sound	data/voices/lee46.wav
+	frame	data/chars/bosses/lee/r151.png
+	frame	data/chars/bosses/lee/r152.png #54
+	delay	3
+	hitfx	data/sounds/HighKick.wav
+	@cmd leaper 1 1 0
+	attack 229 135 70 45 1 1 1 0 10 24
+	seal 1 1
+	frame	data/chars/bosses/lee/r153.png #55
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r154.png
+	attack 229 135 75 45 1 1 1 0 10 24
+	seal 1 1
+	frame	data/chars/bosses/lee/r155.png
+	@cmd looper 55 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r156.png
+	delay	3
+	sound	data/sounds/HighAttack.wav
+	hitfx	data/sounds/HighKick.wav
+	@cmd leaper 1 1 0
+	burn 229 135 70 45 3 1 1 0 15 24
+	seal 1 1
+	frame	data/chars/bosses/lee/r153.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r154.png
+	burn 229 135 75 45 3 1 1 0 15 24
+	seal 1 1
+	frame	data/chars/bosses/lee/r155.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r156.png
+	@cmd landFrame
+	frame	data/chars/bosses/lee/r157.png # 63
+	@cmd leaper 0 3 0
+	frame	data/chars/bosses/lee/r157.png # 64
+	frame	data/chars/bosses/lee/r158.png
+	frame	data/chars/bosses/lee/r159.png
+	frame	data/chars/bosses/lee/r160.png
+	delay	5
+	attack8 240 90 90 90 55 1 0 0 35 24
+	dropv 5 0
+	seal 1 1
+	frame	data/chars/bosses/lee/r161.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r161.png
+	hitflash Flash
+	hitfx	data/sounds/burn.wav
+	delay	5
+	burn 240 40 100 168 50 1 0 0 25 24
+	dropv 4 1
+	seal 1 1
+	frame	data/chars/bosses/lee/r162x.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r163.png
+	delay	5
+	burn 240 70 115 155 45 1 0 0 20 24
+	dropv 3 1
+	seal 1 1
+	frame	data/chars/bosses/lee/r164x.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r165.png
+	frame	data/chars/bosses/lee/r166.png
+	frame	data/chars/bosses/lee/r167.png
+	frame	data/chars/bosses/lee/r168.png
+	frame	data/chars/bosses/lee/r169.png
+	@cmd landFrame
+	frame	data/chars/bosses/lee/r170.png
+	@cmd mpCost -20
+	@cmd rageCancel 60 200 0 150 5 "ANI_FREESPECIAL2" "random"
+	@cmd rageCancel 60 200 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/r170.png
+
+
+anim freespecial2 #Grab Run
+	range 50 240
+	rangea 0 0
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 180
+	hitfx	data/sounds/Throw2.wav
+	sound	data/voices/lee19.wav
+	@cmd dasher 4 0 0
+	bbox 238 114 35 60
+	attack 240 100 42 80 1 0 1 1 0 24
+	frame	data/chars/bosses/lee/run02.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/lee/run03.png
+	frame	data/chars/bosses/lee/run04.png
+	frame	data/chars/bosses/lee/run05.png
+	frame	data/chars/bosses/lee/run06.png
+	sound	data/sounds/Run2.wav
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/lee/run07.png
+
+anim freespecial3 #UPPER
+	range 0 60
+	rangea 0 120
+	rangez -9 9
+	@cmd dasher 0
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 15 1 6
+	otg 1
+	loop	0
+	offset	240 180
+	@cmd mpCost -10
+	delay	2
+	sound	data/voices/lee34.wav
+	hitfx	data/sounds/HighKick.wav
+	@cmd grabEnd
+	@cmd leaper 0 3 0
+	bbox 	226 125 35 55
+	frame	data/chars/bosses/lee/j600.png
+	frame	data/chars/bosses/lee/j601.png
+	bbox 	226 110 35 70
+	frame	data/chars/bosses/lee/j602.png
+	delay	6
+	hitflash Impact
+	bbox 	226 96 30 65
+	attack8 240 90 90 90 5 1 0 0 35 24
+	seal 1 1
+	frame	data/chars/bosses/lee/j603.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	226 105 35 70
+	frame	data/chars/bosses/lee/j604.png
+	hitflash Flash
+	hitfx	data/sounds/burn.wav
+	delay	6
+	bbox 	233 110 35 65
+	burn 240 40 100 168 15 1 0 0 25 24
+	seal 1 1
+	frame	data/chars/bosses/lee/j605x.png
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	233 110 35 60
+	frame	data/chars/bosses/lee/j606.png
+	delay	6
+	burn 240 70 115 155 25 1 0 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/lee/j607x.png
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	226 120 30 45
+	frame	data/chars/bosses/lee/j608.png
+	bbox 	235 120 40 33
+	frame	data/chars/bosses/lee/j609.png
+	bbox 	240 117 35 40
+	frame	data/chars/bosses/lee/j610.png
+	bbox 	230 117 45 30
+	frame	data/chars/bosses/lee/j611.png
+	bbox 	226 93 30 80
+	frame	data/chars/bosses/lee/j612.png
+	@cmd landFrame
+	bbox 	226 114 30 65
+	frame	data/chars/bosses/lee/jump07.png
+	@cmd rageCancel 40 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 40 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/jump07.png
+
+
+anim freespecial4 #RAGE COMBO2
+	range 80 120
+	rangea 225 280
+	rangez -9 9
+	followanim 3
+	followcond 1
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 45 1 6
+	otg 1
+	loop	0
+	delay	2
+	offset	240 180
+	@cmd spawnBind "Rage" 0 0 -1
+	sound	data/voices/lee43.wav
+	hitfx	data/sounds/StrongPunch.wav
+	frame	data/chars/bosses/lee/s300.png
+	frame	data/chars/bosses/lee/s301.png
+	frame	data/chars/bosses/lee/s302.png
+	frame	data/chars/bosses/lee/s303.png
+	delay	32
+	@cmd dasher 3 0 0
+	attack 240 100 54 80 2 0 0 0 0 18
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/bosses/lee/s304.png
+	delay	2
+	@cmd dasher 1 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s305.png
+
+anim freespecial5 #run attack
+	range 40 120
+	rangea 0 80
+	rangez -9 9
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 15 1 6
+	otg 1
+	loop	0
+	delay	3
+	offset	240 180
+	sound	data/voices/lee36.wav
+	hitfx	data/sounds/StrongPunch.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/s200.png
+	bbox 235 105 30 75
+	frame	data/chars/bosses/lee/s201.png
+	bbox 253 115 30 65
+	frame	data/chars/bosses/lee/s202.png
+	bbox 253 125 30 55
+	frame	data/chars/bosses/lee/s203.png
+	delay	5
+	@cmd target 2 2
+	@cmd dashTarget
+	bbox 245 135 50 45
+	attack 240 120 65 60 7 1 0 0 15 24
+	frame	data/chars/bosses/lee/s204.png
+	delay	2
+	hitfx	data/sounds/Whip2.wav
+	@cmd target 2 2
+	@cmd dashTarget
+	bbox 256 123 30 55
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s205.png
+	@cmd rageCancel 0 150 0 100 60 "ANI_FREESPECIAL" "hit"
+	hitfx	data/sounds/Whip2.wav
+	@cmd target 1.5 1.5
+	@cmd dashTarget
+	delay	5
+	bbox 254 120 30 60
+	attack 250 120 65 60 7 1 0 0 15 24
+	frame	data/chars/bosses/lee/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 250 118 30 60
+	frame	data/chars/bosses/lee/s207.png
+	hitfx	data/sounds/burn.wav
+	delay	5
+	@cmd rageCancel 0 120 0 150 15 "ANI_FREESPECIAL3" "random"
+	burn 235 60 120 120 9 1 0 0 20 24
+	frame	data/chars/bosses/lee/s208x.png
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/s209.png
+	delay	6
+	bbox 250 112 30 67
+	frame	data/chars/bosses/lee/s210.png
+	bbox 236 109 30 70
+	frame	data/chars/bosses/lee/s211.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/s212.png
+	@cmd mpCost -10
+	@cmd rageCancel 0 150 0 150 0 "ANI_FOLLOW20" "hit"
+	frame	data/chars/bosses/lee/s213.png
+
+anim freespecial6 #Flaming Spin Kicks
+	range 30 60
+	rangea 0 80
+	rangez -9 9
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 20 1 6
+	otg 1
+	loop	0
+	delay	2
+	offset	240 180
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/lee39.wav
+	bbox 226 100 30 80
+	@cmd target 2 2
+	@cmd dashTarget
+	frame	data/chars/bosses/lee/r000.png
+	frame	data/chars/bosses/lee/r001.png
+	@cmd dashTarget
+	frame	data/chars/bosses/lee/r002.png
+	frame	data/chars/bosses/lee/r003.png
+	@cmd dashTarget
+	frame	data/chars/bosses/lee/r004.png
+	frame	data/chars/bosses/lee/r005.png
+	@cmd leaper 1.5 2.5 0
+	delay	5
+	bbox 245 100 55 45
+	frame	data/chars/bosses/lee/r006.png
+	burn 240 81 120 100 5 1 0 0 15 24
+	seal 1 1
+	dropv 3 2 0
+	frame	data/chars/bosses/lee/r007.png
+	delay	1
+	hitfx	data/sounds/burn.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r008.png
+	delay	5
+	attack 240 81 120 100 7 1 0 0 15 24
+	seal 1 1
+	dropv 1 1.8 0
+	frame	data/chars/bosses/lee/r009x.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r010.png
+	bbox 255 107 40 50
+	frame	data/chars/bosses/lee/r011.png
+	sound	data/voices/lee33.wav
+	delay	5
+	bbox 235 115 30 55
+	burn 240 81 120 100 9 1 0 0 20 24
+	seal 1 1
+	dropv 2.5 1.5 0
+	frame	data/chars/bosses/lee/r012x.png
+	@cmd rageCancel 15 100 0 120 0 "ANI_FOLLOW8" "hit"
+	@cmd rageCancel 0 100 0 120 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 0 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	delay	1
+	bbox 226 97 30 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r013.png
+	@cmd landFrame
+	delay	3
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r014.png
+	frame	data/chars/bosses/lee/r015.png
+	frame	data/chars/bosses/lee/r016.png
+	frame	data/chars/bosses/lee/r017.png
+	frame	data/chars/bosses/lee/r018.png
+	frame	data/chars/bosses/lee/r019.png
+	@cmd rageCancel 30 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 30 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/r020.png
+
+anim follow3 #Rage Combo2
+	@cmd dasher 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 45 1 6
+	otg 1
+	loop	0
+	delay	1
+	offset	240 180
+	hitfx	data/sounds/Explosion.wav
+	sound	data/voices/lee43.wav
+	frame	data/chars/bosses/lee/s305.png
+	frame	data/chars/bosses/lee/s306.png
+	frame	data/chars/bosses/lee/r204.png
+	frame	data/chars/bosses/lee/r205.png
+	delay 6
+	burn 240 0 170 180 35 0 1 0 15 36
+	frame	data/chars/bosses/lee/r206x.png
+	frame	data/chars/bosses/lee/r207x.png
+	frame	data/chars/bosses/lee/r208x.png
+	frame	data/chars/bosses/lee/r209x.png
+	frame	data/chars/bosses/lee/r210x.png
+	sound	data/voices/lee44.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	delay 2
+	frame	data/chars/bosses/lee/r211.png
+	frame	data/chars/bosses/lee/r212.png
+	frame	data/chars/bosses/lee/r213.png
+	delay	8
+	@cmd dasher 10 0 0
+	frame	data/chars/bosses/lee/r214.png
+	offset	240 180
+	hitfx	data/sounds/StrongPunch.wav
+	frame	data/chars/bosses/lee/empty.png
+	delay	4
+	offset	380 180
+	@cmd dasher 0 0 0
+	attack 0 0 400 270 5 0 0 0 5 36
+	seal 1 1
+	frame	data/chars/bosses/lee/r213x.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r213x.png
+	@cmd looper 14 9
+	hitflash Impact
+	hitfx	data/sounds/Explosion.wav
+	burn 0 0 400 270 99 1 0 0 15 36
+	seal 1 1
+	frame	data/chars/bosses/lee/r213x.png
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r213x.png
+	offset	240 180
+	frame	data/chars/bosses/lee/r214.png
+
+anim follow5
+	loop	0
+	jugglecost 3
+	delay	16
+	offset	240 180
+	@cmd dasher 0
+	@cmd landGrab
+	frame	data/chars/bosses/lee/grab00.png
+
+anim follow6 #GRAB ESCAPE
+	@cmd dasher 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 10 1 6
+	loop	0
+	offset	240 180
+	delay	2
+	sound	data/sounds/Clash5.wav
+	@cmd recoverGp
+	@cmd spawn01 "Escape" 35 50 1
+	frame	data/chars/bosses/lee/f100.png
+	@cmd leaper 0.5 2 0
+	frame	data/chars/bosses/lee/f101.png
+	frame	data/chars/bosses/lee/f102.png
+	frame	data/chars/bosses/lee/f103.png
+	frame	data/chars/bosses/lee/f104.png
+	frame	data/chars/bosses/lee/f105.png
+	hitfx	data/sounds/burn.wav
+	delay 6
+	burn 230 60 110 115 25 1 0 0 35 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/f106x.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/f106.png
+	delay 6
+	burn 230 75 110 110 15 1 0 0 35 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/f107x.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/f107.png
+	delay 3
+	frame	data/chars/bosses/lee/f108.png
+	frame	data/chars/bosses/lee/jump06.png
+	@cmd landFrame
+	frame	data/chars/bosses/lee/jump07.png
+
+anim follow7 #Jump Flaming Kick
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 10 1 6
+	loop	0
+	offset	240 180
+	delay	2
+	sound	data/sounds/Clash5.wav
+	@cmd recoverGp
+	@cmd spawn01 "Counter" 0 0 1
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/f100.png
+	@cmd leaper 0 1 0
+	frame	data/chars/bosses/lee/f101.png
+	frame	data/chars/bosses/lee/f102.png
+	frame	data/chars/bosses/lee/f103.png
+	frame	data/chars/bosses/lee/f104.png
+	frame	data/chars/bosses/lee/f105.png
+	hitfx	data/sounds/burn.wav
+	delay 6
+	bbox 226 117 30 57
+	burn 230 60 110 115 25 1 0 0 35 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/f106x.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/f106.png
+	delay 6
+	bbox 226 108 30 50
+	burn 230 75 110 110 35 1 0 0 30 24
+	dropv 3 1 0
+	frame	data/chars/bosses/lee/f107x.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/f107.png
+	@cmd rageCancel 0 150 0 100 45 "ANI_FOLLOW3" "random"
+	delay 3
+	bbox 226 99 30 80
+	frame	data/chars/bosses/lee/f108.png
+	bbox 	224 94 30 80
+	frame	data/chars/bosses/lee/jump06.png
+	@cmd landFrame
+	bbox 	226 114 30 65
+	frame	data/chars/bosses/lee/jump07.png
+	@cmd rageCancel 60 150 0 10 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 60 0 150 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 60 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	frame	data/chars/bosses/lee/jump07.png
+
+anim follow8 #Air Flaming Spin Kicks
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 10 1 6
+	otg 1
+	loop	0
+	delay	10
+	offset	240 180
+	hitfx	data/sounds/HighKick.wav
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r005.png
+	@cmd leaper 1.5 2.5 0
+	delay	5
+	bbox 245 100 55 45
+	frame	data/chars/bosses/lee/r006.png
+	burn 240 81 120 100 7 1 0 0 15 24
+	seal 1 1
+	dropv 2 1.5 0
+	frame	data/chars/bosses/lee/r007.png
+	delay	1
+	hitfx	data/sounds/burn.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r008.png
+	delay	5
+	burn 240 81 120 100 7 1 0 0 15 24
+	seal 1 1
+	dropv 1 1.5 0
+	frame	data/chars/bosses/lee/r009x.png
+	@cmd rageCancel 0 100 0 120 0 "ANI_FOLLOW21" "hit"
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r010.png
+	bbox 255 107 40 50
+	frame	data/chars/bosses/lee/r011.png
+	delay	5
+	bbox 235 115 30 55
+	burn 240 81 120 100 7 1 0 0 20 24
+	seal 1 1
+	dropv 2 1.5 0
+	frame	data/chars/bosses/lee/r012x.png
+	@cmd rageCancel 20 100 0 120 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	delay	1
+	bbox 226 97 30 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/lee/r013.png
+	@cmd landFrame
+	delay	3
+	bbox 226 100 30 80
+	frame	data/chars/bosses/lee/r014.png
+	frame	data/chars/bosses/lee/r015.png
+	frame	data/chars/bosses/lee/r016.png
+	frame	data/chars/bosses/lee/r017.png
+	frame	data/chars/bosses/lee/r018.png
+	frame	data/chars/bosses/lee/r019.png
+	@cmd rageCancel 30 150 0 150 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 30 150 0 150 0 "ANI_FREESPECIAL5" "hit"
+	frame	data/chars/bosses/lee/r020.png
+
+anim follow9 #AERIAL RECOVER
+	loop	0
+	delay	4
+	offset	240 180
+	sound	data/sounds/SpecialAttack5.wav
+	@cmd landSafe
+	@cmd invinc 2
+	@cmd leaper -1.3 1.6 0
+	frame	data/chars/bosses/lee/fjump05.png
+	frame	data/chars/bosses/lee/fjump06.png
+	frame	data/chars/bosses/lee/fjump07.png
+	frame	data/chars/bosses/lee/fjump08.png
+	frame	data/chars/bosses/lee/fjump09.png
+	frame	data/chars/bosses/lee/fjump10.png
+	delay	6
+	frame	data/chars/bosses/lee/fjump11.png
+	@cmd landFrame
+	frame	data/chars/bosses/lee/fjump12.png
+	frame	data/chars/bosses/lee/fjump13.png
+	frame	data/chars/bosses/lee/fjump14.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	8
+	offset	240 180
+	@cmd flip
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/lee/dodge01.png
+	frame	data/chars/bosses/lee/dodge02.png
+	frame	data/chars/bosses/lee/dodge03.png
+	frame	data/chars/bosses/lee/dodge04.png
+	frame	data/chars/bosses/lee/dodge05.png
+	frame	data/chars/bosses/lee/dodge06.png
+	delay 2
+	frame	data/chars/bosses/lee/dodge07.png
+	@cmd landFrame
+	delay 6
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/lee/dodge08.png
+
+anim follow11 #BLOCK
+	@cmd checkBlock
+	loop	0
+	delay	12
+	offset	240 180
+	bbox 	220 95 50 85
+	@cmd block 1
+	@cmd blockCost
+	frame	data/chars/bosses/lee/block00.png
+	@cmd keyLoop "attack3" 0
+	#@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
+	@cmd block 0
+	frame	data/chars/bosses/lee/block00.png
+
+anim follow12 #PARRY
+	loop	0
+	delay	24
+	offset	240 180
+	bbox 	226 95 40 85
+	@cmd block 1
+	frame	data/chars/bosses/lee/block00.png
+
+anim block
+	range 0 100
+	rangea 0 100
+	rangez -24 24
+	@cmd dasher 0 0 0
+	loop	0
+	delay	96
+	offset	240 180
+	bbox 	220 95 50 85
+	frame	data/chars/bosses/lee/block00.png
+
+
+anim dodge
+	range 0 60
+	rangea 0 100
+	rangez -24 24
+	loop	0
+	delay	8
+	offset	240 180
+	@cmd leapRandom 2 2 1
+	@cmd flip
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/lee/dodge01.png
+	frame	data/chars/bosses/lee/dodge02.png
+	frame	data/chars/bosses/lee/dodge03.png
+	frame	data/chars/bosses/lee/dodge04.png
+	frame	data/chars/bosses/lee/dodge05.png
+	frame	data/chars/bosses/lee/dodge06.png
+	delay 2
+	frame	data/chars/bosses/lee/dodge07.png
+	delay	6
+	@cmd landFrame
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/lee/dodge08.png

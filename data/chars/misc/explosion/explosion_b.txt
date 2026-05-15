@@ -1,0 +1,42 @@
+name				Explosion_B
+type				none
+no_adjust_base		0
+subject_to_hole		1
+candamage			player enemy npc obstacle
+health				1
+nolife				1
+shadow				0
+antigravity			100
+ondoattackscript	data/scripts/ondoattack/default.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	fastattack 1
+	jugglecost 99
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	3
+	offset	25 25
+	sound	data/sounds/Explosion.wav
+	#burn 310 237 197 146 120 1 1 0 0 24
+	burn 0 0 50 50 100 1 1 0 0 12
+	dropv 4 4 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/chars/misc/explosion/original/explosion00.png
+	@cmd shoot "Blast" 0 0 0 -1 0 -1
+	@cmd shoot "Blast" 0 0 1 1 0 1
+	frame	data/chars/misc/explosion/original/explosion00.png
+		delay	6
+	@cmd shoot "Blast" 0 0 0 -1 0 1
+	@cmd shoot "Blast" 0 0 1 1 0 -1
+	frame	data/chars/misc/explosion/original/explosion01.png
+	@cmd shoot "Blast" 0 0 0 1 0 -1
+	@cmd shoot "Blast" 0 0 1 -1 0 1
+	frame	data/chars/misc/explosion/original/explosion02.png
+	@cmd shoot "Blast" 0 0 0 1 0 1
+	@cmd shoot "Blast" 0 0 1 -1 0 -1
+	frame	data/chars/misc/explosion/original/explosion03.png
+	@cmd suicide
+	frame	data/chars/misc/explosion/original/explosion03.png

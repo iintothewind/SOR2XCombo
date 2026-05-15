@@ -1,0 +1,40 @@
+name			Poster #GROUND
+type			None
+setlayer 5
+offscreenkill	9999
+
+animationscript data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	16
+	offset	0 0
+	frame	data/bgs/sor1/st02/poster01.png
+	@cmd offScreenKill 200 0
+	frame	data/bgs/sor1/st02/poster01.png
+
+anim follow1
+	loop	0
+	delay  10
+	offset	0 0
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	frame	data/bgs/sor1/st02/Poster02.png
+	frame	data/bgs/sor1/st02/poster01.png
+	@cmd aniChange 0 "ANI_IDLE"
+	frame	data/bgs/sor1/st02/Poster02.png

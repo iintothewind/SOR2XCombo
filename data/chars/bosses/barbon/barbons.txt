@@ -1,0 +1,77 @@
+##MAIN
+name				BarbonS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/barbon/idle00.png data/chars/bosses/barbon/alter1.png
+remap				data/chars/bosses/barbon/idle00.png data/chars/bosses/barbon/alter2.png
+remap				data/chars/bosses/barbon/idle00.png data/chars/bosses/barbon/alter3.png
+remap				data/chars/bosses/barbon/idle00.png data/chars/bosses/barbon/alter3.png
+remap				data/chars/bosses/barbon/idle00.png data/chars/bosses/barbon/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/barbon/stripclothes04.png
+	frame	data/chars/bosses/barbon/special00.png
+	frame	data/chars/bosses/barbon/special01.png
+	frame	data/chars/bosses/barbon/special02.png
+	frame	data/chars/bosses/barbon/special03.png
+	frame	data/chars/bosses/barbon/special04.png
+	frame	data/chars/bosses/barbon/special05.png
+	frame	data/chars/bosses/barbon/special06.png
+	frame	data/chars/bosses/barbon/special00.png
+	frame	data/chars/bosses/barbon/special01.png
+	frame	data/chars/bosses/barbon/special02.png
+	frame	data/chars/bosses/barbon/special03.png
+	frame	data/chars/bosses/barbon/special04.png
+	frame	data/chars/bosses/barbon/special05.png
+	frame	data/chars/bosses/barbon/special06.png
+	frame	data/chars/bosses/barbon/idle00.png
+
+anim freespecial4 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/barbon/stripclothes04.png
+	frame	data/chars/bosses/barbon/stripclothes04.png
+	frame	data/chars/bosses/barbon/stripclothes04.png
+	frame	data/chars/bosses/barbon/walk00.png
+	frame	data/chars/bosses/barbon/walk01.png
+	frame	data/chars/bosses/barbon/walk02.png
+	frame	data/chars/bosses/barbon/walk00.png
+	frame	data/chars/bosses/barbon/walk01.png
+	frame	data/chars/bosses/barbon/walk02.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/barbon/block00.png
+	frame	data/chars/bosses/barbon/special00.png
+	frame	data/chars/bosses/barbon/special01.png
+	frame	data/chars/bosses/barbon/special02.png
+	frame	data/chars/bosses/barbon/special03.png
+	frame	data/chars/bosses/barbon/special04.png
+	frame	data/chars/bosses/barbon/special05.png
+	frame	data/chars/bosses/barbon/special06.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	143 192
+	frame	data/chars/bosses/barbon/throw00.png
+	frame	data/chars/bosses/barbon/throw00.png
+	frame	data/chars/bosses/barbon/throw00.png
+	frame	data/chars/bosses/barbon/throw00.png
+	frame	data/chars/bosses/barbon/throw00.png
+	frame	data/chars/bosses/barbon/throw00.png

@@ -1,0 +1,52 @@
+name			st1_dunk_b
+type			none
+shadow			0
+setlayer		-1
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	9
+	offset	1 200
+	@cmd offScreenKill 500 0
+	frame	data/bgs/sor2/st1a/dunk_b00.png
+	frame	data/bgs/sor2/st1a/dunk_b01.png
+	frame	data/bgs/sor2/st1a/dunk_b02.png
+	frame	data/bgs/sor2/st1a/dunk_b03.png
+	frame	data/bgs/sor2/st1a/dunk_b04.png
+	frame	data/bgs/sor2/st1a/dunk_b05.png
+	frame	data/bgs/sor2/st1a/dunk_b06.png
+	frame	data/bgs/sor2/st1a/dunk_b07.png
+	frame	data/bgs/sor2/st1a/dunk_b08.png
+	frame	data/bgs/sor2/st1a/dunk_b09.png
+	frame	data/bgs/sor2/st1a/dunk_b10.png
+	frame	data/bgs/sor2/st1a/dunk_b11.png
+	frame	data/bgs/sor2/st1a/dunk_b12.png
+	frame	data/bgs/sor2/st1a/dunk_b13.png
+	frame	data/bgs/sor2/st1a/dunk_b14.png
+	frame	data/bgs/sor2/st1a/dunk_b15.png
+	frame	data/bgs/sor2/st1a/dunk_b16.png
+	frame	data/bgs/sor2/st1a/dunk_b17.png
+	frame	data/bgs/sor2/st1a/dunk_b18.png
+	frame	data/bgs/sor2/st1a/dunk_b19.png
+	frame	data/bgs/sor2/st1a/dunk_b20.png
+	frame	data/bgs/sor2/st1a/dunk_b21.png
+	frame	data/bgs/sor2/st1a/dunk_b22.png
+	frame	data/bgs/sor2/st1a/dunk_b23.png
+	frame	data/bgs/sor2/st1a/dunk_b24.png
+	frame	data/bgs/sor2/st1a/dunk_b25.png
+	frame	data/bgs/sor2/st1a/dunk_b26.png
+	frame	data/bgs/sor2/st1a/dunk_b27.png
+	frame	data/bgs/sor2/st1a/dunk_b28.png
+	frame	data/bgs/sor2/st1a/dunk_b29.png
+	frame	data/bgs/sor2/st1a/dunk_b30.png
+	frame	data/bgs/sor2/st1a/dunk_b31.png
+	frame	data/bgs/sor2/st1a/dunk_b32.png
+	frame	data/bgs/sor2/st1a/dunk_b33.png
+	frame	data/bgs/sor2/st1a/dunk_b34.png
+	frame	data/bgs/sor2/st1a/dunk_b35.png
+	frame	data/bgs/sor2/st1a/dunk_b36.png
+	frame	data/bgs/sor2/st1a/dunk_b37.png
+	frame	data/bgs/sor2/st1a/dunk_b38.png
+	frame	data/bgs/sor2/st1a/dunk_b39.png
+	frame	data/bgs/sor2/st1a/dunk_b40.png

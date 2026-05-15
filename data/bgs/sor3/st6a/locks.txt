@@ -1,0 +1,33 @@
+name			St6_Locks
+type			none
+shadow			0
+setlayer		-250
+onspawnscript	data/scripts/onspawn/locks.c
+
+anim idle #REMAIN 3 LOCKS
+	loop	1
+	delay	32
+	offset	25 33
+	frame	data/bgs/sor3/st6a/lock00.png
+	frame	data/bgs/sor3/st6a/lock01.png
+	
+anim follow1 #REMAIN 2 LOCKS
+	loop	1
+	delay	32
+	offset	25 33
+	frame	data/bgs/sor3/st6a/lock00.png
+	frame	data/bgs/sor3/st6a/lock02.png
+	
+anim follow2 #REMAIN 1 LOCK
+	loop	1
+	delay	32
+	offset	25 33
+	frame	data/bgs/sor3/st6a/lock00.png
+	frame	data/bgs/sor3/st6a/lock03.png
+	
+anim follow3 #UNLOCKED
+	loop	1
+	delay	32
+	offset	25 33
+	frame	data/bgs/sor3/st6a/lock00.png
+	frame	data/bgs/sor3/st6a/lock04.png

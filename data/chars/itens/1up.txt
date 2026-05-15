@@ -1,0 +1,22 @@
+name			1up
+type			item
+health			0
+nolife			1
+facing 			1
+gfxshadow		1 1
+offscreenkill	50
+
+anim idle
+	loop	1
+	delay	200
+	offset	48 61
+	shadowcoords 48 63
+	itembox 41 10039 14 24
+	bbox 	41 48 16 15
+	nodrawmethod
+	frame	data/chars/itens/1up00.png
+		delay	6
+	drawmethod tintmode 1
+	drawmethod tintcolor 150_150_150
+	frame	data/chars/itens/1up00.png
+

@@ -1,0 +1,217 @@
+##MAIN
+name				BlazeSW
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter1.png
+remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter2.png
+remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter3.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/knife/special00.png
+	frame	data/chars/heroes/blaze/knife/special00.png
+	frame	data/chars/heroes/blaze/knife/special01.png
+	frame	data/chars/heroes/blaze/knife/special02.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special07.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special01.png
+	frame	data/chars/heroes/blaze/knife/special02.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special07.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png # 23
+	frame	data/chars/heroes/blaze/knife/special00.png
+	frame	data/chars/heroes/blaze/knife/special01.png
+	frame	data/chars/heroes/blaze/knife/special02.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special07.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special01.png
+	frame	data/chars/heroes/blaze/knife/special02.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special07.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png # 46
+	frame	data/chars/heroes/blaze/knife/special00.png
+	frame	data/chars/heroes/blaze/knife/special01.png
+	frame	data/chars/heroes/blaze/knife/special02.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special07.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special01.png
+	frame	data/chars/heroes/blaze/knife/special02.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special07.png
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special03.png
+	frame	data/chars/heroes/blaze/knife/special04.png # 69
+	frame	data/chars/heroes/blaze/knife/special05.png
+	frame	data/chars/heroes/blaze/knife/special06.png
+	frame	data/chars/heroes/blaze/knife/special00.png
+
+anim freespecial2 #SUPER
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/counter04.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter04.png
+
+anim freespecial3 #RAGE Dash
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/rage00.png
+	frame	data/chars/heroes/blaze/rage01.png
+	frame	data/chars/heroes/blaze/rage02.png
+	frame	data/chars/heroes/blaze/rage03.png
+	frame	data/chars/heroes/blaze/rage04.png
+	frame	data/chars/heroes/blaze/rage05.png
+	frame	data/chars/heroes/blaze/rage06.png
+	frame	data/chars/heroes/blaze/rage07.png
+
+
+anim runattack #SWORD BLITZ
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/sword/blitz02.png
+	frame	data/chars/heroes/blaze/sword/blitz02.png
+	frame	data/chars/heroes/blaze/sword/blitz01.png
+	frame	data/chars/heroes/blaze/sword/blitz01.png
+
+anim riseattack
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/dodge00.png
+	frame	data/chars/heroes/blaze/dodge01.png
+	frame	data/chars/heroes/blaze/dodge02.png
+	frame	data/chars/heroes/blaze/dodge03.png
+	frame	data/chars/heroes/blaze/dodge04.png
+	frame	data/chars/heroes/blaze/dodge05.png
+
+
+anim follow1 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/sword/blitz01.png
+	frame	data/chars/heroes/blaze/sword/blitz00.png
+	frame	data/chars/heroes/blaze/sword/blitz00.png
+	frame	data/chars/heroes/blaze/sword/blitz00.png
+	frame	data/chars/heroes/blaze/sword/blitz00.png
+
+anim follow4 #RAGE COMBO
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/rage03.png
+	frame	data/chars/heroes/blaze/rage04.png
+	frame	data/chars/heroes/blaze/rage05.png
+	frame	data/chars/heroes/blaze/special203.png
+	frame	data/chars/heroes/blaze/special204.png
+	frame	data/chars/heroes/blaze/special205.png
+	frame	data/chars/heroes/blaze/special205.png
+	frame	data/chars/heroes/blaze/special206.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter04.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/a301.png
+	frame	data/chars/heroes/blaze/a301.png
+	frame	data/chars/heroes/blaze/a302.png
+	frame	data/chars/heroes/blaze/a302.png
+	frame	data/chars/heroes/blaze/a303.png
+	frame	data/chars/heroes/blaze/rage01.png
+	frame	data/chars/heroes/blaze/rage02.png
+	frame	data/chars/heroes/blaze/rage03.png
+	frame	data/chars/heroes/blaze/rage04.png
+	frame	data/chars/heroes/blaze/special206.png
+	frame	data/chars/heroes/blaze/special207.png
+	frame	data/chars/heroes/blaze/special206.png
+	frame	data/chars/heroes/blaze/special207.png
+	frame	data/chars/heroes/blaze/special206.png
+	frame	data/chars/heroes/blaze/special207.png
+	frame	data/chars/heroes/blaze/special206.png
+	frame	data/chars/heroes/blaze/special207.png
+	frame	data/chars/heroes/blaze/special206.png
+	frame	data/chars/heroes/blaze/special207.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/block00.png
+	frame	data/chars/heroes/blaze/counter04.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter05.png
+	frame	data/chars/heroes/blaze/counter05.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/dodge00.png
+	frame	data/chars/heroes/blaze/dodge01.png
+	frame	data/chars/heroes/blaze/dodge02.png
+	frame	data/chars/heroes/blaze/dodge03.png
+	frame	data/chars/heroes/blaze/dodge04.png
+	frame	data/chars/heroes/blaze/dodge05.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	127 179
+	frame	data/chars/heroes/blaze/dodge00.png
+	frame	data/chars/heroes/blaze/dodge01.png
+	frame	data/chars/heroes/blaze/dodge02.png
+	frame	data/chars/heroes/blaze/dodge03.png
+	frame	data/chars/heroes/blaze/dodge04.png
+	frame	data/chars/heroes/blaze/dodge05.png

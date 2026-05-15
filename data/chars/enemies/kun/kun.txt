@@ -1,0 +1,262 @@
+##MAIN
+name				Kun
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				99
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+death				2
+bounce      1
+subject_to_screen 1
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+ondrawscript		data/scripts/ondraw/kun.c
+onspawnscript		data/scripts/onspawn/kun.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/kun/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Die1.wav
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	191 144
+	frame	data/chars/enemies/kun/idle00.png
+
+anim idle
+	loop	1
+	delay	16
+	offset	191 144
+	bbox 	177 65 29 79
+	frame	data/chars/enemies/kun/idle00.png
+	frame	data/chars/enemies/kun/idle01.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	191 144
+	bbox 	177 71 30 72
+	frame	data/chars/enemies/kun/walk00.png
+	frame	data/chars/enemies/kun/walk01.png
+	frame	data/chars/enemies/kun/walk02.png
+	frame	data/chars/enemies/kun/walk03.png
+	frame	data/chars/enemies/kun/walk04.png
+	frame	data/chars/enemies/kun/walk05.png
+	frame	data/chars/enemies/kun/walk06.png
+	frame	data/chars/enemies/kun/walk07.png
+	frame	data/chars/enemies/kun/walk08.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	191 144
+	bbox 	177 71 29 73
+	frame	data/chars/enemies/kun/pain00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	191 144
+	bbox 	175 105 32 39
+	frame	data/chars/enemies/kun/rise01.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	191 144
+	bbox 	177 100 29 44
+	@cmd jump 1
+	frame	data/chars/enemies/kun/rise02.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	191 144
+	bbox 	177 100 29 44
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/kun/rise02.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	191 144
+	bbox 	176 69 30 75
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+	frame	data/chars/enemies/kun/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	191 144
+	bbox 	177 80 29 64
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+	frame	data/chars/enemies/kun/pain00.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	191 144
+	bbox 	150 104 73 30
+	frame	data/chars/enemies/kun/fall00.png
+		delay	8
+	bbox 	150 115 79 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/kun/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	191 144
+	bbox 	150 104 73 30
+	frame	data/chars/enemies/kun/fall00.png
+		delay	8
+	bbox 	150 115 79 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/kun/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	191 144
+	bbox 	150 104 73 30
+	frame	data/chars/enemies/kun/fall00.png
+		delay	8
+	bbox 	150 115 79 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/kun/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	191 144
+	bbox 	150 104 73 30
+	frame	data/chars/enemies/kun/fall00.png
+		delay	8
+	bbox 	150 115 79 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/kun/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	191 144
+	frame	data/chars/enemies/kun/fall700.png
+	frame	data/chars/enemies/kun/fall701.png
+	frame	data/chars/enemies/kun/fall702.png
+	frame	data/chars/enemies/kun/fall703.png
+	frame	data/chars/enemies/kun/fall704.png
+	frame	data/chars/enemies/kun/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	191 144
+	bbox 	150 104 73 30
+	hitfx	data/sounds/MediumKick.wav
+	attack 150 104 73 30 5 1 0 0 20 12
+	frame	data/chars/enemies/kun/fall00.png
+		delay	999
+	frame	data/chars/enemies/kun/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	150 115 79 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/kun/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	191 144
+	bbox 183 70 28 70
+	hitfx	data/sounds/MediumKick.wav
+	attack 183 70 28 70 5 1 0 0 20 12
+	frame	data/chars/enemies/kun/fall900.png
+		delay	999
+	frame	data/chars/enemies/kun/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	150 115 79 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/kun/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	191 144
+	frame	data/chars/enemies/kun/fall01.png
+	frame	data/chars/enemies/kun/fall01.png
+	frame	data/chars/enemies/kun/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	191 144
+	sound data/sounds/skype.wav
+	frame	data/chars/enemies/kun/rise00.png
+	frame	data/chars/enemies/kun/rise01.png
+	frame	data/chars/enemies/kun/rise02.png
+	frame	data/chars/enemies/kun/rise03.png

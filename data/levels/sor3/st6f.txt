@@ -1,0 +1,112 @@
+loadingbg	 data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/_empty.png
+panel			data/bgs/sor3/st6f/_map.png		none	none
+order			a
+settime			300
+stagenumber		6
+spawn1			200 20 300
+spawn2			230 40 300
+spawn3			260 20 300
+spawn4			290 40 300
+updatescript	data/scripts/updatelevel/sor3_st6f.c
+
+#########################################################################################
+
+wall		0 283 -100 -100 160 15 144 5000
+
+wall		16 283 303 447 562 562 144 5000
+
+#########################################################################################
+
+#load		St6_Spark 3
+#load		Box_F 3
+
+#########################################################################################
+
+spawn		St6_Spark 1
+flip		1
+coords		160 164 0
+at			0
+
+spawn		St6_Spark 1
+flip		1
+coords		320 164 0
+at			0
+
+spawn		St6_Spark 1
+flip		0
+coords		20 274 0
+at			0
+
+spawn		St6_Spark 1
+flip		0
+coords		240 274 0
+at			0
+
+#########################################################################################
+
+spawn		Chicken 1
+flip		0
+coords		140 179 0
+at			0
+
+spawn		Box_B 1
+flip		0
+coords		180 179 0
+at			0
+
+spawn		P1X 1
+map			1
+flip		1
+coords		120 260 300
+at			0
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			0
+
+spawn		BossX1 1
+map			4
+#@script		void main(){setglobalvar("st6_room5", 1);}@end_script
+flip		0
+coords		120 260 300
+at			0
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+coords		120 260 300
+at			0
+
+spawn		P1X 1
+map			1
+flip		1
+coords		240 260 400
+at			0
+
+spawn		P1X 1
+map			1
+flip		0
+coords		360 260 500
+at			0
+
+group		3 3
+at			0
+
+spawn		P1X 1
+map			1
+flip		1
+coords		120 260 300
+at			0
+
+spawn		P1X 1
+map			1
+flip		1
+coords		240 260 400
+at			0
+
+spawn		P1X 1
+map			1
+flip		0
+coords		360 260 500
+at			0

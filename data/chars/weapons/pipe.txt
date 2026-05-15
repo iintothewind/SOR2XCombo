@@ -1,0 +1,24 @@
+name			Pipe #GROUND
+type			item
+subtype			weapon
+nolife			1
+lifespan		90
+typeshot 		0
+weaploss    2
+weapnum			3
+shootnum 		1
+counter			9
+gfxshadow		1 1
+offscreenkill	50
+
+anim idle
+	loop	1
+	delay	200
+	offset	51 55
+	bbox 	25 48 51 7
+	nodrawmethod
+	frame	data/chars/weapons/pipe08.png
+		delay	6
+	drawmethod tintmode 1
+	drawmethod tintcolor 150_150_150
+	frame	data/chars/weapons/pipe08.png

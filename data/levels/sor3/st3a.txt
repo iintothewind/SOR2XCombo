@@ -1,0 +1,370 @@
+loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st3a/_empty.png	0 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor3/st3a/bg00.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg01.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg02.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg03.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg04.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg05.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg06.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg07.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg06.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st3a/bg05.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+panel			data/bgs/sor3/st3a/_map.png		none	none
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber 	3
+spawn1			60 10 300
+spawn2			90 30 300
+spawn3			120 10 300
+spawn4			150 30 300
+updatescript	data/scripts/updatelevel/sor3_st3a.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		0 300 0 0 270 330 50 5000
+
+hole		963 278 0 1 92 120 30 10
+
+hole		1188 278 0 0 347 368 22 10
+
+hole		1763 278 0 1 1000 1000 63 10
+
+#########################################################################################
+
+load		Stage 3
+load		St3_Lamps 3
+load		St3_Gate1 3
+load		St3_Gate2 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		St3_Lamps 1
+flip		1
+coords		190 180 0
+at			0
+
+spawn		St3_Gate1 1
+flip		1
+coords		1 180 0
+at			0
+
+spawn		St3_Gate2 1
+flip		1
+coords		1 180 0
+at			0
+
+#########################################################################################
+
+spawn		Barrel_Drop 1
+flip		1
+coords		360 190 250
+at			0
+
+spawn		Donovan_Wait 1
+map			2
+flip		0
+coords		550 230 0
+at			0
+
+spawn		Donovan_Wait 1
+map			2
+flip		0
+coords		550 260 0
+at			0
+
+spawn		BongoX 1
+map			1
+flip		0
+coords		600 245 0
+at			0
+
+wait
+at			120
+
+group		3 3
+at			0
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		-100 230 0
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		550 230 0
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		550 230 0
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		550 230 0
+at			0
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		550 230 0
+at			0
+
+#########################################################################################
+
+group		1000 1000
+at			150
+
+spawn		RoadBlock_B 1
+flip		1
+coords		850 226 0
+at			150
+
+spawn		RoadBlock_B 1
+flip		1
+coords		950 260 0
+at			150
+
+spawn		Barrel_Drop 1
+flip		1
+coords		900 190 250
+at			150
+
+spawn		Slum_Wait 1
+map			2
+flip		0
+coords		600 230 0
+at			200
+
+spawn		Signal_Wait 1
+map			2
+flip		0
+coords		580 260 0
+at			200
+
+spawn		BasicX3 1
+map			2
+flip		0
+coords		580 260 0
+at			200
+
+spawn		BasicX2 1
+map			2
+flip		1
+coords		-100 230 0
+at			250
+
+wait
+at			650
+
+group		4 4
+at			300
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		550 230 0
+at			300
+
+spawn		SignalX 1
+map			2
+flip		1
+coords		-50 230 0
+at			300
+
+spawn		SignalB 1
+map			0
+flip		1
+coords		-100 230 0
+at			300
+
+spawn		SignalX 1
+map			1
+flip		1
+coords		600 230 0
+at			300
+
+spawn		BasicX2 1
+map			2
+flip		1
+coords		550 230 0
+at			300
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		550 230 0
+at			300
+
+spawn		BasicX2 1
+map			3
+flip		1
+coords		600 230 0
+at			300
+
+spawn		BasicX2 1
+map			2
+flip		1
+coords		-50 230 0
+at			300
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		-50 230 0
+at			300
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-50 230 0
+at			300
+
+#########################################################################################
+
+group		1000 1000
+at			700
+
+spawn		RoadBlock_B 1
+flip		1
+coords		750 226 0
+at			700
+
+spawn		RoadBlock_B 1
+flip		1
+coords		900 226 0
+at			700
+
+spawn		RoadBlock_B 1
+flip		1
+coords		950 226 0
+at			700
+
+spawn		Electra_Wait 1
+map			2
+flip		0
+coords		700 230 0
+at			800
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		550 230 0
+at			900
+
+spawn		ElectraX 1
+map			1
+flip		1
+coords		550 230 0
+at			900
+
+spawn		ElectraX 1
+map			1
+flip		1
+coords		600 230 0
+at			900
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		-25 230 0
+at			1200
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		-50 230 0
+at			1200
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			1250
+
+
+group		1 5
+at			1300
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-50 230 0
+at			1300
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-100 230 0
+at			1300
+
+spawn		ElectraX 1
+map			1
+flip		1
+coords		-150 230 0
+at			1300
+
+spawn		BasicX1 1
+map			2
+flip		0
+coords		360 230 300
+at			1300
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		240 230 300
+at			1300
+
+group		1 4
+at			1300
+
+spawn		BruceB 1
+map			3
+flip		0
+coords		350 226 300
+at			1300
+
+spawn		BasicX3 1
+map			3
+flip		0
+coords		350 246 300
+at			1300
+
+spawn		ElectraB 1
+map			3
+flip		0
+coords		350 266 300
+at			1300
+
+spawn		BossX1 1
+map			3
+flip		1
+coords		-100 230 0
+at			1300
+
+spawn		BossX1 1
+map			3
+2pspawn
+flip		1
+coords		-100 230 0
+at			1300

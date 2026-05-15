@@ -1,0 +1,56 @@
+name			Porta #GROUND
+type			None
+setlayer 1
+animationscript	data/scripts/animation/default.c
+
+load			BasicX3
+
+anim spawn
+	loop	0
+	delay	1
+	offset	0 0
+	@cmd aniChange 1 "ANI_FOLLOW1"
+	frame	data/bgs/sor1/st01/Porta01.png
+
+anim follow1
+	loop	0
+	delay	100
+	offset	0 0
+	frame	data/bgs/sor1/st01/Porta01.png
+	delay  5
+	sound   data/Sounds/gate.wav
+	frame	data/bgs/sor1/st01/Porta02.png
+	frame	data/bgs/sor1/st01/Porta03.png
+	frame	data/bgs/sor1/st01/Porta04.png
+	frame	data/bgs/sor1/st01/Porta05.png
+	frame	data/bgs/sor1/st01/Porta06.png
+	frame	data/bgs/sor1/st01/Porta07.png
+	frame	data/bgs/sor1/st01/Porta08.png
+	frame	data/bgs/sor1/st01/Porta09.png
+	frame	data/bgs/sor1/st01/Porta10.png
+	delay  200
+	@cmd spawn01 "BasicX3" 94 0 104 3
+	frame	data/bgs/sor1/st01/Porta11.png
+	@cmd spawn01 "BasicX3" 94 0 104 3
+	frame	data/bgs/sor1/st01/Porta11.png
+	@cmd spawn01 "BasicX3" 94 0 104 3
+	frame	data/bgs/sor1/st01/Porta11.png
+	delay	5
+	sound   data/Sounds/gate.wav
+	frame	data/bgs/sor1/st01/Porta10.png
+	frame	data/bgs/sor1/st01/Porta09.png
+	frame	data/bgs/sor1/st01/Porta08.png
+	frame	data/bgs/sor1/st01/Porta07.png
+	frame	data/bgs/sor1/st01/Porta06.png
+	frame	data/bgs/sor1/st01/Porta05.png
+	frame	data/bgs/sor1/st01/Porta04.png
+	frame	data/bgs/sor1/st01/Porta03.png
+	frame	data/bgs/sor1/st01/Porta02.png
+
+anim idle
+	loop	0
+	delay	128
+	offset	0 0
+	frame	data/bgs/sor1/st01/Porta01.png
+	@cmd suicide
+	frame	data/bgs/sor1/st01/Porta01.png

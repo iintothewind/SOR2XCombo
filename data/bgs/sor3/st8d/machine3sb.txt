@@ -1,0 +1,15 @@
+name			St8_Machine3Sb
+type			none
+shadow			0
+ondrawscript	data/scripts/ondraw/zero.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	160
+	offset	1 72
+	@cmd dasher 0.16 0 -0.16
+	platform 320 320 180 460 276 0.001
+	frame	data/bgs/sor3/st8d/_empty.png
+	@cmd suicide
+	frame	data/bgs/sor3/st8d/_empty.png

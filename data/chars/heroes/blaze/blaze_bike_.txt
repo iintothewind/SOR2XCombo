@@ -1,0 +1,182 @@
+##MAIN
+name				Blaze_Bike_
+type				npc
+
+##LIFE
+health				0
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight			1 #SCRIPT
+
+##ENERGY
+mp					0
+mprate  			5 #SCRIPT
+
+##GRAB
+grabdistance 		18 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				75
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				wander #NPC ONLY
+facing				1
+nodrop				2
+cantgrab			1
+modelflag			3
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/moto.c
+animationscript	 	data/scripts/animation/default.c
+script				data/scripts/updateentity/moto.c
+
+##ICONS
+icon				data/chars/heroes/blaze/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Blaze1.wav
+
+##REMAPS
+remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter1.png
+remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter2.png
+remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter3.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	127 179
+	frame	data/chars/heroes/blaze/bike/idle00.png
+
+anim idle
+	range	0 481
+	rangea	-999 999
+	rangez	-999 999
+	loop	1
+	delay	2
+	offset	127 179
+	bbox 	106 107 20 74
+	frame	data/chars/heroes/blaze/bike/idle00.png
+	frame	data/chars/heroes/blaze/bike/idle01.png
+
+anim walk
+	loop	1
+	delay	2
+	offset	127 179
+	bbox 	108 107 27 74
+	frame	data/chars/heroes/blaze/bike/walkright00.png
+	frame	data/chars/heroes/blaze/bike/walkright01.png
+
+anim up
+	loop	1
+	delay	2
+	offset	127 179
+	bbox 	107 110 23 71
+	frame	data/chars/heroes/blaze/bike/walkup00.png
+	frame	data/chars/heroes/blaze/bike/walkup01.png
+
+anim down
+	loop	1
+	delay	2
+	offset	127 179
+	bbox 	106 112 24 69
+	frame	data/chars/heroes/blaze/bike/walkdown00.png
+	frame	data/chars/heroes/blaze/bike/walkdown01.png
+
+anim backwalk
+	loop	1
+	delay	2
+	offset	127 179
+	bbox 	106 107 20 74
+	frame	data/chars/heroes/blaze/bike/idle00.png
+	frame	data/chars/heroes/blaze/bike/idle01.png
+
+anim jumpdelay
+	loop	0
+	delay	2
+	offset	127 179
+	frame	data/chars/heroes/blaze/bike/jumpdelay00.png
+	frame	data/chars/heroes/blaze/bike/jumpland00.png
+
+anim jump
+	loop	1
+	delay	2
+	offset	127 179
+	frame	data/chars/heroes/blaze/bike/jump00.png
+	frame	data/chars/heroes/blaze/bike/jump01.png
+
+anim walkoff
+	loop	1
+	delay	2
+	offset	127 179
+	sound	data/sounds/Run3.wav
+	@cmd jump 1
+	frame	data/chars/heroes/blaze/bike/jump00.png
+	frame	data/chars/heroes/blaze/bike/jump01.png
+
+anim jumpland
+	loop	0
+	delay	2
+	offset	127 179
+	frame	data/chars/heroes/blaze/bike/jumpdelay00.png
+	frame	data/chars/heroes/blaze/bike/jumpland00.png
+
+anim pain
+	loop	0
+	delay	2
+	offset	127 179
+	frame	data/chars/heroes/blaze/bike/pain00.png
+	frame	data/chars/heroes/blaze/bike/pain01.png
+	frame	data/chars/heroes/blaze/bike/pain00.png
+	frame	data/chars/heroes/blaze/bike/pain01.png
+
+anim fall
+	loop	1 2 4
+	delay	2
+	offset	127 179
+	frame	data/chars/heroes/blaze/bike/pain00.png
+	@cmd spawnBind "Destruction" 0 40 1
+	frame	data/chars/heroes/blaze/bike/pain01.png
+	frame	data/chars/heroes/blaze/bike/pain00.png
+	frame	data/chars/heroes/blaze/bike/pain01.png
+
+anim attack1 #BACK ATTACK
+	fastattack 1
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	2
+	offset	127 179
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/heroes/blaze/bike/a100.png
+	frame	data/chars/heroes/blaze/bike/a101.png
+	frame	data/chars/heroes/blaze/bike/a100.png
+	frame	data/chars/heroes/blaze/bike/a101.png
+	attack 79 116 38 12 16 0 0 0 15 12
+	frame	data/chars/heroes/blaze/bike/a102.png
+	frame	data/chars/heroes/blaze/bike/a103.png
+	bbox 	107 107 17 74
+	frame	data/chars/heroes/blaze/bike/a102.png
+	frame	data/chars/heroes/blaze/bike/a103.png

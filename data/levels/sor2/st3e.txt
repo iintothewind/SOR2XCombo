@@ -1,0 +1,128 @@
+loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st3e/_empty.png	1 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor2/st3e/bg00.png		0.8 1 -50 0 0 0 1 1 0 0 1 10 300 0.5
+panel			data/bgs/sor2/st3e/_map.png		none	none
+fglayer			data/bgs/sor2/st3e/fg00.png		-125 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st3e/fg01.png		-125 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st3e/fg02.png		-125 -0.5 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st3e/fg02.png		75 -0.5 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber 	3
+spawn1			120 20 300
+spawn2			150 40 300
+spawn3			180 20 300
+spawn4			210 40 300
+updatescript 	data/scripts/updatelevel/sor2_st3e.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		0 275 -500 -500 210 50 80 5000
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		400 240 0
+at			0
+
+spawn		Box_A 1
+flip		1
+coords		550 270 0
+at			0
+
+spawn		Kusanagi_Wait1 1
+map			0
+weapon		Kunai 1
+flip		0
+coords		675 230 0
+at			0
+
+spawn		Kusanagi_Wait2 1
+map			1
+weapon		Sword 1
+flip		0
+coords		725 230 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		550 240 0
+at			0
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 240 0
+at			0
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		650 240 0
+at			50
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		550 240 0
+at			50
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		600 240 0
+at			100
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		650 240 0
+at			100
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			150
+
+group		4 4
+at			250
+
+spawn		KusanagiX 1
+map			1
+flip		1
+coords		700 230 0
+at			250
+
+spawn		BossX1 1
+map			2
+flip		1
+coords		500 230 300
+at			250
+
+spawn		BossX1 1
+map			2
+2pspawn
+flip		1
+coords		500 230 300
+at			250
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 260 0
+at			250
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		600 230 0
+at			250

@@ -1,0 +1,53 @@
+name		 	St7_People
+type		 	panel
+hostile			enemy
+shadow		 	0
+speed		 	5
+scroll			-0.8
+onspawnscript 	data/scripts/onspawn/people.c
+animationscript data/scripts/animation/default.c
+
+load			St7_Flash
+
+anim idle
+	loop	1
+	delay	16
+	offset	1 276
+	sound	data/sounds/Crowd3.wav
+	frame	data/bgs/sor3/st7c/people00.png
+	frame	data/bgs/sor3/st7c/people01.png
+	frame	data/bgs/sor3/st7c/people02.png
+	frame	data/bgs/sor3/st7c/people03.png
+	
+anim follow1
+	loop	1 4 19
+	delay	8
+	offset	1 276
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people00.png
+	sound	data/sounds/Crowd2.wav
+	frame	data/bgs/sor3/st7c/people01.png
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people02.png
+	frame	data/bgs/sor3/st7c/people03.png
+	frame	data/bgs/sor3/st7c/people00.png
+	frame	data/bgs/sor3/st7c/people01.png
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people02.png
+	frame	data/bgs/sor3/st7c/people03.png
+	frame	data/bgs/sor3/st7c/people00.png
+	frame	data/bgs/sor3/st7c/people01.png
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people02.png
+	frame	data/bgs/sor3/st7c/people03.png
+	frame	data/bgs/sor3/st7c/people00.png
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people01.png
+	frame	data/bgs/sor3/st7c/people02.png
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people03.png
+	frame	data/bgs/sor3/st7c/people00.png
+	@cmd spawn01 "St7_Flash" 0 0 -1
+	frame	data/bgs/sor3/st7c/people01.png
+	frame	data/bgs/sor3/st7c/people02.png
+	frame	data/bgs/sor3/st7c/people03.png

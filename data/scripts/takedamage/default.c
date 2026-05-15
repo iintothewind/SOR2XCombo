@@ -1,0 +1,18 @@
+#import "data/scripts/takedamage/main.c"
+
+void main()
+{
+	addMp();
+	healStop();
+	lastChance();
+	deathPunish();
+  escapeDeath();
+	// escapeCount();
+	hitDmg();
+	comboDmg();
+	koCount();
+	edgeLock();
+	otg();
+	registerOpponent();
+	quickIdles();
+}

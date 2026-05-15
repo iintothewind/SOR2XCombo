@@ -1,0 +1,208 @@
+##MAIN
+name				Sammy_Bike
+type				none
+
+##LIFE
+health				0
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					0
+mprate  			5 #SCRIPT
+
+##GRAB
+grabdistance 		18 #36/33/30
+grabfinish 			0 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-2 #-1/-2/-3
+height				69
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+facing				1
+nodrop				2
+cantgrab			1
+modelflag			3
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/moto.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+script				data/scripts/updateentity/moto.c
+
+##ICONS
+icon				data/chars/heroes/sammy/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/Sammy1.wav
+
+##REMAPS
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter1.png
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter2.png
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter3.png
+
+##COMMANDS
+com 				a2	freespecial9 #NITRO
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	idle 	1 #REDUNTANT BUT NEEDED TO AVOID PLAYERS TO FREEZE DURING LEVEL START AND MODEL CHANGE TO BIKE TYPE, MAYBE ENGINE BUG
+	loop	1
+	delay	2
+	offset	153 175
+	bbox 	132 109 18 68
+	frame	data/chars/heroes/sammy/bike/idle00.png
+	frame	data/chars/heroes/sammy/bike/idle01.png
+
+anim walk
+	idle 	1 #REDUNTANT BUT NEEDED TO AVOID PLAYERS TO FREEZE DURING LEVEL START AND MODEL CHANGE TO BIKE TYPE, MAYBE ENGINE BUG
+	loop	1
+	delay	2
+	offset	153 175
+	bbox 	137 109 24 68
+	frame	data/chars/heroes/sammy/bike/walkright00.png
+	frame	data/chars/heroes/sammy/bike/walkright01.png
+
+anim up
+	idle 	1 #REDUNTANT BUT NEEDED TO AVOID PLAYERS TO FREEZE DURING LEVEL START AND MODEL CHANGE TO BIKE TYPE, MAYBE ENGINE BUG
+	loop	1
+	delay	2
+	offset	153 175
+	bbox 	134 109 21 68
+	frame	data/chars/heroes/sammy/bike/walkup00.png
+	frame	data/chars/heroes/sammy/bike/walkup01.png
+
+anim down
+	idle 	1 #REDUNTANT BUT NEEDED TO AVOID PLAYERS TO FREEZE DURING LEVEL START AND MODEL CHANGE TO BIKE TYPE, MAYBE ENGINE BUG
+	loop	1
+	delay	2
+	offset	153 175
+	bbox 	134 111 21 66
+	frame	data/chars/heroes/sammy/bike/walkdown00.png
+	frame	data/chars/heroes/sammy/bike/walkdown01.png
+
+anim backwalk
+	idle 	1 #REDUNTANT BUT NEEDED TO AVOID PLAYERS TO FREEZE DURING LEVEL START AND MODEL CHANGE TO BIKE TYPE, MAYBE ENGINE BUG
+	loop	1
+	delay	2
+	offset	153 175
+	bbox 	132 109 17 68
+	frame	data/chars/heroes/sammy/bike/idle00.png
+	frame	data/chars/heroes/sammy/bike/idle01.png
+
+anim jumpdelay
+	loop	0
+	delay	2
+	offset	153 175
+	frame	data/chars/heroes/sammy/bike/jumpdelay00.png
+	frame	data/chars/heroes/sammy/bike/jumpland00.png
+
+anim jump
+	loop	1
+	delay	2
+	offset	153 175
+	frame	data/chars/heroes/sammy/bike/jump00.png
+	frame	data/chars/heroes/sammy/bike/jump01.png
+
+anim walkoff
+	loop	1
+	delay	2
+	offset	153 175
+	sound	data/sounds/Run3.wav
+	@cmd jump 1
+	frame	data/chars/heroes/sammy/bike/jump00.png
+	frame	data/chars/heroes/sammy/bike/jump01.png
+
+anim jumpland
+	loop	0
+	delay	2
+	offset	153 175
+	frame	data/chars/heroes/sammy/bike/jumpdelay00.png
+	frame	data/chars/heroes/sammy/bike/jumpland00.png
+
+anim pain
+	loop	0
+	delay	2
+	offset	153 175
+	frame	data/chars/heroes/sammy/bike/pain00.png
+	frame	data/chars/heroes/sammy/bike/pain01.png
+	idle 1
+	frame	data/chars/heroes/sammy/bike/pain00.png
+	frame	data/chars/heroes/sammy/bike/pain01.png
+
+anim fall
+	loop	0
+	delay	2
+	offset	153 175
+	frame	data/chars/heroes/sammy/bike/pain00.png
+	@cmd spawnBind "Destruction" 0 40 1
+	frame	data/chars/heroes/sammy/bike/pain01.png
+
+anim attack1 #BACK ATTACK
+	fastattack 1
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	2
+	offset	153 175
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/heroes/sammy/bike/a100.png
+	frame	data/chars/heroes/sammy/bike/a101.png
+	frame	data/chars/heroes/sammy/bike/a100.png
+	frame	data/chars/heroes/sammy/bike/a101.png
+	attack 89 92 43 55 18 0 0 0 15 12
+	frame	data/chars/heroes/sammy/bike/a102.png
+	frame	data/chars/heroes/sammy/bike/a103.png
+	bbox 	132 105 32 72
+	frame	data/chars/heroes/sammy/bike/a102.png
+	frame	data/chars/heroes/sammy/bike/a103.png
+
+anim freespecial9 #USE NITRO
+	@cmd lockAni "currentLeader" "other" #THIS WILL LOCK NITRO ANIMATION IF THIS PLAYER IS NOT A LEADER
+	fastattack 0
+	jugglecost 5
+	forcedirection 2
+	otg 1
+	energycost 40 1
+	loop	0
+	delay	2
+	offset	153 175
+	hitfx	data/sounds/HighPunch.wav
+	frame	data/chars/heroes/sammy/bike/idle00.png
+	sound	data/sounds/Nitro.wav
+	frame	data/chars/heroes/sammy/bike/idle01.png
+	@cmd spawnBind "Nitro" -55 33 -1
+	attack4 153 134 54 43 32 0 0 0 10 12
+	frame	data/chars/heroes/sammy/bike/walkright01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/sammy/bike/walkright00.png
+	@cmd looper 2 40
+	frame	data/chars/heroes/sammy/bike/walkright01.png

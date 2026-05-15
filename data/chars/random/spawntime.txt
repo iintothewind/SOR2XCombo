@@ -1,0 +1,52 @@
+name				SpawnTime
+type				enemy
+subject_to_screen 	1
+health				1
+shadow				0
+alpha				1
+onspawnscript		data/scripts/onspawn/spawnTime.c
+
+load				BasicX1
+load				BasicX2
+load				SignalX
+load				FogX
+load				HakuyoX
+load				KusanagiX
+load				RavenX
+load				BigbenX
+load				ReineX
+load				GarnetX
+load				BodyGuardX
+load				TigerX
+load				P1X
+load				BongoX
+load				ElectraX
+load				JackB
+load				AbadedeB
+load				BarbonB
+load				JetB
+load				ZamzaB
+load				BearB
+load				HarakiriB
+load				ParticleB
+load				ShivaB
+load				MrxB
+load				AshB
+load				BruceB
+load				RooB
+load				MonalisaB
+load				BreakB
+load				YamatoB
+load				RobotxB
+load				RocketB
+load				Shiva_BotB
+load				TrackerB
+load				NeoxB
+load				FoodX
+load				WeaponX
+
+anim idle
+	loop	0
+	delay	4
+	offset	50 72
+	frame	data/chars/random/empty0.png

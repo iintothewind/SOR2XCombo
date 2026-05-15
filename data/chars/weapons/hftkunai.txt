@@ -1,0 +1,61 @@
+name				hftkunai #THROWNED
+type				none
+health				1
+nolife				1
+lifespan			2
+offscreenkill		50
+remove				1
+nomove				1 1
+jugglepoints		50
+gfxshadow			1 1
+noatflash 			1
+flash				NoFlash
+candamage			enemy obstacle
+didhitscript		data/scripts/didhit/ftkunai.c
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/weapons.c
+ondrawscript		data/scripts/ondraw/harakiri_star.c
+onfallscript		data/scripts/onfall/weapons.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	1
+	delay	4
+	offset	25 30
+	drawmethod tintmode 1
+	drawmethod tintcolor 255_255_0
+	bbox 	9 19 32 11
+	hitfx	data/sounds/ninpo2.wav
+	attack 9 19 32 11 25 1 1 0 10 24
+	dropv 3.7 1 0
+	frame	data/chars/weapons/ftkunai08.png
+	nodrawmethod
+	frame	data/chars/weapons/ftkunai08.png
+
+anim fall
+	landframe 5
+	loop	1 1 5
+	delay	4
+	offset	25 30
+	drawmethod tintmode 1
+	drawmethod tintcolor 255_255_0
+	shadowcoords 22 35
+	sound	data/sounds/Clash2.wav
+	frame	data/chars/weapons/ftkunai07.png
+	sound	data/sounds/Whoosh.wav
+	frame	data/chars/weapons/ftkunai07.png
+	frame	data/chars/weapons/ftkunai06.png
+	frame	data/chars/weapons/ftkunai05.png
+	frame	data/chars/weapons/ftkunai04.png
+	frame	data/chars/weapons/ftkunai03.png
+	frame	data/chars/weapons/ftkunai02.png
+	frame	data/chars/weapons/ftkunai01.png
+	frame	data/chars/weapons/ftkunai00.png
+	nodrawmethod
+	frame	data/chars/weapons/ftkunai08.png

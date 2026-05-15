@@ -1,0 +1,26 @@
+name			Burn
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+alpha			1
+toflip			0
+onspawnscript	data/scripts/onspawn/graphics.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	4
+	offset	48 74
+	sound	data/sounds/Burn.wav
+	frame	data/chars/misc/burn/burn00.png
+	frame	data/chars/misc/burn/burn01.png
+	frame	data/chars/misc/burn/burn02.png
+	frame	data/chars/misc/burn/burn03.png
+	frame	data/chars/misc/burn/burn04.png
+	frame	data/chars/misc/burn/burn05.png
+	frame	data/chars/misc/burn/burn06.png
+	frame	data/chars/misc/burn/burn07.png
+	@cmd suicide
+	frame	data/chars/misc/burn/burn07.png

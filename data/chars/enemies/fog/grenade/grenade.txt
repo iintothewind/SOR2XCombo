@@ -1,0 +1,90 @@
+name				Grenade #THROWNED
+type				npc
+subType			weapon
+health				1
+nolife				1
+lifespan			2
+death         1
+offscreenkill		120
+noquake 			1
+gfxshadow			1 1
+bounce 				1
+stealth				2
+candamage			enemy obstacle
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/weapons.c
+onfallscript	data/scripts/onfall/weapons.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	bouncefactor 2
+	followanim 1
+	followcond 1
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	1
+	delay	6
+	offset	25 25
+	burn 10 10 40 40 150 2 1 0 0 36
+	dropv 3 4 0
+	sound	data/sounds/grenade2.wav
+	frame	data/chars/enemies/fog/grenade/gra01.png
+	frame	data/chars/enemies/fog/grenade/gra02.png
+	frame	data/chars/enemies/fog/grenade/gra03.png
+	frame	data/chars/enemies/fog/grenade/gra04.png
+	frame	data/chars/enemies/fog/grenade/gra05.png
+
+anim follow1
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	240 136
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/enemies/fog/grenade/bempty.png
+	burn 160 90 160 150 50 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/enemies/fog/grenade/bempty.png
+	@cmd suicide
+	frame	data/chars/enemies/fog/grenade/bempty.png
+
+anim fall #EXPLOSION
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	48
+	offset	240 136
+	@cmd spawnBind "Destruction" 0 0 1
+	burn 160 90 160 150 50 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/enemies/fog/grenade/bempty.png
+	delay	2
+	@cmd suicide
+	frame	data/chars/enemies/fog/grenade/bempty.png
+
+
+anim death #EXPLOSION
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	48
+	offset	240 136
+	@cmd spawnBind "Destruction" 0 0 1
+	burn 160 90 160 150 50 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/enemies/fog/grenade/bempty.png
+	delay	2
+	@cmd suicide
+	frame	data/chars/enemies/fog/grenade/bempty.png

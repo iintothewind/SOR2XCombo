@@ -1,0 +1,551 @@
+##MAIN
+name				Bongo_Wait
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				77
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/bongo.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/bongo.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/bongo/icon.png 1
+
+##DIESOUND
+diesound			data/voices/BossDie1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/bongo/idle00.png data/chars/enemies/bongo/alter1.png
+remap				data/chars/enemies/bongo/idle00.png data/chars/enemies/bongo/alter2.png
+remap				data/chars/enemies/bongo/idle00.png data/chars/enemies/bongo/alter3.png
+remap				data/chars/enemies/bongo/idle00.png data/chars/enemies/bongo/alter4.png
+
+##LOADS
+load				Bongo_Fire
+load				Bongo_Fire_B
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim spawn #WAIT SPAWN
+	loop	0
+	delay	16
+	offset	144 175
+	@cmd aniChange 0 "ANI_FOLLOW20"
+	frame	data/chars/enemies/bongo/laugh00.png
+
+anim follow20 #WAIT LOOP
+	loop	1
+	delay	12
+	offset	144 175
+	bbox 	126 102 36 75
+	@cmd cancel -999 100 -999 999 -999 999 "ANI_FOLLOW21"
+	frame	data/chars/enemies/bongo/laugh00.png
+	frame	data/chars/enemies/bongo/laugh01.png
+
+anim follow21 #LOOP STOP
+	loop	0
+	delay	12
+	offset	144 175
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/laugh00.png
+	frame	data/chars/enemies/bongo/laugh01.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	32
+	offset	144 175
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/idle00.png
+	frame	data/chars/enemies/bongo/idle01.png
+
+anim walk
+	loop	1
+	delay	18
+	offset	144 175
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/walk00.png
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/walk01.png
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/walk02.png
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	144 175
+	frame	data/chars/enemies/bongo/get00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	144 175
+	bbox 	126 110 36 67
+	frame	data/chars/enemies/bongo/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	144 175
+	bbox 	126 115 40 62
+	frame	data/chars/enemies/bongo/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	144 175
+	bbox 	126 106 40 69
+	@cmd jump 1
+	frame	data/chars/enemies/bongo/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	144 175
+	bbox 	126 115 40 62
+	sound	data/sounds/Jumpland2.wav
+	frame	data/chars/enemies/bongo/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	144 175
+	bbox 	126 116 36 61
+	frame	data/chars/enemies/bongo/pain00.png
+	frame	data/chars/enemies/bongo/pain01.png
+	frame	data/chars/enemies/bongo/pain00.png
+	frame	data/chars/enemies/bongo/pain01.png
+	frame	data/chars/enemies/bongo/pain00.png
+	frame	data/chars/enemies/bongo/pain01.png
+	frame	data/chars/enemies/bongo/pain00.png
+	frame	data/chars/enemies/bongo/pain01.png
+	frame	data/chars/enemies/bongo/pain00.png
+	frame	data/chars/enemies/bongo/pain01.png
+	frame	data/chars/enemies/bongo/pain00.png
+	frame	data/chars/enemies/bongo/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	144 175
+	bbox 	126 110 36 67
+	frame	data/chars/enemies/bongo/pain200.png
+	frame	data/chars/enemies/bongo/pain201.png
+	frame	data/chars/enemies/bongo/pain200.png
+	frame	data/chars/enemies/bongo/pain201.png
+	frame	data/chars/enemies/bongo/pain200.png
+	frame	data/chars/enemies/bongo/pain201.png
+	frame	data/chars/enemies/bongo/pain200.png
+	frame	data/chars/enemies/bongo/pain201.png
+	frame	data/chars/enemies/bongo/pain200.png
+	frame	data/chars/enemies/bongo/pain201.png
+	frame	data/chars/enemies/bongo/pain200.png
+	frame	data/chars/enemies/bongo/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	144 175
+	bbox 	119 117 44 42
+	frame	data/chars/enemies/bongo/fall00.png
+		delay	8
+	bbox 	101 145 58 32
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	144 175
+	bbox 	119 117 44 42
+	frame	data/chars/enemies/bongo/fall00.png
+		delay	8
+	bbox 	101 145 58 32
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	144 175
+	bbox 	119 117 44 42
+	frame	data/chars/enemies/bongo/fall00.png
+		delay	8
+	bbox 	101 145 58 32
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	144 175
+	frame	data/chars/enemies/bongo/fall600.png
+	frame	data/chars/enemies/bongo/fall601.png
+	frame	data/chars/enemies/bongo/fall602.png
+	frame	data/chars/enemies/bongo/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	144 175
+	frame	data/chars/enemies/bongo/fall700.png
+	frame	data/chars/enemies/bongo/fall701.png
+	frame	data/chars/enemies/bongo/fall702.png
+	frame	data/chars/enemies/bongo/fall703.png
+	frame	data/chars/enemies/bongo/fall704.png
+	frame	data/chars/enemies/bongo/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	144 175
+	bbox 	119 117 44 42
+	hitfx	data/sounds/MediumKick.wav
+	attack 119 117 44 42 4 1 0 0 20 12
+	frame	data/chars/enemies/bongo/fall00.png
+		delay	999
+	frame	data/chars/enemies/bongo/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	101 145 58 32
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	144 175
+	bbox 	122 112 38 64
+	hitfx	data/sounds/MediumKick.wav
+	attack 122 112 38 64 4 1 0 0 20 12
+	frame	data/chars/enemies/bongo/fall900.png
+		delay	999
+	frame	data/chars/enemies/bongo/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	101 145 58 32
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	144 175
+	frame	data/chars/enemies/bongo/fall01.png
+	frame	data/chars/enemies/bongo/fall01.png
+	frame	data/chars/enemies/bongo/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	144 175
+	frame	data/chars/enemies/bongo/rise00.png
+	frame	data/chars/enemies/bongo/rise01.png
+	frame	data/chars/enemies/bongo/rise00.png
+	frame	data/chars/enemies/bongo/rise02.png
+
+anim riseattack
+	range 40 240
+	rangea 0 0
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	24
+	offset	144 175
+	bbox 	126 115 40 62
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/Bigben1.wav
+	frame	data/chars/enemies/bongo/roll00.png
+		delay	8
+	@cmd dasher 2.5 0 0
+	attack 128 135 33 37 8 1 0 0 10 24
+	bbox 	121 131 56 56
+	frame	data/chars/enemies/bongo/roll01.png
+	@cmd dasher 2.5 0 0
+	sound	data/sounds/Roll.wav
+	frame	data/chars/enemies/bongo/roll01.png
+	@cmd dasher 2.3 0 0
+	frame	data/chars/enemies/bongo/roll02.png
+	@cmd dasher 2.1 0 0
+	frame	data/chars/enemies/bongo/roll03.png
+	@cmd dasher 1.9 0 0
+	frame	data/chars/enemies/bongo/roll04.png
+	@cmd looper 2 3
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	126 115 40 62
+	sound	data/sounds/Dizzy.wav
+	frame	data/chars/enemies/bongo/roll00.png
+	frame	data/chars/enemies/bongo/roll05.png
+	frame	data/chars/enemies/bongo/roll06.png
+	frame	data/chars/enemies/bongo/roll07.png
+	@cmd looper 7 7
+	frame	data/chars/enemies/bongo/roll00.png
+
+anim attack1
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	144 175
+	bbox 	126 102 36 75
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/bongo/a100.png
+	frame	data/chars/enemies/bongo/a101.png
+	attack 148 110 46 18 8 1 0 0 30 12
+	frame	data/chars/enemies/bongo/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/bongo/a103.png
+
+anim attack2 #TRIPLE SLAP
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	144 175
+	bbox 	126 102 36 75
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/enemies/bongo/a100.png
+	frame	data/chars/enemies/bongo/a101.png
+	attack 148 110 46 18 4 0 0 0 30 12
+	dropv 1 0.5 0
+	frame	data/chars/enemies/bongo/a102.png
+	sound	data/sounds/MediumAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/bongo/a103.png
+	attack 148 110 46 18 4 0 0 0 30 12
+	dropv 1 0.5 0
+	frame	data/chars/enemies/bongo/a102.png
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/bongo/a101.png
+	attack 148 110 46 18 8 1 0 0 30 12
+	frame	data/chars/enemies/bongo/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/bongo/a103.png
+
+anim attack3 #FIRE
+	range 120 400
+	rangea 0 100
+	rangez -999 999
+	loop	0
+	delay	16
+	offset	144 175
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire00.png
+	frame	data/chars/enemies/bongo/fire01.png
+		delay	4
+	@cmd target 1.6 1.6
+	@cmd dashTarget
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/fire02.png
+		delay	12
+	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+	@cmd dashTarget
+	frame	data/chars/enemies/bongo/fire02.png
+	@cmd dashTarget
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire03.png
+	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+	@cmd dashTarget
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/fire04.png
+	@cmd dashTarget
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire05.png
+	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+	@cmd dashTarget
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/fire02.png
+	@cmd dashTarget
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire03.png
+	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+	@cmd dashTarget
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/fire04.png
+	@cmd dashTarget
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire05.png
+	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+	@cmd dashTarget
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/fire02.png
+	@cmd dasher 1 0 0
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire03.png
+	@cmd dasher 0.5 0 0
+	bbox 	126 108 36 69
+	frame	data/chars/enemies/bongo/fire04.png
+	@cmd dasher 0 0 0
+	bbox 	126 102 36 75
+	frame	data/chars/enemies/bongo/fire05.png
+
+anim attack4 #ROLL
+	range 100 240
+	rangea 0 0
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	24
+	offset	144 175
+	bbox 	126 115 40 62
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/Bigben1.wav
+	frame	data/chars/enemies/bongo/roll00.png
+	delay	8
+	bbox 	121 131 56 56
+	@cmd dasher 2.5 0 0
+	attack 128 135 33 37 8 1 0 0 10 24
+	frame	data/chars/enemies/bongo/roll01.png
+	@cmd dasher 2.5 0 0
+	sound	data/sounds/Roll.wav
+	attack 128 135 33 37 5 1 0 0 10 24
+	frame	data/chars/enemies/bongo/roll01.png
+	@cmd dasher 2.3 0 0
+	attack 128 135 33 37 5 1 0 0 10 24
+	frame	data/chars/enemies/bongo/roll02.png
+	@cmd dasher 2.1 0 0
+	attack 128 135 33 37 5 1 0 0 10 24
+	frame	data/chars/enemies/bongo/roll03.png
+	@cmd dasher 1.9 0 0
+	attack 128 135 33 37 5 1 0 0 10 24
+	frame	data/chars/enemies/bongo/roll04.png
+	delay 1
+	@cmd looper 2 3
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	126 115 40 62
+	sound	data/sounds/Dizzy.wav
+	frame	data/chars/enemies/bongo/roll00.png
+	frame	data/chars/enemies/bongo/roll05.png
+	frame	data/chars/enemies/bongo/roll06.png
+	frame	data/chars/enemies/bongo/roll07.png
+	@cmd looper 7 7
+	frame	data/chars/enemies/bongo/roll00.png
+
+anim attack5 #GRAB
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 0
+	forcedirection 0
+	otg 1
+	loop	0
+	delay	12
+	offset	144 175
+	bbox 	126 102 36 75
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/bongo/a100.png
+	frame	data/chars/enemies/bongo/a101.png
+	attack 148 110 46 18 0 0 1 0 0 12
+	frame	data/chars/enemies/bongo/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/bongo/a103.png
+
+anim follow1 #THROW
+	loop	0
+	delay	12
+	offset	144 175
+	@cmd grabStart2
+	@cmd position 1 25 0 1 0
+	sound	data/sounds/Throw.wav
+	frame	data/chars/enemies/bongo/throw00.png
+	@cmd position 5 23 25 1 0
+	frame	data/chars/enemies/bongo/throw01.png
+	@cmd position 5 5 26 1 0
+	frame	data/chars/enemies/bongo/throw02.png
+	@cmd position 5 23 25 1 0
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/bongo/throw03.png
+	@cmd position 5 23 15 1 0
+	@cmd throw 12 1 -2 2 0 0
+	frame	data/chars/enemies/bongo/throw04.png
+	@cmd clearL
+	frame	data/chars/enemies/bongo/throw05.png
+
+anim attack6 #LAUGH
+	range 120 400
+	rangea 0 100
+	rangez -999 999
+	loop	0
+	delay	12
+	offset	144 175
+	bbox 	126 102 36 75
+	sound	data/voices/Bigben1.wav
+	frame	data/chars/enemies/bongo/laugh00.png
+	frame	data/chars/enemies/bongo/laugh01.png
+	frame	data/chars/enemies/bongo/laugh00.png
+	frame	data/chars/enemies/bongo/laugh01.png
+	frame	data/chars/enemies/bongo/laugh00.png
+	frame	data/chars/enemies/bongo/laugh01.png
+	frame	data/chars/enemies/bongo/laugh00.png
+	frame	data/chars/enemies/bongo/laugh01.png
+	frame	data/chars/enemies/bongo/laugh00.png

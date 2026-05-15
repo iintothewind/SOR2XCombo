@@ -1,0 +1,57 @@
+name			Smoke
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+alpha			1
+toflip			1
+onspawnscript	data/scripts/onspawn/graphics.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	3
+	offset	67 50
+	frame	data/chars/misc/smoke/smoke00.png
+	frame	data/chars/misc/smoke/smoke01.png
+	frame	data/chars/misc/smoke/smoke02.png
+	frame	data/chars/misc/smoke/smoke03.png
+	frame	data/chars/misc/smoke/smoke04.png
+	frame	data/chars/misc/smoke/smoke05.png
+	frame	data/chars/misc/smoke/smoke06.png
+	frame	data/chars/misc/smoke/smoke07.png
+	frame	data/chars/misc/smoke/smoke08.png
+	frame	data/chars/misc/smoke/smoke09.png
+	frame	data/chars/misc/smoke/smoke10.png
+	frame	data/chars/misc/smoke/smoke11.png
+	frame	data/chars/misc/smoke/smoke12.png
+	frame	data/chars/misc/smoke/smoke13.png
+	frame	data/chars/misc/smoke/smoke14.png
+	frame	data/chars/misc/smoke/smoke15.png
+	frame	data/chars/misc/smoke/smoke16.png
+	frame	data/chars/misc/smoke/smoke17.png
+	frame	data/chars/misc/smoke/smoke18.png
+	frame	data/chars/misc/smoke/smoke19.png
+		delay	6
+	frame	data/chars/misc/smoke/smoke20.png
+	frame	data/chars/misc/smoke/smoke21.png
+	frame	data/chars/misc/smoke/smoke22.png
+	frame	data/chars/misc/smoke/smoke23.png
+	frame	data/chars/misc/smoke/smoke24.png
+	frame	data/chars/misc/smoke/smoke25.png
+	frame	data/chars/misc/smoke/smoke26.png
+	frame	data/chars/misc/smoke/smoke27.png
+	frame	data/chars/misc/smoke/smoke28.png
+	frame	data/chars/misc/smoke/smoke29.png
+	frame	data/chars/misc/smoke/smoke30.png
+	frame	data/chars/misc/smoke/smoke31.png
+	frame	data/chars/misc/smoke/smoke32.png
+	frame	data/chars/misc/smoke/smoke33.png
+	frame	data/chars/misc/smoke/smoke34.png
+	frame	data/chars/misc/smoke/smoke35.png
+	frame	data/chars/misc/smoke/smoke36.png
+	frame	data/chars/misc/smoke/smoke37.png
+	frame	data/chars/misc/smoke/smoke38.png
+	@cmd suicide
+	frame	data/chars/misc/smoke/empty.png

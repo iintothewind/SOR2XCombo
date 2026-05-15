@@ -1,0 +1,40 @@
+name			st1_manhole
+type			npc
+hostile			player
+subject_to_hole	0
+health			1
+nomove			1 1
+noquake			1 0
+bounce		 	1
+gfxshadow		1 1
+stealth			2
+ondrawscript	data/scripts/ondraw/manhole.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	8
+	offset	32 24
+	platform -22 -22 86 86 16 0.001
+	frame	data/bgs/sor2/st1a/manhole00.png
+	
+anim follow1
+	bouncefactor 3
+	landframe 1
+	loop	0
+	delay	99
+	offset	32 24
+	sound	data/sounds/Iron3.wav
+	@cmd leaper 1 4 0
+	frame	data/bgs/sor2/st1a/manhole01.png
+		delay	32
+	sound	data/sounds/Iron3.wav
+	frame	data/bgs/sor2/st1a/manhole00.png
+	@cmd hurtSelf 1
+	frame	data/bgs/sor2/st1a/manhole00.png
+	
+anim fall
+	loop	0
+	delay	12
+	offset	32 24
+	frame	data/bgs/sor2/st1a/manhole00.png

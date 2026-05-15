@@ -1,0 +1,371 @@
+loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st2a/_empty.png	0.8 1 0 0 0 0 -1 1 0
+bglayer			data/bgs/sor3/st2a/bg00.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st2a/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+panel			data/bgs/sor3/st2a/_map.png		none	none
+fglayer			data/bgs/sor2/st2a/fg00.png		-175 0 0 -863 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st2a/fg01.png		-175 0 0 -863 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st2a/fg00.png		-75 0 0 -863 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st2a/fg01.png		-75 0 0 -863 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st2a/fg00.png		75 -0.11 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st2a/fg01.png		75 -0.11 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st2a/fg02.png		75 -0.11 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st2a/fg03.png		75 -0.11 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st2a/fg04.png		75 -0.11 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber		2
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor3_st2a.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		1451 275 0 0 1000 1000 38 5000
+
+#########################################################################################
+
+load		Stage 3
+load		RouteS 3
+load		Route_Down 3
+load		Route_Right 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		RoadBlock_B 1
+flip		1
+coords		140 180 0
+at			0
+
+spawn		Moto_Single 1
+flip		0
+mp			5
+coords		520 180 0
+at			100
+
+spawn		Moto_Single 1
+flip		1
+coords		-50 200 0
+at			100
+
+spawn		Moto_Single 1
+flip		0
+coords		520 240 0
+at			200
+
+wait
+at			350
+
+group		2 2
+at			300
+
+spawn		Moto_Single 1
+flip		0
+coords		520 200 0
+at			300
+
+spawn		Moto_Single 1
+flip		1
+mp			5
+coords		-50 220 0
+at			300
+
+group		1 1
+at			300
+
+spawn		Moto_Single 1
+flip		0
+mp			5
+coords		520 200 0
+at			300
+
+spawn		Moto_Single 1
+flip		0
+coords		520 240 0
+at			300
+
+spawn		Moto_Repeat 1
+flip		1
+coords		600 240 0
+at			300
+
+group		1 2
+at			300
+
+spawn		Moto_Repeat 1
+flip		0
+coords		-100 180 0
+at			300
+
+spawn		SignalB 1
+map			0
+flip		1
+coords		600 180 0
+at			300
+
+group		1 4
+at			300
+
+spawn		SignalX 1
+map			0
+flip		1
+coords		-50 240 0
+at			300
+
+spawn		SignalB 1
+map			1
+flip		1
+coords		-100 260 0
+at			300
+
+spawn		SignalX 1
+map			0
+flip		1
+coords		550 180 0
+at			300
+
+spawn		SignalB 1
+map			1
+flip		1
+coords		600 220 0
+at			300
+
+group		1 2
+at			300
+
+spawn		Moto_Single 1
+flip		0
+coords		520 180 0
+at			300
+
+spawn		Moto_Single 1
+flip		0
+mp			5
+coords		560 240 0
+at			300
+
+group		1 1
+at			300
+
+spawn		Moto_Single 1
+flip		1
+coords		-50 220 0
+at			300
+
+group		1 2
+at			300
+
+spawn		Moto_Single 1
+flip		0
+coords		520 180 0
+at			300
+
+spawn		Moto_Single 1
+flip		0
+mp			5
+coords		560 240 0
+at			300
+
+group		1 1
+at			300
+
+spawn		Moto_Single 1
+flip		1
+coords		-50 220 0
+at			300
+
+spawn		BossX1 1
+flip		1
+map     4
+coords		-50 220 0
+at			300
+
+spawn		BossX1 1
+flip		1
+2pspawn
+map     4
+coords		-50 220 0
+at			300
+
+#########################################################################################
+
+group		1000 1000
+at			400
+
+spawn		RoadBlock_B 1
+flip		1
+coords		700 180 0
+at			400
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		600 180 0
+at			400
+
+spawn		SignalX 1
+map			1
+flip		1
+coords		650 220 0
+at			500
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 240 0
+at			550
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			600
+
+wait
+at			700
+
+group		4 4
+at			650
+
+spawn		SignalB 1
+map			0
+flip		1
+coords		600 180 0
+at			650
+
+spawn		SignalX 1
+map			1
+flip		1
+coords		650 200 0
+at			650
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-100 220 0
+at			650
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		-100 220 0
+at			650
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-100 220 0
+at			650
+
+spawn		SignalB 1
+map			0
+flip		1
+coords		600 240 0
+at			650
+
+spawn		SignalX 1
+map			1
+flip		1
+coords		650 180 0
+at			650
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-100 220 0
+at			650
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		700 200 0
+at			650
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		-100 220 0
+at			650
+
+spawn		BossX1 1
+map			1
+flip		1
+coords		-100 220 0
+at			650
+
+spawn		BossX1 1
+map			1
+2pspawn
+flip		1
+coords		-100 220 0
+at			650
+
+#########################################################################################
+
+group		1000 1000
+at			710
+
+spawn		RoadBlock_B 1
+flip		1
+coords		520 180 0
+at			710
+
+spawn		RoadBlock_B 1
+flip		1
+coords		620 180 0
+at			710
+
+spawn		BruceB 1
+map			4
+flip		0
+coords		-50 180 0
+at			750
+
+spawn		BruceB 1
+map			4
+flip		0
+coords	  550 180 0
+at			750
+
+spawn		Tamer 1
+map			4
+flip		0
+coords		650 180 0
+at			800
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+group		2 2
+at			1100
+
+spawn		RouteS 1
+flip		1
+coords		-999 999 0
+at			1100
+
+spawn		Route_Down 1
+flip		1
+coords		110 266 0
+at			1100
+
+spawn		Route_Right 1
+flip		1
+coords		400 200 0
+at			1100

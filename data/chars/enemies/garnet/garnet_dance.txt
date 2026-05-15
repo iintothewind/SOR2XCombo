@@ -1,0 +1,593 @@
+##MAIN
+name				Garnet_Dance
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				79
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 2
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/garnet.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onspawnscript		data/scripts/onspawn/garnet.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/dodge.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/garnet/icon.png 1
+
+##DIESOUND
+diesound			data/voices/girl_cry1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/garnet/idle00.png data/chars/enemies/garnet/alter1.png
+remap				data/chars/enemies/garnet/idle00.png data/chars/enemies/garnet/alter2.png
+remap				data/chars/enemies/garnet/idle00.png data/chars/enemies/garnet/alter3.png
+remap				data/chars/enemies/garnet/idle00.png data/chars/enemies/garnet/alter4.png
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim spawn #WAIT SPAWN
+	loop	0
+	delay	16
+	offset	150 180
+	@cmd aniChange 0 "ANI_FOLLOW20"
+	frame	data/chars/enemies/garnet/dance00.png
+
+anim follow20 #WAIT LOOP
+	loop	1
+	delay	40
+	offset	150 180
+	bbox 	140 109 17 73
+	@cmd cancel -999 100 -999 999 -999 999 "ANI_FOLLOW21"
+	frame	data/chars/enemies/garnet/dance00.png
+	bbox 	142 109 17 73
+	frame	data/chars/enemies/garnet/dance01.png
+
+anim follow21 #LOOP STOP
+	loop	0
+	delay	16
+	offset	150 180
+	bbox 	140 109 17 73
+	frame	data/chars/enemies/garnet/hair00.png
+	frame	data/chars/enemies/garnet/hair01.png
+	frame	data/chars/enemies/garnet/hair02.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	150 180
+	bbox 	140 109 17 73
+	frame	data/chars/enemies/garnet/idle00.png
+	frame	data/chars/enemies/garnet/idle01.png
+	frame	data/chars/enemies/garnet/idle02.png
+	frame	data/chars/enemies/garnet/idle03.png
+
+anim walk
+	loop	1
+	delay	14
+	offset	150 180
+	bbox 	140 109 17 73
+	frame	data/chars/enemies/garnet/walk00.png
+	bbox 	143 111 17 71
+	frame	data/chars/enemies/garnet/walk01.png
+	bbox 	140 112 17 70
+	frame	data/chars/enemies/garnet/walk02.png
+	bbox 	138 111 17 71
+	frame	data/chars/enemies/garnet/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	150 180
+	frame	data/chars/enemies/garnet/get00.png
+
+anim grab
+	range 0 50
+	rangea 0 0
+	loop	0
+	delay	16
+	offset	150 180
+	bbox 	139 107 53 74
+	frame	data/chars/enemies/garnet/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	150 180
+	bbox 	138 119 20 63
+	sound	data/voices/girl_pain2.wav
+	frame	data/chars/enemies/garnet/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	150 180
+	bbox 	139 127 22 55
+	frame	data/chars/enemies/garnet/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	150 180
+	bbox 	145 105 16 53
+	@cmd jump 1
+	frame	data/chars/enemies/garnet/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	150 180
+	bbox 	139 127 22 55
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/garnet/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	150 180
+	bbox 	138 112 20 70
+	frame	data/chars/enemies/garnet/pain00.png
+	frame	data/chars/enemies/garnet/pain01.png
+	frame	data/chars/enemies/garnet/pain00.png
+	frame	data/chars/enemies/garnet/pain01.png
+	frame	data/chars/enemies/garnet/pain00.png
+	frame	data/chars/enemies/garnet/pain01.png
+	frame	data/chars/enemies/garnet/pain00.png
+	frame	data/chars/enemies/garnet/pain01.png
+	frame	data/chars/enemies/garnet/pain00.png
+	frame	data/chars/enemies/garnet/pain01.png
+	frame	data/chars/enemies/garnet/pain00.png
+	frame	data/chars/enemies/garnet/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	150 180
+	bbox 	139 119 21 62
+	frame	data/chars/enemies/garnet/pain200.png
+	frame	data/chars/enemies/garnet/pain201.png
+	frame	data/chars/enemies/garnet/pain200.png
+	frame	data/chars/enemies/garnet/pain201.png
+	frame	data/chars/enemies/garnet/pain200.png
+	frame	data/chars/enemies/garnet/pain201.png
+	frame	data/chars/enemies/garnet/pain200.png
+	frame	data/chars/enemies/garnet/pain201.png
+	frame	data/chars/enemies/garnet/pain200.png
+	frame	data/chars/enemies/garnet/pain201.png
+	frame	data/chars/enemies/garnet/pain200.png
+	frame	data/chars/enemies/garnet/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	150 180
+	bbox 	127 135 42 30
+	frame	data/chars/enemies/garnet/fall00.png
+		delay	8
+	bbox 	110 160 80 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	150 180
+	bbox 	127 135 42 30
+	frame	data/chars/enemies/garnet/fall00.png
+		delay	8
+	bbox 	110 160 80 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	150 180
+	bbox 	127 135 42 30
+	frame	data/chars/enemies/garnet/fall00.png
+		delay	8
+	bbox 	110 160 80 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	150 180
+	frame	data/chars/enemies/garnet/fall600.png
+	frame	data/chars/enemies/garnet/fall601.png
+	frame	data/chars/enemies/garnet/fall602.png
+	frame	data/chars/enemies/garnet/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	150 180
+	frame	data/chars/enemies/garnet/fall700.png
+	frame	data/chars/enemies/garnet/fall701.png
+	frame	data/chars/enemies/garnet/fall702.png
+	frame	data/chars/enemies/garnet/fall703.png
+	frame	data/chars/enemies/garnet/fall704.png
+	frame	data/chars/enemies/garnet/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	150 180
+	bbox 	127 135 42 30
+	hitfx	data/sounds/MediumKick.wav
+	attack 127 135 42 30 4 1 0 0 20 12
+	frame	data/chars/enemies/garnet/fall00.png
+		delay	999
+	frame	data/chars/enemies/garnet/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	110 160 80 22
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/girl_pain2.wav
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	150 180
+	bbox 	143 133 22 46
+	hitfx	data/sounds/MediumKick.wav
+	attack 143 133 22 46 4 1 0 0 20 12
+	frame	data/chars/enemies/garnet/fall900.png
+		delay	999
+	frame	data/chars/enemies/garnet/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	110 160 80 22
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/girl_pain2.wav
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	150 180
+	frame	data/chars/enemies/garnet/fall01.png
+	frame	data/chars/enemies/garnet/fall01.png
+	frame	data/chars/enemies/garnet/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	150 180
+	frame	data/chars/enemies/garnet/rise00.png
+	frame	data/chars/enemies/garnet/rise01.png
+	frame	data/chars/enemies/garnet/rise00.png
+	frame	data/chars/enemies/garnet/rise02.png
+
+anim attack1
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	followanim 5
+	followcond 4
+	otg 1
+	loop	0
+	delay	32
+	offset	150 180
+	bbox 	140 110 17 72
+	hitfx	data/sounds/LowPunch.wav
+	frame	data/chars/enemies/garnet/a100.png
+		delay	4
+	bbox 	144 112 17 70
+	sound	data/sounds/LowAttack.wav
+	frame	data/chars/enemies/garnet/a101.png
+	attack 156 111 32 20 2 0 0 0 10 12
+	frame	data/chars/enemies/garnet/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/garnet/a103.png
+
+anim attack2
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	followanim 5
+	followcond 4
+	otg 1
+	loop	0
+	delay	4
+	offset	150 180
+	bbox 	144 112 17 70
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/enemies/garnet/a103.png
+	attack 156 111 32 20 4 0 0 0 10 12
+	frame	data/chars/enemies/garnet/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/garnet/a101.png
+		delay	32
+	bbox 	140 110 17 72
+	frame	data/chars/enemies/garnet/a100.png
+
+
+anim grabattack #SLAP
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	150 180
+	bbox 	140 110 17 72
+	hitfx	data/sounds/whip.wav
+	sound	data/voices/morrigan05.wav
+	frame	data/chars/enemies/garnet/a100.png
+		delay	8
+	bbox 	144 112 17 70
+	frame	data/chars/enemies/garnet/a101.png
+	attack 156 111 32 20 5 0 0 20 12
+	frame	data/chars/enemies/garnet/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/garnet/a103.png
+	@cmd looper 1 4
+	frame	data/chars/enemies/garnet/a103.png
+	@cmd grabEnd
+	@cmd clearL
+	frame	data/chars/enemies/garnet/a103.png
+
+anim grabforward ##BANG
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	sound	data/voices/fck_in.wav
+	@cmd grabStart2
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/grabbed00.png
+	offset	144 175
+	delay	32
+	@cmd position 0 15 -1 0 -1
+	attack 100 161 72 26 3 0 0 10 12
+	sound	data/voices/girl_pain8.wav
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/pain200.png
+	@cmd position 1 10 -1 0 -1
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/pain201.png
+	@cmd looper 1 1
+	@cmd slam 50 1 -1 3 0 0
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/grabbed00.png
+	sound	data/voices/girl_pain7.wav
+	@cmd position 1 15 -1 0 -1
+	@cmd mpCost -15
+	@cmd hpCost -150
+	drawmethod flipx 1
+	offset	144 170
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/garnet/jumpdelay00.png
+	nodrawmethod
+	@cmd grabEnd
+	@cmd clearL
+		delay	64
+	frame	data/chars/enemies/garnet/rise02.png
+
+anim grabbackward ##BANG
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	130 190
+	sound	data/voices/fck_in.wav
+	@cmd grabStart2
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/grabbed00.png
+	delay	32
+	offset	144 175
+	@cmd position 0 15 -1 0 -1
+	attack 100 161 72 26 3 0 0 10 12
+	sound	data/voices/fck_deep.wav
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/pain200.png
+	@cmd position 1 10 -1 0 -1
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/pain201.png
+	@cmd looper 1 1
+	@cmd slam 50 1 -1 3 0 0
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/grabbed00.png
+	sound	data/voices/girl_pain7.wav
+	@cmd position 1 15 -1 0 -1
+	@cmd mpCost -15
+	@cmd hpCost -150
+	drawmethod flipx 1
+	offset	144 170
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/garnet/jumpdelay00.png
+	nodrawmethod
+	@cmd grabEnd
+	@cmd clearL
+		delay	64
+	frame	data/chars/enemies/garnet/rise02.png
+
+anim follow4 ##BANG
+	loop	0
+	delay	8
+	offset	130 190
+	sound	data/voices/fck_in.wav
+	@cmd jump 0
+	@cmd grabStart2
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/grabbed00.png
+	delay	32
+	offset	144 175
+	@cmd position 0 15 -1 0 -1
+	@cmd spawn01 "Dust" 20 0 1
+	attack 100 161 72 26 3 0 0 10 12
+	sound	data/voices/fck_deep.wav
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/pain200.png
+	@cmd position 1 10 -1 0 -1
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/pain201.png
+	@cmd looper 1 1
+	@cmd slam 50 1 -1 3 0 0
+	drawmethod flipx 1
+	frame	data/chars/enemies/garnet/grabbed00.png
+	sound	data/voices/girl_pain7.wav
+	@cmd position 1 15 -1 0 -1
+	@cmd hpCost -200
+	@cmd mpCost -15
+	drawmethod flipx 1
+	offset	144 170
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/garnet/jumpdelay00.png
+	nodrawmethod
+	@cmd grabEnd
+	@cmd clearL
+		delay	64
+	frame	data/chars/enemies/garnet/rise02.png
+
+
+anim follow5
+	loop	0
+	delay	16
+	offset	150 180
+	@cmd landGrab
+	frame	data/chars/enemies/garnet/a103.png
+
+anim jumpattack
+	range 120 160
+	rangea 0 100
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	24
+	offset	150 180
+	bbox 	145 105 16 53
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/enemies/garnet/jump00.png
+	bbox 	149 105 12 37
+	sound	data/voices/Blaze5.wav
+	frame	data/chars/enemies/garnet/jumpatk00.png
+	attack 137 128 62 25 9 1 0 0 30 12
+	bbox 	131 120 39 26
+	frame	data/chars/enemies/garnet/jumpatk01.png
+
+anim freespecial #POUNCE
+	range 120 160
+	rangea 0 100
+	rangez -999 999
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 60 1 6
+	otg 1
+	loop	0
+	delay	12
+	offset	150 180
+	@cmd spawnBind "Rage" 0 -1 0
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/enemies/garnet/jump00.png
+	sound	data/voices/attack5.wav
+	frame	data/chars/enemies/garnet/jumpatk00.png
+	attack 137 128 62 25 0 0 1 1 0 12
+	frame	data/chars/enemies/garnet/jumpatk01.png
+
+anim freespecial2 #FIX HAIR
+	range 160 200
+	rangea 0 100
+	loop	0
+	energycost -20 1 6
+	delay	16
+	offset	150 180
+	bbox 	140 109 17 73
+	frame	data/chars/enemies/garnet/hair00.png
+	frame	data/chars/enemies/garnet/hair01.png
+	frame	data/chars/enemies/garnet/hair02.png
+
+anim dodge #JUMP EVADE
+	range 0 160
+	rangea 0 100
+	rangez -48 48
+	loop	0
+	delay	12
+	offset	150 180
+	bbox 	139 127 22 55
+	@cmd antiHole -160 "flip"
+	@cmd dasher 0 0 0
+	frame	data/chars/enemies/garnet/jumpdelay00.png
+	bbox 	145 105 16 53
+	@cmd leaper -2.1 3.7 0
+	@cmd jump 1
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/garnet/jump00.png

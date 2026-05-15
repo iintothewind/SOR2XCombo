@@ -1,0 +1,22 @@
+name		St3_Entrance2
+type		panel
+shadow		0
+speed		5
+scroll		-0.5
+setlayer	80
+
+anim idle
+	loop	1
+	delay	6
+	offset	1 180
+	frame	data/bgs/sor2/st3a/entrance11.png
+	frame	data/bgs/sor2/st3a/entrance12.png
+	frame	data/bgs/sor2/st3a/entrance13.png
+	frame	data/bgs/sor2/st3a/entrance14.png
+	frame	data/bgs/sor2/st3a/entrance15.png
+	frame	data/bgs/sor2/st3a/entrance16.png
+	frame	data/bgs/sor2/st3a/entrance17.png
+	frame	data/bgs/sor2/st3a/entrance18.png
+	frame	data/bgs/sor2/st3a/entrance19.png
+	frame	data/bgs/sor2/st3a/entrance20.png
+	frame	data/bgs/sor2/st3a/entrance21.png

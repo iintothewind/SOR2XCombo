@@ -1,0 +1,169 @@
+name			Elevador01 #GROUND
+type			none
+shadow			0
+setlayer		-50
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/elevator01.c
+
+anim idle
+	loop	1 1 2
+	delay	16
+	offset	0 3004
+	@cmd autoLife 50
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow1 #MOVE UP
+	loop	1 2 3
+	delay	350
+	offset	0 3004
+	sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+	delay	16
+	sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow2 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow3 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow4 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow5 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow6 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow7 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow8 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+        sound   Data/sounds/elevator_start.wav
+	@cmd leaper 0 0 0.3
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd reseTime
+	@cmd autoLife 100
+	@cmd zeroWait
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+        sound   Data/sounds/elevator_stop.wav
+	@cmd leaper 0 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png
+
+anim follow9 #MOVE UP
+	loop	1 2 3
+	delay	1113
+	offset	0 3004
+	@cmd leaper 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+		delay	16
+	@cmd leaper 0 0 0
+	frame	data/bgs/sor1/st07/back01.png
+	frame	data/bgs/sor1/st07/back01.png

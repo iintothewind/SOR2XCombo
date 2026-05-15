@@ -1,0 +1,11 @@
+name		St3_Entrance3S #SHADOW ENTITY FOR PLATFORM
+type		none	
+antigravity	100
+shadow		0
+
+anim idle
+	loop	0
+	delay	16
+	offset	1 1
+	platform 1 84 1000 1000 40 1000
+	frame	data/bgs/sor2/st3a/_empty.png

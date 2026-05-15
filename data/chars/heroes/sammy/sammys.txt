@@ -1,0 +1,107 @@
+##MAIN
+name				SammyS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter1.png
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter2.png
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter3.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial #RAGE
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/rage00.png
+	frame	data/chars/heroes/sammy/rage01.png
+	frame	data/chars/heroes/sammy/rage02.png
+	frame	data/chars/heroes/sammy/rage03.png
+	frame	data/chars/heroes/sammy/rage03.png
+	frame	data/chars/heroes/sammy/rage04.png
+	frame	data/chars/heroes/sammy/rage04.png
+	frame	data/chars/heroes/sammy/rage05.png
+	frame	data/chars/heroes/sammy/rage05.png
+	frame	data/chars/heroes/sammy/rage06.png
+	frame	data/chars/heroes/sammy/rage06.png
+	frame	data/chars/heroes/sammy/jumpland00.png
+
+anim follow3 #RAGE
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/rage01.png
+	frame	data/chars/heroes/sammy/rage01.png
+	frame	data/chars/heroes/sammy/rage02.png
+	frame	data/chars/heroes/sammy/rage03.png
+	frame	data/chars/heroes/sammy/rage03.png
+	frame	data/chars/heroes/sammy/rage04.png
+	frame	data/chars/heroes/sammy/rage04.png
+	frame	data/chars/heroes/sammy/rage05.png
+	frame	data/chars/heroes/sammy/rage05.png
+	frame	data/chars/heroes/sammy/rage06.png
+	frame	data/chars/heroes/sammy/rage06.png
+	frame	data/chars/heroes/sammy/jumpland00.png
+
+anim freespecial2 #SUPER
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/run00.png
+	frame	data/chars/heroes/sammy/run01.png
+	frame	data/chars/heroes/sammy/run02.png
+	frame	data/chars/heroes/sammy/run03.png
+	frame	data/chars/heroes/sammy/run04.png
+	frame	data/chars/heroes/sammy/run05.png
+	frame	data/chars/heroes/sammy/run00.png
+
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/block00.png
+	frame	data/chars/heroes/sammy/dodge00.png
+	frame	data/chars/heroes/sammy/dodge01.png
+	frame	data/chars/heroes/sammy/dodge02.png
+	frame	data/chars/heroes/sammy/dodge03.png
+	frame	data/chars/heroes/sammy/dodge04.png
+
+anim riseattack
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/dodge00.png
+	frame	data/chars/heroes/sammy/dodge01.png
+	frame	data/chars/heroes/sammy/dodge02.png
+	frame	data/chars/heroes/sammy/dodge03.png
+	frame	data/chars/heroes/sammy/dodge04.png
+	frame	data/chars/heroes/sammy/dodge05.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/dodge00.png
+	frame	data/chars/heroes/sammy/dodge01.png
+	frame	data/chars/heroes/sammy/dodge02.png
+	frame	data/chars/heroes/sammy/dodge03.png
+	frame	data/chars/heroes/sammy/dodge04.png
+	frame	data/chars/heroes/sammy/dodge05.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/dodge00.png
+	frame	data/chars/heroes/sammy/dodge01.png
+	frame	data/chars/heroes/sammy/dodge02.png
+	frame	data/chars/heroes/sammy/dodge03.png
+	frame	data/chars/heroes/sammy/dodge04.png
+	frame	data/chars/heroes/sammy/dodge05.png

@@ -1,0 +1,178 @@
+loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor2/st1c/_empty.png	1 1 0 0 0 0 1 1 1
+panel		data/bgs/sor2/st1c/_map.png		none	none
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		480
+stagenumber 1
+spawn1		60 20 300
+spawn2		90 40 300
+spawn3		120 20 300
+spawn4		150 40 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowcolor -2
+at			0
+
+shadowalpha 6
+at			0
+
+#########################################################################################
+
+wall		0 251 -500 -500 157 -46 48 5000
+
+wall		409 251 0 154 500 500 48 5000
+
+#########################################################################################
+
+load		St1_Rain 3
+load		St1_Drop 3
+load		St1_Ray 3
+load		St1_Thunder 3
+
+#########################################################################################
+
+spawn		St1_Rain 1
+flip		1
+coords		1 200
+at			0
+
+spawn		St1_Drop 1
+flip		1
+coords		1 200
+at			0
+
+spawn		St1_Ray 1
+flip		1
+coords		1 1
+at			0
+
+spawn		St1_Thunder 1
+flip		1
+coords		1 1
+at			0
+
+#########################################################################################
+
+spawn		Trash 1
+flip		1
+coords		205 220
+at			0
+
+spawn		Trash 1
+flip		1
+coords		240 220
+at			0
+
+spawn		Barbon_Clothes 1
+map			4
+flip		0
+boss		1
+coords		400 240 0
+at			0
+
+spawn		Donovan_Wait 1
+map			0
+flip		0
+coords		340 220 0
+at			0
+
+spawn		Donovan_Wait 1
+map			0
+flip		0
+coords		360 260 0
+at			0
+
+spawn		Signal_Wait 1
+map			0
+flip		0
+coords		440 220 0
+at			0
+
+spawn		Signal_Wait 1
+map			0
+flip		0
+coords		460 260 0
+at			0
+
+#########################################################################################
+
+
+group		4 4
+at			30
+
+spawn		BruceB 1
+map			0
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		JackB 1
+map			0
+flip		1
+coords		550 300 0
+at			30
+
+spawn		ReineX 1
+map			0
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		KusanagiB 1
+map			0
+weapon		Sword 1
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		HakuyoB 1
+map			0
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		BongoB 1
+map			0
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		BasicX3 1
+map			0
+flip		1
+coords		550 300 0
+at			30
+
+spawn		KusanagiB 1
+map			0
+weapon		Sword 1
+flip		1
+coords		-50 300 0
+at			30
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			30
+
+spawn		BossX1 1
+map			0
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		BossX1 1
+map			0
+2pspawn
+flip		1
+coords		-50 300 0
+at			30
+
+spawn		BigBenX 1
+map			0
+flip		1
+coords		-50 300 0
+at			30

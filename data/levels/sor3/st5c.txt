@@ -1,0 +1,132 @@
+loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st5c/_empty.png	0 1 0 0 0 0 1 1 0
+panel			data/bgs/sor3/st5c/_map.png		none	none
+fglayer			data/bgs/sor3/st5c/fg00.png		75 -0.5 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st5c/fg01.png		75 -0.5 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber 	5
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor3_st5a.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		343 281 0 154 200 200 76 5000
+
+#########################################################################################
+
+spawn		TigerB 1
+map			0
+flip		0
+coords		240 220 300
+at			0
+
+spawn		TigerX 1
+map			1
+flip		0
+coords		320 220 400
+at			5
+
+spawn		TigerB 1
+map			2
+flip		0
+coords		240 260 500
+at			10
+
+spawn		TigerX 1
+map			3
+flip		0
+coords		320 260 600
+at			15
+
+spawn		TigerB 1
+map			4
+flip		0
+coords		280 240 700
+at			20
+
+spawn		BruceB 1
+map			4
+flip		0
+coords		280 240 700
+at			20
+
+group		4 4
+at			30
+
+spawn		TigerB 1
+map			4
+flip		1
+coords		240 240 300
+at			30
+
+spawn		TigerX 1
+map			3
+flip		1
+coords		60 220 400
+at			30
+
+spawn		BasicX3 1
+map			3
+flip		1
+coords		60 220 400
+at			30
+
+spawn		TigerB 1
+map			2
+flip		1
+coords		180 240 500
+at			30
+
+spawn		BongoX 1
+map			3
+flip		1
+coords		60 220 400
+at			30
+
+spawn		TigerX 1
+map			1
+flip		1
+coords		120 260 600
+at			30
+
+spawn		BasicX3 1
+map			3
+flip		1
+coords		60 220 400
+at			30
+
+spawn		TigerB 1
+map			0
+flip		1
+coords		160 240 700
+at			30
+
+
+#spawnscript data/scripts/levelspawn/music_random.c
+#at			30
+
+spawn		BossX1 1
+map			3
+flip		1
+coords		-60 220 400
+at			30
+
+spawn		BossX1 1
+map			3
+2pspawn
+flip		1
+coords		-60 220 400
+at			30

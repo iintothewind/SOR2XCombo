@@ -1,0 +1,38 @@
+##MAIN
+name				SammySW
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter1.png
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter2.png
+remap				data/chars/heroes/sammy/idle00.png data/chars/heroes/sammy/alter3.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/dodge00.png
+	frame	data/chars/heroes/sammy/dodge01.png
+	frame	data/chars/heroes/sammy/dodge02.png
+	frame	data/chars/heroes/sammy/dodge03.png
+	frame	data/chars/heroes/sammy/dodge04.png
+	frame	data/chars/heroes/sammy/dodge05.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	153 175
+	frame	data/chars/heroes/sammy/dodge00.png
+	frame	data/chars/heroes/sammy/dodge01.png
+	frame	data/chars/heroes/sammy/dodge02.png
+	frame	data/chars/heroes/sammy/dodge03.png
+	frame	data/chars/heroes/sammy/dodge04.png
+	frame	data/chars/heroes/sammy/dodge05.png

@@ -1,0 +1,24 @@
+name				Barrel_Drop
+type				npc
+subject_to_platform 0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+health				1
+nolife				1
+nomove				1 1
+gfxshadow			1 1
+antigravity			100
+stealth				2
+animationscript 	data/scripts/animation/default.c
+
+load				Barrel_Roll
+
+anim idle
+	loop	1
+	delay	360
+	offset	100 167
+	@cmd offScreenKill 50 0
+	frame	data/chars/obstacles/empty.png
+	@cmd spawnToss "Barrel_Roll" 0 0 0 0 1 0.4
+	frame	data/chars/obstacles/empty.png

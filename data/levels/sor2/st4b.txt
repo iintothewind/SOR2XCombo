@@ -1,0 +1,296 @@
+loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor2/st4b/bk00.png		0.8 1 0 0 0 0 1 1 0
+bglayer		data/bgs/sor2/st4b/bg00.png		0.6 1 0 0 0 0 -1 1 1 0
+bglayer		data/bgs/sor2/st4b/bg01.png		0.3 1 0 0 0 0 -1 1 1 0
+panel		data/bgs/sor2/st4b/_map.png		none	none
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		999
+stagenumber 4
+spawn1		90 20 300
+spawn2		120 40 300
+spawn3		150 20 300
+spawn4		180 40 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		0 275 -1000 -1000 157 -3 80 5000
+
+#########################################################################################
+
+load		St4_Live_Screen 3
+
+#########################################################################################
+
+spawn		St4_Live_Screen 1
+flip		0
+coords		340 180 76
+at			0
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		250 217 0
+at			0
+
+spawn		Box_A 1
+flip		1
+coords		300 217 0
+at			0
+
+spawn		Donovan_Wait 1
+map			2
+flip		0
+coords		500 220 0
+at			0
+
+spawn		Donovan_Wait 1
+map			2
+flip		0
+coords		550 260 0
+at			0
+
+spawn		Signal_Wait 1
+map			2
+flip		0
+coords		450 240 0
+at			0
+
+spawn		SignalX 1
+map			2
+flip		1
+coords		550 230 0
+at			1
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 260 0
+at			1
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		600 260 0
+at			1
+
+wait
+at			100
+
+group		4 4
+at			1
+
+spawn		SignalX 1
+map			2
+flip		1
+coords		-50 260 0
+at			1
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		600 260 0
+at			1
+
+spawn		BongoX 1
+map			2
+flip		1
+coords		600 260 0
+at			1
+
+spawn		DonovanB 1
+map			2
+weapon		Pipe 1
+flip		1
+coords		-50 260 0
+at			75
+
+spawn		DonovanB 1
+map			1
+weapon		Pipe 1
+flip		1
+coords		600 230 0
+at			75
+
+#########################################################################################
+
+group		1000 1000
+at			110
+
+spawn		Box_A 1
+flip		1
+coords		525 270 0
+at			110
+
+spawn		Box_A 1
+flip		1
+coords		675 270 0
+at			110
+
+spawn		Box_A 1
+flip		1
+coords		850 270 0
+at			110
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 230 0
+at			150
+
+spawn		BongoX 1
+map			2
+flip		1
+coords		600 260 0
+at			200
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-100 230 0
+at			250
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		-100 260 0
+at			300
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 230 0
+at			350
+
+spawn		ReineX 1
+map			2
+flip		1
+coords		600 230 0
+at			500
+
+spawn		ReineX 1
+map			2
+flip		1
+coords		600 260 0
+at			500
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		600 260 0
+at			500
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		-100 260 0
+at			500
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-100 260 0
+at			500
+
+wait
+at			550
+
+#########################################################################################
+
+spawn		Box_A 1
+flip		1
+coords		520 240 0
+at			560
+
+spawn		Box_A 1
+flip		1
+coords		560 240 0
+at			560
+
+spawn		Box_A 1
+flip		1
+coords		600 240 0
+at			560
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 260 0
+at			600
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		-100 260 0
+at			600
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 260 0
+at			700
+
+spawn		BongoX 1
+map			2
+flip		1
+coords		-100 260 0
+at			700
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			750
+
+group		4 4
+at			800
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 260 0
+at			800
+
+spawn		BasicX3 1
+map			2
+flip		1
+coords		-100 260 0
+at			800
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		600 260 0
+at			900
+
+spawn		BossX1 1
+map			2
+flip		1
+coords		-100 260 0
+at			900
+
+spawn		BossX1 1
+map			2
+2pspawn
+flip		1
+coords		-100 260 0
+at			900
+
+spawn		BigBenX 1
+map			0
+flip		1
+coords		550 260 0
+at			1050
+
+spawn		BigBenX 1
+map			1
+flip		1
+coords		-50 260 0
+at			1050

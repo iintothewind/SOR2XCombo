@@ -1,0 +1,90 @@
+loadingbg	data/bgs/loading3.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor3/st8d/_empty.png	0 1 0 0 0 0 1 1 1
+panel		data/bgs/sor3/st8d/_map.png		none	none
+fglayer		data/bgs/sor3/st8d/fg00.png		-200 0 0 0 0 0 0 -1 1 1
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		480
+stagenumber 8
+spawn1		200 100 300
+spawn2		230 100 300
+spawn3		260 100 300
+spawn4		290 100 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+basemap		0 300 500 200 0.001 0.001
+
+#########################################################################################
+
+load		St8_Leds 3
+load		St8_Left_Wall 3
+load		St8_Machine3 3
+load		St8_Ray 3
+load		St8_Right_Wall 3
+load		St8_Dr_Zero 3
+load		RouteS 3
+load		Route_Left 3
+load		Route_Right 3
+
+#########################################################################################
+
+spawn		St8_Leds 1
+flip		1
+coords		1 170 0
+at			0
+
+spawn		St8_Left_Wall 1
+flip		1
+coords		1 170 0
+at			0
+
+spawn		St8_Machine3 1
+flip		1
+coords		1 276 0
+at			0
+
+spawn		St8_Ray 1
+flip		1
+coords		1 170 0
+at			0
+
+spawn		St8_Right_Wall 1
+flip		1
+coords		1 170 0
+at			0
+
+spawn		St8_Dr_Zero 1
+flip		1
+coords		240 128 0
+at			0
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+group		2 2
+at			0
+
+spawn		RouteS 1
+flip		1
+coords		999 999 0
+at			0
+
+spawn		Route_Left 1
+flip		1
+coords		20 200 0
+at			0
+
+spawn		Route_Right 1
+flip		1
+coords		461 200 0
+at			0

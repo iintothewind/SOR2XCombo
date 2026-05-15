@@ -1,0 +1,30 @@
+name				Statue_A
+type				obstacle
+health				1
+nolife				1
+score				2000
+gfxshadow			1 1
+noatflash			1
+flash				Flash
+ondeathscript		data/scripts/ondeath/item.c
+animationscript		data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/obstacles.c
+
+diesound			data/sounds/Ceramic.wav
+
+anim idle
+	loop	1
+	delay	64
+	offset	100 167
+	bbox 	85 99 31 70
+	platform 71 71 128 128 2 44
+	@cmd offScreenKill 50 0
+	frame	data/chars/obstacles/statue00.png
+	
+anim fall
+	loop	0
+	delay	128
+	offset	100 167
+	frame	data/chars/obstacles/statue01.png
+	@cmd suicide
+	frame	data/chars/obstacles/statue01.png

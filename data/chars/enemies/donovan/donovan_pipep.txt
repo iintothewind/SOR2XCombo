@@ -1,0 +1,216 @@
+##MAIN
+name				Donovan_PipeP
+type				none
+
+##LIFE
+health				0
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					0
+mprate  			1 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				75
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+
+##SCRIPTS
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+
+##ICONS
+icon				data/chars/enemies/donovan/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/Die1.wav
+
+##REMAPS
+remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter1.png
+remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter2.png
+remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter3.png
+remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter4.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	140 182
+	bbox 	128 110 23 74
+	frame	data/chars/enemies/donovan/pipe/idle00.png
+	frame	data/chars/enemies/donovan/pipe/idle01.png
+	frame	data/chars/enemies/donovan/pipe/idle02.png
+	frame	data/chars/enemies/donovan/pipe/idle01.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	140 182
+	bbox 	128 110 23 74
+	frame	data/chars/enemies/donovan/pipe/walk00.png
+	frame	data/chars/enemies/donovan/pipe/walk01.png
+	frame	data/chars/enemies/donovan/pipe/walk02.png
+	frame	data/chars/enemies/donovan/pipe/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	140 182
+	frame	data/chars/enemies/donovan/pipe/get00.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	loop	1
+	delay	12
+	offset	140 182
+	bbox 	128 110 23 74
+	frame	data/chars/enemies/donovan/pipe/walk00.png
+	frame	data/chars/enemies/donovan/pipe/walk01.png
+	frame	data/chars/enemies/donovan/pipe/walk02.png
+	frame	data/chars/enemies/donovan/pipe/walk03.png
+
+anim land
+	loop	0
+	delay	30
+	offset	140 182
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/enemies/donovan/pipe/jump00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	140 182
+	bbox 	127 142 29 41
+	frame	data/chars/enemies/donovan/pipe/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	140 182
+	bbox 	127 111 24 65
+	@cmd jump 1
+	frame	data/chars/enemies/donovan/pipe/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	140 182
+	bbox 	127 142 29 41
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/donovan/pipe/jumpland00.png
+
+anim attack1
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	140 182
+	bbox 	119 103 22 81
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/donovan/pipe/a100.png
+	bbox 	127 103 22 81
+	frame	data/chars/enemies/donovan/pipe/a101.png
+	bbox 	134 118 29 66
+	attack 146 144 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a102.png
+		delay	24
+	attack 147 145 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a103.png
+
+anim attack2
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	140 182
+	bbox 	119 103 22 81
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/donovan/pipe/a100.png
+	bbox 	127 103 22 81
+	frame	data/chars/enemies/donovan/pipe/a101.png
+	bbox 	134 118 29 66
+	attack 146 144 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a102.png
+		delay	24
+	attack 147 145 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a103.png
+
+anim special
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	energycost 40 2 5
+	@cmd healStart
+	loop	0
+	delay	8
+	offset	140 182
+	bbox 	119 103 22 81
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/donovan/pipe/a100.png
+	bbox 	127 103 22 81
+	frame	data/chars/enemies/donovan/pipe/a101.png
+	bbox 	134 118 29 66
+	attack 146 144 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a102.png
+		delay	24
+	attack 147 145 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a103.png
+
+anim special2
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	energycost 40 2 5
+	@cmd healStart
+	loop	0
+	delay	8
+	offset	140 182
+	bbox 	119 103 22 81
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/donovan/pipe/a100.png
+	bbox 	127 103 22 81
+	frame	data/chars/enemies/donovan/pipe/a101.png
+	bbox 	134 118 29 66
+	attack 146 144 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a102.png
+		delay	24
+	attack 147 145 71 6 16 1 0 0 15 12
+	frame	data/chars/enemies/donovan/pipe/a103.png

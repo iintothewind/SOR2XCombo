@@ -1,0 +1,84 @@
+##MAIN
+name				MonalisaS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter1.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter2.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter3.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter1.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim special #DODGE
+	loop	0
+	delay	1000
+	offset	144 196
+	frame	data/chars/bosses/monalisa/evade00.png
+	frame	data/chars/bosses/monalisa/evade01.png
+	frame	data/chars/bosses/monalisa/evade02.png
+	frame	data/chars/bosses/monalisa/evade03.png
+	frame	data/chars/bosses/monalisa/evade04.png
+	frame	data/chars/bosses/monalisa/evade05.png
+	frame	data/chars/bosses/monalisa/evade06.png
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim special2 #DODGE
+	loop	0
+	delay	1000
+	offset	144 196
+	frame	data/chars/bosses/monalisa/evade00.png
+	frame	data/chars/bosses/monalisa/evade01.png
+	frame	data/chars/bosses/monalisa/evade02.png
+	frame	data/chars/bosses/monalisa/evade03.png
+	frame	data/chars/bosses/monalisa/evade04.png
+	frame	data/chars/bosses/monalisa/evade05.png
+	frame	data/chars/bosses/monalisa/evade06.png
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	144 196
+	frame	data/chars/bosses/monalisa/evade00.png
+	frame	data/chars/bosses/monalisa/evade01.png
+	frame	data/chars/bosses/monalisa/evade02.png
+	frame	data/chars/bosses/monalisa/evade03.png
+	frame	data/chars/bosses/monalisa/evade04.png
+	frame	data/chars/bosses/monalisa/evade05.png
+	frame	data/chars/bosses/monalisa/evade06.png
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim freespecial #RAGE
+	loop	0
+	delay	1000
+	offset	144 196
+	frame	data/chars/bosses/monalisa/shockwave00.png
+	frame	data/chars/bosses/monalisa/shockwave01.png
+	frame	data/chars/bosses/monalisa/shockwave02.png
+	frame	data/chars/bosses/monalisa/shockwave03.png
+	frame	data/chars/bosses/monalisa/shockwave03.png
+	frame	data/chars/bosses/monalisa/shockwave03.png
+	frame	data/chars/bosses/monalisa/shockwave03.png
+
+anim freespecial2 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	144 196
+	frame	data/chars/bosses/monalisa/idle00.png
+	frame	data/chars/bosses/monalisa/idle01.png
+	frame	data/chars/bosses/monalisa/idle02.png
+	frame	data/chars/bosses/monalisa/idle03.png
+	frame	data/chars/bosses/monalisa/walk00.png
+	frame	data/chars/bosses/monalisa/walk01.png
+	frame	data/chars/bosses/monalisa/walk02.png
+	frame	data/chars/bosses/monalisa/walk03.png
+	frame	data/chars/bosses/monalisa/walk04.png
+	frame	data/chars/bosses/monalisa/walk05.png

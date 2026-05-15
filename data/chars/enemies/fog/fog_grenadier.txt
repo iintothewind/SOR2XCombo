@@ -1,0 +1,101 @@
+##MAIN
+name				Fog_Grenadier
+type				enemy
+subject_to_platform 0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+
+##LIFE
+health				1 #SCRIPT
+
+##SPEED
+nomove				1 0
+
+##GRAB
+cantgrab			1
+
+##WEIGHT/HEIGHT
+antigravity			100
+
+##MISC
+shadow				0
+setlayer			-55
+no_adjust_base		1
+nodrop				2
+stealth				2
+
+##SCRIPTS
+onspawnscript		data/scripts/onspawn/fog.c
+animationscript	 	data/scripts/animation/default.c
+ondrawscript		data/scripts/ondraw/default.c
+
+##ICONS
+icon				data/chars/enemies/fog/icon.png 1
+
+##REMAPS
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter1.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter2.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter3.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter4.png
+
+##LOADS
+load				Fog_Grenade
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn #WAIT SPAWN
+	loop	0
+	delay	16
+	offset	145 146
+	@cmd aniChange 0 "ANI_FOLLOW1"
+	frame	data/chars/enemies/fog/grenade02.png
+	
+anim follow1 #WAIT LOOP
+	loop	1
+	delay	64
+	offset	145 146
+	@cmd aniXpos 460 0 "ANI_FOLLOW2"
+	frame	data/chars/enemies/fog/grenade02.png
+	frame	data/chars/enemies/fog/grenade02.png
+	
+anim follow2 #LOOP STOP
+	loop	0
+	delay	32
+	offset	145 146
+	@cmd leaper 0 0 -1
+	frame	data/chars/enemies/fog/grenade02.png
+
+anim idle
+	loop	0
+	delay	8
+	offset	145 146
+	@cmd aniVar "ANI_FAINT" "aniCount" 4 1
+	frame	data/chars/enemies/fog/grenade02.png
+	
+anim freespecial
+	range	-999 999
+	rangez	-999 999
+	loop	0
+	delay	24
+	offset	145 146
+	frame	data/chars/enemies/fog/grenade02.png
+	frame	data/chars/enemies/fog/grenade03.png
+	@cmd tossXZ "Fog_Grenade" "ANI_FOLLOW1" 16 64 32 3.7 500
+	sound	data/voices/Fog1.wav
+	frame	data/chars/enemies/fog/grenade04.png
+	@cmd aniCount 1
+	frame	data/chars/enemies/fog/grenade03.png
+		delay	64
+	frame	data/chars/enemies/fog/grenade02.png
+	@cmd aniVar "ANI_FAINT" "aniCount" 4 1
+	frame	data/chars/enemies/fog/grenade02.png
+	
+anim faint
+	loop	0
+	delay	256
+	offset	145 146
+	@cmd leaper 0 0 1
+	frame	data/chars/enemies/fog/grenade02.png
+	@cmd suicide
+	frame	data/chars/enemies/fog/grenade02.png

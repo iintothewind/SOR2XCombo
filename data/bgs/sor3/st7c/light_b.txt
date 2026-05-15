@@ -1,0 +1,16 @@
+name			St7_Light_B
+type			panel
+speed			5
+scroll			-0.5
+shadow			0
+animationscript data/scripts/animation/default.c
+
+load			St7_Light
+
+anim idle
+	loop	1
+	delay	32
+	offset	160 202
+	@cmd graphics "sor2x" "St7_Light"
+	frame	data/bgs/sor3/st7c/original/light00.png
+	frame	data/bgs/sor3/st7c/original/light00.png

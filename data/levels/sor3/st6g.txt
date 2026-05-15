@@ -1,0 +1,221 @@
+loadingbg	 data/bgs/loading1.png 			1 -81 248 480 999 999 0
+background		data/bgs/_empty.png
+bglayer			data/bgs/sor3/st6g/bg00.png		0.8 0 0 0 0 0 1 1 1 0
+bglayer			data/bgs/sor3/st6g/bg01.png		0.8 0 0 0 0 0 1 1 1 0
+bglayer			data/bgs/sor3/st6g/bg02.png		0.8 0 0 0 0 0 1 1 1 0
+bglayer			data/bgs/sor3/st6g/bg03.png		0.8 0 0 0 0 0 1 1 1 0
+bglayer			data/bgs/sor3/st6g/bg04.png		0.8 0 0 0 0 0 1 1 1 0
+bglayer			data/bgs/sor3/st6g/bg05.png		0.8 0 0 0 0 0 1 1 1 0
+panel			data/bgs/sor3/st6g/_map.png		none	none
+fglayer			data/bgs/sor3/st6g/fg00.png		-175 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st6g/fg01.png		-175 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+order			a
+settime			300
+direction		both
+stagenumber 	6
+spawn1			200 20 300
+spawn2			230 40 300
+spawn3			260 20 300
+spawn4			290 40 300
+updatescript	data/scripts/updatelevel/sor3_st6g.c
+
+#########################################################################################
+
+wall 		0 278 -100 -100 138 -31 84 1000
+
+#########################################################################################
+
+#load		Delay 3
+
+#########################################################################################
+
+spawn		FoodX
+flip		0
+coords		320 240 0
+at			0
+
+spawn		RocketB 1
+map			4
+flip		0
+boss		1
+coords	220 230 300
+at			95
+
+
+spawn		JetB 1
+map			4
+flip		0
+boss		0
+coords	240 230 300
+at			95
+
+spawn		JetB 1
+map			4
+flip		0
+boss		0
+coords	260 230 300
+at			95
+
+group		5 5
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			95
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			0
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95
+
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 210 0
+at			95
+
+spawn		Rocket_Enemy 1
+map			4
+flip		0
+coords		600 260 0
+at			95

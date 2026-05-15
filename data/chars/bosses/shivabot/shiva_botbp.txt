@@ -1,0 +1,1599 @@
+##MAIN
+name				SOR3_Shiva
+type				npc
+subtype			chase
+
+##LIFE
+health				800
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		30 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-2 #-1/-2/-3
+height				80
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2 3
+weapons				none none none none
+modelflag			3
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bounce				1
+aimove				chase #ENEMY ONLY
+escapehits			2 #ENEMY ONLY
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+death				1
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/shivabot.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+ondrawscript		data/scripts/ondraw/shivabot.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/partner.c
+ondeathscript		data/scripts/ondeath/partner.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/partner.c
+script				data/scripts/updateentity/shivabot.c
+
+##ICONS
+icon				data/chars/bosses/shivabot/icon.png 1
+
+##DIESOUND
+diesound			data/voices/BossDie2.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter2.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter3.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter4.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
+
+##LOADS
+load				Shiva_BotS
+load        Shiva_Bot_Double
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	138 192
+	frame	data/chars/bosses/shivabot/idle00.png
+
+anim idle
+	range	0 481
+	rangea	-999 999
+	rangez	-999 999
+	loop	1
+	delay	16
+	offset	138 192
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/idle00.png
+	frame	data/chars/bosses/shivabot/idle01.png
+	frame	data/chars/bosses/shivabot/idle02.png
+
+anim walk
+	loop	1
+	delay	14
+	offset	138 192
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/walk00.png
+	frame	data/chars/bosses/shivabot/walk01.png
+	frame	data/chars/bosses/shivabot/walk02.png
+	frame	data/chars/bosses/shivabot/walk03.png
+	frame	data/chars/bosses/shivabot/walk04.png
+	frame	data/chars/bosses/shivabot/walk05.png
+
+anim backwalk
+	loop	1
+	delay	14
+	offset	138 192
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/walk05.png
+	frame	data/chars/bosses/shivabot/walk04.png
+	frame	data/chars/bosses/shivabot/walk03.png
+	frame	data/chars/bosses/shivabot/walk02.png
+	frame	data/chars/bosses/shivabot/walk01.png
+	frame	data/chars/bosses/shivabot/walk00.png
+
+anim run
+	loop	1 2 4
+	delay	3
+	offset	138 192
+	bbox 	145 136 43 56
+	sound	data/sounds/Slide.wav
+	frame	data/chars/bosses/shivabot/run00.png
+	frame	data/chars/bosses/shivabot/run01.png
+	frame	data/chars/bosses/shivabot/run00.png
+	frame	data/chars/bosses/shivabot/run01.png
+
+anim get
+	loop	0
+	delay	16
+	offset	138 192
+	frame	data/chars/bosses/shivabot/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	138 192
+	bbox 	128 114 18 80
+	@cmd vaultStuck
+	frame	data/chars/bosses/shivabot/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	138 192
+	bbox 	127 128 30 66
+	frame	data/chars/bosses/shivabot/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	138 192
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	138 192
+	bbox 	123 155 31 39
+	frame	data/chars/bosses/shivabot/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	6
+	offset	138 192
+	bbox 	132 114 21 58
+	@cmd jump 1
+	frame	data/chars/bosses/shivabot/jump00.png
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/jump01.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	138 192
+	bbox 	123 155 31 39
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/jumpland00.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	138 192
+	bbox 	127 128 30 66
+	sound	data/sounds/GuardBreak.wav
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+	drawmethod tintmode 6
+	drawmethod tintcolor 0
+	frame	data/chars/bosses/shivabot/grabbed00.png
+	nodrawmethod
+	frame	data/chars/bosses/shivabot/grabbed01.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	138 192
+	bbox 	125 120 20 74
+	frame	data/chars/bosses/shivabot/pain00.png
+	frame	data/chars/bosses/shivabot/pain01.png
+	frame	data/chars/bosses/shivabot/pain00.png
+	frame	data/chars/bosses/shivabot/pain01.png
+	frame	data/chars/bosses/shivabot/pain00.png
+	frame	data/chars/bosses/shivabot/pain01.png
+	frame	data/chars/bosses/shivabot/pain00.png
+	frame	data/chars/bosses/shivabot/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	138 192
+	bbox 	127 128 30 66
+	frame	data/chars/bosses/shivabot/pain200.png
+	frame	data/chars/bosses/shivabot/pain201.png
+	frame	data/chars/bosses/shivabot/pain200.png
+	frame	data/chars/bosses/shivabot/pain201.png
+	frame	data/chars/bosses/shivabot/pain200.png
+	frame	data/chars/bosses/shivabot/pain201.png
+	frame	data/chars/bosses/shivabot/pain200.png
+	frame	data/chars/bosses/shivabot/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	138 192
+	bbox 	116 139 36 44
+	frame	data/chars/bosses/shivabot/fall00.png
+		delay	8
+	bbox 	95 172 82 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	138 192
+	bbox 	116 139 36 44
+	frame	data/chars/bosses/shivabot/fall00.png
+		delay	8
+	bbox 	95 172 82 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	138 192
+	bbox 	116 139 36 44
+	frame	data/chars/bosses/shivabot/fall00.png
+		delay	8
+	bbox 	95 172 82 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	138 192
+	frame	data/chars/bosses/shivabot/fall600.png
+	frame	data/chars/bosses/shivabot/fall601.png
+	frame	data/chars/bosses/shivabot/fall602.png
+	frame	data/chars/bosses/shivabot/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	138 192
+	frame	data/chars/bosses/shivabot/fall700.png
+	frame	data/chars/bosses/shivabot/fall701.png
+	frame	data/chars/bosses/shivabot/fall702.png
+	frame	data/chars/bosses/shivabot/fall703.png
+	frame	data/chars/bosses/shivabot/fall704.png
+	frame	data/chars/bosses/shivabot/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	138 192
+	bbox 	116 139 36 44
+	hitfx	data/sounds/MediumKick.wav
+	attack 116 139 36 44 4 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/fall00.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/bosses/shivabot/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	95 172 82 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	138 192
+	bbox 	120 135 31 59
+	hitfx	data/sounds/MediumKick.wav
+	attack 120 135 31 59 4 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/fall900.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/bosses/shivabot/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	95 172 82 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	138 192
+	frame	data/chars/bosses/shivabot/fall01.png
+	frame	data/chars/bosses/shivabot/fall01.png
+	frame	data/chars/bosses/shivabot/fall01.png
+
+anim rise
+	loop	0
+	delay	12
+	offset	138 192
+	frame	data/chars/bosses/shivabot/rise00.png
+	@cmd leaper 1 2 0
+	frame	data/chars/bosses/shivabot/rise01.png
+	frame	data/chars/bosses/shivabot/rise02.png
+		delay	2
+	frame	data/chars/bosses/shivabot/rise03.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/rise04.png
+
+anim riseattack
+	range 40 120
+	rangea 0 0
+	rangez -24 24
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	hitflash Impact
+	loop	0
+	delay	3
+	offset	138 192
+	hitfx	data/sounds/SpecialAttack3.wav
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "random"
+	frame	data/chars/bosses/shivabot/rise00.png
+	@cmd target 6 2
+	@cmd leapTarget 2
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/shivabot/rise01.png
+	frame	data/chars/bosses/shivabot/rise02.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	attack8 123 142 78 23 12 1 0 0 35 24
+	dropv 3 5 0
+	bbox 	124 123 37 42
+	sound	data/sounds/SpecialAttack7.wav
+	frame	data/chars/bosses/shivabot/jumpatk00.png
+		delay	2
+	frame	data/chars/bosses/shivabot/jumpatk00.png
+	@cmd landFrame
+		delay	12
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	123 155 31 39
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/jumpland00.png
+
+anim attack1
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	138 192
+	bbox 	136 119 24 75
+	hitfx	data/sounds/LowPunch.wav
+	sound	data/sounds/LowAttack.wav
+	frame	data/chars/bosses/shivabot/a100.png
+	attack 170 132 50 50 2 0 0 0 5 12
+	bbox 	152 132 28 62
+	frame	data/chars/bosses/shivabot/a101.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	136 119 24 75
+	frame	data/chars/bosses/shivabot/a102.png
+
+anim attack2
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	138 192
+	bbox 	136 117 24 77
+	hitfx	data/sounds/WeakPunch.wav
+	sound	data/sounds/WeakAttack.wav
+	frame	data/chars/bosses/shivabot/a200.png
+		delay	4
+	attack 155 137 95 55 2 0 0 0 10 12
+	bbox 	148 121 20 73
+	frame	data/chars/bosses/shivabot/a201.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/a201.png
+	attack 155 135 95 55 2 0 0 0 5 12
+	bbox 	145 122 22 72
+	frame	data/chars/bosses/shivabot/a202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/a203.png
+
+anim attack3
+	range 20 60
+	rangea 0 100
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	138 192
+	@cmd mpCost -15
+	@cmd rageCancel 20 60 0 0 0 "ANI_FOLLOW5" "random"
+	bbox 	128 114 18 80
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	burn 136 146 51 35 8 1 0 0 15 24
+	dropv 3.7 1 0
+	frame	data/chars/bosses/shivabot/a300.png
+	burn 134 132 61 20 8 1 0 0 15 24
+	dropv 3.7 1 0
+	frame	data/chars/bosses/shivabot/a301.png
+	burn 135 95 46 47 8 1 0 0 15 24
+	dropv 3.7 1 0
+	bbox 	122 114 19 80
+	frame	data/chars/bosses/shivabot/a302.png
+	@cmd rageCancel 0 60 0 120 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 20 100 0 120 10 "ANI_JUMPATTACK2" "hit"
+		delay	24
+	burn 133 83 26 54 8 1 0 0 15 24
+	dropv 3.7 1 0
+	frame	data/chars/bosses/shivabot/a303.png
+		delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/a304.png
+
+anim runattack #BLITZ
+	range 20 80
+	rangea 0 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash flash
+	loop	0
+	delay	6
+	offset	138 192
+	hitfx	data/sounds/SpecialAttack2.wav
+	sound	data/voices/Attack4.wav
+	frame	data/chars/bosses/shivabot/run00.png
+		delay 24
+	@cmd dasher 10 0 0
+	attack 95 50 104 143 2 1 0 0 30 36
+	seal 1 1
+	sound	data/sounds/Shring5.wav
+	frame	data/chars/bosses/shiva/rage00.png
+		delay 8
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	frame	data/chars/bosses/shivabot/a101.png
+
+anim follow3 #RAGE STRIKE
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash flash
+	loop	0
+	delay	16
+	offset	138 192
+	hitfx	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/shiva/rage00.png
+		delay	4
+	@cmd dasher 0 0 0
+	attack -120 20 230 175 5 0 0 0 5 36
+	seal 1 1
+	frame	data/chars/bosses/shivabot/a101.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/a101.png
+	@cmd looper 1 9
+	attack -120 20 230 175 5 0 0 0 5 36
+	seal 1 1
+	frame	data/chars/bosses/shivabot/a101.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/a101.png
+
+anim grabattack #KNEE
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	138 192
+	bbox 	128 114 18 80
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/voices/Attack3.wav
+	frame	data/chars/bosses/shivabot/grabatk00.png
+	bbox 	114 114 18 80
+	frame	data/chars/bosses/shivabot/grabatk01.png
+	frame	data/chars/bosses/shivabot/grabatk02.png
+	bbox 	128 114 18 80
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/bosses/shivabot/grabatk03.png
+	bbox 	134 114 18 80
+	frame	data/chars/bosses/shivabot/grabatk04.png
+	burn 138 125 33 35 8 1 0 0 20 12
+	dropv 3.7 1 0
+	frame	data/chars/bosses/shivabot/grabatk05.png
+	@cmd rageCancel 0 60 0 120 15 "ANI_FREESPECIAL3" "hit"
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/grabatk06.png
+
+anim grabattack2 #VAULT FRONT TO BACK
+	loop	0
+	delay	8
+	offset	103 253
+	frame	data/chars/bosses/shivabot/vault00.png
+	frame	data/chars/bosses/shivabot/vault01.png
+	frame	data/chars/bosses/shivabot/vault02.png
+	frame	data/chars/bosses/shivabot/vault03.png
+	frame	data/chars/bosses/shivabot/vault04.png
+		delay	2
+		offset	138 192
+	@cmd vaultFix
+	frame	data/chars/bosses/shivabot/grab00.png
+	@cmd cancelVault "ANI_GRABDOWN2"
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/grab00.png
+
+anim grabup2 #VAULT BACK TO FRONT
+	loop	0
+	delay	8
+	offset	103 253
+	frame	data/chars/bosses/shivabot/vault00.png
+	frame	data/chars/bosses/shivabot/vault01.png
+	frame	data/chars/bosses/shivabot/vault02.png
+	frame	data/chars/bosses/shivabot/vault03.png
+	frame	data/chars/bosses/shivabot/vault04.png
+		delay	2
+		offset	138 192
+	@cmd vaultFix
+	frame	data/chars/bosses/shivabot/idle00.png
+	bbox 	128 114 18 80
+	@cmd cancelVault "ANI_GRABATTACK"
+	frame	data/chars/bosses/shivabot/idle00.png
+
+anim grabforward #PUNCH
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	138 192
+	bbox 	124 117 24 77
+	hitfx	data/sounds/WeakPunch.wav
+	sound	data/voices/Attack2.wav
+	frame	data/chars/bosses/shivabot/fgrabatk00.png
+		delay	4
+	attack 138 124 53 25 6 0 0 0 5 12
+	seal 1 1
+	bbox 	131 121 20 73
+	frame	data/chars/bosses/shivabot/fgrabatk01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/fgrabatk01.png
+	attack 144 126 39 23 8 0 0 0 10 12
+	seal 1 1
+	bbox 	137 122 22 72
+	frame	data/chars/bosses/shivabot/fgrabatk02.png
+
+anim grabforward2 #PUNCH
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	138 192
+	bbox 	124 117 24 77
+	hitfx	data/sounds/WeakPunch.wav
+	sound	data/voices/Attack2.wav
+	frame	data/chars/bosses/shivabot/fgrabatk00.png
+		delay	4
+	attack 138 124 53 25 6 0 0 0 5 12
+	bbox 	131 121 20 73
+	frame	data/chars/bosses/shivabot/fgrabatk01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/fgrabatk01.png
+	attack 144 126 39 23 8 0 0 0 10 12
+	bbox 	137 122 22 72
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 120 10 "ANI_JUMPATTACK2" "hit"
+	frame	data/chars/bosses/shivabot/fgrabatk02.png
+
+anim grabdown2 #BACK SLAM
+	loop	0
+	delay	18
+	offset	138 192
+	@cmd grabStart2
+	@cmd position 0 20 0 0 1
+	sound	data/voices/Attack3.wav
+	frame	data/chars/bosses/shivabot/slam00.png
+		delay	12
+	@cmd position 5 0 40 0 0
+	frame	data/chars/bosses/shivabot/slam01.png
+	@cmd position 4 -25 50 0 1
+	frame	data/chars/bosses/shivabot/slam02.png
+	@cmd position 4 -45 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/shivabot/slam03.png
+		delay	24
+	@cmd position 4 -60 0 0 0
+	@cmd slam 50 2 0 4 0 0
+	@cmd leaper 0 2 0
+	frame	data/chars/bosses/shivabot/slam03.png
+		delay	2
+	frame	data/chars/bosses/shivabot/slam04.png
+	@cmd landFrame
+		delay	8
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/slam05.png
+	@cmd clearL
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	frame	data/chars/bosses/shivabot/slam05.png
+
+anim grabbackward #BACK SLAM
+	loop	0
+	delay	18
+	offset	138 192
+	@cmd grabStart2
+	@cmd position 0 20 0 0 0
+	sound	data/voices/Attack3.wav
+	frame	data/chars/bosses/shivabot/slam00.png
+		delay	12
+	@cmd position 5 0 40 0 0
+	frame	data/chars/bosses/shivabot/slam01.png
+	@cmd position 4 -25 50 0 0
+	frame	data/chars/bosses/shivabot/slam02.png
+	@cmd position 4 -45 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/shivabot/slam03.png
+		delay	24
+	@cmd position 4 -60 0 0 0
+	@cmd slam 50 2 0 4 0 0
+	@cmd leaper 0 2 0
+	frame	data/chars/bosses/shivabot/slam03.png
+		delay	2
+	frame	data/chars/bosses/shivabot/slam04.png
+	@cmd landFrame
+		delay	8
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/slam05.png
+	@cmd clearL
+	frame	data/chars/bosses/shivabot/slam05.png
+
+anim grabbackward2 #AERIAL SPECIAL PILE
+	attackone 0
+	fastattack 1
+	forcedirection 0
+	otg 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	2
+	offset	138 192
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/voices/Attack3.wav
+	@cmd jump 0
+	@cmd grabStart2
+	@cmd position 3 35 6 0 -1
+	frame	data/chars/bosses/shivabot/slam07.png
+	@cmd position 4 55 -1 0 -1
+	frame	data/chars/bosses/shivabot/slam07.png
+	@cmd landFrame
+		delay	16
+	@cmd position 5 70 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd spawn01 "Dust" 20 0 1
+	attack 170 120 50 65 10 1 0 0 0 12
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/shivabot/slam07.png
+	@cmd slam 50 1 0 4 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/slam07.png
+		delay	8
+	frame	data/chars/bosses/shivabot/slam04.png
+	@cmd clearL
+	frame	data/chars/bosses/shivabot/slam05.png
+
+
+
+anim jumpattack #JUMP STATIC/FORWARD
+	range 70 90
+	rangea 0 0
+	rangez -50 50
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	138 192
+	bbox 	132 114 21 58
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd aniRandom "ANI_JUMPATTACK2"
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/bosses/shivabot/jump00.png
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/jump01.png
+		delay	2
+	bbox 	124 123 37 42
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/bosses/shivabot/jumpatk00.png
+	attack 123 142 78 23 4 1 0 0 20 12
+	sound	data/voices/Attack4.wav
+	frame	data/chars/bosses/shivabot/jumpatk00.png
+
+anim jumpattack2 #JUMP DOWN
+	range 70 90
+	rangea 0 0
+	rangez -50 50
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	138 192
+	bbox 	132 114 21 58
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/bosses/shivabot/jump00.png
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/jump01.png
+		delay	2
+	bbox 	132 125 43 36
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/bosses/shivabot/jumpatk200.png
+	attack 130 85 135 155 1 0 1 1 0 24
+	sound	data/voices/Attack4.wav
+	frame	data/chars/bosses/shivabot/jumpatk200.png
+
+anim special #DRAGON KICK
+	fastattack 1
+	jugglecost 5
+	forcedirection 0
+	otg 1
+	energycost 20 1 6
+	loop	0
+	delay	4
+	offset	138 192
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Fire.wav
+	frame	data/chars/bosses/shivabot/special00.png
+	frame	data/chars/bosses/shivabot/special01.png
+	burn 78 141 54 35 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special02.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special02.png
+	delay	4
+	burn 68 117 68 30 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special03.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special03.png
+	delay	4
+	burn 129 93 52 53 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special04.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special04.png
+	delay	4
+	@cmd rageCancel 0 60 0 120 25 "ANI_FREESPECIAL3" "hit"
+	burn 141 103 60 49 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special05.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special05.png
+	delay	4
+	burn 141 138 60 43 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special06.png
+		delay	16
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 120 10 "ANI_JUMPATTACK2" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	frame	data/chars/bosses/shivabot/special07.png
+
+
+anim special2 #DRAGON KICK
+	fastattack 1
+	jugglecost 5
+	forcedirection 0
+	otg 1
+	energycost 20 1 6
+	loop	0
+	delay	4
+	offset	138 192
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Fire.wav
+	frame	data/chars/bosses/shivabot/special00.png
+	frame	data/chars/bosses/shivabot/special01.png
+	burn 78 141 54 35 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special02.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special02.png
+	delay	4
+	burn 68 117 68 30 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special03.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special03.png
+	delay	4
+	burn 129 93 52 53 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special04.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special04.png
+	delay	4
+	@cmd rageCancel 0 60 0 120 25 "ANI_FREESPECIAL3" "hit"
+	burn 141 103 60 49 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special05.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/special05.png
+	delay	4
+	burn 141 138 60 43 8 1 0 0 20 12
+	frame	data/chars/bosses/shivabot/special06.png
+		delay	16
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 120 10 "ANI_JUMPATTACK2" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	frame	data/chars/bosses/shivabot/special07.png
+
+
+anim freespecial #RAGE COMBO
+	range 60 80
+	rangea 50 100
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	energycost 60 1 6
+	loop	0
+	delay	20
+	offset	138 192
+	hitfx	data/sounds/WeakPunch.wav
+	sound	data/voices/Attack4.wav
+	@cmd spawnBind "Rage" -10 -1 0
+	frame	data/chars/bosses/shivabot/rage00.png
+		delay	2
+	@cmd dasher 6 0 0
+	sound	data/sounds/WeakAttack.wav
+	frame	data/chars/bosses/shivabot/rage01.png
+		delay	8
+	attack 118 123 51 19 2 0 0 0 10 12
+	seal 1 1
+	@cmd clearL
+	frame	data/chars/bosses/shivabot/rage02.png
+		delay	2
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage03.png
+	sound	data/sounds/WeakAttack.wav
+	frame	data/chars/bosses/shivabot/rage04.png
+	attack 118 123 51 19 2 0 0 0 10 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage05.png
+	@cmd looper 3 5
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage06.png
+		delay	4
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/bosses/shivabot/rage07.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage08.png
+	attack2 137 125 51 17 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage09.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage10.png
+	frame	data/chars/bosses/shivabot/rage11.png
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/bosses/shivabot/rage12.png
+	frame	data/chars/bosses/shivabot/rage13.png
+	attack2 126 127 51 19 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage14.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage15.png
+	frame	data/chars/bosses/shivabot/rage16.png
+	@cmd looper 7 2
+	frame	data/chars/bosses/shivabot/rage17.png
+	frame	data/chars/bosses/shivabot/rage18.png
+		delay	4
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/bosses/shivabot/rage19.png
+	attack 136 138 30 31 4 0 0 0 10 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage20.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage21.png
+	attack 136 95 48 57 4 0 0 0 10 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage22.png
+	attack 136 85 32 57 4 0 0 0 10 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage23.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage24.png
+		delay	4
+	attack 136 111 42 52 4 0 0 0 10 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage25.png
+	frame	data/chars/bosses/shivabot/rage26.png
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage27.png
+	frame	data/chars/bosses/shivabot/rage28.png
+	burn 122 129 33 29 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage29.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage30.png
+	burn 154 132 68 26 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage31.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage31.png
+	burn 154 130 72 24 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage32.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage32.png
+	burn 154 126 85 31 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage33.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage33.png
+	burn 154 132 102 16 4 0 0 0 5 12
+	seal 1 1
+	frame	data/chars/bosses/shivabot/rage34.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage35.png
+	hitfx	data/sounds/HighPunch.wav
+	@cmd dasher 0
+	frame	data/chars/bosses/shivabot/block00.png
+	sound	data/voices/Shiva1.wav
+	frame	data/chars/bosses/shivabot/s00.png
+	@cmd dasher 1.2
+	attack 125 110 48 80 15 0 0 0 25 36
+	frame	data/chars/bosses/shivabot/s01.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/s01.png
+	delay 4
+	hitflash Impact
+	attack8 125 110 62 80 35 1 0 0 25 36
+	seal 1 1
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s02.png
+	@cmd dasher 1
+	attack8 125 110 65 80 35 1 0 0 45 36
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s03.png
+	@cmd dasher 0.5 0 0
+	attack8 125 110 65 80 35 1 0 0 45 36
+	seal 1 1
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s04.png
+	delay 1
+	@cmd dasher 0 0 0
+	attack8 125 110 60 80 35 1 0 0 45 36
+	seal 1 1
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s05.png
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	frame	data/chars/bosses/shivabot/s05.png
+
+
+anim freespecial2 #FINAL CRASH RUN
+	range 60 120
+	rangea 0 0
+	fastattack 1
+	jugglecost 0
+	energycost 15 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	1
+	offset	138 192
+	bbox 	146 142 35 52
+	@cmd target 3 3
+	@cmd dashTarget
+	sound	data/sounds/Slide.wav
+	frame	data/chars/bosses/shivabot/run00.png
+		delay	3
+	@cmd cancel 30 60 0 100 -24 24 "ANI_FOLLOW1"
+	@cmd dashTarget
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd cancel 30 60 0 100 -24 24 "ANI_FOLLOW1"
+	@cmd dashTarget
+	frame	data/chars/bosses/shivabot/run01.png
+		delay	8
+	@cmd looper 1 7
+	@cmd dasher 2 0 0
+	bbox 	126 145 33 49
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 1 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 0 0 0
+	bbox 	123 155 31 39
+	frame	data/chars/bosses/shivabot/finalcrash09.png
+	@cmd clearL
+	frame	data/chars/bosses/shivabot/finalcrash09.png
+
+anim follow1 #FINAL CRASH
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	138 192
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/SpecialAttack.wav
+	@cmd cancelRandom 30 60 0 0 0 "ANI_FOLLOW2"
+	@cmd dasher 2 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 1 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+		delay	6
+	attack2 147 140 41 54 8 0 0 0 10 12
+	sound	data/voices/Shiva3.wav
+	frame	data/chars/bosses/shivabot/finalcrash01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/finalcrash02.png
+	attack2 124 152 59 42 8 0 0 0 10 12
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	@cmd rageCancel 40 80 0 0 60 "ANI_FREESPECIAL" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/HighKick.wav
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	burn 144 106 55 53 12 1 0 0 10 12
+	bbox 	116 135 33 59
+	frame	data/chars/bosses/shivabot/finalcrash04.png
+	@cmd leaper 1 2.2 0
+	burn 137 76 37 63 12 1 0 0 10 12
+	bbox 	126 127 37 39
+	frame	data/chars/bosses/shivabot/finalcrash05.png
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "random"
+	@cmd flip
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	117 128 48 33
+	frame	data/chars/bosses/shivabot/finalcrash06.png
+	bbox 	116 123 47 31
+	frame	data/chars/bosses/shivabot/finalcrash07.png
+		delay	2
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/finalcrash08.png
+		delay	12
+	@cmd landFrame
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 0 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	@cmd clearL
+	bbox 	123 155 31 39
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/finalcrash09.png
+
+anim follow2 #SUPER FINAL CRASH
+	fastattack 1
+	jugglecost 1
+	energycost 25 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	3
+	offset	138 192
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/SpecialAttack.wav
+	@cmd dasher 3 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 2.5 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 2 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 1.5 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+		delay	6
+	@cmd dasher 1 0 0
+	attack2 147 140 41 54 4 0 0 0 15 12
+	sound	data/voices/Shiva4.wav
+	frame	data/chars/bosses/shivabot/finalcrash01.png
+	@cmd dasher 0.5 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/finalcrash02.png
+	@cmd dasher 0 0 0
+	attack2 124 152 59 42 4 0 0 0 15 12
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/SpecialAttack3.wav
+	hitflash Impact
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	burn 144 106 55 53 8 4 0 0 45 12
+	dropv 4 2 0
+	bbox 	116 135 33 59
+	frame	data/chars/bosses/shivabot/finalcrash04.png
+	@cmd leaper 1.4 2.2 0
+	burn 137 76 37 63 8 4 0 0 45 12
+	dropv 3 2 0
+	bbox 	126 127 37 39
+	frame	data/chars/bosses/shivabot/finalcrash05.png
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "random"
+	@cmd flip
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	117 128 48 33
+	frame	data/chars/bosses/shivabot/finalcrash06.png
+	bbox 	116 123 47 31
+	@cmd clearL
+	frame	data/chars/bosses/shivabot/finalcrash07.png
+		delay	2
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/finalcrash08.png
+	@cmd landFrame
+	@cmd flip
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+		delay	12
+	bbox 	123 155 31 39
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/finalcrash09.png
+
+anim freespecial3 #DRAGON CLAW
+	range 40 80
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	energycost 15 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	138 192
+	bbox 	128 114 18 80
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/SpecialAttack4.wav
+	frame	data/chars/bosses/shivabot/rage18.png
+	bbox 	124 114 20 80
+	frame	data/chars/bosses/shivabot/rage19.png
+	attack 136 138 30 31 4 0 0 0 20 12
+	dropv 2 1 0
+	bbox 	128 114 18 80
+	frame	data/chars/bosses/shivabot/rage20.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage21.png
+	attack 136 95 48 57 4 0 0 0 20 12
+	dropv 2 1 0
+	frame	data/chars/bosses/shivabot/rage22.png
+	attack 136 85 32 57 4 0 0 0 20 12
+	dropv 2 1 0
+	frame	data/chars/bosses/shivabot/rage23.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage24.png
+		delay	4
+	attack 136 111 42 52 4 0 0 0 20 12
+	dropv 2 1 0
+	frame	data/chars/bosses/shivabot/rage25.png
+	frame	data/chars/bosses/shivabot/rage26.png
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/SpecialAttack2.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage27.png
+	frame	data/chars/bosses/shivabot/rage28.png
+	burn 122 129 33 29 4 0 0 0 5 12
+	dropv 1 1 0
+	bbox 	130 122 33 72
+	frame	data/chars/bosses/shivabot/rage29.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	149 134 31 60
+	frame	data/chars/bosses/shivabot/rage30.png
+	burn 154 132 68 26 4 0 0 0 5 12
+	dropv 1 1 0
+	frame	data/chars/bosses/shivabot/rage31.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage31.png
+	burn 154 130 72 24 4 0 0 0 5 12
+	dropv 1 1 0
+	frame	data/chars/bosses/shivabot/rage32.png
+	@cmd rageCancel 40 60 0 0 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "random"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage32.png
+	burn 154 126 85 31 4 1 0 0 5 12
+	dropv 2 3 0
+	frame	data/chars/bosses/shivabot/rage33.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage33.png
+	burn 154 132 102 16 4 1 0 0 5 12
+	dropv 2 3 0
+	frame	data/chars/bosses/shivabot/rage34.png
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/rage35.png
+
+anim freespecial4 #GRAB RUN
+	range 40 120
+	rangea 0 0
+	rangez -9 9
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	138 192
+	sound	data/voices/Shiva1.wav
+	@cmd block 1
+	bbox 	128 114 25 80
+	frame	data/chars/bosses/shivabot/block00.png
+	frame	data/chars/bosses/shivabot/block00.png
+	frame	data/chars/bosses/shivabot/block00.png
+	@cmd block 0
+		delay	12
+	@cmd target 3.5 2
+	sound	data/sounds/Slide.wav
+	bbox 	145 136 43 56
+	@cmd dashTarget
+	attack 145 50 43 143 1 0 1 1 0 24
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd target 3.5 2
+	@cmd dashTarget
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd target 3.5 2
+	@cmd dashTarget
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd target 3.5 2
+	@cmd dashTarget
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd target 3.5 2
+	@cmd dashTarget
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd dasher 0
+	frame	data/chars/bosses/shivabot/run01.png
+
+anim follow5 #ANIMATION FOR DOGRAB ONLY
+	loop	0
+	delay	16
+	offset	138 192
+	@cmd dasher 0
+	@cmd landGrab
+	frame	data/chars/bosses/shivabot/run00.png
+
+anim freespecial5
+	range 80 150
+	rangea 25 80
+	rangez -24 24
+	fastattack 1
+	jugglecost 0
+	energycost 25 1 6
+	forcedirection -1
+	otg 1
+	hitflash flash
+	loop	0
+	delay	6
+	offset	138 192
+	hitfx	data/sounds/SpecialAttack2.wav
+	sound	data/voices/Attack4.wav
+	frame	data/chars/bosses/shivabot/run00.png
+		delay 24
+	@cmd dasher 10 0 0
+	attack 95 50 104 143 2 1 0 0 30 36
+	seal 1 1
+	sound	data/sounds/Shring5.wav
+	frame	data/chars/bosses/shiva/rage00.png
+		delay 8
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	frame	data/chars/bosses/shivabot/a101.png
+
+anim freespecial9
+	range 80 160
+	rangea 0 100
+	rangez -15 15
+	fastattack 0
+	jugglecost 1
+	forcedirection -1
+	energycost -20 1 6
+	otg 1
+	loop	0
+	delay 24
+	offset	138 192
+	@cmd dasher 0 0 0
+	sound	data/voices/Shiva1.wav
+	hitfx	data/sounds/WeakPunch.wav
+	@cmd spawnAnim "Shiva_Bot_Double" 0 0 0
+	frame	data/chars/bosses/shivabot/a100.png
+	frame	data/chars/bosses/shivabot/a101.png
+	delay 48
+	@cmd looParent 2
+	frame	data/chars/bosses/shivabot/a102.png
+
+anim follow7 #COUNTER
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	138 192
+	hitfx	data/sounds/HighPunch.wav
+	@cmd spawn01 "Counter" 0 0 1
+	@cmd block 0
+	@cmd dasher 0
+	frame	data/chars/bosses/shivabot/block00.png
+	sound	data/voices/Shiva1.wav
+	frame	data/chars/bosses/shivabot/s00.png
+	delay	8
+	@cmd dasher 1.2
+	burn 125 110 48 80 9 0 0 0 25 36
+	frame	data/chars/bosses/shivabot/s01.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/s01.png
+	delay	8
+	hitflash Impact
+	burn 125 110 62 80 15 1 0 0 25 36
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s02.png
+	@cmd dasher 1
+	burn 125 110 65 80 15 1 0 0 45 36
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s03.png
+	@cmd dasher 0.5 0 0
+	burn 125 110 65 80 15 1 0 0 45 36
+	dropv 3 5 0
+	frame	data/chars/bosses/shivabot/s04.png
+	delay 1
+	@cmd dasher 0 0 0
+	burn 125 110 60 80 15 1 0 0 45 36
+	dropv 3 5 0
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	frame	data/chars/bosses/shivabot/s05.png
+
+anim follow8 #AERIAL SPECIAL
+	fastattack 1
+	forcedirection 0
+	otg 1
+	jugglecost 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	8
+	offset	138 192
+	bbox 	165 120 31 73
+	frame	data/chars/bosses/shivabot/slam06.png
+	attack 170 118 45 50 0 0 1 1 0 12
+	dropv 0 1 0
+	frame	data/chars/bosses/shivabot/slam06.png
+		delay	24
+	bbox 	160 120 50 70
+	attack 180 130 55 55 0 0 1 1 0 12
+	dropv 0 1 0
+	frame	data/chars/bosses/shivabot/slam07.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	132 114 21 58
+	frame	data/chars/bosses/shivabot/jump00.png
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/jump01.png
+
+anim follow9 #AERIAL RECOVER
+	loop	0
+	delay	12
+	offset	138 192
+	sound	data/sounds/SpecialAttack5.wav
+	@cmd landSafe
+	@cmd invinc 2
+	@cmd leaper -1.3 1.6 0
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump01.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	6
+	offset	138 192
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+		delay	2
+	frame	data/chars/bosses/shivabot/jump00.png
+	@cmd landFrame
+		delay	6
+	sound	data/sounds/Jumpland.wav
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/shivabot/jumpland00.png
+	@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold"
+	#@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
+	#@cmd keyAni "special" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
+	frame	data/chars/bosses/shivabot/jumpland00.png
+
+
+anim dodge
+	range 0 80
+	rangea 0 100
+	rangez -24 24
+	loop	0
+	delay	2
+	offset	138 192
+	frame	data/chars/bosses/shivabot/jumpdelay00.png
+		delay	6
+	@cmd leapRandom 2 2 1
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+	frame	data/chars/bosses/shivabot/jump00.png
+		delay	2
+	frame	data/chars/bosses/shivabot/jump00.png
+	@cmd landFrame
+		delay	6
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/jumpland00.png
+	frame	data/chars/bosses/shivabot/jumpland00.png
+
+anim freespecial10
+	range 20 60
+	rangea 5 120
+	rangez -9 9
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost -15 1 6
+	otg 1
+	loop	0
+	delay	3
+	offset	138 192
+	@cmd dasher 0
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/SpecialAttack.wav
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+		delay	6
+	attack2 147 140 41 54 6 0 0 0 18 24
+	sound	data/voices/Shiva4.wav
+	frame	data/chars/bosses/shivabot/finalcrash01.png
+	@cmd rageCancel 20 60 0 80 0 "ANI_FOLLOW7" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/finalcrash02.png
+	attack2 124 152 59 42 6 0 0 0 32 24
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	@cmd rageCancel 40 80 0 0 60 "ANI_FREESPECIAL" "hit"
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/HighKick.wav
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	burn 144 106 55 53 8 1 0 0 24 24
+	dropv 4 2 0
+	bbox 	116 135 33 59
+	frame	data/chars/bosses/shivabot/finalcrash04.png
+	@cmd leaper 1 2.2 0
+	burn 137 76 37 63 8 1 0 0 16 24
+	dropv 4 2 0
+	bbox 	126 127 37 39
+	frame	data/chars/bosses/shivabot/finalcrash05.png
+	@cmd flip
+	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "random"
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	117 128 48 33
+	frame	data/chars/bosses/shivabot/finalcrash06.png
+	bbox 	116 123 47 31
+	frame	data/chars/bosses/shivabot/finalcrash07.png
+		delay	2
+	bbox 	133 114 22 53
+	frame	data/chars/bosses/shivabot/finalcrash08.png
+	@cmd landFrame
+		delay	12
+	@cmd flip
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 120 10 "ANI_JUMPATTACK2" "hit"
+	@cmd rageCancel -150 150 0 120 5 "ANI_FREESPECIAL4" "hit"
+	bbox 	123 155 31 39
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/shivabot/finalcrash09.png
+
+anim block
+	range 0 100
+	rangea 0 100
+	rangez -24 24
+	@cmd dasher 0 0 0
+	loop	0
+	delay	96
+	offset	138 192
+	bbox 	121 110 33 83
+	frame	data/chars/bosses/shivabot/block00.png

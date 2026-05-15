@@ -1,0 +1,108 @@
+loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st2c/bk00.png		0.6 1 0 0 0 0 -1 1 1 0 1 3 20 0.5 2 1
+panel			data/bgs/sor3/st2c/_map.png		none	none
+fglayer			data/bgs/sor3/st2c/fg00.png		-200 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st2c/fg01.png		-200 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+direction		both
+stagenumber 	2
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor3_st2c.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		St2_Fish1 3
+load		St2_Fish2 3
+load		St2_Light 3
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/music_boss3.c
+at			0
+
+spawn		St2_Fish1 1
+flip		1
+coords		120 72 0
+at			0
+
+spawn		St2_Fish1 1
+flip		0
+coords		360 76 0
+at			0
+
+spawn		St2_Fish1 1
+flip		1
+coords		160 80 0
+at			0
+
+spawn		St2_Fish1 1
+flip		0
+coords		320 84 0
+at			0
+
+spawn		St2_Fish1 1
+flip		1
+coords		200 88 0
+at			0
+
+spawn		St2_Fish1 1
+flip		0
+coords		280 92 0
+at			0
+
+spawn		St2_Fish1 1
+flip		1
+coords		240 96 0
+at			0
+
+spawn		St2_Fish1 1
+flip		0
+coords		240 100 0
+at			0
+
+spawn		St2_Fish1 1
+flip		1
+coords		280 104 0
+at			0
+
+spawn		St2_Fish1 1
+flip		0
+coords		200 108 0
+at			0
+
+spawn		St2_Fish2 1
+flip		1
+coords		1 78 0
+at			0
+
+spawn		St2_Fish2 1
+flip		0
+coords		500 98 0
+at			0
+
+spawn		St2_Light 1
+flip		1
+coords		300 180 0
+at			0
+
+#########################################################################################
+
+spawn		Monalisa_Wait1 1
+map			0
+flip		0
+boss		1
+coords		300 220 0
+at			0

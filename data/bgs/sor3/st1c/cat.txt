@@ -1,0 +1,35 @@
+name		 	St1_Cat
+type			panel
+shadow			0
+speed			5
+scroll			-0.5
+ondrawscript 	data/scripts/ondraw/cat.c
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	8
+	offset	1 180
+	frame	data/bgs/sor3/st1c/cat00.png
+	
+anim follow1
+	loop	0
+	delay	8
+	offset	1 180
+	frame	data/bgs/sor3/st1c/cat01.png
+	frame	data/bgs/sor3/st1c/cat02.png
+	frame	data/bgs/sor3/st1c/cat01.png
+	frame	data/bgs/sor3/st1c/cat02.png
+	frame	data/bgs/sor3/st1c/cat01.png
+	frame	data/bgs/sor3/st1c/cat02.png
+	frame	data/bgs/sor3/st1c/cat01.png
+	frame	data/bgs/sor3/st1c/cat02.png
+		delay	64
+	frame	data/bgs/sor3/st1c/cat03.png
+		delay	128
+	frame	data/bgs/sor3/st1c/cat04.png
+		delay	12
+	frame	data/bgs/sor3/st1c/cat03.png
+	frame	data/bgs/sor3/st1c/cat00.png
+	@cmd aniChange 0 "ANI_IDLE"
+	frame	data/bgs/sor3/st1c/cat00.png

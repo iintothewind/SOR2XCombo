@@ -1,0 +1,250 @@
+##MAIN
+name				Adam_Pipe
+type				none
+
+##LIFE
+health				0
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					0
+mprate  			5 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			0 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-2 #-1/-2/-3
+height				80
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bflash				Block
+
+##SCRIPTS
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+
+##ICONS
+icon				data/chars/heroes/adam/icon.png 1
+
+##PARROWS
+parrow				data/sprites/parrow.png 	-15 -140
+parrow2				data/sprites/parrow2.png 	-15 -140
+parrow3				data/sprites/parrow3.png 	-15 -140
+parrow4				data/sprites/parrow4.png 	-15 -140
+
+##DIESOUND
+diesound			data/voices/Adam1.wav
+
+##REMAPS
+remap				data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter1.png
+remap				data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter2.png
+remap				data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter3.png
+
+##COMMANDS
+com 				d f a2		freespecial		#RAGE
+com 				a2 + s		freespecial		#RAGE
+com 				a2 s		freespecial		#RAGE
+com 				f f a2		freespecial2	#SUPER
+
+##LOADS
+knife				PipeT
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	137 172
+	bbox 	126 95 23 79
+	frame	data/chars/heroes/adam/pipe/idle00.png
+	frame	data/chars/heroes/adam/pipe/idle01.png
+	frame	data/chars/heroes/adam/pipe/idle02.png
+	frame	data/chars/heroes/adam/pipe/idle03.png
+	frame	data/chars/heroes/adam/pipe/idle00.png
+	frame	data/chars/heroes/adam/pipe/idle01.png
+	frame	data/chars/heroes/adam/pipe/idle02.png
+	frame	data/chars/heroes/adam/pipe/idle03.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	137 172
+	bbox 	128 95 18 79
+	frame	data/chars/heroes/adam/pipe/walk00.png
+	frame	data/chars/heroes/adam/pipe/walk01.png
+	frame	data/chars/heroes/adam/pipe/walk02.png
+	frame	data/chars/heroes/adam/pipe/walk03.png
+	frame	data/chars/heroes/adam/pipe/walk04.png
+	frame	data/chars/heroes/adam/pipe/walk05.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	cancel 0 5 0 a2 freespecial2
+	loop	1
+	delay	14
+	offset	137 172
+	bbox 	126 102 20 72
+	frame	data/chars/heroes/adam/pipe/run00.png
+	frame	data/chars/heroes/adam/pipe/run01.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/heroes/adam/pipe/run02.png
+	frame	data/chars/heroes/adam/pipe/run03.png
+	frame	data/chars/heroes/adam/pipe/run04.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/heroes/adam/pipe/run05.png
+
+anim get
+	loop	0
+	delay	16
+	offset	137 172
+	frame	data/chars/heroes/adam/pipe/get00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	137 172
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/heroes/adam/pipe/jump00.png
+	frame	data/chars/heroes/adam/pipe/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	137 172
+	bbox 	129 113 31 61
+	frame	data/chars/heroes/adam/pipe/jumpdelay00.png
+
+anim jump
+	loop	0
+	delay	30
+	offset	137 172
+	bbox 	126 89 22 69
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/heroes/adam/pipe/jump00.png
+	frame	data/chars/heroes/adam/pipe/jump01.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	137 172
+	bbox 	126 89 22 69
+	@cmd jump 1
+	frame	data/chars/heroes/adam/pipe/jump00.png
+	frame	data/chars/heroes/adam/pipe/jump01.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	137 172
+	bbox 	129 113 31 61
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/heroes/adam/pipe/jumpland00.png
+
+anim attack1
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	137 172
+	bbox 	128 103 19 71
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/heroes/adam/pipe/a100.png
+	attack 166 118 86 6 32 1 0 0 30 12
+	bbox 155 102 20 72
+	frame	data/chars/heroes/adam/pipe/a101.png
+
+anim attack3
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	@script
+	if(frame == 0) {
+		void self 	= getlocalvar("self");
+		void target = getentityproperty(self, "opponent");
+		void type  	= getentityproperty(target,"type");
+		void subType	= getentityproperty(target,"subtype");
+		if(target != NULL()
+		&& getentityproperty(target, "dead") == 0
+		&& type == openborconstant("TYPE_ENEMY")
+		&& subType != openborconstant("SUBTYPE_NOTGRAB")){
+			if (readKey("d")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
+			else if (readKey("u")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
+		}
+	}
+	@end_script
+	delay	4
+	@cmd keyMove 1 0
+	offset	137 172
+	bbox 	128 98 21 75
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/heroes/adam/a300.png
+	frame	data/chars/heroes/adam/a301.png
+		delay	12
+	attack8 139 111 59 60 18 1 0 0 30 24
+	#dropv 3 0 0
+	sound	data/voices/att4.wav
+	frame	data/chars/heroes/adam/a302.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/adam/a303.png
+	frame	data/chars/heroes/adam/a304.png
+
+anim attackboth #THROW PIPE
+	throwframe 1 9999
+	loop	0
+	delay	12
+	offset	137 172
+	frame	data/chars/heroes/adam/pipe/a100.png
+		delay	16
+	@cmd throWeapon 88 46 -1 2 0 0
+	frame	data/chars/heroes/adam/pipe/a102.png
+
+anim follow11 #BLOCK
+	@cmd checkBlock
+	loop	0
+	delay	12
+	offset	137 172
+	bbox 	139 97 26 77
+	@cmd block 1
+	@cmd blockCost
+	frame	data/chars/heroes/adam/pipe/block00.png
+	@cmd keyLoop "attack3" 0
+	@cmd keyLoop "special" 0
+	@cmd block 0
+	frame	data/chars/heroes/adam/pipe/block00.png
+
+anim follow12 #PARRY
+	loop	0
+	delay	24
+	offset	137 172
+	bbox 	139 97 26 77
+	@cmd block 1
+	frame	data/chars/heroes/adam/pipe/block00.png

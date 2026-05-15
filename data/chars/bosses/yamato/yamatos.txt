@@ -1,0 +1,232 @@
+##MAIN
+name				YamatoS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/yamato/idle00.png data/chars/bosses/yamato/alter1.png
+remap				data/chars/bosses/yamato/idle00.png data/chars/bosses/yamato/alter2.png
+remap				data/chars/bosses/yamato/idle00.png data/chars/bosses/yamato/alter3.png
+remap				data/chars/bosses/yamato/idle00.png data/chars/bosses/yamato/alter4.png
+remap				data/chars/bosses/yamato/idle00.png data/chars/bosses/yamato/alter5.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn #SPAWN BROTHERS
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/explosion01.png
+	frame	data/chars/bosses/yamato/explosion01.png
+	frame	data/chars/bosses/yamato/explosion01.png
+	frame	data/chars/bosses/yamato/explosion01.png
+	frame	data/chars/bosses/yamato/explosion01.png
+
+anim grabattack
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/rise01.png
+	frame	data/chars/bosses/yamato/rise02.png
+	frame	data/chars/bosses/yamato/rise03.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+
+
+anim grabforward
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/rise01.png
+	frame	data/chars/bosses/yamato/rise02.png
+	frame	data/chars/bosses/yamato/rise03.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+
+anim grabbackward
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/grab00.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/drop01.png
+	frame	data/chars/bosses/yamato/rise01.png
+	frame	data/chars/bosses/yamato/rise02.png
+	frame	data/chars/bosses/yamato/rise03.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+
+anim freespecial #RAGE
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/run00.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run02.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run00.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run02.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run00.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run02.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run00.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run02.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run00.png
+	frame	data/chars/bosses/yamato/run01.png
+	frame	data/chars/bosses/yamato/run02.png
+	frame	data/chars/bosses/yamato/run01.png
+
+anim freespecial3 #DOUBLE SLASH DOWN
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/a201.png
+	frame	data/chars/bosses/yamato/a202.png
+	frame	data/chars/bosses/yamato/a203.png
+	frame	data/chars/bosses/yamato/a204.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+
+anim freespecial4 #DOUBLE SLASH UP
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/a201.png
+	frame	data/chars/bosses/yamato/a202.png
+	frame	data/chars/bosses/yamato/a203.png
+	frame	data/chars/bosses/yamato/a204.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+
+anim freespecial6 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/rage00.png
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/a203.png
+
+anim freespecial7 #BLITZ RAGE
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/a203.png
+	frame	data/chars/bosses/yamato/a204.png
+
+
+anim follow1 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/a204.png
+	frame	data/chars/bosses/yamato/a204.png
+	frame	data/chars/bosses/yamato/a204.png
+	frame	data/chars/bosses/yamato/a204.png
+	frame	data/chars/bosses/yamato/a204.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/block00.png
+	frame	data/chars/bosses/yamato/a200.png
+	frame	data/chars/bosses/yamato/a201.png
+	frame	data/chars/bosses/yamato/a202.png
+	frame	data/chars/bosses/yamato/a203.png
+	frame	data/chars/bosses/yamato/a204.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/jump00.png
+	frame	data/chars/bosses/yamato/jump00.png
+	frame	data/chars/bosses/yamato/idle00.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	157 180
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png
+	frame	data/chars/bosses/yamato/spin00.png

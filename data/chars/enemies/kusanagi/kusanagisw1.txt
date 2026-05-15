@@ -1,0 +1,38 @@
+##MAIN
+name				KusanagiSW1
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter1.png
+remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter2.png
+remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter3.png
+remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter4.png
+remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter5.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	145 181
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	
+anim dodge #DODGE
+	loop	0
+	delay	1000
+	offset	145 181
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png
+	frame	data/chars/enemies/kusanagi/kunai/dodge00.png

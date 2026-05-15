@@ -1,0 +1,20 @@
+name			Impact_B
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+setlayer		1000
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	6
+	offset	1200 1200
+	sound	data/sounds/Impact.wav
+	drawmethod alpha 3
+	frame	data/chars/misc/impact/original/impact00.png
+	drawmethod alpha 6
+	frame	data/chars/misc/impact/original/impact00.png
+	@cmd suicide
+	frame	data/chars/misc/impact/original/impact01.png

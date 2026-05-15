@@ -1,0 +1,2157 @@
+##MAIN
+name				ChunliB
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		30 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##ENERGY
+mp					120
+mprate  			5 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				74
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 2 3 4
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+escapehits			2 #ENEMY ONLY
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+death				2
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/chunli.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+ondrawscript		data/scripts/ondraw/chunli.c
+onspawnscript		data/scripts/onspawn/chunli.c
+onfallscript		data/scripts/onfall/default.c
+onpainscript		data/scripts/onpain/default.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/chunli.c
+script				data/scripts/updateentity/chunli.c
+
+##ICONS
+icon				data/chars/bosses/chunli/icon.png 1
+
+##DIESOUND
+diesound			data/voices/chunli29.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+palette       data/chars/bosses/chunli/idle00.png
+alternatepal  data/chars/bosses/chunli/alter1.png
+alternatepal  data/chars/bosses/chunli/alter2.png
+alternatepal  data/chars/bosses/chunli/alter3.png
+alternatepal  data/chars/bosses/chunli/alter4.png
+alternatepal  data/chars/bosses/chunli/idle00.png
+
+##LOADS
+load				ChunliS
+load				Chunli_Sho
+load				Chunli_Kiko
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	237 182
+	frame	data/chars/bosses/chunli/idle00.png
+
+anim waiting
+	loop	1
+	delay	16
+	offset	237 182
+	bbox 	227 108 30 74
+	frame	data/chars/bosses/chunli/idle00.png
+	frame	data/chars/bosses/chunli/idle01.png
+	frame	data/chars/bosses/chunli/idle02.png
+	frame	data/chars/bosses/chunli/idle03.png
+	frame	data/chars/bosses/chunli/idle00.png
+	frame	data/chars/bosses/chunli/idle01.png
+	frame	data/chars/bosses/chunli/idle02.png
+	frame	data/chars/bosses/chunli/idle03.png
+	@cmd looper 4 9
+		delay	24
+	bbox 225 98 25 81
+	sound	data/voices/chunli31.wav
+	frame	data/chars/bosses/chunli/win00.png
+	frame	data/chars/bosses/chunli/win01.png
+		delay	32
+	frame	data/chars/bosses/chunli/win02.png
+
+
+anim idle
+	loop	1
+	delay	16
+	offset	237 182
+	bbox 	227 108 30 74
+	frame	data/chars/bosses/chunli/idle00.png
+	frame	data/chars/bosses/chunli/idle01.png
+	frame	data/chars/bosses/chunli/idle02.png
+	frame	data/chars/bosses/chunli/idle03.png
+	frame	data/chars/bosses/chunli/idle00.png
+	frame	data/chars/bosses/chunli/idle01.png
+	frame	data/chars/bosses/chunli/idle02.png
+	frame	data/chars/bosses/chunli/idle03.png
+	@cmd looper 4 9
+		delay	24
+	bbox 225 98 25 81
+	sound	data/voices/chunli31.wav
+	frame	data/chars/bosses/chunli/win00.png
+	frame	data/chars/bosses/chunli/win01.png
+		delay	32
+	frame	data/chars/bosses/chunli/win02.png
+
+anim select
+	fshadow 0
+	loop	0
+	delay	100000
+	offset	237 182
+	frame	data/chars/bosses/chunli/idle00.png
+		delay	24
+	frame	data/chars/bosses/chunli/idle00.png
+	frame	data/chars/bosses/chunli/idle00.png
+
+anim chargeattack
+	chargetime 9999
+	loop	0
+	delay	1
+	offset	237 182
+	frame	data/chars/bosses/chunli/idle00.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	237 182
+	bbox 229 108 24 72
+	frame	data/chars/bosses/chunli/walk00.png
+	frame	data/chars/bosses/chunli/walk01.png
+	frame	data/chars/bosses/chunli/walk02.png
+	frame	data/chars/bosses/chunli/walk03.png
+	frame	data/chars/bosses/chunli/walk04.png
+	frame	data/chars/bosses/chunli/walk05.png
+	frame	data/chars/bosses/chunli/walk06.png
+	frame	data/chars/bosses/chunli/walk07.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	cancel 0 5 0 a2 freespecial2
+	loop	1
+	delay	14
+	offset	237 182
+	bbox 228 108 25 72
+	frame	data/chars/bosses/chunli/run00.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/chunli/run01.png
+	frame	data/chars/bosses/chunli/run02.png
+	frame	data/chars/bosses/chunli/run03.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/chunli/run04.png
+	frame	data/chars/bosses/chunli/run05.png
+
+anim get
+	loop	0
+	delay	16
+	offset	237 182
+	frame	data/chars/bosses/chunli/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	237 182
+	bbox 229 108 24 72
+	@cmd vaultStuck
+	frame	data/chars/bosses/chunli/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	237 182
+	bbox 	232 117 26 64
+	sound	data/voices/chunli13.wav
+	frame	data/chars/bosses/chunli/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	237 182
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/jump00.png
+	frame	data/chars/bosses/chunli/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	237 182
+	bbox 	228 119 27 61
+	frame	data/chars/bosses/chunli/land00.png
+
+anim jump
+	loop	0
+	delay	30
+	offset	237 182
+	bbox 	223 88 27 82
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/jump00.png
+	bbox 	223 115 27 55
+	frame	data/chars/bosses/chunli/jump01.png
+
+anim forwardjump
+	loop	0
+	delay	6
+	offset	237 182
+	sound	data/sounds/Jumping.wav
+	bbox 	228 119 27 61
+	frame	data/chars/bosses/chunli/fjump00.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/fjump01.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/chunli/fjump02.png
+	frame	data/chars/bosses/chunli/fjump03.png
+	frame	data/chars/bosses/chunli/fjump04.png
+	frame	data/chars/bosses/chunli/fjump05.png
+	frame	data/chars/bosses/chunli/fjump06.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/fjump07.png
+
+anim runjump
+	loop	0
+	delay	6
+	offset	237 182
+	sound	data/sounds/Jumping.wav
+	bbox 	228 119 27 61
+	frame	data/chars/bosses/chunli/fjump00.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/fjump01.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/chunli/fjump02.png
+	frame	data/chars/bosses/chunli/fjump03.png
+	frame	data/chars/bosses/chunli/fjump04.png
+	frame	data/chars/bosses/chunli/fjump05.png
+	frame	data/chars/bosses/chunli/fjump06.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/fjump07.png
+
+anim walkoff
+	loop	0
+	delay	6
+	offset	237 182
+	bbox 	226 103 26 52
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/wjump.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	bbox 	223 115 27 55
+	frame	data/chars/bosses/chunli/jump01.png
+
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	237 182
+	bbox 	228 119 27 61
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/chunli/land00.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	237 182
+	bbox 	233 116 27 64
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain200.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	237 182
+	bbox 	224 103 30 78
+	frame	data/chars/bosses/chunli/pain00.png
+	frame	data/chars/bosses/chunli/pain00.png
+	frame	data/chars/bosses/chunli/pain01.png
+	frame	data/chars/bosses/chunli/pain01.png
+	frame	data/chars/bosses/chunli/pain00.png
+	frame	data/chars/bosses/chunli/pain00.png
+	frame	data/chars/bosses/chunli/pain01.png
+	frame	data/chars/bosses/chunli/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	237 182
+	bbox 	233 116 27 64
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain200.png
+	frame	data/chars/bosses/chunli/pain201.png
+	frame	data/chars/bosses/chunli/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	237 182
+	bbox 	208 130 68 40
+	frame	data/chars/bosses/chunli/fall00.png
+		delay	8
+	bbox 	203 158 79 23
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/chunli19.wav
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	237 182
+	bbox 	208 133 64 40
+	frame	data/chars/bosses/chunli/fall00.png
+		delay	8
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/chunli21.wav
+	bbox 	205 157 79 25
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	237 182
+	bbox 	208 133 64 40
+	frame	data/chars/bosses/chunli/fall00.png
+		delay	8
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/chunli21.wav
+	bbox 	205 157 79 25
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	237 182
+	frame	data/chars/bosses/chunli/fall600.png
+	frame	data/chars/bosses/chunli/fall601.png
+	frame	data/chars/bosses/chunli/fall602.png
+	frame	data/chars/bosses/chunli/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	237 182
+	frame	data/chars/bosses/chunli/fall700.png
+	frame	data/chars/bosses/chunli/fall701.png
+	frame	data/chars/bosses/chunli/fall702.png
+	frame	data/chars/bosses/chunli/fall703.png
+	frame	data/chars/bosses/chunli/fall704.png
+	frame	data/chars/bosses/chunli/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	237 182
+	bbox 	208 133 64 40
+	hitfx	data/sounds/MediumKick.wav
+	attack 208 133 64 40 5 1 0 0 20 12
+	frame	data/chars/bosses/chunli/fall00.png
+		delay	999
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/fall00.png
+		delay	8
+	#@cmd cancelFall 50 "ANI_LAND"
+	bbox 	205 157 79 25
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/chunli28.wav
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	237 182
+	bbox 224 118 30 63
+	hitfx	data/sounds/MediumKick.wav
+	attack 224 118 30 63 5 1 0 0 20 12
+	frame	data/chars/bosses/chunli/fall900.png
+		delay	999
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/fall900.png
+		delay	8
+	#@cmd cancelFall 50 "ANI_LAND"
+	bbox 	205 157 79 25
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/chunli55.wav
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim death
+	loop	0
+	delay	16
+	offset	237 182
+	frame	data/chars/bosses/chunli/fall02.png
+	frame	data/chars/bosses/chunli/fall02.png
+	frame	data/chars/bosses/chunli/fall02.png
+
+anim rise
+	loop	0
+	delay	8
+	offset	237 182
+	frame	data/chars/bosses/chunli/rise00.png
+	frame	data/chars/bosses/chunli/rise00.png
+	frame	data/chars/bosses/chunli/rise01.png
+	frame	data/chars/bosses/chunli/rise01.png
+	frame	data/chars/bosses/chunli/rise02.png
+	frame	data/chars/bosses/chunli/rise02.png
+	frame	data/chars/bosses/chunli/rise03.png
+	frame	data/chars/bosses/chunli/rise03.png
+
+anim riseattack
+	range 40 80
+	rangea 0 0
+	rangez -9 9
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	237 182
+	bbox 225 131 25 47
+	sound	data/voices/chunli16.wav
+	frame	data/chars/bosses/chunli/c300.png
+	@cmd block 0
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	@cmd dasher 2 0 0
+	attack2 232 125 65 57 20 1 0 0 35 15
+	frame	data/chars/bosses/chunli/c301.png
+	delay	4
+	@cmd dasher 2.5 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c301.png
+	delay	9
+	@cmd dasher 1.5 0 0
+	attack8 232 125 65 57 25 1 0 0 30 15
+	dropv 3 0 0
+	frame	data/chars/bosses/chunli/c301.png
+	delay	16
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/chunli/s300.png
+	delay 1
+	@cmd mpCost -10
+	@cmd rageCancel 20 100 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 100 45 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	frame	data/chars/bosses/chunli/s300.png
+
+anim attack1
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	237 182
+	hitfx	data/sounds/LowPunch.wav
+	sound	data/sounds/LowAttack.wav
+	bbox 230 124 30 57
+	frame	data/chars/bosses/chunli/c100.png
+	bbox 234 124 34 57
+	attack2 237 135 46 47 3 0 0 0 25 15
+	frame	data/chars/bosses/chunli/c101.png
+	delay	2
+	bbox 222 109 26 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/a200.png
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	4
+	bbox	227 112 25 68
+	attack 237 126 43 55 4 0 0 0 25 15
+	frame	data/chars/bosses/chunli/a201.png
+	bbox 222 109 26 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/a200.png
+
+anim attack2
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	237 182
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	bbox 229 109 25 72
+	frame	data/chars/bosses/chunli/a300.png
+	bbox 229 117 23 65
+	attack 237 91 60 90 5 0 0 0 35 15
+	frame	data/chars/bosses/chunli/a301.png
+	bbox 229 109 25 72
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/a300.png
+
+anim attack3
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	@cmd rageCancel 20 60 0 0 0 "ANI_FOLLOW5" "random"
+	otg 1
+	loop	0
+	offset	237 182
+	delay	4
+	bbox 225 131 25 47
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	frame	data/chars/bosses/chunli/c300.png
+	delay	6
+	attack2 232 128 65 50 5 0 0 0 30 15
+	frame	data/chars/bosses/chunli/c301.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c300.png
+
+
+anim attack4
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	@cmd keyMove 1 1
+	offset	237 182
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	bbox 229 105 26 75
+	frame	data/chars/bosses/chunli/b100.png
+	frame	data/chars/bosses/chunli/b101.png
+	delay	8
+	bbox 229 98 26 83
+	attack 235 126 54 55 5 0 0 0 30 15
+	frame	data/chars/bosses/chunli/b102.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b102.png
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	delay	10
+	bbox 229 98 26 83
+	attack8 230 108 47 73 7 1 0 0 35 15
+	frame	data/chars/bosses/chunli/b103.png
+	delay	4
+	bbox 229 106 26 75
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b101.png
+	@cmd mpCost -10
+	@cmd rageCancel 20 100 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 100 45 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	frame	data/chars/bosses/chunli/b100.png
+
+anim attackboth #BACK ATTACK
+	range -20 -40
+	rangea 0 0
+	fastattack 1
+	jugglecost 3
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	4
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	bbox 	233 122 25 60
+	frame	data/chars/bosses/chunli/ab00.png
+	delay	6
+	bbox 	226 103 30 79
+	attack 196 97 40 84 5 1 0 0 30 15
+	frame	data/chars/bosses/chunli/ab01.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/ab01.png
+	bbox 	232 109 27 73
+	attack 190 121 49 60 5 1 0 0 35 15
+	frame	data/chars/bosses/chunli/ab02.png
+	delay	4
+	bbox 	233 110 30 71
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/ab03.png
+	bbox 229 106 26 75
+	frame	data/chars/bosses/chunli/b100.png
+
+anim grabattack #GRAB KICK
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	237 182
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	bbox 	227 101 22 80
+	frame	data/chars/bosses/chunli/b400.png
+	delay	8
+	bbox 	230 103 20 78
+	attack2 240 127 50 54 5 1 0 0 25 15
+	frame	data/chars/bosses/chunli/b401.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b401.png
+	delay	8
+	hitfx	data/sounds/HighKick.wav
+	@cmd leaper 0 2.5 0
+	bbox 	204 117 41 41
+	attack8 230 96 70 60 9 1 0 0 30 15
+	dropv 3.5 0
+	frame	data/chars/bosses/chunli/b402.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b402.png
+	delay	6
+	bbox 	0 0 0 0
+	frame	data/chars/bosses/chunli/b403.png
+	frame	data/chars/bosses/chunli/b404.png
+	@cmd grabEnd
+	frame	data/chars/bosses/chunli/b405.png
+	@cmd cancelHeight 0 75 20 "ANI_JUMPATTACK2"
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/chunli/land00.png
+
+anim grabattack2 #VAULT FRONT TO BACK
+	loop	0
+	delay	6
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd leaper 1.5 2.5 0
+	frame	data/chars/bosses/chunli/b500.png
+	frame	data/chars/bosses/chunli/b501.png
+	frame	data/chars/bosses/chunli/b502.png
+	frame	data/chars/bosses/chunli/b503.png
+	frame	data/chars/bosses/chunli/b504.png
+	sound	data/sounds/HighAttack.wav
+	delay	10
+	attack8 196 112 70 70 9 1 0 0 30 15
+	dropv 3.5 0
+	frame	data/chars/bosses/chunli/b505.png
+	delay	1
+	@cmd flip
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b505.png
+	@cmd cancelHeight 0 75 20 "ANI_JUMPATTACK2"
+	@cmd grabEnd
+	delay	6
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/chunli/land00.png
+
+anim grabforward #SLAM
+	@cmd dasher 0
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	237 182
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/chunli02.wav
+	@cmd grabStart
+	@cmd position 0 10 10 0 -1
+	frame	data/chars/bosses/chunli/grabatk00.png
+	delay	10
+	@cmd position 5 25 -10 0 0
+	frame	data/chars/bosses/chunli/grabatk01.png
+	delay	14
+	@cmd position 3 35 1 0 0
+	sound	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/chunli/grabatk02.png
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd spawn01 "Dust" 20 0 1
+	@cmd grabEnd
+	delay	8
+	frame	data/chars/bosses/chunli/grabatk03.png
+	delay	1
+	frame	data/chars/bosses/chunli/grabatk03.png
+	@cmd mpCost -10
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/chunli/idle00.png
+
+anim grabbackward #SLAM
+	@cmd dasher 0
+	@cmd flip
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	237 182
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/chunli02.wav
+	@cmd grabStart
+	@cmd position 0 10 10 0 -1
+	frame	data/chars/bosses/chunli/grabatk00.png
+	delay	10
+	@cmd position 5 25 -10 0 0
+	frame	data/chars/bosses/chunli/grabatk01.png
+	delay	14
+	@cmd position 3 35 1 0 0
+	sound	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/chunli/grabatk02.png
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd spawn01 "Dust" 20 0 1
+	@cmd grabEnd
+	delay	8
+	frame	data/chars/bosses/chunli/grabatk03.png
+	delay	1
+	frame	data/chars/bosses/chunli/grabatk03.png
+	@cmd mpCost -10
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/chunli/idle00.png
+
+anim grabbackward2
+	jumpframe 0 2.5
+	attackone 0
+	fastattack 1
+	forcedirection 0
+	energycost 10 1 6
+	otg 1
+	loop	0
+	delay	8
+	offset	237 182
+	@cmd jump 0
+	@cmd healStart
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/chunli02.wav
+	@cmd grabStart2
+	@cmd position 0 10 10 0 -1
+	frame	data/chars/bosses/chunli/grabatk00.png
+	delay	10
+	@cmd position 5 25 -10 0 0
+	frame	data/chars/bosses/chunli/grabatk01.png
+	@cmd landFrame
+	delay	14
+	sound	data/sounds/HighPunch.wav
+	@cmd position 3 35 1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd spawn01 "Dust" 20 0 1
+	frame	data/chars/bosses/chunli/grabatk02.png
+	delay	6
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd grabEnd
+	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL5" "hit"
+	@cmd clearL
+	frame	data/chars/bosses/chunli/grabatk03.png
+
+anim jumpattack #JUMP STATIC
+	range 40 120
+	rangea 999 999
+	rangez -999 999
+	fastattack 1
+	jugglecost 1.5
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	bbox 225 131 25 47
+	frame	data/chars/bosses/chunli/c300.png
+	delay	12
+	attack 232 128 65 50 5 1 0 0 30 15
+	frame	data/chars/bosses/chunli/c301.png
+
+anim jumpattack2 #JUMP DOWN
+	range 40 120
+	rangea 999 999
+	rangez -999 999
+	followanim 1
+	followcond 1
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	237 182
+	@cmd targetJump
+	@cmd leapJump
+	bbox 	228 125 30 45
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/jb400.png
+	bbox 	225 96 30 85
+	attack 230 125 25 56 25 1 0 0 30 15
+	dropv 1.65 1.4
+	frame	data/chars/bosses/chunli/jb401.png
+
+anim	follow1
+	jumpframe	0 2 1
+	loop	0
+	offset	237 182
+	delay	12
+	bbox 	225 96 30 85
+	sound	data/voices/chunli02.wav
+	frame	data/chars/bosses/chunli/jb401.png
+	frame	data/chars/bosses/chunli/jb401.png
+	@cmd mpCost -10
+	@cmd cancelHeight 0 75 20 "ANI_FOLLOW8"
+	delay	18
+	bbox 	228 125 30 45
+	frame	data/chars/bosses/chunli/jump01.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	delay	6
+	@cmd landFrame
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	@cmd clearL
+	frame	data/chars/bosses/chunli/land00.png
+
+anim jumpattack3 #JUMP UP
+	range 40 120
+	rangea 999 999
+	rangez -999 999
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	bbox 	228 110 26 81
+	frame	data/chars/bosses/chunli/jb100.png
+	bbox 	228 100 26 81
+	frame	data/chars/bosses/chunli/jb101.png
+	delay	10
+	bbox 	228 96 26 84
+	@cmd leaper 1 1.5 0
+	attack 230 115 50 50 3 1 0 0 35 15
+	frame	data/chars/bosses/chunli/jb102.png
+	sound	data/sounds/HighAttack.wav
+	delay	6
+	bbox 	228 100 26 81
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/jb103.png
+	delay	12
+	@cmd leaper 1 1.5 0
+	bbox 	228 96 26 84
+	attack 230 97 50 60 5 1 0 0 40 15
+	frame	data/chars/bosses/chunli/jb104.png
+	bbox 	228 100 26 81
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/jb103.png
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+
+anim jumpforward #JUMP FORWARD
+	range 40 120
+	rangea 999 999
+	rangez -999 999
+	fastattack 1
+	jugglecost 1.5
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	237 182
+	bbox 	233 133 30 48
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/jb300.png
+	delay	12
+	bbox 	227 133 25 48
+	attack 238 151 52 30 5 1 0 0 35 24
+	frame	data/chars/bosses/chunli/jb301.png
+
+anim runattack #UPPER
+	jumpframe 0 2.5
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli02.wav
+	move 5
+	delay	2
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s500.png
+	bbox 	225 102 26 75
+	frame	data/chars/bosses/chunli/s501.png
+	delay 3
+	bbox 	225 90 26 80
+	shock 240 110 30 70 3 1 0 0 30 24
+	frame	data/chars/bosses/chunli/s502.png
+	bbox 	225 96 26 80
+	frame	data/chars/bosses/chunli/s503.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s504.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s505.png
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s506.png
+	delay	3
+	bbox 	225 100 26 80
+	shock 240 84 40 75 5 1 0 0 35 24
+	frame	data/chars/bosses/chunli/s507.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s508.png
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s509.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 96 26 75
+	frame	data/chars/bosses/chunli/s510.png
+	delay	2
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s500.png
+	bbox 	225 102 26 75
+	frame	data/chars/bosses/chunli/s501.png
+	delay 3
+	bbox 	225 90 26 80
+	shock 240 110 30 70 3 1 0 0 30 24
+	frame	data/chars/bosses/chunli/s502.png
+	bbox 	225 96 26 80
+	frame	data/chars/bosses/chunli/s503.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s504.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s505.png
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s506.png
+	move 0
+	delay	6
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	frame	data/chars/bosses/chunli/land00.png
+
+anim special #OFFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	energycost 25 1 6
+	otg 1
+	loop	0
+	offset	237 182
+	bbox 	221 100 25 80
+	@cmd dasher 0 0 0
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli34.wav
+	delay	1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	6
+	attack 243 96 40 85 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	delay	6
+	attack 243 96 40 85 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	delay	6
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	shock 243 120 50 60 35 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	delay	6
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	shock 243 141 38 40 30 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s202.png
+	delay	6
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	shock 243 96 40 85 25 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	@cmd mpCost -25
+	@cmd rageCancel 20 100 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 100 45 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	@cmd clearL
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+
+
+anim special2 #OFFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	energycost 25 1 6
+	otg 1
+	loop	0
+	offset	237 182
+	bbox 	221 100 25 80
+	@cmd dasher 0 0 0
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli34.wav
+	delay	1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	6
+	attack 243 96 40 85 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	delay	6
+	attack 243 96 40 85 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	delay	6
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	shock 243 120 50 60 35 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	delay	6
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	shock 243 141 38 40 30 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s202.png
+	delay	6
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	shock 243 96 40 85 25 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	@cmd mpCost -25
+	@cmd rageCancel 20 100 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 100 45 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	@cmd clearL
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+
+anim freespecial
+	range 80 120
+	rangea 225 280
+	rangez -9 9
+	followanim 2
+	followcond 1
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	energycost 60 1 6
+	loop	0
+	offset	237 182
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/voices/chunli24.wav
+	@cmd spawnBind "Rage" 0 0 -1
+	frame	data/chars/bosses/chunli/b100.png
+		delay	32
+	@cmd leaper 3 2 0
+	attack 237 82 40 100 2 0 0 0 0 18
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/bosses/chunli/b101.png
+		delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b101.png
+	@cmd landFrame
+	@cmd dasher 1 0 0
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/chunli/land00.png
+
+anim follow2 #RAGE COMBO
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	238 172
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/bosses/chunli/b102.png
+	attack2 237 125 53 56 5 0 0 0 35 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/b102.png
+	delay	2
+	@cmd looper 1 2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b102.png
+	hitfx	data/sounds/LowPunch.wav
+	sound	data/sounds/LowAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c100.png
+	delay	6
+	attack2 237 135 50 47 5 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/c101.png
+	delay	4
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c200.png
+	delay	6
+	attack2 237 141 50 40 5 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/c201.png
+	delay	4
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c300.png
+	delay	6
+	attack2 232 128 65 50 5 0 0 0 30 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/c301.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c300.png
+	@cmd looper 3 1
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/a200.png
+	delay	6
+	attack 237 126 50 55 5 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/a201.png
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/a500.png #frame 12
+	delay	6
+	attack 237 128 50 50 7 0 0 0 25 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/a501.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b100.png
+	frame	data/chars/bosses/chunli/b101.png
+	delay	6
+	attack 235 126 54 55 7 0 0 0 30 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/b102.png
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b102.png
+	delay	6
+	attack 237 108 50 73 9 0 0 0 35 15
+	seal 1 1
+	frame	data/chars/bosses/chunli/b103.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/b101.png
+	frame	data/chars/bosses/chunli/b100.png
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli34.wav
+	@cmd dasher 0.3 0 0
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s200.png
+	delay	6
+	attack 243 96 40 85 7 0 0 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 7 0 0 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 7 0 0 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 7 0 0 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	@cmd looper 22 1
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png #frame30
+	delay	6
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	attack8 243 120 50 60 9 1 0 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	delay	6
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	attack8 243 141 38 40 9 1 0 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s202.png
+	delay	6
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	attack8 243 96 40 85 9 1 0 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay 12
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+
+anim freespecial2 #GRAB RUN
+	range 50 120
+	rangea 0 0
+	rangez -9 9
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	237 182
+	hitfx	data/sounds/Throw2.wav
+	sound	data/voices/chunli43.wav
+	#bbox 228 108 25 72
+	@cmd selfNoGrab 1
+	@cmd target 3 2
+	@cmd dashTarget
+	attack 239 93 30 90 1 0 1 1 0 24
+	frame	data/chars/bosses/chunli/run00.png
+	sound	data/sounds/Run.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/chunli/run01.png
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/chunli/run02.png
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/chunli/run03.png
+	sound	data/sounds/Run2.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/chunli/run04.png
+	@cmd dasher 0 0 0
+	@cmd selfNoGrab 0
+	frame	data/chars/bosses/chunli/run05.png
+
+anim freespecial3 #AERIAL THOUSAND KICKS
+	range 80 120
+	rangea 225 280
+	rangez -9 9
+	jumpframe 0 2.5
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 20 1 6
+	otg 1
+	loop	0
+	offset	237 182
+	bbox 	224 132 25 49
+	delay	1
+	sound	data/voices/chunli34.wav
+	frame	data/chars/bosses/chunli/s600.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s600.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	3
+	attack 240 148 65 35 5 0 0 0 5 24
+	frame	data/chars/bosses/chunli/s603.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s604.png
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	delay	3
+	bbox 	224 134 25 47
+	attack 240 131 65 50 5 0 0 0 5 24
+	frame	data/chars/bosses/chunli/s601.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s602.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	3
+	attack 240 146 65 35 5 0 0 0 5 24
+	frame	data/chars/bosses/chunli/s605.png
+	@cmd looper 1 1
+	@cmd leaper 2 2 0
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s606.png
+	delay	6
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump01.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	frame	data/chars/bosses/chunli/land00.png
+
+
+anim freespecial4 #RUN UPPER
+	range 60 120
+	rangea 999 999
+	rangez -24 24
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 15 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	237 182
+	hitfx	data/sounds/Throw2.wav
+	sound	data/voices/chunli43.wav
+	#bbox 228 108 25 72
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 20 60 0 100 -24 24 "ANI_FOLLOW21"
+	attack 239 93 30 90 1 0 1 1 0 24
+	frame	data/chars/bosses/chunli/run00.png
+	sound	data/sounds/Run.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 20 60 0 100 -24 24 "ANI_FOLLOW21"
+	frame	data/chars/bosses/chunli/run01.png
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 20 60 0 100 -24 24 "ANI_FOLLOW21"
+	frame	data/chars/bosses/chunli/run02.png
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 20 60 0 100 -24 24 "ANI_FOLLOW21"
+	frame	data/chars/bosses/chunli/run03.png
+	sound	data/sounds/Run2.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 20 60 0 100 -24 24 "ANI_FOLLOW21"
+	frame	data/chars/bosses/chunli/run04.png
+	@cmd dasher 0 0 0
+	@cmd selfNoGrab 0
+	frame	data/chars/bosses/chunli/run05.png
+
+anim follow21 #UPPER
+	jumpframe 0 2
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli02.wav
+	@cmd dasher 0 0 0
+	move 2
+	delay	2
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s500.png
+	bbox 	225 102 26 75
+	frame	data/chars/bosses/chunli/s501.png
+	delay 3
+	bbox 	225 90 26 80
+	shock 240 110 30 70 3 1 0 0 30 24
+	frame	data/chars/bosses/chunli/s502.png
+	bbox 	225 96 26 80
+	frame	data/chars/bosses/chunli/s503.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s504.png
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s505.png
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s506.png
+	delay	3
+	bbox 	225 100 26 80
+	shock 240 84 40 75 5 1 0 0 35 24
+	frame	data/chars/bosses/chunli/s507.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s508.png
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s509.png
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 96 26 75
+	frame	data/chars/bosses/chunli/s510.png
+	delay	2
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s500.png
+	bbox 	225 102 26 75
+	frame	data/chars/bosses/chunli/s501.png
+	delay 3
+	bbox 	225 90 26 80
+	shock 240 110 30 70 3 1 0 0 30 24
+	frame	data/chars/bosses/chunli/s502.png
+	bbox 	225 96 26 80
+	frame	data/chars/bosses/chunli/s503.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s504.png
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s505.png
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s506.png
+	move 0
+	delay	6
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	@cmd mpCost -10
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	frame	data/chars/bosses/chunli/land00.png
+
+anim freespecial5 #RUN OFFENSIVE
+	range 60 120
+	rangea 0 60
+	rangez -24 24
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 15 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	237 182
+	hitfx	data/sounds/Throw2.wav
+	sound	data/voices/chunli43.wav
+	#bbox 228 108 25 72
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 10 40 0 100 -24 24 "ANI_FOLLOW22"
+	attack 239 93 30 90 1 0 1 1 0 24
+	frame	data/chars/bosses/chunli/run00.png
+	sound	data/sounds/Run.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 10 40 0 100 -24 24 "ANI_FOLLOW22"
+	frame	data/chars/bosses/chunli/run01.png
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 10 40 0 100 -24 24 "ANI_FOLLOW22"
+	frame	data/chars/bosses/chunli/run02.png
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 10 40 0 100 -24 24 "ANI_FOLLOW22"
+	frame	data/chars/bosses/chunli/run03.png
+	sound	data/sounds/Run2.wav
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd cancel 10 40 0 100 -24 24 "ANI_FOLLOW22"
+	frame	data/chars/bosses/chunli/run04.png
+	@cmd dasher 0 0 0
+	@cmd selfNoGrab 0
+	frame	data/chars/bosses/chunli/run05.png
+
+anim follow22 #OFFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	energycost 25 1 6
+	otg 1
+	loop	0
+	offset	237 182
+	bbox 	221 100 25 80
+	@cmd dasher 0 0 0
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli34.wav
+	delay	1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	6
+	attack 243 96 40 85 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	delay	6
+	attack 243 96 40 85 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack2 243 136 50 45 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s202.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	delay	6
+	attack 243 120 50 60 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	attack 243 141 38 40 2 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s203.png
+	delay	6
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	shock 243 120 50 60 35 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s204.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s205.png
+	delay	6
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	shock 243 141 38 40 30 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s206.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s202.png
+	delay	6
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	shock 243 96 40 85 25 1 1 0 20 24
+	seal 1 1
+	frame	data/chars/bosses/chunli/s200.png
+	@cmd mpCost -25
+	@cmd rageCancel 20 100 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 100 45 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	@cmd clearL
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/s201.png
+
+anim freespecial6 #sho
+	range 80 120
+	rangea 999 999
+	rangez -9 9
+	fastattack 1
+	forcedirection -1
+	otg 1
+	jugglecost 0
+	energycost 45 1 6
+	loop	0
+	sound	data/voices/Chunli10.wav
+	@cmd dasher 0 0 0
+	offset	237 182
+	delay	8
+	@cmd spawnBind "Rage" -10 0 -1
+	frame	data/chars/bosses/chunli/s100.png
+	frame	data/chars/bosses/chunli/s101.png
+	frame	data/chars/bosses/chunli/s102.png
+	frame	data/chars/bosses/chunli/s103.png
+	@cmd shootBind "Chunli_Sho" 10 -1 0
+	frame	data/chars/bosses/chunli/s103.png
+	frame	data/chars/bosses/chunli/s103.png
+	@cmd looParent 5
+	frame	data/chars/bosses/chunli/s103.png
+		delay	16
+	frame	data/chars/bosses/chunli/s103.png
+
+
+anim freespecial7 #kiko
+	range 80 240
+	rangea 0 80
+	rangez -5 5
+	throwframe 1 999
+	fastattack 1
+	forcedirection -1
+	otg 1
+	jugglecost 0
+	energycost 5 1 6
+	loop	0
+	sound	data/voices/Chunli22.wav
+	@cmd dasher 0 0 0
+	offset	237 182
+	@cmd mpCost -25
+	delay	12
+	frame	data/chars/bosses/chunli/s100.png
+	frame	data/chars/bosses/chunli/s101.png
+	frame	data/chars/bosses/chunli/s102.png
+	frame	data/chars/bosses/chunli/s103.png
+	@cmd shoot "Chunli_Kiko" 10 -1 0 3 0 0
+	frame	data/chars/bosses/chunli/s103.png
+	frame	data/chars/bosses/chunli/s103.png
+	delay	24
+	frame	data/chars/bosses/chunli/s103.png
+
+
+
+anim freespecial9 #UPPER
+	range 20 60
+	rangea 5 120
+	rangez -9 9
+	jumpframe 0 2.5
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	energycost -15 1 6
+	otg 1
+	loop	0
+	offset	237 182
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/chunli02.wav
+	move 2
+	delay	2
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s500.png
+	bbox 	225 102 26 75
+	frame	data/chars/bosses/chunli/s501.png
+	delay 3
+	bbox 	225 90 26 80
+	shock 240 110 30 70 3 1 0 0 30 24
+	frame	data/chars/bosses/chunli/s502.png
+	bbox 	225 96 26 80
+	frame	data/chars/bosses/chunli/s503.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s504.png
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s505.png
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s506.png
+	delay	3
+	bbox 	225 100 26 80
+	shock 240 84 40 75 5 1 0 0 35 24
+	frame	data/chars/bosses/chunli/s507.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s508.png
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s509.png
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 96 26 75
+	frame	data/chars/bosses/chunli/s510.png
+	delay	2
+	bbox 	225 105 26 75
+	frame	data/chars/bosses/chunli/s500.png
+	bbox 	225 102 26 75
+	frame	data/chars/bosses/chunli/s501.png
+	delay 3
+	bbox 	225 90 26 80
+	shock 240 110 30 70 3 1 0 0 30 24
+	frame	data/chars/bosses/chunli/s502.png
+	bbox 	225 96 26 80
+	frame	data/chars/bosses/chunli/s503.png
+	bbox 	225 100 26 80
+	frame	data/chars/bosses/chunli/s504.png
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s505.png
+	bbox 	225 105 26 60
+	frame	data/chars/bosses/chunli/s506.png
+	move 0
+	delay	6
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	@cmd mpCost -10
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	frame	data/chars/bosses/chunli/land00.png
+
+anim follow5
+	loop	0
+	delay	16
+	offset	237 182
+	@cmd dasher 0
+	@cmd landGrab
+	frame	data/chars/bosses/chunli/grab00.png
+
+anim follow6 #GRAB ESCAPE
+	@cmd dasher 0
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	237 182
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/chunli02.wav
+	@cmd grabStart2
+	@cmd position 0 10 10 0 -1
+	@cmd spawn01 "Escape" 25 50 1
+	frame	data/chars/bosses/chunli/grabatk00.png
+	delay	10
+	@cmd position 5 25 -10 0 0
+	frame	data/chars/bosses/chunli/grabatk01.png
+	delay	14
+	@cmd position 3 35 1 0 0
+	sound	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/chunli/grabatk02.png
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd spawn01 "Dust" 20 0 1
+	@cmd grabEnd
+	delay	8
+	frame	data/chars/bosses/chunli/grabatk03.png
+	delay	1
+	frame	data/chars/bosses/chunli/grabatk03.png
+	@cmd clearL
+	frame	data/chars/bosses/chunli/idle00.png
+
+anim follow7 #HighKick
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	4
+	offset	237 182
+	bbox 225 131 25 47
+	sound	data/voices/chunli10.wav
+	frame	data/chars/bosses/chunli/c300.png
+	@cmd spawn01 "Counter" 0 0 1
+	@cmd block 0
+	hitfx	data/sounds/LowKick.wav
+	sound	data/sounds/LowAttack.wav
+	delay	6
+	@cmd dasher 2 0 0
+	attack2 232 125 65 57 20 1 0 0 35 15
+	frame	data/chars/bosses/chunli/c301.png
+	delay	2
+	@cmd dasher 2.5 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/c301.png
+	delay	12
+	@cmd dasher 1.5 0 0
+	attack8 232 125 65 57 25 1 0 0 30 15
+	dropv 3 0 0
+	frame	data/chars/bosses/chunli/c301.png
+	delay	16
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd dasher 0.5 0 0
+	frame	data/chars/bosses/chunli/s300.png
+	delay 1
+	@cmd mpCost -25
+	@cmd rageCancel 20 100 0 100 60 "ANI_FREESPECIAL" "hit"
+	@cmd rageCancel 20 100 0 100 45 "ANI_FREESPECIAL6" "hit"
+	@cmd rageCancel 20 100 0 100 20 "ANI_FREESPECIAL5" "hit"
+	@cmd rageCancel 20 100 0 100 5 "ANI_FREESPECIAL2" "hit"
+	@cmd rageCancel 20 100 0 100 0 "ANI_JUMPATTACK2" "hit"
+	frame	data/chars/bosses/chunli/s300.png
+
+anim follow8 #AERIAL SPECIAL
+	fastattack 1
+	forcedirection 0
+	otg 1
+	jugglecost 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	8
+	offset	237 182
+	@cmd mpCost -25
+	bbox 	235 116 22 56
+	frame	data/chars/bosses/chunli/ja100.png
+	frame	data/chars/bosses/chunli/ja101.png
+	attack 240 120 62 61 1 0 1 1 0 24
+	dropv 0 1 0
+	frame	data/chars/bosses/chunli/ja102.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/ja101.png
+	attack 240 120 62 61 1 0 1 1 0 24
+	dropv 0 1 0
+	frame	data/chars/bosses/chunli/ja102.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/chunli/ja101.png
+	delay	6
+	bbox 	223 88 27 82
+	frame	data/chars/bosses/chunli/jump00.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 119 27 61
+	@cmd clearL
+	frame	data/chars/bosses/chunli/land00.png
+
+anim follow9 #AERIAL RECOVER
+	loop	0
+	delay	12
+	offset	237 182
+	sound	data/sounds/SpecialAttack5.wav
+	@cmd landSafe
+	@cmd invinc 2
+	@cmd leaper -1.3 1.6 0
+	frame	data/chars/bosses/chunli/jump00.png
+	frame	data/chars/bosses/chunli/jump01.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	6
+	offset	237 182
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/fjump00.png
+	frame	data/chars/bosses/chunli/fjump01.png
+	frame	data/chars/bosses/chunli/fjump02.png
+	frame	data/chars/bosses/chunli/fjump03.png
+	frame	data/chars/bosses/chunli/fjump04.png
+	frame	data/chars/bosses/chunli/fjump05.png
+	frame	data/chars/bosses/chunli/fjump06.png
+	delay 2
+	frame	data/chars/bosses/chunli/fjump07.png
+	@cmd landFrame
+	delay	6
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/chunli/land00.png
+
+anim block
+	range 0 100
+	rangea 0 100
+	rangez -24 24
+	@cmd dasher 0 0 0
+	loop	0
+	delay	96
+	offset	237 182
+	bbox 	223 110 30 71
+	frame	data/chars/bosses/chunli/block00.png
+
+anim dodge
+	range 0 60
+	rangea 0 100
+	rangez -24 24
+	loop	0
+	delay	6
+	offset	237 182
+	@cmd leaper 0 2 0
+	@cmd keyMove 0 2
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/chunli/fjump00.png
+	frame	data/chars/bosses/chunli/fjump01.png
+	frame	data/chars/bosses/chunli/fjump02.png
+	frame	data/chars/bosses/chunli/fjump03.png
+	frame	data/chars/bosses/chunli/fjump04.png
+	frame	data/chars/bosses/chunli/fjump05.png
+	frame	data/chars/bosses/chunli/fjump06.png
+	delay 2
+	frame	data/chars/bosses/chunli/fjump07.png
+	@cmd landFrame
+	delay	6
+	sound	data/sounds/Jumpland.wav
+	@cmd mpCost -10
+	frame	data/chars/bosses/chunli/land00.png

@@ -1,0 +1,149 @@
+name				Blaze_Orb
+health				1
+nolife				1
+remove				0
+shadow				0
+antigravity			100
+alpha				1
+didhitscript		data/scripts/didhit/blaze_orb.c
+ondoattackscript	data/scripts/ondoattack/default.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0png
+	delay	3
+	offset	121 106
+	hitfx	data/sounds/Chidori.wav
+	sound	data/sounds/Shock.wav
+	frame	data/chars/heroes/blaze/orb/orb00.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb00.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb01.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb02.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb03.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb04.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb05.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb06.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb07.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb08.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb09.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb10.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb11.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb12.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb13.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb14.png
+	sound	data/sounds/Shock.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb15.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb16.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb17.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb18.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb19.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb20.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb21.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb22.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitflash Shock
+	frame	data/chars/heroes/blaze/orb/orb23.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb24.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitflash flash
+	frame	data/chars/heroes/blaze/orb/orb25.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb26.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb27.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb28.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb29.png
+	sound	data/sounds/Shock.wav
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb30.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb31.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb32.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb33.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb34.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb35.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb36.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb37.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb38.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb39.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb40.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb41.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb42.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb43.png
+	attack 102 91 38 31 5 0 1 0 5 24
+	seal 1 1
+	frame	data/chars/heroes/blaze/orb/orb44.png
+	hitflash Shock
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/blaze/orb/orb45.png
+	shock 102 91 38 31 75 1 1 0 15 24
+	seal 1 1
+	dropv 4 0 0
+	frame	data/chars/heroes/blaze/orb/orb46.png
+	frame	data/chars/heroes/blaze/orb/orb47.png
+	@cmd suicideFrame 11
+	frame	data/chars/heroes/blaze/orb/orb47.png

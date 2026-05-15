@@ -1,0 +1,4 @@
+video	data/scenes/logo_sega.webm 1
+video	data/scenes/logo_fgames.webm 1
+video	data/scenes/logo_openbor.webm 1
+video	data/scenes/intro.webm

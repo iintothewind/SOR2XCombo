@@ -1,0 +1,422 @@
+##MAIN
+name				SignalB
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				75
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/signal.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/signal/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Die1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/signal/idle00.png data/chars/enemies/signal/alter1.png
+remap				data/chars/enemies/signal/idle00.png data/chars/enemies/signal/alter2.png
+remap				data/chars/enemies/signal/idle00.png data/chars/enemies/signal/alter3.png
+remap				data/chars/enemies/signal/idle00.png data/chars/enemies/signal/alter4.png
+remap				data/chars/enemies/signal/idle00.png data/chars/enemies/signal/alter5.png #BOTTLE
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	153 183
+	frame	data/chars/enemies/signal/idle00.png
+
+anim idle
+	loop	1
+	delay	16
+	offset	153 183
+	bbox 	141 112 24 72
+	frame	data/chars/enemies/signal/idle00.png
+	frame	data/chars/enemies/signal/idle01.png
+	frame	data/chars/enemies/signal/idle02.png
+	frame	data/chars/enemies/signal/idle01.png
+
+anim walk
+	loop	1
+	delay	14
+	offset	153 183
+	bbox 	141 112 24 72
+	frame	data/chars/enemies/signal/walk00.png
+	frame	data/chars/enemies/signal/walk01.png
+	frame	data/chars/enemies/signal/walk02.png
+	frame	data/chars/enemies/signal/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	153 183
+	frame	data/chars/enemies/signal/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	153 183
+	bbox 	143 119 20 65
+	frame	data/chars/enemies/signal/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	153 183
+	bbox 	141 121 24 64
+	frame	data/chars/enemies/signal/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	153 183
+	bbox 	143 133 29 51
+	frame	data/chars/enemies/signal/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	153 183
+	bbox 	137 124 31 42
+	@cmd jump 1
+	frame	data/chars/enemies/signal/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	153 183
+	bbox 	143 133 29 51
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/signal/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	153 183
+	bbox 	140 118 26 66
+	frame	data/chars/enemies/signal/pain00.png
+	frame	data/chars/enemies/signal/pain01.png
+	frame	data/chars/enemies/signal/pain00.png
+	frame	data/chars/enemies/signal/pain01.png
+	frame	data/chars/enemies/signal/pain00.png
+	frame	data/chars/enemies/signal/pain01.png
+	frame	data/chars/enemies/signal/pain00.png
+	frame	data/chars/enemies/signal/pain01.png
+	frame	data/chars/enemies/signal/pain00.png
+	frame	data/chars/enemies/signal/pain01.png
+	frame	data/chars/enemies/signal/pain00.png
+	frame	data/chars/enemies/signal/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	153 183
+	bbox 	133 122 31 60
+	frame	data/chars/enemies/signal/pain200.png
+	frame	data/chars/enemies/signal/pain201.png
+	frame	data/chars/enemies/signal/pain200.png
+	frame	data/chars/enemies/signal/pain201.png
+	frame	data/chars/enemies/signal/pain200.png
+	frame	data/chars/enemies/signal/pain201.png
+	frame	data/chars/enemies/signal/pain200.png
+	frame	data/chars/enemies/signal/pain201.png
+	frame	data/chars/enemies/signal/pain200.png
+	frame	data/chars/enemies/signal/pain201.png
+	frame	data/chars/enemies/signal/pain200.png
+	frame	data/chars/enemies/signal/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	153 183
+	bbox 	124 130 41 46
+	frame	data/chars/enemies/signal/fall00.png
+		delay	8
+	bbox 	106 165 81 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/signal/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	153 183
+	bbox 	124 130 41 46
+	frame	data/chars/enemies/signal/fall00.png
+		delay	8
+	bbox 	106 165 81 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/signal/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	153 183
+	bbox 	124 130 41 46
+	frame	data/chars/enemies/signal/fall00.png
+		delay	8
+	bbox 	106 165 81 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/signal/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	153 183
+	frame	data/chars/enemies/signal/fall600.png
+	frame	data/chars/enemies/signal/fall601.png
+	frame	data/chars/enemies/signal/fall602.png
+	frame	data/chars/enemies/signal/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/signal/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	153 183
+	frame	data/chars/enemies/signal/fall700.png
+	frame	data/chars/enemies/signal/fall701.png
+	frame	data/chars/enemies/signal/fall702.png
+	frame	data/chars/enemies/signal/fall703.png
+	frame	data/chars/enemies/signal/fall704.png
+	frame	data/chars/enemies/signal/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	153 183
+	bbox 	124 130 41 46
+	hitfx	data/sounds/MediumKick.wav
+	attack 124 130 41 46 4 1 0 0 20 12
+	frame	data/chars/enemies/signal/fall00.png
+		delay	999
+	frame	data/chars/enemies/signal/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	106 165 81 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/signal/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	153 183
+	bbox 	139 143 33 38
+	hitfx	data/sounds/MediumKick.wav
+	attack 139 143 33 38 4 1 0 0 20 12
+	frame	data/chars/enemies/signal/fall900.png
+		delay	999
+	frame	data/chars/enemies/signal/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	106 165 81 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/signal/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	153 183
+	frame	data/chars/enemies/signal/fall01.png
+	frame	data/chars/enemies/signal/fall01.png
+	frame	data/chars/enemies/signal/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	153 183
+	frame	data/chars/enemies/signal/rise00.png
+	frame	data/chars/enemies/signal/rise01.png
+	frame	data/chars/enemies/signal/rise00.png
+	frame	data/chars/enemies/signal/rise02.png
+
+anim riseattack
+	range 40 120
+	rangea 0 0
+	followanim 1
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	153 183
+	bbox 	143 133 29 51
+	hitfx	data/sounds/HighKick.wav
+	frame	data/chars/enemies/signal/a200.png
+	bbox 	115 163 68 21
+	attack 135 163 60 21 1 0 1 1 0 24
+	@cmd dasher 3 0 0
+	sound	data/sounds/Slide.wav
+	@cmd spawn01 "Dust" 10 0 0
+	frame	data/chars/enemies/signal/a201.png
+	@cmd dasher 2.5 0 0
+	frame	data/chars/enemies/signal/a201.png
+	@cmd dasher 2 0 0
+	frame	data/chars/enemies/signal/a201.png
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	143 133 29 51
+	frame	data/chars/enemies/signal/a200.png
+	frame	data/chars/enemies/signal/a202.png
+
+anim follow1 #ANIMATION FOR DOGRAB ONLY
+	loop	0
+	delay	16
+	offset	153 183
+	@cmd landGrab
+	frame	data/chars/enemies/signal/a202.png
+
+
+anim attack1
+	range 20 60
+	rangea 0 100
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	153 183
+	bbox 	136 121 21 63
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/signal/a100.png
+	bbox 	132 111 23 73
+	frame	data/chars/enemies/signal/a101.png
+		delay	16
+	attack 162 118 35 16 8 1 0 0 20 12
+	bbox 	145 111 23 73
+	frame	data/chars/enemies/signal/a102.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	132 111 23 73
+	frame	data/chars/enemies/signal/a101.png
+	bbox 	141 112 24 72
+	frame	data/chars/enemies/signal/idle00.png
+
+anim attack2 #SLIDE
+	range 20 80
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	153 183
+	bbox 	143 133 29 51
+	hitfx	data/sounds/HighKick.wav
+	frame	data/chars/enemies/signal/a200.png
+	bbox 	115 163 68 21
+	attack 135 163 60 21 8 1 0 0 10 12
+	@cmd dasher 2 0 0
+	sound	data/sounds/Slide.wav
+	@cmd spawn01 "Dust" 10 0 0
+	frame	data/chars/enemies/signal/a201.png
+	@cmd dasher 1 0 0
+	frame	data/chars/enemies/signal/a201.png
+	@cmd dasher 0.5 0 0
+	frame	data/chars/enemies/signal/a201.png
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	143 133 29 51
+	frame	data/chars/enemies/signal/a200.png
+	frame	data/chars/enemies/signal/a202.png
+
+anim grabattack #THROW
+	loop	0
+	delay	12
+	offset	153 183
+	sound	data/voices/Signal1.wav
+	@cmd grabStart
+	@cmd position 0 24 0 0 0
+	frame	data/chars/enemies/signal/grab00.png
+	@cmd position 5 12 25 0 0
+	frame	data/chars/enemies/signal/throw00.png
+		delay	16
+	@cmd position 2 -12 25 0 0
+	frame	data/chars/enemies/signal/throw01.png
+	@cmd throw 12 2 2 3 0 0
+	frame	data/chars/enemies/signal/throw01.png
+		delay	8
+	@cmd flip
+	frame	data/chars/enemies/signal/throw00.png
+	@cmd clearL
+	frame	data/chars/enemies/signal/throw00.png
+
+anim grabattack2 #THROW
+	loop	0
+	delay	12
+	offset	153 183
+	sound	data/voices/Signal1.wav
+	@cmd grabStart
+	@cmd position 0 24 0 0 0
+	frame	data/chars/enemies/signal/grab00.png
+	@cmd position 5 12 25 0 0
+	frame	data/chars/enemies/signal/throw00.png
+		delay	16
+	@cmd position 2 -12 25 0 0
+	frame	data/chars/enemies/signal/throw01.png
+	@cmd throw 12 2 2 3 0 0
+	frame	data/chars/enemies/signal/throw01.png
+		delay	8
+	@cmd flip
+	frame	data/chars/enemies/signal/throw00.png
+	@cmd clearL
+	frame	data/chars/enemies/signal/throw00.png

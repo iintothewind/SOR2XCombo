@@ -1,0 +1,21 @@
+name			St4_Door2
+type			none
+shadow			0
+setlayer		-300
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	1
+	delay	24
+	offset	1 180
+	@cmd aniVar "ANI_FOLLOW1" "openDoor" 1
+	frame	data/bgs/sor3/st4c/door01.png
+	
+anim follow1
+	loop	0
+	delay	120
+	offset	1 180
+	@cmd dasher 0.2 0 0
+	frame	data/bgs/sor3/st4c/door01.png
+	@cmd suicide
+	frame	data/bgs/sor3/st4c/door01.png

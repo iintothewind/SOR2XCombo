@@ -1,0 +1,24 @@
+name			Kunai #GROUND
+type			item
+subtype			weapon
+nolife			1
+lifespan		60
+typeshot 		0
+weaploss    2
+weapnum			4
+shootnum 		15
+counter			9
+gfxshadow		1 1
+offscreenkill	50
+
+anim idle
+	loop	1
+	delay	200
+	offset	31 27
+	bbox 	23 22 16 7
+	nodrawmethod
+	frame	data/chars/weapons/kunai08.png
+		delay	6
+	drawmethod tintmode 1
+	drawmethod tintcolor 150_150_150
+	frame	data/chars/weapons/kunai08.png

@@ -1,0 +1,175 @@
+##MAIN
+name				Fog_PipeB
+type				enemy
+
+##LIFE
+health				0 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		30 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				69
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+
+##SCRIPTS
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+thinkscript			data/scripts/think/default.c
+animationscript	 	data/scripts/animation/default.c
+
+##ICONS
+icon				data/chars/enemies/fog/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Die1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter1.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter2.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter3.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter4.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	145 179
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/pipe/idle00.png
+	frame	data/chars/enemies/fog/pipe/idle00.png
+	frame	data/chars/enemies/fog/pipe/idle00.png
+	frame	data/chars/enemies/fog/pipe/idle00.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	145 179
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/pipe/walk00.png
+	frame	data/chars/enemies/fog/pipe/walk01.png
+	frame	data/chars/enemies/fog/pipe/walk02.png
+	frame	data/chars/enemies/fog/pipe/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	145 179
+	frame	data/chars/enemies/fog/pipe/get00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	145 179
+	bbox 	129 141 32 40
+	frame	data/chars/enemies/fog/pipe/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	145 179
+	bbox 	132 105 21 64
+	@cmd jump 1
+	frame	data/chars/enemies/fog/pipe/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	145 179
+	bbox 	129 141 32 40
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/fog/pipe/jumpland00.png
+
+anim attack1
+	range 20 80
+	rangea 0 160
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	145 179
+	bbox 	135 105 19 76
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/fog/pipe/a100.png
+		delay	16
+	attack 147 141 71 6 16 1 0 0 15 12
+	bbox 	133 115 23 66
+	frame	data/chars/enemies/fog/pipe/a101.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/pipe/a102.png
+
+anim attack2
+	range 20 80
+	rangea 0 160
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	145 179
+	bbox 	135 105 19 76
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/fog/pipe/a100.png
+		delay	16
+	attack 147 141 71 6 16 1 0 0 15 12
+	bbox 	133 115 23 66
+	frame	data/chars/enemies/fog/pipe/a101.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/pipe/a102.png
+
+anim freespecial
+	range 20 80
+	rangea 0 160
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	145 179
+	bbox 	135 105 19 76
+	hitfx	data/sounds/Pipe.wav
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/enemies/fog/pipe/a100.png
+		delay	16
+	attack 147 141 71 6 16 1 0 0 15 12
+	bbox 	133 115 23 66
+	frame	data/chars/enemies/fog/pipe/a101.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/pipe/a102.png

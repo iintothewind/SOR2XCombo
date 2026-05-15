@@ -1,0 +1,149 @@
+##MAIN
+name				Shiva_Bot_Double
+type				npc
+subtype				notgrab
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-2 #-1/-2/-3
+height				80
+
+##MISC
+nolife				1
+nomove				1 0
+gfxshadow			1 1
+
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+animationscript	 	data/scripts/animation/default.c
+script				data/scripts/updateentity/shivabot.c
+
+##REMAPS
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter2.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter3.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter4.png
+remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
+
+##LOADS
+load				Shiva_BotS
+
+## DEFAULT ANIMATIONS #########################################################################
+
+
+anim attack9 #SUPER FINAL CRASH
+	fastattack 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	138 192
+	@cmd targetXMove 150 0
+	drawmethod tintmode 1
+	drawmethod tintcolor 255_0_0
+	frame	data/chars/bosses/shivabot/idle00.png
+	delay	3
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/SpecialAttack.wav
+	@cmd dasher 3 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 2.5 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 2 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+	@cmd dasher 1.5 0 0
+	frame	data/chars/bosses/shivabot/finalcrash00.png
+		delay	6
+	@cmd dasher 1 0 0
+	attack2 147 140 41 54 4 0 0 0 15 36
+	sound	data/voices/Shiva4.wav
+	frame	data/chars/bosses/shivabot/finalcrash01.png
+	@cmd dasher 0.5 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/finalcrash02.png
+	@cmd dasher 0 0 0
+	attack2 124 152 59 42 4 0 0 0 15 36
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/SpecialAttack3.wav
+	hitflash Impact
+	frame	data/chars/bosses/shivabot/finalcrash03.png
+	burn 144 106 55 53 8 4 1 0 45 36
+	dropv 4 2 0
+	frame	data/chars/bosses/shivabot/finalcrash04.png
+	@cmd leaper 1.4 2.2 0
+	burn 137 76 37 63 8 4 1 0 45 36
+	dropv 3 2 0
+	frame	data/chars/bosses/shivabot/finalcrash05.png
+	@cmd flip
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/shivabot/finalcrash06.png
+	frame	data/chars/bosses/shivabot/finalcrash07.png
+  delay	2
+	frame	data/chars/bosses/shivabot/finalcrash08.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	nodrawmethod
+	@cmd suicide
+	frame	data/chars/bosses/shivabot/finalcrash09.png
+
+
+anim freespecial9 #SUPER FINAL CRASH
+	fastattack 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	24
+	offset	138 192
+	@cmd targetXMove 240 0
+	drawmethod tintmode 1
+	drawmethod tintcolor 255_0_0
+	frame	data/chars/bosses/shivabot/idle00.png
+	sound	data/sounds/Slide.wav
+	hitfx	data/sounds/HighPunch.wav
+	delay	12
+	@cmd dasher 5 0 0
+	burn 135 137 51 55 8 1 0 0 35 36
+	dropv 3 2 0
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run00.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run01.png
+	@cmd dasher 5 0 0
+	frame	data/chars/bosses/shivabot/run00.png
+	nodrawmethod
+	@cmd suicide
+	frame	data/chars/bosses/shivabot/run01.png

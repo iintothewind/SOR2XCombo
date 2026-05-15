@@ -1,0 +1,63 @@
+loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
+panel		data/bgs/dojo/sea02/panel.png none none
+background		data/bgs/dojo/sea02/panel01.png
+fglayer			data/bgs/dojo/sea02/front.png		999 -0.5 0 0 -10 1 1 1 1 1
+direction	both
+order			a
+scrollspeed 0.5
+
+type			0
+settime		0
+notime		1
+noslow		1
+stagenumber		2
+
+spawn1  60 120 0
+spawn2  60 150 0
+spawn3  120 120 0
+spawn4  120 150 0
+
+light		128 -128
+at			0
+
+shadowcolor   64_64_64
+at             0
+
+shadowalpha 2
+at			0
+
+
+load  sea02 3
+load	Mapple 3
+load	Fight 3
+
+spawn	sea02 1
+coords	174 138
+at	0
+
+#spawn  Mapple 1
+#flip 1
+#coords  0  0
+#at  0
+#
+#spawn  Mapple 1
+#flip 1
+#coords  272  0
+#at  0
+#
+#spawn  Mapple 1
+#flip 1
+#coords  481  0
+#at  0
+
+spawn		Fight 1
+flip		1
+coords		-120 0 0
+at			0
+
+spawn   DojoX
+coords  550 180 0
+boss		1
+at	    0
+
+

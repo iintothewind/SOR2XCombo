@@ -1,0 +1,2229 @@
+##MAIN
+name				Kage
+type				player
+
+##LIFE
+health				800
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			0 #PLAYER=0/ENEMY=1
+
+##ENERGY
+mp					120
+mprate  			5 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				88
+
+##MISC
+jugglepoints		50
+guardpoints			40
+guardrate			10
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2 3 4
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bflash				Block
+death				1
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/kage.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/jumping.c
+onblocksscript		data/scripts/onblocks/jumping.c
+onmoveascript		data/scripts/onmove/default.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+ondrawscript		data/scripts/ondraw/default.c
+onspawnscript		data/scripts/onspawn/player.c
+onfallscript		data/scripts/onfall/default.c
+onpainscript		data/scripts/onpain/default.c
+animationscript	 	data/scripts/animation/default.c
+keyscript			data/scripts/key/kage.c
+takedamagescript	data/scripts/takedamage/default.c
+script				data/scripts/updateentity/kage.c
+
+
+##ICONS
+icon				data/chars/bosses/kage/icon.png 1
+
+##DIESOUND
+diesound			data/voices/ryu20.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+palette       data/chars/bosses/kage/idle00.png
+alternatepal  data/chars/bosses/kage/alter1.png
+alternatepal  data/chars/bosses/kage/alter2.png
+alternatepal  data/chars/bosses/kage/alter3.png
+alternatepal  data/chars/bosses/kage/alter4.png
+
+##COMMANDS
+com 				a2	a2		freespecial		#RAGE
+com 				d f a2		freespecial		#RAGE
+com 				a2 + s		freespecial		#RAGE
+com 				f f a2		freespecial2	#SUPER
+
+##LOADS
+load				KageS
+load				ftkunai
+load				hftkunai
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	240 179
+	frame	data/chars/bosses/kage/idle00.png
+
+anim waiting
+	loop	1
+	delay	16
+	offset	240 179
+	bbox 	225 90 30 88
+	frame	data/chars/bosses/kage/idle00.png
+	frame	data/chars/bosses/kage/idle01.png
+	frame	data/chars/bosses/kage/idle02.png
+	frame	data/chars/bosses/kage/idle03.png
+	frame	data/chars/bosses/kage/idle04.png
+	frame	data/chars/bosses/kage/idle05.png
+	frame	data/chars/bosses/kage/idle06.png
+	frame	data/chars/bosses/kage/idle07.png
+	frame	data/chars/bosses/kage/idle08.png
+
+anim idle
+	loop	1
+	delay	16
+	offset	240 179
+	bbox 	225 90 30 88
+	frame	data/chars/bosses/kage/idle00.png
+	frame	data/chars/bosses/kage/idle01.png
+	frame	data/chars/bosses/kage/idle02.png
+	frame	data/chars/bosses/kage/idle03.png
+	frame	data/chars/bosses/kage/idle04.png
+	frame	data/chars/bosses/kage/idle05.png
+	frame	data/chars/bosses/kage/idle06.png
+	frame	data/chars/bosses/kage/idle07.png
+	frame	data/chars/bosses/kage/idle08.png
+
+anim select
+	fshadow 0
+	loop	0
+	delay	100000
+	offset	240 179
+	frame	data/chars/bosses/kage/idle00.png
+		delay	24
+	frame	data/chars/bosses/kage/idle00.png
+	frame	data/chars/bosses/kage/idle00.png
+
+anim chargeattack
+	chargetime 9999
+	loop	0
+	delay	1
+	offset	240 179
+	frame	data/chars/bosses/kage/idle00.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	240 179
+	bbox 225 87 30 91
+	frame	data/chars/bosses/kage/walk00.png
+	frame	data/chars/bosses/kage/walk01.png
+	frame	data/chars/bosses/kage/walk02.png
+	frame	data/chars/bosses/kage/walk03.png
+	frame	data/chars/bosses/kage/walk04.png
+	frame	data/chars/bosses/kage/walk05.png
+	frame	data/chars/bosses/kage/walk06.png
+	frame	data/chars/bosses/kage/walk07.png
+
+anim run
+	@cmd lockAni "runType" "off"
+	cancel 0 5 0 a2 freespecial2
+	loop	1
+	delay	7
+	offset	240 179
+	bbox 227 107 47 62
+	frame	data/chars/bosses/kage/run00.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run02.png
+	frame	data/chars/bosses/kage/run03.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/kage/run04.png
+
+anim backrun
+	@cmd lockAni "runType" "off"
+	cancel 0 5 0 a2 freespecial2
+	loop	1
+	delay	7
+	offset	240 179
+	bbox 227 107 47 62
+	frame	data/chars/bosses/kage/run00.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run02.png
+	frame	data/chars/bosses/kage/run03.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/kage/run04.png
+
+anim get
+	loop	0
+	delay	16
+	offset	240 179
+	frame	data/chars/bosses/kage/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	240 179
+	#bbox 229 89 28 88
+	@cmd vaultStuck
+	frame	data/chars/bosses/kage/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	240 179
+	bbox 	232 108 30 70
+	sound	data/voices/ryu16.wav
+	frame	data/chars/bosses/kage/grabbed00.png
+
+anim land
+	loop	0
+	delay	25
+	offset	240 179
+	@cmd recoverGp
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/kage/jump00.png
+	frame	data/chars/bosses/kage/jump01.png
+	frame	data/chars/bosses/kage/jump02.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	240 179
+	bbox 	228 109 30 65
+	frame	data/chars/bosses/kage/land00.png
+
+anim jump
+	loop	0
+	delay	20
+	offset	240 179
+	bbox 	223 88 27 82
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/kage/jump00.png
+	bbox 	223 115 27 55
+	frame	data/chars/bosses/kage/jump01.png
+	bbox 	225 82 25 96
+	frame	data/chars/bosses/kage/jump02.png
+
+anim forwardjump
+	loop	0
+	delay	6
+	offset	240 179
+	sound	data/sounds/Jumping.wav
+	bbox 	232 90 30 68
+	frame	data/chars/bosses/kage/fjump00.png
+	bbox 	226 130 45 45
+	frame	data/chars/bosses/kage/fjump01.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	bbox 	230 108 33 50
+	frame	data/chars/bosses/kage/fjump07.png
+	bbox 	229 90 30 70
+	frame	data/chars/bosses/kage/fjump08.png
+	bbox 	229 90 30 60
+	frame	data/chars/bosses/kage/fjump09.png
+
+anim runjump
+	loop	0
+	delay	6
+	offset	240 179
+	sound	data/sounds/Jumping.wav
+	bbox 	232 90 30 68
+	frame	data/chars/bosses/kage/fjump00.png
+	bbox 	226 130 45 45
+	frame	data/chars/bosses/kage/fjump01.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	bbox 	230 108 33 50
+	frame	data/chars/bosses/kage/fjump07.png
+	bbox 	229 90 30 70
+	frame	data/chars/bosses/kage/fjump08.png
+	bbox 	229 90 30 60
+	frame	data/chars/bosses/kage/fjump09.png
+
+anim walkoff
+	loop	0
+	delay	6
+	offset	240 179
+	bbox 	223 88 27 82
+	sound	data/sounds/Jumping.wav
+	bbox 	232 90 30 68
+	frame	data/chars/bosses/kage/fjump00.png
+	bbox 	226 130 45 45
+	frame	data/chars/bosses/kage/fjump01.png
+	bbox  0 0 0 0
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	bbox 	230 108 33 50
+	frame	data/chars/bosses/kage/fjump07.png
+	bbox 	229 90 30 70
+	frame	data/chars/bosses/kage/fjump08.png
+	bbox 	229 90 30 60
+	frame	data/chars/bosses/kage/fjump09.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	240 179
+	bbox 	228 109 30 65
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/kage/land00.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	240 179
+	bbox 	234 105 30 72
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain200.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	240 179
+	bbox 	227 88 30 90
+	frame	data/chars/bosses/kage/pain00.png
+	frame	data/chars/bosses/kage/pain01.png
+	frame	data/chars/bosses/kage/pain00.png
+	frame	data/chars/bosses/kage/pain01.png
+	frame	data/chars/bosses/kage/pain00.png
+	frame	data/chars/bosses/kage/pain01.png
+	frame	data/chars/bosses/kage/pain00.png
+	frame	data/chars/bosses/kage/pain01.png
+	frame	data/chars/bosses/kage/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	240 179
+	bbox 	234 105 30 72
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain200.png
+	frame	data/chars/bosses/kage/pain201.png
+	frame	data/chars/bosses/kage/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	240 179
+	bbox 	197 124 95 50
+	frame	data/chars/bosses/kage/fall00.png
+		delay	8
+	bbox 	203 154 99 26
+	sound	data/voices/ryu38.wav
+	frame	data/chars/bosses/kage/fall02.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	240 179
+	bbox 	197 124 95 50
+	frame	data/chars/bosses/kage/fall00.png
+		delay	8
+	bbox 	203 154 99 26
+	sound	data/voices/ryu38.wav
+	frame	data/chars/bosses/kage/fall02.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	240 179
+	bbox 	197 124 95 50
+	frame	data/chars/bosses/kage/fall00.png
+		delay	8
+	bbox 	203 154 99 26
+	sound	data/voices/ryu38.wav
+	frame	data/chars/bosses/kage/fall02.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	240 179
+	frame	data/chars/bosses/kage/fall600.png
+	frame	data/chars/bosses/kage/fall601.png
+	frame	data/chars/bosses/kage/fall602.png
+	frame	data/chars/bosses/kage/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/kage/fall02.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	240 179
+	frame	data/chars/bosses/kage/fall700.png
+	frame	data/chars/bosses/kage/fall701.png
+	frame	data/chars/bosses/kage/fall702.png
+	frame	data/chars/bosses/kage/fall703.png
+	frame	data/chars/bosses/kage/fall704.png
+	frame	data/chars/bosses/kage/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	240 179
+	bbox 	208 133 64 40
+	hitfx	data/sounds/MediumKick.wav
+	attack 208 133 64 40 5 1 0 0 20 12
+	frame	data/chars/bosses/kage/fall00.png
+		delay	999
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/fall00.png
+		delay	8
+	#@cmd cancelFall 50 "ANI_LAND"
+	bbox 	205 157 79 25
+	sound	data/voices/ryu38.wav
+	frame	data/chars/bosses/kage/fall02.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	240 179
+	bbox 224 118 30 63
+	hitfx	data/sounds/MediumKick.wav
+	attack 224 118 30 63 5 1 0 0 20 12
+	frame	data/chars/bosses/kage/fall900.png
+		delay	999
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/fall900.png
+		delay	8
+	#@cmd cancelFall 50 "ANI_LAND"
+	bbox 	205 157 79 25
+	sound	data/voices/ryu38.wav
+	frame	data/chars/bosses/kage/fall02.png
+
+anim death
+	loop	0
+	delay	16
+	offset	240 179
+	frame	data/chars/bosses/kage/fall02.png
+	frame	data/chars/bosses/kage/fall02.png
+	frame	data/chars/bosses/kage/fall02.png
+
+anim rise
+	loop	0
+	delay	8
+	offset	240 179
+	@cmd recoverGp
+	frame	data/chars/bosses/kage/rise00.png
+	frame	data/chars/bosses/kage/rise00.png
+	frame	data/chars/bosses/kage/rise01.png
+	frame	data/chars/bosses/kage/rise01.png
+	frame	data/chars/bosses/kage/rise02.png
+	frame	data/chars/bosses/kage/rise02.png
+
+anim riseattack
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	hitflash Impact
+	loop	0
+	delay	1
+	offset	240 179
+	@cmd invinc 2
+	@cmd recoverGp
+	hitfx	data/sounds/SpecialAttack3.wav
+	frame	data/chars/bosses/kage/roll00.png
+	frame	data/chars/bosses/kage/roll01.png
+	frame	data/chars/bosses/kage/roll02.png
+	frame	data/chars/bosses/kage/roll03.png
+	frame	data/chars/bosses/kage/roll04.png
+	delay	3
+	@cmd leaper 6 2 0
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run03.png
+	frame	data/chars/bosses/kage/fjump00.png
+	delay	6
+	bbox 	223 94 30 50
+	attack8 240 105 70 40 25 1 0 0 30 36
+	dropv 3 5 0
+	sound	data/sounds/SpecialAttack7.wav
+	frame	data/chars/bosses/kage/jumpatk04.png
+		delay	3
+	frame	data/chars/bosses/kage/jumpatk04.png
+	@cmd landFrame
+		delay	12
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	120 155 31 39
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/kage/land00.png
+
+anim attack1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	1
+	offset	240 179
+	bbox 226 92 30 84
+	frame	data/chars/bosses/kage/a100.png
+	frame	data/chars/bosses/kage/a101.png
+	delay	2
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/voices/ryu21.wav
+	bbox 2226 92 27 86
+	attack 240 103 50 75 6 0 0 0 15 15
+	frame	data/chars/bosses/kage/a102.png
+	frame	data/chars/bosses/kage/a103.png
+	delay	1
+	bbox 226 92 30 84
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a104.png
+	frame	data/chars/bosses/kage/a105.png
+
+anim attack2
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	hitflash BloodHit
+	otg 1
+	loop	0
+	offset	240 179
+	delay	1
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/ryu22.wav
+	bbox 230 88 30 90
+	frame	data/chars/bosses/kage/a300.png
+	frame	data/chars/bosses/kage/a301.png
+	frame	data/chars/bosses/kage/a302.png
+	bbox 230 92 30 90
+	frame	data/chars/bosses/kage/a303.png
+	delay	2
+	sound	data/sounds/Shring5.wav
+	bbox 230 101 30 77
+	attack 240 103 81 47 6 0 0 0 20 15
+	frame	data/chars/bosses/kage/a304.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a305.png
+	delay	2
+	bbox 238 109 30 70
+	attack 240 134 80 45 6 0 0 0 15 15
+	frame	data/chars/bosses/kage/a306.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a307.png
+	hitfx	data/sounds/Cutter.wav
+	delay	2
+	attack 240 134 80 45 6 0 0 0 15 15
+	frame	data/chars/bosses/kage/a308.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a309.png
+	frame	data/chars/bosses/kage/a310.png
+	frame	data/chars/bosses/kage/a311.png
+	frame	data/chars/bosses/kage/a312.png
+	frame	data/chars/bosses/kage/a313.png
+	bbox 233 101 30 78
+	frame	data/chars/bosses/kage/a314.png
+	bbox 230 93 30 85
+	frame	data/chars/bosses/kage/a315.png
+	bbox 224 89 30 90
+	frame	data/chars/bosses/kage/a316.png
+	frame	data/chars/bosses/kage/a317.png
+	frame	data/chars/bosses/kage/a318.png
+
+anim attack3
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	hitflash BloodHit
+	otg 1
+	loop	0
+	offset	240 179
+	delay	1
+	bbox 245 120 30 53
+	sound	data/voices/ryu24.wav
+	frame	data/chars/bosses/kage/a400.png
+	bbox 252 114 30 60
+	frame	data/chars/bosses/kage/a401.png
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/Shring5.wav
+	delay	2
+	bbox 242 96 30 80
+	attack 250 121 87 55 7 0 0 0 20 15
+	frame	data/chars/bosses/kage/a402.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a403.png
+	hitfx	data/sounds/Cutter.wav
+	delay	2
+	bbox 240 85 30 90
+	attack 250 53 100 90 7 0 0 0 15 15
+	frame	data/chars/bosses/kage/a404.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a405.png
+
+anim attack4
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	hitflash BloodHit
+	otg 1
+	loop	0
+	@script
+	if(frame == 0) {
+		void self 	= getlocalvar("self");
+		void target = getentityproperty(self, "opponent");
+		void type  	= getentityproperty(target,"type");
+		void subType	= getentityproperty(target,"subtype");
+		if(target != NULL()
+		&& getentityproperty(target, "dead") == 0
+		&& type == openborconstant("TYPE_ENEMY")
+		&& subType != openborconstant("SUBTYPE_NOTGRAB")){
+			if (readKey("d")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
+			else if (readKey("u")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
+		}
+	}
+	@end_script
+	offset	240 179
+	delay	2
+	@cmd keyMove 1 0
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/ryu26.wav
+	bbox 226 80 30 100
+	frame	data/chars/bosses/kage/a500.png
+	frame	data/chars/bosses/kage/a501.png
+	frame	data/chars/bosses/kage/a502.png
+	frame	data/chars/bosses/kage/a503.png
+	bbox 238 80 30 100
+	frame	data/chars/bosses/kage/a504.png
+	sound	data/sounds/Shring5.wav
+	delay	3
+	bbox 250 93 30 85
+	attack8 260 80 75 75 7 1 0 0 30 15
+	frame	data/chars/bosses/kage/a505.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a506.png
+	delay	3
+	bbox 252 118 30 60
+	attack 260 103 84 70 10 1 0 0 25 15
+	frame	data/chars/bosses/kage/a507.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a508.png
+	hitfx	data/sounds/Cutter.wav
+	delay	3
+	attack8 260 120 84 53 15 1 0 0 20 15
+	frame	data/chars/bosses/kage/a509.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a510.png
+	frame	data/chars/bosses/kage/a511.png
+	frame	data/chars/bosses/kage/a512.png
+	bbox 248 94 30 80
+	frame	data/chars/bosses/kage/a513.png
+	bbox 228 90 30 80
+	frame	data/chars/bosses/kage/a514.png
+	frame	data/chars/bosses/kage/a515.png
+	frame	data/chars/bosses/kage/a516.png
+	frame	data/chars/bosses/kage/a517.png
+
+anim attack8 #flying thunder kunai
+	jugglecost 2
+	throwframe 1 999
+	loop	0
+	delay	3
+	offset	240 179
+	sound	data/voices/ryu03.wav
+	bbox 224 89 30 90
+	frame	data/chars/bosses/kage/throw00.png
+	frame	data/chars/bosses/kage/throw01.png
+	bbox 227 95 30 83
+	frame	data/chars/bosses/kage/throw02.png
+	bbox 228 102 30 77
+	frame	data/chars/bosses/kage/throw03.png
+	delay	6
+	bbox 230 104 30 75
+	sound	data/sounds/Whoosh.wav
+	@cmd shoot "hftkunai" 30 55 0 5 0 0
+	frame	data/chars/bosses/kage/throw04.png
+	delay	4
+	bbox 228 102 30 77
+	frame	data/chars/bosses/kage/throw03.png
+	bbox 227 95 30 83
+	frame	data/chars/bosses/kage/throw02.png
+
+
+anim attack9 #flying thunder kunai
+	jugglecost 2
+	throwframe 1 999
+	loop	0
+	delay	3
+	offset	240 179
+	sound	data/voices/ryu03.wav
+	bbox 224 89 30 90
+	frame	data/chars/bosses/kage/throw00.png
+	frame	data/chars/bosses/kage/throw01.png
+	bbox 227 95 30 83
+	frame	data/chars/bosses/kage/throw02.png
+	bbox 228 102 30 77
+	frame	data/chars/bosses/kage/throw03.png
+	delay	6
+	bbox 230 104 30 75
+	sound	data/sounds/Whoosh.wav
+	@cmd shoot "ftkunai" 30 55 0 5 0 0
+	frame	data/chars/bosses/kage/throw04.png
+	delay	4
+	bbox 228 102 30 77
+	frame	data/chars/bosses/kage/throw03.png
+	bbox 227 95 30 83
+	frame	data/chars/bosses/kage/throw02.png
+
+anim attackboth #BACK ATTACK
+	fastattack 1
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	4
+	offset	240 179
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/HighAttack.wav
+	bbox 224 89 30 88
+	frame	data/chars/bosses/kage/ab00.png
+	frame	data/chars/bosses/kage/ab01.png
+	bbox 224 96 30 88
+	frame	data/chars/bosses/kage/ab02.png
+	frame	data/chars/bosses/kage/ab03.png
+	bbox 219 80 30 97
+	frame	data/chars/bosses/kage/ab04.png
+	delay	8
+	bbox 235 88 30 90
+	attack 171 108 70 70 5 1 0 0 35 24
+	frame	data/chars/bosses/kage/ab14.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/ab18.png
+	delay	8
+	attack 176 86 65 90 7 1 0 0 35 24
+	frame	data/chars/bosses/kage/ab17.png
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/ab16.png
+	frame	data/chars/bosses/kage/ab05.png
+
+anim grabattack #GRAB KICK
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	#hitflash Impact
+	otg 1
+	loop	0
+	delay	3
+	offset	240 179
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/ryu12.wav
+	bbox 229 89 30 88
+	frame	data/chars/bosses/kage/a200.png
+	frame	data/chars/bosses/kage/a201.png
+	bbox 226 92 30 80
+	frame	data/chars/bosses/kage/a202.png
+	bbox 226 97 30 75
+	frame	data/chars/bosses/kage/a203.png
+	sound	data/sounds/HighAttack.wav
+	@cmd leaper 0 3 0
+	bbox 232 80 30 97
+	frame	data/chars/bosses/kage/a204.png
+	bbox 228 98 30 80
+	frame	data/chars/bosses/kage/a205.png
+	bbox 229 101 30 77
+	frame	data/chars/bosses/kage/a206.png
+	bbox 235 101 25 77
+	frame	data/chars/bosses/kage/a207.png
+	delay	12
+	bbox 230 108 30 70
+	attack 246 128 70 50 25 1 0 0 35 24
+	dropv 4 0.5 0
+	frame	data/chars/bosses/kage/a208.png
+	bbox 233 108 30 70
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a209.png
+	bbox 228 99 30 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a210.png
+	@cmd grabEnd
+	bbox 228 92 30 86
+	frame	data/chars/bosses/kage/a211.png
+	bbox 228 87 30 89
+	frame	data/chars/bosses/kage/a212.png
+	@cmd landFrame
+	@cmd clearL
+	bbox 225 96 30 82
+	frame	data/chars/bosses/kage/a213.png
+
+
+anim grabattack2 #GRAB JUMP
+	jugglecost 2
+	energycost 0 1 6
+	loop	0
+	delay	12
+	offset	240 179
+	sound	data/sounds/Jumping2.wav
+	@cmd grabStart
+	@cmd position 0 30 0 0 0
+	frame	data/chars/bosses/kage/grab00.png
+	@cmd leaper 0 2.4 0
+	@cmd keyMove 1 0
+	frame	data/chars/bosses/kage/grab00.png
+	frame	data/chars/bosses/kage/grab00.png
+		delay	2
+	frame	data/chars/bosses/kage/grab00.png
+	@cmd landFrame
+		delay	8
+	sound	data/sounds/Jumpland2.wav
+	frame	data/chars/bosses/kage/grab00.png
+	@cmd grabEnd
+	frame	data/chars/bosses/kage/grab00.png
+	@cmd clearL
+	frame	data/chars/bosses/kage/grab00.png
+
+
+anim grabforward #SLAM
+	@cmd dasher 0
+	jugglecost 2
+	energycost 5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/ryu04.wav
+	@cmd grabStart
+	@cmd position 0 50 55 0 -1
+	frame	data/chars/bosses/kage/grabatk00.png
+	@cmd position 5 45 40 0 0
+	frame	data/chars/bosses/kage/grabatk01.png
+	@cmd position 5 40 30 0 0
+	frame	data/chars/bosses/kage/grabatk02.png
+	@cmd position 5 35 20 0 0
+	frame	data/chars/bosses/kage/grabatk03.png
+	delay	14
+	@cmd position 3 35 1 0 0
+	sound	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/kage/grabatk04.png
+	delay	6
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd spawn01 "Dust" 40 0 1
+	@cmd grabEnd
+	frame	data/chars/bosses/kage/grabatk05.png
+	frame	data/chars/bosses/kage/grabatk06.png
+	frame	data/chars/bosses/kage/grabatk07.png
+	@cmd clearL
+	frame	data/chars/bosses/kage/idle00.png
+
+anim grabbackward #SLAM
+	@cmd dasher 0
+	@cmd flip
+	jugglecost 2
+	energycost 5 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/ryu04.wav
+	@cmd grabStart
+	@cmd position 0 50 55 0 -1
+	frame	data/chars/bosses/kage/grabatk00.png
+	@cmd position 5 45 40 0 0
+	frame	data/chars/bosses/kage/grabatk01.png
+	@cmd position 5 40 30 0 0
+	frame	data/chars/bosses/kage/grabatk02.png
+	@cmd position 5 35 20 0 0
+	frame	data/chars/bosses/kage/grabatk03.png
+	delay	14
+	@cmd position 3 35 1 0 0
+	sound	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/kage/grabatk04.png
+	delay	6
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd spawn01 "Dust" 40 0 1
+	@cmd grabEnd
+	frame	data/chars/bosses/kage/grabatk05.png
+	frame	data/chars/bosses/kage/grabatk06.png
+	frame	data/chars/bosses/kage/grabatk07.png
+	@cmd clearL
+	frame	data/chars/bosses/kage/idle00.png
+
+anim grabbackward2 #IZUNA DROP
+	attackone 0
+	jugglecost 3
+	energycost 5 1 6
+	landframe 5
+	loop	0
+	delay	4
+	offset	240 179
+	@cmd dasher 0
+	@cmd jump 0
+	@cmd grabStart2
+	@cmd position 0 30 20 0 -1
+	@cmd dasher 0 0 0
+	sound	data/voices/izuna_drop1.wav
+	frame	data/chars/bosses/kage/grabup03.png
+	@cmd position 0 30 20 0 0
+	@cmd leaper 0 3 0
+	frame	data/chars/bosses/kage/grabup03.png
+	@cmd position 0 30 20 0 0
+	@cmd leaper 0 9 0
+	frame	data/chars/bosses/kage/grabup03.png
+	@cmd position 0 30 20 0 0
+	@cmd leaper 0 18 0
+	frame	data/chars/bosses/kage/grabup03.png
+		delay	999
+	@cmd looper 3 11
+	@cmd position 4 30 -30 0 0
+	@cmd deGravity -2000
+	@cmd leaper 0 -1500 0
+	sound	data/voices/izuna_drop2.wav
+	frame	data/chars/bosses/kage/drop00.png
+	@cmd landFrame
+		delay	12
+	attack8 160 120 160 60 60 1 1 0 35 24
+	dropv 4 1 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd spawn01 "FallHit" 10 0 1
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/kage/drop00.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd slam 90 2 -0.5 5 0 0
+	frame	data/chars/bosses/kage/drop00.png
+	@cmd deGravity 0
+	delay	3
+	@cmd leaper -0.1 3 0
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/kage/fjump00.png
+	frame	data/chars/bosses/kage/fjump01.png
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump07.png
+	frame	data/chars/bosses/kage/fjump08.png
+	frame	data/chars/bosses/kage/fjump09.png
+	@cmd landFrame
+	@cmd grabEnd
+	@cmd clearL
+	frame	data/chars/bosses/kage/idle00.png
+
+anim grabup #IZUNA DROP
+	jugglecost 3
+	energycost 5 1 6
+	attackone 0
+	landframe 5
+	loop	0
+	delay	4
+	offset	240 179
+	@cmd dasher 0
+	@cmd jump 0
+	@cmd grabStart2
+	@cmd position 0 30 20 0 -1
+	@cmd dasher 0 0 0
+	sound	data/voices/izuna_drop1.wav
+	frame	data/chars/bosses/kage/grabup04.png
+	@cmd position 0 30 20 0 0
+	@cmd leaper 0 3 0
+	frame	data/chars/bosses/kage/grabup04.png
+	@cmd position 0 30 20 0 0
+	@cmd leaper 0 9 0
+	frame	data/chars/bosses/kage/grabup04.png
+	@cmd position 0 30 20 0 0
+	@cmd leaper 0 18 0
+	frame	data/chars/bosses/kage/grabup04.png
+		delay	999
+	@cmd looper 3 11
+	@cmd position 4 30 -30 0 0
+	@cmd deGravity -2000
+	@cmd leaper 0 -1500 0
+	sound	data/voices/izuna_drop2.wav
+	frame	data/chars/bosses/kage/drop00.png
+	@cmd landFrame
+		delay	12
+	attack8 160 120 160 60 50 1 1 0 35 24
+	dropv 3 1 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	@cmd spawn01 "FallHit" 10 0 1
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/kage/drop00.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	delay	4
+	@cmd slam 45 2 -0.5 5 0 0
+	frame	data/chars/bosses/kage/drop00.png
+	@cmd deGravity 0
+	delay	3
+	@cmd leaper -0.1 3 0
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/kage/fjump00.png
+	frame	data/chars/bosses/kage/fjump01.png
+	frame	data/chars/bosses/kage/fjump02.png
+	frame	data/chars/bosses/kage/fjump03.png
+	frame	data/chars/bosses/kage/fjump04.png
+	frame	data/chars/bosses/kage/fjump05.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump06.png
+	frame	data/chars/bosses/kage/fjump07.png
+	frame	data/chars/bosses/kage/fjump08.png
+	frame	data/chars/bosses/kage/fjump09.png
+	@cmd landFrame
+	@cmd grabEnd
+	@cmd clearL
+	frame	data/chars/bosses/kage/idle00.png
+
+anim grabdown #rapid slash
+	attackone 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	hitflash BloodHit
+	otg 1
+	loop	0
+	delay	2
+	offset	280 179
+	@cmd dasher 0
+	hitfx	data/sounds/shring2.wav
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack2 245 120 155 67 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s421.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack 245 110 160 70 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s422.png
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack 245 65 165 115 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s423.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack2 245 110 160 70 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s422.png
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack 245 120 155 67 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s421.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack2 245 120 155 67 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s424.png
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	attack 245 65 165 115 3 0 0 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s425.png
+	delay	3
+	attack 245 65 165 115 5 0 0 0 25 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	hitfx	data/sounds/Cutter.wav
+	sound	data/voices/ryu14.wav
+	delay	6
+	attack 245 100 155 80 55 1 0 0 30 25
+	seal 1 1
+	dropv 4 1
+	frame	data/chars/bosses/kage/s427.png
+	delay 1
+	#bbox 240 120 30 58
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/kage/s113.png
+	#bbox 235 110 30 68
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	#bbox 233 108 30 70
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	#bbox 235 103 30 76
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	#bbox 235 97 30 80
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	#bbox 235 94 30 84
+	frame	data/chars/bosses/kage/s126.png
+	#bbox 228 89 30 90
+	frame	data/chars/bosses/kage/s127.png
+
+anim follow20 #rapid slash
+	attackone 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	hitflash BloodHit
+	energycost 5 1 6
+	otg 1
+	loop	0
+	@cmd dasher 0 0 0
+	offset	280 179
+	@cmd dasher 0
+	hitfx	data/sounds/shring2.wav
+	sound	data/voices/ryu04.wav
+	delay	3
+	attack2 245 120 155 67 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s421.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 110 160 70 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s422.png
+	delay	1
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s423.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack2 245 110 160 70 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s422.png
+	delay	1
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 120 155 67 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s421.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack2 245 120 155 67 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s424.png
+	delay	1
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s425.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 10 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	sound	data/voices/ryu04.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 20 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 10 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 15 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 20 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	delay	3
+	attack 245 65 165 115 5 0 1 0 25 25
+	seal 1 1
+	frame	data/chars/bosses/kage/s426.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s420.png
+	hitfx	data/sounds/Cutter.wav
+	sound	data/voices/ryu14.wav
+	delay	6
+	attack 245 100 155 80 55 1 1 0 30 25
+	seal 1 1
+	dropv 4 1
+	frame	data/chars/bosses/kage/s427.png
+	delay 1
+	#bbox 240 120 30 58
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/kage/s113.png
+	#bbox 235 110 30 68
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	#bbox 233 108 30 70
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	#bbox 235 103 30 76
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	#bbox 235 97 30 80
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	#bbox 235 94 30 84
+	frame	data/chars/bosses/kage/s126.png
+	#bbox 228 89 30 90
+	frame	data/chars/bosses/kage/s127.png
+
+anim grabdown2 #GRAB KICK
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	hitflash Impact
+	otg 1
+	loop	0
+	delay	3
+	offset	240 179
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/ryu34.wav
+	bbox 229 89 30 88
+	frame	data/chars/bosses/kage/a200.png
+	frame	data/chars/bosses/kage/a201.png
+	bbox 226 92 30 80
+	frame	data/chars/bosses/kage/a202.png
+	bbox 226 97 30 75
+	frame	data/chars/bosses/kage/a203.png
+	@cmd leaper 0 3 0
+	bbox 232 80 30 97
+	frame	data/chars/bosses/kage/a204.png
+	bbox 228 98 30 80
+	frame	data/chars/bosses/kage/a205.png
+	bbox 229 101 30 77
+	frame	data/chars/bosses/kage/a206.png
+	bbox 235 101 25 77
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/bosses/kage/a207.png
+	delay	12
+	bbox 230 108 30 70
+	attack8 246 128 70 50 75 1 0 0 35 24
+	dropv 3 5 0
+	frame	data/chars/bosses/kage/a208.png
+	bbox 233 108 30 70
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a209.png
+	bbox 228 99 30 70
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a210.png
+	@cmd grabEnd
+	bbox 228 92 30 86
+	frame	data/chars/bosses/kage/a211.png
+	bbox 228 87 30 89
+	frame	data/chars/bosses/kage/a212.png
+	@cmd landFrame
+	@cmd clearL
+	bbox 225 96 30 82
+	frame	data/chars/bosses/kage/a213.png
+
+anim jumpattack #JUMP STATIC
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/Shring5.wav
+	bbox 226 98 30 75
+	frame	data/chars/bosses/kage/jumpatk00.png
+	delay	6
+	bbox 234 117 30 55
+	attack 240 112 85 60 7 1 0 0 35 15
+	frame	data/chars/bosses/kage/jumpatk01.png
+	frame	data/chars/bosses/kage/jumpatk02.png
+
+anim jumpattack2 #JUMP STATIC
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/ryu12.wav
+	bbox 226 98 30 75
+	frame	data/chars/bosses/kage/jumpatk00.png
+	delay	6
+	sound	data/sounds/Shring5.wav
+	bbox 234 117 30 55
+	attack 240 96 100 100 1 0 1 1 0 24
+	frame	data/chars/bosses/kage/jumpatk01.png
+	frame	data/chars/bosses/kage/jumpatk02.png
+
+anim jumpattack3 #JUMP STATIC
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/Shring5.wav
+	bbox 226 98 30 75
+	frame	data/chars/bosses/kage/jumpatk00.png
+	delay	6
+	bbox 234 117 30 55
+	attack 240 112 85 60 7 1 0 0 35 15
+	frame	data/chars/bosses/kage/jumpatk01.png
+	frame	data/chars/bosses/kage/jumpatk02.png
+
+anim jumpforward #JUMP FORWARD
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	bbox 	227 103 30 70
+	frame	data/chars/bosses/kage/jump02.png
+	delay	6
+	bbox 	220 128 30 50
+	attack 240 128 70 50 7 1 0 0 35 15
+	frame	data/chars/bosses/kage/jumpatk03.png
+
+
+anim runattack #SLASH
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Flash
+	loop	0
+	offset	240 179
+	delay 2
+	@cmd block 0
+	hitfx	data/sounds/HighKick.wav
+	sound	data/voices/ryu14.wav
+	@cmd dasher 2.5 0 0
+	bbox 228 89 30 90
+	frame	data/chars/bosses/kage/runatk00.png
+	frame	data/chars/bosses/kage/runatk01.png
+	bbox 222 89 30 90
+	@cmd dasher 2 0 0
+	delay 8
+	sound	data/sounds/HighAttack.wav
+	attack 240 110 75 67 5 1 0 0 35 24
+	frame	data/chars/bosses/kage/runatk06.png
+	delay 4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/runatk01.png
+	@cmd dasher 1.5 0 0
+	bbox 222 89 30 90
+	attack 240 88 70 90 7 1 0 0 35 24
+	frame	data/chars/bosses/kage/runatk02.png
+	frame	data/chars/bosses/kage/runatk03.png
+	frame	data/chars/bosses/kage/runatk04.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/runatk05.png
+	delay 4
+	@cmd dasher 1.2 0 0
+	frame	data/chars/bosses/kage/runatk06.png
+	bbox 229 89 30 90
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/runatk07.png
+	@cmd dasher 1 0 0
+	frame	data/chars/bosses/kage/runatk08.png
+	@cmd dasher 0.8 0 0
+	frame	data/chars/bosses/kage/runatk09.png
+	delay 8
+	@cmd dasher 0.5 0 0
+	bbox 	225 90 30 88
+	frame	data/chars/bosses/kage/idle00.png
+
+anim special #DEFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 5
+	forcedirection 0
+	otg 1
+	energycost 24 1 6
+	@cmd dasher 0 0 0
+	@cmd healStart
+	loop	0
+	offset	240 179
+	sound	data/sounds/ninpo.wav
+	delay	6
+	frame	data/chars/bosses/kage/s200.png
+	delay	8
+	frame	data/chars/bosses/kage/s201.png
+	delay	2
+	frame	data/chars/bosses/kage/s202.png
+	frame	data/chars/bosses/kage/s203.png
+	frame	data/chars/bosses/kage/s204.png
+	frame	data/chars/bosses/kage/s205.png
+	frame	data/chars/bosses/kage/s206.png
+	frame	data/chars/bosses/kage/s207.png
+	frame	data/chars/bosses/kage/s208.png
+	frame	data/chars/bosses/kage/s209.png
+	frame	data/chars/bosses/kage/s210.png
+	frame	data/chars/bosses/kage/s211.png
+	delay	24
+	@cmd spawnBind "Destruction" 0 0 1
+	burn 120 30 250 150 80 1 1 0 0 60
+	dropv 4 0.5 0
+	frame	data/chars/bosses/kage/s212.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd stealth 2
+	frame	data/chars/bosses/kage/empty.png
+	delay	1
+	#@cmd targetMovep -50 0 0
+	@cmd keyMove 3 0
+	frame	data/chars/bosses/kage/empty.png
+	@cmd looper 14 10
+	frame	data/chars/bosses/kage/empty.png
+	drawmethod scalex 0.1
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.2
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.3
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.4
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.5
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.6
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.7
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.8
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 0.9
+	frame	data/chars/bosses/kage/s200.png
+	drawmethod scalex 1
+	frame	data/chars/bosses/kage/s200.png
+	nodrawmethod
+	@cmd stealth 0
+	@cmd dasher 0
+	frame	data/chars/bosses/kage/s200.png
+
+anim special2 #OFFENSIVE SPECIAL
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 24 1 6
+	otg 1
+	loop	0
+	offset	240 179
+	@cmd dasher 0 0 0
+	sound	data/sounds/ragespend.wav
+	hitfx	data/sounds/shring2.wav
+	delay	1
+	#bbox 228 89 30 90
+	frame	data/chars/bosses/kage/s300.png
+	frame	data/chars/bosses/kage/s301.png
+	frame	data/chars/bosses/kage/s301.png
+	frame	data/chars/bosses/kage/s302.png
+	frame	data/chars/bosses/kage/s302.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s304.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s305.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s306.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s307.png
+	frame	data/chars/bosses/kage/s303.png
+	frame	data/chars/bosses/kage/s303.png
+	#bbox 223 83 30 90
+	frame	data/chars/bosses/kage/s308.png #frame 17
+	#bbox 221 82 30 97
+	frame	data/chars/bosses/kage/s309.png
+	#bbox 240 86 30 92
+	frame	data/chars/bosses/kage/s310.png
+	delay	2
+	bbox 258 93 30 80
+	attack 240 70 160 110 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s311.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s312.png
+	delay	3
+	sound	data/voices/izuna_drop2.wav
+	bbox 255 120 40 53
+	attack 240 75 150 100 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s313.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s314.png
+	delay	2
+	bbox 255 120 40 53
+	attack 240 70 160 110 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s315.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s314.png
+	delay	4
+	bbox 255 120 40 53
+	attack 240 70 160 110 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s316.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s317.png
+	delay	2
+	bbox 255 120 40 53
+	attack 240 70 160 110 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s318.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s319.png
+	delay	5
+	attack 240 70 160 110 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s320.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s321.png
+	delay	5
+	attack 240 70 160 110 2 0 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s322.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s321.png
+	delay	3
+	shock 240 70 160 110 3 1 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s323.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s324.png
+	delay	3
+	shock 240 70 160 110 5 1 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s325.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s326.png
+	delay	3
+	shock 240 70 160 110 75 1 1 0 10 18
+	seal 1 1
+	frame	data/chars/bosses/kage/s327.png
+	delay	3
+	bbox 257 94 30 80
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s328.png
+	frame	data/chars/bosses/kage/s329.png
+	frame	data/chars/bosses/kage/s330.png
+	frame	data/chars/bosses/kage/s331.png
+	bbox 226 89 30 90
+	frame	data/chars/bosses/kage/s332.png
+	bbox 226 85 30 90
+	frame	data/chars/bosses/kage/s333.png
+	bbox 224 90 30 88
+	frame	data/chars/bosses/kage/s334.png
+	frame	data/chars/bosses/kage/s335.png
+
+anim freespecial
+	followanim 1
+	followcond 1
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	energycost 60 1 6
+	loop	0
+	offset	240 179
+	@cmd spawnBind "Rage" 0 0 -1
+	frame	data/chars/bosses/kage/run01.png
+		delay	32
+	@cmd dasher 5 0 0
+	attack 240 54 50 125 2 0 0 0 0 18
+	seal 1 1
+	dropv 4 1 0
+	frame	data/chars/bosses/kage/run01.png
+		delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/run01.png
+	@cmd dasher 1 0 0
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/kage/run01.png
+
+anim follow1 #RAGE COMBO
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	hitflash BloodHit
+	energycost 60 1 6
+	otg 1
+	loop	0
+	delay	1
+	offset	240 179
+	@cmd dasher 0
+	sound	data/sounds/Shring.wav
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/kage/a400.png
+	frame	data/chars/bosses/kage/a401.png
+	delay	3
+	attack 240 96 85 80 7 0 1 0 10 15
+	seal 1 1
+	frame	data/chars/bosses/kage/a403.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a403.png
+	@cmd looper 1 2
+	frame	data/chars/bosses/kage/a105.png #4
+	delay	1
+	hitfx	data/sounds/Cutter2.wav
+	frame	data/chars/bosses/kage/a300.png
+	frame	data/chars/bosses/kage/a301.png
+	frame	data/chars/bosses/kage/a302.png
+	sound	data/sounds/Shring5.wav
+	frame	data/chars/bosses/kage/a303.png
+	delay	2
+	attack 240 103 81 47 7 0 1 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/kage/a304.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a305.png
+	delay	2
+	attack 240 134 80 45 7 0 1 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/kage/a306.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a307.png
+	hitfx	data/sounds/Cutter.wav
+	delay	2
+	attack 240 134 80 45 7 0 1 0 15 15
+	seal 1 1
+	frame	data/chars/bosses/kage/a308.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a400.png
+	frame	data/chars/bosses/kage/a401.png
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/Shring5.wav
+	delay	2
+	attack 250 121 87 55 7 0 1 0 15 15
+	frame	data/chars/bosses/kage/a402.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a403.png
+	hitfx	data/sounds/Cutter2.wav
+	delay	2
+	attack 250 53 100 90 7 0 1 0 15 15
+	frame	data/chars/bosses/kage/a404.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a405.png
+	delay	1
+	hitfx	data/sounds/Cutter2.wav
+	frame	data/chars/bosses/kage/a500.png
+	frame	data/chars/bosses/kage/a501.png
+	frame	data/chars/bosses/kage/a502.png
+	frame	data/chars/bosses/kage/a503.png
+	frame	data/chars/bosses/kage/a504.png
+	sound	data/sounds/Shring5.wav
+	delay	3
+	attack 260 80 75 75 9 0 1 0 20 15
+	frame	data/chars/bosses/kage/a505.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a506.png
+	delay	3
+	attack 260 103 84 70 9 0 1 0 20 15
+	frame	data/chars/bosses/kage/a507.png
+	delay	2
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a508.png
+	hitfx	data/sounds/Cutter2.wav
+	delay	3
+	attack 260 120 84 53 9 0 1 0 20 15
+	frame	data/chars/bosses/kage/a509.png
+	delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/a510.png
+	frame	data/chars/bosses/kage/a513.png
+	frame	data/chars/bosses/kage/a514.png
+	frame	data/chars/bosses/kage/a517.png
+	@cmd looper 6 1
+	delay	1
+	bbox 225 81 30 97
+	frame	data/chars/bosses/kage/s100.png #34
+	@cmd dasher 1 0 0
+	bbox 235 95 30 83
+	frame	data/chars/bosses/kage/s101.png
+	bbox 235 106 30 72
+	frame	data/chars/bosses/kage/s102.png
+	bbox 233 108 30 70
+	frame	data/chars/bosses/kage/s103.png
+	frame	data/chars/bosses/kage/s104.png
+	#sound	data/sounds/shring2.wav
+	#hitfx	data/sounds/Cutter.wav
+	#sound	data/voices/ryu25.wav
+	sound	data/sounds/shring.wav
+	delay 12
+	bbox 240 112 30 67
+	attack 240 119 110 90 15 1 1 0 30 36
+	dropv 3 1 0
+	frame	data/chars/bosses/kage/s105.png
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s105.png
+	delay 12
+	bbox 248 117 30 61
+	attack 250 119 100 90 15 1 1 0 40 36
+	dropv 3 1 0
+	frame	data/chars/bosses/kage/s106.png
+	delay 1
+	bbox 248 117 30 61
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s107.png
+	delay 12
+	bbox 240 120 30 58
+	attack 297 119 60 90 15 1 1 0 30 36
+	dropv 3 1 0
+	frame	data/chars/bosses/kage/s108.png
+	delay 1
+	bbox 240 120 30 58
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png #45
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/kage/s113.png
+	bbox 235 110 30 68
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	bbox 233 108 30 70
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	bbox 235 103 30 76
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	bbox 235 97 30 80
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	bbox 235 94 30 84
+	frame	data/chars/bosses/kage/s126.png
+	bbox 228 89 30 90
+	frame	data/chars/bosses/kage/s127.png
+
+anim freespecial2 #GRAB RUN
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 3
+	energycost 5 1 6 #grabrun cost
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	7
+	offset	240 179
+	hitfx	data/sounds/Throw2.wav
+	sound	data/voices/ryu39.wav
+	@cmd dasher 4 0 0
+	bbox 227 107 47 62
+	attack 227 58 50 120 1 0 1 1 0 24
+	frame	data/chars/bosses/kage/run00.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/kage/run01.png
+	frame	data/chars/bosses/kage/run02.png
+	frame	data/chars/bosses/kage/run03.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/kage/run04.png
+	@cmd dasher 0 0 0
+	@cmd clearL
+	@cmd selfNoGrab 0
+	frame	data/chars/bosses/kage/run00.png
+
+
+anim freespecial3 #RAGE SLASH
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 45 1 6
+	otg 1
+	loop	0
+	offset	240 179
+	#bbox 	224 132 25 49
+	delay	2
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/ryu26.wav
+	frame	data/chars/bosses/kage/s400.png
+	frame	data/chars/bosses/kage/s401.png
+	frame	data/chars/bosses/kage/s402.png
+	sound	data/sounds/Shring5.wav
+	@cmd dasher 10 0 0
+	attack 0 29 190 150 2 1 0 0 30 36
+	seal 1 1
+	frame	data/chars/bosses/kage/s404.png
+	delay 24
+	frame	data/chars/bosses/kage/empty.png
+	delay 2
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s405.png
+	frame	data/chars/bosses/kage/s406.png
+	frame	data/chars/bosses/kage/s407.png
+	frame	data/chars/bosses/kage/s408.png
+
+anim follow3 #RAGE STRIKE
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	energycost 45 1 6
+	otg 1
+	hitflash RainBloodHit
+	loop	0
+	delay	16
+	offset	240 179
+	hitfx	data/sounds/Cutter.wav
+	sound	data/voices/ryu14.wav
+	@cmd dasher 8 0 0
+	frame	data/chars/bosses/kage/empty.png
+		delay	4
+	offset	412 179
+	@cmd dasher 0 0 0
+	attack 0 0 435 270 1 0 0 0 5 36
+	seal 1 1
+	frame	data/chars/bosses/kage/s410x.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s410x.png
+	@cmd looper 1 9
+	shock 0 0 435 270 99 1 0 0 5 36
+	dropv 3 2
+	seal 1 1
+	frame	data/chars/bosses/kage/s410x.png
+	offset	240 179
+	delay	6
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s410.png
+	frame	data/chars/bosses/kage/s411.png
+	frame	data/chars/bosses/kage/s412.png
+	frame	data/chars/bosses/kage/s413.png
+	frame	data/chars/bosses/kage/s414.png
+	frame	data/chars/bosses/kage/s415.png
+	frame	data/chars/bosses/kage/s416.png
+	frame	data/chars/bosses/kage/s417.png
+
+anim follow5
+	loop	0
+	jugglecost 3
+	delay	16
+	offset	240 179
+	@cmd dasher 0
+	@cmd landGrab
+	frame	data/chars/bosses/kage/grab00.png
+
+anim follow6 #GRAB ESCAPE
+	@cmd dasher 0
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	240 179
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/voices/ryu04.wav
+	@cmd grabStart
+	@cmd position 0 50 55 0 -1
+	@cmd spawn01 "Escape" 35 50 1
+	frame	data/chars/bosses/kage/grabatk00.png
+	@cmd position 5 45 40 0 0
+	frame	data/chars/bosses/kage/grabatk01.png
+	@cmd position 5 40 30 0 0
+	frame	data/chars/bosses/kage/grabatk02.png
+	@cmd position 5 35 20 0 0
+	frame	data/chars/bosses/kage/grabatk03.png
+	delay	14
+	@cmd position 3 35 1 0 0
+	sound	data/sounds/HighPunch.wav
+	frame	data/chars/bosses/kage/grabatk04.png
+	delay	6
+	@cmd throw 30 1 -0.5 3 0 0
+	@cmd spawn01 "Dust" 40 0 1
+	@cmd grabEnd
+	frame	data/chars/bosses/kage/grabatk05.png
+	frame	data/chars/bosses/kage/grabatk06.png
+	frame	data/chars/bosses/kage/grabatk07.png
+	@cmd clearL
+	frame	data/chars/bosses/kage/idle00.png
+
+anim follow7 #DASH SLASH
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	energycost 10 1 6
+	otg 1
+	hitflash BloodHit
+	loop	0
+	offset	240 179
+	delay 2
+	sound	data/sounds/Clash5.wav
+	@cmd recoverGp
+	@cmd spawn01 "Counter" 0 0 1
+	frame	data/chars/bosses/kage/run00.png
+	frame	data/chars/bosses/kage/run01.png
+	#bbox 225 81 30 97
+	frame	data/chars/bosses/kage/s100.png
+	#bbox 235 95 30 83
+	frame	data/chars/bosses/kage/s101.png
+	#bbox 235 106 30 72
+	frame	data/chars/bosses/kage/s102.png
+	#bbox 233 108 30 70
+	frame	data/chars/bosses/kage/s103.png
+	frame	data/chars/bosses/kage/s104.png
+	delay 5
+	#sound	data/voices/ryu25.wav
+	sound	data/sounds/shring.wav
+	#bbox 240 112 30 67
+	attack 240 119 110 90 25 1 1 0 20 36
+	dropv 3 1 0
+	frame	data/chars/bosses/kage/s105.png
+	@cmd dasher 1 0 0
+	delay 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s105.png
+	delay 4
+	#bbox 248 117 30 61
+	attack 250 119 100 90 25 1 1 0 15 36
+	dropv 3 1 0
+	frame	data/chars/bosses/kage/s106.png
+	delay 1
+	#bbox 248 117 30 61
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s107.png
+	hitfx	data/sounds/Cutter.wav
+	delay 3
+	#bbox 240 120 30 58
+	attack 297 119 60 90 25 1 1 0 10 36
+	dropv 3 1 0
+	frame	data/chars/bosses/kage/s108.png
+	delay 1
+	#bbox 240 120 30 58
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/s109.png
+	frame	data/chars/bosses/kage/s110.png
+	frame	data/chars/bosses/kage/s111.png
+	frame	data/chars/bosses/kage/s112.png
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/kage/s113.png
+	#bbox 235 110 30 68
+	frame	data/chars/bosses/kage/s114.png
+	frame	data/chars/bosses/kage/s115.png
+	frame	data/chars/bosses/kage/s116.png
+	#bbox 233 108 30 70
+	frame	data/chars/bosses/kage/s117.png
+	frame	data/chars/bosses/kage/s118.png
+	frame	data/chars/bosses/kage/s119.png
+	#bbox 235 103 30 76
+	frame	data/chars/bosses/kage/s120.png
+	frame	data/chars/bosses/kage/s121.png
+	frame	data/chars/bosses/kage/s122.png
+	#bbox 235 97 30 80
+	frame	data/chars/bosses/kage/s123.png
+	frame	data/chars/bosses/kage/s124.png
+	frame	data/chars/bosses/kage/s125.png
+	#bbox 235 94 30 84
+	frame	data/chars/bosses/kage/s126.png
+	#bbox 228 89 30 90
+	frame	data/chars/bosses/kage/s127.png
+
+anim follow8 #AERIAL SPECIAL
+	fastattack 1
+	forcedirection 0
+	otg 1
+	jugglecost 2
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	12
+	offset	240 179
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/Shring5.wav
+	bbox 226 98 30 75
+	frame	data/chars/bosses/kage/jumpatk00.png
+	bbox 234 117 30 55
+	attack 240 96 100 100 1 0 1 1 0 24
+	dropv 0 1 0
+	frame	data/chars/bosses/kage/jumpatk01.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/jumpatk02.png
+	delay	12
+	attack 240 96 100 100 1 0 1 1 0 24
+	dropv 0 1 0
+	frame	data/chars/bosses/kage/jumpatk01.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/jumpatk02.png
+	delay	6
+	bbox 	227 103 30 70
+	frame	data/chars/bosses/kage/jump02.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 109 30 65
+	@cmd clearL
+	frame	data/chars/bosses/kage/land00.png
+
+anim follow18 #AERIAL SPECIAL
+	fastattack 1
+	forcedirection 0
+	otg 1
+	jugglecost 1
+	energycost 10 1 6
+	@cmd healStart
+	loop	0
+	delay	12
+	offset	240 179
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/sounds/Shring5.wav
+	bbox 226 98 30 75
+	frame	data/chars/bosses/kage/jumpatk00.png
+	bbox 234 117 30 55
+	attack 240 96 100 100 1 0 1 1 0 24
+	dropv 0 1 0
+	frame	data/chars/bosses/kage/jumpatk01.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/jumpatk02.png
+	delay	12
+	attack 240 96 100 100 1 0 1 1 0 24
+	dropv 0 1 0
+	frame	data/chars/bosses/kage/jumpatk01.png
+	delay	4
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/kage/jumpatk02.png
+	delay	6
+	bbox 	227 103 30 70
+	frame	data/chars/bosses/kage/jump02.png
+	@cmd landFrame
+	delay	12
+	sound	data/sounds/Jumpland.wav
+	bbox 	228 109 30 65
+	@cmd clearL
+	frame	data/chars/bosses/kage/land00.png
+
+anim follow9 #AERIAL RECOVER
+	loop	0
+	delay	12
+	offset	240 179
+	sound	data/sounds/SpecialAttack5.wav
+	@cmd landSafe
+	@cmd invinc 2
+	@cmd leaper -1.3 1.6 0
+	frame	data/chars/bosses/kage/jump00.png
+	frame	data/chars/bosses/kage/jump01.png
+	frame	data/chars/bosses/kage/jump02.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	2
+	offset	240 179
+	sound	data/sounds/wind3.wav
+	@cmd copyMove
+	frame	data/chars/bosses/kage/land00.png
+	delay	6
+	offset	240 179
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll00.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll01.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll02.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll03.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll04.png
+	@cmd dasher 0 0 0
+	@cmd invinc 1
+	frame	data/chars/bosses/kage/land00.png
+
+anim follow11 #BLOCK
+	@cmd checkBlock
+	loop	0
+	delay	12
+	offset	240 179
+	bbox 	228 73 55 110
+	@cmd dasher 0 0 0
+	@cmd block 1
+	@cmd blockCost
+	frame	data/chars/bosses/kage/block00.png
+	@cmd keyLoop "attack3" 0
+	@cmd block 0
+	frame	data/chars/bosses/kage/block00.png
+
+anim follow12 #PARRY
+	loop	0
+	delay	24
+	offset	240 179
+	bbox 	228 73 55 110
+	@cmd block 1
+	frame	data/chars/bosses/kage/block00.png
+
+anim dodge
+	@cmd lockAni "dodgeType" "sor2x"
+	@cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
+	@cmd lockAni "dodgeType" "off"
+	loop	0
+	delay	2
+	offset	240 179
+	sound	data/sounds/wind3.wav
+	@cmd copyMove
+	frame	data/chars/bosses/kage/land00.png
+	delay	6
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll00.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll01.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll02.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll03.png
+	@cmd pasteMovex 1.1
+	frame	data/chars/bosses/kage/roll04.png
+	delay	12
+	@cmd dasher 0 0 0
+	@cmd invinc 1
+	frame	data/chars/bosses/kage/land00.png

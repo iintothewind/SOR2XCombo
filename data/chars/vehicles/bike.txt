@@ -1,0 +1,61 @@
+name			 Bike #Exploding Jack Bike
+type			 none
+candamage		 player enemy npc obstacle
+nolife			 1
+gfxshadow		 1 1
+ondoattackscript data/scripts/ondoattack/default.c
+animationscript	 data/scripts/animation/default.c
+
+anim idle
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	2
+	offset	146 179
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/Bike.wav
+	@cmd dasher 3 0 0
+	attack 99 126 101 55 50 1 1 0 0 12
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+	frame	data/chars/vehicles/bike00.png
+	frame	data/chars/vehicles/bike01.png
+		delay	8
+	@cmd dasher 2.5 0 0
+	attack 128 144 47 54 100 1 1 0 0 12
+	sound	data/sounds/Slide.wav
+	frame	data/chars/vehicles/bike02.png
+	@cmd dasher 2 0 0
+	frame	data/chars/vehicles/bike03.png
+	@cmd dasher 1.5 0 0
+	frame	data/chars/vehicles/bike04.png
+	@cmd dasher 1 0 0
+	frame	data/chars/vehicles/bike05.png
+	@cmd dasher 0.5
+	frame	data/chars/vehicles/bike05.png
+		delay	24
+	@cmd dasher 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/vehicles/bike05.png
+		delay	16
+	@cmd spawnBind "Explosion" 0 30 1
+	frame	data/chars/vehicles/bike05.png
+	@cmd spawnBind "Explosion" 0 0 1
+	frame	data/chars/vehicles/bike05.png
+	@cmd suicide
+	frame	data/chars/vehicles/bike05.png

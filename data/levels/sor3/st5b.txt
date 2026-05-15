@@ -1,0 +1,83 @@
+loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st5b/_empty.png	0 1 0 0 0 0 1 1 0
+panel			data/bgs/sor3/st5b/_map.png		none	none
+fglayer			data/bgs/sor3/st5b/fg00.png		75 -0.5 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor3/st5b/fg01.png		75 -0.5 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber 	5
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor3_st5a.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		343 281 0 154 200 200 76 5000
+
+#########################################################################################
+
+spawn		Box_D 1
+flip		1
+coords		160 220 0
+at			0
+
+spawn		1up
+flip		1
+coords		240 220 0
+at			0
+
+spawn		Box_D 1
+flip		1
+coords		320 220 0
+at			0
+
+spawn		TigerX 1
+map			1
+flip		1
+coords		50 240 600
+at			0
+
+spawn		TigerB 1
+map			2
+flip		0
+coords		100 240 300
+at			10
+
+spawn		TigerX 1
+map			2
+flip		0
+coords		150 250 400
+at			20
+
+spawn		TigerB 1
+map			2
+flip		0
+coords		200 260 500
+at			30
+
+#spawnscript data/scripts/levelspawn/music_random.c
+#at			30
+
+spawn		BossX1 1
+map			2
+flip		0
+coords		-100 240 300
+at			30
+
+spawn		BossX1 1
+map			2
+2pspawn
+flip		0
+coords		-100 240 300
+at			30

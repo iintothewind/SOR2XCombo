@@ -1,0 +1,15 @@
+name			Ash_Boat
+type			npc
+subject_to_minz	0
+health			1
+lifespan		20
+nomove			1 1
+shadow			0
+setlayer		-50
+stealth			2
+
+anim idle #INSIDE BOAT
+	loop	0
+	delay	64
+	offset	171 188
+	frame	data/chars/enemies/ash/boat00.png

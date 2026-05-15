@@ -1,0 +1,116 @@
+name				Robotx_Missile
+type				none
+subtype				chase
+health				1
+nolife				1
+lifespan			4
+offscreenkill		50
+death				1
+remove				0
+nomove				1 0
+gfxshadow			1 1
+antigravity			100
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/robotx_missile.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	followanim 1
+	followcond 1
+	fastattack 0
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	4
+	offset	36 27
+	sound	data/sounds/Wind3.wav
+	burn 24 25 12 3 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/missile00.png #LEFT-RIGHT
+	frame	data/chars/bosses/robotx/missile/missile01.png
+	frame	data/chars/bosses/robotx/missile/missile00.png
+	frame	data/chars/bosses/robotx/missile/missile01.png
+	@cmd looper 2 9999
+	burn 27 18 9 9 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/missile02.png #DIAGONAL DOWN
+	frame	data/chars/bosses/robotx/missile/missile03.png
+	frame	data/chars/bosses/robotx/missile/missile02.png
+	frame	data/chars/bosses/robotx/missile/missile03.png
+	@cmd looper 6 9999
+	burn 27 26 9 9 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/missile04.png #DIAGONAL UP
+	frame	data/chars/bosses/robotx/missile/missile05.png
+	frame	data/chars/bosses/robotx/missile/missile04.png
+	frame	data/chars/bosses/robotx/missile/missile05.png
+	@cmd looper 10 9999
+	burn 34 16 3 11 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/missile06.png #DOWN
+	frame	data/chars/bosses/robotx/missile/missile07.png
+	frame	data/chars/bosses/robotx/missile/missile06.png
+	frame	data/chars/bosses/robotx/missile/missile07.png
+	@cmd looper 14 9999
+	burn 34 26 3 11 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/missile08.png #UP
+	frame	data/chars/bosses/robotx/missile/missile09.png
+	frame	data/chars/bosses/robotx/missile/missile08.png
+	frame	data/chars/bosses/robotx/missile/missile09.png
+	@cmd looper 18 9999
+	frame	data/chars/bosses/robotx/missile/empty.png
+
+anim follow1 #EXPLOSION
+	fastattack 0
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	36 27
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/robotx/missile/empty.png
+	burn 12 0 50 50 20 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/robotx/missile/empty.png
+
+anim fall #EXPLOSION
+	fastattack 0
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	36 27
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/robotx/missile/empty.png
+	burn 12 0 50 50 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/robotx/missile/empty.png
+
+anim death #EXPLOSION
+	fastattack 0
+	jugglecost 1
+	forcedirection 0
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	36 27
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/robotx/missile/empty.png
+	burn 12 0 50 50 30 2 1 0 0 12
+	dropv 4 4 0
+	frame	data/chars/bosses/robotx/missile/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/robotx/missile/empty.png

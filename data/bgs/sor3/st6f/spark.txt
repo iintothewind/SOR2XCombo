@@ -1,0 +1,44 @@
+name				St6_Spark
+type				none
+subject_to_platform	0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+candamage			player enemy
+nolife				1
+setlayer			-3
+ondoattackscript	data/scripts/ondoattack/lasers.c
+onspawnscript		data/scripts/onspawn/new_type.c
+animationscript		data/scripts/animation/default.c
+script				data/scripts/updateentity/spark.c
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	0
+	delay	8
+	offset	25 25
+	@cmd aniChange 2 openborconstant("ANI_ATTACK1")
+	frame	data/bgs/sor3/st6f/spark00.png
+
+anim attack1
+	fastattack 0
+	jugglecost 60
+	forcedirection 0
+	otg 0
+	hitflash Shock
+	loop	1 1 9
+	delay	3
+	offset	25 25
+	shock 18 15 15 16 4 15 1 0 0 12
+	@cmd dasher 0.4 0 0
+	frame	data/bgs/sor3/st6f/spark00.png
+	frame	data/bgs/sor3/st6f/spark00.png
+	frame	data/bgs/sor3/st6f/spark01.png
+	frame	data/bgs/sor3/st6f/spark00.png
+	frame	data/bgs/sor3/st6f/spark02.png
+	frame	data/bgs/sor3/st6f/spark00.png
+	frame	data/bgs/sor3/st6f/spark03.png
+	frame	data/bgs/sor3/st6f/spark00.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/bgs/sor3/st6f/spark02.png

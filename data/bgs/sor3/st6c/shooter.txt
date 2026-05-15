@@ -1,0 +1,33 @@
+name				St6_Shooter1
+type				none
+subject_to_platform	0
+subject_to_wall		0
+subject_to_minz		0
+subject_to_maxz		0
+shadow				0
+antigravity			100
+setlayer			-3
+animationscript		data/scripts/animation/default.c
+
+load				St6_Laser1
+
+anim spawn
+	loop	0
+	delay	2
+	offset	240 80
+	frame	data/bgs/sor3/st6c/shooter00.png
+	@cmd spawnAlias "St6_Laser1" "Laser1" 0 0 0 openborconstant("ANI_IDLE")
+	@cmd spawnAlias "St6_Laser1" "Laser2" 0 0 16 openborconstant("ANI_FOLLOW1")
+	@cmd spawnAlias "St6_Laser1" "Laser3" 0 0 32 openborconstant("ANI_FOLLOW2")
+	@cmd spawnAlias "St6_Laser1" "Laser4" 0 0 48 openborconstant("ANI_FOLLOW3")
+	@cmd spawnAlias "St6_Laser1" "Laser5" 0 0 64 openborconstant("ANI_FOLLOW4")
+	@cmd spawnAlias "St6_Laser1" "Laser6" 0 0 80 openborconstant("ANI_FOLLOW5")
+	@cmd spawnAlias "St6_Laser1" "Laser7" 0 0 96 openborconstant("ANI_FOLLOW6")
+	@cmd spawnAlias "St6_Laser1" "Laser8" 0 0 112 openborconstant("ANI_FOLLOW7")
+	frame	data/bgs/sor3/st6c/shooter00.png
+
+anim idle
+	loop	0
+	delay	8
+	offset	240 80
+	frame	data/bgs/sor3/st6c/shooter00.png

@@ -1,0 +1,361 @@
+##MAIN
+name				Fog_Jump
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##GRAB
+grabdistance 		30 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				69
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2
+weapons				none none Fog_PipeB none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onspawnscript		data/scripts/onspawn/fog.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/fog/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Die1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter1.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter2.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter3.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter4.png
+
+##LOADS
+load				Fog_PipeB
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim spawn
+	loop	0
+	delay	2
+	offset	145 179
+	frame	data/chars/enemies/fog/pipe/jump00.png
+	@cmd leaper 3 1 0
+	@cmd aniChange 0 "ANI_WALKOFF"
+	frame	data/chars/enemies/fog/pipe/jump00.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	145 179
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/idle00.png
+	frame	data/chars/enemies/fog/idle00.png
+	frame	data/chars/enemies/fog/idle00.png
+	frame	data/chars/enemies/fog/idle00.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	145 179
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/walk00.png
+	frame	data/chars/enemies/fog/walk01.png
+	frame	data/chars/enemies/fog/walk02.png
+	frame	data/chars/enemies/fog/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	145 179
+	frame	data/chars/enemies/fog/get00.png
+
+anim grab
+	loop	0
+	delay	8
+	offset	145 179
+	bbox 	139 104 21 78
+	@cmd grabIdle
+	frame	data/chars/enemies/fog/grab00.png
+	@cmd looper 0 14
+	frame	data/chars/enemies/fog/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	145 179
+	bbox 	137 113 24 69
+	frame	data/chars/enemies/fog/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	145 179
+	bbox 	129 141 32 40
+	frame	data/chars/enemies/fog/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	145 179
+	bbox 	132 105 21 64
+	@cmd jump 1
+	frame	data/chars/enemies/fog/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	145 179
+	bbox 	129 141 32 40
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/fog/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	145 179
+	bbox 	126 112 26 69
+	frame	data/chars/enemies/fog/pain00.png
+	frame	data/chars/enemies/fog/pain01.png
+	frame	data/chars/enemies/fog/pain00.png
+	frame	data/chars/enemies/fog/pain01.png
+	frame	data/chars/enemies/fog/pain00.png
+	frame	data/chars/enemies/fog/pain01.png
+	frame	data/chars/enemies/fog/pain00.png
+	frame	data/chars/enemies/fog/pain01.png
+	frame	data/chars/enemies/fog/pain00.png
+	frame	data/chars/enemies/fog/pain01.png
+	frame	data/chars/enemies/fog/pain00.png
+	frame	data/chars/enemies/fog/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	145 179
+	bbox 	131 117 32 62
+	frame	data/chars/enemies/fog/pain200.png
+	frame	data/chars/enemies/fog/pain201.png
+	frame	data/chars/enemies/fog/pain200.png
+	frame	data/chars/enemies/fog/pain201.png
+	frame	data/chars/enemies/fog/pain200.png
+	frame	data/chars/enemies/fog/pain201.png
+	frame	data/chars/enemies/fog/pain200.png
+	frame	data/chars/enemies/fog/pain201.png
+	frame	data/chars/enemies/fog/pain200.png
+	frame	data/chars/enemies/fog/pain201.png
+	frame	data/chars/enemies/fog/pain200.png
+	frame	data/chars/enemies/fog/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	145 179
+	bbox 	124 121 36 51
+	frame	data/chars/enemies/fog/fall00.png
+		delay	8
+	bbox 	110 162 75 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/fog/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	145 179
+	bbox 	124 121 36 51
+	frame	data/chars/enemies/fog/fall00.png
+		delay	8
+	bbox 	110 162 75 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/fog/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	145 179
+	bbox 	124 121 36 51
+	frame	data/chars/enemies/fog/fall00.png
+		delay	8
+	bbox 	110 162 75 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/fog/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	145 179
+	frame	data/chars/enemies/fog/fall600.png
+	frame	data/chars/enemies/fog/fall601.png
+	frame	data/chars/enemies/fog/fall602.png
+	frame	data/chars/enemies/fog/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/fog/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	145 179
+	frame	data/chars/enemies/fog/fall700.png
+	frame	data/chars/enemies/fog/fall701.png
+	frame	data/chars/enemies/fog/fall702.png
+	frame	data/chars/enemies/fog/fall703.png
+	frame	data/chars/enemies/fog/fall704.png
+	frame	data/chars/enemies/fog/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	145 179
+	bbox 	124 121 36 51
+	hitfx	data/sounds/MediumKick.wav
+	attack 124 121 36 51 4 1 0 0 20 12
+	frame	data/chars/enemies/fog/fall00.png
+		delay	999
+	frame	data/chars/enemies/fog/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	110 162 75 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/fog/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	145 179
+	bbox 	126 128 33 53
+	hitfx	data/sounds/MediumKick.wav
+	attack 126 128 33 53 4 1 0 0 20 12
+	frame	data/chars/enemies/fog/fall900.png
+		delay	999
+	frame	data/chars/enemies/fog/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	110 162 75 19
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/fog/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	145 179
+	frame	data/chars/enemies/fog/fall01.png
+	frame	data/chars/enemies/fog/fall01.png
+	frame	data/chars/enemies/fog/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	145 179
+	frame	data/chars/enemies/fog/rise00.png
+	frame	data/chars/enemies/fog/rise01.png
+	frame	data/chars/enemies/fog/rise02.png
+
+anim attack1
+	range 20 40
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	145 179
+	bbox 	133 112 23 69
+	hitfx	data/sounds/LowPunch.wav
+	sound	data/sounds/LowAttack.wav
+	attack 152 124 34 12 2 0 0 0 10 12
+	frame	data/chars/enemies/fog/a100.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/fog/a101.png
+
+anim attack2
+	range 20 60
+	rangea 0 200
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	145 179
+	bbox 	139 104 21 78
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/fog/a200.png
+		delay	16
+	attack 159 116 41 14 8 1 0 0 20 12
+	bbox 	143 106 19 75
+	frame	data/chars/enemies/fog/a201.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	139 104 21 78
+	frame	data/chars/enemies/fog/a202.png
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/a203.png
+
+anim freespecial
+	range 20 60
+	rangea 0 200
+	fastattack 1
+	jugglecost 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	145 179
+	bbox 	139 104 21 78
+	hitfx	data/sounds/HighPunch.wav
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/enemies/fog/a200.png
+		delay	16
+	attack 159 116 41 14 8 1 0 0 20 12
+	bbox 	143 106 19 75
+	frame	data/chars/enemies/fog/a201.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	139 104 21 78
+	frame	data/chars/enemies/fog/a202.png
+	bbox 	133 112 23 69
+	frame	data/chars/enemies/fog/a203.png

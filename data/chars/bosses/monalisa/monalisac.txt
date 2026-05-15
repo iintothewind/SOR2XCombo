@@ -1,0 +1,765 @@
+##MAIN
+name				MonalisaC
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				80
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bounce				1
+aimove				chase #ENEMY ONLY
+escapehits			2 #ENEMY ONLY
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/monalisa.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+ondrawscript		data/scripts/ondraw/monalisa.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/monalisa.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/monalisa.c
+script				data/scripts/updateentity/monalisa.c
+
+##ICONS
+icon				data/chars/bosses/monalisa/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Blaze1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter1.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter2.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter3.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter1.png
+remap				data/chars/bosses/monalisa/idle00.png data/chars/bosses/monalisa/alter1.png
+
+##LOADS
+load				Monalisa_Wave
+load				Monalisa_WaveR
+load				MonalisaS
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim spawn
+	loop	0
+	delay	8
+	offset	144 196
+	frame	data/chars/bosses/monalisa/idle00.png
+
+anim follow1 #CALL SISTER
+	loop	0
+	delay	24
+	offset	144 196
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd leaper 0.4 2.4 0
+	frame	data/chars/bosses/monalisa/jump00.png
+	frame	data/chars/bosses/monalisa/jump01.png
+		delay	6
+	@cmd flip
+	@cmd leaper 1 6 0
+	@cmd jump 1
+	frame	data/chars/bosses/monalisa/jump02.png
+	frame	data/chars/bosses/monalisa/jump03.png
+	frame	data/chars/bosses/monalisa/jump04.png
+	frame	data/chars/bosses/monalisa/jump05.png
+	frame	data/chars/bosses/monalisa/jump02.png
+	frame	data/chars/bosses/monalisa/jump03.png
+	frame	data/chars/bosses/monalisa/jump04.png
+	@cmd target 4 4
+	frame	data/chars/bosses/monalisa/jump05.png
+		delay	2
+	@cmd leapTarget -4
+	bbox 	141 122 24 50
+	sound	data/sounds/HighAttack.wav
+	frame	data/chars/bosses/monalisa/a100.png
+	attack 141 147 60 27 8 1 0 0 10 12
+	sound	data/voices/Attack5.wav
+	frame	data/chars/bosses/monalisa/a100.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	144 196
+	bbox 	132 120 20 78
+	frame	data/chars/bosses/monalisa/idle00.png
+	frame	data/chars/bosses/monalisa/idle01.png
+	bbox 	134 121 20 77
+	frame	data/chars/bosses/monalisa/idle02.png
+	frame	data/chars/bosses/monalisa/idle03.png
+
+anim walk
+	loop	1
+	delay	12
+	offset	144 196
+	bbox 	135 121 17 77
+	frame	data/chars/bosses/monalisa/walk00.png
+	frame	data/chars/bosses/monalisa/walk01.png
+	frame	data/chars/bosses/monalisa/walk02.png
+	frame	data/chars/bosses/monalisa/walk03.png
+	frame	data/chars/bosses/monalisa/walk04.png
+	frame	data/chars/bosses/monalisa/walk05.png
+
+anim backwalk
+	loop	1
+	delay	12
+	offset	144 196
+	bbox 	135 121 17 77
+	frame	data/chars/bosses/monalisa/walk05.png
+	frame	data/chars/bosses/monalisa/walk04.png
+	frame	data/chars/bosses/monalisa/walk03.png
+	frame	data/chars/bosses/monalisa/walk02.png
+	frame	data/chars/bosses/monalisa/walk01.png
+	frame	data/chars/bosses/monalisa/walk00.png
+
+anim get
+	loop	0
+	delay	16
+	offset	144 196
+	frame	data/chars/bosses/monalisa/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	144 196
+	bbox 	132 121 23 77
+	frame	data/chars/bosses/monalisa/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	144 196
+	bbox 	131 134 32 64
+	sound	data/voices/girl_pain4.wav
+	frame	data/chars/bosses/monalisa/grabbed00.png
+
+anim land
+	loop	0
+	delay	30
+	offset	144 196
+	@cmd landSafe
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/monalisa/jump00.png
+	frame	data/chars/bosses/monalisa/jump01.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	144 196
+	bbox 	130 143 31 55
+	frame	data/chars/bosses/monalisa/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	24
+	offset	144 196
+	bbox 	136 114 19 62
+	@cmd jump 1
+	frame	data/chars/bosses/monalisa/jump00.png
+	bbox 	135 120 27 62
+	frame	data/chars/bosses/monalisa/jump01.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	144 196
+	bbox 	130 143 31 55
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	144 196
+	bbox 	134 121 23 77
+	frame	data/chars/bosses/monalisa/pain00.png
+	frame	data/chars/bosses/monalisa/pain01.png
+	frame	data/chars/bosses/monalisa/pain00.png
+	frame	data/chars/bosses/monalisa/pain01.png
+	frame	data/chars/bosses/monalisa/pain00.png
+	frame	data/chars/bosses/monalisa/pain01.png
+	frame	data/chars/bosses/monalisa/pain00.png
+	frame	data/chars/bosses/monalisa/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	144 196
+	bbox 	133 128 29 69
+	frame	data/chars/bosses/monalisa/pain200.png
+	frame	data/chars/bosses/monalisa/pain201.png
+	frame	data/chars/bosses/monalisa/pain200.png
+	frame	data/chars/bosses/monalisa/pain201.png
+	frame	data/chars/bosses/monalisa/pain200.png
+	frame	data/chars/bosses/monalisa/pain201.png
+	frame	data/chars/bosses/monalisa/pain200.png
+	frame	data/chars/bosses/monalisa/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	144 196
+	bbox 	125 131 35 50
+	frame	data/chars/bosses/monalisa/fall00.png
+		delay	8
+	bbox 	103 176 80 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	144 196
+	bbox 	125 131 35 50
+	frame	data/chars/bosses/monalisa/fall00.png
+		delay	8
+	bbox 	103 176 80 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	144 196
+	bbox 	125 131 35 50
+	frame	data/chars/bosses/monalisa/fall00.png
+		delay	8
+	bbox 	103 176 80 22
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	144 196
+	frame	data/chars/bosses/monalisa/fall600.png
+	frame	data/chars/bosses/monalisa/fall601.png
+	frame	data/chars/bosses/monalisa/fall602.png
+	frame	data/chars/bosses/monalisa/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	144 196
+	frame	data/chars/bosses/monalisa/fall700.png
+	frame	data/chars/bosses/monalisa/fall701.png
+	frame	data/chars/bosses/monalisa/fall702.png
+	frame	data/chars/bosses/monalisa/fall703.png
+	frame	data/chars/bosses/monalisa/fall704.png
+	frame	data/chars/bosses/monalisa/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	144 196
+	bbox 	125 131 35 50
+	hitfx	data/sounds/MediumKick.wav
+	attack 125 131 35 50 4 1 0 0 20 12
+	frame	data/chars/bosses/monalisa/fall00.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/bosses/monalisa/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	103 176 80 22
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/girl_pain5.wav
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	144 196
+	bbox 	129 139 27 58
+	hitfx	data/sounds/MediumKick.wav
+	attack 129 139 27 58 4 1 0 0 20 12
+	frame	data/chars/bosses/monalisa/fall900.png
+		delay	999
+	@cmd cancelFall 50 "ANI_LAND"
+	frame	data/chars/bosses/monalisa/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	103 176 80 22
+	#sound	data/sounds/Falling.wav
+	sound	data/voices/girl_pain5.wav
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	144 196
+	frame	data/chars/bosses/monalisa/fall01.png
+	frame	data/chars/bosses/monalisa/fall01.png
+	frame	data/chars/bosses/monalisa/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	144 196
+	frame	data/chars/bosses/monalisa/rise00.png
+	frame	data/chars/bosses/monalisa/rise01.png
+	frame	data/chars/bosses/monalisa/rise00.png
+	frame	data/chars/bosses/monalisa/rise02.png
+	frame	data/chars/bosses/monalisa/rise03.png
+
+anim riseattack
+	range 40 120
+	rangea 0 0
+	rangez -9 9
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 25 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	144 196
+	bbox 	132 120 20 78
+	hitfx	data/sounds/throw2.wav
+	frame	data/chars/bosses/monalisa/idle00.png
+	frame	data/chars/bosses/monalisa/idle01.png
+	bbox 	134 121 20 77
+	frame	data/chars/bosses/monalisa/idle02.png
+	frame	data/chars/bosses/monalisa/idle03.png
+	sound	data/voices/Attack5.wav
+		delay	24
+	@cmd target 2 1.8
+	bbox 	135 121 17 77
+	@cmd dashTarget
+	attack 128 112 32 82 1 0 1 1 0 24
+	frame	data/chars/bosses/monalisa/walk00.png
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk01.png
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk02.png
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk03.png
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk04.png
+	@cmd dasher 0
+	frame	data/chars/bosses/monalisa/walk05.png
+
+anim attack1
+	range 40 80
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	2
+	offset	144 196
+	bbox 	141 122 24 50
+	hitfx	data/sounds/MediumKick.wav
+	sound	data/sounds/MediumAttack.wav
+	@cmd leaper 3 1.5 0
+	attack 141 147 60 27 15 0 0 0 10 12
+	dropv 4 1 0
+	frame	data/chars/bosses/monalisa/a100.png
+	frame	data/chars/bosses/monalisa/a100.png
+	@cmd landFrame
+		delay	12
+	bbox 	130 143 31 55
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim attack2 #SHOCKWAVE
+	range 80 120
+	rangea 0 0
+	loop	0
+	delay	8
+	offset	144 196
+	bbox 	130 124 24 77
+	sound	data/voices/Attack5.wav
+	frame	data/chars/bosses/monalisa/shockwave00.png
+	bbox 	130 136 24 65
+	frame	data/chars/bosses/monalisa/shockwave01.png
+		delay	24
+	bbox 	130 156 32 45
+	frame	data/chars/bosses/monalisa/shockwave02.png
+	@cmd shoot "Monalisa_Wave" 20 0 0 4 0 0
+	frame	data/chars/bosses/monalisa/shockwave03.png
+
+anim attack3 #JUMP ADVANCE
+	range 50 100
+	rangea 0 100
+	rangez -50 50
+	loop	1 3 7
+	delay	12
+	offset	144 196
+	bbox 	130 143 31 55
+	frame	data/chars/bosses/monalisa/jumpdelay00.png
+		delay	6
+	bbox 	136 114 19 62
+	@cmd targetJump
+	@cmd leapJump
+	@cmd jump 1
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/monalisa/jump00.png
+	bbox 	135 120 27 62
+	sound	data/voices/Attack5.wav
+	frame	data/chars/bosses/monalisa/jump01.png
+	bbox 	139 143 25 25
+	frame	data/chars/bosses/monalisa/jump02.png
+	frame	data/chars/bosses/monalisa/jump03.png
+	frame	data/chars/bosses/monalisa/jump04.png
+	frame	data/chars/bosses/monalisa/jump05.png
+
+anim grabattack #THROW
+	forcedirection -1
+	loop	0
+	delay	24
+	offset	144 196
+	@cmd dasher 0
+	@cmd grabStart2
+	@cmd position 5 10 5 0 0
+	sound	data/voices/leona3.wav
+	frame	data/chars/bosses/monalisa/throw00.png
+		delay	8
+	@cmd position 2 -30 10 0 0
+	frame	data/chars/bosses/monalisa/throw01.png
+	@cmd position 4 -55 10 0 0
+	frame	data/chars/bosses/monalisa/throw02.png
+		delay	16
+	@cmd throw 30 2 1 3 0 0
+	frame	data/chars/bosses/monalisa/throw02.png
+	@cmd clearL
+	frame	data/chars/bosses/monalisa/throw02.png
+
+anim grabattack2 #SLAM
+	forcedirection -1
+	loop	0
+	delay	24
+	offset	144 196
+	@cmd dasher 0 0 0
+	@cmd grabStart2
+	@cmd position 2 -20 55 0 0
+	sound	data/voices/leona2.wav
+	frame	data/chars/bosses/monalisa/throw00.png
+	frame	data/chars/bosses/monalisa/slam00.png
+		delay	16
+	@cmd position 2 -40 30 0 0
+	frame	data/chars/bosses/monalisa/slam01.png
+	@cmd position 4 -60 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/monalisa/slam02.png
+	@cmd slam 30 2 1 4 0 0
+	frame	data/chars/bosses/monalisa/slam02.png
+	@cmd clearL
+	frame	data/chars/bosses/monalisa/slam03.png
+
+anim grabforward ##BANG
+	attackone 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	@cmd dasher 0 0 0
+	@cmd grabStart2
+	offset	144 196
+	drawmethod flipx 1
+	sound	data/voices/fck_in.wav
+	frame	data/chars/bosses/monalisa/idle00.png
+	delay	32
+	@cmd position 0 20 -1 0 -1
+	@cmd spawn01 "Dust" 20 0 1
+	attack 127 127 39 71 3 0 0 10 12
+	sound	data/voices/gal_pain02.wav
+	drawmethod flipx 1
+	frame	data/chars/bosses/monalisa/pain200.png
+	@cmd position 1 15 -1 0 -1
+	drawmethod flipx 1
+	frame	data/chars/bosses/monalisa/pain201.png
+	@cmd looper 1 3
+	@cmd slam 150 1 -1 3 0 0
+	drawmethod flipx 1
+	frame	data/chars/bosses/monalisa/pain01.png
+	sound	data/voices/girl_cry2.wav
+	@cmd position 1 15 -1 0 -1
+	@cmd mpCost -30
+	@cmd hpCost -300
+	drawmethod flipx 1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/monalisa/pain00.png
+	nodrawmethod
+	@cmd grabEnd
+	@cmd clearL
+		delay	64
+	frame	data/chars/bosses/monalisa/rise02.png
+
+anim jumpattack #JUMP STATIC/FORWARD
+	range 40 160
+	rangea 0 100
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	1 8 10
+	delay	6
+	offset	144 196
+	bbox 	136 114 19 62
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/bosses/monalisa/jump00.png
+	bbox 	135 120 27 62
+	frame	data/chars/bosses/monalisa/jump01.png
+	bbox 	139 143 25 25
+	attack 139 143 25 25 1 0 1 1 0 24
+	frame	data/chars/bosses/monalisa/jump02.png
+	frame	data/chars/bosses/monalisa/jump03.png
+	frame	data/chars/bosses/monalisa/jump04.png
+	frame	data/chars/bosses/monalisa/jump05.png
+		delay	12
+	attack 141 147 60 27 1 0 1 1 0 24
+	bbox 	141 122 24 50
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/bosses/monalisa/a100.png
+	attack 99 147 60 27 1 0 1 1 0 24
+	bbox 	135 122 24 50
+	sound	data/voices/Leona2.wav
+	frame	data/chars/bosses/monalisa/a101.png
+	attack 141 147 60 27 1 0 1 1 0 24
+	bbox 	141 122 24 50
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/bosses/monalisa/a100.png
+	attack 99 147 60 27 1 0 1 1 0 24
+	bbox 	135 122 24 50
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/bosses/monalisa/a101.png
+
+anim jumpattack2 #JUMP DOWN
+	range 40 160
+	rangea 0 100
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	6
+	offset	144 196
+	bbox 	136 114 19 62
+	hitfx	data/sounds/HighKick.wav
+	sound	data/sounds/Jumping.wav
+	@cmd leaper 1 3.9 0
+	@cmd target 2.3 2.3
+	frame	data/chars/bosses/monalisa/jump00.png
+	bbox 	135 120 27 62
+	frame	data/chars/bosses/monalisa/jump01.png
+	bbox 	139 143 25 25
+	attack 139 143 25 25 1 0 1 1 0 24
+	frame	data/chars/bosses/monalisa/jump02.png
+	frame	data/chars/bosses/monalisa/jump03.png
+	frame	data/chars/bosses/monalisa/jump04.png
+	frame	data/chars/bosses/monalisa/jump05.png
+		delay	2
+	@cmd leapTarget -2.3
+	bbox 	141 122 24 50
+	sound	data/sounds/HighAttack.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/monalisa/a100.png
+	attack 141 147 60 27 1 0 1 1 0 24
+	sound	data/voices/Attack5.wav
+	frame	data/chars/bosses/monalisa/a100.png
+
+anim special
+	range 0 160
+	rangea 0 100
+	rangez -24 24
+	energycost -24 1 6
+	loop	0
+	delay	6
+	offset	144 196
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/monalisa/evade00.png
+	frame	data/chars/bosses/monalisa/evade01.png
+	@cmd leaper -1 3 0
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/monalisa/evade02.png
+	frame	data/chars/bosses/monalisa/evade03.png
+	frame	data/chars/bosses/monalisa/evade04.png
+	frame	data/chars/bosses/monalisa/evade05.png
+		delay	2
+	frame	data/chars/bosses/monalisa/evade06.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim special2
+	range 0 160
+	rangea 0 100
+	rangez -24 24
+	energycost -24 1 6
+	loop	0
+	delay	6
+	offset	144 196
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/monalisa/evade00.png
+	frame	data/chars/bosses/monalisa/evade01.png
+	@cmd leaper -1 3 0
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/monalisa/evade02.png
+	frame	data/chars/bosses/monalisa/evade03.png
+	frame	data/chars/bosses/monalisa/evade04.png
+	frame	data/chars/bosses/monalisa/evade05.png
+		delay	2
+	frame	data/chars/bosses/monalisa/evade06.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/monalisa/jumpland00.png
+
+anim freespecial #RAGE
+	range 80 160
+	rangea 0 0
+	energycost 60 1 6
+	loop	0
+	delay	4
+	offset	144 196
+	@cmd spawnBind "Rage" 0 -1 0
+	frame	data/chars/bosses/monalisa/shockwave00.png
+	frame	data/chars/bosses/monalisa/shockwave01.png
+	frame	data/chars/bosses/monalisa/shockwave02.png
+	frame	data/chars/bosses/monalisa/shockwave03.png
+	sound	data/voices/Attack5.wav
+	frame	data/chars/bosses/monalisa/shockwave03.png
+		delay	24
+	frame	data/chars/bosses/monalisa/shockwave03.png
+	@cmd shoot "Monalisa_WaveR" 20 0 0 4 0 0
+	frame	data/chars/bosses/monalisa/shockwave03.png
+
+anim freespecial2 #GRAB RUN
+	range 40 120
+	rangea 0 0
+	rangez -9 9
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 25 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	144 196
+	bbox 	132 120 20 78
+	@cmd block 1
+	hitfx	data/sounds/throw2.wav
+	frame	data/chars/bosses/monalisa/idle00.png
+	frame	data/chars/bosses/monalisa/idle01.png
+	bbox 	134 121 20 77
+	frame	data/chars/bosses/monalisa/idle02.png
+	frame	data/chars/bosses/monalisa/idle03.png
+	@cmd block 0
+	sound	data/voices/Attack5.wav
+		delay	24
+	@cmd target 3.5 1.8
+	bbox 	135 121 17 77
+	@cmd dashTarget
+	attack 128 112 32 82 1 0 1 1 0 24
+	frame	data/chars/bosses/monalisa/walk00.png
+	@cmd target 3 1.8
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk01.png
+	@cmd target 2.5 1.8
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk02.png
+	@cmd target 2 1.8
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk03.png
+	@cmd target 2 1.8
+	@cmd dashTarget
+	frame	data/chars/bosses/monalisa/walk04.png
+	@cmd dasher 0
+	frame	data/chars/bosses/monalisa/walk05.png
+
+anim follow5 #ANIMATION FOR DOGRAB ONLY
+	loop	0
+	delay	16
+	offset	144 196
+	@cmd dasher 0
+	@cmd landGrab
+	frame	data/chars/bosses/monalisa/walk05.png
+
+
+
+anim dodge
+	range 0 160
+	rangea 0 100
+	rangez -48 48
+	loop	0
+	delay	12
+	offset	144 196
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/monalisa/evade00.png
+	frame	data/chars/bosses/monalisa/evade01.png
+	@cmd leaper -1 3 0
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/monalisa/evade02.png
+	frame	data/chars/bosses/monalisa/evade03.png
+	frame	data/chars/bosses/monalisa/evade04.png
+	frame	data/chars/bosses/monalisa/evade05.png
+		delay	2
+	frame	data/chars/bosses/monalisa/evade06.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/monalisa/jumpland00.png

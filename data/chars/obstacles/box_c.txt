@@ -1,0 +1,31 @@
+name				Box_C
+type				obstacle
+health				1
+nolife				1
+score				2000
+gfxshadow			1 1
+noatflash			1
+flash				Flash
+ondeathscript		data/scripts/ondeath/item.c
+animationscript		data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/obstacles.c
+
+diesound			data/sounds/Wood.wav
+
+anim idle
+	loop	1
+	delay	64
+	offset	100 167
+	bbox 	76 99 47 70
+	shadowcoords 100 161
+	platform 63 73 123 133 7 33
+	@cmd offScreenKill 50 0
+	frame	data/chars/obstacles/box04.png
+	
+anim fall
+	loop	0
+	delay	128
+	offset	100 167
+	frame	data/chars/obstacles/box05.png
+	@cmd suicide
+	frame	data/chars/obstacles/box05.png

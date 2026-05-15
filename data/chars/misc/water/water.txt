@@ -1,0 +1,31 @@
+name			Water
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity 	100
+alpha			1
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	2
+	offset	65 61
+	frame	data/chars/misc/water/water00.png
+	frame	data/chars/misc/water/water01.png
+	frame	data/chars/misc/water/water02.png
+	frame	data/chars/misc/water/water03.png
+	frame	data/chars/misc/water/water04.png
+	frame	data/chars/misc/water/water05.png
+	frame	data/chars/misc/water/water06.png
+	frame	data/chars/misc/water/water07.png
+	frame	data/chars/misc/water/water08.png
+		delay	4
+	frame	data/chars/misc/water/water09.png
+	frame	data/chars/misc/water/water10.png
+	frame	data/chars/misc/water/water11.png
+	frame	data/chars/misc/water/water12.png
+	frame	data/chars/misc/water/water13.png
+	frame	data/chars/misc/water/water14.png
+	@cmd suicide
+	frame	data/chars/misc/water/water14.png

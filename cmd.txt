@@ -1,0 +1,1 @@
+wine64 borpak.exe -d ./data -b ./SOR2XCombo.pak

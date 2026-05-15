@@ -1,0 +1,381 @@
+##MAIN
+name				Galsia_Hide
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				74
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1 1 2
+weapons				Galsia_KnifeB none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onspawnscript		data/scripts/onspawn/galsia.c
+onmodelcopyscript	data/scripts/onmodelcopy/default.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/galsia/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Die1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/galsia/idle00.png data/chars/enemies/galsia/alter1.png
+remap				data/chars/enemies/galsia/idle00.png data/chars/enemies/galsia/alter2.png
+remap				data/chars/enemies/galsia/idle00.png data/chars/enemies/galsia/alter3.png
+remap				data/chars/enemies/galsia/idle00.png data/chars/enemies/galsia/alter4.png
+
+##LOADS
+load				Galsia_KnifeB
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim spawn
+	fshadow 0
+	loop	0
+	delay	12
+	offset	83 119
+	@cmd frozen 1
+	@cmd minz 0
+	drawmethod tintmode 2
+	drawmethod tintcolor 0_0_0
+	frame	data/chars/enemies/galsia/hide00.png
+	@cmd delayDetect
+	fshadow 1
+	@cmd dasher 0 0 0.5
+	drawmethod tintmode 2
+	drawmethod tintcolor 0_0_0
+	frame	data/chars/enemies/galsia/walk00.png
+	drawmethod tintmode 2
+	drawmethod tintcolor 20_20_20
+	frame	data/chars/enemies/galsia/walk01.png
+	drawmethod tintmode 2
+	drawmethod tintcolor 40_40_40
+	frame	data/chars/enemies/galsia/walk02.png
+	drawmethod tintmode 2
+	drawmethod tintcolor 80_80_80
+	frame	data/chars/enemies/galsia/walk01.png
+	drawmethod tintmode 2
+	drawmethod tintcolor 120_120_120
+	frame	data/chars/enemies/galsia/walk00.png
+	drawmethod tintmode 2
+	drawmethod tintcolor 160_160_160
+	frame	data/chars/enemies/galsia/walk01.png
+	drawmethod tintmode 2
+	drawmethod tintcolor 200_200_200
+	@cmd minz 1
+	frame	data/chars/enemies/galsia/walk02.png
+	nodrawmethod
+	@cmd frozen 0
+	bbox 	69 49 26 72
+	frame	data/chars/enemies/galsia/walk01.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	83 119
+	bbox 	69 49 26 72
+	frame	data/chars/enemies/galsia/idle00.png
+	frame	data/chars/enemies/galsia/idle01.png
+	frame	data/chars/enemies/galsia/idle02.png
+	frame	data/chars/enemies/galsia/idle01.png
+
+anim walk
+	loop	1
+	delay	16
+	offset	83 119
+	bbox 	69 49 26 72
+	frame	data/chars/enemies/galsia/walk00.png
+	frame	data/chars/enemies/galsia/walk01.png
+	frame	data/chars/enemies/galsia/walk02.png
+	frame	data/chars/enemies/galsia/walk01.png
+
+anim get
+	loop	0
+	delay	16
+	offset	83 119
+	frame	data/chars/enemies/galsia/get00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	83 119
+	bbox 	71 56 23 64
+	frame	data/chars/enemies/galsia/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	83 119
+	bbox 	69 79 29 41
+	frame	data/chars/enemies/galsia/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	83 119
+	bbox 	69 49 25 65
+	@cmd jump 1
+	frame	data/chars/enemies/galsia/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	83 119
+	bbox 	69 79 29 41
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/galsia/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	83 119
+	bbox 	62 55 26 66
+	frame	data/chars/enemies/galsia/pain00.png
+	frame	data/chars/enemies/galsia/pain01.png
+	frame	data/chars/enemies/galsia/pain00.png
+	frame	data/chars/enemies/galsia/pain01.png
+	frame	data/chars/enemies/galsia/pain00.png
+	frame	data/chars/enemies/galsia/pain01.png
+	frame	data/chars/enemies/galsia/pain00.png
+	frame	data/chars/enemies/galsia/pain01.png
+	frame	data/chars/enemies/galsia/pain00.png
+	frame	data/chars/enemies/galsia/pain01.png
+	frame	data/chars/enemies/galsia/pain00.png
+	frame	data/chars/enemies/galsia/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	83 119
+	bbox 	67 59 32 62
+	frame	data/chars/enemies/galsia/pain200.png
+	frame	data/chars/enemies/galsia/pain201.png
+	frame	data/chars/enemies/galsia/pain200.png
+	frame	data/chars/enemies/galsia/pain201.png
+	frame	data/chars/enemies/galsia/pain200.png
+	frame	data/chars/enemies/galsia/pain201.png
+	frame	data/chars/enemies/galsia/pain200.png
+	frame	data/chars/enemies/galsia/pain201.png
+	frame	data/chars/enemies/galsia/pain200.png
+	frame	data/chars/enemies/galsia/pain201.png
+	frame	data/chars/enemies/galsia/pain200.png
+	frame	data/chars/enemies/galsia/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	83 119
+	bbox 	48 61 39 46
+	frame	data/chars/enemies/galsia/fall00.png
+		delay	8
+	bbox 	43 99 74 21
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	83 119
+	bbox 	48 61 39 46
+	frame	data/chars/enemies/galsia/fall00.png
+		delay	8
+	bbox 	43 99 74 21
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	83 119
+	bbox 	48 61 39 46
+	frame	data/chars/enemies/galsia/fall00.png
+		delay	8
+	bbox 	43 99 74 21
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	83 119
+	frame	data/chars/enemies/galsia/fall600.png
+	frame	data/chars/enemies/galsia/fall601.png
+	frame	data/chars/enemies/galsia/fall602.png
+	frame	data/chars/enemies/galsia/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	83 119
+	frame	data/chars/enemies/galsia/fall700.png
+	frame	data/chars/enemies/galsia/fall701.png
+	frame	data/chars/enemies/galsia/fall702.png
+	frame	data/chars/enemies/galsia/fall703.png
+	frame	data/chars/enemies/galsia/fall704.png
+	frame	data/chars/enemies/galsia/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	83 119
+	bbox 	48 61 39 46
+	hitfx	data/sounds/MediumKick.wav
+	attack 48 61 39 46 4 1 0 0 20 12
+	frame	data/chars/enemies/galsia/fall00.png
+		delay	999
+	frame	data/chars/enemies/galsia/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	43 99 74 21
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	83 119
+	bbox 	65 70 31 48
+	hitfx	data/sounds/MediumKick.wav
+	attack 65 70 31 48 4 1 0 0 20 12
+	frame	data/chars/enemies/galsia/fall900.png
+		delay	999
+	frame	data/chars/enemies/galsia/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	43 99 74 21
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	83 119
+	frame	data/chars/enemies/galsia/fall01.png
+	frame	data/chars/enemies/galsia/fall01.png
+	frame	data/chars/enemies/galsia/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	83 119
+	frame	data/chars/enemies/galsia/rise00.png
+	frame	data/chars/enemies/galsia/rise01.png
+	frame	data/chars/enemies/galsia/rise00.png
+	frame	data/chars/enemies/galsia/rise02.png
+
+anim attack1
+	range 20 60
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	83 119
+	bbox 	66 47 22 74
+	hitfx	data/sounds/LowPunch.wav
+	sound	data/sounds/LowAttack.wav
+	frame	data/chars/enemies/galsia/a100.png
+	bbox 	72 48 26 73
+	frame	data/chars/enemies/galsia/a101.png
+	attack 89 57 46 16 2 0 0 0 10 12
+	frame	data/chars/enemies/galsia/a102.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/galsia/a101.png
+	bbox 	66 47 22 74
+	frame	data/chars/enemies/galsia/a100.png
+
+anim attack2
+	range 20 60
+	rangea -40 20
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	18
+	offset	83 119
+	bbox 	69 49 25 65
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/enemies/galsia/jump00.png
+	bbox 	59 57 44 45
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/enemies/galsia/jumpatk00.png
+	bbox 	59 57 44 45
+	attack 80 62 31 30 4 1 0 0 30 12
+	sound	data/voices/Attack1.wav
+	frame	data/chars/enemies/galsia/jumpatk01.png
+
+anim jumpattack
+	range 20 60
+	rangea -40 20
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	18
+	offset	83 119
+	bbox 	69 49 25 65
+	hitfx	data/sounds/MediumPunch.wav
+	sound	data/sounds/Jumping.wav
+	@cmd targetJump
+	@cmd leapJump
+	frame	data/chars/enemies/galsia/jump00.png
+	bbox 	59 57 44 45
+	sound	data/sounds/MediumAttack.wav
+	frame	data/chars/enemies/galsia/jumpatk00.png
+	bbox 	59 57 44 45
+	attack 80 62 31 30 4 1 0 0 30 12
+	sound	data/voices/Attack1.wav
+	frame	data/chars/enemies/galsia/jumpatk01.png

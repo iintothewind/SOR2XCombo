@@ -1,0 +1,544 @@
+###LOADING
+loadingbg	    data/bgs/loading3.png 				1 -81 248 480 999 999 0
+
+###EMPTY BACKGROUND IMAGE
+background	    data/bgs/sor3/st1b/_empty.png		0.85 1 0 0 0 0 -1 1 0 0 0 0 0 0 0
+
+###SKY
+bglayer	        data/bgs/sor3/st1b/bk00a.png		0.85 1 0 0 0 0 -1 1 0 0 0 0 0 0 0
+bglayer         data/bgs/sor3/st1b/bk00b.png		0.85 1 0 0 0 0 -1 1 0 0 0 0 0 0 0
+bglayer         data/bgs/sor3/st1b/bk00c.png		0.85 1 0 0 0 0 -1 1 0 0 0 0 0 0 0
+
+###CLOUDS 1
+bglayer		    data/bgs/sor3/st1b/bg00a.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 6
+bglayer		    data/bgs/sor3/st1b/bg00b.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 6
+bglayer		    data/bgs/sor3/st1b/bg00c.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 6
+
+###CLOUDS 2
+bglayer		    data/bgs/sor3/st1b/bg01a.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 3
+bglayer		    data/bgs/sor3/st1b/bg01b.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 3
+bglayer		    data/bgs/sor3/st1b/bg01c.png		0.95 1 0 0 0 0 -1 1 1 0 0 0 0 0 3
+
+###OCEAN
+bglayer		    data/bgs/sor3/st1b/bg02.png			0.7 1 0 0 0 0 -1 1 1 0 1 3 10 0.3
+
+###EMPTY PANEL IMAGE
+panel		    data/bgs/sor3/st1b/_map.png			none	none
+
+###PANELS
+fglayer		    data/bgs/sor3/st1b/fg00a.png		-220 0 0 0 -3 0 1 -1 1 1 0 0 0 0 0 0 1
+fglayer		    data/bgs/sor3/st1b/fg00b.png		-220 0 0 0 -3 0 1 -1 1 1 0 0 0 0 0 0 1
+fglayer		    data/bgs/sor3/st1b/fg00c.png		-220 0 0 0 -3 0 1 -1 1 1 0 0 0 0 0 0 1
+
+###GRIDS
+fglayer		    data/bgs/sor3/st1b/fp00.png			0 -0.4 0 0 0 0 1 -1 1 1 0 0 0 0 0 0 1
+
+###MISC
+fglayer		    data/bgs/border.png 				1000 1 1 0 0 0 0 -1 -1 1 2
+
+##FGLAYER PROPERTIES
+#filepath Zpos xratio zratio xoffset zoffset xspace zspace xrepeat zrepeat trans alpha w-mode amp wl ws move quake neon
+
+
+order		    a
+settime		    99
+bgspeed		    1 0
+stagenumber     1
+spawn1		    60 20 300
+spawn2		    90 40 300
+spawn3		    120 20 300
+spawn4		    150 40 300
+updatescript 	data/scripts/updatelevel/sor3_st1b.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+load		St1_Waves 3
+load		Boat 3
+load		Ash_Boat 3
+
+#########################################################################################
+
+spawn		St1_Waves 1
+flip		1
+coords		1 1 0
+at			0
+
+#########################################################################################
+
+spawn		Floater 1
+flip		1
+coords		260 168 0
+at			0
+
+spawn		Floater 1
+flip		1
+coords		380 168 0
+at			0
+
+spawn		Galsia_Hide 1
+map			0
+flip		0
+mp			5
+coords		180 130 0
+at			0
+
+spawn		Bongo_Hide 1
+map			0
+flip		0
+mp			10
+coords		180 130 0
+at			0
+
+spawn		Galsia_Hide 1
+map			0
+flip		0
+mp			15
+coords		180 130 0
+at			0
+
+spawn		BruceB 1
+map			0
+flip		1
+coords		-100 260 0
+at			0
+
+wait
+at			290
+
+group		4 4
+at			100
+
+spawn		BruceB 1
+map			0
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		Bongo_Hide 1
+map			0
+flip		1
+mp			5
+coords		240 130 0
+at			100
+
+spawn		Bongo_Hide 1
+map			0
+flip		1
+mp			10
+coords		240 130 0
+at			100
+
+spawn		Bongo_Hide 1
+map			0
+flip		1
+mp			15
+coords		240 130 0
+at			100
+
+spawn		Galsia_Hide 1
+map			0
+flip		1
+mp			5
+coords		240 130 0
+at			100
+
+spawn		BongoX 1
+map			1
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		Galsia_Hide 1
+map			0
+flip		1
+mp			10
+coords		240 130 0
+at			100
+
+spawn		Donovan_Hide 1
+map			0
+flip		1
+mp			15
+coords		240 130 0
+at			100
+
+spawn		Bongo_Hide 1
+map			0
+flip		1
+mp			20
+coords		240 130 0
+at			100
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		Bongo_Hide 1
+map			0
+flip		1
+mp			5
+coords		240 130 0
+at			100
+
+spawn		Bongo_Hide 1
+map			0
+flip		1
+mp			10
+coords		240 130 0
+at			100
+
+
+spawn		BasicX3 1
+map			0
+flip		1
+coords		-100 260 0
+at			100
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-100 260 0
+at			100
+
+#########################################################################################
+
+group		1000 1000
+at			300
+
+spawn		Floater 1
+flip		1
+coords		520 168 0
+at			300
+
+spawn		Moto_Single 1
+flip		0
+coords		520 180 0
+at			500
+
+spawn		Moto_Single 1
+flip		0
+coords		520 240 0
+at			750
+
+wait
+at			1100
+
+group		2 2
+at			900
+
+spawn		Moto_Single 1
+flip		0
+coords		520 200 0
+at			900
+
+spawn		Moto_Single 1
+flip		1
+mp			5
+coords		-50 220 0
+at			900
+
+group		1000 1000
+at			1000
+
+spawn		Boat 1
+flip		1
+coords		-100 162 8
+at			1000
+
+spawn		Ash_Boat 1
+flip		1
+coords		-75 162 20
+at			1000
+
+spawn		Galsia_Boat 1
+map			1
+flip		1
+coords		-100 162 20
+at			1000
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-125 162 20
+at			1000
+
+spawn		Galsia_Boat 1
+map			1
+flip		1
+coords		-150 162 20
+at			1000
+
+spawn		BruceB 1
+map			0
+flip		1
+coords		-100 260 0
+at			1000
+
+group		1 2
+at			1000
+
+spawn		Moto_Single 1
+flip		1
+coords		-50 200 0
+at			1000
+
+spawn		Moto_Single 1
+flip		0
+mp			5
+coords		520 200 0
+at			1000
+
+spawn		Moto_Single 1
+flip		0
+coords		520 200 0
+at			1000
+
+spawn		Moto_Single 1
+flip		0
+mp			5
+coords		520 240 0
+at			1000
+
+group		2 2
+at			1000
+
+spawn		Moto_Single 1
+flip		0
+coords		520 200 0
+at			1000
+
+spawn		Moto_Single 1
+flip		1
+mp			5
+coords		-50 220 0
+at			1000
+
+group		1000 1000
+at			1000
+
+spawn		Boat 1
+flip		1
+coords		-200 162 8
+at			1000
+
+spawn		Ash_Boat 1
+flip		1
+coords		-175 162 20
+at			1000
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-200 162 20
+at			1000
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-225 162 20
+at			1000
+
+spawn		Galsia_Boat 1
+map			1
+flip		1
+coords		-250 162 20
+at			1000
+
+#########################################################################################
+
+spawn		SignalB 1
+map			0
+flip		1
+coords		550 190 0
+at			1250
+
+spawn		SignalX 1
+map			0
+flip		1
+coords		600 210 0
+at			1250
+
+spawn		BruceB 1
+map			0
+flip		1
+coords		600 210 0
+at			1250
+
+spawn		BongoX 1
+map			0
+flip		1
+coords		600 210 0
+at			1250
+
+spawn		SignalB 1
+map			0
+flip		1
+coords		650 230 0
+at			1250
+
+spawn		SignalX 1
+map			0
+flip		1
+coords		700 250 0
+at			1250
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			1300
+
+
+wait
+at			1500
+
+group		4 4
+at			1350
+
+spawn		Signal_Bottle 1
+map			5
+flip		1
+coords		550 190 0
+at			1350
+
+spawn		SignalX 1
+map			0
+flip		1
+coords		600 210 0
+at			1350
+
+spawn		Signal_Bottle 1
+map			5
+flip		1
+coords		650 230 0
+at			1350
+
+spawn		SignalX 1
+map			0
+flip		1
+coords		700 250 0
+at			1350
+
+spawn		GalsiaB 1
+map			1
+flip		1
+coords		550 190 0
+at			1350
+
+spawn		GalsiaB 1
+map			1
+flip		1
+coords		600 210 0
+at			1350
+
+spawn		BasicX3 1
+map			0
+flip		1
+coords		600 210 0
+at			1350
+
+spawn		GalsiaB 1
+map			1
+flip		1
+coords		650 230 0
+at			1350
+
+spawn		GalsiaB 1
+map			1
+flip		1
+coords		700 250 0
+at			1350
+
+spawn		BossX1 1
+map			0
+flip		1
+coords		600 210 0
+at			1350
+
+spawn		BossX1 1
+map			0
+2pspawn
+flip		1
+coords		600 210 0
+at			1350
+
+group		1000 1000
+at			1450
+
+spawn		Boat 1
+flip		1
+coords		-200 162 8
+at			1450
+
+spawn		Ash_Boat 1
+flip		1
+coords		-175 162 20
+at			1450
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-200 162 20
+at			1450
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-225 162 20
+at			1450
+
+spawn		Galsia_Boat 1
+map			1
+flip		1
+coords		-250 162 20
+at			1450
+
+#########################################################################################
+
+spawn		Floater 1
+flip		1
+coords		700 168 0
+at			1550
+
+spawn		Floater 1
+flip		1
+coords		800 168 0
+at			1550
+
+spawn		Boat 1
+alias		Boat_Last
+flip		1
+coords		-150 162 8
+at			1900
+
+spawn		Ash_Cry 1
+map			4
+flip		1
+coords		-125 162 20
+at			1850
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-150 162 20
+at			1850
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-175 162 20
+at			1850
+
+spawn		Donovan_Boat 1
+map			1
+flip		1
+coords		-200 162 20
+at			1850

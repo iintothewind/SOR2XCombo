@@ -1,0 +1,18 @@
+name			Blast #NON DAMAGE EXPLOSION, USED TO REPEAT THE explosion/original/Destruction ENTITY
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity		100
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	6
+	offset	25 25
+	frame	data/chars/misc/explosion/original/explosion00.png
+	frame	data/chars/misc/explosion/original/explosion01.png
+	frame	data/chars/misc/explosion/original/explosion02.png
+	frame	data/chars/misc/explosion/original/explosion03.png
+	@cmd suicide
+	frame	data/chars/misc/explosion/original/explosion03.png

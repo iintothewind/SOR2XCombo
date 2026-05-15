@@ -1,0 +1,60 @@
+name			Moves
+type			panel
+speed			5
+scroll			0.5
+shadow			0
+setlayer		100000
+nomove			1 1
+noquake 		1 1
+alpha			6
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/texts.c
+
+anim follow1 #COUNTER
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/counter00.png
+	
+anim follow2 #SUPER
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/super00.png
+	
+anim follow3 #RAGE
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/rage00.png
+	
+anim follow4 #GRAB ESCAPE
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/escape00.png
+	
+anim follow5 #AERIAL RECOVER
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/recover00.png
+	
+anim follow6 #SUPER ARMOR
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/armor00.png
+	
+anim follow7 #GUARDBREAK
+	loop	0
+	delay	4
+	offset	1 1
+	@cmd dasher 0 0 0.3
+	frame	data/chars/misc/text/break00.png

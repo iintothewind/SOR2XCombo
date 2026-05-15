@@ -1,0 +1,162 @@
+loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor3/st7e/_empty.png	1 1 0 0 0 0 1 1 0
+bglayer			data/bgs/sor3/st7e/bg00.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer			data/bgs/sor3/st7e/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+panel			data/bgs/sor3/st7e/_map.png		none	none
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+stagenumber 	7
+spawn1			60 20 300
+spawn2			90 40 300
+spawn3			120 20 300
+spawn4			150 40 300
+updatescript	data/scripts/updatelevel/sor3_st7e.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		0 257 -500 -500 134 0 66 5000
+
+wall		379 257 0 134 634 634 66 5000
+
+#########################################################################################
+
+load		Stage 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawnscript data/scripts/levelspawn/sample.c
+at			0
+
+spawn		Box_B 1
+flip		1
+coords		180 230 0
+at			0
+
+spawn		Box_B 1
+flip		1
+coords		220 260 0
+at			0
+
+spawn		Box_B 1
+flip		1
+coords		450 250 0
+at			0
+
+spawn		Box_B 1
+flip		1
+coords		470 260 0
+at			0
+
+spawn		Hakuyo_Wait 1
+map			2
+flip		0
+coords		350 230 0
+at			0
+
+spawn		Hakuyo_Wait 1
+map			2
+flip		0
+coords		380 260 0
+at			0
+
+spawn		Slum_Wait 1
+map			2
+flip		0
+coords		270 230 0
+at			0
+
+spawn		Slum_Wait 1
+map			2
+flip		0
+coords		300 260 0
+at			0
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			0
+
+group		4 4
+at			0
+
+spawn		TigerX 1
+map			4
+flip		0
+coords		350 230 300
+at			0
+
+spawn		TigerX 1
+map			4
+flip		0
+coords		380 260 300
+at			0
+
+spawn		BruceB 1
+map			2
+flip		0
+coords		350 230 300
+at			0
+
+spawn		RavenX 1
+map			4
+flip		0
+coords		350 230 300
+at			0
+
+spawn		RavenX 1
+map			4
+flip		0
+coords		380 260 300
+at			0
+
+spawn		JackB 1
+map			4
+weapon		Knife 1
+flip		0
+coords		350 230 300
+at			0
+
+spawn		BasicX3 1
+map			2
+flip		0
+coords		350 230 300
+at			0
+
+spawn		BossX1 1
+map			2
+flip		0
+coords		350 230 300
+at			0
+
+spawn		BossX1 1
+map			2
+2pspawn
+flip		0
+coords		350 230 300
+at			0
+
+spawn		BongoX 1
+map			2
+flip		0
+coords		350 230 300
+at			0
+
+spawn		AshB 1
+map			1
+flip		0
+coords		380 260 300
+at			0

@@ -1,0 +1,421 @@
+loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background	data/bgs/sor2/st7a/_empty.png	1 1 0 0 0 0 -1 1 0
+bglayer		data/bgs/sor2/st7a/bg00.png		0.6 1 0 0 0 0 -1 1 1 0  0 0 0 0 0
+bglayer		data/bgs/sor2/st7a/bg01.png		0.4 1 0 0 0 0 -1 1 1 0  0 0 0 0 1.5
+bglayer		data/bgs/sor2/st7a/bg02.png		0.2 1 0 0 0 0 -1 1 1 0  0 0 0 0 3
+panel		data/bgs/sor2/st7a/_map.png		none	none
+fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order		a
+settime		480
+bgspeed		1 0
+stagenumber 7
+spawn1		60 20 300
+spawn2		90 40 300
+spawn3		120 20 300
+spawn4		150 40 300
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+basemap		0 300 2400 200 0.001 0.001
+
+#########################################################################################
+
+load		RouteS 3
+load		Route_Down 3
+load		Route_Right 3
+load		BlockadeZ 3
+load		FakeWall 3
+load		Stage 3
+load		St7_Machine1 3
+load		St7_Machine2 3
+
+#########################################################################################
+
+spawn		Stage 1
+flip		1
+coords		-107 80 0
+at			0
+
+#########################################################################################
+
+spawn		St7_Machine1 1
+flip		1
+coords		219 244 0
+at			0
+
+spawn		St7_Machine1 1
+flip		1
+coords		945 244 0
+at			0
+
+spawn		St7_Machine1 1
+flip		1
+coords		1425 244 0
+at			0
+
+spawn		St7_Machine1 1
+flip		1
+coords		1203 276 0
+at			0
+
+spawn		St7_Machine1 1
+flip		1
+coords		1555 276 0
+at			0
+
+spawn		St7_Machine2 1
+flip		1
+coords		1859 276 0
+at			0
+
+spawn		St7_Machine2 1
+flip		1
+coords		2147 276 0
+at			0
+
+#########################################################################################
+
+spawn		Drum 1
+flip		1
+coords		600 216 0
+at			0
+
+spawn		Drum 1
+flip		1
+coords		700 216 0
+at			0
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		600 260 0
+at			1
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		600 260 0
+at			50
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		600 260 0
+at			100
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		600 260 0
+at			150
+
+spawn		BigBenB 1
+map			3
+flip		0
+coords		275 240 300
+at			290
+
+spawn		BigBenB 1
+map			4
+flip		1
+coords		350 240 300
+at			290
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		350 240 300
+at			290
+
+wait
+at			300
+
+group		4 4
+at			290
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		600 230 0
+at			290
+
+spawn		BongoX 1
+map			4
+flip		1
+coords		600 260 0
+at			290
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		650 230 0
+at			290
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		600 260 0
+at			290
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		650 230 0
+at			290
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		600 260 0
+at			290
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		650 230 0
+at			290
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		320 260 0
+at			290
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		320 260 300
+at			290
+
+#########################################################################################
+
+group		1000 1000
+at			310
+
+spawn		Drum 1
+flip		1
+coords		600 216 0
+at			310
+
+spawn		Drum 1
+flip		1
+coords		650 216 0
+at			310
+
+spawn		Drum 1
+flip		1
+coords		800 270 0
+at			310
+
+spawn		Fog_Wait5 1
+map			4
+flip		0
+coords		550 200 0
+at			310
+
+spawn		Fog_Grenadier 1
+flip		1
+coords		800 216 0
+at			310
+
+spawn		Fog_Grenadier 1
+flip		1
+coords		900 216 0
+at			310
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		-100 260 0
+at			350
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		600 230 0
+at			400
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		-100 240 0
+at			500
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		600 240 0
+at			600
+
+spawn		Fog_Wait4 1
+map			3
+weapon		Pipe 1
+flip		0
+coords		850 200 0
+at			600
+
+wait
+at			1000
+
+group		4 4
+at			600
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			600
+
+spawn		BruceB 1
+map			4
+flip		1
+coords		600 260 0
+at			600
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		-100 240 0
+at			600
+
+spawn		FogX 1
+map			4
+flip		1
+coords		550 230 0
+at			600
+
+spawn		FogX 1
+map			4
+flip		1
+coords		600 260 0
+at			600
+
+spawn		BasicX3 1
+map			4
+flip		1
+coords		-100 240 0
+at			600
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		550 230 0
+at			600
+
+spawn		BasicX1 1
+map			4
+flip		1
+coords		600 260 0
+at			600
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		320 260 300
+at			600
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		320 260 300
+at			600
+
+#########################################################################################
+
+group		1000 1000
+at			310
+
+spawn		Drum 1
+flip		1
+coords		725 216 0
+at			1100
+
+spawn		Kusanagi_Sit 1
+map			4
+flip		0
+coords		745 260 0
+at			1100
+
+spawn		Kusanagi_Wait3 1
+map			4
+flip		0
+coords		846 232 0
+at			1100
+
+spawn		Kusanagi_Wait3 1
+map			5
+weapon		Kunai 1
+flip		0
+coords		998 232 0
+at			1100
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			1200
+
+
+spawn		BruceB 1
+map			4
+flip		0
+coords		350 230 300
+at			1400
+
+
+spawn		ReineX 1
+map			4
+flip		0
+coords		350 230 300
+at			1400
+
+spawn		Drum 1
+flip		1
+coords		660 216 2
+at			1450
+
+spawn		Drum 1
+flip		1
+coords		620 248 2
+at			1450
+
+spawn		BossX1 1
+map			4
+flip		0
+coords		320 260 300
+at			1800
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+coords		320 260 300
+at			1800
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+group		2 2
+at			1800
+
+spawn		RouteS 1
+flip		1
+coords		999 999 0
+at			1800
+
+spawn		Route_Right 1
+flip		1
+coords		460 200 0
+at			1800
+
+spawn		Route_Down 1
+flip		1
+coords		280 266 0
+at			1800

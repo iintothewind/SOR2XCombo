@@ -1,0 +1,10 @@
+name		FakeWall #ENTITY USED TO WORK AS A WALL BUT FOR Z AXIS ONLY, USED TO AVOID SOME WALL BUGS WHEN ANY PROJECTILE IS THROWN
+type		panel
+shadow		0
+
+anim idle
+	loop	0
+	delay	16
+	offset	1 1
+	platform 0 0 3000 3000 10 5000
+	frame	data/chars/obstacles/empty.png

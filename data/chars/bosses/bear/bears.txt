@@ -1,0 +1,63 @@
+##MAIN
+name				BearS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter1.png
+remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter2.png
+remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter3.png
+remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter3.png
+remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim freespecial
+	loop	0
+	delay	1000
+	offset	117 200
+	frame	data/chars/bosses/bear/upper00.png
+	frame	data/chars/bosses/bear/upper01.png
+	frame	data/chars/bosses/bear/upper01.png
+	frame	data/chars/bosses/bear/upper02.png
+	frame	data/chars/bosses/bear/upper03.png
+	frame	data/chars/bosses/bear/upper03.png
+	frame	data/chars/bosses/bear/upper04.png
+
+anim freespecial3 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	117 200
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/walk00.png
+	frame	data/chars/bosses/bear/walk01.png
+	frame	data/chars/bosses/bear/walk02.png
+	frame	data/chars/bosses/bear/walk03.png
+	frame	data/chars/bosses/bear/walk00.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	117 200
+	frame	data/chars/bosses/bear/slide00.png
+	frame	data/chars/bosses/bear/slide01.png
+	frame	data/chars/bosses/bear/slide01.png
+	frame	data/chars/bosses/bear/slide02.png
+	frame	data/chars/bosses/bear/slide03.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	117 200
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/block00.png
+	frame	data/chars/bosses/bear/block00.png

@@ -1,0 +1,11 @@
+name			QuakeHigh
+type			none
+shadow			0
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/quake.c
+
+anim idle
+	loop	0
+	delay	32
+	offset	1 1
+	frame	data/chars/misc/quake/empty.png

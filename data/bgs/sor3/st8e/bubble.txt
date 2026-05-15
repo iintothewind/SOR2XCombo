@@ -1,0 +1,12 @@
+name		St8_Bubble
+type		none
+shadow		0
+antigravity	100
+setlayer	-5
+#script		data/scripts/updateentity/liquid.c
+
+anim idle
+	loop	0
+	delay	8
+	offset	1 1
+	frame	data/bgs/sor3/st8e/bubble00.png

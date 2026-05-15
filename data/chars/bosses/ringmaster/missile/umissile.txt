@@ -1,0 +1,102 @@
+name				umissile
+type				none
+subtype				weapon
+health				1
+nolife				1
+lifespan			3
+offscreenkill		50
+death				1
+remove				0
+nomove				1 1
+gfxshadow			1 1
+antigravity			100
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/ringmaster_missile.c
+animationscript		data/scripts/animation/default.c
+
+anim idle
+	followanim 1
+	followcond 1
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	1 2 4
+	delay	4
+	offset	57 49
+	sound	data/sounds/Wind3.wav
+	burn 42 36 35 31 150 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/bosses/ringmaster/missile/missile02.png #LEFT-RIGHT
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+	frame	data/chars/bosses/ringmaster/missile/missile02.png
+	frame	data/chars/bosses/ringmaster/missile/missile03.png
+
+anim follow1 #EXPLOSION
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	57 49
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+	burn 20 20 70 60 75 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+
+anim fall #EXPLOSION
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	57 49
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+	burn 20 20 70 60 75 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+
+anim death #EXPLOSION
+	fastattack 0
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Burn
+	loop	0
+	delay	2
+	offset	57 49
+	@cmd spawnBind "Destruction" 0 0 1
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+	burn 20 20 70 60 75 2 1 0 0 36
+	dropv 3 4 0
+	frame	data/chars/bosses/ringmaster/missile/empty.png
+	@cmd suicide
+	frame	data/chars/bosses/ringmaster/missile/empty.png

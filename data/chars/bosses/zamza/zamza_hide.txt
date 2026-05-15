@@ -1,0 +1,1160 @@
+##MAIN
+name				Zamza_Hide
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				68
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			5
+risetime			170
+riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+bounce				1
+aimove				chase #ENEMY ONLY
+escapehits			2 #ENEMY ONLY
+blockodds 			1
+bflash				Block
+nopassiveblock		1
+death				2
+
+##SCRIPTS
+didblockscript		data/scripts/didblock/default.c
+didhitscript		data/scripts/didhit/zamza.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+ondrawscript		data/scripts/ondraw/zamza.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/zamza.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+thinkscript			data/scripts/think/zamza.c
+script				data/scripts/updateentity/zamza.c
+
+##ICONS
+icon				data/chars/bosses/zamza/icon.png 1
+
+##DIESOUND
+diesound			data/voices/BossDie1.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter1.png
+remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter2.png
+remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter3.png
+remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter4.png
+remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter1.png
+
+##LOADS
+load				ZamzaS
+
+## CUSTOM ANIMATIONS ##########################################################################
+
+anim spawn #SHOW UP
+	loop	0
+	delay	16
+	offset	143 200
+	@cmd frozen 1
+	drawmethod alpha 6
+	drawmethod channel 0.10
+	frame	data/chars/bosses/zamza/idle00.png
+	drawmethod channel 0.20
+	frame	data/chars/bosses/zamza/idle01.png
+	drawmethod channel 0.30
+	frame	data/chars/bosses/zamza/idle02.png
+	drawmethod channel 0.40
+	frame	data/chars/bosses/zamza/idle01.png
+	drawmethod channel 0.50
+	frame	data/chars/bosses/zamza/idle00.png
+	drawmethod channel 0.60
+	frame	data/chars/bosses/zamza/idle01.png
+	drawmethod channel 0.70
+	frame	data/chars/bosses/zamza/idle02.png
+	drawmethod channel 0.80
+	frame	data/chars/bosses/zamza/idle01.png
+	drawmethod channel 0.90
+	frame	data/chars/bosses/zamza/idle00.png
+	nodrawmethod
+	frame	data/chars/bosses/zamza/idle01.png
+	@cmd frozen 0
+	frame	data/chars/bosses/zamza/idle02.png
+	frame	data/chars/bosses/zamza/idle01.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim idle
+	loop	1
+	delay	16
+	offset	143 200
+	bbox 	128 137 35 65
+	frame	data/chars/bosses/zamza/idle00.png
+	frame	data/chars/bosses/zamza/idle01.png
+	frame	data/chars/bosses/zamza/idle02.png
+	frame	data/chars/bosses/zamza/idle01.png
+
+anim walk
+	loop	1
+	delay	12
+	offset	143 200
+	bbox 	128 134 35 68
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/zamza/walk00.png
+	frame	data/chars/bosses/zamza/walk01.png
+	frame	data/chars/bosses/zamza/walk02.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/zamza/walk03.png
+	frame	data/chars/bosses/zamza/walk04.png
+	frame	data/chars/bosses/zamza/walk05.png
+
+anim backwalk
+	loop	1
+	delay	12
+	offset	143 200
+	bbox 	128 134 35 68
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/zamza/walk05.png
+	frame	data/chars/bosses/zamza/walk04.png
+	frame	data/chars/bosses/zamza/walk03.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/zamza/walk02.png
+	frame	data/chars/bosses/zamza/walk01.png
+	frame	data/chars/bosses/zamza/walk00.png
+
+anim run
+	loop	1
+	delay	8
+	offset	143 200
+	bbox 	128 134 35 68
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/zamza/walk00.png
+	frame	data/chars/bosses/zamza/walk01.png
+	frame	data/chars/bosses/zamza/walk02.png
+	sound	data/sounds/Run2.wav
+	frame	data/chars/bosses/zamza/walk03.png
+	frame	data/chars/bosses/zamza/walk04.png
+	frame	data/chars/bosses/zamza/walk05.png
+
+anim get
+	loop	0
+	delay	16
+	offset	143 200
+	frame	data/chars/bosses/zamza/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	143 200
+	bbox 	130 126 29 76
+	frame	data/chars/bosses/zamza/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	143 200
+	bbox 	130 135 35 67
+	frame	data/chars/bosses/zamza/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 149 35 53
+	frame	data/chars/bosses/zamza/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	143 200
+	bbox 	128 109 32 71
+	@cmd jump 1
+	frame	data/chars/bosses/zamza/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 149 35 53
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/jumpland00.png
+
+anim guardbreak
+	loop	0
+	delay	4
+	offset	143 200
+	bbox 	130 135 35 67
+	sound	data/sounds/GuardBreak.wav
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+	frame	data/chars/bosses/zamza/grabbed00.png
+	frame	data/chars/bosses/zamza/grabbed01.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	143 200
+	bbox 	132 120 34 82
+	frame	data/chars/bosses/zamza/pain00.png
+	frame	data/chars/bosses/zamza/pain01.png
+	frame	data/chars/bosses/zamza/pain00.png
+	frame	data/chars/bosses/zamza/pain01.png
+	frame	data/chars/bosses/zamza/pain00.png
+	frame	data/chars/bosses/zamza/pain01.png
+	frame	data/chars/bosses/zamza/pain00.png
+	frame	data/chars/bosses/zamza/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	143 200
+	bbox 	135 135 35 67
+	frame	data/chars/bosses/zamza/pain200.png
+	frame	data/chars/bosses/zamza/pain201.png
+	frame	data/chars/bosses/zamza/pain200.png
+	frame	data/chars/bosses/zamza/pain201.png
+	frame	data/chars/bosses/zamza/pain200.png
+	frame	data/chars/bosses/zamza/pain201.png
+	frame	data/chars/bosses/zamza/pain200.png
+	frame	data/chars/bosses/zamza/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	143 200
+	bbox 	121 125 45 52
+	frame	data/chars/bosses/zamza/fall00.png
+		delay	8
+	bbox 	109 174 89 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	143 200
+	bbox 	121 125 45 52
+	frame	data/chars/bosses/zamza/fall00.png
+		delay	8
+	bbox 	109 174 89 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	143 200
+	bbox 	121 125 45 52
+	frame	data/chars/bosses/zamza/fall00.png
+		delay	8
+	bbox 	109 174 89 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	143 200
+	frame	data/chars/bosses/zamza/fall600.png
+	frame	data/chars/bosses/zamza/fall601.png
+	frame	data/chars/bosses/zamza/fall602.png
+	frame	data/chars/bosses/zamza/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	143 200
+	frame	data/chars/bosses/zamza/fall700.png
+	frame	data/chars/bosses/zamza/fall701.png
+	frame	data/chars/bosses/zamza/fall702.png
+	frame	data/chars/bosses/zamza/fall703.png
+	frame	data/chars/bosses/zamza/fall704.png
+	frame	data/chars/bosses/zamza/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	143 200
+	bbox 	121 125 45 52
+	hitfx	data/sounds/MediumKick.wav
+	attack 121 125 45 52 4 1 0 0 20 12
+	frame	data/chars/bosses/zamza/fall00.png
+		delay	999
+	frame	data/chars/bosses/zamza/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	109 174 89 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	143 200
+	bbox 	117 143 37 58
+	hitfx	data/sounds/MediumKick.wav
+	attack 117 143 37 58 4 1 0 0 20 12
+	frame	data/chars/bosses/zamza/fall900.png
+		delay	999
+	frame	data/chars/bosses/zamza/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	109 174 89 29
+	sound	data/sounds/Falling.wav
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	143 200
+	frame	data/chars/bosses/zamza/fall01.png
+	frame	data/chars/bosses/zamza/fall01.png
+	frame	data/chars/bosses/zamza/fall01.png
+
+anim rise
+	loop	0
+	delay	12
+	offset	143 200
+	frame	data/chars/bosses/zamza/rise00.png
+	frame	data/chars/bosses/zamza/rise01.png
+	@cmd leaper 1 2 0
+	frame	data/chars/bosses/zamza/rise02.png
+		delay	2
+	frame	data/chars/bosses/zamza/rise03.png
+	@cmd landFrame
+		delay	12
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/rise04.png
+
+anim riseattack
+	range 80 180
+	rangea 0 0
+	rangez -50 50
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 134 35 68
+	hitfx	data/sounds/throw2.wav
+	sound	data/voices/Zamza1.wav
+	@cmd target 3 2
+	sound	data/sounds/Run.wav
+	@cmd dashTarget
+	attack 128 134 35 68 1 0 1 1 0 24
+	frame	data/chars/bosses/zamza/walk00.png
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/zamza/walk01.png
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/zamza/walk02.png
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd dasher 0
+	frame	data/chars/bosses/zamza/walk00.png
+
+
+anim attack1
+	range 0 50
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	6
+	offset	143 200
+	bbox 	134 145 32 57
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/zamza/a100.png
+	attack 135 135 91 65 8 0 0 0 20 36
+	bbox 	142 145 37 57
+	frame	data/chars/bosses/zamza/a101.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	@cmd rageCancel 30 90 0 0 60 "ANI_FREESPECIAL" "hit"
+	bbox 	131 145 32 57
+	sound	data/sounds/Whoosh.wav
+	frame	data/chars/bosses/zamza/a102.png
+	bbox 	142 140 33 62
+	frame	data/chars/bosses/zamza/a103.png
+	attack 135 124 96 76 8 1 0 0 20 36
+	bbox 	154 138 35 64
+	frame	data/chars/bosses/zamza/a104.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	162 142 29 60
+	sound	data/sounds/Whoosh2.wav
+	frame	data/chars/bosses/zamza/a105.png
+
+anim attack2 #SLIDE
+	range 100 200
+	rangez -50 50
+	fastattack 1
+	jugglecost 3
+	followanim 5
+	followcond 2
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	16
+	offset	143 200
+	hitfx	data/sounds/throw2.wav
+	sound	data/sounds/SpecialAttack2.wav
+	frame	data/chars/bosses/zamza/slide00.png
+		delay	32
+	@cmd selfNoGrab 1
+	@cmd target 5 2.5
+	@cmd dashTarget
+	@cmd spawn01 "Dust" 40 0 0
+	attack 137 168 47 34 0 0 1 1 0 36
+	bbox 	115 143 33 59
+	frame	data/chars/bosses/zamza/slide01.png
+		delay	4
+	@cmd dasher 4
+	frame	data/chars/bosses/zamza/slide01.png
+	@cmd dasher 3
+	frame	data/chars/bosses/zamza/slide01.png
+	@cmd dasher 2
+	frame	data/chars/bosses/zamza/slide01.png
+	@cmd dasher 1
+	frame	data/chars/bosses/zamza/slide01.png
+	@cmd dasher 0 0 0
+	@cmd selfNoGrab 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	133 148 37 54
+	frame	data/chars/bosses/zamza/slide02.png
+
+anim attack3 #AERIAL ROLL
+	range 100 200
+	rangez -50 50
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	8
+	offset	143 200
+	hitfx	data/sounds/Cutter2.wav
+	frame	data/chars/bosses/zamza/roll00.png
+	frame	data/chars/bosses/zamza/roll01.png
+		delay	4
+	@cmd leaper 0 2 0
+	@cmd target 6 3
+	@cmd dashTarget
+	attack 126 134 64 37 8 1 0 0 20 36
+	bbox 	126 134 37 37
+	frame	data/chars/bosses/zamza/roll02.png
+	sound	data/sounds/Whoosh.wav
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll02.png
+	attack 142 164 38 31 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll03.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll03.png
+	attack 126 134 37 64 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll04.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll04.png
+	attack 102 156 38 31 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll05.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll05.png
+	attack 99 134 64 37 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll06.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll06.png
+	attack 109 110 38 31 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll07.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll07.png
+	attack 126 107 37 64 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll08.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll08.png
+	attack 149 118 38 31 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/roll09.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/roll09.png
+	@cmd landFrame 8
+		delay	12
+	@cmd leaper 0 0 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	128 149 35 53
+	sound	data/sounds/Jumpland.wav
+	@cmd rageCancel 0 40 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/roll10.png
+
+anim attack4 #UPPER
+	range 20 50
+	rangea 30 120
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	16
+	offset	143 200
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/upper00.png
+		delay	8
+	@cmd leaper 1.5 3.2 0
+	attack 150 138 29 41 4 1 0 0 20 36
+	dropv 4 1 0
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	8
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 152 116 39 44 6 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper02.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper02.png
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 93 105 51 21 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper03.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper03.png
+	attack 120 75 34 50 10 1 0 0 20 36
+	sound	data/sounds/Whoosh3.wav
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/upper04.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper05.png
+	@cmd leaper 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 129 106 38 36
+	frame	data/chars/bosses/zamza/upper06.png
+		delay	2
+	bbox 133 99 28 49
+	frame	data/chars/bosses/zamza/upper07.png
+	@cmd landFrame
+		delay	8
+	bbox 133 99 28 104
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/upper08.png
+	bbox 	133 148 37 54
+	frame	data/chars/bosses/zamza/upper09.png
+
+anim jumpattack #JUMP STATIC/FORWARD
+	range 100 400
+	rangea 0 100
+	rangez -100 100
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 149 35 53
+	hitfx	data/sounds/Cutter2.wav
+	frame	data/chars/bosses/zamza/jumpdelay00.png
+		delay	24
+	bbox 	128 109 32 71
+	@cmd targetJump
+	@cmd leapJump
+	@cmd jump 1
+	sound	data/sounds/Jumping.wav
+	frame	data/chars/bosses/zamza/jump00.png
+		delay	2
+	bbox 	127 132 37 37
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump01.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump02.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump02.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump03.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump03.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump04.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump04.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump05.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump05.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump06.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump06.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump07.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump07.png
+	attack 135 130 39 48 8 1 0 0 30 36
+	frame	data/chars/bosses/zamza/jump08.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/jump08.png
+	@cmd looper 2 2
+	bbox 	128 109 32 71
+	@cmd rageCancel 0 40 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/jump09.png
+
+anim jumpattack2 #JUMP Down
+	range 40 160
+	rangea 0 0
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 149 35 53
+	hitfx	data/sounds/Blow.wav
+	frame	data/chars/bosses/zamza/jumpdelay00.png
+		delay	28
+	@cmd leaper 1 4 0
+	bbox 	128 109 32 71
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/bosses/zamza/jumpatk00.png
+	@cmd leaper 3 -2 0
+	attack 143 152 33 46 8 1 0 0 20 36
+	bbox 	134 112 29 58
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/jumpatk01.png
+		delay	12
+	bbox 	128 149 35 53
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/jumpland00.png
+
+anim grabattack #SLAM
+	@cmd dasher 0
+	loop	0
+	delay	24
+	offset	143 200
+	@cmd rageCancel 20 90 0 0 45 "ANI_FREESPECIAL" "random"
+	@cmd grabStart
+	@cmd position 0 30 0 0 0
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/slam00.png
+		delay	8
+	@cmd position 5 -10 40 0 0
+	frame	data/chars/bosses/zamza/slam01.png
+	@cmd position 2 -50 30 0 0
+	frame	data/chars/bosses/zamza/slam02.png
+		delay	12
+	@cmd position 4 -60 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/zamza/slam03.png
+	@cmd slam 30 2 0 4 0 0
+	frame	data/chars/bosses/zamza/slam03.png
+	@cmd clearL
+	frame	data/chars/bosses/zamza/jumpland00.png
+
+anim grabbackward #SLAM
+	@cmd dasher 0
+	@cmd flip
+	loop	0
+	delay	24
+	offset	143 200
+	@cmd rageCancel 20 90 0 0 45 "ANI_FREESPECIAL" "random"
+	@cmd grabStart
+	@cmd position 0 30 0 0 0
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/slam00.png
+		delay	8
+	@cmd position 5 -10 40 0 0
+	frame	data/chars/bosses/zamza/slam01.png
+	@cmd position 2 -50 30 0 0
+	frame	data/chars/bosses/zamza/slam02.png
+		delay	12
+	@cmd position 4 -60 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/zamza/slam03.png
+	@cmd slam 30 2 0 4 0 0
+	frame	data/chars/bosses/zamza/slam03.png
+	@cmd clearL
+	frame	data/chars/bosses/zamza/jumpland00.png
+
+anim special #UPPER
+	range 20 50
+	rangea 30 120
+	energycost 20 1 6
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	16
+	offset	143 200
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/upper00.png
+		delay	8
+	@cmd leaper 1.5 3.2 0
+	attack 150 138 30 60 4 1 0 0 20 36
+	dropv 4 1 0
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	8
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 145 120 50 76 6 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper02.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper02.png
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 92 90 100 84 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper03.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper03.png
+	attack 104 64 87 100 10 1 0 0 20 36
+	sound	data/sounds/Whoosh3.wav
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/upper04.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper05.png
+	@cmd leaper 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 129 106 38 36
+	frame	data/chars/bosses/zamza/upper06.png
+		delay	2
+	bbox 133 99 28 49
+	frame	data/chars/bosses/zamza/upper07.png
+	@cmd landFrame
+		delay	8
+	bbox 133 99 28 104
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/upper08.png
+	bbox 	133 148 37 54
+	frame	data/chars/bosses/zamza/upper09.png
+
+anim special2 #UPPER
+	range 20 50
+	rangea 30 120
+	energycost 20 1 6
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	16
+	offset	143 200
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/upper00.png
+		delay	8
+	@cmd leaper 1.5 3.2 0
+	attack 150 138 30 60 4 1 0 0 20 36
+	dropv 4 1 0
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	8
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 145 120 50 76 6 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper02.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper02.png
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 92 90 100 84 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper03.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper03.png
+	attack 104 64 87 100 10 1 0 0 20 36
+	sound	data/sounds/Whoosh3.wav
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/upper04.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper05.png
+	@cmd leaper 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 129 106 38 36
+	frame	data/chars/bosses/zamza/upper06.png
+		delay	2
+	bbox 133 99 28 49
+	frame	data/chars/bosses/zamza/upper07.png
+	@cmd landFrame
+		delay	8
+	bbox 133 99 28 104
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/upper08.png
+	bbox 	133 148 37 54
+	frame	data/chars/bosses/zamza/upper09.png
+
+anim freespecial #RAGE
+	range 30 90
+	rangea 0 0
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	energycost 60 1 6
+	hitflash RainBloodHit
+	loop	0
+	delay	8
+	offset	143 200
+	hitfx	data/sounds/Cutter.wav
+	@cmd spawnBind "Rage" 0 0 -1
+	frame	data/chars/bosses/zamza/upper00.png
+		delay	1
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/a100.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/a100.png
+	attack 143 136 83 53 4 0 0 0 10 36
+	seal 1 1
+	frame	data/chars/bosses/zamza/a101.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/Whoosh.wav
+	frame	data/chars/bosses/zamza/a102b.png
+	frame	data/chars/bosses/zamza/a103.png
+	attack 152 132 79 44 5 0 0 0 10 36
+	seal 1 1
+	frame	data/chars/bosses/zamza/a104.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/Whoosh.wav
+	frame	data/chars/bosses/zamza/a105b.png
+	@cmd looper 2 7
+	frame	data/chars/bosses/zamza/a100.png
+	attack 143 136 83 53 5 0 0 0 10 36
+	seal 1 1
+	frame	data/chars/bosses/zamza/a101.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	sound	data/sounds/Shring3.wav
+	frame	data/chars/bosses/zamza/a102b.png
+	frame	data/chars/bosses/zamza/a103.png
+	attack8 152 132 79 44 8 1 0 0 10 36
+	seal 1 1
+	dropv 3 5 0
+	frame	data/chars/bosses/zamza/a104.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/a105b.png
+
+anim freespecial2 #GRAB RUN
+	range 50 180
+	rangea 0 0
+	rangez -50 50
+	followanim 5
+	followcond 4
+	attackone 1
+	fastattack 1
+	jugglecost 1
+	energycost 20 1 6
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 134 35 68
+	hitfx	data/sounds/throw2.wav
+	sound	data/voices/Zamza1.wav
+	@cmd selfNoGrab 1
+	@cmd target 3 2
+	sound	data/sounds/Run.wav
+	@cmd dashTarget
+	attack 128 134 35 68 1 0 1 1 0 24
+	frame	data/chars/bosses/zamza/walk00.png
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/zamza/walk01.png
+	@cmd target 3 2
+	@cmd dashTarget
+	frame	data/chars/bosses/zamza/walk02.png
+	@cmd target 3 2
+	@cmd dashTarget
+	@cmd selfNoGrab 0
+	@cmd dasher 0
+	frame	data/chars/bosses/zamza/walk00.png
+
+anim freespecial3 #POUNCE
+	range 40 160
+	rangea 0 120
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	energycost 25 1 6
+	otg 1
+	loop	0
+	delay	12
+	offset	143 200
+	bbox 	128 149 35 53
+	hitfx	data/sounds/Blow.wav
+	frame	data/chars/bosses/zamza/jumpdelay00.png
+		delay	28
+	@cmd targetJump
+	bbox 	128 109 32 71
+	sound	data/sounds/Jumping2.wav
+	frame	data/chars/bosses/zamza/jumpatk00.png
+	@cmd leapJump
+	attack 143 152 33 46 0 0 1 1 0 12
+	bbox 	134 112 29 58
+	frame	data/chars/bosses/zamza/jumpatk01.png
+		delay	12
+	bbox 	128 149 35 53
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/jumpland00.png
+
+anim freespecial9 #UPPER
+	range 10 50
+	rangea 5 120
+	rangez -9 9
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	energycost -10 1 6
+	otg 1
+	hitflash BloodHit
+	loop	0
+	delay	16
+	offset	143 200
+	hitfx	data/sounds/Cutter2.wav
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/upper00.png
+		delay	8
+	@cmd leaper 1.5 3.2 0
+	attack 150 138 30 60 4 1 0 0 20 36
+	dropv 4 1 0
+	sound	data/sounds/Whoosh3.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	8
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 145 120 50 76 6 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper02.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper02.png
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 92 90 100 84 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper03.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper03.png
+	attack 104 64 87 100 10 1 0 0 20 36
+	sound	data/sounds/Whoosh3.wav
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/upper04.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper05.png
+	@cmd leaper 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 129 106 38 36
+	frame	data/chars/bosses/zamza/upper06.png
+		delay	2
+	bbox 133 99 28 49
+	frame	data/chars/bosses/zamza/upper07.png
+	@cmd landFrame
+		delay	8
+	bbox 133 99 28 104
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/upper08.png
+	bbox 	133 148 37 54
+	frame	data/chars/bosses/zamza/upper09.png
+
+
+
+anim follow4 #SLAM
+	@cmd dasher 0
+	loop	0
+	delay	24
+	offset	143 200
+	@cmd grabStart2
+	@cmd position 0 30 0 0 0
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/slam00.png
+		delay	8
+	@cmd position 5 -10 40 0 0
+	frame	data/chars/bosses/zamza/slam01.png
+	@cmd position 2 -50 30 0 0
+	frame	data/chars/bosses/zamza/slam02.png
+		delay	16
+	@cmd position 4 -60 -1 0 0
+	@cmd spawn01 "QuakeHigh" 0 0 0
+	sound	data/sounds/Slam.wav
+	frame	data/chars/bosses/zamza/slam03.png
+	@cmd slam 30 2 0 4 0 0
+	frame	data/chars/bosses/zamza/slam03.png
+	@cmd clearL
+	frame	data/chars/bosses/zamza/jumpland00.png
+
+anim follow5 #ANIMATION FOR DOGRAB ONLY
+	loop	0
+	delay	16
+	offset	143 200
+	@cmd dasher 0
+	@cmd landGrab
+	frame	data/chars/bosses/zamza/walk00.png
+
+anim follow7 #COUNTER
+	fastattack 1
+	jugglecost 3
+	forcedirection -1
+	otg 1
+	energycost 40 1 6
+	hitflash BloodHit
+	loop	0
+	delay	8
+	offset	143 200
+	hitfx	data/sounds/Cutter2.wav
+	frame	data/chars/bosses/zamza/block00.png
+	@cmd spawn01 "Counter" 0 0 1
+	@cmd block 0
+	sound	data/voices/Zamza1.wav
+	frame	data/chars/bosses/zamza/upper00.png
+	@cmd leaper 1.5 3.2 0
+	attack 150 138 30 60 6 1 0 0 20 36
+	dropv 4 1 0
+	sound	data/sounds/claw.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/bosses/zamza/upper01.png
+		delay	8
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 145 120 50 76 8 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper02.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper02.png
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	attack 92 90 100 84 12 1 0 0 20 36
+	frame	data/chars/bosses/zamza/upper03.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper03.png
+	attack 104 64 87 100 12 1 0 0 20 36
+	sound	data/sounds/claw.wav
+	frame	data/chars/bosses/zamza/upper04.png
+		delay	1
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/bosses/zamza/upper04.png
+	@cmd rageCancel 0 80 0 120 0 "ANI_FREESPECIAL9" "hit"
+	frame	data/chars/bosses/zamza/upper05.png
+	@cmd leaper 0
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 129 106 38 36
+	frame	data/chars/bosses/zamza/upper06.png
+		delay	2
+	bbox 133 99 28 49
+	frame	data/chars/bosses/zamza/upper07.png
+	@cmd landFrame
+		delay	8
+	bbox 133 99 28 104
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/bosses/zamza/upper08.png
+	bbox 	133 148 37 54
+	frame	data/chars/bosses/zamza/upper09.png
+
+anim block
+	range 0 100
+	rangea 0 100
+	rangez -24 24
+	@cmd dasher 0 0 0
+	loop	0
+	delay	96
+	offset	143 200
+	bbox 	127 131 35 71
+	frame	data/chars/bosses/zamza/block00.png
+
+anim dodge
+	range 0 60
+	rangea 0 100
+	rangez -24 24
+	loop	0
+	delay	2
+	offset	143 200
+	@cmd dashRandom 2 2
+	@cmd copyMove
+	frame	data/chars/bosses/zamza/walk00.png
+		delay	8
+	@cmd pasteMove
+	frame	data/chars/bosses/zamza/walk01.png
+	@cmd pasteMove
+	frame	data/chars/bosses/zamza/walk02.png
+	@cmd pasteMove
+	frame	data/chars/bosses/zamza/walk03.png
+	@cmd pasteMove
+	frame	data/chars/bosses/zamza/walk04.png
+		delay	16
+	@cmd dasher 0 0 0
+	frame	data/chars/bosses/zamza/walk05.png

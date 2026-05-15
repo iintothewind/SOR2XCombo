@@ -1,0 +1,36 @@
+name			St1_Rain
+type			none
+shadow			0
+alpha			1
+setlayer		1000
+animationscript data/scripts/animation/default.c
+
+load			St1_Rain_B
+
+anim idle
+	loop	1 1 21
+	delay	2
+	offset	1 200
+	#@cmd samplePlay SAMPLE_RAIN 1
+	frame	data/bgs/sor2/st1c/rain00.png
+	@cmd graphics "original" "St1_Rain_B"
+	frame	data/bgs/sor2/st1c/rain00.png
+	frame	data/bgs/sor2/st1c/rain01.png
+	frame	data/bgs/sor2/st1c/rain02.png
+	frame	data/bgs/sor2/st1c/rain03.png
+	frame	data/bgs/sor2/st1c/rain04.png
+	frame	data/bgs/sor2/st1c/rain05.png
+	frame	data/bgs/sor2/st1c/rain06.png
+	frame	data/bgs/sor2/st1c/rain07.png
+	frame	data/bgs/sor2/st1c/rain08.png
+	frame	data/bgs/sor2/st1c/rain09.png
+	frame	data/bgs/sor2/st1c/rain10.png
+	frame	data/bgs/sor2/st1c/rain11.png
+	frame	data/bgs/sor2/st1c/rain12.png
+	frame	data/bgs/sor2/st1c/rain13.png
+	frame	data/bgs/sor2/st1c/rain14.png
+	frame	data/bgs/sor2/st1c/rain15.png
+	frame	data/bgs/sor2/st1c/rain16.png
+	frame	data/bgs/sor2/st1c/rain17.png
+	frame	data/bgs/sor2/st1c/rain18.png
+	frame	data/bgs/sor2/st1c/rain19.png

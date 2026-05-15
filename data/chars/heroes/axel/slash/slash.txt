@@ -1,0 +1,35 @@
+name				Axel_Slash
+type				none
+health				1
+nolife				1
+lifespan			2
+offscreenkill		50
+remove				0
+shadow				0
+antigravity			100
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+animationscript		data/scripts/animation/default.c
+script				data/scripts/updateentity/axel_slash.c
+
+anim idle
+	fastattack 1
+	jugglecost 0
+	forcedirection -1
+	otg 1
+	hitflash Impact
+	loop	1 2 4
+	delay	2
+	offset	104 87
+	hitfx	data/sounds/Cutter.wav
+	frame	data/chars/heroes/axel/slash/slash00.png
+	attack 85 61 19 53 50 20 1 0 10 12
+	seal 1 1
+	dropv 4 2 0
+	frame	data/chars/heroes/axel/slash/slash00.png
+	attack 85 72 29 44 50 20 1 0 10 12
+	seal 1 1
+	dropv 4 2 0
+	frame	data/chars/heroes/axel/slash/slash01.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/heroes/axel/slash/slash01.png

@@ -1,0 +1,214 @@
+loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st3b/_empty.png	1 1 0 0 0 0 1 1 0
+panel			data/bgs/sor2/st3b/_map.png		none	none
+fglayer			data/bgs/sor2/st3b/fg00.png		-200 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st3b/fg01.png		-200 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/sor2/st3b/fg02.png		100 0 0 -30 90 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+cameraoffset 	0 -200
+stagenumber 	3
+spawn1			30 40 300
+spawn2			60 60 300
+spawn3			90 40 300
+spawn4			120 60 300
+updatescript 	data/scripts/updatelevel/sor2_st3b.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		-200 450 -1000 -1000 0 570 285 5000
+
+wall		16 386 0 570 1500 1500 285 5000
+
+#########################################################################################
+
+load		RouteS 3
+load		Route_Up 3
+load		Route_Right 3
+load		BlockadeZ 3
+load		FakeWall 3
+
+#########################################################################################
+
+spawn		BlockadeZ 1
+flip		1
+coords		0 470 0
+at			0
+
+spawn		FakeWall 1
+flip		1
+coords		588 384 0
+at			0
+
+#########################################################################################
+
+spawn		Arcade 1
+flip		1
+coords		200 195 0
+at			0
+
+spawn		Arcade 1
+flip		1
+coords		300 245 0
+at			0
+
+spawn		Arcade 1
+flip		1
+coords		350 270 0
+at			0
+
+spawn		Arcade 1
+flip		1
+coords		400 295 0
+at			0
+
+spawn		Arcade 1
+flip		1
+coords		510 350 0
+at			0
+
+spawn		Arcade 1
+flip		1
+coords		550 370 0
+at			0
+
+
+spawn		BigBenX 1
+map			1
+flip		1
+coords		150 200 300
+at			0
+
+spawn		Galsia_Wait 1
+map			2
+flip		1
+coords		170 200 0
+at			0
+
+spawn		Galsia_Wait 1
+map			2
+flip		1
+coords		270 250 0
+at			0
+
+spawn		Galsia_Wait 1
+map			2
+flip		1
+coords		480 355 0
+at			0
+
+spawn		Galsia_Wait 1
+map			2
+flip		1
+coords		520 375 0
+at			0
+
+spawn		Signal_Wait 1
+map			2
+flip		0
+coords		700 390 0
+at			0
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			1
+
+group		4 4
+at			1
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		600 400 0
+at			1
+
+spawn		BasicX1 1
+map			1
+flip		1
+coords		-50 240 0
+at			1
+
+spawn		JackB 1
+map			1
+flip		1
+coords		600 400 0
+at			1
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-50 240 0
+at			1
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		-100 260 0
+at			1
+
+spawn		RavenX 1
+map			1
+flip		1
+coords		-100 260 0
+at			1
+
+spawn		BasicX3 1
+map			1
+flip		1
+coords		600 400 0
+at			1
+
+spawn		BasicX1 1
+map			2
+flip		1
+coords		-50 240 0
+at			1
+
+spawn		BruceB 1
+map			1
+flip		1
+coords		600 400 0
+at			1
+
+spawn		BossX1 1
+map			1
+flip		1
+coords		-50 240 0
+at			1
+
+spawn		BossX1 1
+map			1
+2pspawn
+flip		1
+coords		-50 240 0
+at			1
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+group		2 2
+at			300
+
+spawn		RouteS 1
+flip		1
+coords		999 999 0
+at			300
+
+spawn		Route_Up 1
+flip		1
+coords		410 384 50
+at			300
+
+spawn		Route_Right 1
+flip		1
+coords		460 400 0
+at			300

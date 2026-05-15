@@ -1,0 +1,488 @@
+loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
+background		data/bgs/sor2/st6b/bk00.png		1 0 0 0 0 0 1 1 0
+panel			data/bgs/sor2/st6b/_map.png		none	none
+fglayer			data/bgs/sor2/st6b/fg00.png		0 -0.5 0 0 0 0 0 -1 1 1 0 0 0 0 0 0 1
+fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
+order			a
+settime		480
+cameraoffset 	0 -200
+stagenumber 	6
+spawn1			60 40 300
+spawn2			90 60 300
+spawn3			120 40 300
+spawn4			150 60 300
+updatescript 	data/scripts/updatelevel/sor2_st6b.c
+
+#########################################################################################
+
+light		128 -128
+at			0
+
+shadowalpha 2
+at			0
+
+#########################################################################################
+
+wall		229 408 0 600 5000 5000 300 5000
+
+#########################################################################################
+
+load		RouteS 3
+load		Route_Up 3
+load		Route_Right 3
+load		BlockadeZ 3
+load		FakeWall 3
+
+#########################################################################################
+
+spawn		BlockadeZ 1
+flip		1
+coords		0 470 0
+at			0
+
+spawn		FakeWall 1
+flip		1
+coords		831 406 0
+at			0
+
+#########################################################################################
+
+spawn		SandBag 1
+flip		0
+coords		200 160 0
+at			0
+
+spawn		SandBag 1
+flip		0
+coords		220 200 0
+at			0
+
+spawn		SandBag 1
+flip		0
+coords		160 220 0
+at			0
+
+spawn		SandBag 1
+flip		0
+coords		180 260 0
+at			0
+
+spawn		SandBag 1
+flip		0
+coords		500 330 0
+at			0
+
+spawn		Tire 1
+flip		1
+coords		900 420 0
+at			0
+
+spawn		Tire 1
+flip		1
+coords		825 440 0
+at			0
+
+spawn		Tire 1
+flip		1
+coords		925 460 0
+at			0
+
+spawn		HakuyoB 1
+map			2
+flip		0
+coords		260 180 300
+at			25
+
+spawn		SignalB 1
+map			2
+flip		1
+coords		-50 270 0
+at			130
+
+spawn		SignalX 1
+map			3
+flip		1
+coords		-100 270 0
+at			130
+
+spawn		HakuyoB 1
+map			3
+flip		0
+coords		300 300 300
+at			250
+
+spawn		SignalB 1
+map			2
+flip		1
+coords		-50 270 0
+at			300
+
+spawn		SignalX 1
+map			3
+flip		1
+coords		-100 270 0
+at			300
+
+spawn		HakuyoX 1
+map			2
+flip		0
+coords		280 380 300
+at			450
+
+spawn		HakuyoX 1
+map			3
+flip		0
+coords		300 440 300
+at			650
+
+wait
+at			700
+
+group		5 5
+at			650
+
+spawn		SignalB 1
+map			2
+flip		1
+coords		-50 400 0
+at			650
+
+spawn		BasicX3 1
+map			3
+flip		1
+coords		-100 440 0
+at			650
+
+spawn		BongoX 1
+map			3
+flip		1
+coords		-100 440 0
+at			650
+
+spawn		BongoX 1
+map			3
+flip		1
+coords		-100 440 0
+at			650
+
+spawn		SignalB 1
+map			2
+flip		1
+coords		-150 400 0
+at			650
+
+spawn		BasicX3 1
+map			3
+flip		1
+coords		-200 440 0
+at			650
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		-200 440 0
+at			650
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-200 440 0
+at			650
+
+#########################################################################################
+
+group		1000 1000
+at			650
+
+spawn		FogX 1
+map			1
+flip		1
+coords		550 420 0
+at			750
+
+spawn		FogX 1
+map			2
+flip		1
+coords		600 440 0
+at			750
+
+spawn		FogB 1
+map			3
+flip		1
+coords		-50 460 0
+at			750
+
+spawn		BigBenX 1
+map			2
+flip		0
+coords		550 420 0
+at			850
+
+spawn		BigBenX 1
+map			3
+flip		0
+coords		600 460 0
+at			850
+
+wait
+at			1100
+
+group		4 4
+at			850
+
+spawn		FogB 1
+map			1
+flip		1
+coords		-50 420 0
+at			850
+
+spawn		FogX 1
+map			2
+flip		1
+coords		-100 440 0
+at			850
+
+spawn		FogB 1
+map			3
+flip		1
+coords		-150 460 0
+at			850
+
+spawn		FogX 1
+map			1
+flip		1
+coords		-200 420 0
+at			850
+
+spawn		FogB 1
+map			2
+flip		1
+coords		-250 440 0
+at			850
+
+#########################################################################################
+
+group		1000 1000
+at			1200
+
+spawn		Moto_Single 1
+flip		0
+coords		520 420 0
+at			1200
+
+spawn		Moto_Single 1
+flip		0
+coords		520 460 0
+at			1250
+
+spawn		Moto_Jump 1
+flip		0
+coords		520 420 0
+at			1300
+
+spawn		Moto_Single 1
+flip		0
+coords		520 460 0
+at			1350
+
+spawn		Moto_Jump 1
+flip		0
+coords		520 420 0
+at			1400
+
+spawn		Moto_Jump 1
+flip		0
+coords		520 460 0
+at			1450
+
+spawn		Moto_Single 1
+flip		0
+coords		520 420 0
+at			1500
+
+spawn		Moto_Jump 1
+flip		0
+coords		520 460 0
+at			1550
+
+spawn		SandBag 1
+flip		0
+coords		520 440 0
+at			1600
+
+spawn		SandBag 1
+flip		0
+coords		560 440 0
+at			1600
+
+spawn		SandBag 1
+flip		0
+coords		600 440 0
+at			1600
+
+spawn		BruceB 1
+map			3
+flip		1
+coords		600 430 0
+at			1750
+
+spawn		ReineX 1
+map			3
+flip		1
+coords		600 430 0
+at			1750
+
+spawn		ReineX 1
+map			3
+flip		1
+coords		700 430 0
+at			1750
+
+
+
+wait
+at			1850
+
+group		6 6
+at			1800
+
+spawn		FogX 1
+map			1
+flip		1
+coords		-50 420 0
+at			1800
+
+spawn		FogX 1
+map			2
+flip		1
+coords		-100 440 0
+at			1800
+
+spawn		BongoX 1
+map			2
+flip		1
+coords		-100 440 0
+at			1800
+
+spawn		FogX 1
+map			3
+flip		1
+coords		-50 460 0
+at			1800
+
+spawn		FogX 1
+map			1
+flip		1
+coords		-100 420 0
+at			1800
+
+spawn		FogX 1
+map			2
+flip		1
+coords		-50 440 0
+at			1800
+
+spawn		FogX 1
+map			3
+flip		1
+coords		-100 460 0
+at			1800
+
+spawn		FogX 1
+map			1
+flip		1
+coords		-50 420 0
+at			1800
+
+spawn		BruceB 1
+map			2
+flip		1
+coords		-100 440 0
+at			1800
+
+spawn		FogX 1
+map			2
+flip		1
+coords		-100 440 0
+at			1800
+
+
+spawn		FogX 1
+map			3
+flip		1
+coords		-50 460 0
+at			1800
+
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			1780
+
+spawn		BossX1 1
+map			4
+flip		1
+coords		-100 440 0
+at			1800
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		1
+coords		-100 440 0
+at			1800
+
+#########################################################################################
+
+group		1000 1000
+at			1851
+
+spawnscript data/scripts/levelspawn/music_boss_ninja2.c
+at			1851
+
+spawn		SandBag 1
+flip		0
+coords		550 410 0
+at			1900
+
+spawn		SandBag 1
+flip		0
+coords		600 440 0
+at			1900
+
+spawn		Tire 1
+flip		1
+coords		650 410 0
+at			1900
+
+spawn		Tire 1
+flip		1
+coords		700 460 0
+at			1900
+
+spawn		Harakiri_Wait 1
+map			4
+flip		1
+coords		772 397 0
+at			1950
+
+#########################################################################################
+###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
+###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
+
+group		2 2
+at			2400
+
+spawn		RouteS 1
+flip		1
+coords		999 999 0
+at			2400
+
+spawn		Route_Up 1
+flip		1
+coords		316 406 40
+at			2400
+
+spawn		Route_Right 1
+flip		1
+coords		461 420 0
+at			2400

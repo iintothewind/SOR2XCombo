@@ -1,0 +1,258 @@
+##MAIN
+name				BisonS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+palette       data/chars/bosses/bison/idle00.png
+alternatepal  data/chars/bosses/bison/alter1.png
+alternatepal  data/chars/bosses/bison/alter2.png
+alternatepal  data/chars/bosses/bison/alter3.png
+alternatepal  data/chars/bosses/bison/alter4.png
+alternatepal  data/chars/bosses/bison/idle00.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim special2 #OFFENSIVE SPECIAL
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a112.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a112.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a210.png
+	frame	data/chars/bosses/bison/a211.png
+	frame	data/chars/bosses/bison/a212.png
+	frame	data/chars/bosses/bison/a211.png
+	frame	data/chars/bosses/bison/a210.png
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/s200.png
+	frame	data/chars/bosses/bison/s201.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s300.png
+	frame	data/chars/bosses/bison/s301.png
+	frame	data/chars/bosses/bison/s302.png
+	frame	data/chars/bosses/bison/s301.png
+	frame	data/chars/bosses/bison/s303.png
+	frame	data/chars/bosses/bison/s304.png
+	frame	data/chars/bosses/bison/s305.png
+	frame	data/chars/bosses/bison/s304.png
+	frame	data/chars/bosses/bison/s303.png
+
+anim freespecial20 #OFFENSIVE SPECIAL
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a112.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a112.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a112.png
+	frame	data/chars/bosses/bison/a111.png
+	frame	data/chars/bosses/bison/a110.png
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/runatk00.png
+	frame	data/chars/bosses/bison/runatk01.png
+	frame	data/chars/bosses/bison/runatk02.png
+	frame	data/chars/bosses/bison/runatk02.png
+
+anim freespecial #RAGE
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/a400.png
+	frame	data/chars/bosses/bison/s200.png
+	frame	data/chars/bosses/bison/s200.png
+	frame	data/chars/bosses/bison/jumpland00.png
+
+
+anim freespecial2 #SUPER
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/run01.png
+	frame	data/chars/bosses/bison/run02.png
+	frame	data/chars/bosses/bison/run03.png
+	frame	data/chars/bosses/bison/run04.png
+	frame	data/chars/bosses/bison/run05.png
+
+
+anim freespecial3 #STRAIGHT
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/runatk00.png
+	frame	data/chars/bosses/bison/runatk01.png
+	frame	data/chars/bosses/bison/runatk02.png
+	frame	data/chars/bosses/bison/runatk02.png
+	frame	data/chars/bosses/bison/idle00.png
+
+anim freespecial4
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/run01.png
+	frame	data/chars/bosses/bison/run02.png
+	frame	data/chars/bosses/bison/run03.png
+	frame	data/chars/bosses/bison/run04.png
+	frame	data/chars/bosses/bison/run05.png
+	frame	data/chars/bosses/bison/run00.png
+
+anim runattack #STRAIGHT
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/runatk00.png
+	frame	data/chars/bosses/bison/runatk01.png
+	frame	data/chars/bosses/bison/runatk02.png
+	frame	data/chars/bosses/bison/runatk02.png
+
+anim riseattack
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/runatk00.png
+	frame	data/chars/bosses/bison/runatk01.png
+	frame	data/chars/bosses/bison/runatk02.png
+	frame	data/chars/bosses/bison/runatk02.png
+
+anim follow1 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a200.png
+	frame	data/chars/bosses/bison/a201.png
+	frame	data/chars/bosses/bison/s500.png
+	frame	data/chars/bosses/bison/s501.png
+	frame	data/chars/bosses/bison/s502.png
+	frame	data/chars/bosses/bison/s503.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/s200.png
+	frame	data/chars/bosses/bison/s201.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/s300.png
+	frame	data/chars/bosses/bison/s301.png
+	frame	data/chars/bosses/bison/s302.png
+	frame	data/chars/bosses/bison/s301.png
+	frame	data/chars/bosses/bison/s303.png
+	frame	data/chars/bosses/bison/s304.png
+	frame	data/chars/bosses/bison/s305.png
+	frame	data/chars/bosses/bison/s200.png
+	frame	data/chars/bosses/bison/s201.png
+	frame	data/chars/bosses/bison/s600.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s601.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s602.png
+	frame	data/chars/bosses/bison/s202.png
+
+
+anim follow2 #SPECIAL COMBO
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/s500.png
+	frame	data/chars/bosses/bison/s501.png
+	frame	data/chars/bosses/bison/s502.png
+	frame	data/chars/bosses/bison/s503.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/a101.png
+	frame	data/chars/bosses/bison/a100.png
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/s200.png
+	frame	data/chars/bosses/bison/s201.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/s202.png
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/s300.png
+	frame	data/chars/bosses/bison/s301.png
+	frame	data/chars/bosses/bison/s302.png
+	frame	data/chars/bosses/bison/s301.png
+	frame	data/chars/bosses/bison/s303.png
+	frame	data/chars/bosses/bison/s304.png
+	frame	data/chars/bosses/bison/s305.png
+	frame	data/chars/bosses/bison/s304.png
+	frame	data/chars/bosses/bison/s303.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/runatk00.png
+	frame	data/chars/bosses/bison/runatk01.png
+	frame	data/chars/bosses/bison/runatk02.png
+	frame	data/chars/bosses/bison/runatk02.png
+
+anim follow10 #DODGE
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/run01.png
+	frame	data/chars/bosses/bison/run02.png
+	frame	data/chars/bosses/bison/run03.png
+	frame	data/chars/bosses/bison/run04.png
+	frame	data/chars/bosses/bison/run05.png
+	frame	data/chars/bosses/bison/walk00.png
+
+anim dodge
+	loop	0
+	delay	1000
+	offset	238 172
+	frame	data/chars/bosses/bison/run00.png
+	frame	data/chars/bosses/bison/run01.png
+	frame	data/chars/bosses/bison/run02.png
+	frame	data/chars/bosses/bison/run03.png
+	frame	data/chars/bosses/bison/run04.png
+	frame	data/chars/bosses/bison/run05.png
+	frame	data/chars/bosses/bison/walk00.png

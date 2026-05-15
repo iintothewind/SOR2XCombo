@@ -1,0 +1,21 @@
+name	chinaTownBg2
+type	none
+subject_to_gravity	0
+setlayer	1
+animationscript data/scripts/animation/default.c
+
+anim	idle
+	loop	1
+	delay	200
+	offset	0 0
+	frame	data/bgs/dojo/chinatown/idle200.png
+	delay	15
+	frame	data/bgs/dojo/chinatown/idle201.png
+	delay	320
+	frame	data/bgs/dojo/chinatown/idle202.png
+	delay	15
+	frame	data/bgs/dojo/chinatown/idle201.png
+	delay	320
+	@cmd offScreenKill 1000 0
+	frame	data/bgs/dojo/chinatown/idle200.png
+

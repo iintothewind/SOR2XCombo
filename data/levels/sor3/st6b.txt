@@ -1,0 +1,81 @@
+loadingbg	 data/bgs/loading4.png 			1 -81 248 480 999 999 0
+background		data/bgs/_empty.png
+panel			data/bgs/sor3/st6b/_map.png		none	none
+order			a
+settime			300
+stagenumber		6
+spawn1			200 20 300
+spawn2			230 40 300
+spawn3			260 20 300
+spawn4			290 40 300
+updatescript	data/scripts/updatelevel/sor3_st6a.c
+
+#########################################################################################
+
+wall 		293 278 31 152 300 300 121 5000
+
+#########################################################################################
+
+#load		St6_Computer 3
+#load		Box_B 3
+
+#########################################################################################
+
+spawn		St6_Computer 1
+flip		1
+coords		520 213 0
+at			0
+
+spawn		Chicken 1
+flip		1
+coords		60 220 0
+at			0
+
+spawn		Box_B 1
+flip		1
+coords		120 220 0
+at			0
+
+spawnscript data/scripts/levelspawn/music_random.c
+at			0
+
+group		5 5
+at			0
+
+spawn		ElectraX 1
+map			4
+flip		0
+coords		-100 230 0
+at			0
+
+spawn		BongoB 1
+map			4
+flip		0
+coords		-150 260 0
+at			0
+
+spawn		BossX1 1
+map			4
+#@script		void main(){setglobalvar("st6_room1", 1);}@end_script
+flip		0
+coords		65 220 300
+at			0
+
+spawn		BossX1 1
+map			4
+2pspawn
+flip		0
+coords		70 220 300
+at			0
+
+spawn		TigerX 1
+map			4
+flip		0
+coords		-200 230 0
+at			0
+
+spawn		TigerX 1
+map			4
+flip		0
+coords		-250 260 0
+at			0

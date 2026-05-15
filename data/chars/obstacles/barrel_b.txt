@@ -1,0 +1,36 @@
+name				Barrel_B
+type				obstacle
+health				1
+nolife				1
+score				2000
+gfxshadow			1 1
+noatflash			1
+flash				Flash
+ondeathscript		data/scripts/ondeath/item.c
+animationscript		data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/obstacles.c
+
+diesound			data/sounds/Iron.wav
+
+anim idle
+	loop	1
+	delay	64
+	offset	100 167
+	bbox 	84 99 31 70
+	platform 74 74 126 126 4 48
+	@cmd offScreenKill 50 0
+	frame	data/chars/obstacles/barrel07.png
+
+anim fall
+	landframe 4
+	loop	1 0 4
+	delay	8
+	offset	100 167
+	frame	data/chars/obstacles/barrel08.png
+	frame	data/chars/obstacles/barrel08.png
+	frame	data/chars/obstacles/barrel08.png
+	frame	data/chars/obstacles/barrel08.png
+	@cmd spawnBind "Bang" 0 15 1
+	frame	data/chars/obstacles/barrel08.png
+	@cmd suicide
+	frame	data/chars/obstacles/barrel08.png

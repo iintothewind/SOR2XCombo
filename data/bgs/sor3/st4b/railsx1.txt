@@ -1,0 +1,41 @@
+name			St4_RailsX1
+type			panel
+shadow			0
+speed			5
+scroll			-0.5
+setlayer		-10
+ondrawscript	data/scripts/ondraw/rails.c
+animationscript data/scripts/animation/default.c
+
+load			Train
+
+anim idle #DEFINE ZPOS AND WARNING ANIMATION
+	loop	0
+	delay	480
+	offset	1 170
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	
+anim follow1 #RAIL WARNING
+	loop	0
+	delay	6
+	offset	1 170
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails01.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails01.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails01.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails01.png
+	
+anim follow2 #DEFINE XPOS AND SPAWN TRAIN
+	loop	0
+	delay	120
+	offset	1 170
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails00.png
+	frame	data/bgs/sor3/st4b/rails00.png

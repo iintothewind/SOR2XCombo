@@ -1,0 +1,17 @@
+name			Level_Menu
+type			text
+subtype			noskip
+setlayer		1000000001
+shadow			0
+ondrawscript	data/scripts/ondraw/menu_level.c
+animationscript	data/scripts/animation/default.c
+
+load			Fade
+
+anim idle
+	loop	1 1 2
+	delay	320
+	offset	1 -3
+	@cmd spawn01 "Fade" 240 136 1
+	frame	data/sprites/back3.png
+	frame	data/sprites/back3.png

@@ -1,0 +1,43 @@
+name			Tracker_Target
+type			none
+subtype			chase
+health			1
+nolife			1
+nomove			1 0
+facing			1
+shadow			0
+setlayer		1000
+stealth			2 1
+antigravity		100
+animationscript	data/scripts/animation/default.c
+script			data/scripts/updateentity/tracker_target.c
+
+anim idle
+	loop	1
+	delay	32
+	offset	50 50
+	sound	data/sounds/TargetLock.wav
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png
+	frame	data/chars/bosses/tracker/target/target00.png
+
+anim follow1
+	loop	1
+	delay	4
+	offset	50 50
+	frame	data/chars/bosses/tracker/target/target00.png
+	frame	data/chars/bosses/tracker/target/target01.png

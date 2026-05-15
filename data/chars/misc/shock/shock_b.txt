@@ -1,0 +1,24 @@
+name			Shock_B
+type			none
+no_adjust_base	0
+subject_to_hole	1
+shadow			0
+antigravity 	100
+toflip			1
+animationscript	data/scripts/animation/default.c
+
+anim idle
+	loop	0
+	delay	2
+	offset	15 15
+	sound	data/sounds/Shock.wav
+	frame	data/chars/misc/shock/original/shock02.png
+	frame	data/chars/misc/shock/original/empty.png
+	frame	data/chars/misc/shock/original/shock02.png
+	frame	data/chars/misc/shock/original/empty.png
+	frame	data/chars/misc/shock/original/shock02.png
+	frame	data/chars/misc/shock/original/empty.png
+	frame	data/chars/misc/shock/original/shock02.png
+	frame	data/chars/misc/shock/original/empty.png
+	@cmd suicide
+	frame	data/chars/misc/shock/original/empty.png

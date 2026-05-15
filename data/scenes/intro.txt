@@ -1,0 +1,1 @@
+animation	data/scenes/intro.gif 999 999

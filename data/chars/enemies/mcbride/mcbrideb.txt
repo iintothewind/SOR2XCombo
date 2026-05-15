@@ -1,0 +1,459 @@
+##MAIN
+name				McBrideB
+type				enemy
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##JUMP
+jumpheight 			1 #SCRIPT
+
+##ENERGY
+mp					120
+mprate  			1 #SCRIPT
+
+##GRAB
+grabdistance 		33 #36/33/30
+grabfinish 			1 #PLAYER=0/ENEMY=1
+
+##WEIGHT/HEIGHT
+antigravity			-1 #-1/-2/-3
+height				79
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+risetime			170
+riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv				2 0
+atchain				1
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+aimove				chase #ENEMY ONLY
+death				2
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/default.c
+ondoattackscript	data/scripts/ondoattack/default.c
+onblockpscript		data/scripts/onblockp/default.c
+onblockwscript		data/scripts/onblockw/default.c
+onblocksscript		data/scripts/onblocks/default.c
+onmoveascript		data/scripts/onmove/default.c
+onfallscript		data/scripts/onfall/default.c
+onspawnscript		data/scripts/onspawn/mcbride.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+script				data/scripts/updateentity/default.c
+
+##ICONS
+icon				data/chars/enemies/mcbride/icon.png 1
+
+##DIESOUND
+diesound			data/voices/Die4.wav
+ondeathscript		data/scripts/ondeath/default.c
+
+##REMAPS
+remap				data/chars/enemies/mcbride/idle00.png data/chars/enemies/mcbride/alter1.png
+remap				data/chars/enemies/mcbride/idle00.png data/chars/enemies/mcbride/alter2.png
+remap				data/chars/enemies/mcbride/idle00.png data/chars/enemies/mcbride/alter3.png
+remap				data/chars/enemies/mcbride/idle00.png data/chars/enemies/mcbride/alter1.png
+
+##LOADS
+load				Common_Shot
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	145 181
+	frame	data/chars/enemies/mcbride/idle00.png
+
+anim idle
+	loop	1
+	delay	16
+	offset	145 181
+	bbox 	133 105 23 78
+	frame	data/chars/enemies/mcbride/idle00.png
+	frame	data/chars/enemies/mcbride/idle00.png
+	frame	data/chars/enemies/mcbride/idle00.png
+	frame	data/chars/enemies/mcbride/idle00.png
+
+anim walk
+	loop	1
+	delay	18
+	offset	145 181
+	bbox 	133 105 23 78
+	frame	data/chars/enemies/mcbride/walk00.png
+	frame	data/chars/enemies/mcbride/walk01.png
+	frame	data/chars/enemies/mcbride/walk02.png
+	frame	data/chars/enemies/mcbride/walk03.png
+
+anim get
+	loop	0
+	delay	16
+	offset	145 181
+	frame	data/chars/enemies/mcbride/get00.png
+
+anim grab
+	loop	0
+	delay	16
+	offset	145 181
+	bbox 	140 105 17 78
+	frame	data/chars/enemies/mcbride/grab00.png
+
+anim grabbed
+	loop	0
+	delay	8
+	offset	145 181
+	bbox 	130 119 30 64
+	frame	data/chars/enemies/mcbride/grabbed00.png
+
+anim jumpdelay
+	loop	0
+	delay	12
+	offset	145 181
+	bbox 	124 120 28 63
+	frame	data/chars/enemies/mcbride/jumpdelay00.png
+
+anim walkoff
+	loop	0
+	delay	30
+	offset	145 181
+	bbox 	124 119 27 50
+	@cmd jump 1
+	frame	data/chars/enemies/mcbride/jump00.png
+
+anim jumpland
+	loop	0
+	delay	12
+	offset	145 181
+	bbox 	124 120 28 63
+	sound	data/sounds/Jumpland.wav
+	frame	data/chars/enemies/mcbride/jumpland00.png
+
+anim pain #UP
+	loop	0
+	delay	4
+	offset	145 181
+	bbox 	131 111 25 72
+	frame	data/chars/enemies/mcbride/pain00.png
+	frame	data/chars/enemies/mcbride/pain01.png
+	frame	data/chars/enemies/mcbride/pain00.png
+	frame	data/chars/enemies/mcbride/pain01.png
+	frame	data/chars/enemies/mcbride/pain00.png
+	frame	data/chars/enemies/mcbride/pain01.png
+	frame	data/chars/enemies/mcbride/pain00.png
+	frame	data/chars/enemies/mcbride/pain01.png
+	frame	data/chars/enemies/mcbride/pain00.png
+	frame	data/chars/enemies/mcbride/pain01.png
+	frame	data/chars/enemies/mcbride/pain00.png
+	frame	data/chars/enemies/mcbride/pain01.png
+
+anim pain2 #DOWN
+	loop	0
+	delay	4
+	offset	145 181
+	bbox 	130 119 30 64
+	frame	data/chars/enemies/mcbride/pain200.png
+	frame	data/chars/enemies/mcbride/pain201.png
+	frame	data/chars/enemies/mcbride/pain200.png
+	frame	data/chars/enemies/mcbride/pain201.png
+	frame	data/chars/enemies/mcbride/pain200.png
+	frame	data/chars/enemies/mcbride/pain201.png
+	frame	data/chars/enemies/mcbride/pain200.png
+	frame	data/chars/enemies/mcbride/pain201.png
+	frame	data/chars/enemies/mcbride/pain200.png
+	frame	data/chars/enemies/mcbride/pain201.png
+	frame	data/chars/enemies/mcbride/pain200.png
+	frame	data/chars/enemies/mcbride/pain201.png
+
+anim fall #NORMAL
+	landframe 1
+	loop	0
+	delay	999
+	offset	145 181
+	bbox 	112 113 39 46
+	frame	data/chars/enemies/mcbride/fall00.png
+		delay	8
+	bbox 	112 156 69 26
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim burn #BURNED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	145 181
+	bbox 	112 113 39 46
+	frame	data/chars/enemies/mcbride/fall00.png
+		delay	8
+	bbox 	112 156 69 26
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim shock #SHOCKED FALL
+	landframe 1
+	loop	0
+	delay	999
+	offset	145 181
+	bbox 	112 113 39 46
+	frame	data/chars/enemies/mcbride/fall00.png
+		delay	8
+	bbox 	112 156 69 26
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim fall6 #SPIN FALL
+	landframe 4
+	loop	1 0 4
+	delay	3
+	offset	145 181
+	frame	data/chars/enemies/mcbride/fall600.png
+	frame	data/chars/enemies/mcbride/fall601.png
+	frame	data/chars/enemies/mcbride/fall602.png
+	frame	data/chars/enemies/mcbride/fall603.png
+		delay	8
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim fall7 #GRABSTART POSITION
+	loop	0
+	delay	1000
+	offset	145 181
+	frame	data/chars/enemies/mcbride/fall700.png
+	frame	data/chars/enemies/mcbride/fall701.png
+	frame	data/chars/enemies/mcbride/fall702.png
+	frame	data/chars/enemies/mcbride/fall703.png
+	frame	data/chars/enemies/mcbride/fall704.png
+	frame	data/chars/enemies/mcbride/fall705.png
+
+anim fall8 #FINISH/THROW TYPE 3
+	landframe 2
+	loop	0
+	delay	30
+	offset	145 181
+	bbox 	112 113 39 46
+	hitfx	data/sounds/MediumKick.wav
+	attack 112 113 39 46 4 1 0 0 20 12
+	frame	data/chars/enemies/mcbride/fall00.png
+		delay	999
+	frame	data/chars/enemies/mcbride/fall00.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	112 156 69 26
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim fall9 #FINISH/THROW TYPE 2
+	landframe 2
+	loop	0
+	delay	30
+	offset	145 181
+	bbox 	131 132 30 47
+	hitfx	data/sounds/MediumKick.wav
+	attack 131 132 30 47 4 1 0 0 0 12
+	frame	data/chars/enemies/mcbride/fall900.png
+		delay	999
+	frame	data/chars/enemies/mcbride/fall900.png
+		delay	8
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	112 156 69 26
+	sound	data/sounds/Falling.wav
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim death
+	loop	0
+	delay	16
+	offset	145 181
+	frame	data/chars/enemies/mcbride/fall01.png
+	frame	data/chars/enemies/mcbride/fall01.png
+	frame	data/chars/enemies/mcbride/fall01.png
+
+anim rise
+	loop	0
+	delay	16
+	offset	145 181
+	frame	data/chars/enemies/mcbride/rise00.png
+	frame	data/chars/enemies/mcbride/rise01.png
+	frame	data/chars/enemies/mcbride/rise00.png
+	frame	data/chars/enemies/mcbride/rise02.png
+
+anim attack1
+	range 20 60
+	rangea 0 100
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	8
+	offset	145 181
+	bbox 	133 105 23 78
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/mcbride/a100.png
+	bbox 	140 105 23 78
+	frame	data/chars/enemies/mcbride/a101.png
+	bbox 	149 112 25 71
+	frame	data/chars/enemies/mcbride/a102.png
+	attack 156 122 47 15 8 0 0 0 20 12
+	frame	data/chars/enemies/mcbride/a103.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/mcbride/a104.png
+	bbox 	140 105 23 78
+	frame	data/chars/enemies/mcbride/a105.png
+	bbox 	133 105 23 78
+	frame	data/chars/enemies/mcbride/a106.png
+
+anim attack2 #DOWN PUNCH
+	range 20 60
+	rangea 0 100
+	followanim 2
+	followcond 4
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	145 181
+	bbox 	124 120 28 63
+	hitfx	data/sounds/StrongPunch.wav
+	frame	data/chars/enemies/mcbride/a200.png
+	bbox 	128 128 27 55
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/mcbride/a201.png
+	attack2 138 138 47 15 8 0 0 0 20 12
+	frame	data/chars/enemies/mcbride/a202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	bbox 	128 128 27 55
+	frame	data/chars/enemies/mcbride/a203.png
+	bbox 	124 120 28 63
+	frame	data/chars/enemies/mcbride/a204.png
+
+anim attack3 #FRONT SHOT
+	range 120 240
+	rangea 0 0
+	loop	0
+	delay	12
+	offset	145 181
+	bbox 	133 105 23 78
+	frame	data/chars/enemies/mcbride/shot00.png
+	@cmd shoot "Common_Shot" 39 60 0 5 0 0
+	@cmd spawnToss "Cartridge" 22 60 1 -0.2 1 0
+	frame	data/chars/enemies/mcbride/shot01.png
+	frame	data/chars/enemies/mcbride/shot00.png
+
+anim grabattack #THROW
+	loop	0
+	delay	12
+	offset	145 181
+	@cmd grabStart
+	@cmd position 0 33 0 0 0
+	frame	data/chars/enemies/mcbride/throw00.png
+	@cmd position 5 18 12 0 0
+	frame	data/chars/enemies/mcbride/throw01.png
+	@cmd position 5 18 12 0 0
+	frame	data/chars/enemies/mcbride/throw02.png
+	@cmd position 2 -24 18 0 0
+	frame	data/chars/enemies/mcbride/throw03.png
+	@cmd throw 12 2 2 3 0 0
+	frame	data/chars/enemies/mcbride/throw03.png
+		delay	24
+	@cmd clearL
+	frame	data/chars/enemies/mcbride/throw04.png
+		delay	8
+	@cmd flip
+	frame	data/chars/enemies/mcbride/idle00.png
+
+anim grabattack2 #THROW
+	loop	0
+	delay	12
+	offset	145 181
+	@cmd grabStart
+	@cmd position 0 33 0 0 0
+	frame	data/chars/enemies/mcbride/throw00.png
+	@cmd position 5 18 12 0 0
+	frame	data/chars/enemies/mcbride/throw01.png
+	@cmd position 5 18 12 0 0
+	frame	data/chars/enemies/mcbride/throw02.png
+	@cmd position 2 -24 18 0 0
+	frame	data/chars/enemies/mcbride/throw03.png
+	@cmd throw 12 2 2 3 0 0
+	frame	data/chars/enemies/mcbride/throw03.png
+		delay	24
+	@cmd clearL
+	frame	data/chars/enemies/mcbride/throw04.png
+		delay	8
+	@cmd flip
+	frame	data/chars/enemies/mcbride/idle00.png
+
+anim special #DOWN PUNCH
+	followanim 2
+	followcond 4
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	energycost 2 2
+	loop	0
+	delay	12
+	offset	145 181
+	hitfx	data/sounds/StrongPunch.wav
+	@cmd cancelBack "ANI_FOLLOW1"
+	frame	data/chars/enemies/mcbride/a200.png
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/mcbride/a201.png
+	attack2 144 138 47 15 8 0 0 0 20 12
+	frame	data/chars/enemies/mcbride/a202.png
+	attack 0 0 0 0 0 0 0 0 0 0
+	frame	data/chars/enemies/mcbride/a203.png
+	frame	data/chars/enemies/mcbride/a204.png
+
+anim follow1 #BACK PUNCH
+	followanim 3
+	followcond 4
+	fastattack 1
+	jugglecost 1
+	forcedirection -1
+	otg 1
+	loop	0
+	delay	12
+	offset	145 181
+	hitfx	data/sounds/StrongPunch.wav
+	sound	data/sounds/StrongAttack.wav
+	frame	data/chars/enemies/mcbride/pain00.png
+	@cmd flip
+	frame	data/chars/enemies/mcbride/aboth00.png
+	attack 140 119 38 18 4 0 0 0 20 12
+	frame	data/chars/enemies/mcbride/aboth00.png
+
+anim follow2 #ANIMATION FOR DOGRAB ONLY - DOWN PUNCH
+	loop	0
+	delay	12
+	offset	145 181
+	frame	data/chars/enemies/mcbride/a201.png
+	frame	data/chars/enemies/mcbride/a201.png
+	frame	data/chars/enemies/mcbride/a200.png
+	@cmd doGrab 1
+	frame	data/chars/enemies/mcbride/a200.png
+
+anim follow3 #ANIMATION FOR DOGRAB ONLY - BACK PUNCH
+	loop	0
+	delay	12
+	offset	145 181
+	frame	data/chars/enemies/mcbride/aboth00.png
+	frame	data/chars/enemies/mcbride/aboth00.png
+	frame	data/chars/enemies/mcbride/aboth00.png
+	@cmd doGrab 1
+	frame	data/chars/enemies/mcbride/aboth00.png

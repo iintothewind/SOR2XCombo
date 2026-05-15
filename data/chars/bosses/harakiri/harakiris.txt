@@ -1,0 +1,145 @@
+##MAIN
+name				HarakiriS
+type				none
+
+##MISC
+antigravity			100
+
+##SCRIPTS
+script				data/scripts/updateentity/channel.c
+
+##REMAPS
+remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter1.png
+remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter2.png
+remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter3.png
+remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter3.png
+remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter1.png
+
+## DEFAULT ANIMATIONS #########################################################################
+
+
+anim walk
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+
+anim run
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+
+anim runattack #PLAYER BLITZ SLASH
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a101.png
+	frame	data/chars/bosses/harakiri/a102.png
+	frame	data/chars/bosses/harakiri/a102.png
+
+anim attack3 #ENEMY BLITZ SLASH
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a101.png
+	frame	data/chars/bosses/harakiri/a102.png
+	frame	data/chars/bosses/harakiri/a102.png
+
+anim freespecial #RAGE BLITZ
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a102.png
+
+anim follow1 #RAGE STRIKE
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a102.png
+	frame	data/chars/bosses/harakiri/a102.png
+	frame	data/chars/bosses/harakiri/a102.png
+	frame	data/chars/bosses/harakiri/a102.png
+
+anim freespecial4 #GRAB RUN
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/rage00.png
+	frame	data/chars/bosses/harakiri/a100.png
+
+anim freespecial5 #BASH
+	loop	0
+	delay	1000
+	offset	240 200
+	frame	data/chars/bosses/harakiri/a210.png
+	frame	data/chars/bosses/harakiri/a211.png
+	frame	data/chars/bosses/harakiri/a212.png
+	frame	data/chars/bosses/harakiri/a213.png
+	frame	data/chars/bosses/harakiri/a214.png
+	frame	data/chars/bosses/harakiri/a215.png
+
+anim follow7 #COUNTER
+	loop	0
+	delay	1000
+	offset	240 200
+	frame	data/chars/bosses/harakiri/a210.png
+	frame	data/chars/bosses/harakiri/a211.png
+	frame	data/chars/bosses/harakiri/a212.png
+	frame	data/chars/bosses/harakiri/a213.png
+	frame	data/chars/bosses/harakiri/a214.png
+	frame	data/chars/bosses/harakiri/a215.png
+
+anim dodge #JUMP EVADE
+	loop	0
+	delay	1000
+	offset	161 203
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png
+	frame	data/chars/bosses/harakiri/a100.png

@@ -1,0 +1,28 @@
+name	Cabine
+health	1
+nolife 1
+type	obstacle
+gfxshadow	1
+#icon	data/chars/misc/charicon.png
+
+ondeathscript		data/scripts/ondeath/item.c
+animationscript		data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/obstacles.c
+
+diesound data/sounds/glass.wav
+noatflash	1
+
+anim idle
+loop	0
+delay	100
+offset	61 100
+bbox	29 3 54 99
+frame	data/chars/obstacles/cabine01.png
+
+
+anim fall
+loop	1
+delay	1000
+offset	61 100
+frame	data/chars/obstacles/cabine01.png
+

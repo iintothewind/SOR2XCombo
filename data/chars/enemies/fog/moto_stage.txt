@@ -1,0 +1,160 @@
+##MAIN
+name				Moto_Stage #MOLOTOV BIKER FOR BIKE STAGES ONLY
+type				enemy
+subtype				notgrab
+
+##LIFE
+health				1 #SCRIPT
+
+##POWER
+offense 			1 #SCRIPT
+
+##SPEED
+speed				1 #SCRIPT
+
+##ENERGY
+mp					3
+mprate  			1 #SCRIPT
+
+##MISC
+jugglepoints		50
+guardpoints			20
+guardrate			4
+atchain				0
+weapons				none none none none
+gfxshadow			1 1
+dust				Dust
+noquake				1 0
+facing				1
+nodrop				2
+cantgrab			1
+death				1
+
+##SCRIPTS
+didhitscript		data/scripts/didhit/moto.c
+ondoattackscript	data/scripts/ondoattack/default.c
+ondrawscript		data/scripts/ondraw/moto.c
+onspawnscript		data/scripts/onspawn/moto.c
+animationscript	 	data/scripts/animation/default.c
+takedamagescript	data/scripts/takedamage/default.c
+
+##ICONS
+icon				data/chars/enemies/fog/icon.png 1
+
+##REMAPS
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter1.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter2.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter3.png
+remap				data/chars/enemies/fog/idle00.png data/chars/enemies/fog/alter4.png
+
+##LOADS
+load				FogB
+load				Fog_Molotov
+
+## DEFAULT ANIMATIONS #########################################################################
+
+anim spawn
+	loop	0
+	delay	1
+	offset	145 179
+	frame	data/chars/enemies/fog/mounted02.png
+
+anim idle
+	loop	1
+	delay	2
+	offset	145 179
+	bbox 	123 103 24 78
+	frame	data/chars/enemies/fog/mounted02.png
+	frame	data/chars/enemies/fog/mounted03.png
+
+anim walk
+	loop	1
+	delay	2
+	offset	145 179
+	bbox 	123 103 24 78
+	frame	data/chars/enemies/fog/mounted02.png
+	frame	data/chars/enemies/fog/mounted03.png
+
+anim follow1
+	loop	0
+	delay	2
+	offset	145 179
+	bbox 	123 103 24 78
+	sound	data/voices/Fog1.wav
+	frame	data/chars/enemies/fog/grenade07.png
+	@cmd toss "Fog_Molotov" 5 70 0 -1.5 1.5 0 0
+	frame	data/chars/enemies/fog/grenade08.png
+
+anim pain
+	loop	0
+	delay	2
+	offset	145 179
+	frame	data/chars/enemies/fog/mounted04.png
+	frame	data/chars/enemies/fog/mounted05.png
+	frame	data/chars/enemies/fog/mounted04.png
+	frame	data/chars/enemies/fog/mounted05.png
+
+anim death
+	loop	0
+	delay	4
+	offset	145 179
+	@cmd spawnBind "Destruction" 5 0 1
+	@cmd setLayer -1
+	frame	data/chars/enemies/fog/unmounted02.png
+	frame	data/chars/enemies/fog/unmounted03.png
+	frame	data/chars/enemies/fog/unmounted04.png
+	frame	data/chars/enemies/fog/unmounted05.png
+	frame	data/chars/enemies/fog/unmounted02.png
+	frame	data/chars/enemies/fog/unmounted03.png
+	frame	data/chars/enemies/fog/unmounted04.png
+	frame	data/chars/enemies/fog/unmounted05.png
+	frame	data/chars/enemies/fog/unmounted02.png
+	frame	data/chars/enemies/fog/unmounted03.png
+	frame	data/chars/enemies/fog/unmounted04.png
+	frame	data/chars/enemies/fog/unmounted05.png
+
+anim attack1 #WHEEL ATTACK
+	range 20 60
+	rangea 0 0
+	fastattack 0
+	jugglecost 1
+	forcedirection 1
+	otg 1
+	loop	0
+	delay	2
+	offset	145 179
+	bbox 	100 90 20 91
+	hitfx	data/sounds/HighPunch.wav
+	attack 120 117 71 62 8 0 0 0 15 12
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
+	frame	data/chars/enemies/fog/mounted06.png
+	frame	data/chars/enemies/fog/mounted07.png
