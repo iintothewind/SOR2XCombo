@@ -581,7 +581,7 @@ anim freespecial5 #WHIP GRAB
 	attackone 1
 	jugglecost 0
 	forcedirection -1
-	energycost 25 1 6
+	energycost 45 1 6
 	otg 1
 	loop	0
 	delay	4

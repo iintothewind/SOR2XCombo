@@ -14,6 +14,17 @@ void main()
 	int smooth; 		//THIS FLAG ACTIVATES A MORE SMOOTH MOVEMENT WHEN USING A HIGH RATE VALUE, LIKE AN EARTHQUAKE
 	int reset;			//DEFAULT SHAKE EFFECT VALUE WHEN DISABLED, DON'T CHANGE THIS!!!!!
 
+	// Screen quake is disabled globally because it can cause severe scene flicker
+	// when multiple quake emitters overlap with moving backgrounds or effects.
+	if(name == "QuakeHigh" || name == "QuakeLow"){
+		setglobalvar("quakePower"+self, NULL());
+		setglobalvar("quakeTimer"+self, NULL());
+		setglobalvar("quakeOn", NULL());
+		changelevelproperty("quake", 0);
+		killentity(self);
+		return;
+	}
+
 	//GRADUAL EFFECT, DURATION IS MANAGED BY INTENSITY
 	if(name == "QuakeHigh"){
 		intensity	= 8;

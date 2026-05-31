@@ -13,7 +13,15 @@ void unBind()
 	if(target != NULL()){
 		if(ani != openborconstant("ANI_FALL7") && ani != openborconstant("ANI_FALL8") && ani != openborconstant("ANI_FALL9")){
 			bindentity(target, NULL());
+			changeentityproperty(target,"damage_on_landing",0);
+			changeentityproperty(target,"aiflag","falling",0);
+			changeentityproperty(target,"aiflag","drop",0);
+			changeentityproperty(target,"aiflag","projectile",0);
+			changeentityproperty(target,"aiflag","frozen",0);
+			changeentityproperty(target,"takeaction","common_animation_normal");
+			changeentityproperty(target,"velocity",0,0,0);
 			damageentity(target, self, 0, 1, openborconstant("ATK_NORMAL"));
+			setidle(target);
 			setentityvar(self, "grabbed", NULL());
 		}
 	}

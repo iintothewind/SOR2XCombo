@@ -16,7 +16,7 @@ anim idle
 	@cmd autoLife 50
 	frame	data/bgs/sor2/st7b/bg03.png
 	frame	data/bgs/sor2/st7b/bg03.png
-	
+
 anim follow1
 	loop	0
 	delay	416
@@ -31,7 +31,7 @@ anim follow1
 	@cmd leaper 0 0 0
 	frame	data/bgs/sor2/st7b/bg03.png
 	frame	data/bgs/sor2/st7b/bg03.png
-	
+
 anim follow2
 	loop	0
 	delay	416
@@ -46,7 +46,7 @@ anim follow2
 	@cmd leaper 0 0 0
 	frame	data/bgs/sor2/st7b/bg03.png
 	frame	data/bgs/sor2/st7b/bg03.png
-	
+
 anim follow3
 	loop	0
 	delay	416

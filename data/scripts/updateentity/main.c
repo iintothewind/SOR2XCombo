@@ -685,6 +685,7 @@ void freeGrabbed() {
 			changeentityproperty(grabbed,"takeaction", "common_animation_normal");
 			bindentity(grabbed, NULL());
 			setidle(grabbed);
+			setentityvar(self, "grabbed", NULL());
 		}
 	}
 }

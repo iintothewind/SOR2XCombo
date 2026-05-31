@@ -323,19 +323,48 @@ anim select
 	frame	data/chars/bosses/lee/idle24.png
 	frame	data/chars/bosses/lee/idle25.png
 
+#anim walk
+#	loop	1
+#	delay	16
+#	offset	240 180
+#	bbox 226 100 30 80
+#	frame	data/chars/bosses/lee/walk00.png
+#	frame	data/chars/bosses/lee/walk01.png
+#	frame	data/chars/bosses/lee/walk02.png
+#	frame	data/chars/bosses/lee/walk03.png
+#	frame	data/chars/bosses/lee/walk04.png
+#	frame	data/chars/bosses/lee/walk05.png
+#	frame	data/chars/bosses/lee/walk06.png
+#	frame	data/chars/bosses/lee/walk07.png
+
 anim walk
 	loop	1
-	delay	16
+	delay	7
 	offset	240 180
-	bbox 226 100 30 80
-	frame	data/chars/bosses/lee/walk00.png
-	frame	data/chars/bosses/lee/walk01.png
-	frame	data/chars/bosses/lee/walk02.png
-	frame	data/chars/bosses/lee/walk03.png
-	frame	data/chars/bosses/lee/walk04.png
-	frame	data/chars/bosses/lee/walk05.png
-	frame	data/chars/bosses/lee/walk06.png
-	frame	data/chars/bosses/lee/walk07.png
+	bbox 226 110 30 70
+	frame	data/chars/bosses/lee/run00.png
+	frame	data/chars/bosses/lee/run01.png
+	bbox 238 114 35 60
+	frame	data/chars/bosses/lee/run02.png
+	sound	data/sounds/Run.wav
+	frame	data/chars/bosses/lee/run03.png
+	frame	data/chars/bosses/lee/run04.png
+	frame	data/chars/bosses/lee/run05.png
+	frame	data/chars/bosses/lee/run06.png
+	frame	data/chars/bosses/lee/run07.png
+	bbox 223 105 30 75
+	frame	data/chars/bosses/lee/run08.png
+	bbox 225 109 30 70
+	frame	data/chars/bosses/lee/run09.png
+	frame	data/chars/bosses/lee/run10.png
+	frame	data/chars/bosses/lee/run11.png
+	bbox 223 105 30 75
+	frame	data/chars/bosses/lee/run12.png
+	frame	data/chars/bosses/lee/run13.png
+	bbox 226 105 30 75
+	frame	data/chars/bosses/lee/run14.png
+	frame	data/chars/bosses/lee/run15.png
+	frame	data/chars/bosses/lee/run16.png
 
 anim run
 	@cmd lockAni "runType" "off"

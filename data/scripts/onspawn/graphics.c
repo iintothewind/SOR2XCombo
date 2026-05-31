@@ -9,6 +9,10 @@ void main()
 			changeentityproperty(self, "model", "Flash_B", 1);
 		}
 		else
+		if(name == "bang"){
+			// bang has no original-mode _B variant.
+		}
+		else
 		if(name == "FallHit" || name == "Impact"){
 			changeentityproperty(self, "model", "Impact_B", 1);
 		}
