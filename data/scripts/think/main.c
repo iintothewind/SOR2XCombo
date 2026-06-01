@@ -339,15 +339,14 @@ void enemyAI()
 		}
 	}
 
-	if(walking){
-		if(aimove == openborconstant("AIMOVE1_AVOID")){
-			// float rate = calcWalkSpeedRate(self);
-			// reset to normal walking speed according to user feedback
-			float rate = 1.0;
-			if(xDir != 0){changeentityproperty(self, "velocity", xDir*rate, NULL());}
-			if(zDir != 0){changeentityproperty(self, "velocity", NULL(), zDir*rate);}
-		}
-	}
+	// keep walking speed normal according to players feedback
+	// if(walking){
+	// 	if(aimove == openborconstant("AIMOVE1_AVOID")){
+	// 		float rate = calcWalkSpeedRate(self);
+	// 		if(xDir != 0){changeentityproperty(self, "velocity", xDir*rate, NULL());}
+	// 		if(zDir != 0){changeentityproperty(self, "velocity", NULL(), zDir*rate);}
+	// 	}
+	// }
 
 
 	//RESET CURRENT AIMOVE TO "CHASE"

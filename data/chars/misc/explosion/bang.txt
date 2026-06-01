@@ -24,7 +24,7 @@ anim idle
 	sound	data/sounds/Explosion.wav
 	burn 275 215 260 210 255 1 1 0 0 60
 	dropv 4 4 0
-	@cmd spawn01 "QuakeHigh" 0 0 0
+	#@cmd spawn01 "QuakeHigh" 0 0 0
 	frame	data/chars/misc/explosion/explosion00.png
 	frame	data/chars/misc/explosion/explosion01.png
 	frame	data/chars/misc/explosion/explosion02.png

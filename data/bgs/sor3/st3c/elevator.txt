@@ -20,7 +20,7 @@ anim idle
 	frame	data/bgs/sor3/st3c/bg05.png
 	frame	data/bgs/sor3/st3c/bg06.png
 	frame	data/bgs/sor3/st3c/bg07.png
-
+	
 anim follow1 #MOVE UP
 	loop	1 2 6
 	delay	416
@@ -39,7 +39,7 @@ anim follow1 #MOVE UP
 	frame	data/bgs/sor3/st3c/bg05.png
 	frame	data/bgs/sor3/st3c/bg06.png
 	frame	data/bgs/sor3/st3c/bg07.png
-
+	
 anim follow2 #MOVE RIGHT
 	loop	1 2 6
 	delay	416
@@ -58,7 +58,7 @@ anim follow2 #MOVE RIGHT
 	frame	data/bgs/sor3/st3c/bg05.png
 	frame	data/bgs/sor3/st3c/bg06.png
 	frame	data/bgs/sor3/st3c/bg07.png
-
+	
 anim follow3 #MOVE UP
 	loop	1 2 6
 	delay	416
@@ -96,7 +96,7 @@ anim follow4 #MOVE LEFT
 	frame	data/bgs/sor3/st3c/bg05.png
 	frame	data/bgs/sor3/st3c/bg06.png
 	frame	data/bgs/sor3/st3c/bg07.png
-
+	
 anim follow5 #MOVE UP
 	loop	1 2 6
 	delay	416
