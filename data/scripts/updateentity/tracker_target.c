@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/updateentity/main.c"
 
 void main()
@@ -79,7 +80,7 @@ void targetLock()
 	
 	//STOP CHASING THE TARGET AND SHOOT
 	if(vAni == openborconstant("ANI_FOLLOW1")){ 
-		if(pAni != openborconstant("ANI_FOLLOW4")){
+		if(pAni != openborconstant("ANI_FOLLOW4") && entityAlive(parent)){
 			performattack(parent, openborconstant("ANI_FOLLOW4"), 1);
 			changeentityproperty(parent, "position", getlocalvar("aimX"), getlocalvar("aimZ"), 0);
 			changeentityproperty(parent, "direction", getlocalvar("aimD"));

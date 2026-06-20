@@ -15,12 +15,15 @@ void main()
 void grabChance()
 {
 	void self		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	int grabValid 	= getentityproperty(self,"animvalid", openborconstant("ANI_GRAB"));
 	void target		= findtarget(self);
 	float time		= openborvariant("elapsed_time");
 	int aimove		= getentityproperty(self, "aimove");
 
-	if(grabValid ==1 && target != NULL()) {
+	if(grabValid == 1 && entityAlive(target)) {
     void eType	= getentityproperty(target,"type");
     void sType	= getentityproperty(target,"subtype");
     if(eType != openborconstant("TYPE_OBSTACLE") && sType != openborconstant("SUBTYPE_NOTGRAB")) {
@@ -68,6 +71,9 @@ void grabChance()
 
 void summonBossX1() {
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void selfAni  = getentityproperty(self, "animationID");
   int selfFrozen	= getentityproperty(self, "aiflag", "frozen");
 	void type = getentityproperty(self, "type");

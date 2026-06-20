@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/updateentity/main.c"
 
 void main()
@@ -34,6 +35,9 @@ void afterEffect()
 void stealthCamo()
 {//Reduces mp when the "Stealth Camouflage" is activated (PLAYERS ONLY)
 	void self  = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type  = getentityproperty(self, "type");
 	void ani   = getentityproperty(self, "animationID");
 	int mp 	   = getentityproperty(self, "mp");
@@ -62,6 +66,9 @@ void stealthCamo()
 void lockMp()
 {//Used to lock "mprate" of the Tracker character during the "stealth"
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void name = getentityproperty(self, "defaultname");
 	void type = getentityproperty(self, "type");
 	float mp  = getentityproperty(self, "mprate");

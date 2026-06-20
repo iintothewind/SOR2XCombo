@@ -8,6 +8,8 @@ void aniChange(int type, void ani)
  //Type 2: Performattack animation changer
 	void self = getlocalvar("self");
 
+	if(!selfAlive()){return;}
+
 	if(type == 0){changeentityproperty(self, "animation", openborconstant(ani));}
 	if(type == 1){executeanimation(self, openborconstant(ani), 1);}
 	if(type == 2){performattack(self, openborconstant(ani), 1);}
@@ -20,6 +22,8 @@ void aniParent(int type, void ani)
  //Type 2: Performattack animation changer
 	void self	= getlocalvar("self");
 	void parent	= getentityproperty(self, "parent");
+
+	if(!entityAlive(parent)){return;}
 
 	if(type == 0){changeentityproperty(parent, "animation", openborconstant(ani));}
 	if(type == 1){executeanimation(parent, openborconstant(ani), 1);}
@@ -51,7 +55,7 @@ void aniHp(void ani, int limit)
 	void self  = getlocalvar("self");
 	int health = getentityproperty(self, "health");
 
-	if(health <= limit){
+	if(health <= limit && health > 0){
 		executeanimation(self, openborconstant(ani), 1);
 	}
 }
@@ -61,6 +65,8 @@ void aniMp(void ani, int limit)
 	void self = getlocalvar("self");
 	int mp 	  = getentityproperty(self, "mp");
 
+	if(!selfAlive()){return;}
+
 	if(mp <= limit){executeanimation(self, openborconstant(ani), 1);}
 }
 
@@ -68,6 +74,8 @@ void aniRandom(void ani)
 {//Random animation changer (SOR3 LAMPS)
 	void self = getlocalvar("self");
 	float iR  = rand()%50+50;
+
+	if(!selfAlive()){return;}
 
 	if(iR >= 0 && iR < 50){changeentityproperty(self, "animation", openborconstant(ani));}
 }
@@ -103,6 +111,8 @@ void aniXpos(float pos, int mode, void ani)
 void aniVar(void ani, void variable, float value, int type)
 {//Execute defined animation with generic global/local variable check by setVar/aniCount scripts
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
 
 	if(type == 1){ //FOR LOCAL VARIABLES AND "+SELF" USAGE
 		if(getlocalvar(variable+self) >= value){
@@ -171,6 +181,8 @@ void setLayer(int layer)
 void stealth(int factor) //YAMATO HIDE SLASH
 {//Changes stealth factor
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
 
 	changeentityproperty(self, "stealth", factor);
 }
@@ -254,6 +266,9 @@ void invinc(float duration)
 	float mult = 100;
 	float delta  = duration*mult;
 	float lastInvincTime = getentityproperty(self, "invinctime");
+
+	if(!selfAlive()){return;}
+
 	if(lastInvincTime == NULL() || (lastInvincTime != NULL() && lastInvincTime < (time + delta))) {
 		// if(selfBase <= selfHeight) {
 		// 	setglobalvar("armorResist"+self, time+delta);
@@ -271,6 +286,8 @@ void invincible(int flag, float duration)
 	float time = openborvariant("elapsed_time");
 	float mult = 200;
 	float end  = duration*mult;
+
+	if(!selfAlive()){return;}
 
 	if(flag == 1){
 		changeentityproperty(self, "aiflag", "invincible", 1);
@@ -378,6 +395,8 @@ void flip()
 	void self = getlocalvar("self");
 	int dir   = getentityproperty(self,"direction");
 
+	if(!selfAlive()){return;}
+
 	if(dir == 0){ //FACING LEFT?
 		changeentityproperty(self, "direction", 1);
 	}else{
@@ -391,6 +410,8 @@ void flipRandom()
 	int dir   = getentityproperty(self,"direction");
 	float iR  = rand()%50+50;
 
+	if(!selfAlive()){return;}
+
 	if(iR >= 0 && iR < 50){changeentityproperty(self, "direction", 1);}else
 	if(iR >= 50 && iR <= 100){changeentityproperty(self, "direction", 0);}
 }
@@ -401,6 +422,8 @@ void flipSet(int dirCheck)
  //dirCheck 1: Always maintain facing right
 	void self = getlocalvar("self");
 	int dir   = getentityproperty(self,"direction");
+
+	if(!selfAlive()){return;}
 
 	if(dirCheck == 0){
 		if(dir == 1){ // Facing right?
@@ -441,6 +464,8 @@ void landFrame(int add)
 	int height	= getentityproperty(self, "y");
 	int base	= getentityproperty(self, "base");
 
+	if(!selfAlive()){return;}
+
 	if(add == NULL()){add = 1;}
 
 	if(height > base){updateframe(self, getlocalvar("frame")-add);}
@@ -450,6 +475,8 @@ void stealthCamo(float channelr, float channelg, float channelb)
 {//Apply an "Stealth Camouflage" effect, like Predator
 	void self = getlocalvar("self");
 	int alpha = getentityproperty(self, "alpha");
+
+	if(!selfAlive()){return;}
 
 	if(alpha != 6){
 		changeentityproperty(self, "alpha", 6);

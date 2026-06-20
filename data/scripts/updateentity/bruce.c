@@ -28,6 +28,9 @@ void afterEffect()
 void rooEffect() {
 	if(findEnemy("Roo") != NULL() && getlocalvar("bruceHpDoubled") == NULL()) {
 		void self 	= getlocalvar("self");
+
+		if(!selfAlive()){return;}
+
 		void model 	= getentityproperty(self, "model");
 		int hp	 = getentityproperty(self,"health");
 		int maxHp	= getentityproperty(self, "maxhealth");
@@ -56,15 +59,14 @@ void auraEffectRoo()
 	void pikachu	= getentityvar(self, "Pikachu");
 
 	if(model == "Tamer" && pikachu != NULL()) {
-		int dead	= getentityproperty(pikachu, "dead");
-		int pikaHp	 = getentityproperty(pikachu,"health");
 		int pikaMaxHp	= getentityproperty(pikachu, "maxhealth");
 		int pikaHpRecover	= pikaMaxHp/5;
 		int pikaMp 		= getentityproperty(pikachu,"mp");
 		int pikaMaxMp 	= getentityproperty(pikachu,"maxmp");
 		int pikaMpRecover = pikaMaxMp/5;
 
-		if(dead == 0) {
+		if(entityAlive(pikachu)) {
+			int pikaHp	 = getentityproperty(pikachu,"health");
 			float time = openborvariant("elapsed_time");
 			float mult = 100;
 			float duration=0.5;

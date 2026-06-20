@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #include "data/scripts/assets.h"
 #import "data/scripts/updateentity/main.c"
 
@@ -112,14 +113,13 @@ void motorBike()
 		if(vType == openborconstant("TYPE_ENEMY") || vType == openborconstant("TYPE_NPC")){
 			void vType 		= getentityproperty(self, "type");
 			int pain 		= getentityproperty(self, "aiflag", "inpain");
-			int dead 		= getentityproperty(self, "dead");
 			float x 		= getentityproperty(self, "x");
 			float xPos 		= openborvariant("xpos");
 			float move 		= getglobalvar("move");
 			float delay 	= getglobalvar("delay");
 			float bgSpeed 	= getglobalvar("bgSpeed");
 			
-			if(pain == 0 && dead == 0){
+			if(pain == 0 && entityAlive(self)){
 				if(bgSpeed <= 0){updateframe(self, 0);}
 				
 				changeentityproperty(self, "speed", move);
@@ -127,7 +127,7 @@ void motorBike()
 				changeentityproperty(self, "edelay", 0, delay, 1, 9999, 0.001, 9999);
 			}
 			
-			if(dead == 1){
+			if(!entityAlive(self)){
 				changeentityproperty(self, "subject_to_screen", 0);
 				changeentityproperty(self, "edelay", 0, 0, 1, 9999, 0.001, 9999);
 				changeentityproperty(self, "velocity", -bgSpeed/5000, 0, 0);

@@ -1232,4 +1232,4 @@ Mania 难度: Off
 
 # 版本号
 
-- SOR2XCombo_20260514
+- SOR2XCombo_20260619

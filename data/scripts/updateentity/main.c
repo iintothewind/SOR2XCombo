@@ -6,6 +6,9 @@ void afterImage(void shadowEntity, int effectType, int rateFlag)
  //Effect type "0": Alpha 6, NO COLOR change (USED FOR SIMPLE MOVES)
  //Effect type "1": Alpha 6, RED COLOR change (USED FOR RAGE MOVES)
 	void self 	 = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void effects = getglobalvar("graphicEffects");
 	void name	 = getentityproperty(self, "defaultname");
 	void height	 = getentityproperty(self, "y");
@@ -79,8 +82,6 @@ void disableBlink(void target) {
 		float height = getentityproperty(target,"y");
 		float base = getentityproperty(target,"base");
 		int fall	= getentityproperty(target,"aiflag","falling");
-		int dead	= getentityproperty(target, "dead");
-
 
 		if(strinfirst(targetName, "Garnet") != -1
 		|| strinfirst(targetName, "Mona") != -1
@@ -89,7 +90,7 @@ void disableBlink(void target) {
 		|| strinfirst(targetName, "Reine") != -1
 		|| height != base
 		|| fall == 1
-		|| dead == 1
+		|| !entityAlive(target)
 		|| ani == openborconstant("ANI_GRAB")
 		|| ani == openborconstant("ANI_GRABBED")
 		|| ani == openborconstant("ANI_GRABATTACK")
@@ -153,6 +154,9 @@ void blinkSelect()
 void blinkDamage()
 {//Turn on/off generic blink effects during some "takedamage" events
 	void self		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void spawn;
 	void animation	= getentityproperty(self, "animationID");
 	int frame		= getentityproperty(self, "animpos");
@@ -323,6 +327,9 @@ void blinkDamage()
 void blinkCancel()
 {//Turn on/off generic blink effects during "attack cancelation" events
 	void self 		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void animation	= getentityproperty(self, "animationID");
 	int tintMode	= 4;
 	float duration	= 25;
@@ -370,6 +377,9 @@ void blinkCancel()
 void blinkCharge()
 {//Turn on/off generic blink effects during "charge attack" events
 	void self	= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	int pIndex	= getentityproperty(self, "playerindex");
 
 	//CHARGE ATTACK
@@ -377,7 +387,6 @@ void blinkCharge()
 		void type		= getentityproperty(self, "type");
 		void animation	= getentityproperty(self, "animationID");
 		int valid		= getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK2"));
-		int dead		= getentityproperty(self, "dead");
 		int tintMode	= 1;
 		int warning		= 15;
 		float time		= openborvariant("elapsed_time");
@@ -387,7 +396,7 @@ void blinkCharge()
 		if(type == openborconstant("TYPE_PLAYER")){
 			if(time > getglobalvar("chargeStart"+pIndex)-warning){
 				if(time-getglobalvar("chargeStart"+pIndex) < duration){
-					if(dead != 1 && valid == 1){
+					if(selfAlive() && valid == 1){
 						changedrawmethod(self, "enabled", 1);
 						changedrawmethod(self, "tintmode", tintMode);
 						changedrawmethod(self, "tintcolor", rgbcolor(0xBB, 0xBB, 0xBB));
@@ -470,6 +479,9 @@ void otg()
 {//Used to start variables and refill OTG points
 	void otgLimit = loadOtgLimit();
 	void self		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	int otgPoints	= getentityvar(self, "otgpoints");
 
 	if(otgPoints == NULL()) {
@@ -491,6 +503,9 @@ void otg()
 void versusDamage()
 {//Enable/Disable the Versus Damage with global variable check
 	void self		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void versusDmg	= getglobalvar("versusDamage"); //Get Versus Damage option.
 	void type		= getentityproperty(self, "type");
 	int candamage	= getlocalvar("candamage"+self);
@@ -526,6 +541,9 @@ void versusDamage()
 void runMove()
 {//Enable or disable "running" in Z axis
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type = getentityproperty(self, "type");
 	int runZ  = getentityproperty(self, "running", "movez");
 	int runMove;
@@ -541,6 +559,9 @@ void onScreen()
  //If entity is off-screen, will be moved with defined distance
  //Script for emergency re-adjust players position on-screen if stucked outside of the screen
 	void self 		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type 		= getentityproperty(self,"type");
 	void vAnID 		= getentityproperty(self,"animationID");
 	void subType	= getentityproperty(self,"subtype");
@@ -604,6 +625,9 @@ void loadEnergyRecoverRate() {
 
 void energyRecover() {
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type = getentityproperty(self, "type");
 	int maxMp 	= getentityproperty(self,"maxmp");
 	int mp 		= getentityproperty(self,"mp");
@@ -622,6 +646,9 @@ void energyRecover() {
 
 void dojoEnergyRecover() {
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type = getentityproperty(self, "type");
 	int maxMp 	= getentityproperty(self,"maxmp");
 	int mp 		= getentityproperty(self,"mp");
@@ -663,7 +690,12 @@ void freeGrabbed() {
 	float height = getentityproperty(self,"y");
 	float base = getentityproperty(self,"base");
 	int fall	= getentityproperty(self,"aiflag","falling");
-	int dead	= getentityproperty(self, "dead");
+
+	if(grabbed != NULL()
+	&& (!entityAlive(self) || !entityAlive(grabbed))){
+		grabRelease(self);
+		return;
+	}
 
 	if((ani == openborconstant("ANI_IDLE")
 	|| ani == openborconstant("ANI_WALK")
@@ -672,28 +704,16 @@ void freeGrabbed() {
 	|| ani == openborconstant("ANI_DODGE")
 	|| ani == openborconstant("ANI_FOLLOW11")
 	|| ani == openborconstant("ANI_RISE"))
-	&& dead == 0
+	&& entityAlive(self)
 	&& sSubType != openborconstant("SUBTYPE_NOTGRAB")
 	&& grabbed != NULL()) {
-		int grabbedDead	= getentityproperty(grabbed,"dead");
-		if(grabbedDead == 0){
-			changeentityproperty(grabbed,"damage_on_landing",0);
-			changeentityproperty(grabbed,"aiflag","falling",0);
-			changeentityproperty(grabbed,"aiflag","drop",0);
-			changeentityproperty(grabbed,"aiflag","projectile",0);
-			changeentityproperty(grabbed,"aiflag","frozen", 0); //USED TO AVOID GRAB INTERRUPTION WHEN THE NODROPEN IS OFF AND ANY PLAYER IS RESPAWNED
-			changeentityproperty(grabbed,"takeaction", "common_animation_normal");
-			bindentity(grabbed, NULL());
-			setidle(grabbed);
-			setentityvar(self, "grabbed", NULL());
-		}
+		grabRelease(self);
 	}
 }
 
 void auraEffect() {
 	void self	= getlocalvar("self");
 	void defaultName = getentityproperty(self, "defaultname");
-	int selfDead	= getentityproperty(self, "dead");
 	float mult = 100;
 	int elapsedTime = openborvariant("elapsed_time");
 	void levelBoss = findLevelBoss();
@@ -717,7 +737,7 @@ void auraEffect() {
 			&& branch != "sor3_st6f"
 			&& branch != "sor3_st6g"
 			&& branch != "sor3_st8e") {
-		if(selfDead == 0 && levelBoss == NULL()) {
+		if(entityAlive(self) && levelBoss == NULL()) {
 			int entityCount	= openborvariant("count_entities");
 			int entityIndex	= 0;
 			void entity	= NULL();
@@ -733,7 +753,6 @@ void auraEffect() {
 					int height	 = getentityproperty(enemy,"y");
 					int base	 = getentityproperty(enemy,"base");
 					int fall	= getentityproperty(enemy,"aiflag","falling");
-					int enemyDead	= getentityproperty(enemy, "dead");
 					int enemyHp	 = getentityproperty(enemy,"health");
 					int enemyMaxHp	= getentityproperty(enemy, "maxhealth");
 					int enemyHpRecover	= enemyMaxHp/10;
@@ -742,7 +761,7 @@ void auraEffect() {
 					int enemyMpRecover = enemyMaxMp/10;
 
 					if((strinfirst(enemyName, "Roo") != -1 || strinfirst(model, "Roo") != -1)
-					&& enemyDead == 0 && fall == 0 && height == base && enemyHp <= (enemyMaxHp/3*2)) {
+					&& entityAlive(enemy) && fall == 0 && height == base && enemyHp <= (enemyMaxHp/3*2)) {
 						if(animId != openborconstant("ANI_FALL")
 						&& animId != openborconstant("ANI_BURN")
 						&& animId != openborconstant("ANI_SHOCK")
@@ -760,7 +779,7 @@ void auraEffect() {
 							changeentityproperty(enemy, "mp", enemyMaxMp);
 						}
 					} else if(strinfirst(defaultName, "Tamer") != -1 && strinfirst(enemyName, "Tamer") == -1
-					&& enemyDead == 0 && fall == 0 && height == base && enemyHp <= (enemyMaxHp/5*4) && playedSecond != playedTick) {
+					&& entityAlive(enemy) && fall == 0 && height == base && enemyHp <= (enemyMaxHp/5*4) && playedSecond != playedTick) {
 						if(animId != openborconstant("ANI_FALL")
 						&& animId != openborconstant("ANI_BURN")
 						&& animId != openborconstant("ANI_SHOCK")
@@ -786,6 +805,9 @@ void auraEffect() {
 
 void airGrabCheck2() {
 	void self 	 = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type		= getentityproperty(self,"type");
 	int height	 = getentityproperty(self,"y");
 	int base	 = getentityproperty(self,"base");
@@ -809,6 +831,9 @@ void airGrabCheck2() {
 
 void airGrabCheck3() {
 	void self 	 = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void type		= getentityproperty(self,"type");
 	int height	 = getentityproperty(self,"y");
 	int base	 = getentityproperty(self,"base");

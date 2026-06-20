@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/didhit/main.c"
 
 void main()
@@ -12,9 +13,11 @@ void main()
 void customGrab()
 {//Perform custom grabs in defined animations to avoid "followcond 2" problems
 	void self 		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void target 	= getlocalvar("damagetaker");
 	void vAniID 	= getentityproperty(self,"animationID");
-	int dead	= getentityproperty(target,"dead");
 	void iType  	= getentityproperty(target,"type");
 	void iSubType	= getentityproperty(target,"subtype");
 	void tAniID 	= getentityproperty(target,"animationID");
@@ -22,7 +25,7 @@ void customGrab()
 
 	//RAGE GRAB
 	if(vAniID == openborconstant("ANI_FOLLOW3")){
-		if(iType == openborconstant("TYPE_PLAYER") || iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_NPC") && tAniID != openborconstant("ANI_FREESPECIAL") && dead == 0 && targetInvincible == 0){
+		if(iType == openborconstant("TYPE_PLAYER") || iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_NPC") && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
 			if(iSubType != openborconstant("SUBTYPE_NOTGRAB")){
 				performattack(self, openborconstant("ANI_FOLLOW4"), 0);
 			}

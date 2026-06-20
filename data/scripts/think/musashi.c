@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/think/main.c"
 
 void main()
@@ -10,12 +11,15 @@ void main()
 void grabChance()
 {
 	void self		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	int grabValid 	= getentityproperty(self,"animvalid", openborconstant("ANI_GRAB"));
 	void target		= findtarget(self);
 	float time		= openborvariant("elapsed_time");
 	int aimove		= getentityproperty(self, "aimove");
 
-	if(grabValid ==1 && target != NULL()) {
+	if(grabValid == 1 && entityAlive(target)) {
     void eType	= getentityproperty(target,"type");
     void sType	= getentityproperty(target,"subtype");
     if(eType != openborconstant("TYPE_OBSTACLE") && sType != openborconstant("SUBTYPE_NOTGRAB")) {

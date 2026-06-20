@@ -869,4 +869,4 @@ Openbor引擎为所有OpenBor游戏提供了统一的作弊功能,他们的开�
 
 # 版本号
 
-- SOR2XCombo_20260514
+- SOR2XCombo_20260619

@@ -5,6 +5,8 @@ void dasher(float Vx, float Vy, float Vz)
 	void self 	= getlocalvar("self");
 	int dir 	= getentityproperty(self,"direction");
 
+	if(!selfAlive()){return;}
+
 	if(dir == 0){Vx = -Vx ;}
 	changeentityproperty(self, "velocity", Vx, Vz, Vy);
 }
@@ -15,6 +17,8 @@ void dashTarget()
 	float Vx 	= getlocalvar("x"+self);
 	float Vz 	= getlocalvar("z"+self);
 
+	if(!selfAlive()){return;}
+
 	if(Vx != NULL() && Vz != NULL()){changeentityproperty(self, "velocity", Vx, Vz);}
 }
 
@@ -24,6 +28,8 @@ void dashRandom(float Vx, float Vz)
 	int dir   = getentityproperty(self,"direction");
 	float iR1 = rand()%50+50;
 	float iR2 = rand()%50+50;
+
+	if(!selfAlive()){return;}
 
 	if(iR1 >= 0 && iR1 < 50){Vx = -Vx;}
 	if(iR2 >= 0 && iR2 < 50){Vz = -Vz;}
@@ -36,6 +42,8 @@ void dashBg(int dir, int ratio)
 	void self 	  = getlocalvar("self");
 	float bgSpeed = getglobalvar("bgSpeed");
 
+	if(!selfAlive()){return;}
+
 	if(dir == 0){bgSpeed = -bgSpeed;}
 	changeentityproperty(self, "velocity", bgSpeed/ratio, 0, 0);
 }
@@ -44,6 +52,8 @@ void leaper(float Vx, float Vy, float Vz)
 {//Leap with desired speed!
 	void self 	= getlocalvar("self");
 	int dir 	= getentityproperty(self,"direction");
+
+	if(!selfAlive()){return;}
 
 	if(dir == 0){Vx = -Vx ;}
 	tossentity(self, Vy, Vx, Vz);
@@ -55,6 +65,8 @@ void leapTarget(float Vy)
 	float Vx 	= getlocalvar("x"+self);
 	float Vz 	= getlocalvar("z"+self);
 
+	if(!selfAlive()){return;}
+
 	if(Vx != NULL() && Vz != NULL()){tossentity(self, Vy, Vx, Vz);}
 }
 
@@ -64,6 +76,8 @@ void leapRandom(float Vx, float Vy, float Vz)
 	int dir   = getentityproperty(self,"direction");
 	float iR1 = rand()%50+50;
 	float iR2 = rand()%50+50;
+
+	if(!selfAlive()){return;}
 
 	if(iR1 >= 0 && iR1 < 50){Vx = -Vx;}
 	if(iR2 >= 0 && iR2 < 50){Vz = -Vz;}
@@ -78,12 +92,16 @@ void leapJump()
 	float Vz 	= getlocalvar("z"+self);
 	float jumpH	= getentityproperty(self, "jumpheight");
 
+	if(!selfAlive()){return;}
+
 	if(Vx != NULL() && Vz != NULL()){tossentity(self, jumpH, Vx, Vz/2);}
 }
 
 void stop()
 {//Stop movement and changes speed to 0!
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
 
 	changeentityproperty(self, "velocity", 0, 0, 0);
 	changeentityproperty(self, "speed", 0, 0, 0);
@@ -94,6 +112,7 @@ void target(float Velx, float Velz)
  //Check subtype and player minZ to avoid targeting decoration enemies, like Shiva/Mr.X waiting to fight in the last stage
 	void self 	 = getlocalvar("self");
 	void found	 = findtarget(self); //FIND TARGET
+	if(!selfAlive()){return;}
 	if(found != NULL()) {
 		void subType = getentityproperty(found, "subtype"); //GET TARGET'S SUBTYPE
 		int targetVulnerable	= getentityproperty(found, "vulnerable");
@@ -162,6 +181,9 @@ void targetJump()
  //Check subtype and player minZ to avoid targeting decoration enemies, like Shiva/Mr.X waiting to fight in the last stage
 	void self 	 = getlocalvar("self");
 	void found	 = findtarget(self); //FIND TARGET
+
+	if(!selfAlive()){return;}
+
 	void subType = getentityproperty(found, "subtype"); //GET TARGET'S SUBTYPE
 	int dir 	 = getentityproperty(self, "direction"); //GET PLAYER'S FACING DIRECTION
 	float x 	 = getentityproperty(self, "x"); //GET PLAYER'S X COORDINATE
@@ -226,6 +248,8 @@ void targetXMove(float xDistance, int dir) {
 	int selfX 		= getentityproperty(self, "x");
 	int selfZ 		= getentityproperty(self, "z");
 
+	if(!selfAlive()){return;}
+
 	if(selfDir == 0){xDistance = -xDistance;}
 	if(selfDir == 0){changeentityproperty(self, "direction", 1);}else{changeentityproperty(self, "direction", 0);}
 
@@ -249,6 +273,8 @@ void targetMove(float dx, float dz, int vDir)
 	void target = findtarget(self);
 	int x 		= getentityproperty(self, "x");
 	int z 		= getentityproperty(self, "z");
+
+	if(!selfAlive()){return;}
 
 	if(target != NULL()){
 		int tDir	= getentityproperty(target, "direction");
@@ -303,6 +329,8 @@ void targetMovep(float dx, float dz, int vDir)
 	int x 		= getentityproperty(self, "x");
 	int z 		= getentityproperty(self, "z");
 
+	if(!selfAlive()){return;}
+
 	if(target != NULL()){
 		int tDir	= getentityproperty(target, "direction");
 		int Tx 		= getentityproperty(target, "x");
@@ -346,6 +374,8 @@ void copyMove()
 	float xdir 	= getentityproperty(self,"xdir");
 	float zdir 	= getentityproperty(self,"zdir");
 
+	if(!selfAlive()){return;}
+
 	clearlocalvar();
 	setlocalvar("xVel", xdir);
 	setlocalvar("zVel", zdir);
@@ -357,6 +387,8 @@ void pasteMove()
 	float Vx  = getlocalvar("xVel");
 	float Vz  = getlocalvar("zVel");
 
+	if(!selfAlive()){return;}
+
 	if(Vx!=NULL() && Vz!=NULL()){changeentityproperty(self, "velocity", Vx, Vz);}
 }
 
@@ -365,6 +397,8 @@ void pasteMovex(float rate)
 	void self = getlocalvar("self");
 	float Vx  = getlocalvar("xVel")*rate;
 	float Vz  = getlocalvar("zVel")*rate;
+
+	if(!selfAlive()){return;}
 
 	if(Vx!=NULL() && Vz!=NULL()){changeentityproperty(self, "velocity", Vx, Vz);}
 }
@@ -382,6 +416,8 @@ void antiWall(int distX, int moveX, int distZ)
 	int subWall		= getentityproperty(self, "subject_to_wall");
 	float W;
 	float Wz;
+
+	if(!selfAlive()){return;}
 
 	if(direction == 0){ //Is entity facing left?
 		distX = -distX;
@@ -416,6 +452,8 @@ void antiHole(int distX, int type)
 	int subHole		= getentityproperty(self, "subject_to_hole");
 	int flipDir;
 	int H;
+
+	if(!selfAlive()){return;}
 
 	if(direction == 0){
 		distX   = -distX;

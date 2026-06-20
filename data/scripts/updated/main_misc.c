@@ -43,7 +43,7 @@ void showVersion()
 	void text1		= "MOD By iintothewind V.";	//TEXT "V"
 	void text2		= "SOR2XCombo B.";	//TEXT "B"
 	void version	= "2.3.1";	//CURRENT GAME VERSION NUMBER
-	void build		= "20260531";	//RECOMENDED OPENBOR BUILD NUMBER
+	void build		= "20260619";	//RECOMENDED OPENBOR BUILD NUMBER
 	int yPos		= 262;
 	int font0		= 0;
 	int font1		= 1;

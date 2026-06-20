@@ -1,4 +1,5 @@
 #include "data/scripts/assets.h"
+#import "data/scripts/main.c"
 
 void main()
 {//Play engine sample and spawn smoke according to xDir
@@ -9,7 +10,6 @@ void main()
 		int x		= getentityproperty(self, "x");
 		int y		= getentityproperty(self, "y");
 		int z		= getentityproperty(self, "z");
-		int dead   	= getentityproperty(self, "dead");
 		float xDir 	= getentityproperty(self, "xdir");
 		float xDif 	= 20;
 		float xPos 	= openborvariant("xpos");
@@ -18,7 +18,7 @@ void main()
 		float time 	= openborvariant("elapsed_time");
 		float rate 	= 20;
 
-		if(dead == 0){
+		if(selfAlive()){
 			if(xDir < 0){
 				if(time%rate == 0){
 					void gas;

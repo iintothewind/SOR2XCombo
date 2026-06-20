@@ -1,16 +1,26 @@
-#import "data/scripts/didhit/main.c"
+#import "data/scripts/main.c"
+
+void grabAbort()
+{//Emergency release when grabber dies mid-animation (health<=0, dead still 0)
+	void self = getlocalvar("self");
+
+	grabRelease(self);
+	setidle(self);
+}
 
 void grabStart()
 {//Grab Starter for grab moves
  //Use SLAM or THROW after using this
 	void self 	= getlocalvar("self");
 	void target = getentityvar(self,"grabbed");
+
+	if(!selfAlive()){grabAbort();return;}
+
 	if(target == NULL()){
 		target = getentityproperty(self, "grabbing");
-		int targetDead	= getentityproperty(target,"dead");
 		int targetInvincible	= getentityproperty(target, "invincible");
 
-		if(target == NULL() || targetDead == 1 || targetInvincible == 1){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
+		if(target == NULL() || !entityAlive(target) || targetInvincible == 1){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
 			setidle(self);
 		}else{
 			setentityvar(self, "grabbed", target);
@@ -37,11 +47,12 @@ void grabStart2()
 	void self 	= getlocalvar("self");
 	void target = getentityvar(self,"grabbed");
 
+	if(!selfAlive()){grabAbort();return;}
+
 	if(target == NULL()){
 		target = getentityproperty(self, "opponent");
-		int targetDead	= getentityproperty(target,"dead");
 		int targetInvincible	= getentityproperty(target, "invincible");
-		if(target == NULL() || targetDead == 1 || targetInvincible == 1){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
+		if(target == NULL() || !entityAlive(target) || targetInvincible == 1){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
 			setidle(self);
 		}else{
 			setentityvar(self, "grabbed", target);
@@ -67,16 +78,16 @@ void position(int frame, float dx, float dy, float dz, int face)
  //Use grabstart 1st before using this
 	void self 	= getlocalvar("self");
 	void target = getentityvar(self,"grabbed");
-	int dead	= getentityproperty(target,"dead");
+
+	if(!selfAlive()){grabAbort();return;}
 
 	if(target != NULL()){
-		if(dead == 1){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
-			bindentity(target, NULL());
+		if(!entityAlive(target)){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
+			grabRelease(self);
 			damageentity(target, self, 0, 1, openborconstant("ATK_NORMAL"));
 			damageentity(self, self, 0, 1, openborconstant("ATK_NORMAL"));
 			lockMpG();
 			specialCostG(0);
-			setentityvar(self, "grabbed", NULL());
 		}else{
 			updateframe(target, frame);
 			bindentity(target, self, dx, dz, dy, face, 0);
@@ -91,6 +102,8 @@ void slam(int damage, int type, int Vx, int Vy, int Vz, int face)
 	int tDir 	= getentityproperty(target,"direction");
 	int vDir;
 
+	if(!selfAlive()){grabAbort();return;}
+
 	if(face == 0){ //SAME FACING?
 		vDir = tDir;
 	}
@@ -104,6 +117,11 @@ void slam(int damage, int type, int Vx, int Vy, int Vz, int face)
 	}
 
 	if(target != NULL()){
+		if(!entityAlive(target)){
+			grabRelease(self);
+			return;
+		}
+
 		void eType = getentityproperty(target,"type");
 		int dir	= getentityproperty(target,"direction");
 		void atkType;
@@ -140,6 +158,8 @@ void throw(int damage, int type, int Vx, int Vy, int Vz, int face)
 	int tDir 	= getentityproperty(target,"direction");
 	int vDir;
 
+	if(!selfAlive()){grabAbort();return;}
+
 	if(face == 0){ //SAME FACING?
 		vDir = tDir;
 	}
@@ -153,6 +173,11 @@ void throw(int damage, int type, int Vx, int Vy, int Vz, int face)
 	}
 
 	if(target != NULL()){
+		if(!entityAlive(target)){
+			grabRelease(self);
+			return;
+		}
+
 		void eType = getentityproperty(target,"type");
 		int dir    = getentityproperty(target,"direction");
 		void atkType;
@@ -254,9 +279,10 @@ void grabEnd()
 	void self 	= getlocalvar("self");
 	void target = getentityvar(self,"grabbed");
 
+	if(!selfAlive()){grabAbort();return;}
+
 	if(target != NULL()){
-		int dead	= getentityproperty(target,"dead");
-		if(dead == 1){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
+		if(!entityAlive(target)){ //USED WHEN PLAYER DIES BY TIME OVER AND THE GRABBER IS THE ENEMY
 			finishGrab();
 		}else{
 			changeentityproperty(target,"damage_on_landing",0);
@@ -465,6 +491,8 @@ void doGrab(int flag)
 	void self  = getlocalvar("self");
 	void target;
 
+	if(!selfAlive()){grabAbort();return;}
+
 	if(flag == 0){
 		target = getentityproperty(self,"grabbing");
 	}else{
@@ -495,11 +523,13 @@ void landGrab()
 {//Grab target with normal grab
 	void self  = getlocalvar("self");
 	void target = getentityproperty(self,"opponent");
+
+	if(!selfAlive()){grabAbort();return;}
+
 	if(target == NULL()) {
 		target = getentityproperty(self,"grabbing");
 	}
 
-	int targetDead	= getentityproperty(target,"dead");
 	int targetInvincible	= getentityproperty(target, "invincible");
 	void targetAni 		= getentityproperty(target, "animationID");
 	int targetX 		= getentityproperty(target,"x");
@@ -514,7 +544,7 @@ void landGrab()
 	&& targetAni != openborconstant("ANI_FREESPECIAL")
 	&& targetType != openborconstant("TYPE_OBSTACLE")
 	&& targetSubType != openborconstant("SUBTYPE_NOTGRAB")
-	&& targetDead == 0){
+	&& entityAlive(target)){
 		setglobalvar("armorResist"+self, NULL());
 		changeentityproperty(self, "blink", 0);
 		changeentityproperty(self, "aiflag", "invincible", 0);

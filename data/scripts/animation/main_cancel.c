@@ -9,6 +9,8 @@ void cancel(int xMin, int xMax, int yMin, int yMax, int zMin, int zMax, void ani
 	int z 		= getentityproperty(self, "z");
 	int dir 	= getentityproperty(self, "direction");
 
+	if(!selfAlive()){return;}
+
 	if(target != NULL()){
 		int Tx = getentityproperty(target, "x");
 		int Ty = getentityproperty(target, "y");
@@ -35,9 +37,8 @@ void cancelMp(int xMin, int xMax, int yMin, int yMax, int limit, void ani)
 	int y 		= getentityproperty(self, "y");
 	int mp		= getentityproperty(self, "mp");
 	int dir 	= getentityproperty(self, "direction");
-	int dead	= getentityproperty(self, "dead");
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		if(mp >= limit){
 			int Tx = getentityproperty(target, "x");
 			int Ty = getentityproperty(target, "y");
@@ -66,9 +67,8 @@ void cancelHp(int xMin, int xMax, int yMin, int yMax, int hpPercent, void ani)
 	float maxHp = getentityproperty(self,"maxhealth");
 	float hp 	= getentityproperty(self,"health");
 	int dir 	= getentityproperty(self, "direction");
-	int dead	= getentityproperty(self, "dead");
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		if(hp > maxHp*hpPercent/100){
 			int Tx = getentityproperty(target, "x");
 			int Ty = getentityproperty(target, "y");
@@ -94,10 +94,9 @@ void cancelRandom(int xMin, int xMax, int yMin, int yMax, int limit, void ani)
 	int y 		= getentityproperty(self, "y");
 	int mp 		= getentityproperty(self, "mp");
 	int dir 	= getentityproperty(self, "direction");
-	int dead	= getentityproperty(self, "dead");
 	float iR 	= rand()%50+50;
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		int Tx = getentityproperty(target, "x");
 		int Ty = getentityproperty(target, "y");
 		int Dx = Tx - x;
@@ -126,9 +125,8 @@ void cancelHit(int xMin, int xMax, int yMin, int yMax, int limit, void ani)
 	int mp		 = getentityproperty(self, "mp");
 	int dir 	 = getentityproperty(self, "direction");
 	int hit		 = getentityproperty(self, "animhits");
-	int dead	 = getentityproperty(self, "dead");
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		int Tx = getentityproperty(target, "x");
 		int Ty = getentityproperty(target, "y");
 		int Dx = Tx - x;
@@ -161,9 +159,8 @@ void cancelHeight(int xMin, int xMax, int height, void ani)
 	int y 		= getentityproperty(self, "y");
 	int base	= getentityproperty(self, "base");
 	int dir 	= getentityproperty(self, "direction");
-	int dead	= getentityproperty(self, "dead");
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		if(y - base > height){
 			int Tx = getentityproperty(target, "x");
 			int Dx = Tx - x;
@@ -188,9 +185,8 @@ void cancelHeightHit(int xMin, int xMax, int height, void ani)
 	int base	= getentityproperty(self, "base");
 	int dir 	= getentityproperty(self, "direction");
 	int hit		 = getentityproperty(self, "animhits");
-	int dead	= getentityproperty(self, "dead");
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		if(hit >= 1 && y - base > height){
 			int Tx = getentityproperty(target, "x");
 			int Dx = Tx - x;
@@ -216,9 +212,8 @@ void cancelHeightMp(int xMin, int xMax, int height, void ani, int cost)
 	int dir 	= getentityproperty(self, "direction");
 	int mp		 = getentityproperty(self, "mp");
 	int hit		 = getentityproperty(self, "animhits");
-	int dead	= getentityproperty(self, "dead");
 
-	if(target != NULL() && dead == 0){
+	if(target != NULL() && selfAlive()){
 		if(hit >= 1 && mp > cost && y - base > height){
 			int Tx = getentityproperty(target, "x");
 			int Dx = Tx - x;
@@ -246,10 +241,9 @@ void cancelHeightRnd(int xMin, int xMax, int height, void ani, int cost)
 	int dir 	= getentityproperty(self, "direction");
 	int mp		 = getentityproperty(self, "mp");
 	int hit		 = getentityproperty(self, "animhits");
-	int dead	= getentityproperty(self, "dead");
 	int random = rnd(100);
 
-	if(target != NULL() && dead == 0 && random <= 50){
+	if(target != NULL() && selfAlive() && random <= 50){
 		if(hit >= 1 && mp > cost && y - base > height){
 			int Tx = getentityproperty(target, "x");
 			int Dx = Tx - x;
@@ -275,6 +269,8 @@ void cancelBack(void ani)
 	int x		= getentityproperty(self,"x");
 	int Tx		= getentityproperty(target,"x");
 
+	if(!selfAlive()){return;}
+
 	//FACING LEFT?
 	if(dir == 0){x = -x;Tx = -Tx;}
 
@@ -285,10 +281,9 @@ void cancelBack(void ani)
 void cancelFall(float chance, void ani)
 {//Cancel throw or slam fall RANDOMLY with defined animation (ENEMIES/JET FALL)
 	void self  = getlocalvar("self");
-	int health = getentityproperty(self,"health");
 	float iR   = rand()%50+50;
 
-	if(health >= 1){
+	if(selfAlive()){
 		if(iR >= 0 && iR <= chance){executeanimation(self, openborconstant(ani), 1);}
 	}
 }
@@ -298,6 +293,8 @@ void cancelVault(void ani)
  //Used if another entity hit the grabbed entity during vault animation
 	void self 	= getlocalvar("self");
 	void target = getentityproperty(self, "grabbing");
+
+	if(!selfAlive()){return;}
 
 	if(target == NULL()){
 		changeentityproperty(self, "takeaction", "common_grabattack");

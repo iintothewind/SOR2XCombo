@@ -3,6 +3,9 @@
 void partnerMenu()
 {//Changes options in Partner Menu
 	void self 	 	= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void pMode 	 	= getglobalvar("partnerMode");
 	void pAggre	 	= getglobalvar("partnerAggression");
 	void pFood 	 	= getglobalvar("partnerGetFood");
@@ -38,6 +41,9 @@ void partnerMenu()
 void partnerAI()
 {//Change some rules of A.I. gameplay
 	void self 	 = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void player1 = getplayerproperty(0, "entity");
 	void player2 = getplayerproperty(1, "entity");
 	void player3 = getplayerproperty(2, "entity");
@@ -163,7 +169,7 @@ void partnerAI()
 	float screenSpeed = 0.5;
 
 	//DIRECTION LEFT
-	if(health > 0){
+	if(selfAlive()){
 		if(openborvariant("current_branch") == "sor3_st3b"){ //BULLDOZER STAGE
 			if(x >= xPos+hRes-xDist){
 				changelevelproperty("scrollspeed", 0);
@@ -230,6 +236,9 @@ void partnerMap()
 void partnerAni()
 {//Manage partner animations automatically according to some opponents
 	void self	= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void target	= findtarget(self);
 	void ani	= getentityproperty(self, "animationID");
 	void tName	= getentityproperty(target, "defaultname");
@@ -299,6 +308,9 @@ void calcWalkSpeedRate(void target) {
 void enemyAI()
 {//Script to improve the enemy "aimoves"
 	void self		= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void target		= findtarget(self);
 	float time		= openborvariant("elapsed_time");
 	int aimove		= getentityproperty(self, "aimove");
@@ -360,6 +372,9 @@ void enemyAI()
 void smartDodge()
 {//Create a logic to make enemies to use the "dodge" animation, same as the "block" logic
 	void self = getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	int blockValid = getentityproperty(self, "animvalid", openborconstant("ANI_BLOCK"));
 	int dodgeValid = getentityproperty(self, "animvalid", openborconstant("ANI_DODGE"));
 	int aimove		= getentityproperty(self, "aimove");
@@ -427,14 +442,16 @@ void smartDodge()
 void rooFlee()
 {//Script to change some properties when defined entity is dead (ROO FLEE WHEN YOUR TAMER IS DEAD)
 	void self 	= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void tamer	= getentityvar(self, "tamer");
-	int dead	= getentityproperty(tamer, "dead");
 	int detect	= getentityproperty(self, "detect");
 	float x		= getentityproperty(self, "x");
 	float xPos	= openborvariant("xpos");
 
 	//CURRENT TAMER IS DEAD?? FLEE!!!
-	if(dead == 1){
+	if(tamer != NULL() && !entityAlive(tamer)){
 		changeentityproperty(self, "hostile", "type_enemy", "type_enemy");
 		changeentityproperty(self, "detect", 2);
 		changeentityproperty(self, "aimove", openborconstant("AIMOVE1_CHASE"));
@@ -451,6 +468,9 @@ void rooFlee()
 void monalisaCoop()
 {//Script to make teamwork jumpattack, a main character controls some actions of a secondary character in defined conditions
 	void self 	= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void ani	= getentityproperty(self, "animationID");
 	int dir		= getentityproperty(self, "direction");
 	int base	= getentityproperty(self, "base");
@@ -461,7 +481,6 @@ void monalisaCoop()
 
 	if(sister != NULL()) {
 		void tAni	= getentityproperty(sister, "animationID");
-		int Thealth	= getentityproperty(sister, "health");
 		int Tx		= getentityproperty(sister, "x");
 		int Ty		= getentityproperty(sister, "y");
 		int Tz		= getentityproperty(sister, "z");
@@ -470,7 +489,7 @@ void monalisaCoop()
 
 		if(dir == 0){difX = -difX;}
 
-		if(Thealth > 0){
+		if(entityAlive(sister)){
 			if(difX < 48 && difX > 24 && y <= base && Ty == base && difZ < 6 && difZ > -6){ //CHECK SECONDARY CHARACTER POSITION
 				if(ani == openborconstant("ANI_IDLE") || ani == openborconstant("ANI_WALK")){ //CHECK MAIN CHARACTER ANIMATION
 					if(tAni == openborconstant("ANI_IDLE") || tAni == openborconstant("ANI_WALK")){ //CHECK SECONDARY CHARACTER ANIMATION
@@ -516,46 +535,47 @@ void loadEnemyRushLimit() {
 
 void enemyRushControl() {
 	void self 	= getlocalvar("self");
-	if(self != NULL()) {
-		int base	= getentityproperty(self, "base");
-		int height		= getentityproperty(self, "y");
-		int rush	 = getentityproperty(self,"rush_count");
-		void animId  = getentityproperty(self,"animationID");
-		int aimove		= getentityproperty(self, "aimove");
-		int blockValid = getentityproperty(self, "animvalid", openborconstant("ANI_BLOCK"));
-		int dodgeValid = getentityproperty(self, "animvalid", openborconstant("ANI_DODGE"));
-		void grabbedTarget = getentityvar(self,"grabbed");
-		void grabbingTarget = getentityproperty(self, "grabbing");
-		int rushLimit = loadEnemyRushLimit();
-		float time		= openborvariant("elapsed_time");
-		float wait	= 500;
 
-		if(getglobalvar("enemyRushLimit") != "unlimited") {
-			if((getlocalvar("nextRushControl"+self) == NULL() || getlocalvar("nextRushControl"+self) < time) && rush >= rushLimit && base == height){
-				if(animId != openborconstant("ANI_GRAB")
-				&& animId != openborconstant("ANI_GRABBED")
-				&& animId != openborconstant("ANI_GRABATTACK")
-				&& animId != openborconstant("ANI_GRABATTACK2")
-				&& animId != openborconstant("ANI_GRABUP")
-				&& animId != openborconstant("ANI_GRABUP2")
-				&& animId != openborconstant("ANI_GRABDOWN")
-				&& animId != openborconstant("ANI_GRABDOWN2")
-				&& animId != openborconstant("ANI_GRABFORWARD")
-				&& animId != openborconstant("ANI_GRABFORWARD2")
-				&& animId != openborconstant("ANI_GRABBACKWARD")
-				&& animId != openborconstant("ANI_GRABBACKWARD2")
-				&& grabbedTarget == NULL()
-				&& grabbingTarget == NULL()) {
-					setlocalvar("nextRushControl"+self, time+wait);
-					if(dodgeValid) {
-						executeanimation(self, openborconstant("ANI_DODGE"), 0);
-					} else if(blockValid) {
-						executeanimation(self, openborconstant("ANI_BLOCK"), 0);
-					} else {
-						executeanimation(self, openborconstant("ANI_IDLE"), 0);
-					}
-					changeentityproperty(self, "rush_count", 0);
+	if(self == NULL() || !entityAlive(self)){return;}
+
+	int base	= getentityproperty(self, "base");
+	int height		= getentityproperty(self, "y");
+	int rush	 = getentityproperty(self,"rush_count");
+	void animId  = getentityproperty(self,"animationID");
+	int aimove		= getentityproperty(self, "aimove");
+	int blockValid = getentityproperty(self, "animvalid", openborconstant("ANI_BLOCK"));
+	int dodgeValid = getentityproperty(self, "animvalid", openborconstant("ANI_DODGE"));
+	void grabbedTarget = getentityvar(self,"grabbed");
+	void grabbingTarget = getentityproperty(self, "grabbing");
+	int rushLimit = loadEnemyRushLimit();
+	float time		= openborvariant("elapsed_time");
+	float wait	= 500;
+
+	if(getglobalvar("enemyRushLimit") != "unlimited") {
+		if((getlocalvar("nextRushControl"+self) == NULL() || getlocalvar("nextRushControl"+self) < time) && rush >= rushLimit && base == height){
+			if(animId != openborconstant("ANI_GRAB")
+			&& animId != openborconstant("ANI_GRABBED")
+			&& animId != openborconstant("ANI_GRABATTACK")
+			&& animId != openborconstant("ANI_GRABATTACK2")
+			&& animId != openborconstant("ANI_GRABUP")
+			&& animId != openborconstant("ANI_GRABUP2")
+			&& animId != openborconstant("ANI_GRABDOWN")
+			&& animId != openborconstant("ANI_GRABDOWN2")
+			&& animId != openborconstant("ANI_GRABFORWARD")
+			&& animId != openborconstant("ANI_GRABFORWARD2")
+			&& animId != openborconstant("ANI_GRABBACKWARD")
+			&& animId != openborconstant("ANI_GRABBACKWARD2")
+			&& grabbedTarget == NULL()
+			&& grabbingTarget == NULL()) {
+				setlocalvar("nextRushControl"+self, time+wait);
+				if(dodgeValid) {
+					executeanimation(self, openborconstant("ANI_DODGE"), 0);
+				} else if(blockValid) {
+					executeanimation(self, openborconstant("ANI_BLOCK"), 0);
+				} else {
+					executeanimation(self, openborconstant("ANI_IDLE"), 0);
 				}
+				changeentityproperty(self, "rush_count", 0);
 			}
 		}
 	}

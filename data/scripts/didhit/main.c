@@ -218,14 +218,13 @@ void dropv(void ani, float xMult, float yVel, int changeDir, int dropFlag)
 	void target	= getlocalvar("damagetaker");
 	void sType	= getentityproperty(target,"subtype");
 	void vAniID	= getentityproperty(self,"animationID");
-	int tHealth	= getentityproperty(target,"health");
 	int blocked	= getlocalvar("blocked");
 	int drop	= getlocalvar("drop");
 	int height	= getentityproperty(target,"y");
 	int base	= getentityproperty(target,"base");
 	float xVel	= getentityproperty(target,"xdir");
 
-	if(tHealth >= 1){
+	if(entityAlive(target)){
 		if(blocked == 0){
 			if(drop == dropFlag){
 				if(sType != openborconstant("SUBTYPE_NOTGRAB")){
@@ -247,7 +246,6 @@ void sor4Juggle()
 		void self	= getlocalvar("self");
 		void target	= getlocalvar("damagetaker");
 		void sType	= getentityproperty(target,"subtype");
-		int health	= getentityproperty(target,"health");
 		int dmg 	= getlocalvar("damage");
 		int blocked	= getlocalvar("blocked");
 		int drop	= getlocalvar("drop");
@@ -257,7 +255,7 @@ void sor4Juggle()
 		float xMult	= 4;
 		float yVel	= 1;
 
-		if(health >= 1){
+		if(entityAlive(target)){
 			if(dmg > 0){
 				if(blocked == 0){
 					if(drop == 0){
@@ -279,10 +277,9 @@ void bowling()
 	void atkType = getlocalvar("attacktype");
 	void vType	 = getentityproperty(self,"type");
 	void sType	 = getentityproperty(target,"subtype");
-	int dead	 = getentityproperty(target,"dead");
 	int blocked  = getlocalvar("blocked");
 
-	if(dead == 0 && blocked == 0){
+	if(entityAlive(target) && blocked == 0){
 		if(atkType == openborconstant("ATK_NORMAL8")){
 			if(sType != openborconstant("SUBTYPE_NOTGRAB")){
 				if(vType == openborconstant("TYPE_PLAYER") || vType == openborconstant("TYPE_NPC")){
@@ -333,6 +330,9 @@ void restoreOpponent()
 {//Restore the last opponent when you are in a "falling" instance and hit other entities in mid-air
  //Used to avoid the opponent "change" when hit other entities in mid-air during a throw/slam, I don't know if it is an engine bug or not
 	void self	= getlocalvar("self");
+
+	if(!selfAlive()){return;}
+
 	void target	= getentityvar(self, "opponent");
 	void ani	= getentityproperty(self, "animationID");
 

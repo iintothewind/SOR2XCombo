@@ -1,3 +1,33 @@
+int entityAlive(void entity)
+{//True when entity exists, is not flagged dead, and still has health
+	if(entity == NULL()){return 0;}
+	if(getentityproperty(entity, "dead") != 0){return 0;}
+	if(getentityproperty(entity, "health") <= 0){return 0;}
+	return 1;
+}
+
+int selfAlive()
+{//True when the current script entity is still alive
+	return entityAlive(getlocalvar("self"));
+}
+
+void grabRelease(void grabber)
+{//Unbind and unfreeze target still linked to grabber
+	void target = getentityvar(grabber, "grabbed");
+
+	if(target == NULL()){return;}
+
+	bindentity(target, NULL());
+	changeentityproperty(target, "damage_on_landing", 0);
+	changeentityproperty(target, "aiflag", "falling", 0);
+	changeentityproperty(target, "aiflag", "drop", 0);
+	changeentityproperty(target, "aiflag", "projectile", 0);
+	changeentityproperty(target, "aiflag", "frozen", 0);
+	changeentityproperty(target, "takeaction", "common_animation_normal");
+	setidle(target);
+	setentityvar(grabber, "grabbed", NULL());
+}
+
 void changeLives(int player)
 {//Change lives according to global variable "lives" check
 
