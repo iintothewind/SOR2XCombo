@@ -70,7 +70,6 @@ void loadCfg()
 
 			//MISC
 			setglobalvar("arcadeLock", 			getfilestreamargument(cfg, pos, "int"));
-			setglobalvar("difficultPresetSync", getglobalvar("difficult"));
 		}
 		else
 		{
@@ -118,17 +117,6 @@ void applyDifficultyPreset()
 		setglobalvar("blockCost", "1");
 		setglobalvar("smarterEnemy", "on");
 	}
-
-	setglobalvar("difficultPresetSync", difficult);
-}
-
-void syncDifficultyPreset()
-{//Re-apply preset when difficult changed (keyall + menu draw)
-	void difficult = getglobalvar("difficult");
-	void synced = getglobalvar("difficultPresetSync");
-
-	if(difficult == NULL()){ return; }
-	if(difficult != synced){ applyDifficultyPreset(); }
 }
 
 void defaultCfg()

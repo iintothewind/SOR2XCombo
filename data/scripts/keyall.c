@@ -1,4 +1,3 @@
-#import "data/scripts/keyall/main_savecfg.c"
 #import "data/scripts/keyall/main_misc.c"
 #import "data/scripts/keyall/main_hiscore.c"
 #import "data/scripts/keyall/main_debugmode.c"

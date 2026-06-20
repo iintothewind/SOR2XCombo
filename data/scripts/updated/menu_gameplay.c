@@ -1,5 +1,3 @@
-#import "data/scripts/keyall/main_savecfg.c"
-
 void menuGameplay()
 {//Draw a Menu in/out game
 	void str;
@@ -73,7 +71,6 @@ void menuGameplay()
 	//DRAW MENU
 	if(openborvariant("current_scene") == "data/scenes/howto.txt" || getglobalvar("activeText") == "Extra"){
 		if(getglobalvar("subMenu") == "gameplay"){
-			syncDifficultyPreset();
 
 			str  = "difficult:";align = xPos1-strwidth(str, font0);
 			drawstring(align, yPos, font1, str, layer);
