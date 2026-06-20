@@ -156,12 +156,14 @@ Energy 连按两次
 
 ```text
 Difficulty: Normal 或 Hard
-Rush Heat: 9
+Lives: 9
+Rush Heat: 5
+Last Chance Recover: 33%
 Juggle System: 40
 OTG System: 10
 Random Boss: 1
-Smarter Enemy: Off 或默认
-Block Cost: 1
+Smarter Enemy: Off
+Block Cost: 0
 Enemy Life Rate: 100%
 ```
 

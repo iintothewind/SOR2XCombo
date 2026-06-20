@@ -43,6 +43,8 @@ void menuGameplay(int player)
 					if(getglobalvar("difficult") == "normal"){setglobalvar("difficult", "hard");}else
 					if(getglobalvar("difficult") == "hard"){setglobalvar("difficult", "mania");}else
 					if(getglobalvar("difficult") == "mania"){setglobalvar("difficult", "normal");}
+					setglobalvar("difficultPresetSync", NULL());
+					syncDifficultyPreset();
 				}
 
 				//IS SCROLL SPEED HIGHLIGHTED??
@@ -201,6 +203,7 @@ void menuGameplay(int player)
 					if(getglobalvar("blockCost") == "1"){setglobalvar("blockCost", "2");}else
 					if(getglobalvar("blockCost") == "2"){setglobalvar("blockCost", "off");}
 				}
+				syncDifficultyPreset();
 				saveCfg();
 			}
 
@@ -213,6 +216,8 @@ void menuGameplay(int player)
 					if(getglobalvar("difficult") == "normal"){setglobalvar("difficult", "mania");}else
 					if(getglobalvar("difficult") == "mania"){setglobalvar("difficult", "hard");}else
 					if(getglobalvar("difficult") == "hard"){setglobalvar("difficult", "normal");}
+					setglobalvar("difficultPresetSync", NULL());
+					syncDifficultyPreset();
 				}
 
 				//IS SCROLL SPEED HIGHLIGHTED??
@@ -371,6 +376,7 @@ void menuGameplay(int player)
 					if(getglobalvar("blockCost") == "2"){setglobalvar("blockCost", "1");}else
 					if(getglobalvar("blockCost") == "1"){setglobalvar("blockCost", "off");}
 				}
+				syncDifficultyPreset();
 				saveCfg();
 			}
 		}

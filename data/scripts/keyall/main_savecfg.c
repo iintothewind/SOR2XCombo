@@ -70,6 +70,7 @@ void loadCfg()
 
 			//MISC
 			setglobalvar("arcadeLock", 			getfilestreamargument(cfg, pos, "int"));
+			setglobalvar("difficultPresetSync", getglobalvar("difficult"));
 		}
 		else
 		{
@@ -78,18 +79,12 @@ void loadCfg()
 	}
 }
 
-void defaultCfg()
-{//Restore default configuration file
+void applyDifficultyPreset()
+{//Apply linked Game Play options when difficulty changes
+	void difficult = getglobalvar("difficult");
 
-	//GAMEPLAY MENU
-	setglobalvar("difficult", "normal");
 	setglobalvar("enemyLifeRate", "100%");
 	setglobalvar("lives", 9);
-	setglobalvar("lastChance", "10%");
-	setglobalvar("counterAttackReward", "25%");
-	setglobalvar("rushHeat", "9");
-	setglobalvar("juggleSystem", "40");
-	setglobalvar("otgSystem", "4");
 	setglobalvar("enemyRushLimit", "unlimited");
 	setglobalvar("randomBoss", 1);
 	setglobalvar("lockMp", "on");
@@ -97,8 +92,51 @@ void defaultCfg()
 	setglobalvar("walls", "all_types");
 	setglobalvar("screenEdge", "all_types");
 	setglobalvar("itemDrop", "mixed");
-	setglobalvar("smarterEnemy", "on");
-	setglobalvar("blockCost", "2");
+	setglobalvar("smarterEnemy", "off");
+	setglobalvar("blockCost", "off");
+
+	if(difficult == "normal"){
+		setglobalvar("lastChance", "33%");
+		setglobalvar("counterAttackReward", "100%");
+		setglobalvar("rushHeat", "5");
+		setglobalvar("juggleSystem", "unlimited");
+		setglobalvar("otgSystem", "unlimited");
+	}
+	if(difficult == "hard"){
+		setglobalvar("lastChance", "25%");
+		setglobalvar("counterAttackReward", "50%");
+		setglobalvar("rushHeat", "7");
+		setglobalvar("juggleSystem", "40");
+		setglobalvar("otgSystem", "6");
+	}
+	if(difficult == "mania"){
+		setglobalvar("lastChance", "20%");
+		setglobalvar("counterAttackReward", "25%");
+		setglobalvar("rushHeat", "9");
+		setglobalvar("juggleSystem", "30");
+		setglobalvar("otgSystem", "4");
+		setglobalvar("blockCost", "1");
+		setglobalvar("smarterEnemy", "on");
+	}
+
+	setglobalvar("difficultPresetSync", difficult);
+}
+
+void syncDifficultyPreset()
+{//Re-apply preset when difficult changed (keyall + menu draw)
+	void difficult = getglobalvar("difficult");
+	void synced = getglobalvar("difficultPresetSync");
+
+	if(difficult == NULL()){ return; }
+	if(difficult != synced){ applyDifficultyPreset(); }
+}
+
+void defaultCfg()
+{//Restore default configuration file
+
+	//GAMEPLAY MENU
+	setglobalvar("difficult", "normal");
+	applyDifficultyPreset();
 
 	//CONTROLS MENU
 	setglobalvar("blockType", "hold");
