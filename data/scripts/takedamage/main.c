@@ -82,31 +82,35 @@ void lastChance() {
 	void self = getlocalvar("self");
 	int height	 = getentityproperty(self,"y");
 	int base	 = getentityproperty(self,"base");
-	void target = getentityproperty(self,"opponent");
+	void attacker = getlocalvar("attacker");
 	void type 	= getentityproperty(self,"type");
 	int atkType	= getlocalvar("attacktype");
-	float damage 	= getlocalvar("damage");
+	int power	= 1;
 	int dead	= getentityproperty(self,"dead");
 	int fall	= getentityproperty(self,"aiflag","falling");
 	float hp	 = getentityproperty(self,"health");
 	float maxHp	= getentityproperty(self, "maxhealth");
 	float gp		= getentityproperty(self,"guardpoints");
 	float maxGp	= getentityproperty(self,"maxguardpoints");
-	void ani = getentityproperty(self,"animationID");
 	void grabbed = getentityvar(self,"grabbed");
 	void grabbing = getentityproperty(self, "grabbing");
 	void lastChance = getglobalvar("lastChance");
+
+	if(attacker != NULL()){power = getentityproperty(attacker, "offense");}
+	int damage = getlocalvar("damage") * power;
 
 	if(lastChance != "off" && dead == 0 && fall == 0 && height == base
 	&& grabbed == NULL() && grabbing == NULL()
 	&& (type == openborconstant("TYPE_PLAYER") || type == openborconstant("TYPE_NPC"))
 	&& atkType != openborconstant("ATK_NORMAL10") && atkType != openborconstant("ATK_TIMEOVER")){
 		float recoverRate = loadRecoverRate();
-		if(hp < maxHp*0.1 && damage >= hp && gp >= maxGp*0.5){
+		int lethal = (hp <= 0) || (damage >= hp);
+
+		if(lethal && hp < maxHp*0.1 && gp >= maxGp*0.5){
 			changeentityproperty(self, "guardpoints", 1);
 			changeentityproperty(self, "health", maxHp*recoverRate);
 			playsample(SAMPLE_GUARDBREAK, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
-		} else if(hp < maxHp*recoverRate && gp >= maxGp){
+		} else if(lethal && hp < maxHp*recoverRate && gp >= maxGp){
 			changeentityproperty(self, "guardpoints", 1);
 			changeentityproperty(self, "health", maxHp*recoverRate);
 			playsample(SAMPLE_GUARDBREAK, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
