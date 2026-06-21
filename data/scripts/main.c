@@ -1,8 +1,14 @@
 int entityAlive(void entity)
-{//True when entity exists, is not flagged dead, and still has health
+{//True when entity exists, is not flagged dead; enemies/NPCs must still have health
 	if(entity == NULL()){return 0;}
 	if(getentityproperty(entity, "dead") != 0){return 0;}
-	if(getentityproperty(entity, "health") <= 0){return 0;}
+
+	void type = getentityproperty(entity, "type");
+	if(type == openborconstant("TYPE_ENEMY")
+	|| type == openborconstant("TYPE_NPC")){
+		if(getentityproperty(entity, "health") <= 0){return 0;}
+	}
+
 	return 1;
 }
 
