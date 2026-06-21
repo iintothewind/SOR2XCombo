@@ -617,15 +617,14 @@ void specialCost()
 void quickRespawn()
 {//Enable/Disable quick respawn by changing the "nodieblink" property, work with global variable check
 	void self	= getlocalvar("self");
-	setglobalvar("quickRespawn", "on");
 	void quick	= getglobalvar("quickRespawn"); //Get quick respawn option.
 
-	if(quick == "on"){ //NODIEBLINK VALUE IS NOT 2??
+	if(quick == "on"){
 		changeentityproperty(self, "nodieblink", 2);
 	}
 	else
-	if(quick == "off"){ //NODIEBLINK VALUE IS NOT 0??
-		changeentityproperty(self, "nodieblink", 0);
+	if(quick == "off"){ //death 1 heroes: blink after DEATH anim (not 0, which expects FALL)
+		changeentityproperty(self, "nodieblink", 1);
 	}
 	changeentityproperty(self, "blink", 0);
 }
