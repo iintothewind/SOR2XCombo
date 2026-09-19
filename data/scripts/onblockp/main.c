@@ -163,8 +163,8 @@ void route()
 
 void detectRoute(void pName, void preview, void label)
 {//Function used to reduce the code size
-	if(getglobalvar(preview) != NULL()){free(getglobalvar("preview"));}
-	if(getglobalvar(label) != NULL()){free(getglobalvar("label"));}
+	if(getglobalvar("preview") != NULL()){free(getglobalvar("preview"));}
+	if(getglobalvar("label") != NULL()){free(getglobalvar("label"));}
 
 	setglobalvar("pName", pName);
 	setglobalvar("branch", preview);
