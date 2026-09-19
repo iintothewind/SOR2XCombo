@@ -89,7 +89,7 @@ void screenJumping()
 	}
 }
 
-void edgeLock()
+void edgeUnlock()
 {//Unlock the screen edge (for enemies) according to defined animations, like SOR4
 
 	if(getglobalvar("screenEdge") == "all_types" || getglobalvar("screenEdge") == "lock+bouncing" || getglobalvar("screenEdge") == "lock_only"){

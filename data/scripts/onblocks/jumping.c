@@ -4,5 +4,5 @@ void main()
 {
 	screenBouncing();
 	screenJumping();
-	edgeLock();
+	edgeUnlock();
 }
