@@ -19,16 +19,12 @@ void onspawnEnemy(void vAlias, float iMHealth, float iHealth, float iSpeed, floa
 	int addScore	= iScore/2*(pCount-1); //CALCULATE 25% OF THE TOTAL SCORE
 
 	//ADJUST DIFFICULT RULES
-	if(difficult == "hard"){ //ADD 50% MORE HEALTH, +0.2 SPEED AND +300 AGGRESSION POINTS
-		// iMHealth = iMHealth+addHealth1;
-		// iHealth  = iMHealth;
+	if(difficult == "hard"){ //SPEED +0.2, AGGRESSION +200
 		iSpeed   = iSpeed+addSpeed;
 		iAggre   = iAggre+addAggre;
 	}
 	else
-	if(difficult == "mania"){ //HEALTH AND AGGRESSION ADDED VALUE IS THE DOUBLE FROM HARD DIFFICULT
-		// iMHealth = iMHealth+addHealth1*2;
-		// iHealth  = iMHealth;
+	if(difficult == "mania"){ //SPEED +0.4, AGGRESSION +400
 		iSpeed   = iSpeed+addSpeed*2;
 		iAggre 	 = iAggre+addAggre*2;
 	}
@@ -95,15 +91,11 @@ void onspawnBoss(void vAlias, float iMHealth, float iHealth, float iAggre, float
 	int addAggre	= 300;
 
 	//ADJUST DIFFICULT RULES
-	if(difficult == "hard"){ //ADD 25% MORE HEALTH AND +300 AGGRESSION POINTS
-		// iMHealth = iMHealth+addHealth1;
-		// iHealth  = iMHealth;
+	if(difficult == "hard"){ //AGGRESSION +300
 		iAggre 	 = iAggre+addAggre;
 	}
 	else
-	if(difficult == "mania"){ //HEALTH AND AGGRESSION ADDED VALUE IS THE DOUBLE FROM HARD DIFFICULT
-		// iMHealth = iMHealth+addHealth1*2;
-		// iHealth  = iMHealth;
+	if(difficult == "mania"){ //AGGRESSION +600
 		iAggre 	 = iAggre+addAggre*2;
 	}
 

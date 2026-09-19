@@ -302,15 +302,6 @@ void airGet()
 					tAnim == openborconstant("ANI_WALK")	||
 					tAnim == openborconstant("ANI_RUN")		){
 
-					//CALCULATE CHANCE
-					int iR = rand()%50+50;
-					int pR = 75; //25% CHANCE ON THE NOMAL DIFFICULTY
-
-					//INCREASE CHANCE ACCORDING TO THE DIFFICULTY
-					if(getglobalvar("difficulty") == "hard"){	pR = 50;} //50% CHANCE
-					if(getglobalvar("difficulty") == "mania"){	pR = 25;} //75% CHANCE
-
-					// if(iR > pR && vDir != tDir){
 					if(vDir != tDir){
 
 						//KNIFES, USED BY JACK
