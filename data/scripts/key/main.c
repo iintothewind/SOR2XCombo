@@ -589,10 +589,10 @@ void okBar()
     }
 }
 
-void mpCost(float cost)
+void mpCost(int cost)
 {//Spend some mp
     void self = getlocalvar("self");
-    float mp       = getentityproperty(self,"mp");
+    int mp = getentityproperty(self,"mp");
 
     if(mp >= cost) {
         changeentityproperty(self, "mp", mp-cost);
@@ -610,14 +610,24 @@ void hpCost(float cost)
     }
 }
 
-void gpCost(float cost)
+void gpCost(int cost)
 {//Spend some gp
     void self = getlocalvar("self");
-    float gp  = getentityproperty(self,"guardpoints");
-    if(gp >= cost) {
-        changeentityproperty(self, "guardpoints", gp-cost);
+    int maxGp = getentityproperty(self,"maxguardpoints");
+    float gp = getentityproperty(self,"guardpoints");
+
+    if(cost > 0) {
+        if(gp >= cost) {
+            changeentityproperty(self, "guardpoints", gp-cost);
+        } else {
+            changeentityproperty(self, "guardpoints", 0);
+        }
     } else {
-        changeentityproperty(self, "guardpoints", 0);
+        if(gp - cost >= maxGp) {
+            changeentityproperty(self, "guardpoints", maxGp);
+        } else {
+            changeentityproperty(self, "guardpoints", gp-cost);
+        }
     }
 }
 

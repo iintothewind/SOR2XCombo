@@ -498,11 +498,10 @@ void exception(void var, void value, int frame)
     if(getglobalvar(var) == value){updateframe(self, frame);}
 }
 
-void mpCost(float cost)
-{
+void mpCost(int cost)
+{//Spend some mp
     void self = getlocalvar("self");
-    float maxMp     = getentityproperty(self,"maxMp");
-    float mp       = getentityproperty(self,"mp");
+    int mp = getentityproperty(self, "mp");
 
     if(mp >= cost) {
         changeentityproperty(self, "mp", mp-cost);

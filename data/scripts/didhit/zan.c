@@ -182,7 +182,6 @@ void painLand()
             changeentityproperty(target, "aiflag", "jumping", 1);
             changeentityproperty(target,"aiflag","falling",1);
             changeentityproperty(target,"damage_on_landing",1);
-            changeentityproperty(target,"aiflag","falling",1);
             changeentityproperty(target,"aiflag","drop",0);
             changeentityproperty(target,"aiflag","projectile",0);
             changeentityproperty(target,"nograb",0);
