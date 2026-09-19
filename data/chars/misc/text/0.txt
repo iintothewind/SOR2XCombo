@@ -1,14 +1,14 @@
-name		0
-type		none
-shadow		0
-lifespan	2
-setlayer	100000
-antigravity	100
-alpha		6
-script		data/scripts/updateentity/texts.c
+name        0
+type        none
+shadow        0
+lifespan    2
+setlayer    100000
+antigravity    100
+alpha        6
+script        data/scripts/updateentity/texts.c
 
 anim idle
-	loop	0
-	delay	4
-	offset	1 1
-	frame	data/chars/misc/text/0.png
+    loop    0
+    delay    4
+    offset    1 1
+    frame    data/chars/misc/text/0.png

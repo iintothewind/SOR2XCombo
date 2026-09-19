@@ -2,5 +2,5 @@
 
 void main()
 {
-	menuLevel(0);
+    menuLevel(0);
 }

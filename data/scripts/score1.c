@@ -2,6 +2,6 @@
 
 void main()
 {
-	lockScore(0);
-	lifeScore(0);
+    lockScore(0);
+    lifeScore(0);
 }

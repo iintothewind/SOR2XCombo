@@ -1,229 +1,229 @@
-loadingbg	data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor2/st6a/bk00.png		0.8 1 0 0 0 0 1 1 1
-bglayer		data/bgs/sor2/st6a/bg00.png		0.3 1 -100 0 0 0 1 1 1 0 1 5 50 0.5
-bglayer		data/bgs/sor2/st6a/bg01.png		0.7 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-panel		data/bgs/sor2/st6a/_map.png		none	none
-fglayer		data/bgs/sor2/st6a/fg00.png		-150 -0.2 0 0 0 0 0 -1 -1 1 0 1 4 240 0.1 0 1
-fglayer		data/bgs/sor2/st6a/fg00.png		  75 -0.2 0 0 0 0 0  0 -1 1 6 1 4 240 0.1 0 1
-fglayer		data/bgs/sor2/st6a/fg01.png		 100 -0.4 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading2.png             1 -81 248 480 999 999 0
+background    data/bgs/sor2/st6a/bk00.png        0.8 1 0 0 0 0 1 1 1
+bglayer        data/bgs/sor2/st6a/bg00.png        0.3 1 -100 0 0 0 1 1 1 0 1 5 50 0.5
+bglayer        data/bgs/sor2/st6a/bg01.png        0.7 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+panel        data/bgs/sor2/st6a/_map.png        none    none
+fglayer        data/bgs/sor2/st6a/fg00.png        -150 -0.2 0 0 0 0 0 -1 -1 1 0 1 4 240 0.1 0 1
+fglayer        data/bgs/sor2/st6a/fg00.png          75 -0.2 0 0 0 0 0  0 -1 1 6 1 4 240 0.1 0 1
+fglayer        data/bgs/sor2/st6a/fg01.png         100 -0.4 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 6
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-load		Stage 3
-load		St6_Beach 3
+load        Stage 3
+load        St6_Beach 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-spawn		St6_Beach 1
-flip		1
-coords		1 1 0
-at			0
+spawn        St6_Beach 1
+flip        1
+coords        1 1 0
+at            0
 
 #########################################################################################
 
-spawn		KusanagiX 1
-map			1
-flip		0
-coords		240 200 400
-at			0
+spawn        KusanagiX 1
+map            1
+flip        0
+coords        240 200 400
+at            0
 
-spawn		KusanagiX 1
-map			2
-flip		0
-coords		200 220 300
-at			0
+spawn        KusanagiX 1
+map            2
+flip        0
+coords        200 220 300
+at            0
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		600 230 0
-at			50
+spawn        BasicX1 1
+map            3
+flip        1
+coords        600 230 0
+at            50
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-100 230 0
-at			100
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -100 230 0
+at            100
 
-spawn		BruceB 1
-map			3
-flip		1
-coords		600 230 0
-at			150
+spawn        BruceB 1
+map            3
+flip        1
+coords        600 230 0
+at            150
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-100 230 0
-at			200
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -100 230 0
+at            200
 
 wait
-at			350
+at            350
 
-group		4 4
-at			300
+group        4 4
+at            300
 
-spawn		KusanagiB 1
-map			3
-weapon		Kunai 1
-flip		1
-coords		600 190 0
-at			300
+spawn        KusanagiB 1
+map            3
+weapon        Kunai 1
+flip        1
+coords        600 190 0
+at            300
 
-spawn		KusanagiB 1
-map			3
-weapon		Kunai 1
-flip		1
-coords		-100 190 0
-at			300
+spawn        KusanagiB 1
+map            3
+weapon        Kunai 1
+flip        1
+coords        -100 190 0
+at            300
 
-spawn		BruceB 1
-map			3
-flip		1
-coords		600 230 0
-at			300
+spawn        BruceB 1
+map            3
+flip        1
+coords        600 230 0
+at            300
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-100 230 0
-at			300
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -100 230 0
+at            300
 
-spawn		BasicX3 1
-map			3
-flip		1
-coords		600 230 0
-at			300
+spawn        BasicX3 1
+map            3
+flip        1
+coords        600 230 0
+at            300
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-100 230 0
-at			300
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -100 230 0
+at            300
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-100 230 0
-at			300
+spawn        BossX1 1
+map            4
+flip        1
+coords        -100 230 0
+at            300
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-100 230 0
-at			300
+flip        1
+coords        -100 230 0
+at            300
 
 #########################################################################################
 
-group		1000 1000
-at			360
+group        1000 1000
+at            360
 
-spawn		JackB 1
-map			3
-flip		1
-coords		550 230 0
-at			400
+spawn        JackB 1
+map            3
+flip        1
+coords        550 230 0
+at            400
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		600 230 0
-at			450
+spawn        BasicX1 1
+map            3
+flip        1
+coords        600 230 0
+at            450
 
-spawn		BongoX 1
-map			3
-flip		1
-coords		550 230 0
-at			500
+spawn        BongoX 1
+map            3
+flip        1
+coords        550 230 0
+at            500
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		600 230 0
-at			550
+spawn        BasicX1 1
+map            3
+flip        1
+coords        600 230 0
+at            550
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		550 230 0
-at			600
+spawn        BasicX1 1
+map            3
+flip        1
+coords        550 230 0
+at            600
 
-spawn		BasicX3 1
-map			3
-flip		1
-coords		600 230 0
-at			650
+spawn        BasicX3 1
+map            3
+flip        1
+coords        600 230 0
+at            650
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		550 230 0
-at			700
+spawn        BasicX1 1
+map            3
+flip        1
+coords        550 230 0
+at            700
 
-spawn		BruceB 1
-map			3
-flip		1
-coords		600 230 0
-at			750
+spawn        BruceB 1
+map            3
+flip        1
+coords        600 230 0
+at            750
 
 
-group		4 4
-at			1100
+group        4 4
+at            1100
 
-spawn		RavenX 1
-map			2
-flip		1
-coords		550 230 0
-at			1100
+spawn        RavenX 1
+map            2
+flip        1
+coords        550 230 0
+at            1100
 
-spawn		RavenX 1
-map			2
-flip		1
-coords		600 260 0
-at			1100
+spawn        RavenX 1
+map            2
+flip        1
+coords        600 260 0
+at            1100
 
-spawn		RavenX 1
-map			3
-flip		1
-coords		-100 260 0
-at			1100
+spawn        RavenX 1
+map            3
+flip        1
+coords        -100 260 0
+at            1100
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			1100
+at            1100
 
-spawn		BossX1 1
-map			3
-flip		1
-coords		-50 230 0
-at			1100
+spawn        BossX1 1
+map            3
+flip        1
+coords        -50 230 0
+at            1100
 
-spawn		BossX1 1
-map			3
+spawn        BossX1 1
+map            3
 2pspawn
-flip		1
-coords		-50 230 0
-at			1100
+flip        1
+coords        -50 230 0
+at            1100

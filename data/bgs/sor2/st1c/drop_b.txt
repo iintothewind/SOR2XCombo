@@ -1,16 +1,16 @@
-name			St1_Drop_B
-type			none
-shadow			0
+name            St1_Drop_B
+type            none
+shadow            0
 animationscript data/scripts/animation/default.c
 
-load			St1_Drop
+load            St1_Drop
 
 anim idle
-	loop	1
-	delay	6
-	offset	1 200
-	@cmd graphics "sor2x" "St1_Drop"
-	frame	data/bgs/sor2/st1c/original/drop00.png
-	frame	data/bgs/sor2/st1c/original/drop01.png
-	frame	data/bgs/sor2/st1c/original/drop02.png
-	frame	data/bgs/sor2/st1c/original/drop03.png
+    loop    1
+    delay    6
+    offset    1 200
+    @cmd graphics "sor2x" "St1_Drop"
+    frame    data/bgs/sor2/st1c/original/drop00.png
+    frame    data/bgs/sor2/st1c/original/drop01.png
+    frame    data/bgs/sor2/st1c/original/drop02.png
+    frame    data/bgs/sor2/st1c/original/drop03.png

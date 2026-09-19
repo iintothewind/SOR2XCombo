@@ -1,535 +1,535 @@
 ##MAIN
-name				BigBenB
-type				enemy
+name                BigBenB
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				77
+antigravity            -1 #-1/-2/-3
+height                77
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-aimove				chase #ENEMY ONLY
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+aimove                chase #ENEMY ONLY
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onspawnscript		data/scripts/onspawn/bigben.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/default.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onspawnscript        data/scripts/onspawn/bigben.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/bigben/icon.png 1
+icon                data/chars/enemies/bigben/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/BossDie1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter1.png
-remap				data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter2.png
-remap				data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter3.png
-remap				data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter4.png
+remap                data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter1.png
+remap                data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter2.png
+remap                data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter3.png
+remap                data/chars/enemies/bigben/idle00.png data/chars/enemies/bigben/alter4.png
 
 ##LOADS
-load				Bongo_Fire
-load				Bongo_Fire_B
+load                Bongo_Fire
+load                Bongo_Fire_B
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	144 175
-	frame	data/chars/enemies/bigben/idle00.png
+    loop    0
+    delay    1
+    offset    144 175
+    frame    data/chars/enemies/bigben/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	144 175
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/idle00.png
-	frame	data/chars/enemies/bigben/idle01.png
+    loop    1
+    delay    16
+    offset    144 175
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/idle00.png
+    frame    data/chars/enemies/bigben/idle01.png
 
 anim walk
-	loop	1
-	delay	18
-	offset	144 175
-	bbox 	126 107 36 70
-	frame	data/chars/enemies/bigben/walk00.png
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/walk01.png
-	bbox 	126 107 36 70
-	frame	data/chars/enemies/bigben/walk02.png
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/walk03.png
+    loop    1
+    delay    18
+    offset    144 175
+    bbox     126 107 36 70
+    frame    data/chars/enemies/bigben/walk00.png
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/walk01.png
+    bbox     126 107 36 70
+    frame    data/chars/enemies/bigben/walk02.png
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	144 175
-	frame	data/chars/enemies/bigben/get00.png
+    loop    0
+    delay    16
+    offset    144 175
+    frame    data/chars/enemies/bigben/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	144 175
-	bbox 	126 109 36 68
-	frame	data/chars/enemies/bigben/grabbed00.png
+    loop    0
+    delay    8
+    offset    144 175
+    bbox     126 109 36 68
+    frame    data/chars/enemies/bigben/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	126 118 36 59
-	frame	data/chars/enemies/bigben/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     126 118 36 59
+    frame    data/chars/enemies/bigben/jumpdelay00.png
 
 anim walkoff
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	144 175
-	bbox 	131 117 48 34
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/grenade1.wav
-	@cmd jump 1
-	attack 131 117 48 34 4 1 0 0 10 12
-	frame	data/chars/enemies/bigben/jumpatk200.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    144 175
+    bbox     131 117 48 34
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/grenade1.wav
+    @cmd jump 1
+    attack 131 117 48 34 4 1 0 0 10 12
+    frame    data/chars/enemies/bigben/jumpatk200.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	126 118 36 59
-	sound	data/sounds/Jumpland2.wav
-	frame	data/chars/enemies/bigben/jumpland00.png
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     126 118 36 59
+    sound    data/sounds/Jumpland2.wav
+    frame    data/chars/enemies/bigben/jumpland00.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	144 175
-	bbox 	126 116 36 61
-	frame	data/chars/enemies/bigben/pain00.png
-	frame	data/chars/enemies/bigben/pain01.png
-	frame	data/chars/enemies/bigben/pain00.png
-	frame	data/chars/enemies/bigben/pain01.png
-	frame	data/chars/enemies/bigben/pain00.png
-	frame	data/chars/enemies/bigben/pain01.png
-	frame	data/chars/enemies/bigben/pain00.png
-	frame	data/chars/enemies/bigben/pain01.png
-	frame	data/chars/enemies/bigben/pain00.png
-	frame	data/chars/enemies/bigben/pain01.png
-	frame	data/chars/enemies/bigben/pain00.png
-	frame	data/chars/enemies/bigben/pain01.png
+    loop    0
+    delay    4
+    offset    144 175
+    bbox     126 116 36 61
+    frame    data/chars/enemies/bigben/pain00.png
+    frame    data/chars/enemies/bigben/pain01.png
+    frame    data/chars/enemies/bigben/pain00.png
+    frame    data/chars/enemies/bigben/pain01.png
+    frame    data/chars/enemies/bigben/pain00.png
+    frame    data/chars/enemies/bigben/pain01.png
+    frame    data/chars/enemies/bigben/pain00.png
+    frame    data/chars/enemies/bigben/pain01.png
+    frame    data/chars/enemies/bigben/pain00.png
+    frame    data/chars/enemies/bigben/pain01.png
+    frame    data/chars/enemies/bigben/pain00.png
+    frame    data/chars/enemies/bigben/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	144 175
-	bbox 	126 111 36 65
-	frame	data/chars/enemies/bigben/pain200.png
-	frame	data/chars/enemies/bigben/pain201.png
-	frame	data/chars/enemies/bigben/pain200.png
-	frame	data/chars/enemies/bigben/pain201.png
-	frame	data/chars/enemies/bigben/pain200.png
-	frame	data/chars/enemies/bigben/pain201.png
-	frame	data/chars/enemies/bigben/pain200.png
-	frame	data/chars/enemies/bigben/pain201.png
-	frame	data/chars/enemies/bigben/pain200.png
-	frame	data/chars/enemies/bigben/pain201.png
-	frame	data/chars/enemies/bigben/pain200.png
-	frame	data/chars/enemies/bigben/pain201.png
+    loop    0
+    delay    4
+    offset    144 175
+    bbox     126 111 36 65
+    frame    data/chars/enemies/bigben/pain200.png
+    frame    data/chars/enemies/bigben/pain201.png
+    frame    data/chars/enemies/bigben/pain200.png
+    frame    data/chars/enemies/bigben/pain201.png
+    frame    data/chars/enemies/bigben/pain200.png
+    frame    data/chars/enemies/bigben/pain201.png
+    frame    data/chars/enemies/bigben/pain200.png
+    frame    data/chars/enemies/bigben/pain201.png
+    frame    data/chars/enemies/bigben/pain200.png
+    frame    data/chars/enemies/bigben/pain201.png
+    frame    data/chars/enemies/bigben/pain200.png
+    frame    data/chars/enemies/bigben/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	144 175
-	bbox 	119 117 44 42
-	frame	data/chars/enemies/bigben/fall00.png
-		delay	8
-	bbox 	112 141 57 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/bigben/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    144 175
+    bbox     119 117 44 42
+    frame    data/chars/enemies/bigben/fall00.png
+        delay    8
+    bbox     112 141 57 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	144 175
-	bbox 	119 117 44 42
-	frame	data/chars/enemies/bigben/fall00.png
-		delay	8
-	bbox 	112 141 57 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/bigben/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    144 175
+    bbox     119 117 44 42
+    frame    data/chars/enemies/bigben/fall00.png
+        delay    8
+    bbox     112 141 57 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	144 175
-	bbox 	119 117 44 42
-	frame	data/chars/enemies/bigben/fall00.png
-		delay	8
-	bbox 	112 141 57 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/bigben/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    144 175
+    bbox     119 117 44 42
+    frame    data/chars/enemies/bigben/fall00.png
+        delay    8
+    bbox     112 141 57 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	144 175
-	frame	data/chars/enemies/bigben/fall600.png
-	frame	data/chars/enemies/bigben/fall601.png
-	frame	data/chars/enemies/bigben/fall602.png
-	frame	data/chars/enemies/bigben/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/bigben/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    144 175
+    frame    data/chars/enemies/bigben/fall600.png
+    frame    data/chars/enemies/bigben/fall601.png
+    frame    data/chars/enemies/bigben/fall602.png
+    frame    data/chars/enemies/bigben/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	144 175
-	frame	data/chars/enemies/bigben/fall700.png
-	frame	data/chars/enemies/bigben/fall701.png
-	frame	data/chars/enemies/bigben/fall702.png
-	frame	data/chars/enemies/bigben/fall703.png
-	frame	data/chars/enemies/bigben/fall704.png
-	frame	data/chars/enemies/bigben/fall705.png
+    loop    0
+    delay    1000
+    offset    144 175
+    frame    data/chars/enemies/bigben/fall700.png
+    frame    data/chars/enemies/bigben/fall701.png
+    frame    data/chars/enemies/bigben/fall702.png
+    frame    data/chars/enemies/bigben/fall703.png
+    frame    data/chars/enemies/bigben/fall704.png
+    frame    data/chars/enemies/bigben/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	144 175
-	bbox 	119 117 44 42
-	hitfx	data/sounds/MediumKick.wav
-	attack 119 117 44 42 4 1 0 0 20 12
-	frame	data/chars/enemies/bigben/fall00.png
-		delay	999
-	frame	data/chars/enemies/bigben/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	112 141 57 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/bigben/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    144 175
+    bbox     119 117 44 42
+    hitfx    data/sounds/MediumKick.wav
+    attack 119 117 44 42 4 1 0 0 20 12
+    frame    data/chars/enemies/bigben/fall00.png
+        delay    999
+    frame    data/chars/enemies/bigben/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     112 141 57 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	144 175
-	bbox 	122 112 38 64
-	hitfx	data/sounds/MediumKick.wav
-	attack 122 112 38 64 4 1 0 0 20 12
-	frame	data/chars/enemies/bigben/fall900.png
-		delay	999
-	frame	data/chars/enemies/bigben/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	112 141 57 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/bigben/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    144 175
+    bbox     122 112 38 64
+    hitfx    data/sounds/MediumKick.wav
+    attack 122 112 38 64 4 1 0 0 20 12
+    frame    data/chars/enemies/bigben/fall900.png
+        delay    999
+    frame    data/chars/enemies/bigben/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     112 141 57 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	144 175
-	frame	data/chars/enemies/bigben/fall01.png
-	frame	data/chars/enemies/bigben/fall01.png
-	frame	data/chars/enemies/bigben/fall01.png
+    loop    0
+    delay    16
+    offset    144 175
+    frame    data/chars/enemies/bigben/fall01.png
+    frame    data/chars/enemies/bigben/fall01.png
+    frame    data/chars/enemies/bigben/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	144 175
-	frame	data/chars/enemies/bigben/rise00.png
-	frame	data/chars/enemies/bigben/rise01.png
-	frame	data/chars/enemies/bigben/rise00.png
-	frame	data/chars/enemies/bigben/rise02.png
+    loop    0
+    delay    16
+    offset    144 175
+    frame    data/chars/enemies/bigben/rise00.png
+    frame    data/chars/enemies/bigben/rise01.png
+    frame    data/chars/enemies/bigben/rise00.png
+    frame    data/chars/enemies/bigben/rise02.png
 
 anim riseattack
-	range 40 240
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	24
-	offset	144 175
-	bbox 	126 115 40 62
-	hitfx	data/sounds/HighKick.wav
-	sound	data/voices/Bigben1.wav
-	frame	data/chars/enemies/bigben/roll00.png
-		delay	8
-	@cmd dasher 2.5 0 0
-	attack 128 135 33 37 8 1 0 0 10 24
-	bbox 	121 131 56 56
-	frame	data/chars/enemies/bigben/roll01.png
-	@cmd dasher 2.5 0 0
-	frame	data/chars/enemies/bigben/roll01.png
-	sound	data/sounds/Roll.wav
-	@cmd dasher 2.3 0 0
-	frame	data/chars/enemies/bigben/roll02.png
-	@cmd dasher 2.1 0 0
-	frame	data/chars/enemies/bigben/roll03.png
-	@cmd dasher 1.9 0 0
-	frame	data/chars/enemies/bigben/roll04.png
-	@cmd looper 2 3
-	@cmd dasher 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	126 115 40 62
-	sound	data/sounds/Dizzy.wav
-	frame	data/chars/enemies/bigben/roll00.png
-	frame	data/chars/enemies/bigben/roll05.png
-	frame	data/chars/enemies/bigben/roll06.png
-	frame	data/chars/enemies/bigben/roll07.png
-	@cmd looper 7 7
-	frame	data/chars/enemies/bigben/roll00.png
+    range 40 240
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    24
+    offset    144 175
+    bbox     126 115 40 62
+    hitfx    data/sounds/HighKick.wav
+    sound    data/voices/Bigben1.wav
+    frame    data/chars/enemies/bigben/roll00.png
+        delay    8
+    @cmd dasher 2.5 0 0
+    attack 128 135 33 37 8 1 0 0 10 24
+    bbox     121 131 56 56
+    frame    data/chars/enemies/bigben/roll01.png
+    @cmd dasher 2.5 0 0
+    frame    data/chars/enemies/bigben/roll01.png
+    sound    data/sounds/Roll.wav
+    @cmd dasher 2.3 0 0
+    frame    data/chars/enemies/bigben/roll02.png
+    @cmd dasher 2.1 0 0
+    frame    data/chars/enemies/bigben/roll03.png
+    @cmd dasher 1.9 0 0
+    frame    data/chars/enemies/bigben/roll04.png
+    @cmd looper 2 3
+    @cmd dasher 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     126 115 40 62
+    sound    data/sounds/Dizzy.wav
+    frame    data/chars/enemies/bigben/roll00.png
+    frame    data/chars/enemies/bigben/roll05.png
+    frame    data/chars/enemies/bigben/roll06.png
+    frame    data/chars/enemies/bigben/roll07.png
+    @cmd looper 7 7
+    frame    data/chars/enemies/bigben/roll00.png
 
 
 anim attack1
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	126 102 36 75
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/bigben/a100.png
-	attack 152 109 46 18 8 1 0 0 30 12
-	frame	data/chars/enemies/bigben/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/bigben/a102.png
-	frame	data/chars/enemies/bigben/a103.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     126 102 36 75
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/bigben/a100.png
+    attack 152 109 46 18 8 1 0 0 30 12
+    frame    data/chars/enemies/bigben/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/bigben/a102.png
+    frame    data/chars/enemies/bigben/a103.png
 
 anim attack2 #TRIPLE SLAP
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	126 102 36 75
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/bigben/a100.png
-	attack 152 109 46 18 4 0 0 0 10 12
-	dropv 1 0.5 0
-	frame	data/chars/enemies/bigben/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/bigben/a102.png
-	attack 152 109 46 18 4 0 0 0 10 12
-	dropv 1 0.5 0
-	frame	data/chars/enemies/bigben/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/bigben/a100.png
-	attack 152 109 46 18 8 1 0 0 30 12
-	frame	data/chars/enemies/bigben/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/bigben/a102.png
-	frame	data/chars/enemies/bigben/a103.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     126 102 36 75
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/bigben/a100.png
+    attack 152 109 46 18 4 0 0 0 10 12
+    dropv 1 0.5 0
+    frame    data/chars/enemies/bigben/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/bigben/a102.png
+    attack 152 109 46 18 4 0 0 0 10 12
+    dropv 1 0.5 0
+    frame    data/chars/enemies/bigben/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/bigben/a100.png
+    attack 152 109 46 18 8 1 0 0 30 12
+    frame    data/chars/enemies/bigben/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/bigben/a102.png
+    frame    data/chars/enemies/bigben/a103.png
 
 anim attack3 #FIRE
-	range 120 400
-	rangea 0 100
-	rangez -999 999
-	loop	0
-	delay	16
-	offset	144 175
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire00.png
-	frame	data/chars/enemies/bigben/fire01.png
-		delay	4
-	@cmd target 1.6 1.6
-	@cmd dashTarget
-	bbox 	126 107 36 70
-	frame	data/chars/enemies/bigben/fire02.png
-		delay	12
-	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
-	@cmd dashTarget
-	frame	data/chars/enemies/bigben/fire02.png
-	@cmd dashTarget
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire03.png
-	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
-	@cmd dashTarget
-	bbox 	126 104 36 73
-	frame	data/chars/enemies/bigben/fire04.png
-	@cmd dashTarget
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire05.png
-	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
-	@cmd dashTarget
-	bbox 	126 107 36 70
-	frame	data/chars/enemies/bigben/fire02.png
-	@cmd dashTarget
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire03.png
-	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
-	@cmd dashTarget
-	bbox 	126 104 36 73
-	frame	data/chars/enemies/bigben/fire04.png
-	@cmd dashTarget
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire05.png
-	@cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
-	@cmd dashTarget
-	bbox 	126 107 36 70
-	frame	data/chars/enemies/bigben/fire02.png
-	@cmd dasher 1 0 0
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire03.png
-	@cmd dasher 0.5 0 0
-	bbox 	126 104 36 73
-	frame	data/chars/enemies/bigben/fire04.png
-	@cmd dasher 0 0 0
-	bbox 	126 102 36 75
-	frame	data/chars/enemies/bigben/fire05.png
+    range 120 400
+    rangea 0 100
+    rangez -999 999
+    loop    0
+    delay    16
+    offset    144 175
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire00.png
+    frame    data/chars/enemies/bigben/fire01.png
+        delay    4
+    @cmd target 1.6 1.6
+    @cmd dashTarget
+    bbox     126 107 36 70
+    frame    data/chars/enemies/bigben/fire02.png
+        delay    12
+    @cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+    @cmd dashTarget
+    frame    data/chars/enemies/bigben/fire02.png
+    @cmd dashTarget
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire03.png
+    @cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+    @cmd dashTarget
+    bbox     126 104 36 73
+    frame    data/chars/enemies/bigben/fire04.png
+    @cmd dashTarget
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire05.png
+    @cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+    @cmd dashTarget
+    bbox     126 107 36 70
+    frame    data/chars/enemies/bigben/fire02.png
+    @cmd dashTarget
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire03.png
+    @cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+    @cmd dashTarget
+    bbox     126 104 36 73
+    frame    data/chars/enemies/bigben/fire04.png
+    @cmd dashTarget
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire05.png
+    @cmd shoot "Bongo_Fire" 20 60 1 0 0 0 "dual"
+    @cmd dashTarget
+    bbox     126 107 36 70
+    frame    data/chars/enemies/bigben/fire02.png
+    @cmd dasher 1 0 0
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire03.png
+    @cmd dasher 0.5 0 0
+    bbox     126 104 36 73
+    frame    data/chars/enemies/bigben/fire04.png
+    @cmd dasher 0 0 0
+    bbox     126 102 36 75
+    frame    data/chars/enemies/bigben/fire05.png
 
 anim attack4 #ROLL
-	range 100 240
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	24
-	offset	144 175
-	bbox 	126 115 40 62
-	hitfx	data/sounds/HighKick.wav
-	sound	data/voices/Bigben1.wav
-	frame	data/chars/enemies/bigben/roll00.png
-	delay	8
-	@cmd dasher 2.5 0 0
-	attack 128 135 33 37 8 1 0 0 10 24
-	bbox 	121 131 56 56
-	frame	data/chars/enemies/bigben/roll01.png
-	@cmd dasher 2.5 0 0
-	attack 128 135 33 37 5 1 0 0 10 24
-	frame	data/chars/enemies/bigben/roll01.png
-	sound	data/sounds/Roll.wav
-	@cmd dasher 2.3 0 0
-	attack 128 135 33 37 5 1 0 0 10 24
-	frame	data/chars/enemies/bigben/roll02.png
-	@cmd dasher 2.1 0 0
-	attack 128 135 33 37 5 1 0 0 10 24
-	frame	data/chars/enemies/bigben/roll03.png
-	@cmd dasher 1.9 0 0
-	attack 128 135 33 37 5 1 0 0 10 24
-	frame	data/chars/enemies/bigben/roll04.png
-	@cmd looper 3 2
-	@cmd dasher 0 0 0
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	126 115 40 62
-	sound	data/sounds/Dizzy.wav
-	frame	data/chars/enemies/bigben/roll00.png
-	frame	data/chars/enemies/bigben/roll05.png
-	frame	data/chars/enemies/bigben/roll06.png
-	frame	data/chars/enemies/bigben/roll07.png
-	@cmd looper 7 7
-	frame	data/chars/enemies/bigben/roll00.png
+    range 100 240
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    24
+    offset    144 175
+    bbox     126 115 40 62
+    hitfx    data/sounds/HighKick.wav
+    sound    data/voices/Bigben1.wav
+    frame    data/chars/enemies/bigben/roll00.png
+    delay    8
+    @cmd dasher 2.5 0 0
+    attack 128 135 33 37 8 1 0 0 10 24
+    bbox     121 131 56 56
+    frame    data/chars/enemies/bigben/roll01.png
+    @cmd dasher 2.5 0 0
+    attack 128 135 33 37 5 1 0 0 10 24
+    frame    data/chars/enemies/bigben/roll01.png
+    sound    data/sounds/Roll.wav
+    @cmd dasher 2.3 0 0
+    attack 128 135 33 37 5 1 0 0 10 24
+    frame    data/chars/enemies/bigben/roll02.png
+    @cmd dasher 2.1 0 0
+    attack 128 135 33 37 5 1 0 0 10 24
+    frame    data/chars/enemies/bigben/roll03.png
+    @cmd dasher 1.9 0 0
+    attack 128 135 33 37 5 1 0 0 10 24
+    frame    data/chars/enemies/bigben/roll04.png
+    @cmd looper 3 2
+    @cmd dasher 0 0 0
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     126 115 40 62
+    sound    data/sounds/Dizzy.wav
+    frame    data/chars/enemies/bigben/roll00.png
+    frame    data/chars/enemies/bigben/roll05.png
+    frame    data/chars/enemies/bigben/roll06.png
+    frame    data/chars/enemies/bigben/roll07.png
+    @cmd looper 7 7
+    frame    data/chars/enemies/bigben/roll00.png
 
 anim attack5 #LAUGH
-	range 120 400
-	rangea 0 100
-	rangez -999 999
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	126 102 36 75
-	sound	data/voices/Bigben1.wav
-	frame	data/chars/enemies/bigben/laugh00.png
-	frame	data/chars/enemies/bigben/laugh01.png
-	frame	data/chars/enemies/bigben/laugh00.png
-	frame	data/chars/enemies/bigben/laugh01.png
-	frame	data/chars/enemies/bigben/laugh00.png
-	frame	data/chars/enemies/bigben/laugh01.png
-	frame	data/chars/enemies/bigben/laugh00.png
-	frame	data/chars/enemies/bigben/laugh01.png
-	frame	data/chars/enemies/bigben/laugh00.png
+    range 120 400
+    rangea 0 100
+    rangez -999 999
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     126 102 36 75
+    sound    data/voices/Bigben1.wav
+    frame    data/chars/enemies/bigben/laugh00.png
+    frame    data/chars/enemies/bigben/laugh01.png
+    frame    data/chars/enemies/bigben/laugh00.png
+    frame    data/chars/enemies/bigben/laugh01.png
+    frame    data/chars/enemies/bigben/laugh00.png
+    frame    data/chars/enemies/bigben/laugh01.png
+    frame    data/chars/enemies/bigben/laugh00.png
+    frame    data/chars/enemies/bigben/laugh01.png
+    frame    data/chars/enemies/bigben/laugh00.png
 
 anim jumpattack #KICK
-	range 40 120
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	126 105 40 69
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/Jumping2.wav
-	@cmd targetJump
-	@cmd leapJump
-	attack 126 137 59 37 4 1 0 0 20 12
-	frame	data/chars/enemies/bigben/jumpatk00.png
+    range 40 120
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     126 105 40 69
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/Jumping2.wav
+    @cmd targetJump
+    @cmd leapJump
+    attack 126 137 59 37 4 1 0 0 20 12
+    frame    data/chars/enemies/bigben/jumpatk00.png
 
 anim jumpattack2 #JUMP DOWN
-	range 40 120
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	144 175
-	bbox 	131 117 48 34
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/Jumping2.wav
-	@cmd targetJump
-	@cmd leapJump
-	attack 131 117 48 34 4 0 0 0 20 12
-	frame	data/chars/enemies/bigben/jumpatk200.png
+    range 40 120
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    144 175
+    bbox     131 117 48 34
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/Jumping2.wav
+    @cmd targetJump
+    @cmd leapJump
+    attack 131 117 48 34 4 0 0 0 20 12
+    frame    data/chars/enemies/bigben/jumpatk200.png

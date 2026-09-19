@@ -1,601 +1,601 @@
 ##MAIN
-name				Harakiri
-type				player
-secret				0 1
+name                Harakiri
+type                player
+secret                0 1
 
 ##LIFE
-health				400
+health                400
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		39 #36/33/30
-grabfinish 			0 #PLAYER=0/ENEMY=1
+grabdistance         39 #36/33/30
+grabfinish             0 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-3 #-1/-2/-3
-height				107
+antigravity            -3 #-1/-2/-3
+height                107
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none Harakiri
-modelflag			3
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bounce				1
-bflash				Block
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none Harakiri
+modelflag            3
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bounce                1
+bflash                Block
+death                2
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/harakiri.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-ondrawscript		data/scripts/ondraw/harakiri.c
-onspawnscript		data/scripts/onspawn/player.c
-onfallscript		data/scripts/onfall/default.c
-onpainscript		data/scripts/onpain/default.c
-animationscript	 	data/scripts/animation/default.c
-keyscript			data/scripts/key/harakiri.c
-takedamagescript	data/scripts/takedamage/default.c
-script				data/scripts/updateentity/harakiri.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/harakiri.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+ondrawscript        data/scripts/ondraw/harakiri.c
+onspawnscript        data/scripts/onspawn/player.c
+onfallscript        data/scripts/onfall/default.c
+onpainscript        data/scripts/onpain/default.c
+animationscript         data/scripts/animation/default.c
+keyscript            data/scripts/key/harakiri.c
+takedamagescript    data/scripts/takedamage/default.c
+script                data/scripts/updateentity/harakiri.c
 
 ##ICONS
-icon				data/chars/bosses/harakiri/icon.png 1
+icon                data/chars/bosses/harakiri/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -150
-parrow2				data/sprites/parrow2.png 	-15 -150
-parrow3				data/sprites/parrow3.png 	-15 -150
-parrow4				data/sprites/parrow4.png 	-15 -150
+parrow                data/sprites/parrow.png     -15 -150
+parrow2                data/sprites/parrow2.png     -15 -150
+parrow3                data/sprites/parrow3.png     -15 -150
+parrow4                data/sprites/parrow4.png     -15 -150
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
+diesound            data/voices/BossDie1.wav
 
 ##REMAPS
-remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter1.png
-remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter2.png
-remap				data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter3.png
+remap                data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter1.png
+remap                data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter2.png
+remap                data/chars/bosses/harakiri/idle00.png data/chars/bosses/harakiri/alter3.png
 
 ##COMMANDS
-com 				d f a2		freespecial		#RAGE BLITZ
-com 				a2 + s		freespecial		#RAGE BLITZ
-com 				a2 s		freespecial		#RAGE BLITZ
+com                 d f a2        freespecial        #RAGE BLITZ
+com                 a2 + s        freespecial        #RAGE BLITZ
+com                 a2 s        freespecial        #RAGE BLITZ
 
 ##LOADS
-load				Harakiri_Star
-load				HarakiriS
+load                Harakiri_Star
+load                HarakiriS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim waiting
-	fshadow 0
-	loop	1
-	delay	20
-	offset	161 203
-	frame	data/chars/bosses/harakiri/idle00.png
-	frame	data/chars/bosses/harakiri/idle01.png
-	frame	data/chars/bosses/harakiri/idle02.png
-	frame	data/chars/bosses/harakiri/idle01.png
+    fshadow 0
+    loop    1
+    delay    20
+    offset    161 203
+    frame    data/chars/bosses/harakiri/idle00.png
+    frame    data/chars/bosses/harakiri/idle01.png
+    frame    data/chars/bosses/harakiri/idle02.png
+    frame    data/chars/bosses/harakiri/idle01.png
 
 anim select
-	fshadow 0
-	loop	0
-	delay	100000
-	offset	161 203
-	frame	data/chars/bosses/harakiri/idle00.png
-		delay	24
-	frame	data/chars/bosses/harakiri/idle00.png
-	frame	data/chars/bosses/harakiri/idle00.png
+    fshadow 0
+    loop    0
+    delay    100000
+    offset    161 203
+    frame    data/chars/bosses/harakiri/idle00.png
+        delay    24
+    frame    data/chars/bosses/harakiri/idle00.png
+    frame    data/chars/bosses/harakiri/idle00.png
 
 anim idle
-	loop	1
-	delay	20
-	offset	161 203
-	bbox 	140 112 44 93
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
+    loop    1
+    delay    20
+    offset    161 203
+    bbox     140 112 44 93
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
 
 anim chargeattack
-	chargetime 9999
-	loop	0
-	delay	1
-	offset	161 203
-	frame	data/chars/bosses/harakiri/idle00.png
+    chargetime 9999
+    loop    0
+    delay    1
+    offset    161 203
+    frame    data/chars/bosses/harakiri/idle00.png
 
 anim walk
-	loop	1
-	delay	18
-	offset	161 203
-	bbox 	140 112 44 93
-	frame	data/chars/bosses/harakiri/walk00.png
-	frame	data/chars/bosses/harakiri/walk01.png
-	frame	data/chars/bosses/harakiri/walk00.png
-	frame	data/chars/bosses/harakiri/walk02.png
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
+    loop    1
+    delay    18
+    offset    161 203
+    bbox     140 112 44 93
+    frame    data/chars/bosses/harakiri/walk00.png
+    frame    data/chars/bosses/harakiri/walk01.png
+    frame    data/chars/bosses/harakiri/walk00.png
+    frame    data/chars/bosses/harakiri/walk02.png
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	loop	1
-	delay	14
-	offset	161 203
-	bbox 	140 112 44 93
-	sound	data/sounds/Slide2.wav
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a100.png
+    @cmd lockAni "runType" "off"
+    loop    1
+    delay    14
+    offset    161 203
+    bbox     140 112 44 93
+    sound    data/sounds/Slide2.wav
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a100.png
 
 anim get
-	loop	0
-	delay	16
-	offset	161 203
-	frame	data/chars/bosses/harakiri/get00.png
+    loop    0
+    delay    16
+    offset    161 203
+    frame    data/chars/bosses/harakiri/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	161 203
-	bbox 	140 112 44 93
-	frame	data/chars/bosses/harakiri/grab00.png
+    loop    0
+    delay    16
+    offset    161 203
+    bbox     140 112 44 93
+    frame    data/chars/bosses/harakiri/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	161 203
-	bbox 	141 124 43 81
-	frame	data/chars/bosses/harakiri/grabbed00.png
+    loop    0
+    delay    8
+    offset    161 203
+    bbox     141 124 43 81
+    frame    data/chars/bosses/harakiri/grabbed00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	161 203
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/bosses/harakiri/jump00.png
+    loop    0
+    delay    30
+    offset    161 203
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/bosses/harakiri/jump00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	161 203
-	bbox 	124 138 47 66
-	frame	data/chars/bosses/harakiri/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    161 203
+    bbox     124 138 47 66
+    frame    data/chars/bosses/harakiri/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	161 203
-	bbox 	152 115 40 75
-	@cmd jump 1
-	frame	data/chars/bosses/harakiri/jump00.png
+    loop    0
+    delay    30
+    offset    161 203
+    bbox     152 115 40 75
+    @cmd jump 1
+    frame    data/chars/bosses/harakiri/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	161 203
-	bbox 	124 138 47 66
-	sound	data/sounds/Jumpland2.wav
-	frame	data/chars/bosses/harakiri/jumpland00.png
+    loop    0
+    delay    12
+    offset    161 203
+    bbox     124 138 47 66
+    sound    data/sounds/Jumpland2.wav
+    frame    data/chars/bosses/harakiri/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	161 203
-	bbox 	141 124 43 81
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
-	frame	data/chars/bosses/harakiri/grabbed00.png
-	frame	data/chars/bosses/harakiri/grabbed01.png
+    loop    0
+    delay    4
+    offset    161 203
+    bbox     141 124 43 81
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
+    frame    data/chars/bosses/harakiri/grabbed00.png
+    frame    data/chars/bosses/harakiri/grabbed01.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	161 203
-	bbox 	128 112 44 93
-	frame	data/chars/bosses/harakiri/pain00.png
-	frame	data/chars/bosses/harakiri/pain01.png
-	frame	data/chars/bosses/harakiri/pain00.png
-	frame	data/chars/bosses/harakiri/pain01.png
-	frame	data/chars/bosses/harakiri/pain00.png
-	frame	data/chars/bosses/harakiri/pain01.png
-	frame	data/chars/bosses/harakiri/pain00.png
-	frame	data/chars/bosses/harakiri/pain01.png
+    loop    0
+    delay    4
+    offset    161 203
+    bbox     128 112 44 93
+    frame    data/chars/bosses/harakiri/pain00.png
+    frame    data/chars/bosses/harakiri/pain01.png
+    frame    data/chars/bosses/harakiri/pain00.png
+    frame    data/chars/bosses/harakiri/pain01.png
+    frame    data/chars/bosses/harakiri/pain00.png
+    frame    data/chars/bosses/harakiri/pain01.png
+    frame    data/chars/bosses/harakiri/pain00.png
+    frame    data/chars/bosses/harakiri/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	161 203
-	bbox 	131 122 44 83
-	frame	data/chars/bosses/harakiri/pain200.png
-	frame	data/chars/bosses/harakiri/pain201.png
-	frame	data/chars/bosses/harakiri/pain200.png
-	frame	data/chars/bosses/harakiri/pain201.png
-	frame	data/chars/bosses/harakiri/pain200.png
-	frame	data/chars/bosses/harakiri/pain201.png
-	frame	data/chars/bosses/harakiri/pain200.png
-	frame	data/chars/bosses/harakiri/pain201.png
+    loop    0
+    delay    4
+    offset    161 203
+    bbox     131 122 44 83
+    frame    data/chars/bosses/harakiri/pain200.png
+    frame    data/chars/bosses/harakiri/pain201.png
+    frame    data/chars/bosses/harakiri/pain200.png
+    frame    data/chars/bosses/harakiri/pain201.png
+    frame    data/chars/bosses/harakiri/pain200.png
+    frame    data/chars/bosses/harakiri/pain201.png
+    frame    data/chars/bosses/harakiri/pain200.png
+    frame    data/chars/bosses/harakiri/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	161 203
-	bbox 	121 124 65 57
-	frame	data/chars/bosses/harakiri/fall00.png
-		delay	8
-	bbox 	109 163 93 41
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/harakiri/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    161 203
+    bbox     121 124 65 57
+    frame    data/chars/bosses/harakiri/fall00.png
+        delay    8
+    bbox     109 163 93 41
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	161 203
-	bbox 	121 124 65 57
-	frame	data/chars/bosses/harakiri/fall00.png
-		delay	8
-	bbox 	109 163 93 41
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/harakiri/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    161 203
+    bbox     121 124 65 57
+    frame    data/chars/bosses/harakiri/fall00.png
+        delay    8
+    bbox     109 163 93 41
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	161 203
-	bbox 	121 124 65 57
-	frame	data/chars/bosses/harakiri/fall00.png
-		delay	8
-	bbox 	109 163 93 41
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/harakiri/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    161 203
+    bbox     121 124 65 57
+    frame    data/chars/bosses/harakiri/fall00.png
+        delay    8
+    bbox     109 163 93 41
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	161 203
-	frame	data/chars/bosses/harakiri/fall600.png
-	frame	data/chars/bosses/harakiri/fall601.png
-	frame	data/chars/bosses/harakiri/fall602.png
-	frame	data/chars/bosses/harakiri/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/harakiri/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    161 203
+    frame    data/chars/bosses/harakiri/fall600.png
+    frame    data/chars/bosses/harakiri/fall601.png
+    frame    data/chars/bosses/harakiri/fall602.png
+    frame    data/chars/bosses/harakiri/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	161 203
-	frame	data/chars/bosses/harakiri/fall700.png
-	frame	data/chars/bosses/harakiri/fall701.png
-	frame	data/chars/bosses/harakiri/fall702.png
-	frame	data/chars/bosses/harakiri/fall703.png
-	frame	data/chars/bosses/harakiri/fall704.png
-	frame	data/chars/bosses/harakiri/fall705.png
+    loop    0
+    delay    1000
+    offset    161 203
+    frame    data/chars/bosses/harakiri/fall700.png
+    frame    data/chars/bosses/harakiri/fall701.png
+    frame    data/chars/bosses/harakiri/fall702.png
+    frame    data/chars/bosses/harakiri/fall703.png
+    frame    data/chars/bosses/harakiri/fall704.png
+    frame    data/chars/bosses/harakiri/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	161 203
-	bbox 	121 124 65 57
-	hitfx	data/sounds/MediumKick.wav
-	attack 121 124 65 57 4 1 0 0 20 12
-	frame	data/chars/bosses/harakiri/fall00.png
-		delay	999
-	frame	data/chars/bosses/harakiri/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	109 163 93 41
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/harakiri/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    161 203
+    bbox     121 124 65 57
+    hitfx    data/sounds/MediumKick.wav
+    attack 121 124 65 57 4 1 0 0 20 12
+    frame    data/chars/bosses/harakiri/fall00.png
+        delay    999
+    frame    data/chars/bosses/harakiri/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     109 163 93 41
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	161 203
-	bbox 	137 120 44 81
-	hitfx	data/sounds/MediumKick.wav
-	attack 137 120 44 81 4 1 0 0 20 12
-	frame	data/chars/bosses/harakiri/fall900.png
-		delay	999
-	frame	data/chars/bosses/harakiri/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	109 163 93 41
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/harakiri/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    161 203
+    bbox     137 120 44 81
+    hitfx    data/sounds/MediumKick.wav
+    attack 137 120 44 81 4 1 0 0 20 12
+    frame    data/chars/bosses/harakiri/fall900.png
+        delay    999
+    frame    data/chars/bosses/harakiri/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     109 163 93 41
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	161 203
-	frame	data/chars/bosses/harakiri/fall01.png
-	frame	data/chars/bosses/harakiri/fall01.png
-	frame	data/chars/bosses/harakiri/fall01.png
+    loop    0
+    delay    16
+    offset    161 203
+    frame    data/chars/bosses/harakiri/fall01.png
+    frame    data/chars/bosses/harakiri/fall01.png
+    frame    data/chars/bosses/harakiri/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	161 203
-	frame	data/chars/bosses/harakiri/rise00.png
-	frame	data/chars/bosses/harakiri/rise01.png
-	frame	data/chars/bosses/harakiri/rise00.png
-	frame	data/chars/bosses/harakiri/rise02.png
+    loop    0
+    delay    16
+    offset    161 203
+    frame    data/chars/bosses/harakiri/rise00.png
+    frame    data/chars/bosses/harakiri/rise01.png
+    frame    data/chars/bosses/harakiri/rise00.png
+    frame    data/chars/bosses/harakiri/rise02.png
 
 anim attack1 #SLASH
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	16
-	offset	161 203
-	bbox 	161 134 42 73
-	hitfx	data/sounds/Cutter.wav
-	sound	data/sounds/Shring.wav
-	frame	data/chars/bosses/harakiri/a100.png
-	attack 174 144 121 41 12 1 0 0 20 12
-	dropv 3.5 1 0
-	frame	data/chars/bosses/harakiri/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/harakiri/a102.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    16
+    offset    161 203
+    bbox     161 134 42 73
+    hitfx    data/sounds/Cutter.wav
+    sound    data/sounds/Shring.wav
+    frame    data/chars/bosses/harakiri/a100.png
+    attack 174 144 121 41 12 1 0 0 20 12
+    dropv 3.5 1 0
+    frame    data/chars/bosses/harakiri/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/harakiri/a102.png
 
 anim grabattack #THROW
-	loop	0
-	delay	24
-	offset	161 203
-	@cmd grabStart
-	@cmd position 0 39 0 0 0
-	sound	data/voices/Harakiri1.wav
-	frame	data/chars/bosses/harakiri/throw00.png
-		delay	8
-	@cmd position 5 30 40 0 0
-	frame	data/chars/bosses/harakiri/throw01.png
-	@cmd position 4 10 60 0 -1
-	frame	data/chars/bosses/harakiri/throw02.png
-		delay	12
-	@cmd throw 12 2 1.5 3.5 0 0
-	frame	data/chars/bosses/harakiri/throw02.png
-	@cmd clearL
-	frame	data/chars/bosses/harakiri/throw02.png
+    loop    0
+    delay    24
+    offset    161 203
+    @cmd grabStart
+    @cmd position 0 39 0 0 0
+    sound    data/voices/Harakiri1.wav
+    frame    data/chars/bosses/harakiri/throw00.png
+        delay    8
+    @cmd position 5 30 40 0 0
+    frame    data/chars/bosses/harakiri/throw01.png
+    @cmd position 4 10 60 0 -1
+    frame    data/chars/bosses/harakiri/throw02.png
+        delay    12
+    @cmd throw 12 2 1.5 3.5 0 0
+    frame    data/chars/bosses/harakiri/throw02.png
+    @cmd clearL
+    frame    data/chars/bosses/harakiri/throw02.png
 
 anim grabattack2 #THROW
-	loop	0
-	delay	24
-	offset	161 203
-	@cmd grabStart
-	@cmd position 0 39 0 0 0
-	sound	data/voices/Harakiri1.wav
-	frame	data/chars/bosses/harakiri/throw00.png
-		delay	8
-	@cmd position 5 30 40 0 0
-	frame	data/chars/bosses/harakiri/throw01.png
-	@cmd position 4 10 60 0 -1
-	frame	data/chars/bosses/harakiri/throw02.png
-		delay	12
-	@cmd throw 12 2 1.5 3.5 0 0
-	frame	data/chars/bosses/harakiri/throw02.png
-	@cmd clearL
-	frame	data/chars/bosses/harakiri/throw02.png
+    loop    0
+    delay    24
+    offset    161 203
+    @cmd grabStart
+    @cmd position 0 39 0 0 0
+    sound    data/voices/Harakiri1.wav
+    frame    data/chars/bosses/harakiri/throw00.png
+        delay    8
+    @cmd position 5 30 40 0 0
+    frame    data/chars/bosses/harakiri/throw01.png
+    @cmd position 4 10 60 0 -1
+    frame    data/chars/bosses/harakiri/throw02.png
+        delay    12
+    @cmd throw 12 2 1.5 3.5 0 0
+    frame    data/chars/bosses/harakiri/throw02.png
+    @cmd clearL
+    frame    data/chars/bosses/harakiri/throw02.png
 
 anim runattack #BLITZ SLASH
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	4
-	offset	161 203
-	hitfx	data/sounds/Cutter.wav
-	sound	data/voices/Harakiri1.wav
-	@cmd dasher 3 0 0
-	@cmd keyMove 0 3
-	@cmd copyMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	frame	data/chars/bosses/harakiri/a100.png
-	@cmd pasteMove
-	sound	data/sounds/Shring3.wav
-	bbox 	161 134 42 73
-	frame	data/chars/bosses/harakiri/a100.png
-		delay	16
-	@cmd dasher 1
-	attack 174 144 121 41 12 1 0 0 20 12
-	dropv 3.5 1 0
-	frame	data/chars/bosses/harakiri/a101.png
-	@cmd dasher 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/harakiri/a102.png
-	frame	data/chars/bosses/harakiri/a102.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    4
+    offset    161 203
+    hitfx    data/sounds/Cutter.wav
+    sound    data/voices/Harakiri1.wav
+    @cmd dasher 3 0 0
+    @cmd keyMove 0 3
+    @cmd copyMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    frame    data/chars/bosses/harakiri/a100.png
+    @cmd pasteMove
+    sound    data/sounds/Shring3.wav
+    bbox     161 134 42 73
+    frame    data/chars/bosses/harakiri/a100.png
+        delay    16
+    @cmd dasher 1
+    attack 174 144 121 41 12 1 0 0 20 12
+    dropv 3.5 1 0
+    frame    data/chars/bosses/harakiri/a101.png
+    @cmd dasher 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/harakiri/a102.png
+    frame    data/chars/bosses/harakiri/a102.png
 
 anim special #BLOCK SLASH
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 30 2 5
-	@cmd healStart
-	loop	0
-	delay	32
-	offset	161 203
-	hitfx	data/sounds/Cutter2.wav
-	sound	data/voices/Harakiri1.wav
-	frame	data/chars/bosses/harakiri/a200.png
-		delay	16
-	attack 134 136 153 77 16 1 0 0 20 12
-	dropv 3.5 1 0
-	sound	data/sounds/Shring2.wav
-	frame	data/chars/bosses/harakiri/a201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/harakiri/a202.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 30 2 5
+    @cmd healStart
+    loop    0
+    delay    32
+    offset    161 203
+    hitfx    data/sounds/Cutter2.wav
+    sound    data/voices/Harakiri1.wav
+    frame    data/chars/bosses/harakiri/a200.png
+        delay    16
+    attack 134 136 153 77 16 1 0 0 20 12
+    dropv 3.5 1 0
+    sound    data/sounds/Shring2.wav
+    frame    data/chars/bosses/harakiri/a201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/harakiri/a202.png
 
 anim special2 #THREE STARS
-	energycost 30 2 5
-	@cmd healStart
-	loop	0
-	delay	32
-	offset	161 203
-	bbox 	132 114 32 92
-	sound	data/voices/Harakiri1.wav
-	frame	data/chars/bosses/harakiri/star00.png
-		delay	16
-	bbox 	161 138 47 70
-	@cmd dasher 1 0 0
-	@cmd shoot "Harakiri_Star" 60 50 0 3 0 -0.8
-	@cmd shoot "Harakiri_Star" 60 50 0 3 0 0
-	@cmd shoot "Harakiri_Star" 60 50 0 3 0 0.8
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/bosses/harakiri/star01.png
-	@cmd dasher 0.2 0 0
-	frame	data/chars/bosses/harakiri/star02.png
+    energycost 30 2 5
+    @cmd healStart
+    loop    0
+    delay    32
+    offset    161 203
+    bbox     132 114 32 92
+    sound    data/voices/Harakiri1.wav
+    frame    data/chars/bosses/harakiri/star00.png
+        delay    16
+    bbox     161 138 47 70
+    @cmd dasher 1 0 0
+    @cmd shoot "Harakiri_Star" 60 50 0 3 0 -0.8
+    @cmd shoot "Harakiri_Star" 60 50 0 3 0 0
+    @cmd shoot "Harakiri_Star" 60 50 0 3 0 0.8
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/bosses/harakiri/star01.png
+    @cmd dasher 0.2 0 0
+    frame    data/chars/bosses/harakiri/star02.png
 
 anim freespecial #RAGE BLITZ
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	energycost 60 1 6
-	hitflash BloodHit
-	loop	0
-	delay	20
-	offset	161 203
-	hitfx	data/sounds/Cutter.wav
-	@cmd spawnBind "Rage" 0 -1 0
-	sound	data/voices/Harakiri2.wav
-	frame	data/chars/bosses/harakiri/a100.png
-		delay 32
-	@cmd dasher 8 0 0
-	attack 160 130 43 79 2 0 0 0 20 12
-	seal 1 1
-	sound	data/sounds/Shring.wav
-	frame	data/chars/bosses/harakiri/rage00.png
-		delay 8
-	@cmd dasher 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/harakiri/a100.png
-	frame	data/chars/bosses/harakiri/a102.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    energycost 60 1 6
+    hitflash BloodHit
+    loop    0
+    delay    20
+    offset    161 203
+    hitfx    data/sounds/Cutter.wav
+    @cmd spawnBind "Rage" 0 -1 0
+    sound    data/voices/Harakiri2.wav
+    frame    data/chars/bosses/harakiri/a100.png
+        delay 32
+    @cmd dasher 8 0 0
+    attack 160 130 43 79 2 0 0 0 20 12
+    seal 1 1
+    sound    data/sounds/Shring.wav
+    frame    data/chars/bosses/harakiri/rage00.png
+        delay 8
+    @cmd dasher 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/harakiri/a100.png
+    frame    data/chars/bosses/harakiri/a102.png
 
 anim follow1 #RAGE STRIKE
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	energycost 60 1 6
-	hitflash BloodHit
-	loop	0
-	delay	16
-	offset	161 203
-	hitfx	data/sounds/Cutter.wav
-	frame	data/chars/bosses/harakiri/rage00.png
-		delay	4
-	@cmd dasher 0 0 0
-	attack -40 144 244 41 4 0 0 0 5 12
-	seal 1 1
-	frame	data/chars/bosses/harakiri/a102.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/harakiri/a102.png
-	@cmd looper 1 9
-	attack -40 144 244 41 4 1 0 0 5 12
-	dropv 3 3 0
-	seal 1 1
-	frame	data/chars/bosses/harakiri/a102.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/harakiri/a102.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    energycost 60 1 6
+    hitflash BloodHit
+    loop    0
+    delay    16
+    offset    161 203
+    hitfx    data/sounds/Cutter.wav
+    frame    data/chars/bosses/harakiri/rage00.png
+        delay    4
+    @cmd dasher 0 0 0
+    attack -40 144 244 41 4 0 0 0 5 12
+    seal 1 1
+    frame    data/chars/bosses/harakiri/a102.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/harakiri/a102.png
+    @cmd looper 1 9
+    attack -40 144 244 41 4 1 0 0 5 12
+    dropv 3 3 0
+    seal 1 1
+    frame    data/chars/bosses/harakiri/a102.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/harakiri/a102.png
 
 anim follow7 #COUNTER
-	fastattack 1
-	jugglecost 3
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	hitfx	data/sounds/Cutter.wav
-	sound	data/sounds/Clash5.wav
-	offset	161 203
-	bbox 	161 134 42 73
-	frame	data/chars/bosses/harakiri/a100.png
-	delay	12
-	attack 174 144 121 41 35 1 0 0 30 36
-	dropv 3.5 1 0
-	delay	16
-	@cmd rageCancel 0 150 0 150 45 "ANI_FREESPECIAL" "hit"
-	frame	data/chars/bosses/harakiri/a101.png
-	frame	data/chars/bosses/harakiri/a101.png
-	frame	data/chars/bosses/harakiri/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 0 150 0 150 5 "ANI_FREESPECIAL4" "random"
-	frame	data/chars/bosses/harakiri/a102.png
+    fastattack 1
+    jugglecost 3
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    hitfx    data/sounds/Cutter.wav
+    sound    data/sounds/Clash5.wav
+    offset    161 203
+    bbox     161 134 42 73
+    frame    data/chars/bosses/harakiri/a100.png
+    delay    12
+    attack 174 144 121 41 35 1 0 0 30 36
+    dropv 3.5 1 0
+    delay    16
+    @cmd rageCancel 0 150 0 150 45 "ANI_FREESPECIAL" "hit"
+    frame    data/chars/bosses/harakiri/a101.png
+    frame    data/chars/bosses/harakiri/a101.png
+    frame    data/chars/bosses/harakiri/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 0 150 0 150 5 "ANI_FREESPECIAL4" "random"
+    frame    data/chars/bosses/harakiri/a102.png
 
 
 anim follow11 #BLOCK
-	loop	0
-	delay	12
-	offset	161 203
-	bbox 	120 114 46 91
-	@cmd block 1
-	frame	data/chars/bosses/harakiri/block00.png
-	@cmd keyLoop "attack3" 0
-	@cmd block 0
-	frame	data/chars/bosses/harakiri/block00.png
+    loop    0
+    delay    12
+    offset    161 203
+    bbox     120 114 46 91
+    @cmd block 1
+    frame    data/chars/bosses/harakiri/block00.png
+    @cmd keyLoop "attack3" 0
+    @cmd block 0
+    frame    data/chars/bosses/harakiri/block00.png
 
 anim follow12 #PARRY
-	loop	0
-	delay	24
-	offset	161 203
-	bbox 	120 114 46 91
-	@cmd block 1
-	frame	data/chars/bosses/harakiri/block00.png
+    loop    0
+    delay    24
+    offset    161 203
+    bbox     120 114 46 91
+    @cmd block 1
+    frame    data/chars/bosses/harakiri/block00.png

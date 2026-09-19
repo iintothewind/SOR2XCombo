@@ -2,12 +2,12 @@
 
 void main()
 {
-	blinkEffect();
-	otg();
-	versusDamage();
-	runMove();
-	energyRecover();
-	dojoEnergyRecover();
-	adjustLives();
-	freeGrabbed();
+    blinkEffect();
+    otg();
+    versusDamage();
+    runMove();
+    energyRecover();
+    dojoEnergyRecover();
+    adjustLives();
+    freeGrabbed();
 }

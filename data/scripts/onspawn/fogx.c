@@ -2,5 +2,5 @@
 
 void main()
 {
-	randomX2("FogB", "FogB");
+    randomX2("FogB", "FogB");
 }

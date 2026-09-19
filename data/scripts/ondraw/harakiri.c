@@ -3,8 +3,8 @@
 
 void main()
 {
-	parrow();
-	debugMode();
-	superArmor();
-	checkText("ANI_FREESPECIAL", "RAGE");
+    parrow();
+    debugMode();
+    superArmor();
+    checkText("ANI_FREESPECIAL", "RAGE");
 }

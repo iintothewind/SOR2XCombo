@@ -1,206 +1,206 @@
 ##MAIN
-name				Jack_KnifeP
-type				none
+name                Jack_KnifeP
+type                none
 
 ##LIFE
-health				0
+health                0
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					0
-mprate  			1 #SCRIPT
+mp                    0
+mprate              1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				70
+antigravity            -1 #-1/-2/-3
+height                70
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
 offscreen_noatk_factor 1
 
 ##SCRIPTS
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-animationscript	 	data/scripts/animation/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+animationscript         data/scripts/animation/default.c
 
 ##ICONS
-icon				data/chars/enemies/jack/icon.png 1
+icon                data/chars/enemies/jack/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/Die2.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Die2.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter2.png
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter3.png
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter2.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter3.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
 
 ##COMMANDS
-com 				a2	freespecial2 #LAUGH
+com                 a2    freespecial2 #LAUGH
 
 ##LOADS
-knife				KnifeT
+knife                KnifeT
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	16
-	offset	131 184
-	bbox 	117 120 35 66
-	frame	data/chars/enemies/jack/knife/idle00.png
-	frame	data/chars/enemies/jack/knife/idle01.png
-	frame	data/chars/enemies/jack/knife/idle02.png
-	frame	data/chars/enemies/jack/knife/idle01.png
+    loop    1
+    delay    16
+    offset    131 184
+    bbox     117 120 35 66
+    frame    data/chars/enemies/jack/knife/idle00.png
+    frame    data/chars/enemies/jack/knife/idle01.png
+    frame    data/chars/enemies/jack/knife/idle02.png
+    frame    data/chars/enemies/jack/knife/idle01.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	131 184
-	bbox 	117 114 35 72
-	frame	data/chars/enemies/jack/knife/walk00.png
-	frame	data/chars/enemies/jack/knife/walk01.png
-	frame	data/chars/enemies/jack/knife/walk02.png
-	frame	data/chars/enemies/jack/knife/walk03.png
+    loop    1
+    delay    16
+    offset    131 184
+    bbox     117 114 35 72
+    frame    data/chars/enemies/jack/knife/walk00.png
+    frame    data/chars/enemies/jack/knife/walk01.png
+    frame    data/chars/enemies/jack/knife/walk02.png
+    frame    data/chars/enemies/jack/knife/walk03.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	loop	1
-	delay	12
-	offset	131 184
-	bbox 	117 114 35 72
-	frame	data/chars/enemies/jack/knife/walk00.png
-	frame	data/chars/enemies/jack/knife/walk01.png
-	frame	data/chars/enemies/jack/knife/walk02.png
-	frame	data/chars/enemies/jack/knife/walk03.png
+    @cmd lockAni "runType" "off"
+    loop    1
+    delay    12
+    offset    131 184
+    bbox     117 114 35 72
+    frame    data/chars/enemies/jack/knife/walk00.png
+    frame    data/chars/enemies/jack/knife/walk01.png
+    frame    data/chars/enemies/jack/knife/walk02.png
+    frame    data/chars/enemies/jack/knife/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	131 184
-	frame	data/chars/enemies/jack/knife/get00.png
+    loop    0
+    delay    16
+    offset    131 184
+    frame    data/chars/enemies/jack/knife/get00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	131 184
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/jack/knife/jump00.png
+    loop    0
+    delay    30
+    offset    131 184
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/jack/knife/jump00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	131 184
-	bbox 	119 134 37 52
-	frame	data/chars/enemies/jack/knife/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    131 184
+    bbox     119 134 37 52
+    frame    data/chars/enemies/jack/knife/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	131 184
-	bbox 	116 117 36 58
-	@cmd jump 1
-	frame	data/chars/enemies/jack/knife/jump00.png
+    loop    0
+    delay    30
+    offset    131 184
+    bbox     116 117 36 58
+    @cmd jump 1
+    frame    data/chars/enemies/jack/knife/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	131 184
-	bbox 	119 134 37 52
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/jack/knife/jumpland00.png
+    loop    0
+    delay    12
+    offset    131 184
+    bbox     119 134 37 52
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/jack/knife/jumpland00.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	12
-	offset	131 184
-	bbox 	114 118 37 66
-	hitfx	data/sounds/Cutter.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/jack/knife/a100.png
-	bbox 	137 109 25 74
-	attack 141 130 49 3 8 1 0 0 0 12
-	frame	data/chars/enemies/jack/knife/a101.png
-	attack 166 106 54 31 8 1 0 0 0 12
-	bbox 	143 121 35 65
-	frame	data/chars/enemies/jack/knife/a102.png
-		move  20
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/jack/knife/a103.png
-	attack 156 120 57 3 8 1 0 0 0 12
-	bbox 	132 116 33 70
-	frame	data/chars/enemies/jack/knife/a104.png
-	bbox 	145 120 29 67
-	attack 151 144 52 18 8 1 0 0 0 12
-	frame	data/chars/enemies/jack/knife/a105.png
-	bbox 	125 121 38 64
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/jack/knife/a106.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    12
+    offset    131 184
+    bbox     114 118 37 66
+    hitfx    data/sounds/Cutter.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/jack/knife/a100.png
+    bbox     137 109 25 74
+    attack 141 130 49 3 8 1 0 0 0 12
+    frame    data/chars/enemies/jack/knife/a101.png
+    attack 166 106 54 31 8 1 0 0 0 12
+    bbox     143 121 35 65
+    frame    data/chars/enemies/jack/knife/a102.png
+        move  20
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/jack/knife/a103.png
+    attack 156 120 57 3 8 1 0 0 0 12
+    bbox     132 116 33 70
+    frame    data/chars/enemies/jack/knife/a104.png
+    bbox     145 120 29 67
+    attack 151 144 52 18 8 1 0 0 0 12
+    frame    data/chars/enemies/jack/knife/a105.png
+    bbox     125 121 38 64
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/jack/knife/a106.png
 
 anim special #THROW KNIFE
-	throwframe 2 9999
-	energycost 0
-	loop	0
-	delay	12
-	offset	131 184
-	frame	data/chars/enemies/jack/knife/a200.png
-	frame	data/chars/enemies/jack/knife/a201.png
-	@cmd throWeapon 76 56 -1 3 0 0
-	frame	data/chars/enemies/jack/knife/a202.png
-	frame	data/chars/enemies/jack/knife/a202.png
+    throwframe 2 9999
+    energycost 0
+    loop    0
+    delay    12
+    offset    131 184
+    frame    data/chars/enemies/jack/knife/a200.png
+    frame    data/chars/enemies/jack/knife/a201.png
+    @cmd throWeapon 76 56 -1 3 0 0
+    frame    data/chars/enemies/jack/knife/a202.png
+    frame    data/chars/enemies/jack/knife/a202.png
 
 anim freespecial #GET KNIFE - NEED TO LET THIS ANIMATION HERE TO CONTINUE GET KNIFE ANIMATION AFTER WEAPON MODEL IS CHANGED
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	120 118 31 68
-	frame	data/chars/enemies/jack/getknife02.png
-	frame	data/chars/enemies/jack/getknife02.png
-	frame	data/chars/enemies/jack/getknife02.png
-	frame	data/chars/enemies/jack/getknife03.png
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     120 118 31 68
+    frame    data/chars/enemies/jack/getknife02.png
+    frame    data/chars/enemies/jack/getknife02.png
+    frame    data/chars/enemies/jack/getknife02.png
+    frame    data/chars/enemies/jack/getknife03.png
 
 anim freespecial2 #LAUGH
-	loop	0
-	delay	12
-	offset	131 184
-	bbox 	117 117 34 69
-	sound	data/voices/Jack1.wav
-	frame	data/chars/enemies/jack/knife/laugh00.png
-	frame	data/chars/enemies/jack/knife/laugh01.png
-	frame	data/chars/enemies/jack/knife/laugh00.png
-	frame	data/chars/enemies/jack/knife/laugh01.png
-	frame	data/chars/enemies/jack/knife/laugh00.png
-	frame	data/chars/enemies/jack/knife/laugh01.png
-	frame	data/chars/enemies/jack/knife/laugh00.png
-	frame	data/chars/enemies/jack/knife/laugh01.png
-	frame	data/chars/enemies/jack/knife/laugh00.png
+    loop    0
+    delay    12
+    offset    131 184
+    bbox     117 117 34 69
+    sound    data/voices/Jack1.wav
+    frame    data/chars/enemies/jack/knife/laugh00.png
+    frame    data/chars/enemies/jack/knife/laugh01.png
+    frame    data/chars/enemies/jack/knife/laugh00.png
+    frame    data/chars/enemies/jack/knife/laugh01.png
+    frame    data/chars/enemies/jack/knife/laugh00.png
+    frame    data/chars/enemies/jack/knife/laugh01.png
+    frame    data/chars/enemies/jack/knife/laugh00.png
+    frame    data/chars/enemies/jack/knife/laugh01.png
+    frame    data/chars/enemies/jack/knife/laugh00.png

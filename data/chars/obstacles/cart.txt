@@ -1,36 +1,36 @@
-name				Cart
-type				obstacle
-candamage			player enemy npc obstacle
-health				1
-nolife				1
-score				2000
-gfxshadow			1 1
-noatflash			1
-flash				Flash
-ondoattackscript	data/scripts/ondoattack/default.c
-ondeathscript		data/scripts/ondeath/item.c
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/obstacles.c
+name                Cart
+type                obstacle
+candamage            player enemy npc obstacle
+health                1
+nolife                1
+score                2000
+gfxshadow            1 1
+noatflash            1
+flash                Flash
+ondoattackscript    data/scripts/ondoattack/default.c
+ondeathscript        data/scripts/ondeath/item.c
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/obstacles.c
 
-diesound			data/sounds/Glass.wav
+diesound            data/sounds/Glass.wav
 
 anim idle
-	loop	1
-	delay	32
-	offset	100 167
-	bbox 	69 99 62 70
-	hitfx	data/sounds/Glass.wav
-	sound	data/sounds/Wheel.wav
-	platform 63 63 137 137 1 -1
-	@cmd dasher -3 0 0
-	@cmd offScreenKill 50 0
-	attack 69 112 62 57 8 1 1 0 10 12
-	frame	data/chars/obstacles/cart00.png
+    loop    1
+    delay    32
+    offset    100 167
+    bbox     69 99 62 70
+    hitfx    data/sounds/Glass.wav
+    sound    data/sounds/Wheel.wav
+    platform 63 63 137 137 1 -1
+    @cmd dasher -3 0 0
+    @cmd offScreenKill 50 0
+    attack 69 112 62 57 8 1 1 0 10 12
+    frame    data/chars/obstacles/cart00.png
 
 anim fall
-	loop	0
-	delay	128
-	offset	100 155
-	frame	data/chars/obstacles/cart01.png
-	@cmd suicide
-	frame	data/chars/obstacles/cart01.png
+    loop    0
+    delay    128
+    offset    100 155
+    frame    data/chars/obstacles/cart01.png
+    @cmd suicide
+    frame    data/chars/obstacles/cart01.png

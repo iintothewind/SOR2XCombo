@@ -2,8 +2,8 @@
 
 void main()
 {
-	lockMp();
-	specialCost();
-	sor4Juggle();
-	restoreOpponent();
+    lockMp();
+    specialCost();
+    sor4Juggle();
+    restoreOpponent();
 }

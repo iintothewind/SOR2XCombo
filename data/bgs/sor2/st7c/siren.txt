@@ -1,29 +1,29 @@
-name	  	 	St7_Siren
-type	  	 	none
-shadow	  	 	0
-offscreenkill	6000
-animationscript	data/scripts/animation/default.c
+name               St7_Siren
+type               none
+shadow               0
+offscreenkill    6000
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	32
-	offset	7 17
-	@cmd offScreenKill 200 0
-	frame	data/bgs/sor2/st7c/siren00.png
+    loop    1
+    delay    32
+    offset    7 17
+    @cmd offScreenKill 200 0
+    frame    data/bgs/sor2/st7c/siren00.png
 
 anim follow1
-	loop	0
-	delay	6
-	offset	7 17
-	frame	data/bgs/sor2/st7c/siren01.png
-	frame	data/bgs/sor2/st7c/siren02.png
-	frame	data/bgs/sor2/st7c/siren03.png
-	frame	data/bgs/sor2/st7c/siren04.png
-	frame	data/bgs/sor2/st7c/siren01.png
-	frame	data/bgs/sor2/st7c/siren02.png
-	frame	data/bgs/sor2/st7c/siren03.png
-	frame	data/bgs/sor2/st7c/siren04.png
-	frame	data/bgs/sor2/st7c/siren01.png
-	frame	data/bgs/sor2/st7c/siren02.png
-	frame	data/bgs/sor2/st7c/siren03.png
-	frame	data/bgs/sor2/st7c/siren04.png
+    loop    0
+    delay    6
+    offset    7 17
+    frame    data/bgs/sor2/st7c/siren01.png
+    frame    data/bgs/sor2/st7c/siren02.png
+    frame    data/bgs/sor2/st7c/siren03.png
+    frame    data/bgs/sor2/st7c/siren04.png
+    frame    data/bgs/sor2/st7c/siren01.png
+    frame    data/bgs/sor2/st7c/siren02.png
+    frame    data/bgs/sor2/st7c/siren03.png
+    frame    data/bgs/sor2/st7c/siren04.png
+    frame    data/bgs/sor2/st7c/siren01.png
+    frame    data/bgs/sor2/st7c/siren02.png
+    frame    data/bgs/sor2/st7c/siren03.png
+    frame    data/bgs/sor2/st7c/siren04.png

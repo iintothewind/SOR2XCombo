@@ -1,287 +1,287 @@
-loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor3/st4b/_empty.png	0 1 0 0 0 0 1 1 0
-panel		data/bgs/sor3/st4b/_map.png		none	none
-frontpanel	data/bgs/sor3/st4b/fp00.png
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading4.png             1 -81 248 480 999 999 0
+background    data/bgs/sor3/st4b/_empty.png    0 1 0 0 0 0 1 1 0
+panel        data/bgs/sor3/st4b/_map.png        none    none
+frontpanel    data/bgs/sor3/st4b/fp00.png
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 4
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall		10 248 0 100 251 151 50 5000
+wall        10 248 0 100 251 151 50 5000
 
-wall		235 248 0 100 458 358 50 5000
+wall        235 248 0 100 458 358 50 5000
 
-wall		764 248 0 100 390 290 50 5000
+wall        764 248 0 100 390 290 50 5000
 
-wall		1162 248 0 100 200 200 50 5000
-
-#########################################################################################
-
-load		St4_RailsX1 3
+wall        1162 248 0 100 200 200 50 5000
 
 #########################################################################################
 
-spawn		St4_RailsX1 1
-flip		1
-coords		1 170 0
-at			0
+load        St4_RailsX1 3
 
 #########################################################################################
 
-spawn		Kusanagi_Wait1 1
-map			0
-flip		0
-coords		320 260 0
-at			0
+spawn        St4_RailsX1 1
+flip        1
+coords        1 170 0
+at            0
 
-spawn		Kusanagi_Wait1 1
-map			0
-flip		0
-coords		420 260 0
-at			0
+#########################################################################################
 
-spawn		FoodX
-flip		1
-coords		460 260 240
-at			350
+spawn        Kusanagi_Wait1 1
+map            0
+flip        0
+coords        320 260 0
+at            0
+
+spawn        Kusanagi_Wait1 1
+map            0
+flip        0
+coords        420 260 0
+at            0
+
+spawn        FoodX
+flip        1
+coords        460 260 240
+at            350
 
 wait
-at			400
+at            400
 
-group		4 4
-at			350
+group        4 4
+at            350
 
-spawn		KusanagiB 1
-map			1
-weapon		Kunai 1
-flip		0
-coords		600 260 0
-at			350
+spawn        KusanagiB 1
+map            1
+weapon        Kunai 1
+flip        0
+coords        600 260 0
+at            350
 
-spawn		KusanagiB 1
-map			2
-weapon		Sword 1
-flip		0
-coords		700 260 0
-at			350
+spawn        KusanagiB 1
+map            2
+weapon        Sword 1
+flip        0
+coords        700 260 0
+at            350
 
-spawn		KusanagiX 1
-map			1
-flip		1
-coords		-100 260 0
-at			350
+spawn        KusanagiX 1
+map            1
+flip        1
+coords        -100 260 0
+at            350
 
-spawn		KusanagiX 1
-map			2
-flip		1
-coords		-200 260 0
-at			350
+spawn        KusanagiX 1
+map            2
+flip        1
+coords        -200 260 0
+at            350
 
-spawn		KusanagiB 1
-map			1
-weapon		Kunai 1
-flip		1
-coords		-100 260 0
-at			350
+spawn        KusanagiB 1
+map            1
+weapon        Kunai 1
+flip        1
+coords        -100 260 0
+at            350
 
-spawn		KusanagiB 1
-map			2
-weapon		Sword 1
-flip		1
-coords		-200 260 0
-at			350
+spawn        KusanagiB 1
+map            2
+weapon        Sword 1
+flip        1
+coords        -200 260 0
+at            350
 
-spawn		KusanagiB 1
-map			3
-flip		1
-coords		600 260 0
-at			350
+spawn        KusanagiB 1
+map            3
+flip        1
+coords        600 260 0
+at            350
 
-spawn		BruceB 1
-map			3
-flip		1
-coords		600 260 0
-at			350
+spawn        BruceB 1
+map            3
+flip        1
+coords        600 260 0
+at            350
 
 
-spawn		KusanagiX 1
-map			4
-flip		1
-coords		700 260 0
-at			350
+spawn        KusanagiX 1
+map            4
+flip        1
+coords        700 260 0
+at            350
 
-spawn		KusanagiB 1
-map			5
-flip		1
-coords		800 260 0
-at			350
+spawn        KusanagiB 1
+map            5
+flip        1
+coords        800 260 0
+at            350
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-150 260 0
-at			350
+spawn        BossX1 1
+map            4
+flip        1
+coords        -150 260 0
+at            350
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-150 260 0
-at			350
+flip        1
+coords        -150 260 0
+at            350
 
 #########################################################################################
 
-group		1000 1000
-at			450
+group        1000 1000
+at            450
 
-spawn		Kusanagi_Wait1 1
-map			0
-flip		0
-coords		620 260 0
-at			450
+spawn        Kusanagi_Wait1 1
+map            0
+flip        0
+coords        620 260 0
+at            450
 
-spawn		KusanagiX 1
-map			2
-flip		1
-coords		600 260 0
-at			550
+spawn        KusanagiX 1
+map            2
+flip        1
+coords        600 260 0
+at            550
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			600
+at            600
 
 
-group		4 4
-at			790
+group        4 4
+at            790
 
-spawn		BruceB 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        BruceB 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		BasicX3 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        BasicX3 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		KusanagiX 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        KusanagiX 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		KusanagiB 1
-map			1
-weapon		Kunai 1
-flip		1
-coords		700 260 0
-at			790
+spawn        KusanagiB 1
+map            1
+weapon        Kunai 1
+flip        1
+coords        700 260 0
+at            790
 
-spawn		BasicX3 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        BasicX3 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		KusanagiX 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        KusanagiX 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		KusanagiB 1
-map			2
-weapon		Sword 1
-flip		1
-coords		800 260 0
-at			790
+spawn        KusanagiB 1
+map            2
+weapon        Sword 1
+flip        1
+coords        800 260 0
+at            790
 
-spawn		KusanagiB 1
-map			3
-flip		1
-coords		900 260 0
-at			790
+spawn        KusanagiB 1
+map            3
+flip        1
+coords        900 260 0
+at            790
 
-spawn		BruceB 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        BruceB 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		KusanagiB 1
-map			1
-flip		1
-coords		700 260 0
-at			790
+spawn        KusanagiB 1
+map            1
+flip        1
+coords        700 260 0
+at            790
 
-spawn		KusanagiB 1
-map			2
-weapon		Kunai 1
-flip		1
-coords		-100 260 0
-at			790
+spawn        KusanagiB 1
+map            2
+weapon        Kunai 1
+flip        1
+coords        -100 260 0
+at            790
 
-spawn		BasicX3 1
-map			3
-weapon		Sword 1
-flip		1
-coords		-200 260 0
-at			790
+spawn        BasicX3 1
+map            3
+weapon        Sword 1
+flip        1
+coords        -200 260 0
+at            790
 
-spawn		KusanagiB 1
-map			0
-flip		1
-coords		600 260 0
-at			790
+spawn        KusanagiB 1
+map            0
+flip        1
+coords        600 260 0
+at            790
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		700 260 0
-at			790
+spawn        BasicX3 1
+map            1
+flip        1
+coords        700 260 0
+at            790
 
-spawn		KusanagiB 1
-map			2
-flip		1
-coords		-100 260 0
-at			790
+spawn        KusanagiB 1
+map            2
+flip        1
+coords        -100 260 0
+at            790
 
-spawn		BossX1 1
-map			3
-flip		1
-coords		-50 260 0
-at			790
+spawn        BossX1 1
+map            3
+flip        1
+coords        -50 260 0
+at            790
 
-spawn		BossX1 1
-map			3
+spawn        BossX1 1
+map            3
 2pspawn
-flip		1
-coords		-50 260 0
-at			790
+flip        1
+coords        -50 260 0
+at            790
 
-spawn		KusanagiB 1
-map			4
-flip		1
-coords		600 260 0
-at			790
+spawn        KusanagiB 1
+map            4
+flip        1
+coords        600 260 0
+at            790
 
-spawn		KusanagiB 1
-map			5
-flip		1
-coords		700 260 0
-at			790
+spawn        KusanagiB 1
+map            5
+flip        1
+coords        700 260 0
+at            790

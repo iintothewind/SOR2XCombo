@@ -1,33 +1,33 @@
-name			Gota #GROUND
-type			None
+name            Gota #GROUND
+type            None
 setlayer 5
-offscreenkill	9999
+offscreenkill    9999
 
 animationscript data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	50
-	offset	4 0
-	frame	data/bgs/sor1/st02/Gota01.png
-		delay  8
-	frame	data/bgs/sor1/st02/Gota02.png
-		offset  4  -1
-	frame	data/bgs/sor1/st02/Gota03.png
-		offset  4  -4
-	frame	data/bgs/sor1/st02/Gota03.png
-		offset  4  -9
-	frame	data/bgs/sor1/st02/Gota03.png
-		offset  4  -16
-	frame	data/bgs/sor1/st02/Gota03.png
-		offset  4  -25
-	frame	data/bgs/sor1/st02/Gota03.png
-		offset  4  -36
-	frame	data/bgs/sor1/st02/Gota03.png
-		offset  4  -49
-	frame  data/bgs/sor1/st02/Gota03.png
-		offset  4  -64
-	frame  data/bgs/sor1/st02/Gota03.png
-		offset  4  -70
-	@cmd offScreenKill 200 0
-	frame	data/bgs/sor1/st02/Gota04.png
+    loop    1
+    delay    50
+    offset    4 0
+    frame    data/bgs/sor1/st02/Gota01.png
+        delay  8
+    frame    data/bgs/sor1/st02/Gota02.png
+        offset  4  -1
+    frame    data/bgs/sor1/st02/Gota03.png
+        offset  4  -4
+    frame    data/bgs/sor1/st02/Gota03.png
+        offset  4  -9
+    frame    data/bgs/sor1/st02/Gota03.png
+        offset  4  -16
+    frame    data/bgs/sor1/st02/Gota03.png
+        offset  4  -25
+    frame    data/bgs/sor1/st02/Gota03.png
+        offset  4  -36
+    frame    data/bgs/sor1/st02/Gota03.png
+        offset  4  -49
+    frame  data/bgs/sor1/st02/Gota03.png
+        offset  4  -64
+    frame  data/bgs/sor1/st02/Gota03.png
+        offset  4  -70
+    @cmd offScreenKill 200 0
+    frame    data/bgs/sor1/st02/Gota04.png

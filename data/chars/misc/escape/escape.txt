@@ -1,29 +1,29 @@
-name			Escape
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            Escape
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	73 54
-	frame	data/chars/misc/escape/escape00.png
-	frame	data/chars/misc/escape/escape01.png
-	frame	data/chars/misc/escape/escape02.png
-	frame	data/chars/misc/escape/escape03.png
-	frame	data/chars/misc/escape/escape04.png
-	frame	data/chars/misc/escape/escape05.png
-	frame	data/chars/misc/escape/escape06.png
-	frame	data/chars/misc/escape/escape07.png
-	frame	data/chars/misc/escape/escape08.png
-	frame	data/chars/misc/escape/escape09.png
-	frame	data/chars/misc/escape/escape10.png
-	frame	data/chars/misc/escape/escape11.png
-	@cmd suicide
-	frame	data/chars/misc/escape/empty.png
+    loop    0
+    delay    2
+    offset    73 54
+    frame    data/chars/misc/escape/escape00.png
+    frame    data/chars/misc/escape/escape01.png
+    frame    data/chars/misc/escape/escape02.png
+    frame    data/chars/misc/escape/escape03.png
+    frame    data/chars/misc/escape/escape04.png
+    frame    data/chars/misc/escape/escape05.png
+    frame    data/chars/misc/escape/escape06.png
+    frame    data/chars/misc/escape/escape07.png
+    frame    data/chars/misc/escape/escape08.png
+    frame    data/chars/misc/escape/escape09.png
+    frame    data/chars/misc/escape/escape10.png
+    frame    data/chars/misc/escape/escape11.png
+    @cmd suicide
+    frame    data/chars/misc/escape/empty.png

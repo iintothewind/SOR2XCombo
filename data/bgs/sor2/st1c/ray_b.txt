@@ -1,15 +1,15 @@
-name			St1_Ray_B
-type			none
-shadow			0
-setlayer		1000
+name            St1_Ray_B
+type            none
+shadow            0
+setlayer        1000
 animationscript data/scripts/animation/default.c
 
-load			St1_Ray
+load            St1_Ray
 
 anim idle
-	loop	1
-	delay	32
-	offset	25 25
-	@cmd graphics "sor2x" "St1_Ray"
-	frame	data/bgs/sor2/st1c/ray02.png
-	frame	data/bgs/sor2/st1c/ray02.png
+    loop    1
+    delay    32
+    offset    25 25
+    @cmd graphics "sor2x" "St1_Ray"
+    frame    data/bgs/sor2/st1c/ray02.png
+    frame    data/bgs/sor2/st1c/ray02.png

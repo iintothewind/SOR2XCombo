@@ -2,7 +2,7 @@
 
 void main()
 {
-	jumpVel();
-	parrow();
-	debugMode();
+    jumpVel();
+    parrow();
+    debugMode();
 }

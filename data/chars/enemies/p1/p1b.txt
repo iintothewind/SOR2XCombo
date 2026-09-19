@@ -1,620 +1,620 @@
 ##MAIN
-name				P1B
-type				enemy
+name                P1B
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				62
+antigravity            -1 #-1/-2/-3
+height                62
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-aimove				avoid #ENEMY ONLY
-death				2
-noatflash 			1
-flash				Flash
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+aimove                avoid #ENEMY ONLY
+death                2
+noatflash             1
+flash                Flash
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onspawnscript		data/scripts/onspawn/p1.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/p1.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/default.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onspawnscript        data/scripts/onspawn/p1.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/p1.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/p1/icon.png 1
+icon                data/chars/enemies/p1/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/Die5.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Die5.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter1.png
-remap				data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter2.png
-remap				data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter3.png
-remap				data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter4.png
+remap                data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter1.png
+remap                data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter2.png
+remap                data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter3.png
+remap                data/chars/enemies/p1/idle00.png data/chars/enemies/p1/alter4.png
 
 ##LOADS
-load				P1_Laser
+load                P1_Laser
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	141 182
-	frame	data/chars/enemies/p1/idle00.png
+    loop    0
+    delay    1
+    offset    141 182
+    frame    data/chars/enemies/p1/idle00.png
 
 anim idle
-	loop	1
-	delay	8
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/idle00.png
-	frame	data/chars/enemies/p1/idle00.png
-	frame	data/chars/enemies/p1/idle00.png
-	frame	data/chars/enemies/p1/idle00.png
+    loop    1
+    delay    8
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/idle00.png
+    frame    data/chars/enemies/p1/idle00.png
+    frame    data/chars/enemies/p1/idle00.png
+    frame    data/chars/enemies/p1/idle00.png
 
 anim walk
-	loop	1
-	delay	4
-	offset	141 182
-	bbox 	127 132 33 52
-	sound	data/sounds/Run4.wav
-	frame	data/chars/enemies/p1/walk00.png
-	frame	data/chars/enemies/p1/walk01.png
-	frame	data/chars/enemies/p1/walk00.png
-	frame	data/chars/enemies/p1/walk01.png
+    loop    1
+    delay    4
+    offset    141 182
+    bbox     127 132 33 52
+    sound    data/sounds/Run4.wav
+    frame    data/chars/enemies/p1/walk00.png
+    frame    data/chars/enemies/p1/walk01.png
+    frame    data/chars/enemies/p1/walk00.png
+    frame    data/chars/enemies/p1/walk01.png
 
 anim backwalk
-	loop	1
-	delay	4
-	offset	141 182
-	bbox 	127 132 33 52
-	sound	data/sounds/Run4.wav
-	frame	data/chars/enemies/p1/backwalk00.png
-	frame	data/chars/enemies/p1/backwalk01.png
-	frame	data/chars/enemies/p1/backwalk00.png
-	frame	data/chars/enemies/p1/backwalk01.png
+    loop    1
+    delay    4
+    offset    141 182
+    bbox     127 132 33 52
+    sound    data/sounds/Run4.wav
+    frame    data/chars/enemies/p1/backwalk00.png
+    frame    data/chars/enemies/p1/backwalk01.png
+    frame    data/chars/enemies/p1/backwalk00.png
+    frame    data/chars/enemies/p1/backwalk01.png
 
 anim get
-	loop	0
-	delay	16
-	offset	141 182
-	frame	data/chars/enemies/p1/get00.png
+    loop    0
+    delay    16
+    offset    141 182
+    frame    data/chars/enemies/p1/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/grabbed00.png
+    loop    0
+    delay    8
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	8
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/smalljump00.png
-	frame	data/chars/enemies/p1/smalljump01.png
-	frame	data/chars/enemies/p1/smalljump02.png
-	bbox 	125 125 27 59
-	frame	data/chars/enemies/p1/smalljump03.png
-	bbox 	125 128 27 56
-	frame	data/chars/enemies/p1/smalljump04.png
-	bbox 	125 129 27 55
-	frame	data/chars/enemies/p1/smalljump05.png
-	bbox 	125 116 27 68
-	frame	data/chars/enemies/p1/smalljump06.png
+    loop    0
+    delay    8
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/smalljump00.png
+    frame    data/chars/enemies/p1/smalljump01.png
+    frame    data/chars/enemies/p1/smalljump02.png
+    bbox     125 125 27 59
+    frame    data/chars/enemies/p1/smalljump03.png
+    bbox     125 128 27 56
+    frame    data/chars/enemies/p1/smalljump04.png
+    bbox     125 129 27 55
+    frame    data/chars/enemies/p1/smalljump05.png
+    bbox     125 116 27 68
+    frame    data/chars/enemies/p1/smalljump06.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	141 182
-	bbox 	125 95 27 67
-	@cmd jump 1
-	frame	data/chars/enemies/p1/smalljump07.png
+    loop    0
+    delay    30
+    offset    141 182
+    bbox     125 95 27 67
+    @cmd jump 1
+    frame    data/chars/enemies/p1/smalljump07.png
 
 anim jumpland
-	loop	0
-	delay	8
-	offset	141 182
-	bbox 	125 122 27 62
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/enemies/p1/smalljump01.png
-	frame	data/chars/enemies/p1/smalljump02.png
-	bbox 	125 125 27 59
-	frame	data/chars/enemies/p1/smalljump03.png
+    loop    0
+    delay    8
+    offset    141 182
+    bbox     125 122 27 62
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/enemies/p1/smalljump01.png
+    frame    data/chars/enemies/p1/smalljump02.png
+    bbox     125 125 27 59
+    frame    data/chars/enemies/p1/smalljump03.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/pain00.png
-	frame	data/chars/enemies/p1/pain01.png
-	frame	data/chars/enemies/p1/pain02.png
-	frame	data/chars/enemies/p1/pain03.png
-	frame	data/chars/enemies/p1/pain00.png
-	frame	data/chars/enemies/p1/pain01.png
-	frame	data/chars/enemies/p1/pain02.png
-	frame	data/chars/enemies/p1/pain03.png
-	frame	data/chars/enemies/p1/pain00.png
-	frame	data/chars/enemies/p1/pain01.png
-	frame	data/chars/enemies/p1/pain02.png
-	frame	data/chars/enemies/p1/pain03.png
+    loop    0
+    delay    4
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/pain00.png
+    frame    data/chars/enemies/p1/pain01.png
+    frame    data/chars/enemies/p1/pain02.png
+    frame    data/chars/enemies/p1/pain03.png
+    frame    data/chars/enemies/p1/pain00.png
+    frame    data/chars/enemies/p1/pain01.png
+    frame    data/chars/enemies/p1/pain02.png
+    frame    data/chars/enemies/p1/pain03.png
+    frame    data/chars/enemies/p1/pain00.png
+    frame    data/chars/enemies/p1/pain01.png
+    frame    data/chars/enemies/p1/pain02.png
+    frame    data/chars/enemies/p1/pain03.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/pain00.png
-	frame	data/chars/enemies/p1/pain01.png
-	frame	data/chars/enemies/p1/pain02.png
-	frame	data/chars/enemies/p1/pain03.png
-	frame	data/chars/enemies/p1/pain00.png
-	frame	data/chars/enemies/p1/pain01.png
-	frame	data/chars/enemies/p1/pain02.png
-	frame	data/chars/enemies/p1/pain03.png
-	frame	data/chars/enemies/p1/pain00.png
-	frame	data/chars/enemies/p1/pain01.png
-	frame	data/chars/enemies/p1/pain02.png
-	frame	data/chars/enemies/p1/pain03.png
+    loop    0
+    delay    4
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/pain00.png
+    frame    data/chars/enemies/p1/pain01.png
+    frame    data/chars/enemies/p1/pain02.png
+    frame    data/chars/enemies/p1/pain03.png
+    frame    data/chars/enemies/p1/pain00.png
+    frame    data/chars/enemies/p1/pain01.png
+    frame    data/chars/enemies/p1/pain02.png
+    frame    data/chars/enemies/p1/pain03.png
+    frame    data/chars/enemies/p1/pain00.png
+    frame    data/chars/enemies/p1/pain01.png
+    frame    data/chars/enemies/p1/pain02.png
+    frame    data/chars/enemies/p1/pain03.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	141 182
-	bbox 	110 125 49 39
-	frame	data/chars/enemies/p1/fall00.png
-		delay	8
-	bbox 	100 141 70 42
-	sound	data/sounds/Iron4.wav
-	frame	data/chars/enemies/p1/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    141 182
+    bbox     110 125 49 39
+    frame    data/chars/enemies/p1/fall00.png
+        delay    8
+    bbox     100 141 70 42
+    sound    data/sounds/Iron4.wav
+    frame    data/chars/enemies/p1/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	141 182
-	bbox 	110 125 49 39
-	frame	data/chars/enemies/p1/fall00.png
-		delay	8
-	bbox 	100 141 70 42
-	sound	data/sounds/Iron4.wav
-	frame	data/chars/enemies/p1/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    141 182
+    bbox     110 125 49 39
+    frame    data/chars/enemies/p1/fall00.png
+        delay    8
+    bbox     100 141 70 42
+    sound    data/sounds/Iron4.wav
+    frame    data/chars/enemies/p1/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	141 182
-	bbox 	110 125 49 39
-	frame	data/chars/enemies/p1/fall00.png
-		delay	8
-	bbox 	100 141 70 42
-	sound	data/sounds/Iron4.wav
-	frame	data/chars/enemies/p1/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    141 182
+    bbox     110 125 49 39
+    frame    data/chars/enemies/p1/fall00.png
+        delay    8
+    bbox     100 141 70 42
+    sound    data/sounds/Iron4.wav
+    frame    data/chars/enemies/p1/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	141 182
-	frame	data/chars/enemies/p1/fall600.png
-	frame	data/chars/enemies/p1/fall601.png
-	frame	data/chars/enemies/p1/fall602.png
-	frame	data/chars/enemies/p1/fall603.png
-		delay	8
-	sound	data/sounds/Iron4.wav
-	frame	data/chars/enemies/p1/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    141 182
+    frame    data/chars/enemies/p1/fall600.png
+    frame    data/chars/enemies/p1/fall601.png
+    frame    data/chars/enemies/p1/fall602.png
+    frame    data/chars/enemies/p1/fall603.png
+        delay    8
+    sound    data/sounds/Iron4.wav
+    frame    data/chars/enemies/p1/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	141 182
-	frame	data/chars/enemies/p1/fall700.png
-	frame	data/chars/enemies/p1/fall701.png
-	frame	data/chars/enemies/p1/fall702.png
-	frame	data/chars/enemies/p1/fall703.png
-	frame	data/chars/enemies/p1/fall704.png
-	frame	data/chars/enemies/p1/fall705.png
+    loop    0
+    delay    1000
+    offset    141 182
+    frame    data/chars/enemies/p1/fall700.png
+    frame    data/chars/enemies/p1/fall701.png
+    frame    data/chars/enemies/p1/fall702.png
+    frame    data/chars/enemies/p1/fall703.png
+    frame    data/chars/enemies/p1/fall704.png
+    frame    data/chars/enemies/p1/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	141 182
-	bbox 	110 125 49 39
-	hitfx	data/sounds/MediumKick.wav
-	attack 110 125 49 39 4 1 0 0 20 12
-	frame	data/chars/enemies/p1/fall00.png
-		delay	999
-	frame	data/chars/enemies/p1/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	100 141 70 42
-	sound	data/sounds/Iron4.wav
-	frame	data/chars/enemies/p1/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    141 182
+    bbox     110 125 49 39
+    hitfx    data/sounds/MediumKick.wav
+    attack 110 125 49 39 4 1 0 0 20 12
+    frame    data/chars/enemies/p1/fall00.png
+        delay    999
+    frame    data/chars/enemies/p1/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     100 141 70 42
+    sound    data/sounds/Iron4.wav
+    frame    data/chars/enemies/p1/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	141 182
-	bbox 	129 131 28 54
-	hitfx	data/sounds/MediumKick.wav
-	attack 129 131 28 54 4 1 0 0 20 12
-	frame	data/chars/enemies/p1/fall900.png
-		delay	999
-	frame	data/chars/enemies/p1/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	100 141 70 42
-	sound	data/sounds/Iron4.wav
-	frame	data/chars/enemies/p1/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    141 182
+    bbox     129 131 28 54
+    hitfx    data/sounds/MediumKick.wav
+    attack 129 131 28 54 4 1 0 0 20 12
+    frame    data/chars/enemies/p1/fall900.png
+        delay    999
+    frame    data/chars/enemies/p1/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     100 141 70 42
+    sound    data/sounds/Iron4.wav
+    frame    data/chars/enemies/p1/fall01.png
 
 anim death #EXPLOSION
-	loop	0
-	delay	64
-	offset	141 182
-	frame	data/chars/enemies/p1/fall01.png
-		delay	16
-	frame	data/chars/enemies/p1/death00.png
-	@cmd spawnBind "Bang" -15 15 1
-	frame	data/chars/enemies/p1/death01.png
-	frame	data/chars/enemies/p1/death02.png
+    loop    0
+    delay    64
+    offset    141 182
+    frame    data/chars/enemies/p1/fall01.png
+        delay    16
+    frame    data/chars/enemies/p1/death00.png
+    @cmd spawnBind "Bang" -15 15 1
+    frame    data/chars/enemies/p1/death01.png
+    frame    data/chars/enemies/p1/death02.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	141 182
-	frame	data/chars/enemies/p1/rise00.png
-	frame	data/chars/enemies/p1/rise01.png
-	frame	data/chars/enemies/p1/rise02.png
+    loop    0
+    delay    16
+    offset    141 182
+    frame    data/chars/enemies/p1/rise00.png
+    frame    data/chars/enemies/p1/rise01.png
+    frame    data/chars/enemies/p1/rise02.png
 
 anim riseattack
-	range 60 120
-	rangea 0 0
-	rangez -24 24
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	141 182
-	hitfx	data/sounds/StrongPunch.wav
-	@cmd cancelBack "ANI_FOLLOW1"
-	sound	data/sounds/Slide2.wav
-	frame	data/chars/enemies/p1/a100.png
-	frame	data/chars/enemies/p1/a101.png
-	@cmd dasher 1.5 0 0
-	attack 127 132 33 52 16 1 0 0 30 12
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 2 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2.5 0 0
-	bbox 	127 132 33 52
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3.5 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3.5 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3.5 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2.5 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 2 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 1.5 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/p1/a101.png
-	@cmd dasher 0.5 0 0
-	bbox 	126 130 30 54
-	frame	data/chars/enemies/p1/a100.png
+    range 60 120
+    rangea 0 0
+    rangez -24 24
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    141 182
+    hitfx    data/sounds/StrongPunch.wav
+    @cmd cancelBack "ANI_FOLLOW1"
+    sound    data/sounds/Slide2.wav
+    frame    data/chars/enemies/p1/a100.png
+    frame    data/chars/enemies/p1/a101.png
+    @cmd dasher 1.5 0 0
+    attack 127 132 33 52 16 1 0 0 30 12
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 2 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2.5 0 0
+    bbox     127 132 33 52
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3.5 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3.5 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3.5 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2.5 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 2 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 1.5 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/p1/a101.png
+    @cmd dasher 0.5 0 0
+    bbox     126 130 30 54
+    frame    data/chars/enemies/p1/a100.png
 
 
 anim attack1 #SLIDE
-	range 0 200
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	141 182
-	bbox 	126 130 30 54
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Slide2.wav
-	frame	data/chars/enemies/p1/a100.png
-	bbox 	127 132 33 52
-	frame	data/chars/enemies/p1/a101.png
-	@cmd dasher 1 0 0
-	attack 127 132 33 52 16 1 0 0 20 12
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 1.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 2.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 1.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 1 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/p1/a101.png
-	@cmd dasher 0.5 0 0
-	bbox 	126 130 30 54
-	frame	data/chars/enemies/p1/a100.png
+    range 0 200
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    141 182
+    bbox     126 130 30 54
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Slide2.wav
+    frame    data/chars/enemies/p1/a100.png
+    bbox     127 132 33 52
+    frame    data/chars/enemies/p1/a101.png
+    @cmd dasher 1 0 0
+    attack 127 132 33 52 16 1 0 0 20 12
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 1.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 2.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 1.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 1 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/p1/a101.png
+    @cmd dasher 0.5 0 0
+    bbox     126 130 30 54
+    frame    data/chars/enemies/p1/a100.png
 
 anim attack2 #LASER
-	range 40 300
-	rangea 0 0
-	loop	0
-	delay	8
-	offset	141 182
-	bbox 	125 120 27 64
-	sound	data/voices/Attack7.wav
-	frame	data/chars/enemies/p1/laser00.png
-	frame	data/chars/enemies/p1/laser01.png
-	frame	data/chars/enemies/p1/laser02.png
-	frame	data/chars/enemies/p1/laser03.png
-	frame	data/chars/enemies/p1/laser04.png
-	@cmd shoot "P1_Laser" 0 0 0 4 0 0
-	sound	data/sounds/LaserShot.wav
-	frame	data/chars/enemies/p1/laser05.png
-	frame	data/chars/enemies/p1/laser06.png
-	frame	data/chars/enemies/p1/laser07.png
+    range 40 300
+    rangea 0 0
+    loop    0
+    delay    8
+    offset    141 182
+    bbox     125 120 27 64
+    sound    data/voices/Attack7.wav
+    frame    data/chars/enemies/p1/laser00.png
+    frame    data/chars/enemies/p1/laser01.png
+    frame    data/chars/enemies/p1/laser02.png
+    frame    data/chars/enemies/p1/laser03.png
+    frame    data/chars/enemies/p1/laser04.png
+    @cmd shoot "P1_Laser" 0 0 0 4 0 0
+    sound    data/sounds/LaserShot.wav
+    frame    data/chars/enemies/p1/laser05.png
+    frame    data/chars/enemies/p1/laser06.png
+    frame    data/chars/enemies/p1/laser07.png
 
 anim attack3 #SMALL JUMP ADVANCE
-	range 50 200
-	rangea 0 100
-	rangez -50 50
-	loop	0
-	delay	8
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/smalljump00.png
-	frame	data/chars/enemies/p1/smalljump01.png
-	frame	data/chars/enemies/p1/smalljump02.png
-	bbox 	125 125 27 59
-	frame	data/chars/enemies/p1/smalljump03.png
-	bbox 	125 128 27 56
-	frame	data/chars/enemies/p1/smalljump04.png
-	bbox 	125 129 27 55
-	frame	data/chars/enemies/p1/smalljump05.png
-	bbox 	125 116 27 68
-	frame	data/chars/enemies/p1/smalljump06.png
-	@cmd target 1.3 1.3
-	@cmd leapTarget 2
-	bbox 	125 95 27 67
-	frame	data/chars/enemies/p1/smalljump07.png
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/p1/smalljump07.png
-		delay	2
-	frame	data/chars/enemies/p1/smalljump07.png
-	@cmd landFrame
-		delay	8
-	bbox 	125 122 27 62
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/enemies/p1/smalljump01.png
-	frame	data/chars/enemies/p1/smalljump02.png
-	bbox 	125 125 27 59
-	frame	data/chars/enemies/p1/smalljump03.png
+    range 50 200
+    rangea 0 100
+    rangez -50 50
+    loop    0
+    delay    8
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/smalljump00.png
+    frame    data/chars/enemies/p1/smalljump01.png
+    frame    data/chars/enemies/p1/smalljump02.png
+    bbox     125 125 27 59
+    frame    data/chars/enemies/p1/smalljump03.png
+    bbox     125 128 27 56
+    frame    data/chars/enemies/p1/smalljump04.png
+    bbox     125 129 27 55
+    frame    data/chars/enemies/p1/smalljump05.png
+    bbox     125 116 27 68
+    frame    data/chars/enemies/p1/smalljump06.png
+    @cmd target 1.3 1.3
+    @cmd leapTarget 2
+    bbox     125 95 27 67
+    frame    data/chars/enemies/p1/smalljump07.png
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/p1/smalljump07.png
+        delay    2
+    frame    data/chars/enemies/p1/smalljump07.png
+    @cmd landFrame
+        delay    8
+    bbox     125 122 27 62
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/enemies/p1/smalljump01.png
+    frame    data/chars/enemies/p1/smalljump02.png
+    bbox     125 125 27 59
+    frame    data/chars/enemies/p1/smalljump03.png
 
 anim attack4 #HIGH JUMP ADVANCE
-	range 200 400
-	rangea 0 100
-	rangez -50 50
-	loop	0
-	delay	8
-	offset	141 182
-	bbox 	125 122 27 62
-	frame	data/chars/enemies/p1/highjump00.png
-	frame	data/chars/enemies/p1/highjump01.png
-	frame	data/chars/enemies/p1/highjump02.png
-	bbox 	125 125 27 59
-	frame	data/chars/enemies/p1/highjump03.png
-	bbox 	125 128 27 56
-	frame	data/chars/enemies/p1/highjump04.png
-	bbox 	125 129 27 55
-	frame	data/chars/enemies/p1/highjump05.png
-	bbox 	125 116 27 68
-	frame	data/chars/enemies/p1/highjump06.png
-		delay	4
-	@cmd targetJump
-	@cmd leapJump
-	bbox 	125 95 27 67
-	frame	data/chars/enemies/p1/highjump07.png
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/enemies/p1/highjump08.png
-	frame	data/chars/enemies/p1/highjump09.png
-	frame	data/chars/enemies/p1/highjump08.png
-	frame	data/chars/enemies/p1/highjump09.png
-	@cmd landFrame 2
-		delay	8
-	bbox 	125 122 27 62
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/enemies/p1/highjump01.png
-	frame	data/chars/enemies/p1/highjump02.png
-	bbox 	125 125 27 59
-	frame	data/chars/enemies/p1/highjump03.png
+    range 200 400
+    rangea 0 100
+    rangez -50 50
+    loop    0
+    delay    8
+    offset    141 182
+    bbox     125 122 27 62
+    frame    data/chars/enemies/p1/highjump00.png
+    frame    data/chars/enemies/p1/highjump01.png
+    frame    data/chars/enemies/p1/highjump02.png
+    bbox     125 125 27 59
+    frame    data/chars/enemies/p1/highjump03.png
+    bbox     125 128 27 56
+    frame    data/chars/enemies/p1/highjump04.png
+    bbox     125 129 27 55
+    frame    data/chars/enemies/p1/highjump05.png
+    bbox     125 116 27 68
+    frame    data/chars/enemies/p1/highjump06.png
+        delay    4
+    @cmd targetJump
+    @cmd leapJump
+    bbox     125 95 27 67
+    frame    data/chars/enemies/p1/highjump07.png
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/enemies/p1/highjump08.png
+    frame    data/chars/enemies/p1/highjump09.png
+    frame    data/chars/enemies/p1/highjump08.png
+    frame    data/chars/enemies/p1/highjump09.png
+    @cmd landFrame 2
+        delay    8
+    bbox     125 122 27 62
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/enemies/p1/highjump01.png
+    frame    data/chars/enemies/p1/highjump02.png
+    bbox     125 125 27 59
+    frame    data/chars/enemies/p1/highjump03.png
 
 anim attack5 #SUICIDE
-	range -60 60
-	rangea 0 0
-	loop	0
-	delay	4
-	offset	141 182
-	bbox 	125 122 27 62
-	sound	data/voices/Attack6.wav
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	sound	data/voices/Attack6.wav
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	sound	data/voices/Attack6.wav
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	sound	data/voices/Attack6.wav
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	sound	data/voices/Attack6.wav
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	frame	data/chars/enemies/p1/suicide00.png
-	frame	data/chars/enemies/p1/suicide01.png
-	@cmd hurtPerc 20
-	frame	data/chars/enemies/p1/suicide00.png
+    range -60 60
+    rangea 0 0
+    loop    0
+    delay    4
+    offset    141 182
+    bbox     125 122 27 62
+    sound    data/voices/Attack6.wav
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    sound    data/voices/Attack6.wav
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    sound    data/voices/Attack6.wav
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    sound    data/voices/Attack6.wav
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    sound    data/voices/Attack6.wav
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    frame    data/chars/enemies/p1/suicide00.png
+    frame    data/chars/enemies/p1/suicide01.png
+    @cmd hurtPerc 20
+    frame    data/chars/enemies/p1/suicide00.png
 
 anim special #SLIDE
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	energycost 2 2
-	loop	0
-	delay	4
-	offset	141 182
-	hitfx	data/sounds/StrongPunch.wav
-	@cmd cancelBack "ANI_FOLLOW1"
-	sound	data/sounds/Slide2.wav
-	frame	data/chars/enemies/p1/a100.png
-	frame	data/chars/enemies/p1/a101.png
-	@cmd dasher 1 0 0
-	attack 127 132 33 52 16 1 0 0 20 12
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 1.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2 0 0
-	bbox 	127 132 33 52
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 2.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 2 0 0
-	frame	data/chars/enemies/p1/a102.png
-	@cmd dasher 1.5 0 0
-	frame	data/chars/enemies/p1/a103.png
-	@cmd dasher 1 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/p1/a101.png
-	@cmd dasher 0.5 0 0
-	bbox 	126 130 30 54
-	frame	data/chars/enemies/p1/a100.png
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    energycost 2 2
+    loop    0
+    delay    4
+    offset    141 182
+    hitfx    data/sounds/StrongPunch.wav
+    @cmd cancelBack "ANI_FOLLOW1"
+    sound    data/sounds/Slide2.wav
+    frame    data/chars/enemies/p1/a100.png
+    frame    data/chars/enemies/p1/a101.png
+    @cmd dasher 1 0 0
+    attack 127 132 33 52 16 1 0 0 20 12
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 1.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2 0 0
+    bbox     127 132 33 52
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 2.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 2 0 0
+    frame    data/chars/enemies/p1/a102.png
+    @cmd dasher 1.5 0 0
+    frame    data/chars/enemies/p1/a103.png
+    @cmd dasher 1 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/p1/a101.png
+    @cmd dasher 0.5 0 0
+    bbox     126 130 30 54
+    frame    data/chars/enemies/p1/a100.png
 
 anim follow1 #BACK JET
-	fastattack 1
-	jugglecost 2
-	forcedirection 1
-	otg 1
-	hitflash Burn
-	loop	0
-	delay	4
-	offset	141 182
-	sound	data/sounds/Fire.wav
-	burn 103 144 28 13 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth00.png
-	burn 99 144 32 17 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth01.png
-	bbox 	125 120 27 64
-	burn 103 144 28 13 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth00.png
-	burn 99 144 32 17 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth01.png
-	burn 103 144 28 13 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth00.png
-	burn 99 144 32 17 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth01.png
-	burn 103 144 28 13 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth00.png
-	burn 99 144 32 17 16 2 0 0 20 12
-	frame	data/chars/enemies/p1/aboth01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/p1/aboth00.png
+    fastattack 1
+    jugglecost 2
+    forcedirection 1
+    otg 1
+    hitflash Burn
+    loop    0
+    delay    4
+    offset    141 182
+    sound    data/sounds/Fire.wav
+    burn 103 144 28 13 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth00.png
+    burn 99 144 32 17 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth01.png
+    bbox     125 120 27 64
+    burn 103 144 28 13 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth00.png
+    burn 99 144 32 17 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth01.png
+    burn 103 144 28 13 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth00.png
+    burn 99 144 32 17 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth01.png
+    burn 103 144 28 13 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth00.png
+    burn 99 144 32 17 16 2 0 0 20 12
+    frame    data/chars/enemies/p1/aboth01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/p1/aboth00.png

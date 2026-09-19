@@ -1,14 +1,14 @@
-name			None
-type			item
-nolife			1
-facing 			1
-gfxshadow		1 1
-offscreenkill	50
-animationscript	data/scripts/animation/default.c
+name            None
+type            item
+nolife            1
+facing             1
+gfxshadow        1 1
+offscreenkill    50
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	8
-	offset	51 61
-	@cmd suicide
-	frame	data/chars/itens/none.png
+    loop    0
+    delay    8
+    offset    51 61
+    @cmd suicide
+    frame    data/chars/itens/none.png

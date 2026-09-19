@@ -36,17 +36,17 @@ You may modify **SOR2XCombo** as long as you do not sell my MOD. If anyone sells
 
 - **SOR2XCombo** is genuinely harder than vanilla. Many players find it too hard because they do not understand the systems yet.
 - **Build meter with normal attacks.** Enemy HP was multiplied, so mashing normals alone does not pay off. I know many players habitually spam normals on bosses—spinning punches and the like—because vanilla bosses fall for it. That does not work here: SOR2XCombo bosses move, attack, and react very fast. Mindlessly mashing normals gets you parried, then comboed for huge damage. Are normals useless? No. Normals do not spend meter; each normal hit restores meter.
-	* First, when a boss is juggled in the air, they cannot parry. Feel free to use normals then. **Hold Down on the third normal hit** to change the finisher into a grab: grab the enemy, throw them airborne, then continue with normals. In theory you can loop forever and build meter quickly.
+    * First, when a boss is juggled in the air, they cannot parry. Feel free to use normals then. **Hold Down on the third normal hit** to change the finisher into a grab: grab the enemy, throw them airborne, then continue with normals. In theory you can loop forever and build meter quickly.
     * Second, push your combo count to **9** as fast as possible and keep it alive to stay in **invincibility**, so you do not worry about enemies behind you.
 
 - **Use parry for invincibility and fast meter recovery.** Parry is a high-reward skill. Many vanilla players never use parry because it required tight timing on two buttons, was very hard, and cost meter—basically useless in vanilla. In SOR2XCombo parry is essential:
-	* Low on meter? Parry—it restores a lot.
+    * Low on meter? Parry—it restores a lot.
     * Surrounded? Parry—it grants brief invincibility.
     * Want to beat a boss? Parry—bosses get launched, so parry is often the opener of a combo.
 
 - **Master invincibility tools to make fights easier.** The systems offer many ways to become invincible:
-	* Dodging grants invincibility.
-	* Parry grants invincibility.
+    * Dodging grants invincibility.
+    * Parry grants invincibility.
     * Combo count over **9** grants invincibility (Rush Heat).
     * Some characters become invincible during throws.
 - **Use dash grabs and air throws often.** Almost every playable character—Max, Blaze, Sammy, etc.—has **Forward+Forward+Energy** as a dash grab: run in, grab a launched enemy, and continue the combo. Max, Blaze, and Shiva also have air specials that are throws; juggle with air normals/specials, then finish with an air throw slam for OTG and keep the loop going.
@@ -115,7 +115,7 @@ Left side is the D-pad. Right side:
 
 - Pick a character to practice
 - Dojo Menu
-	* `Select Stage` — default Dojo
+    * `Select Stage` — default Dojo
     * `Select Opponent` — practice boss; default training dummy Kun
     * `Energy Rate` — passive MP recovery; default 0, max 25 MP per second
 
@@ -935,17 +935,17 @@ You may modify **SOR2XCombo** as long as you do not sell my MOD. If anyone sells
 
 - **SOR2XCombo** is genuinely harder than vanilla. Many players find it too hard because they do not understand the systems yet.
 - **Build meter with normal attacks.** Enemy HP was multiplied, so mashing normals alone does not pay off. I know many players habitually spam normals on bosses—spinning punches and the like—because vanilla bosses fall for it. That does not work here: SOR2XCombo bosses move, attack, and react very fast. Mindlessly mashing normals gets you parried, then comboed for huge damage. Are normals useless? No. Normals do not spend meter; each normal hit restores meter.
-	* First, when a boss is juggled in the air, they cannot parry. Feel free to use normals then. **Hold Down on the third normal hit** to change the finisher into a grab: grab the enemy, throw them airborne, then continue with normals. In theory you can loop forever and build meter quickly.
+    * First, when a boss is juggled in the air, they cannot parry. Feel free to use normals then. **Hold Down on the third normal hit** to change the finisher into a grab: grab the enemy, throw them airborne, then continue with normals. In theory you can loop forever and build meter quickly.
     * Second, push your combo count to **9** as fast as possible and keep it alive to stay in **invincibility**, so you do not worry about enemies behind you.
 
 - **Use parry for invincibility and fast meter recovery.** Parry is a high-reward skill. Many vanilla players never use parry because it required tight timing on two buttons, was very hard, and cost meter—basically useless in vanilla. In SOR2XCombo parry is essential:
-	* Low on meter? Parry—it restores a lot.
+    * Low on meter? Parry—it restores a lot.
     * Surrounded? Parry—it grants brief invincibility.
     * Want to beat a boss? Parry—bosses get launched, so parry is often the opener of a combo.
 
 - **Master invincibility tools to make fights easier.** The systems offer many ways to become invincible:
-	* Dodging grants invincibility.
-	* Parry grants invincibility.
+    * Dodging grants invincibility.
+    * Parry grants invincibility.
     * Combo count over **9** grants invincibility (Rush Heat).
     * Some characters become invincible during throws.
 - **Use dash grabs and air throws often.** Almost every playable character—Max, Blaze, Sammy, etc.—has **Forward+Forward+Energy** as a dash grab: run in, grab a launched enemy, and continue the combo. Max, Blaze, and Shiva also have air specials that are throws; juggle with air normals/specials, then finish with an air throw slam for OTG and keep the loop going.
@@ -1014,7 +1014,7 @@ Left side is the D-pad. Right side:
 
 - Pick a character to practice
 - Dojo Menu
-	* `Select Stage` — default Dojo
+    * `Select Stage` — default Dojo
     * `Select Opponent` — practice boss; default training dummy Kun
     * `Energy Rate` — passive MP recovery; default 0, max 25 MP per second
 

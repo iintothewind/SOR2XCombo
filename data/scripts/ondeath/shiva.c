@@ -2,8 +2,8 @@
 
 void main()
 {
-	slowMotion();
-	screen(1);
-	resetAuraEffect();
-	dropItem("Apple");
+    slowMotion();
+    screen(1);
+    resetAuraEffect();
+    dropItem("Apple");
 }

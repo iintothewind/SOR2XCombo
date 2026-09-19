@@ -1,62 +1,62 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st4d/_empty.png	0 1 0 0 0 0 1 1 0 0
-bglayer			data/bgs/sor2/st4d/bg00.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st4d/bg01.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st4d/bg02.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st4d/bg03.png		0.4 1 0 0 0 0 1 1 1
-panel			data/bgs/sor2/st4d/_map.png		none	none
-frontpanel		data/bgs/sor2/st4d/fp00.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber 	4
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor2_st4d.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st4d/_empty.png    0 1 0 0 0 0 1 1 0 0
+bglayer            data/bgs/sor2/st4d/bg00.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st4d/bg01.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st4d/bg02.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st4d/bg03.png        0.4 1 0 0 0 0 1 1 1
+panel            data/bgs/sor2/st4d/_map.png        none    none
+frontpanel        data/bgs/sor2/st4d/fp00.png
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber     4
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor2_st4d.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
 spawnscript data/scripts/levelspawn/music_boss2.c
-at			0
+at            0
 
 spawnscript data/scripts/levelspawn/sample.c
-at			0
+at            0
 
 #########################################################################################
 
-spawn		Chicken 1
-flip		1
-coords		450 180 0
-at			0
+spawn        Chicken 1
+flip        1
+coords        450 180 0
+at            0
 
 
-spawn		Abadede_Wait 1
-map			4
-flip		0
-boss		1
-coords		650 200 0
-at			1
+spawn        Abadede_Wait 1
+map            4
+flip        0
+boss        1
+coords        650 200 0
+at            1
 
-spawn		Abadede_Wait 1
-map			4
-flip		0
-boss		1
-coords		670 200 0
-at			1
+spawn        Abadede_Wait 1
+map            4
+flip        0
+boss        1
+coords        670 200 0
+at            1
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		700 200 0
-at			1
+flip        0
+coords        700 200 0
+at            1

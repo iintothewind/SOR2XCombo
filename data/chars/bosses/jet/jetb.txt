@@ -1,915 +1,915 @@
 ##MAIN
-name				JetB
-type				enemy
+name                JetB
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		30 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         30 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				82
+antigravity            -1 #-1/-2/-3
+height                82
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bounce				1
-aimove				chase #ENEMY ONLY
-escapehits			2 #ENEMY ONLY
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bounce                1
+aimove                chase #ENEMY ONLY
+escapehits            2 #ENEMY ONLY
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/jet.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-ondrawscript		data/scripts/ondraw/jet.c
-onfallscript		data/scripts/onfall/default.c
-onspawnscript		data/scripts/onspawn/jet.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/jet.c
-script				data/scripts/updateentity/jet.c
+didhitscript        data/scripts/didhit/jet.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+ondrawscript        data/scripts/ondraw/jet.c
+onfallscript        data/scripts/onfall/default.c
+onspawnscript        data/scripts/onspawn/jet.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/jet.c
+script                data/scripts/updateentity/jet.c
 
 ##ICONS
-icon				data/chars/bosses/jet/icon.png 1
+icon                data/chars/bosses/jet/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/BossDie1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter1.png
-remap				data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter2.png
-remap				data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter3.png
-remap				data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter4.png
-remap				data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter5.png
+remap                data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter1.png
+remap                data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter2.png
+remap                data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter3.png
+remap                data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter4.png
+remap                data/chars/bosses/jet/idle00.png data/chars/bosses/jet/alter5.png
 
 ##LOADS
-load				JetS
+load                JetS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	158 181
-		seta 	90
-	frame	data/chars/bosses/jet/idle00.png
+    loop    0
+    delay    1
+    offset    158 181
+        seta     90
+    frame    data/chars/bosses/jet/idle00.png
 
 anim idle #STATIC FLY
-	loop	1
-	delay	4
-	offset	158 181
-	bbox 	144 106 24 77
-		seta 	40
-	frame	data/chars/bosses/jet/idle00.png
-		seta 	42
-	frame	data/chars/bosses/jet/idle01.png
-		seta 	44
-	frame	data/chars/bosses/jet/idle02.png
-		seta 	46
-	frame	data/chars/bosses/jet/idle03.png
-		seta 	48
-	frame	data/chars/bosses/jet/idle00.png
-		seta 	46
-	frame	data/chars/bosses/jet/idle01.png
-		seta 	44
-	frame	data/chars/bosses/jet/idle02.png
-		seta 	42
-	frame	data/chars/bosses/jet/idle03.png
-		seta 	40
-	frame	data/chars/bosses/jet/idle00.png
-		seta 	38
-	frame	data/chars/bosses/jet/idle01.png
-		seta 	36
-	frame	data/chars/bosses/jet/idle02.png
-		seta 	34
-	frame	data/chars/bosses/jet/idle03.png
-		seta 	32
-	frame	data/chars/bosses/jet/idle00.png
-		seta 	34
-	frame	data/chars/bosses/jet/idle01.png
-		seta 	36
-	frame	data/chars/bosses/jet/idle02.png
-		seta 	38
-	@cmd clearL
-	frame	data/chars/bosses/jet/idle03.png
+    loop    1
+    delay    4
+    offset    158 181
+    bbox     144 106 24 77
+        seta     40
+    frame    data/chars/bosses/jet/idle00.png
+        seta     42
+    frame    data/chars/bosses/jet/idle01.png
+        seta     44
+    frame    data/chars/bosses/jet/idle02.png
+        seta     46
+    frame    data/chars/bosses/jet/idle03.png
+        seta     48
+    frame    data/chars/bosses/jet/idle00.png
+        seta     46
+    frame    data/chars/bosses/jet/idle01.png
+        seta     44
+    frame    data/chars/bosses/jet/idle02.png
+        seta     42
+    frame    data/chars/bosses/jet/idle03.png
+        seta     40
+    frame    data/chars/bosses/jet/idle00.png
+        seta     38
+    frame    data/chars/bosses/jet/idle01.png
+        seta     36
+    frame    data/chars/bosses/jet/idle02.png
+        seta     34
+    frame    data/chars/bosses/jet/idle03.png
+        seta     32
+    frame    data/chars/bosses/jet/idle00.png
+        seta     34
+    frame    data/chars/bosses/jet/idle01.png
+        seta     36
+    frame    data/chars/bosses/jet/idle02.png
+        seta     38
+    @cmd clearL
+    frame    data/chars/bosses/jet/idle03.png
 
 anim walk
-	loop	1
-	delay	4
-	offset	158 181
-	bbox 	146 110 23 73
-		seta 	40
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	42
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	44
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	46
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	48
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	46
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	44
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	42
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	40
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	38
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	36
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	34
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	32
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	34
-	frame	data/chars/bosses/jet/walk01.png
-		seta 	36
-	frame	data/chars/bosses/jet/walk00.png
-		seta 	38
-	frame	data/chars/bosses/jet/walk01.png
+    loop    1
+    delay    4
+    offset    158 181
+    bbox     146 110 23 73
+        seta     40
+    frame    data/chars/bosses/jet/walk00.png
+        seta     42
+    frame    data/chars/bosses/jet/walk01.png
+        seta     44
+    frame    data/chars/bosses/jet/walk00.png
+        seta     46
+    frame    data/chars/bosses/jet/walk01.png
+        seta     48
+    frame    data/chars/bosses/jet/walk00.png
+        seta     46
+    frame    data/chars/bosses/jet/walk01.png
+        seta     44
+    frame    data/chars/bosses/jet/walk00.png
+        seta     42
+    frame    data/chars/bosses/jet/walk01.png
+        seta     40
+    frame    data/chars/bosses/jet/walk00.png
+        seta     38
+    frame    data/chars/bosses/jet/walk01.png
+        seta     36
+    frame    data/chars/bosses/jet/walk00.png
+        seta     34
+    frame    data/chars/bosses/jet/walk01.png
+        seta     32
+    frame    data/chars/bosses/jet/walk00.png
+        seta     34
+    frame    data/chars/bosses/jet/walk01.png
+        seta     36
+    frame    data/chars/bosses/jet/walk00.png
+        seta     38
+    frame    data/chars/bosses/jet/walk01.png
 
 anim backwalk
-	loop	1
-	delay	4
-	offset	158 181
-	bbox 	144 106 25 77
-		seta 	40
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta 	42
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta 	44
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta 	46
-	frame	data/chars/bosses/jet/backwalk03.png
-		seta 	48
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta 	46
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta 	44
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta 	42
-	frame	data/chars/bosses/jet/backwalk03.png
-		seta 	40
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta 	38
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta 	36
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta 	34
-	frame	data/chars/bosses/jet/backwalk03.png
-		seta 	32
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta 	34
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta 	36
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta 	38
-	frame	data/chars/bosses/jet/backwalk03.png
+    loop    1
+    delay    4
+    offset    158 181
+    bbox     144 106 25 77
+        seta     40
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta     42
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta     44
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta     46
+    frame    data/chars/bosses/jet/backwalk03.png
+        seta     48
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta     46
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta     44
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta     42
+    frame    data/chars/bosses/jet/backwalk03.png
+        seta     40
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta     38
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta     36
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta     34
+    frame    data/chars/bosses/jet/backwalk03.png
+        seta     32
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta     34
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta     36
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta     38
+    frame    data/chars/bosses/jet/backwalk03.png
 
 anim run
-	loop	1
-	delay	4
-	offset	158 181
-	bbox 	146 110 23 73
-		seta 	40
-	frame	data/chars/bosses/jet/run00.png
-		seta 	42
-	frame	data/chars/bosses/jet/run01.png
-		seta 	44
-	frame	data/chars/bosses/jet/run02.png
-		seta 	46
-	frame	data/chars/bosses/jet/run03.png
-		seta 	48
-	frame	data/chars/bosses/jet/run00.png
-		seta 	46
-	frame	data/chars/bosses/jet/run01.png
-		seta 	44
-	frame	data/chars/bosses/jet/run02.png
-		seta 	42
-	frame	data/chars/bosses/jet/run03.png
-		seta 	40
-	frame	data/chars/bosses/jet/run00.png
-		seta 	38
-	frame	data/chars/bosses/jet/run01.png
-		seta 	36
-	frame	data/chars/bosses/jet/run02.png
-		seta 	34
-	frame	data/chars/bosses/jet/run03.png
-		seta 	32
-	frame	data/chars/bosses/jet/run00.png
-		seta 	34
-	frame	data/chars/bosses/jet/run01.png
-		seta 	36
-	frame	data/chars/bosses/jet/run02.png
-		seta 	38
-	frame	data/chars/bosses/jet/run03.png
+    loop    1
+    delay    4
+    offset    158 181
+    bbox     146 110 23 73
+        seta     40
+    frame    data/chars/bosses/jet/run00.png
+        seta     42
+    frame    data/chars/bosses/jet/run01.png
+        seta     44
+    frame    data/chars/bosses/jet/run02.png
+        seta     46
+    frame    data/chars/bosses/jet/run03.png
+        seta     48
+    frame    data/chars/bosses/jet/run00.png
+        seta     46
+    frame    data/chars/bosses/jet/run01.png
+        seta     44
+    frame    data/chars/bosses/jet/run02.png
+        seta     42
+    frame    data/chars/bosses/jet/run03.png
+        seta     40
+    frame    data/chars/bosses/jet/run00.png
+        seta     38
+    frame    data/chars/bosses/jet/run01.png
+        seta     36
+    frame    data/chars/bosses/jet/run02.png
+        seta     34
+    frame    data/chars/bosses/jet/run03.png
+        seta     32
+    frame    data/chars/bosses/jet/run00.png
+        seta     34
+    frame    data/chars/bosses/jet/run01.png
+        seta     36
+    frame    data/chars/bosses/jet/run02.png
+        seta     38
+    frame    data/chars/bosses/jet/run03.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	158 181
-	bbox 	147 114 31 69
-	frame	data/chars/bosses/jet/grabbed00.png
+    loop    0
+    delay    8
+    offset    158 181
+    bbox     147 114 31 69
+    frame    data/chars/bosses/jet/grabbed00.png
 
 anim land
-	bouncefactor 0
-	loop	0
-	delay	4
-	offset	158 181
-	@cmd landSafe
-	@cmd flipRandom
-	@cmd leaper -1.8 1.8 0
-	@cmd deGravity 1
-	frame	data/chars/bosses/jet/a102.png
-	frame	data/chars/bosses/jet/a103.png
-	frame	data/chars/bosses/jet/a104.png
-	frame	data/chars/bosses/jet/a105.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk02.png
-	frame	data/chars/bosses/jet/backwalk03.png
-	@cmd deGravity 0
-		seta	48
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta	46
-	@cmd cancel 40 120 -999 0 -12 12 "ANI_ATTACK2"
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta	44
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta	42
-	frame	data/chars/bosses/jet/backwalk03.png
-		seta	40
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta	38
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta	36
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta	34
-	frame	data/chars/bosses/jet/backwalk03.png
+    bouncefactor 0
+    loop    0
+    delay    4
+    offset    158 181
+    @cmd landSafe
+    @cmd flipRandom
+    @cmd leaper -1.8 1.8 0
+    @cmd deGravity 1
+    frame    data/chars/bosses/jet/a102.png
+    frame    data/chars/bosses/jet/a103.png
+    frame    data/chars/bosses/jet/a104.png
+    frame    data/chars/bosses/jet/a105.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk02.png
+    frame    data/chars/bosses/jet/backwalk03.png
+    @cmd deGravity 0
+        seta    48
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta    46
+    @cmd cancel 40 120 -999 0 -12 12 "ANI_ATTACK2"
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta    44
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta    42
+    frame    data/chars/bosses/jet/backwalk03.png
+        seta    40
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta    38
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta    36
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta    34
+    frame    data/chars/bosses/jet/backwalk03.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	158 181
-	bbox 	143 117 30 66
-	frame	data/chars/bosses/jet/pain00.png
-	frame	data/chars/bosses/jet/pain01.png
-	frame	data/chars/bosses/jet/pain00.png
-	frame	data/chars/bosses/jet/pain01.png
-	frame	data/chars/bosses/jet/pain00.png
-	frame	data/chars/bosses/jet/pain01.png
-	frame	data/chars/bosses/jet/pain00.png
-	frame	data/chars/bosses/jet/pain01.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	frame	data/chars/bosses/jet/pain01.png
+    loop    0
+    delay    4
+    offset    158 181
+    bbox     143 117 30 66
+    frame    data/chars/bosses/jet/pain00.png
+    frame    data/chars/bosses/jet/pain01.png
+    frame    data/chars/bosses/jet/pain00.png
+    frame    data/chars/bosses/jet/pain01.png
+    frame    data/chars/bosses/jet/pain00.png
+    frame    data/chars/bosses/jet/pain01.png
+    frame    data/chars/bosses/jet/pain00.png
+    frame    data/chars/bosses/jet/pain01.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    frame    data/chars/bosses/jet/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	158 181
-	bbox 	147 114 33 69
-	frame	data/chars/bosses/jet/pain200.png
-	frame	data/chars/bosses/jet/pain201.png
-	frame	data/chars/bosses/jet/pain200.png
-	frame	data/chars/bosses/jet/pain201.png
-	frame	data/chars/bosses/jet/pain200.png
-	frame	data/chars/bosses/jet/pain201.png
-	frame	data/chars/bosses/jet/pain200.png
-	frame	data/chars/bosses/jet/pain201.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	frame	data/chars/bosses/jet/pain201.png
+    loop    0
+    delay    4
+    offset    158 181
+    bbox     147 114 33 69
+    frame    data/chars/bosses/jet/pain200.png
+    frame    data/chars/bosses/jet/pain201.png
+    frame    data/chars/bosses/jet/pain200.png
+    frame    data/chars/bosses/jet/pain201.png
+    frame    data/chars/bosses/jet/pain200.png
+    frame    data/chars/bosses/jet/pain201.png
+    frame    data/chars/bosses/jet/pain200.png
+    frame    data/chars/bosses/jet/pain201.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    frame    data/chars/bosses/jet/pain201.png
 
 anim fall #NORMAL
-	landframe 2
-	loop	0
-	delay	30
-	offset	158 181
-	bbox 	137 113 41 57
-	@cmd deGravity 0
-	frame	data/chars/bosses/jet/fall00.png
-		delay	999
-	@cmd cancelFall 100 "ANI_LAND"
-	frame	data/chars/bosses/jet/fall00.png
-		delay	8
-	bbox 	115 161 77 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/jet/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    158 181
+    bbox     137 113 41 57
+    @cmd deGravity 0
+    frame    data/chars/bosses/jet/fall00.png
+        delay    999
+    @cmd cancelFall 100 "ANI_LAND"
+    frame    data/chars/bosses/jet/fall00.png
+        delay    8
+    bbox     115 161 77 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/jet/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	158 181
-	bbox 	137 113 41 57
-	@cmd deGravity 0
-	frame	data/chars/bosses/jet/fall00.png
-		delay	8
-	bbox 	115 161 77 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/jet/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    158 181
+    bbox     137 113 41 57
+    @cmd deGravity 0
+    frame    data/chars/bosses/jet/fall00.png
+        delay    8
+    bbox     115 161 77 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/jet/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	158 181
-	bbox 	137 113 41 57
-	@cmd deGravity 0
-	frame	data/chars/bosses/jet/fall00.png
-		delay	8
-	bbox 	115 161 77 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/jet/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    158 181
+    bbox     137 113 41 57
+    @cmd deGravity 0
+    frame    data/chars/bosses/jet/fall00.png
+        delay    8
+    bbox     115 161 77 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/jet/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	158 181
-	@cmd deGravity 0
-	frame	data/chars/bosses/jet/fall600.png
-	frame	data/chars/bosses/jet/fall601.png
-	frame	data/chars/bosses/jet/fall602.png
-	frame	data/chars/bosses/jet/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/jet/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    158 181
+    @cmd deGravity 0
+    frame    data/chars/bosses/jet/fall600.png
+    frame    data/chars/bosses/jet/fall601.png
+    frame    data/chars/bosses/jet/fall602.png
+    frame    data/chars/bosses/jet/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/jet/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	158 181
-	frame	data/chars/bosses/jet/fall700.png
-	frame	data/chars/bosses/jet/fall701.png
-	frame	data/chars/bosses/jet/fall702.png
-	frame	data/chars/bosses/jet/fall703.png
-	frame	data/chars/bosses/jet/fall704.png
-	frame	data/chars/bosses/jet/fall705.png
+    loop    0
+    delay    1000
+    offset    158 181
+    frame    data/chars/bosses/jet/fall700.png
+    frame    data/chars/bosses/jet/fall701.png
+    frame    data/chars/bosses/jet/fall702.png
+    frame    data/chars/bosses/jet/fall703.png
+    frame    data/chars/bosses/jet/fall704.png
+    frame    data/chars/bosses/jet/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	158 181
-	bbox 	137 113 41 57
-	hitfx	data/sounds/MediumKick.wav
-	@cmd deGravity 0
-	attack 137 113 41 57 4 1 0 0 20 12
-	frame	data/chars/bosses/jet/fall00.png
-		delay	999
-	@cmd cancelFall 100 "ANI_LAND"
-	frame	data/chars/bosses/jet/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	115 161 77 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/jet/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    158 181
+    bbox     137 113 41 57
+    hitfx    data/sounds/MediumKick.wav
+    @cmd deGravity 0
+    attack 137 113 41 57 4 1 0 0 20 12
+    frame    data/chars/bosses/jet/fall00.png
+        delay    999
+    @cmd cancelFall 100 "ANI_LAND"
+    frame    data/chars/bosses/jet/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     115 161 77 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/jet/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	158 181
-	bbox 	141 121 37 57
-	hitfx	data/sounds/MediumKick.wav
-	@cmd deGravity 0
-	attack 141 121 37 57 4 1 0 0 20 12
-	frame	data/chars/bosses/jet/fall900.png
-		delay	999
-	@cmd cancelFall 100 "ANI_LAND"
-	frame	data/chars/bosses/jet/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	115 161 77 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/jet/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    158 181
+    bbox     141 121 37 57
+    hitfx    data/sounds/MediumKick.wav
+    @cmd deGravity 0
+    attack 141 121 37 57 4 1 0 0 20 12
+    frame    data/chars/bosses/jet/fall900.png
+        delay    999
+    @cmd cancelFall 100 "ANI_LAND"
+    frame    data/chars/bosses/jet/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     115 161 77 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/jet/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	158 181
-	frame	data/chars/bosses/jet/fall01.png
-	frame	data/chars/bosses/jet/fall01.png
-	frame	data/chars/bosses/jet/fall01.png
+    loop    0
+    delay    16
+    offset    158 181
+    frame    data/chars/bosses/jet/fall01.png
+    frame    data/chars/bosses/jet/fall01.png
+    frame    data/chars/bosses/jet/fall01.png
 
 anim rise
-	loop	0
-	delay	32
-	offset	158 181
-	frame	data/chars/bosses/jet/rise00.png
-		delay	4
-	@cmd leaper 0 1.8 0
-	@cmd deGravity 1
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	@cmd deGravity 0
-		seta	46
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta	44
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta	42
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta	40
-	frame	data/chars/bosses/jet/backwalk03.png
+    loop    0
+    delay    32
+    offset    158 181
+    frame    data/chars/bosses/jet/rise00.png
+        delay    4
+    @cmd leaper 0 1.8 0
+    @cmd deGravity 1
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    @cmd deGravity 0
+        seta    46
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta    44
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta    42
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta    40
+    frame    data/chars/bosses/jet/backwalk03.png
 
 anim attack1 #GRAB/LONG RANGE CHARGE
-	range 0 400
-	rangea -999 999
-	rangeb -999 999
-	followanim 1
-	followcond 4
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	landframe 2
-	loop	1 0 2
-	delay	4
-	offset	158 181
-	bbox 	145 109 24 74
-	@cmd leaper 0 -3 0
-	frame	data/chars/bosses/jet/a100.png
-	frame	data/chars/bosses/jet/a101.png
-	attack 145 109 40 74 0 0 1 1 0 36
-	dropv 0 1 0
-	frame	data/chars/bosses/jet/a100.png
-	@cmd aniChange 2 "ANI_FOLLOW2"
-	frame	data/chars/bosses/jet/a101.png
+    range 0 400
+    rangea -999 999
+    rangeb -999 999
+    followanim 1
+    followcond 4
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    landframe 2
+    loop    1 0 2
+    delay    4
+    offset    158 181
+    bbox     145 109 24 74
+    @cmd leaper 0 -3 0
+    frame    data/chars/bosses/jet/a100.png
+    frame    data/chars/bosses/jet/a101.png
+    attack 145 109 40 74 0 0 1 1 0 36
+    dropv 0 1 0
+    frame    data/chars/bosses/jet/a100.png
+    @cmd aniChange 2 "ANI_FOLLOW2"
+    frame    data/chars/bosses/jet/a101.png
 
 anim follow1 #SLAM
-	attackone 0
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	landframe 5
-	loop	0
-	delay	16
-	offset	158 181
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/Throw.wav
-	@cmd grabStart2
-	@cmd position 0 20 10 0 -1
-	frame	data/chars/bosses/jet/grab00.png
-		delay	4
-	@cmd position 0 20 10 0 0
-	@cmd leaper 0 1 0
-	sound	data/voices/Jet1.wav
-	frame	data/chars/bosses/jet/grab01.png
-	@cmd position 0 20 10 0 0
-	@cmd leaper 0 3 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/grab01.png
-	@cmd position 0 20 10 0 0
-	@cmd leaper 0 9 0
-	frame	data/chars/bosses/jet/grab01.png
-		delay	999
-	@cmd looper 3 11
-	@cmd position 4 20 -1 0 0
-	@cmd deGravity -90
-	@cmd leaper 0 -90 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/throw00.png
-		delay	12
-	attack 144 133 52 49 16 1 0 0 0 12
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	sound	data/sounds/Slam.wav
-	frame	data/chars/bosses/jet/throw00.png
-		delay	6
-	@cmd slam 24 2 -3 1.5 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/throw00.png
-	@cmd dasher 2 0 0
-	frame	data/chars/bosses/jet/throw00.png
-	frame	data/chars/bosses/jet/throw00.png
-	frame	data/chars/bosses/jet/throw00.png
-	frame	data/chars/bosses/jet/throw00.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	frame	data/chars/bosses/jet/throw00.png
+    attackone 0
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    landframe 5
+    loop    0
+    delay    16
+    offset    158 181
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/Throw.wav
+    @cmd grabStart2
+    @cmd position 0 20 10 0 -1
+    frame    data/chars/bosses/jet/grab00.png
+        delay    4
+    @cmd position 0 20 10 0 0
+    @cmd leaper 0 1 0
+    sound    data/voices/Jet1.wav
+    frame    data/chars/bosses/jet/grab01.png
+    @cmd position 0 20 10 0 0
+    @cmd leaper 0 3 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/grab01.png
+    @cmd position 0 20 10 0 0
+    @cmd leaper 0 9 0
+    frame    data/chars/bosses/jet/grab01.png
+        delay    999
+    @cmd looper 3 11
+    @cmd position 4 20 -1 0 0
+    @cmd deGravity -90
+    @cmd leaper 0 -90 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/throw00.png
+        delay    12
+    attack 144 133 52 49 16 1 0 0 0 12
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    sound    data/sounds/Slam.wav
+    frame    data/chars/bosses/jet/throw00.png
+        delay    6
+    @cmd slam 24 2 -3 1.5 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/throw00.png
+    @cmd dasher 2 0 0
+    frame    data/chars/bosses/jet/throw00.png
+    frame    data/chars/bosses/jet/throw00.png
+    frame    data/chars/bosses/jet/throw00.png
+    frame    data/chars/bosses/jet/throw00.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    frame    data/chars/bosses/jet/throw00.png
 
 anim follow2 #LONG RANGE CHARGE
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	158 181
-	bbox 	144 111 37 58
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/bosses/jet/a102.png
-	frame	data/chars/bosses/jet/a103.png
-	frame	data/chars/bosses/jet/a104.png
-	@cmd target 5.5 5.5
-	frame	data/chars/bosses/jet/a105.png
-		delay	6
-	attack 158 123 57 25 8 0 0 0 10 12
-	@cmd dasher 0.5 0 0
-	bbox 127 132 60 16
-	frame	data/chars/bosses/jet/a106.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dasher 1.5 0 0
-	frame	data/chars/bosses/jet/a107.png
-	attack 158 123 57 25 8 1 0 0 10 12
-	@cmd dasher 2.5 0 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/a108.png
-		delay	4
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/a109.png
-	attack 158 123 57 25 8 1 0 0 10 12
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/a106.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/a107.png
-	attack 158 123 57 25 8 1 0 0 10 12
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/a108.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/a109.png
-	@cmd looper 8 3
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	frame	data/chars/bosses/jet/a109.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    158 181
+    bbox     144 111 37 58
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/bosses/jet/a102.png
+    frame    data/chars/bosses/jet/a103.png
+    frame    data/chars/bosses/jet/a104.png
+    @cmd target 5.5 5.5
+    frame    data/chars/bosses/jet/a105.png
+        delay    6
+    attack 158 123 57 25 8 0 0 0 10 12
+    @cmd dasher 0.5 0 0
+    bbox 127 132 60 16
+    frame    data/chars/bosses/jet/a106.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dasher 1.5 0 0
+    frame    data/chars/bosses/jet/a107.png
+    attack 158 123 57 25 8 1 0 0 10 12
+    @cmd dasher 2.5 0 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/a108.png
+        delay    4
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/a109.png
+    attack 158 123 57 25 8 1 0 0 10 12
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/a106.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/a107.png
+    attack 158 123 57 25 8 1 0 0 10 12
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/a108.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/a109.png
+    @cmd looper 8 3
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    frame    data/chars/bosses/jet/a109.png
 
 anim attack2 #SHORT RANGE CHARGE
-	range 0 200
-	rangea -999 999
-	rangeb -999 999
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	landframe 18
-	loop	1 14 18
-	delay	4
-	offset	158 181
-	bbox 	144 106 25 77
-	hitfx	data/sounds/HighKick.wav
-	@cmd deGravity 1
-	@cmd leaper 0 1.5 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	@cmd deGravity 0
-	frame	data/chars/bosses/jet/backwalk01.png
-		delay	4
-	sound	data/sounds/Wind3.wav
-	@cmd leaper 4 -4 0
-	attack 141 147 36 36 16 1 0 0 20 12
-	bbox 	137 124 37 43
-	frame	data/chars/bosses/jet/a200.png
-	sound	data/voices/Jet2.wav
-	frame	data/chars/bosses/jet/a201.png
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	@cmd leaper 4 0 0
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	@cmd leaper 3 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	@cmd leaper 2 0 0
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	@cmd leaper 1 0 0
-	@cmd cancelHit 0 400 0 0 0 "ANI_ATTACK1"
-	frame	data/chars/bosses/jet/a200.png
-	frame	data/chars/bosses/jet/a201.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	frame	data/chars/bosses/jet/a201.png
+    range 0 200
+    rangea -999 999
+    rangeb -999 999
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    landframe 18
+    loop    1 14 18
+    delay    4
+    offset    158 181
+    bbox     144 106 25 77
+    hitfx    data/sounds/HighKick.wav
+    @cmd deGravity 1
+    @cmd leaper 0 1.5 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    @cmd deGravity 0
+    frame    data/chars/bosses/jet/backwalk01.png
+        delay    4
+    sound    data/sounds/Wind3.wav
+    @cmd leaper 4 -4 0
+    attack 141 147 36 36 16 1 0 0 20 12
+    bbox     137 124 37 43
+    frame    data/chars/bosses/jet/a200.png
+    sound    data/voices/Jet2.wav
+    frame    data/chars/bosses/jet/a201.png
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    @cmd leaper 4 0 0
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    @cmd leaper 3 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    @cmd leaper 2 0 0
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    @cmd leaper 1 0 0
+    @cmd cancelHit 0 400 0 0 0 "ANI_ATTACK1"
+    frame    data/chars/bosses/jet/a200.png
+    frame    data/chars/bosses/jet/a201.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    frame    data/chars/bosses/jet/a201.png
 
 anim special #FRONT JET FIRE
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	hitflash Burn
-	loop	0
-	delay	4
-	offset	158 181
-	@cmd cancelBack "ANI_FOLLOW6"
-	sound	data/sounds/Fire.wav
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	delay	4
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	delay	4
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	delay	4
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk01.png
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    hitflash Burn
+    loop    0
+    delay    4
+    offset    158 181
+    @cmd cancelBack "ANI_FOLLOW6"
+    sound    data/sounds/Fire.wav
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    delay    4
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    delay    4
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    delay    4
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk01.png
 
 anim special2 #FRONT JET FIRE
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	hitflash Burn
-	loop	0
-	delay	4
-	offset	158 181
-	@cmd cancelBack "ANI_FOLLOW6"
-	sound	data/sounds/Fire.wav
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	delay	4
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	delay	4
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	delay	4
-	burn 140 100 70 80 8 5 0 10 12
-	frame	data/chars/bosses/jet/backwalk02.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk00.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/backwalk01.png
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    hitflash Burn
+    loop    0
+    delay    4
+    offset    158 181
+    @cmd cancelBack "ANI_FOLLOW6"
+    sound    data/sounds/Fire.wav
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    delay    4
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    delay    4
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    delay    4
+    burn 140 100 70 80 8 5 0 10 12
+    frame    data/chars/bosses/jet/backwalk02.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk00.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/backwalk01.png
 
 
 anim freespecial #RAGE DOWN
-	range 0 400
-	rangea -999 999
-	rangeb -999 999
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	energycost 60 1 6
-	landframe 2
-	loop	1 0 2
-	delay	4
-	offset	158 181
-	bbox 	145 109 24 74
-	@cmd leaper 0 -3 0
-	frame	data/chars/bosses/jet/a100.png
-	frame	data/chars/bosses/jet/a101.png
-	frame	data/chars/bosses/jet/a100.png
-	@cmd aniChange 2 "ANI_FOLLOW3"
-	frame	data/chars/bosses/jet/a101.png
+    range 0 400
+    rangea -999 999
+    rangeb -999 999
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    energycost 60 1 6
+    landframe 2
+    loop    1 0 2
+    delay    4
+    offset    158 181
+    bbox     145 109 24 74
+    @cmd leaper 0 -3 0
+    frame    data/chars/bosses/jet/a100.png
+    frame    data/chars/bosses/jet/a101.png
+    frame    data/chars/bosses/jet/a100.png
+    @cmd aniChange 2 "ANI_FOLLOW3"
+    frame    data/chars/bosses/jet/a101.png
 
 anim follow3 #RAGE GRAB
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	energycost 60 1 6
-	loop	0
-	delay	4
-	offset	158 181
-	@cmd spawnBind "Rage" 14 16 -1
-	frame	data/chars/bosses/jet/a102.png
-	frame	data/chars/bosses/jet/a103.png
-	frame	data/chars/bosses/jet/a102.png
-	frame	data/chars/bosses/jet/a103.png
-	frame	data/chars/bosses/jet/a102.png
-	@cmd target 10 5
-	@cmd dashTarget
-	attack 148 122 48 32 0 0 1 1 0 12
-	dropv 0 1 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/rage00.png
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/rage01.png
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/rage00.png
-	@cmd dashTarget
-	frame	data/chars/bosses/jet/rage01.png
-	@cmd looper 8 3
-	@cmd dasher 4 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/a102.png
-	@cmd dasher 3 0 0
-	frame	data/chars/bosses/jet/a103.png
-	@cmd dasher 2 0 0
-	frame	data/chars/bosses/jet/a102.png
-	@cmd dasher 1 0 0
-	frame	data/chars/bosses/jet/a103.png
-	@cmd leaper 0 1.8 0
-	@cmd deGravity 1
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	frame	data/chars/bosses/jet/rise01.png
-	frame	data/chars/bosses/jet/rise02.png
-	@cmd deGravity 0
-		seta	46
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta	44
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta	42
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta	40
-	frame	data/chars/bosses/jet/backwalk03.png
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    energycost 60 1 6
+    loop    0
+    delay    4
+    offset    158 181
+    @cmd spawnBind "Rage" 14 16 -1
+    frame    data/chars/bosses/jet/a102.png
+    frame    data/chars/bosses/jet/a103.png
+    frame    data/chars/bosses/jet/a102.png
+    frame    data/chars/bosses/jet/a103.png
+    frame    data/chars/bosses/jet/a102.png
+    @cmd target 10 5
+    @cmd dashTarget
+    attack 148 122 48 32 0 0 1 1 0 12
+    dropv 0 1 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/rage00.png
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/rage01.png
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/rage00.png
+    @cmd dashTarget
+    frame    data/chars/bosses/jet/rage01.png
+    @cmd looper 8 3
+    @cmd dasher 4 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/a102.png
+    @cmd dasher 3 0 0
+    frame    data/chars/bosses/jet/a103.png
+    @cmd dasher 2 0 0
+    frame    data/chars/bosses/jet/a102.png
+    @cmd dasher 1 0 0
+    frame    data/chars/bosses/jet/a103.png
+    @cmd leaper 0 1.8 0
+    @cmd deGravity 1
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    frame    data/chars/bosses/jet/rise01.png
+    frame    data/chars/bosses/jet/rise02.png
+    @cmd deGravity 0
+        seta    46
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta    44
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta    42
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta    40
+    frame    data/chars/bosses/jet/backwalk03.png
 
 anim follow4 #RAGE SLAM
-	landframe 5
-	energycost 60 1 6
-	loop	0
-	delay	16
-	offset	158 181
-	@cmd grabStart2
-	@cmd position 0 20 10 0 -1
-	@cmd dasher 0 0 0
-	sound	data/sounds/Throw.wav
-	frame	data/chars/bosses/jet/grab00.png
-		delay	4
-	@cmd position 0 20 10 0 0
-	@cmd leaper 0 3 0
-	sound	data/voices/Jet1.wav
-	frame	data/chars/bosses/jet/grab01.png
-	@cmd position 0 20 10 0 0
-	@cmd leaper 0 9 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/grab01.png
-	@cmd position 0 20 10 0 0
-	@cmd leaper 0 18 0
-	frame	data/chars/bosses/jet/grab01.png
-		delay	999
-	@cmd looper 3 11
-	@cmd position 4 20 -1 0 0
-	@cmd deGravity -2000
-	@cmd leaper 0 -1500 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/jet/throw00.png
-		delay	12
-	attack 119 116 102 66 24 1 1 0 0 12
-	dropv 3 4 0
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	@cmd spawn01 "FallHit" 10 0 1
-	sound	data/sounds/Slam.wav
-	frame	data/chars/bosses/jet/throw00.png
-		delay	4
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd slam 75 2 -3 6 0 0
-	frame	data/chars/bosses/jet/throw00.png
-		delay	4
-	@cmd dasher 4 0 0
-	frame	data/chars/bosses/jet/throw00.png
-	@cmd looper 7 3
-	@cmd leaper 0 1.8 0
-	@cmd deGravity 1
-	frame	data/chars/bosses/jet/a102.png
-	frame	data/chars/bosses/jet/a103.png
-	frame	data/chars/bosses/jet/a104.png
-	frame	data/chars/bosses/jet/a105.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk02.png
-	frame	data/chars/bosses/jet/backwalk03.png
-	@cmd deGravity 0
-		seta	46
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta	44
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta	42
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta	40
-	@cmd clearL
-	frame	data/chars/bosses/jet/backwalk03.png
+    landframe 5
+    energycost 60 1 6
+    loop    0
+    delay    16
+    offset    158 181
+    @cmd grabStart2
+    @cmd position 0 20 10 0 -1
+    @cmd dasher 0 0 0
+    sound    data/sounds/Throw.wav
+    frame    data/chars/bosses/jet/grab00.png
+        delay    4
+    @cmd position 0 20 10 0 0
+    @cmd leaper 0 3 0
+    sound    data/voices/Jet1.wav
+    frame    data/chars/bosses/jet/grab01.png
+    @cmd position 0 20 10 0 0
+    @cmd leaper 0 9 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/grab01.png
+    @cmd position 0 20 10 0 0
+    @cmd leaper 0 18 0
+    frame    data/chars/bosses/jet/grab01.png
+        delay    999
+    @cmd looper 3 11
+    @cmd position 4 20 -1 0 0
+    @cmd deGravity -2000
+    @cmd leaper 0 -1500 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/jet/throw00.png
+        delay    12
+    attack 119 116 102 66 24 1 1 0 0 12
+    dropv 3 4 0
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    @cmd spawn01 "FallHit" 10 0 1
+    sound    data/sounds/Slam.wav
+    frame    data/chars/bosses/jet/throw00.png
+        delay    4
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd slam 75 2 -3 6 0 0
+    frame    data/chars/bosses/jet/throw00.png
+        delay    4
+    @cmd dasher 4 0 0
+    frame    data/chars/bosses/jet/throw00.png
+    @cmd looper 7 3
+    @cmd leaper 0 1.8 0
+    @cmd deGravity 1
+    frame    data/chars/bosses/jet/a102.png
+    frame    data/chars/bosses/jet/a103.png
+    frame    data/chars/bosses/jet/a104.png
+    frame    data/chars/bosses/jet/a105.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk02.png
+    frame    data/chars/bosses/jet/backwalk03.png
+    @cmd deGravity 0
+        seta    46
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta    44
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta    42
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta    40
+    @cmd clearL
+    frame    data/chars/bosses/jet/backwalk03.png
 
 anim follow5 #FLY UP
-	loop	0
-	delay	4
-	offset	158 181
-	bbox 	144 111 37 58
-	@cmd leaper 0 1.8 0
-	@cmd deGravity 1
-	frame	data/chars/bosses/jet/a102.png
-	frame	data/chars/bosses/jet/a103.png
-	frame	data/chars/bosses/jet/a104.png
-	frame	data/chars/bosses/jet/a105.png
-	bbox 	144 106 25 77
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk02.png
-	frame	data/chars/bosses/jet/backwalk03.png
-	frame	data/chars/bosses/jet/backwalk00.png
-	frame	data/chars/bosses/jet/backwalk01.png
-	frame	data/chars/bosses/jet/backwalk02.png
-	frame	data/chars/bosses/jet/backwalk03.png
-	@cmd deGravity 0
-		seta	46
-	frame	data/chars/bosses/jet/backwalk00.png
-		seta	44
-	frame	data/chars/bosses/jet/backwalk01.png
-		seta	42
-	frame	data/chars/bosses/jet/backwalk02.png
-		seta	40
-	@cmd clearL
-	frame	data/chars/bosses/jet/backwalk03.png
+    loop    0
+    delay    4
+    offset    158 181
+    bbox     144 111 37 58
+    @cmd leaper 0 1.8 0
+    @cmd deGravity 1
+    frame    data/chars/bosses/jet/a102.png
+    frame    data/chars/bosses/jet/a103.png
+    frame    data/chars/bosses/jet/a104.png
+    frame    data/chars/bosses/jet/a105.png
+    bbox     144 106 25 77
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk02.png
+    frame    data/chars/bosses/jet/backwalk03.png
+    frame    data/chars/bosses/jet/backwalk00.png
+    frame    data/chars/bosses/jet/backwalk01.png
+    frame    data/chars/bosses/jet/backwalk02.png
+    frame    data/chars/bosses/jet/backwalk03.png
+    @cmd deGravity 0
+        seta    46
+    frame    data/chars/bosses/jet/backwalk00.png
+        seta    44
+    frame    data/chars/bosses/jet/backwalk01.png
+        seta    42
+    frame    data/chars/bosses/jet/backwalk02.png
+        seta    40
+    @cmd clearL
+    frame    data/chars/bosses/jet/backwalk03.png
 
 anim follow6 #BACK JET FIRE
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	hitflash Burn
-	loop	0
-	delay	4
-	offset	158 181
-	sound	data/sounds/Fire.wav
-	burn 119 110 43 36 32 2 0 0 10 12
-	frame	data/chars/bosses/jet/run01.png
-	frame	data/chars/bosses/jet/run00.png
-	frame	data/chars/bosses/jet/run01.png
-	frame	data/chars/bosses/jet/run00.png
-	frame	data/chars/bosses/jet/run01.png
-	frame	data/chars/bosses/jet/run00.png
-	frame	data/chars/bosses/jet/run01.png
-	frame	data/chars/bosses/jet/run00.png
-	@cmd aniChange 1 "ANI_FOLLOW5"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/jet/run01.png
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    hitflash Burn
+    loop    0
+    delay    4
+    offset    158 181
+    sound    data/sounds/Fire.wav
+    burn 119 110 43 36 32 2 0 0 10 12
+    frame    data/chars/bosses/jet/run01.png
+    frame    data/chars/bosses/jet/run00.png
+    frame    data/chars/bosses/jet/run01.png
+    frame    data/chars/bosses/jet/run00.png
+    frame    data/chars/bosses/jet/run01.png
+    frame    data/chars/bosses/jet/run00.png
+    frame    data/chars/bosses/jet/run01.png
+    frame    data/chars/bosses/jet/run00.png
+    @cmd aniChange 1 "ANI_FOLLOW5"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/jet/run01.png

@@ -2,6 +2,6 @@
 
 void main()
 {
-	smartDodge();
-	enemyRushControl();
+    smartDodge();
+    enemyRushControl();
 }

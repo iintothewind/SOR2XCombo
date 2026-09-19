@@ -2,7 +2,7 @@
 
 void main()
 {
-	guardCost();
-	pushBack();
-	parry();
+    guardCost();
+    pushBack();
+    parry();
 }

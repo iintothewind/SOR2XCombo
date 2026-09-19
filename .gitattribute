@@ -1,0 +1,26 @@
+# Normalize text files to LF line endings on commit/checkout.
+* text=auto eol=lf
+
+# Never modify binary assets.
+*.mp4 binary
+*.webm binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.wav binary
+*.exe binary
+*.pak binary
+*.dll binary
+*.so binary
+*.bmp binary
+*.tga binary
+*.bin binary
+*.dat binary
+*.zip binary
+*.jar binary
+*.ttf binary
+*.otf binary
+*.ico binary
+*.mp3 binary
+*.ogg binary

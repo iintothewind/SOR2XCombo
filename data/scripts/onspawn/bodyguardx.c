@@ -2,5 +2,5 @@
 
 void main()
 {
-	randomX3("McBrideB", "MacleanB", "MacleodB");
+    randomX3("McBrideB", "MacleanB", "MacleodB");
 }

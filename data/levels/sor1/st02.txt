@@ -1,23 +1,23 @@
-loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor1/st02/Back01.png
-panel		data/bgs/sor1/st02/Pn001.png
+loadingbg        data/bgs/loading4.png             1 -81 248 480 999 999 0
+background    data/bgs/sor1/st02/Back01.png
+panel        data/bgs/sor1/st02/Pn001.png
 frontpanel      data/bgs/sor1/st02/front.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		0
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        0
 stagenumber 2
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
 
 cameratype 1
 cameraoffset 0 -30
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowcolor   64_64_64
 at             0
@@ -27,18 +27,18 @@ at              0
 
 #########################################################################################
 
-load		Stage 3
-load		Gota 3
-load		Poster 3
-load		Vento 3
-load		Barrel_B 3
+load        Stage 3
+load        Gota 3
+load        Poster 3
+load        Vento 3
+load        Barrel_B 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
@@ -94,10 +94,10 @@ at  0
 
 #########################################################################################
 
-spawn		Gold 1
-flip		1
-coords		20 270 0
-at			0
+spawn        Gold 1
+flip        1
+coords        20 270 0
+at            0
 
 #########################################################################################
 
@@ -106,97 +106,97 @@ flip 1
 coords  500  0
 at  0
 
-spawn		Barrel_B 1
-flip		1
-coords		520 190 0
-at			0
+spawn        Barrel_B 1
+flip        1
+coords        520 190 0
+at            0
 
-spawn		Barrel_B 1
-flip		1
-coords		650 190 0
-at			0
+spawn        Barrel_B 1
+flip        1
+coords        650 190 0
+at            0
 
-spawn		RooB 1
-map			4
-flip		0
-coords		550 220 300
-at			0
+spawn        RooB 1
+map            4
+flip        0
+coords        550 220 300
+at            0
 
-spawn		KusanagiB 1
-weapon		Kunai 1
-map			3
+spawn        KusanagiB 1
+weapon        Kunai 1
+map            3
 2pspawn
-flip		0
-coords		550 220 0
-at			50
+flip        0
+coords        550 220 0
+at            50
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		-50 220 0
-at			100
+spawn        BasicX3 1
+map            3
+flip        0
+coords        -50 220 0
+at            100
 
-spawn		SignalX 1
-map			3
+spawn        SignalX 1
+map            3
 2pspawn
-flip		0
-coords		600 220 0
-at			150
+flip        0
+coords        600 220 0
+at            150
 
-spawn		KusanagiB 1
-weapon		Sword 1
-map			4
-flip		0
-coords		-50 220 0
-at			250
+spawn        KusanagiB 1
+weapon        Sword 1
+map            4
+flip        0
+coords        -50 220 0
+at            250
 
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		550 220 0
-at			275
+spawn        BruceB 1
+map            4
+flip        0
+coords        550 220 0
+at            275
 
 wait
-at			288
+at            288
 
-group		4 4
-at			288
+group        4 4
+at            288
 
-spawn		KusanagiB 1
-weapon		Sword 1
-map			3
-flip		0
-coords		550 220 0
-at			288
+spawn        KusanagiB 1
+weapon        Sword 1
+map            3
+flip        0
+coords        550 220 0
+at            288
 
-spawn		KusanagiB 1
-weapon		Kunai 1
-map			3
+spawn        KusanagiB 1
+weapon        Kunai 1
+map            3
 2pspawn
-flip		0
-coords		-50 220 0
-at			288
+flip        0
+coords        -50 220 0
+at            288
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		600 220 0
-at			288
+spawn        BasicX3 1
+map            3
+flip        0
+coords        600 220 0
+at            288
 
-spawn		GalsiaB 1
-weapon		Knife 1
-map			3
+spawn        GalsiaB 1
+weapon        Knife 1
+map            3
 2pspawn
-flip		0
-coords		-100 220 0
-at			288
+flip        0
+coords        -100 220 0
+at            288
 
-spawn		BasicX2 1
-map			3
-flip		0
-coords		550 220 0
-at			288
+spawn        BasicX2 1
+map            3
+flip        0
+coords        550 220 0
+at            288
 
 #########################################################################################
 
@@ -205,120 +205,120 @@ flip 1
 coords  500  0
 at  300
 
-group		1000 1000
-at			300
+group        1000 1000
+at            300
 
-spawn		Barrel_B 1
-flip		1
-coords		710 190 0
-at			300
+spawn        Barrel_B 1
+flip        1
+coords        710 190 0
+at            300
 
-spawn		Barrel_B 1
-flip		1
-coords		760 190 0
-at			300
+spawn        Barrel_B 1
+flip        1
+coords        760 190 0
+at            300
 
-spawn		Barrel_B 1
-flip		1
-coords		960 190 0
-at			300
+spawn        Barrel_B 1
+flip        1
+coords        960 190 0
+at            300
 
-spawn		Barrel_B 1
-flip		1
-coords		1050 190 0
-at			300
+spawn        Barrel_B 1
+flip        1
+coords        1050 190 0
+at            300
 
-spawn		GalsiaB 1
-weapon		Knife 1
-map			3
-flip		0
-coords		550 220 0
-at			400
+spawn        GalsiaB 1
+weapon        Knife 1
+map            3
+flip        0
+coords        550 220 0
+at            400
 
-spawn		KusanagiB 1
-weapon		Sword 1
-map			3
+spawn        KusanagiB 1
+weapon        Sword 1
+map            3
 2pspawn
-flip		0
-coords		-50 220 0
-at			400
+flip        0
+coords        -50 220 0
+at            400
 
-spawn		KusanagiB 1
-weapon		Kunai 1
-map			3
-flip		0
-coords		550 220 0
-at			500
+spawn        KusanagiB 1
+weapon        Kunai 1
+map            3
+flip        0
+coords        550 220 0
+at            500
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		-50 220 0
-at			600
+spawn        BasicX3 1
+map            3
+flip        0
+coords        -50 220 0
+at            600
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-flip		0
-coords		-100 220 0
-at			700
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+flip        0
+coords        -100 220 0
+at            700
 
-spawn		HakuyoX 1
-map			3
-flip		0
-coords		550 220 0
-at			800
+spawn        HakuyoX 1
+map            3
+flip        0
+coords        550 220 0
+at            800
 
-spawn		SignalX 1
-map			3
-flip		0
-coords		550 220 0
-at			900
+spawn        SignalX 1
+map            3
+flip        0
+coords        550 220 0
+at            900
 
-spawn		BongoX 1
-map			3
-flip		0
+spawn        BongoX 1
+map            3
+flip        0
 2pspawn
-coords		-50 220 0
-at			900
+coords        -50 220 0
+at            900
 
-spawn		BigBenX 1
-map			3
-flip		0
-coords		550 220 0
-at			1000
+spawn        BigBenX 1
+map            3
+flip        0
+coords        550 220 0
+at            1000
 
 wait
-at			1056
+at            1056
 
-group		4 4
-at			1056
+group        4 4
+at            1056
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		-50 220 0
-at			1056
+spawn        BasicX3 1
+map            3
+flip        0
+coords        -50 220 0
+at            1056
 
-spawn		BasicX2 1
-map			3
+spawn        BasicX2 1
+map            3
 2pspawn
-flip		0
-coords		-100 220 0
-at			1056
+flip        0
+coords        -100 220 0
+at            1056
 
-spawn		SignalX 1
-map			3
+spawn        SignalX 1
+map            3
 2pspawn
-flip		0
-coords		-150 220 0
-at			1056
+flip        0
+coords        -150 220 0
+at            1056
 
-spawn		BossX1 1
-map			3
-flip		0
-coords		550 220 0
-at			1056
+spawn        BossX1 1
+map            3
+flip        0
+coords        550 220 0
+at            1056
 
 #########################################################################################
 
@@ -327,91 +327,91 @@ flip 1
 coords  500  0
 at  1100
 
-group		1000 1000
-at			1100
+group        1000 1000
+at            1100
 
-spawn		Barrel_B 1
-flip		1
-coords		740 190 0
-at			1100
+spawn        Barrel_B 1
+flip        1
+coords        740 190 0
+at            1100
 
-spawn		Barrel_B 1
-flip		1
-coords		980 190 0
-at			1100
+spawn        Barrel_B 1
+flip        1
+coords        980 190 0
+at            1100
 
-spawn		GalsiaB 1
-weapon		Knife 1
-map			3
-flip		0
-coords		550 220 0
-at			1200
+spawn        GalsiaB 1
+weapon        Knife 1
+map            3
+flip        0
+coords        550 220 0
+at            1200
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		550 220 0
-at			1300
+spawn        BasicX3 1
+map            3
+flip        0
+coords        550 220 0
+at            1300
 
-spawn		BasicX1 1
-map			3
-flip		0
-coords		550 220 0
-at			1400
+spawn        BasicX1 1
+map            3
+flip        0
+coords        550 220 0
+at            1400
 
-spawn		GalsiaB 1
-weapon		Knife 1
-map			3
-flip		0
-coords		550 220 0
-at			1500
+spawn        GalsiaB 1
+weapon        Knife 1
+map            3
+flip        0
+coords        550 220 0
+at            1500
 
-spawn		DonovanB 1
-weapon		Pipe 1
+spawn        DonovanB 1
+weapon        Pipe 1
 2pspawn
-map			3
-flip		0
-coords		-50 220 0
-at			1500
+map            3
+flip        0
+coords        -50 220 0
+at            1500
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		550 220 0
-at			1600
+spawn        BasicX3 1
+map            3
+flip        0
+coords        550 220 0
+at            1600
 
 wait
-at			1824
+at            1824
 
-group		4 4
-at			1824
+group        4 4
+at            1824
 
-spawn		BasicX1 1
-map			3
-flip		0
-coords		550 220 0
-at			1824
+spawn        BasicX1 1
+map            3
+flip        0
+coords        550 220 0
+at            1824
 
-spawn		BasicX1 1
-map			3
+spawn        BasicX1 1
+map            3
 2pspawn
-flip		0
-coords		-50 220 0
-at			1824
+flip        0
+coords        -50 220 0
+at            1824
 
-spawn		GalsiaB 1
-weapon		Knife 1
+spawn        GalsiaB 1
+weapon        Knife 1
 2pspawn
-map			3
-flip		0
-coords		650 220 0
-at			1824
+map            3
+flip        0
+coords        650 220 0
+at            1824
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		-50 220 0
-at			1824
+spawn        BasicX3 1
+map            3
+flip        0
+coords        -50 220 0
+at            1824
 
 #########################################################################################
 
@@ -420,96 +420,96 @@ flip 1
 coords  500  0
 at  1850
 
-group		1000 1000
-at			1850
+group        1000 1000
+at            1850
 
-spawn		Barrel_B 1
-flip		1
-coords		640 240 0
-at			1850
+spawn        Barrel_B 1
+flip        1
+coords        640 240 0
+at            1850
 
-spawn		Barrel_B 1
-flip		1
-coords		1000 190 0
-at			1850
+spawn        Barrel_B 1
+flip        1
+coords        1000 190 0
+at            1850
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-flip		0
-coords		550 220 0
-at			1850
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+flip        0
+coords        550 220 0
+at            1850
 
-spawn		BasicX1 1
-map			3
-flip		0
-coords		550 220 0
-at			1950
+spawn        BasicX1 1
+map            3
+flip        0
+coords        550 220 0
+at            1950
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		550 220 0
-at			2050
+spawn        BasicX3 1
+map            3
+flip        0
+coords        550 220 0
+at            2050
 
-spawn		SignalX 1
-map			3
-flip		0
-coords		-50 220 0
-at			2150
+spawn        SignalX 1
+map            3
+flip        0
+coords        -50 220 0
+at            2150
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		550 220 0
-at			2250
+spawn        BasicX3 1
+map            3
+flip        0
+coords        550 220 0
+at            2250
 
-spawn		BasicX1 1
-map			3
-flip		0
-coords		550 220 0
-at			2350
+spawn        BasicX1 1
+map            3
+flip        0
+coords        550 220 0
+at            2350
 
 wait
-at			2550
+at            2550
 
-group		4 4
-at			2550
+group        4 4
+at            2550
 
-spawn		KusanagiB 1
-weapon		Kunai 1
-map			3
-flip		0
-coords		550 220 0
-at			2550
+spawn        KusanagiB 1
+weapon        Kunai 1
+map            3
+flip        0
+coords        550 220 0
+at            2550
 
-spawn		KusanagiB 1
-weapon		Sword 1
-map			3
+spawn        KusanagiB 1
+weapon        Sword 1
+map            3
 2pspawn
-flip		0
-coords		-50 220 0
-at			2550
+flip        0
+coords        -50 220 0
+at            2550
 
-spawn		BasicX1 1
-map			3
-flip		0
-coords		600 220 0
-at			2550
+spawn        BasicX1 1
+map            3
+flip        0
+coords        600 220 0
+at            2550
 
-spawn		GalsiaB 1
-weapon		Knife 1
+spawn        GalsiaB 1
+weapon        Knife 1
 2pspawn
-map			3
-flip		0
-coords		650 220 0
-at			2550
+map            3
+flip        0
+coords        650 220 0
+at            2550
 
-spawn		BossX1 1
-map			3
-flip		0
-coords		-50 220 0
-at			2550
+spawn        BossX1 1
+map            3
+flip        0
+coords        -50 220 0
+at            2550
 
 #########################################################################################
 
@@ -518,112 +518,112 @@ flip 1
 coords  500  0
 at  2600
 
-group		1000 1000
-at			2600
+group        1000 1000
+at            2600
 
-spawn		Barrel_B 1
-flip		1
-coords		640 240 0
-at			2600
+spawn        Barrel_B 1
+flip        1
+coords        640 240 0
+at            2600
 
-spawn		Barrel_B 1
-flip		1
-coords		1000 190 0
-at			2600
+spawn        Barrel_B 1
+flip        1
+coords        1000 190 0
+at            2600
 
-spawn		BongoX 1
-map			3
-flip		0
-coords		550 220 0
-at			2600
+spawn        BongoX 1
+map            3
+flip        0
+coords        550 220 0
+at            2600
 
-spawn		BigBenX 1
-map			3
-flip		0
-coords		550 220 0
-at			2700
+spawn        BigBenX 1
+map            3
+flip        0
+coords        550 220 0
+at            2700
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		550 220 0
-at			2800
+spawn        BasicX3 1
+map            3
+flip        0
+coords        550 220 0
+at            2800
 
-spawn		RavenX 1
-map			3
-flip		0
-coords		-50 220 0
-at			2900
+spawn        RavenX 1
+map            3
+flip        0
+coords        -50 220 0
+at            2900
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		550 220 0
-at			3000
+spawn        BasicX3 1
+map            3
+flip        0
+coords        550 220 0
+at            3000
 
-spawn		HakuyoX 1
-map			3
-flip		0
-coords		550 220 0
-at			3100
+spawn        HakuyoX 1
+map            3
+flip        0
+coords        550 220 0
+at            3100
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			3363
+at            3363
 
-group		4 4
-at			3363
+group        4 4
+at            3363
 
-spawn		BasicX1 1
-map			3
-flip		0
-coords		-50 220 0
-at			3363
+spawn        BasicX1 1
+map            3
+flip        0
+coords        -50 220 0
+at            3363
 
-spawn		BasicX3 1
-map			3
-flip		0
-coords		-100 220 0
-at			3363
+spawn        BasicX3 1
+map            3
+flip        0
+coords        -100 220 0
+at            3363
 
-spawn		DonovanB 1
-weapon		Pipe 1
+spawn        DonovanB 1
+weapon        Pipe 1
 2pspawn
-map			3
-flip		0
-coords		600 220 0
-at			3363
+map            3
+flip        0
+coords        600 220 0
+at            3363
 
-spawn		BigBenX 1
-map			3
+spawn        BigBenX 1
+map            3
 2pspawn
-flip		0
-coords		650 220 0
-at			3363
+flip        0
+coords        650 220 0
+at            3363
 
-spawn		BasicX2 1
-map			3
-flip		0
-coords		-50 220 0
-at			3363
+spawn        BasicX2 1
+map            3
+flip        0
+coords        -50 220 0
+at            3363
 
-spawn		ReineX 1
-map			3
-flip		0
-coords		-100 220 0
-at			3363
+spawn        ReineX 1
+map            3
+flip        0
+coords        -100 220 0
+at            3363
 
-spawn		ElectraX 1
-map			3
-flip		0
-coords		-100 220 0
-at			3363
+spawn        ElectraX 1
+map            3
+flip        0
+coords        -100 220 0
+at            3363
 
-group		4 4
-at			3363
+group        4 4
+at            3363
 
-spawn		Shiva_BotB 1
-map			4
-flip		0
-boss		1
-coords		550 230 300
-at			3363
+spawn        Shiva_BotB 1
+map            4
+flip        0
+boss        1
+coords        550 230 300
+at            3363

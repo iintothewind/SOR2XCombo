@@ -3,10 +3,10 @@
 
 void main()
 {
-	partnerMenu();
-	partnerAI();
-	partnerMap();
-	partnerAni();
-	smartDodge();
-	onScreen();
+    partnerMenu();
+    partnerAI();
+    partnerMap();
+    partnerAni();
+    smartDodge();
+    onScreen();
 }

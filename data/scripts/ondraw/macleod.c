@@ -2,6 +2,6 @@
 
 void main()
 {
-	parrow();
-	debugMode();
+    parrow();
+    debugMode();
 }

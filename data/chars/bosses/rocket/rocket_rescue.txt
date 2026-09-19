@@ -1,44 +1,44 @@
-name			Rocket_Rescue #RESCUE SHIVA IN SOR3_ST1C
-type			npc
-health			1
-nomove			1 1
-gfxshadow		1 1
-stealth			2
-ondrawscript	data/scripts/ondraw/rocket_rescue.c
+name            Rocket_Rescue #RESCUE SHIVA IN SOR3_ST1C
+type            npc
+health            1
+nomove            1 1
+gfxshadow        1 1
+stealth            2
+ondrawscript    data/scripts/ondraw/rocket_rescue.c
 
 anim idle #GRAB FLY
-	loop	1
-	delay	4
-	offset	153 191
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	48
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	32
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/grab01.png
+    loop    1
+    delay    4
+    offset    153 191
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     48
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     32
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/grab01.png

@@ -1,25 +1,25 @@
-name			FallHit
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity		100
-alpha			1
-setlayer		-2
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            FallHit
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity        100
+alpha            1
+setlayer        -2
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	3
-	offset	175 91
-	sound	data/sounds/Impact.wav
-	frame	data/chars/misc/fallhit/fallhit00.png
-	frame	data/chars/misc/fallhit/fallhit01.png
-	frame	data/chars/misc/fallhit/fallhit02.png
-	frame	data/chars/misc/fallhit/fallhit03.png
-	frame	data/chars/misc/fallhit/fallhit04.png
-	frame	data/chars/misc/fallhit/fallhit05.png
-	frame	data/chars/misc/fallhit/fallhit06.png
-	@cmd suicide
-	frame	data/chars/misc/fallhit/fallhit06.png
+    loop    0
+    delay    3
+    offset    175 91
+    sound    data/sounds/Impact.wav
+    frame    data/chars/misc/fallhit/fallhit00.png
+    frame    data/chars/misc/fallhit/fallhit01.png
+    frame    data/chars/misc/fallhit/fallhit02.png
+    frame    data/chars/misc/fallhit/fallhit03.png
+    frame    data/chars/misc/fallhit/fallhit04.png
+    frame    data/chars/misc/fallhit/fallhit05.png
+    frame    data/chars/misc/fallhit/fallhit06.png
+    @cmd suicide
+    frame    data/chars/misc/fallhit/fallhit06.png

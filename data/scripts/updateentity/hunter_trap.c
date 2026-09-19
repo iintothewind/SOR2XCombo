@@ -9,7 +9,7 @@ void playBip() {
   void self = getlocalvar("self");
   void ani = getentityproperty(self, "animationID");
 
-	int playedSecond 	= getglobalvar("playedSecond");
+    int playedSecond     = getglobalvar("playedSecond");
 
   if(getlocalvar("playedTick") == NULL()) {
     setlocalvar("playedTick", playedSecond);

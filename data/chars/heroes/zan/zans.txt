@@ -1,133 +1,133 @@
 ##MAIN
-name				ZanS
-type				none
+name                ZanS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter1.png
-remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter2.png
-remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter3.png
+remap                data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter1.png
+remap                data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter2.png
+remap                data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter3.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim freespecial #RAGE
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/rage00.png
-	frame	data/chars/heroes/zan/rage01.png
-	frame	data/chars/heroes/zan/rage02.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/rage03.png
-	frame	data/chars/heroes/zan/rage04.png
-	frame	data/chars/heroes/zan/special203.png
-	frame	data/chars/heroes/zan/special202.png
-	frame	data/chars/heroes/zan/special203.png
-	frame	data/chars/heroes/zan/special202.png
-	frame	data/chars/heroes/zan/special203.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/rage00.png
+    frame    data/chars/heroes/zan/rage01.png
+    frame    data/chars/heroes/zan/rage02.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/rage03.png
+    frame    data/chars/heroes/zan/rage04.png
+    frame    data/chars/heroes/zan/special203.png
+    frame    data/chars/heroes/zan/special202.png
+    frame    data/chars/heroes/zan/special203.png
+    frame    data/chars/heroes/zan/special202.png
+    frame    data/chars/heroes/zan/special203.png
 
 
 anim freespecial2 #SUPER
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/s01.png
-	frame	data/chars/heroes/zan/s02.png
-	offset	35 164
-	frame	data/chars/heroes/zan/s03.png
-	frame	data/chars/heroes/zan/s03.png
-	frame	data/chars/heroes/zan/s04.png
-	frame	data/chars/heroes/zan/s04.png
-	frame	data/chars/heroes/zan/s05.png
-	frame	data/chars/heroes/zan/s05.png
-	frame	data/chars/heroes/zan/s06.png
-	frame	data/chars/heroes/zan/s06.png
-	frame	data/chars/heroes/zan/s07.png
-	frame	data/chars/heroes/zan/s07.png
-	frame	data/chars/heroes/zan/s08.png
-	frame	data/chars/heroes/zan/s08.png
-	frame	data/chars/heroes/zan/s09.png
-	frame	data/chars/heroes/zan/s10.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/s01.png
+    frame    data/chars/heroes/zan/s02.png
+    offset    35 164
+    frame    data/chars/heroes/zan/s03.png
+    frame    data/chars/heroes/zan/s03.png
+    frame    data/chars/heroes/zan/s04.png
+    frame    data/chars/heroes/zan/s04.png
+    frame    data/chars/heroes/zan/s05.png
+    frame    data/chars/heroes/zan/s05.png
+    frame    data/chars/heroes/zan/s06.png
+    frame    data/chars/heroes/zan/s06.png
+    frame    data/chars/heroes/zan/s07.png
+    frame    data/chars/heroes/zan/s07.png
+    frame    data/chars/heroes/zan/s08.png
+    frame    data/chars/heroes/zan/s08.png
+    frame    data/chars/heroes/zan/s09.png
+    frame    data/chars/heroes/zan/s10.png
 
 anim riseattack
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/dodge00.png
-	frame	data/chars/heroes/zan/dodge01.png
-	frame	data/chars/heroes/zan/dodge02.png
-	frame	data/chars/heroes/zan/dodge03.png
-	frame	data/chars/heroes/zan/dodge04.png
-	frame	data/chars/heroes/zan/dodge05.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/dodge00.png
+    frame    data/chars/heroes/zan/dodge01.png
+    frame    data/chars/heroes/zan/dodge02.png
+    frame    data/chars/heroes/zan/dodge03.png
+    frame    data/chars/heroes/zan/dodge04.png
+    frame    data/chars/heroes/zan/dodge05.png
 
 
 anim jumpattack #JUMP STATIC
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/jumpatk00.png
-	frame	data/chars/heroes/zan/jumpatk300.png
-	frame	data/chars/heroes/zan/jumpatk00.png
-	frame	data/chars/heroes/zan/jumpatk300.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/jumpatk00.png
+    frame    data/chars/heroes/zan/jumpatk300.png
+    frame    data/chars/heroes/zan/jumpatk00.png
+    frame    data/chars/heroes/zan/jumpatk300.png
 
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/knife/knife00.png
-	frame	data/chars/heroes/zan/knife/knife01.png
-	frame	data/chars/heroes/zan/knife/knife02.png
-	frame	data/chars/heroes/zan/knife/knife03.png
-	frame	data/chars/heroes/zan/knife/knife03.png
-	frame	data/chars/heroes/zan/knife/knife03.png
-	frame	data/chars/heroes/zan/knife/knife00.png
-	frame	data/chars/heroes/zan/knife/knife01.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/knife/knife00.png
+    frame    data/chars/heroes/zan/knife/knife01.png
+    frame    data/chars/heroes/zan/knife/knife02.png
+    frame    data/chars/heroes/zan/knife/knife03.png
+    frame    data/chars/heroes/zan/knife/knife03.png
+    frame    data/chars/heroes/zan/knife/knife03.png
+    frame    data/chars/heroes/zan/knife/knife00.png
+    frame    data/chars/heroes/zan/knife/knife01.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/dodge00.png
-	frame	data/chars/heroes/zan/dodge01.png
-	frame	data/chars/heroes/zan/dodge02.png
-	frame	data/chars/heroes/zan/dodge03.png
-	frame	data/chars/heroes/zan/dodge04.png
-	frame	data/chars/heroes/zan/dodge05.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/dodge00.png
+    frame    data/chars/heroes/zan/dodge01.png
+    frame    data/chars/heroes/zan/dodge02.png
+    frame    data/chars/heroes/zan/dodge03.png
+    frame    data/chars/heroes/zan/dodge04.png
+    frame    data/chars/heroes/zan/dodge05.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	130 164
-	frame	data/chars/heroes/zan/dodge00.png
-	frame	data/chars/heroes/zan/dodge01.png
-	frame	data/chars/heroes/zan/dodge02.png
-	frame	data/chars/heroes/zan/dodge03.png
-	frame	data/chars/heroes/zan/dodge04.png
-	frame	data/chars/heroes/zan/dodge05.png
+    loop    0
+    delay    1000
+    offset    130 164
+    frame    data/chars/heroes/zan/dodge00.png
+    frame    data/chars/heroes/zan/dodge01.png
+    frame    data/chars/heroes/zan/dodge02.png
+    frame    data/chars/heroes/zan/dodge03.png
+    frame    data/chars/heroes/zan/dodge04.png
+    frame    data/chars/heroes/zan/dodge05.png

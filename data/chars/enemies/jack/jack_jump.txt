@@ -1,555 +1,555 @@
 ##MAIN
-name				Jack_Jump
-type				enemy
+name                Jack_Jump
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				70
+antigravity            -1 #-1/-2/-3
+height                70
 
 ##ENERGY
-mp					120
-mprate  			5 #SCRIPT
+mp                    120
+mprate              5 #SCRIPT
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				Jack_KnifeB none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-death				2
-blockodds 			25
-bflash				Block
-nopassiveblock		1
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                Jack_KnifeB none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+death                2
+blockodds             25
+bflash                Block
+nopassiveblock        1
 offscreen_noatk_factor 1
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onspawnscript		data/scripts/onspawn/jack.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/default.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onspawnscript        data/scripts/onspawn/jack.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/jack/icon.png 1
+icon                data/chars/enemies/jack/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/Die2.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Die2.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter2.png
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter3.png
-remap				data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter2.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter3.png
+remap                data/chars/enemies/jack/idle00.png data/chars/enemies/jack/alter1.png
 
 ##LOADS
-load				Jack_KnifeB
+load                Jack_KnifeB
 
 ## CUSTOM ANIMATIONS ##########################################################################
 
 anim spawn
-	loop	0
-	delay	2
-	offset	131 184
-	frame	data/chars/enemies/jack/jump00.png
-	@cmd leaper 3 1 0
-	@cmd aniChange 0 "ANI_WALKOFF"
-	frame	data/chars/enemies/jack/jump00.png
+    loop    0
+    delay    2
+    offset    131 184
+    frame    data/chars/enemies/jack/jump00.png
+    @cmd leaper 3 1 0
+    @cmd aniChange 0 "ANI_WALKOFF"
+    frame    data/chars/enemies/jack/jump00.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	16
-	offset	131 184
-	bbox 	117 120 35 66
-	frame	data/chars/enemies/jack/idle00.png
-	frame	data/chars/enemies/jack/idle01.png
-	frame	data/chars/enemies/jack/idle02.png
-	frame	data/chars/enemies/jack/idle01.png
+    loop    1
+    delay    16
+    offset    131 184
+    bbox     117 120 35 66
+    frame    data/chars/enemies/jack/idle00.png
+    frame    data/chars/enemies/jack/idle01.png
+    frame    data/chars/enemies/jack/idle02.png
+    frame    data/chars/enemies/jack/idle01.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	131 184
-	bbox 	117 120 35 66
-	frame	data/chars/enemies/jack/walk00.png
-	frame	data/chars/enemies/jack/walk01.png
-	frame	data/chars/enemies/jack/walk02.png
-	frame	data/chars/enemies/jack/walk03.png
+    loop    1
+    delay    16
+    offset    131 184
+    bbox     117 120 35 66
+    frame    data/chars/enemies/jack/walk00.png
+    frame    data/chars/enemies/jack/walk01.png
+    frame    data/chars/enemies/jack/walk02.png
+    frame    data/chars/enemies/jack/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	131 184
-	frame	data/chars/enemies/jack/get00.png
+    loop    0
+    delay    16
+    offset    131 184
+    frame    data/chars/enemies/jack/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	123 120 30 66
-	frame	data/chars/enemies/jack/grabbed00.png
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     123 120 30 66
+    frame    data/chars/enemies/jack/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	131 184
-	bbox 	119 134 37 52
-	frame	data/chars/enemies/jack/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    131 184
+    bbox     119 134 37 52
+    frame    data/chars/enemies/jack/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	131 184
-	bbox 	116 117 36 58
-	@cmd jump 1
-	frame	data/chars/enemies/jack/jump00.png
+    loop    0
+    delay    30
+    offset    131 184
+    bbox     116 117 36 58
+    @cmd jump 1
+    frame    data/chars/enemies/jack/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	131 184
-	bbox 	119 134 37 52
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/jack/jumpland00.png
+    loop    0
+    delay    12
+    offset    131 184
+    bbox     119 134 37 52
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/jack/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	131 184
-	bbox 	114 120 32 66
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
+    loop    0
+    delay    4
+    offset    131 184
+    bbox     114 120 32 66
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	131 184
-	bbox 	105 116 37 70
-	frame	data/chars/enemies/jack/pain00.png
-	frame	data/chars/enemies/jack/pain01.png
-	frame	data/chars/enemies/jack/pain00.png
-	frame	data/chars/enemies/jack/pain01.png
-	frame	data/chars/enemies/jack/pain00.png
-	frame	data/chars/enemies/jack/pain01.png
-	frame	data/chars/enemies/jack/pain00.png
-	frame	data/chars/enemies/jack/pain01.png
-	frame	data/chars/enemies/jack/pain00.png
-	frame	data/chars/enemies/jack/pain01.png
-	frame	data/chars/enemies/jack/pain00.png
-	frame	data/chars/enemies/jack/pain01.png
+    loop    0
+    delay    4
+    offset    131 184
+    bbox     105 116 37 70
+    frame    data/chars/enemies/jack/pain00.png
+    frame    data/chars/enemies/jack/pain01.png
+    frame    data/chars/enemies/jack/pain00.png
+    frame    data/chars/enemies/jack/pain01.png
+    frame    data/chars/enemies/jack/pain00.png
+    frame    data/chars/enemies/jack/pain01.png
+    frame    data/chars/enemies/jack/pain00.png
+    frame    data/chars/enemies/jack/pain01.png
+    frame    data/chars/enemies/jack/pain00.png
+    frame    data/chars/enemies/jack/pain01.png
+    frame    data/chars/enemies/jack/pain00.png
+    frame    data/chars/enemies/jack/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	131 184
-	bbox 	114 120 32 66
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
-	frame	data/chars/enemies/jack/pain200.png
-	frame	data/chars/enemies/jack/pain201.png
+    loop    0
+    delay    4
+    offset    131 184
+    bbox     114 120 32 66
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
+    frame    data/chars/enemies/jack/pain200.png
+    frame    data/chars/enemies/jack/pain201.png
 
 anim pain3 #THROW KNIFE
-	loop	0
-	delay	1
-	offset	131 184
-	bbox 	117 120 35 66
-	frame	data/chars/enemies/jack/idle00.png
+    loop    0
+    delay    1
+    offset    131 184
+    bbox     117 120 35 66
+    frame    data/chars/enemies/jack/idle00.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	131 184
-	bbox 	112 120 41 46
-	frame	data/chars/enemies/jack/fall00.png
-		delay	8
-	bbox 	94 155 83 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/jack/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    131 184
+    bbox     112 120 41 46
+    frame    data/chars/enemies/jack/fall00.png
+        delay    8
+    bbox     94 155 83 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/jack/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	131 184
-	bbox 	112 120 41 46
-	frame	data/chars/enemies/jack/fall00.png
-		delay	8
-	bbox 	94 155 83 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/jack/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    131 184
+    bbox     112 120 41 46
+    frame    data/chars/enemies/jack/fall00.png
+        delay    8
+    bbox     94 155 83 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/jack/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	131 184
-	bbox 	112 120 41 46
-	frame	data/chars/enemies/jack/fall00.png
-		delay	8
-	bbox 	94 155 83 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/jack/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    131 184
+    bbox     112 120 41 46
+    frame    data/chars/enemies/jack/fall00.png
+        delay    8
+    bbox     94 155 83 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/jack/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	131 184
-	frame	data/chars/enemies/jack/fall600.png
-	frame	data/chars/enemies/jack/fall601.png
-	frame	data/chars/enemies/jack/fall602.png
-	frame	data/chars/enemies/jack/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/jack/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    131 184
+    frame    data/chars/enemies/jack/fall600.png
+    frame    data/chars/enemies/jack/fall601.png
+    frame    data/chars/enemies/jack/fall602.png
+    frame    data/chars/enemies/jack/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/jack/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	131 184
-	frame	data/chars/enemies/jack/fall700.png
-	frame	data/chars/enemies/jack/fall701.png
-	frame	data/chars/enemies/jack/fall702.png
-	frame	data/chars/enemies/jack/fall703.png
-	frame	data/chars/enemies/jack/fall704.png
-	frame	data/chars/enemies/jack/fall705.png
+    loop    0
+    delay    1000
+    offset    131 184
+    frame    data/chars/enemies/jack/fall700.png
+    frame    data/chars/enemies/jack/fall701.png
+    frame    data/chars/enemies/jack/fall702.png
+    frame    data/chars/enemies/jack/fall703.png
+    frame    data/chars/enemies/jack/fall704.png
+    frame    data/chars/enemies/jack/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	131 184
-	bbox 	112 120 41 46
-	hitfx	data/sounds/MediumKick.wav
-	attack 112 120 41 46 4 1 0 0 20 12
-	frame	data/chars/enemies/jack/fall00.png
-		delay	999
-	frame	data/chars/enemies/jack/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	94 155 83 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/jack/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    131 184
+    bbox     112 120 41 46
+    hitfx    data/sounds/MediumKick.wav
+    attack 112 120 41 46 4 1 0 0 20 12
+    frame    data/chars/enemies/jack/fall00.png
+        delay    999
+    frame    data/chars/enemies/jack/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     94 155 83 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/jack/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	131 184
-	bbox 	123 132 33 52
-	hitfx	data/sounds/MediumKick.wav
-	attack 123 132 33 52 4 1 0 0 20 12
-	frame	data/chars/enemies/jack/fall900.png
-		delay	999
-	frame	data/chars/enemies/jack/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	94 155 83 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/jack/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    131 184
+    bbox     123 132 33 52
+    hitfx    data/sounds/MediumKick.wav
+    attack 123 132 33 52 4 1 0 0 20 12
+    frame    data/chars/enemies/jack/fall900.png
+        delay    999
+    frame    data/chars/enemies/jack/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     94 155 83 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/jack/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	131 184
-	frame	data/chars/enemies/jack/fall01.png
-	frame	data/chars/enemies/jack/fall01.png
-	frame	data/chars/enemies/jack/fall01.png
+    loop    0
+    delay    16
+    offset    131 184
+    frame    data/chars/enemies/jack/fall01.png
+    frame    data/chars/enemies/jack/fall01.png
+    frame    data/chars/enemies/jack/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	131 184
-	frame	data/chars/enemies/jack/rise00.png
-	frame	data/chars/enemies/jack/rise01.png
-	frame	data/chars/enemies/jack/rise00.png
-	frame	data/chars/enemies/jack/rise02.png
+    loop    0
+    delay    16
+    offset    131 184
+    frame    data/chars/enemies/jack/rise00.png
+    frame    data/chars/enemies/jack/rise01.png
+    frame    data/chars/enemies/jack/rise00.png
+    frame    data/chars/enemies/jack/rise02.png
 
 anim riseattack
-	range 20 60
-	rangea 0 100
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	120 120 30 66
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/jack/a200.png
-	frame	data/chars/enemies/jack/a201.png
-		delay	16
-	bbox 	134 124 30 62
-	attack 156 124 52 21 8 1 0 0 30 12
-	frame	data/chars/enemies/jack/a202.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 120 30 66
-	frame	data/chars/enemies/jack/a201.png
+    range 20 60
+    rangea 0 100
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     120 120 30 66
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/jack/a200.png
+    frame    data/chars/enemies/jack/a201.png
+        delay    16
+    bbox     134 124 30 62
+    attack 156 124 52 21 8 1 0 0 30 12
+    frame    data/chars/enemies/jack/a202.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 120 30 66
+    frame    data/chars/enemies/jack/a201.png
 
 anim attack1
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	131 184
-	bbox 	117 120 35 66
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/jack/a100.png
-	attack 144 125 41 19 2 0 0 0 15 12
-	frame	data/chars/enemies/jack/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/jack/a100.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    131 184
+    bbox     117 120 35 66
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/jack/a100.png
+    attack 144 125 41 19 2 0 0 0 15 12
+    frame    data/chars/enemies/jack/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/jack/a100.png
 
 anim attack2
-	range 20 60
-	rangea 0 100
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	120 120 30 66
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/jack/a200.png
-	frame	data/chars/enemies/jack/a201.png
-		delay	16
-	bbox 	134 124 30 62
-	attack 156 124 52 21 8 1 0 0 30 12
-	frame	data/chars/enemies/jack/a202.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 120 30 66
-	frame	data/chars/enemies/jack/a201.png
+    range 20 60
+    rangea 0 100
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     120 120 30 66
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/jack/a200.png
+    frame    data/chars/enemies/jack/a201.png
+        delay    16
+    bbox     134 124 30 62
+    attack 156 124 52 21 8 1 0 0 30 12
+    frame    data/chars/enemies/jack/a202.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 120 30 66
+    frame    data/chars/enemies/jack/a201.png
 
 anim grabattack #STAB PUNCH
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	117 120 35 66
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/jack/a100.png
-	attack 144 125 41 19 2 0 0 0 15 12
-	frame	data/chars/enemies/jack/a101.png
-	delay	4
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/jack/a100.png
-	@cmd looper 1 2
-	delay 8
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/jack/a200.png
-	frame	data/chars/enemies/jack/a201.png
-		delay	16
-	bbox 	134 124 30 62
-	attack8 156 124 52 21 8 1 0 0 30 12
-	dropv 3 5
-	frame	data/chars/enemies/jack/a202.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 120 30 66
-	frame	data/chars/enemies/jack/a201.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     117 120 35 66
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/jack/a100.png
+    attack 144 125 41 19 2 0 0 0 15 12
+    frame    data/chars/enemies/jack/a101.png
+    delay    4
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/jack/a100.png
+    @cmd looper 1 2
+    delay 8
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/jack/a200.png
+    frame    data/chars/enemies/jack/a201.png
+        delay    16
+    bbox     134 124 30 62
+    attack8 156 124 52 21 8 1 0 0 30 12
+    dropv 3 5
+    frame    data/chars/enemies/jack/a202.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 120 30 66
+    frame    data/chars/enemies/jack/a201.png
 
 anim freespecial #SPAWN KNIFE
-	range 150 450
-	rangea 0 200
-	rangez -999 999
-	energycost 50 1 6
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	120 118 31 68
-	frame	data/chars/enemies/jack/getknife00.png
-		delay	44
-	@cmd spawnToss "Knife" 33 60 -1 0 2.5 0 "ANI_FOLLOW1"
-	frame	data/chars/enemies/jack/getknife01.png
-	bbox 10127 10122 40 16
-	frame	data/chars/enemies/jack/getknife01.png
+    range 150 450
+    rangea 0 200
+    rangez -999 999
+    energycost 50 1 6
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     120 118 31 68
+    frame    data/chars/enemies/jack/getknife00.png
+        delay    44
+    @cmd spawnToss "Knife" 33 60 -1 0 2.5 0 "ANI_FOLLOW1"
+    frame    data/chars/enemies/jack/getknife01.png
+    bbox 10127 10122 40 16
+    frame    data/chars/enemies/jack/getknife01.png
 
 anim freespecial2 #PUNCH
-	range 20 60
-	rangea 0 100
-	fastattack 1
-	jugglecost 1
-	energycost 20 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	120 120 30 66
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/jack/a200.png
-	frame	data/chars/enemies/jack/a201.png
-		delay	16
-	bbox 	134 124 30 62
-	attack 156 124 52 21 8 1 0 0 30 12
-	frame	data/chars/enemies/jack/a202.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 120 30 66
-	frame	data/chars/enemies/jack/a201.png
+    range 20 60
+    rangea 0 100
+    fastattack 1
+    jugglecost 1
+    energycost 20 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     120 120 30 66
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/jack/a200.png
+    frame    data/chars/enemies/jack/a201.png
+        delay    16
+    bbox     134 124 30 62
+    attack 156 124 52 21 8 1 0 0 30 12
+    frame    data/chars/enemies/jack/a202.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 120 30 66
+    frame    data/chars/enemies/jack/a201.png
 
 anim freespecial3 #GRAB RUN
-	range 50 120
-	rangea 0 0
-	rangez -24 24
-	followanim 5
-	followcond 4
-	energycost 20 1 6
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	1
-	offset	131 184
-	hitfx	data/sounds/Throw2.wav
-	@cmd selfNoGrab 1
-	@cmd block 1
-	bbox 	117 120 35 66
-	frame	data/chars/enemies/jack/idle00.png
-	@cmd block 0
-		delay	12
-	bbox 	117 120 35 66
-	@cmd target 1.5 1
-	@cmd dashTarget
-	attack 117 120 35 66 1 0 1 1 0 24
-	frame	data/chars/enemies/jack/walk00.png
-	@cmd target 1.5 1
-	@cmd dashTarget
-	frame	data/chars/enemies/jack/walk01.png
-	sound	data/sounds/Run.wav
-	@cmd target 1.5 1
-	@cmd dashTarget
-	frame	data/chars/enemies/jack/walk02.png
-	@cmd target 1.5 1
-	@cmd dashTarget
-	frame	data/chars/enemies/jack/walk03.png
-	@cmd selfNoGrab 0
-	@cmd dasher 0 0 0
-	frame	data/chars/enemies/jack/walk00.png
+    range 50 120
+    rangea 0 0
+    rangez -24 24
+    followanim 5
+    followcond 4
+    energycost 20 1 6
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    1
+    offset    131 184
+    hitfx    data/sounds/Throw2.wav
+    @cmd selfNoGrab 1
+    @cmd block 1
+    bbox     117 120 35 66
+    frame    data/chars/enemies/jack/idle00.png
+    @cmd block 0
+        delay    12
+    bbox     117 120 35 66
+    @cmd target 1.5 1
+    @cmd dashTarget
+    attack 117 120 35 66 1 0 1 1 0 24
+    frame    data/chars/enemies/jack/walk00.png
+    @cmd target 1.5 1
+    @cmd dashTarget
+    frame    data/chars/enemies/jack/walk01.png
+    sound    data/sounds/Run.wav
+    @cmd target 1.5 1
+    @cmd dashTarget
+    frame    data/chars/enemies/jack/walk02.png
+    @cmd target 1.5 1
+    @cmd dashTarget
+    frame    data/chars/enemies/jack/walk03.png
+    @cmd selfNoGrab 0
+    @cmd dasher 0 0 0
+    frame    data/chars/enemies/jack/walk00.png
 
 anim freespecial4 #LAUGH
-	range 220 400
-	rangea 0 200
-	energycost -60 1 6
-	loop	0
-	delay	12
-	offset	131 184
-	sound	data/voices/Jack1.wav
-	@cmd block 1
-	frame	data/chars/enemies/jack/idle00.png
-	frame	data/chars/enemies/jack/idle01.png
-	frame	data/chars/enemies/jack/idle02.png
-	frame	data/chars/enemies/jack/idle00.png
-	frame	data/chars/enemies/jack/idle01.png
-	frame	data/chars/enemies/jack/idle02.png
-	@cmd block 0
-	frame	data/chars/enemies/jack/idle01.png
+    range 220 400
+    rangea 0 200
+    energycost -60 1 6
+    loop    0
+    delay    12
+    offset    131 184
+    sound    data/voices/Jack1.wav
+    @cmd block 1
+    frame    data/chars/enemies/jack/idle00.png
+    frame    data/chars/enemies/jack/idle01.png
+    frame    data/chars/enemies/jack/idle02.png
+    frame    data/chars/enemies/jack/idle00.png
+    frame    data/chars/enemies/jack/idle01.png
+    frame    data/chars/enemies/jack/idle02.png
+    @cmd block 0
+    frame    data/chars/enemies/jack/idle01.png
 
 
 anim follow5
-	loop	0
-	delay	16
-	offset	131 184
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/enemies/jack/idle02.png
+    loop    0
+    delay    16
+    offset    131 184
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/enemies/jack/idle02.png
 
 anim follow7 #counter
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	131 184
-	bbox 	120 120 30 66
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/jack/a200.png
-	frame	data/chars/enemies/jack/a201.png
-		delay	16
-	bbox 	134 124 30 62
-	attack 156 124 52 21 8 1 0 0 30 12
-	frame	data/chars/enemies/jack/a202.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 120 30 66
-	frame	data/chars/enemies/jack/a201.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    131 184
+    bbox     120 120 30 66
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/jack/a200.png
+    frame    data/chars/enemies/jack/a201.png
+        delay    16
+    bbox     134 124 30 62
+    attack 156 124 52 21 8 1 0 0 30 12
+    frame    data/chars/enemies/jack/a202.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 120 30 66
+    frame    data/chars/enemies/jack/a201.png
 
 anim block
-	range 0 160
-	rangea 0 100
-	rangez -48 48
-	loop	0
-	delay	96
-	offset	131 184
-	bbox 	114 118 42 66
-	frame	data/chars/enemies/jack/block00.png
+    range 0 160
+    rangea 0 100
+    rangez -48 48
+    loop    0
+    delay    96
+    offset    131 184
+    bbox     114 118 42 66
+    frame    data/chars/enemies/jack/block00.png

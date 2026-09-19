@@ -1,13 +1,13 @@
-name			St3_Gate1
-type			none	
-shadow			0
+name            St3_Gate1
+type            none    
+shadow            0
 animationscript data/scripts/animation/default.c
 
-load			St3_Gate1S
+load            St3_Gate1S
 
 anim idle
-	loop	0
-	delay	6
-	offset	1 180
-	@cmd spawn01 "St3_Gate1S" 170 130 70
-	frame	data/bgs/sor3/st3a/gate100.png
+    loop    0
+    delay    6
+    offset    1 180
+    @cmd spawn01 "St3_Gate1S" 170 130 70
+    frame    data/bgs/sor3/st3a/gate100.png

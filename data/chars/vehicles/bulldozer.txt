@@ -1,116 +1,116 @@
-name			 Bulldozer #Donovan Bulldozer
-type			 enemy
-subtype			 notgrab
-hostile			 player npc
-candamage		 player enemy npc obstacle
-health			 1000000
-aggression		 300
-nolife			 1
-nomove			 1 1
-nodrop			 2
-gfxshadow		 1 1
-noatflash		 1
-flash			 Flash
-death			 1
-nodieblink		 3
-stealth			 2
-didhitscript	 data/scripts/didhit/bulldozer.c
+name             Bulldozer #Donovan Bulldozer
+type             enemy
+subtype             notgrab
+hostile             player npc
+candamage         player enemy npc obstacle
+health             1000000
+aggression         300
+nolife             1
+nomove             1 1
+nodrop             2
+gfxshadow         1 1
+noatflash         1
+flash             Flash
+death             1
+nodieblink         3
+stealth             2
+didhitscript     data/scripts/didhit/bulldozer.c
 ondoattackscript data/scripts/ondoattack/default.c
-animationscript	 data/scripts/animation/default.c
+animationscript     data/scripts/animation/default.c
 takedamagescript data/scripts/takedamage/bulldozer.c
-script	 		 data/scripts/updateentity/bulldozer.c
+script              data/scripts/updateentity/bulldozer.c
 
-load			 Donovan_Bulldozer
-load			 Barrel_Roll
+load             Donovan_Bulldozer
+load             Barrel_Roll
 
 anim spawn
-	loop	0
-	delay	96
-	offset	150 212
-	shadowcoords 150 228
-	@cmd spawnBind "Donovan_Bulldozer" -54 16 1 "driver"
-	frame	data/chars/vehicles/bulldozer00.png
+    loop    0
+    delay    96
+    offset    150 212
+    shadowcoords 150 228
+    @cmd spawnBind "Donovan_Bulldozer" -54 16 1 "driver"
+    frame    data/chars/vehicles/bulldozer00.png
 
 anim idle
-	loop	0
-	delay	8
-	offset	150 212
-	shadowcoords 150 228
-	@cmd dasher 0 0 0
-	@cmd aniChange 0 "ANI_ATTACK1"
-	frame	data/chars/vehicles/bulldozer00.png
+    loop    0
+    delay    8
+    offset    150 212
+    shadowcoords 150 228
+    @cmd dasher 0 0 0
+    @cmd aniChange 0 "ANI_ATTACK1"
+    frame    data/chars/vehicles/bulldozer00.png
 
 anim attack1 #ATTACK
-	range 0 999
-	rangea 0 999
-	rangez -999 999
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	loop	1
-	delay	8
-	offset	150 212
-	shadowcoords 150 228
-	bbox 	51 129 188 91 48
-	hitfx	data/sounds/StrongPunch.wav
-	@cmd dasher 3 0 0
-	attack 51 129 188 91 96 1 1 0 45 48
-	frame	data/chars/vehicles/bulldozer00.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/vehicles/bulldozer01.png
+    range 0 999
+    rangea 0 999
+    rangez -999 999
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    loop    1
+    delay    8
+    offset    150 212
+    shadowcoords 150 228
+    bbox     51 129 188 91 48
+    hitfx    data/sounds/StrongPunch.wav
+    @cmd dasher 3 0 0
+    attack 51 129 188 91 96 1 1 0 45 48
+    frame    data/chars/vehicles/bulldozer00.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/vehicles/bulldozer01.png
 
 anim follow2 #BACK AFTER HIT OPPONENTS
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	150 212
-	shadowcoords 150 228
-	hitfx	data/sounds/StrongPunch.wav
-	@cmd dasher -1 0 0
-	frame	data/chars/vehicles/bulldozer00.png
-	frame	data/chars/vehicles/bulldozer01.png
-	@cmd looper 0 9
-	@cmd aniChange 0 "ANI_IDLE"
-	frame	data/chars/vehicles/bulldozer00.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    150 212
+    shadowcoords 150 228
+    hitfx    data/sounds/StrongPunch.wav
+    @cmd dasher -1 0 0
+    frame    data/chars/vehicles/bulldozer00.png
+    frame    data/chars/vehicles/bulldozer01.png
+    @cmd looper 0 9
+    @cmd aniChange 0 "ANI_IDLE"
+    frame    data/chars/vehicles/bulldozer00.png
 
 anim follow3 #STOP AFTER HIT THE COLUMN AT END OF THE LEVEL
-	loop	0
-	delay	120
-	offset	150 212
-	shadowcoords 150 228
-	sound	data/sounds/Slam.wav
-	platform 0 248 50 50 270 270 80 1000
-	@cmd dasher 0 0 0
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	@cmd spawnToss "Barrel_Roll" -50 300 -30 0 1 0.4
-	frame	data/chars/vehicles/bulldozer00.png
-	@cmd hurtSelf 1000000
-	frame	data/chars/vehicles/bulldozer00.png
+    loop    0
+    delay    120
+    offset    150 212
+    shadowcoords 150 228
+    sound    data/sounds/Slam.wav
+    platform 0 248 50 50 270 270 80 1000
+    @cmd dasher 0 0 0
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    @cmd spawnToss "Barrel_Roll" -50 300 -30 0 1 0.4
+    frame    data/chars/vehicles/bulldozer00.png
+    @cmd hurtSelf 1000000
+    frame    data/chars/vehicles/bulldozer00.png
 
 anim pain #BACK AFTER TAKE DAMAGE
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	150 212
-	shadowcoords 150 228
-	hitfx	data/sounds/StrongPunch.wav
-	@cmd dasher -1 0 0
-	frame	data/chars/vehicles/bulldozer00.png
-	frame	data/chars/vehicles/bulldozer01.png
-	@cmd looper 0 9
-	frame	data/chars/vehicles/bulldozer00.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    150 212
+    shadowcoords 150 228
+    hitfx    data/sounds/StrongPunch.wav
+    @cmd dasher -1 0 0
+    frame    data/chars/vehicles/bulldozer00.png
+    frame    data/chars/vehicles/bulldozer01.png
+    @cmd looper 0 9
+    frame    data/chars/vehicles/bulldozer00.png
 
 anim death #END LEVEL
-	loop	0
-	delay	360
-	offset	150 212
-	shadowcoords 150 228
-	platform 0 248 50 50 270 270 80 1000
-	frame	data/chars/vehicles/bulldozer00.png
+    loop    0
+    delay    360
+    offset    150 212
+    shadowcoords 150 228
+    platform 0 248 50 50 270 270 80 1000
+    frame    data/chars/vehicles/bulldozer00.png

@@ -1,33 +1,33 @@
-name			Select_Menu
-type			none
-shadow			0
-setlayer		1000000003
-alpha			6
-ondrawscript	data/scripts/ondraw/menu_select.c
-onspawnscript	data/scripts/onspawn/menu_select.c
-animationscript	data/scripts/animation/default.c
-script			data/scripts/updateentity/menu_select.c
+name            Select_Menu
+type            none
+shadow            0
+setlayer        1000000003
+alpha            6
+ondrawscript    data/scripts/ondraw/menu_select.c
+onspawnscript    data/scripts/onspawn/menu_select.c
+animationscript    data/scripts/animation/default.c
+script            data/scripts/updateentity/menu_select.c
 
 anim idle #ARCADE MODE - SHOW MESSAGE "PRESS SELECT TO CALL A CPU PARTNER"
-	loop	0
-	delay	4
-	offset	0 0
-	frame	data/bgs/select/select00.png
+    loop    0
+    delay    4
+    offset    0 0
+    frame    data/bgs/select/select00.png
 
 anim follow1 #ARCADE MODE - SHOW MESSAGE "PRESS SELECT AGAIN TO CONFIRM CPU PARTNER"
-	loop	0
-	delay	4
-	offset	0 0
-	frame	data/bgs/select/select01.png
-	
+    loop    0
+    delay    4
+    offset    0 0
+    frame    data/bgs/select/select01.png
+    
 anim follow2 #ARCADE MODE - PARTNER IS ALREADY CONFIRMED / SURVIVAL MODE - SHOW MESSAGE "QUIT TO TITLE SCREEN"
-	loop	0
-	delay	4
-	offset	0 0
-	frame	data/bgs/select/select02.png
+    loop    0
+    delay    4
+    offset    0 0
+    frame    data/bgs/select/select02.png
 
 anim follow3 #REBELLION MODE - SHOW MESSAGE "QUIT TO TITLE SCREEN"
-	loop	0
-	delay	4
-	offset	0 0
-	frame	data/bgs/select/select03.png
+    loop    0
+    delay    4
+    offset    0 0
+    frame    data/bgs/select/select03.png

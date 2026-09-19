@@ -1,574 +1,574 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor3/st5e/bk00.png		1 1 0 0 0 0 1 1 0
-bglayer			data/bgs/sor3/st5e/bg01.png		0 0 0 0 0 0 1 1 1 0
-bglayer			data/bgs/sor3/st5e/bg02.png		0 0 0 0 0 0 1 1 1 0
-bglayer			data/bgs/sor3/st5e/bg01.png		0 0 0 0 0 0 1 1 1 0
-bglayer			data/bgs/sor3/st5e/bg03.png		0 0 0 0 0 0 1 1 1 0
-panel			data/bgs/sor3/st5e/_map.png		none	none
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		0
-stagenumber 	5
-spawn1			200 50 300
-spawn2			230 70 300
-spawn3			260 50 300
-spawn4			290 70 300
-updatescript	data/scripts/updatelevel/sor3_st5e.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor3/st5e/bk00.png        1 1 0 0 0 0 1 1 0
+bglayer            data/bgs/sor3/st5e/bg01.png        0 0 0 0 0 0 1 1 1 0
+bglayer            data/bgs/sor3/st5e/bg02.png        0 0 0 0 0 0 1 1 1 0
+bglayer            data/bgs/sor3/st5e/bg01.png        0 0 0 0 0 0 1 1 1 0
+bglayer            data/bgs/sor3/st5e/bg03.png        0 0 0 0 0 0 1 1 1 0
+panel            data/bgs/sor3/st5e/_map.png        none    none
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        0
+stagenumber     5
+spawn1            200 50 300
+spawn2            230 70 300
+spawn3            260 50 300
+spawn4            290 70 300
+updatescript    data/scripts/updatelevel/sor3_st5e.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall 		0 275 -100 -100 156 40 58 5000
+wall         0 275 -100 -100 156 40 58 5000
 
-wall 		0 275 324 440 580 580 58 5000
+wall         0 275 324 440 580 580 58 5000
 
-wall 		0 220 0 0 480 480 10 5000
-
-#########################################################################################
-
-load		St5_Elevator 3
+wall         0 220 0 0 480 480 10 5000
 
 #########################################################################################
 
-spawn		St5_Elevator 1
-flip		1
-coords		1 1 0
-at			0
+load        St5_Elevator 3
 
 #########################################################################################
 
-spawn		Box_E 1
-flip		0
-coords		140 232 0
-at			0
+spawn        St5_Elevator 1
+flip        1
+coords        1 1 0
+at            0
 
-spawn		Box_E 1
-flip		0
-coords		200 232 0
-at			0
+#########################################################################################
 
-spawn		Box_E 1
-flip		0
-coords		260 232 0
-at			0
+spawn        Box_E 1
+flip        0
+coords        140 232 0
+at            0
 
-spawn		Box_E 1
-flip		1
-coords		340 232 0
-at			0
+spawn        Box_E 1
+flip        0
+coords        200 232 0
+at            0
 
-spawn		WeaponX
-flip		1
-coords		240 240 0
-at			0
+spawn        Box_E 1
+flip        0
+coords        260 232 0
+at            0
 
-group		5 5
-at			0
+spawn        Box_E 1
+flip        1
+coords        340 232 0
+at            0
+
+spawn        WeaponX
+flip        1
+coords        240 240 0
+at            0
+
+group        5 5
+at            0
 wait
-at			0
+at            0
 
-spawn		Slum_Hide2 1
-map			2
-flip		0
-mp			5
-coords		240 200 0
-at			0
+spawn        Slum_Hide2 1
+map            2
+flip        0
+mp            5
+coords        240 200 0
+at            0
 
-spawn		Vice_Hide2 1
-map			2
-flip		0
-mp			10
-coords		240 200 0
-at			0
+spawn        Vice_Hide2 1
+map            2
+flip        0
+mp            10
+coords        240 200 0
+at            0
 
-spawn		Slum_Hide2 1
-map			2
-flip		0
-mp			15
-coords		240 200 0
-at			0
+spawn        Slum_Hide2 1
+map            2
+flip        0
+mp            15
+coords        240 200 0
+at            0
 
-spawn		Vice_Hide2 1
-map			2
-flip		0
-mp			20
-coords		240 200 0
-at			0
+spawn        Vice_Hide2 1
+map            2
+flip        0
+mp            20
+coords        240 200 0
+at            0
 
-spawn		Vice_Hide2 1
-map			2
-flip		0
-mp			5
-coords		240 200 0
-at			0
+spawn        Vice_Hide2 1
+map            2
+flip        0
+mp            5
+coords        240 200 0
+at            0
 
-spawn		Vice_Hide2 1
-map			2
-flip		0
-mp			10
-coords		240 200 0
-at			0
+spawn        Vice_Hide2 1
+map            2
+flip        0
+mp            10
+coords        240 200 0
+at            0
 
-spawn		Vice_Hide2 1
-map			2
-flip		0
-mp			15
-coords		240 200 0
-at			0
+spawn        Vice_Hide2 1
+map            2
+flip        0
+mp            15
+coords        240 200 0
+at            0
 
-spawn		Vice_Hide2 1
-map			2
-flip		0
-mp			20
-coords		240 200 0
-at			0
+spawn        Vice_Hide2 1
+map            2
+flip        0
+mp            20
+coords        240 200 0
+at            0
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		160 240 300
-at			0
+spawn        BruceB 1
+map            4
+flip        0
+coords        160 240 300
+at            0
 
-spawn		TigerX 1
-map			4
-flip		0
-coords		160 240 300
-at			0
+spawn        TigerX 1
+map            4
+flip        0
+coords        160 240 300
+at            0
 
-spawn		TigerX 1
-map			4
-flip		1
-coords		320 240 400
-at			0
+spawn        TigerX 1
+map            4
+flip        1
+coords        320 240 400
+at            0
 
-spawn		TigerX 1
-map			4
-flip		0
-coords		160 270 500
-at			0
+spawn        TigerX 1
+map            4
+flip        0
+coords        160 270 500
+at            0
 
-spawn		TigerX 1
-map			4
-flip		1
-coords		320 270 600
-at			0
+spawn        TigerX 1
+map            4
+flip        1
+coords        320 270 600
+at            0
 
-spawn		BongoX 1
-map			4
-flip		1
-coords		320 270 600
-at			0
+spawn        BongoX 1
+map            4
+flip        1
+coords        320 270 600
+at            0
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		320 270 600
-at			0
+spawn        BossX1 1
+map            4
+flip        1
+coords        320 270 600
+at            0
 
-
-#########################################################################################
-
-group		5 5
-at			1
-wait
-at			1
-
-spawn		GalsiaB 1
-map			3
-weapon		Knife 1
-flip		0
-coords		160 240 600
-at			1
-
-spawn		GalsiaB 1
-map			4
-weapon		Knife 1
-flip		1
-coords		320 240 700
-at			1
-
-spawn		BasicX1 1
-map			4
-flip		0
-coords		160 270 800
-at			1
-
-spawn		BasicX1 1
-map			4
-flip		1
-coords		320 270 900
-at			1
-
-spawn		ElectraX 1
-map			4
-flip		0
-coords		160 240 600
-at			1
-
-spawn		BongoX 1
-map			4
-flip		1
-coords		320 240 700
-at			1
-
-spawn		BasicX3 1
-map			4
-flip		0
-coords		160 270 800
-at			1
-
-spawn		ElectraX 1
-map			4
-flip		1
-coords		320 270 900
-at			1
-
-spawn		BossX1 1
-map			4
-flip		1
-coords		320 270 900
-at			1
-
-wait
-at			1
 
 #########################################################################################
 
-group		5 5
-at			2
+group        5 5
+at            1
 wait
-at			2
+at            1
 
-spawn		ElectraX 1
-map			4
-flip		0
-coords		160 240 600
-at			2
+spawn        GalsiaB 1
+map            3
+weapon        Knife 1
+flip        0
+coords        160 240 600
+at            1
 
-spawn		BasicX3 1
-map			4
-flip		1
-coords		320 240 700
-at			2
+spawn        GalsiaB 1
+map            4
+weapon        Knife 1
+flip        1
+coords        320 240 700
+at            1
 
-spawn		Chicken 1
-flip		0
-coords		160 270 300
-at			2
+spawn        BasicX1 1
+map            4
+flip        0
+coords        160 270 800
+at            1
 
-spawn		GarnetX 1
-map			4
-flip		1
-coords		320 270 900
-at			2
+spawn        BasicX1 1
+map            4
+flip        1
+coords        320 270 900
+at            1
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		160 240 600
-at			2
+spawn        ElectraX 1
+map            4
+flip        0
+coords        160 240 600
+at            1
 
-spawn		ElectraX 1
-map			4
-flip		1
-coords		320 240 700
-at			2
+spawn        BongoX 1
+map            4
+flip        1
+coords        320 240 700
+at            1
 
-spawn		GarnetX 1
-map			4
-flip		0
-coords		160 270 800
-at			2
+spawn        BasicX3 1
+map            4
+flip        0
+coords        160 270 800
+at            1
 
-spawn		BasicX3 1
-map			4
-flip		1
-coords		320 270 900
-at			2
+spawn        ElectraX 1
+map            4
+flip        1
+coords        320 270 900
+at            1
 
-spawn		GarnetX 1
-map			4
-flip		0
-coords		160 240 600
-at			2
-
-spawn		GarnetX 1
-map			4
-flip		1
-coords		320 240 700
-at			2
-
-spawn		BossX1 1
-map			4
-flip		1
-coords		320 240 700
-at			2
-
-#########################################################################################
-
-group		1000 1000
-at			3
-
-spawn		Robotx_Wait 1
-map			4
-flip		0
-boss		1
-coords		1 1000 0
-at			3
+spawn        BossX1 1
+map            4
+flip        1
+coords        320 270 900
+at            1
 
 wait
-at			3
+at            1
+
+#########################################################################################
+
+group        5 5
+at            2
+wait
+at            2
+
+spawn        ElectraX 1
+map            4
+flip        0
+coords        160 240 600
+at            2
+
+spawn        BasicX3 1
+map            4
+flip        1
+coords        320 240 700
+at            2
+
+spawn        Chicken 1
+flip        0
+coords        160 270 300
+at            2
+
+spawn        GarnetX 1
+map            4
+flip        1
+coords        320 270 900
+at            2
+
+spawn        BongoX 1
+map            4
+flip        0
+coords        160 240 600
+at            2
+
+spawn        ElectraX 1
+map            4
+flip        1
+coords        320 240 700
+at            2
+
+spawn        GarnetX 1
+map            4
+flip        0
+coords        160 270 800
+at            2
+
+spawn        BasicX3 1
+map            4
+flip        1
+coords        320 270 900
+at            2
+
+spawn        GarnetX 1
+map            4
+flip        0
+coords        160 240 600
+at            2
+
+spawn        GarnetX 1
+map            4
+flip        1
+coords        320 240 700
+at            2
+
+spawn        BossX1 1
+map            4
+flip        1
+coords        320 240 700
+at            2
+
+#########################################################################################
+
+group        1000 1000
+at            3
+
+spawn        Robotx_Wait 1
+map            4
+flip        0
+boss        1
+coords        1 1000 0
+at            3
+
+wait
+at            3
 
 #########################################################################################
 
 wait
-at			3
+at            3
 
 
-group		5 5
-at			3
+group        5 5
+at            3
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			3
+at            3
 
-spawn		SlumB 1
-map			3
-flip		0
-coords		600 240 0
-at			3
+spawn        SlumB 1
+map            3
+flip        0
+coords        600 240 0
+at            3
 
-spawn		SlumB 1
-map			4
-flip		0
-coords		700 240 0
-at			3
+spawn        SlumB 1
+map            4
+flip        0
+coords        700 240 0
+at            3
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		700 240 0
-at			3
+spawn        BasicX3 1
+map            4
+flip        0
+coords        700 240 0
+at            3
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		700 240 0
-at			3
+spawn        BongoX 1
+map            4
+flip        0
+coords        700 240 0
+at            3
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		700 240 0
-at			3
+spawn        BasicX3 1
+map            4
+flip        0
+coords        700 240 0
+at            3
 
-spawn		SlumB 1
-map			3
-flip		1
-coords		-100 240 0
-at			3
+spawn        SlumB 1
+map            3
+flip        1
+coords        -100 240 0
+at            3
 
-spawn		SlumB 1
-map			4
-flip		0
-coords		-200 270 0
-at			3
+spawn        SlumB 1
+map            4
+flip        0
+coords        -200 270 0
+at            3
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		-50 270 0
-at			3
+spawn        BossX1 1
+map            4
+flip        0
+coords        -50 270 0
+at            3
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		-50 270 0
-at			3
+flip        0
+coords        -50 270 0
+at            3
 
 
 #########################################################################################
 
 wait
-at			4
+at            4
 
 
-group		5 5
-at			4
+group        5 5
+at            4
 
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		700 240 0
-at			4
+spawn        BasicX3 1
+map            4
+flip        0
+coords        700 240 0
+at            4
 
-spawn		ElectraB 1
-map			3
-flip		1
-coords		-100 240 0
-at			4
+spawn        ElectraB 1
+map            3
+flip        1
+coords        -100 240 0
+at            4
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			4
-flip		1
-coords		-100 240 0
-at			4
-
-
-spawn		DonovanB 1
-weapon		Pipe 1
-map			4
-flip		0
-coords		700 240 0
-at			4
+spawn        KusanagiB 1
+weapon    Sword 1
+map            4
+flip        1
+coords        -100 240 0
+at            4
 
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		-50 270 0
-at			4
+spawn        DonovanB 1
+weapon        Pipe 1
+map            4
+flip        0
+coords        700 240 0
+at            4
 
-spawn		BossX1 1
-map			4
+
+spawn        BossX1 1
+map            4
+flip        0
+coords        -50 270 0
+at            4
+
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		-50 270 0
-at			4
+flip        0
+coords        -50 270 0
+at            4
 
 wait
-at			4
+at            4
 
 
 #########################################################################################
 
 wait
-at			5
+at            5
 
 
-group		5 5
-at			5
+group        5 5
+at            5
 
-spawn		Chicken 1
-flip		0
-coords		260 270 300
-at			5
+spawn        Chicken 1
+flip        0
+coords        260 270 300
+at            5
 
-spawn		ViceB 1
-map			4
-flip		0
-coords		700 240 0
-at			5
+spawn        ViceB 1
+map            4
+flip        0
+coords        700 240 0
+at            5
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		700 240 0
-at			5
+spawn        BasicX3 1
+map            4
+flip        0
+coords        700 240 0
+at            5
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		700 240 0
-at			5
+spawn        BongoX 1
+map            4
+flip        0
+coords        700 240 0
+at            5
 
-spawn		ViceB 1
-map			3
-flip		1
-coords		-100 240 0
-at			5
+spawn        ViceB 1
+map            3
+flip        1
+coords        -100 240 0
+at            5
 
-spawn		ViceB 1
-map			4
-flip		0
-coords		-200 270 0
-at			5
+spawn        ViceB 1
+map            4
+flip        0
+coords        -200 270 0
+at            5
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		-50 270 0
-at			5
+spawn        BossX1 1
+map            4
+flip        0
+coords        -50 270 0
+at            5
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		-50 270 0
-at			5
+flip        0
+coords        -50 270 0
+at            5
 
 wait
-at			5
+at            5
 
 
 #########################################################################################
 
 wait
-at			6
+at            6
 
-group		5 5
-at			6
+group        5 5
+at            6
 
-spawn		Chicken 1
-flip		0
-coords		300 270 300
-at			6
+spawn        Chicken 1
+flip        0
+coords        300 270 300
+at            6
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			4
-flip		1
-coords		-100 240 0
-at			6
+spawn        KusanagiB 1
+weapon    Sword 1
+map            4
+flip        1
+coords        -100 240 0
+at            6
 
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			4
-flip		0
-coords		700 240 0
-at			6
+spawn        DonovanB 1
+weapon        Pipe 1
+map            4
+flip        0
+coords        700 240 0
+at            6
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		700 240 0
-at			6
+spawn        BasicX3 1
+map            4
+flip        0
+coords        700 240 0
+at            6
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		700 240 0
-at			6
+spawn        BongoX 1
+map            4
+flip        0
+coords        700 240 0
+at            6
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			4
-flip		0
-coords		-200 270 0
-at			6
+spawn        KusanagiB 1
+weapon    Sword 1
+map            4
+flip        0
+coords        -200 270 0
+at            6
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		-50 270 0
-at			6
+spawn        BossX1 1
+map            4
+flip        0
+coords        -50 270 0
+at            6
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		-50 270 0
-at			6
+flip        0
+coords        -50 270 0
+at            6
 
 wait
-at			6
+at            6

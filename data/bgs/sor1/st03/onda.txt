@@ -1,20 +1,20 @@
-name			Onda #GROUND
-type			None
+name            Onda #GROUND
+type            None
 setlayer 999
 
 animationscript data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	15
-	offset	0 0
-	frame	data/bgs/sor1/st03/Onda01.png
-	frame	data/bgs/sor1/st03/Onda02.png
-	frame	data/bgs/sor1/st03/Onda03.png
-	frame	data/bgs/sor1/st03/Onda04.png
-		delay  15
-	frame	data/bgs/sor1/st03/Onda05.png
-		delay  30
-		offset  0  -5
-	@cmd offScreenKill 1000 0
-	frame  data/bgs/sor1/st03/Onda05.png
+    loop    1
+    delay    15
+    offset    0 0
+    frame    data/bgs/sor1/st03/Onda01.png
+    frame    data/bgs/sor1/st03/Onda02.png
+    frame    data/bgs/sor1/st03/Onda03.png
+    frame    data/bgs/sor1/st03/Onda04.png
+        delay  15
+    frame    data/bgs/sor1/st03/Onda05.png
+        delay  30
+        offset  0  -5
+    @cmd offScreenKill 1000 0
+    frame  data/bgs/sor1/st03/Onda05.png

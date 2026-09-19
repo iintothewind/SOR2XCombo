@@ -1,30 +1,30 @@
-name				P1_Laser
-type				none
-health				1
-nolife				1
-lifespan			2
-offscreenkill		50
-remove				1
-shadow				0
-antigravity			100
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
+name                P1_Laser
+type                none
+health                1
+nolife                1
+lifespan            2
+offscreenkill        50
+remove                1
+shadow                0
+antigravity            100
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
 
 anim idle
-	attackone 1
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	141 182
-	hitfx	data/sounds/StrongPunch.wav
-	attack 158 127 7 1 12 1 0 0 0 12
-	frame	data/chars/enemies/p1/laser/laser00.png
-	attack 158 127 16 1 12 1 0 0 0 12
-	frame	data/chars/enemies/p1/laser/laser01.png
-	attack 158 127 24 1 12 1 0 0 0 12
-	frame	data/chars/enemies/p1/laser/laser02.png
-	attack 158 127 32 1 12 1 0 0 0 12
-	frame	data/chars/enemies/p1/laser/laser03.png
+    attackone 1
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    141 182
+    hitfx    data/sounds/StrongPunch.wav
+    attack 158 127 7 1 12 1 0 0 0 12
+    frame    data/chars/enemies/p1/laser/laser00.png
+    attack 158 127 16 1 12 1 0 0 0 12
+    frame    data/chars/enemies/p1/laser/laser01.png
+    attack 158 127 24 1 12 1 0 0 0 12
+    frame    data/chars/enemies/p1/laser/laser02.png
+    attack 158 127 32 1 12 1 0 0 0 12
+    frame    data/chars/enemies/p1/laser/laser03.png

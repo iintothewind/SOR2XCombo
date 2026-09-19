@@ -1,15 +1,15 @@
-name			WeaponX
-type			none
-lifespan		0.001
-shadow			0
-alpha			1
-onspawnscript 	data/scripts/onspawn/weaponx.c
+name            WeaponX
+type            none
+lifespan        0.001
+shadow            0
+alpha            1
+onspawnscript     data/scripts/onspawn/weaponx.c
 
 anim idle
-	loop	0
-	delay	1
-	offset	50 72
-	frame	data/chars/random/empty0.png
+    loop    0
+    delay    1
+    offset    50 72
+    frame    data/chars/random/empty0.png
 
 
 

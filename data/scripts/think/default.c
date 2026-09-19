@@ -2,7 +2,7 @@
 
 void main()
 {
-	enemyAI();
-	smartDodge();
-	enemyRushControl();
+    enemyAI();
+    smartDodge();
+    enemyRushControl();
 }

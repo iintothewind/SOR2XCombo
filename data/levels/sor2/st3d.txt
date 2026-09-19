@@ -1,84 +1,84 @@
-loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st3d/_empty.png	1 1 0 0 0 0 1 1 0
-panel			data/bgs/sor2/st3d/_map.png		none	none
-frontpanel		data/bgs/sor2/st3d/fp00.png
-fglayer			data/bgs/sor2/st3d/fg00.png		-125 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st3d/fg01.png		-125 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber 	3
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript 	data/scripts/updatelevel/sor2_st3d.c
+loadingbg        data/bgs/loading3.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st3d/_empty.png    1 1 0 0 0 0 1 1 0
+panel            data/bgs/sor2/st3d/_map.png        none    none
+frontpanel        data/bgs/sor2/st3d/fp00.png
+fglayer            data/bgs/sor2/st3d/fg00.png        -125 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st3d/fg01.png        -125 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber     3
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript     data/scripts/updatelevel/sor2_st3d.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			0
+at            0
 
 
-spawn		Hakuyo_Wait 1
-map			2
-flip		0
-coords		420 230 0
-at			0
+spawn        Hakuyo_Wait 1
+map            2
+flip        0
+coords        420 230 0
+at            0
 
-spawn		BasicX1 1
-map			1
-flip		0
-coords		200 240 300
-at			0
+spawn        BasicX1 1
+map            1
+flip        0
+coords        200 240 300
+at            0
 
-spawn		BruceB 1
-map			1
-flip		0
-coords		300 240 300
-at			10
+spawn        BruceB 1
+map            1
+flip        0
+coords        300 240 300
+at            10
 
-spawn		BossX1 1
-map			2
-flip		0
-coords		300 240 300
-at			20
+spawn        BossX1 1
+map            2
+flip        0
+coords        300 240 300
+at            20
 
-spawn		BossX1 1
-map			2
+spawn        BossX1 1
+map            2
 2pspawn
-flip		0
-coords		300 240 300
-at			20
+flip        0
+coords        300 240 300
+at            20
 
-spawn		BasicX1 1
-map			2
-flip		0
-coords		600 230 0
-at			30
+spawn        BasicX1 1
+map            2
+flip        0
+coords        600 230 0
+at            30
 
-spawn		HakuyoX 1
-map			2
-flip		0
-coords		-100 230 0
-at			30
+spawn        HakuyoX 1
+map            2
+flip        0
+coords        -100 230 0
+at            30
 
-spawn		HakuyoX 1
-map			2
-flip		1
-coords		600 260 0
-at			30
+spawn        HakuyoX 1
+map            2
+flip        1
+coords        600 260 0
+at            30
 
-spawn		BongoB 1
-map			2
-flip		1
-coords		600 260 0
-at			30
+spawn        BongoB 1
+map            2
+flip        1
+coords        600 260 0
+at            30

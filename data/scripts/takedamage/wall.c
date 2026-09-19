@@ -2,8 +2,8 @@
 
 void main()
 {
-	customHitflash();
-	aniHealth("ANI_FOLLOW1", "ANI_FOLLOW2");
-	hitDmg();
-	comboDmg();
+    customHitflash();
+    aniHealth("ANI_FOLLOW1", "ANI_FOLLOW2");
+    hitDmg();
+    comboDmg();
 }

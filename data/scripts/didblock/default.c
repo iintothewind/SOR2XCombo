@@ -2,8 +2,8 @@
 
 void main()
 {
-	guardCost();
-	pushBack();
-	counter();
-	parry();
+    guardCost();
+    pushBack();
+    counter();
+    parry();
 }

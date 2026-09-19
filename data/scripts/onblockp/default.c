@@ -2,6 +2,6 @@
 
 void main()
 {
-	route();
-	platform();
+    route();
+    platform();
 }

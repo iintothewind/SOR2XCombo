@@ -3,7 +3,7 @@
 
 void main()
 {
-	parrow();
-	debugMode();
-	checkText("ANI_FREESPECIAL", "RAGE");
+    parrow();
+    debugMode();
+    checkText("ANI_FREESPECIAL", "RAGE");
 }

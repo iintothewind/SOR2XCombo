@@ -2,6 +2,6 @@
 
 void main()
 {
-	changeCamera();
-	cycleSprite("fglayer", 0, 1, 10);
+    changeCamera();
+    cycleSprite("fglayer", 0, 1, 10);
 }

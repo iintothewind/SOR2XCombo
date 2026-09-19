@@ -1,92 +1,92 @@
-loadingbg	 data/bgs/loading1.png 			1 -81 248 480 999 999 0
-background		data/bgs/_empty.png
-panel			data/bgs/sor3/st6c/_map.png		none	none
-order			a
-settime			300
-stagenumber		6
-spawn1			200 20 300
-spawn2			230 40 300
-spawn3			260 20 300
-spawn4			290 40 300
-updatescript	data/scripts/updatelevel/sor3_st6c.c
+loadingbg     data/bgs/loading1.png             1 -81 248 480 999 999 0
+background        data/bgs/_empty.png
+panel            data/bgs/sor3/st6c/_map.png        none    none
+order            a
+settime            300
+stagenumber        6
+spawn1            200 20 300
+spawn2            230 40 300
+spawn3            260 20 300
+spawn4            290 40 300
+updatescript    data/scripts/updatelevel/sor3_st6c.c
 
 #########################################################################################
 
-wall		0 283 -100 -100 160 15 144 5000
+wall        0 283 -100 -100 160 15 144 5000
 
-wall		16 283 303 447 562 562 144 5000
-
-#########################################################################################
-
-#load		St6_Shooter1 3
-#load		Box_B 3
+wall        16 283 303 447 562 562 144 5000
 
 #########################################################################################
 
-spawn		St6_Shooter1 1
-flip		1
-coords		240 190 110
-at			0
+#load        St6_Shooter1 3
+#load        Box_B 3
 
 #########################################################################################
 
-spawn		Chicken 1
-flip		1
-coords		320 169 0
-at			0
+spawn        St6_Shooter1 1
+flip        1
+coords        240 190 110
+at            0
+
+#########################################################################################
+
+spawn        Chicken 1
+flip        1
+coords        320 169 0
+at            0
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			0
+at            0
 
-spawn		KusanagiX 1
-map			1
-flip		1
-coords		120 260 300
-at			0
+spawn        KusanagiX 1
+map            1
+flip        1
+coords        120 260 300
+at            0
 
-spawn		KusanagiX 1
-map			1
-flip		1
-coords		240 260 400
-at			0
+spawn        KusanagiX 1
+map            1
+flip        1
+coords        240 260 400
+at            0
 
-spawn		KusanagiX 1
-map			1
-flip		0
-coords		360 260 500
-at			0
+spawn        KusanagiX 1
+map            1
+flip        0
+coords        360 260 500
+at            0
 
-spawn		BossX1 1
-map			4
-#@script		void main(){setglobalvar("st6_room2", 1);}@end_script
-flip		0
-coords		120 260 300
-at			0
+spawn        BossX1 1
+map            4
+#@script        void main(){setglobalvar("st6_room2", 1);}@end_script
+flip        0
+coords        120 260 300
+at            0
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		130 260 300
-at			0
+flip        0
+coords        130 260 300
+at            0
 
-group		3 3
-at			0
+group        3 3
+at            0
 
-spawn		KusanagiX 1
-map			1
-flip		1
-coords		120 260 300
-at			0
+spawn        KusanagiX 1
+map            1
+flip        1
+coords        120 260 300
+at            0
 
-spawn		KusanagiX 1
-map			1
-flip		1
-coords		240 260 400
-at			0
+spawn        KusanagiX 1
+map            1
+flip        1
+coords        240 260 400
+at            0
 
-spawn		KusanagiX 1
-map			1
-flip		0
-coords		360 260 500
-at			0
+spawn        KusanagiX 1
+map            1
+flip        0
+coords        360 260 500
+at            0

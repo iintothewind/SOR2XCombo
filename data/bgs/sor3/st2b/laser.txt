@@ -1,64 +1,64 @@
-name			St2_Laser
-type			panel
-shadow			0
-speed			10
-setlayer		1000
-animationscript	data/scripts/animation/default.c
+name            St2_Laser
+type            panel
+shadow            0
+speed            10
+setlayer        1000
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	1 1
-	drawmethod alpha 1
-	frame	data/bgs/sor3/st2b/laser00.png
-	frame	data/bgs/sor3/st2b/laser01.png
-	frame	data/bgs/sor3/st2b/laser02.png
-	frame	data/bgs/sor3/st2b/laser01.png
-	frame	data/bgs/sor3/st2b/laser00.png
-	frame	data/bgs/sor3/st2b/laser03.png
-	frame	data/bgs/sor3/st2b/laser04.png
-	frame	data/bgs/sor3/st2b/laser03.png
-	@cmd looper 0 29
-	frame	data/bgs/sor3/st2b/laser00.png
-	@cmd aniChange 0 "ANI_FOLLOW1"
-	frame	data/bgs/sor3/st2b/laser00.png
-	
+    loop    0
+    delay    2
+    offset    1 1
+    drawmethod alpha 1
+    frame    data/bgs/sor3/st2b/laser00.png
+    frame    data/bgs/sor3/st2b/laser01.png
+    frame    data/bgs/sor3/st2b/laser02.png
+    frame    data/bgs/sor3/st2b/laser01.png
+    frame    data/bgs/sor3/st2b/laser00.png
+    frame    data/bgs/sor3/st2b/laser03.png
+    frame    data/bgs/sor3/st2b/laser04.png
+    frame    data/bgs/sor3/st2b/laser03.png
+    @cmd looper 0 29
+    frame    data/bgs/sor3/st2b/laser00.png
+    @cmd aniChange 0 "ANI_FOLLOW1"
+    frame    data/bgs/sor3/st2b/laser00.png
+    
 anim follow1
-	loop	0
-	delay	40
-	offset	1 1
-	drawmethod alpha 3
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 1
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 3
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 1
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 3
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 1
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 3
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 1
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod alpha 6
-	drawmethod channel 0.8 0 0
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0.2
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0 0.8 0
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0.2
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0 0 0.8
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0.2
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0.8 0 0
-	frame	data/bgs/sor3/st2b/laser05.png
-	drawmethod channel 0 0.8 0
-	frame	data/bgs/sor3/st2b/laser05.png
-	@cmd aniChange 0 "ANI_IDLE"
-	frame	data/bgs/sor3/st2b/laser05.png
+    loop    0
+    delay    40
+    offset    1 1
+    drawmethod alpha 3
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 1
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 3
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 1
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 3
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 1
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 3
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 1
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod alpha 6
+    drawmethod channel 0.8 0 0
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0.2
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0 0.8 0
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0.2
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0 0 0.8
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0.2
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0.8 0 0
+    frame    data/bgs/sor3/st2b/laser05.png
+    drawmethod channel 0 0.8 0
+    frame    data/bgs/sor3/st2b/laser05.png
+    @cmd aniChange 0 "ANI_IDLE"
+    frame    data/bgs/sor3/st2b/laser05.png

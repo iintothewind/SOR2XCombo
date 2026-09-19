@@ -1,14 +1,14 @@
-name		St2_Disco2
-type		panel
-speed	 	5
-scroll		-0.5
-shadow		0
-setlayer	85
-script 		data/scripts/updateentity/disco.c
+name        St2_Disco2
+type        panel
+speed         5
+scroll        -0.5
+shadow        0
+setlayer    85
+script         data/scripts/updateentity/disco.c
 
 anim idle
-	loop	1
-	delay	160
-	offset	92 1
-	frame	data/bgs/sor3/st2b/disco00.png
-	frame	data/bgs/sor3/st2b/disco00.png
+    loop    1
+    delay    160
+    offset    92 1
+    frame    data/bgs/sor3/st2b/disco00.png
+    frame    data/bgs/sor3/st2b/disco00.png

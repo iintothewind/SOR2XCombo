@@ -1,21 +1,21 @@
-name			Gold
-type			item
+name            Gold
+type            item
 mp        999
-nolife			1
-facing 			1
-gfxshadow		1 1
-offscreenkill	50
-didhitscript	data/scripts/didhit/money.c
+nolife            1
+facing             1
+gfxshadow        1 1
+offscreenkill    50
+didhitscript    data/scripts/didhit/money.c
 
 anim idle
-	loop	1
-	delay	200
-	offset	51 61
-	itembox 42 10053 16 10
-	bbox 	42 53 16 10
-	nodrawmethod
-	frame	data/chars/itens/gold00.png
-		delay	6
-	drawmethod tintmode 1
-	drawmethod tintcolor 150_150_150
-	frame	data/chars/itens/gold00.png
+    loop    1
+    delay    200
+    offset    51 61
+    itembox 42 10053 16 10
+    bbox     42 53 16 10
+    nodrawmethod
+    frame    data/chars/itens/gold00.png
+        delay    6
+    drawmethod tintmode 1
+    drawmethod tintcolor 150_150_150
+    frame    data/chars/itens/gold00.png

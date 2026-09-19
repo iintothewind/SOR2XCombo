@@ -1,864 +1,864 @@
 ##MAIN
-name				Roo
-type				player
-secret				0 1
+name                Roo
+type                player
+secret                0 1
 
 ##LIFE
-health				800
+health                800
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		21 #36/33/30
-grabfinish 			0 #PLAYER=0/ENEMY=1
+grabdistance         21 #36/33/30
+grabfinish             0 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				70
+antigravity            -1 #-1/-2/-3
+height                70
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2 3
-weapons				none none none none Roo
-modelflag			3
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2 3
+weapons                none none none none Roo
+modelflag            3
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/jumping.c
-onblocksscript		data/scripts/onblocks/jumping.c
-onmoveascript		data/scripts/onmove/default.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-ondrawscript		data/scripts/ondraw/roo.c
-onspawnscript		data/scripts/onspawn/player.c
-animationscript	 	data/scripts/animation/default.c
-keyscript			data/scripts/key/roo.c
-takedamagescript	data/scripts/takedamage/default.c
-script				data/scripts/updateentity/roo.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/jumping.c
+onblocksscript        data/scripts/onblocks/jumping.c
+onmoveascript        data/scripts/onmove/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+ondrawscript        data/scripts/ondraw/roo.c
+onspawnscript        data/scripts/onspawn/player.c
+animationscript         data/scripts/animation/default.c
+keyscript            data/scripts/key/roo.c
+takedamagescript    data/scripts/takedamage/default.c
+script                data/scripts/updateentity/roo.c
 
 ##ICONS
-icon				data/chars/enemies/roo/icon.png 1
+icon                data/chars/enemies/roo/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/Sammy1.wav
+diesound            data/voices/Sammy1.wav
 
 ##REMAPS
-remap				data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter1.png
-remap				data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter2.png
-remap				data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter3.png
-remap				data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter3.png
+remap                data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter1.png
+remap                data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter2.png
+remap                data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter3.png
+remap                data/chars/enemies/roo/idle00.png data/chars/enemies/roo/alter3.png
 
 ##LOADS
-load				RooS
+load                RooS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim waiting
-	fshadow 0
-	loop	1
-	delay	12
-	offset	159 180
-	frame	data/chars/enemies/roo/idle00.png
-	frame	data/chars/enemies/roo/idle01.png
-	frame	data/chars/enemies/roo/idle02.png
-	frame	data/chars/enemies/roo/idle03.png
+    fshadow 0
+    loop    1
+    delay    12
+    offset    159 180
+    frame    data/chars/enemies/roo/idle00.png
+    frame    data/chars/enemies/roo/idle01.png
+    frame    data/chars/enemies/roo/idle02.png
+    frame    data/chars/enemies/roo/idle03.png
 
 anim select
-	fshadow 0
-	loop	0
-	delay	100000
-	offset	159 180
-	frame	data/chars/enemies/roo/idle00.png
-		delay	24
-	frame	data/chars/enemies/roo/idle00.png
-	frame	data/chars/enemies/roo/idle00.png
+    fshadow 0
+    loop    0
+    delay    100000
+    offset    159 180
+    frame    data/chars/enemies/roo/idle00.png
+        delay    24
+    frame    data/chars/enemies/roo/idle00.png
+    frame    data/chars/enemies/roo/idle00.png
 
 anim idle
-	loop	1
-	delay	12
-	offset	159 180
-	bbox 	146 119 24 63
-	frame	data/chars/enemies/roo/idle00.png
-	frame	data/chars/enemies/roo/idle01.png
-	frame	data/chars/enemies/roo/idle02.png
-	frame	data/chars/enemies/roo/idle03.png
+    loop    1
+    delay    12
+    offset    159 180
+    bbox     146 119 24 63
+    frame    data/chars/enemies/roo/idle00.png
+    frame    data/chars/enemies/roo/idle01.png
+    frame    data/chars/enemies/roo/idle02.png
+    frame    data/chars/enemies/roo/idle03.png
 
 anim chargeattack
-	chargetime 9999
-	loop	0
-	delay	1
-	offset	159 180
-	frame	data/chars/enemies/roo/idle00.png
+    chargetime 9999
+    loop    0
+    delay    1
+    offset    159 180
+    frame    data/chars/enemies/roo/idle00.png
 
 anim walk
-	loop	1
-	delay	12
-	offset	159 180
-	bbox 	136 136 42 46
-	frame	data/chars/enemies/roo/walk00.png
-	frame	data/chars/enemies/roo/walk01.png
-	bbox 	136 130 42 52
-	frame	data/chars/enemies/roo/walk02.png
-	frame	data/chars/enemies/roo/walk03.png
-	frame	data/chars/enemies/roo/walk04.png
-	frame	data/chars/enemies/roo/walk05.png
+    loop    1
+    delay    12
+    offset    159 180
+    bbox     136 136 42 46
+    frame    data/chars/enemies/roo/walk00.png
+    frame    data/chars/enemies/roo/walk01.png
+    bbox     136 130 42 52
+    frame    data/chars/enemies/roo/walk02.png
+    frame    data/chars/enemies/roo/walk03.png
+    frame    data/chars/enemies/roo/walk04.png
+    frame    data/chars/enemies/roo/walk05.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	loop	1
-	delay	10
-	offset	159 180
-	bbox 	136 133 42 49
-	sound	data/sounds/Run.wav
-	frame	data/chars/enemies/roo/run00.png
-	bbox 	127 128 54 54
-	frame	data/chars/enemies/roo/run01.png
-	frame	data/chars/enemies/roo/run02.png
-	frame	data/chars/enemies/roo/run03.png
+    @cmd lockAni "runType" "off"
+    loop    1
+    delay    10
+    offset    159 180
+    bbox     136 133 42 49
+    sound    data/sounds/Run.wav
+    frame    data/chars/enemies/roo/run00.png
+    bbox     127 128 54 54
+    frame    data/chars/enemies/roo/run01.png
+    frame    data/chars/enemies/roo/run02.png
+    frame    data/chars/enemies/roo/run03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	159 180
-	frame	data/chars/enemies/roo/get00.png
+    loop    0
+    delay    16
+    offset    159 180
+    frame    data/chars/enemies/roo/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	159 180
-	bbox 	144 112 24 70
-	@cmd vaultStuck
-	frame	data/chars/enemies/roo/grab00.png
+    loop    0
+    delay    16
+    offset    159 180
+    bbox     144 112 24 70
+    @cmd vaultStuck
+    frame    data/chars/enemies/roo/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	159 180
-	bbox 	144 116 27 66
-	frame	data/chars/enemies/roo/grabbed00.png
+    loop    0
+    delay    8
+    offset    159 180
+    bbox     144 116 27 66
+    frame    data/chars/enemies/roo/grabbed00.png
 
 anim land
-	loop	0
-	delay	16
-	offset	159 180
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/roo/jump00.png
-	frame	data/chars/enemies/roo/jump01.png
+    loop    0
+    delay    16
+    offset    159 180
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/roo/jump00.png
+    frame    data/chars/enemies/roo/jump01.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	159 180
-	bbox 	138 144 42 38
-	frame	data/chars/enemies/roo/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    159 180
+    bbox     138 144 42 38
+    frame    data/chars/enemies/roo/jumpdelay00.png
 
 anim jump
-	loop	0
-	delay	16
-	offset	159 180
-	bbox 	156 124 44 41
-	frame	data/chars/enemies/roo/jump00.png
-	bbox 	137 117 46 43
-	frame	data/chars/enemies/roo/jump01.png
+    loop    0
+    delay    16
+    offset    159 180
+    bbox     156 124 44 41
+    frame    data/chars/enemies/roo/jump00.png
+    bbox     137 117 46 43
+    frame    data/chars/enemies/roo/jump01.png
 
 anim walkoff
-	loop	0
-	delay	16
-	offset	159 180
-	bbox 	156 124 44 41
-	@cmd jump 1
-	frame	data/chars/enemies/roo/jump00.png
-	bbox 	137 117 46 43
-	frame	data/chars/enemies/roo/jump01.png
+    loop    0
+    delay    16
+    offset    159 180
+    bbox     156 124 44 41
+    @cmd jump 1
+    frame    data/chars/enemies/roo/jump00.png
+    bbox     137 117 46 43
+    frame    data/chars/enemies/roo/jump01.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	159 180
-	bbox 	138 144 42 38
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/roo/jumpland00.png
+    loop    0
+    delay    12
+    offset    159 180
+    bbox     138 144 42 38
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/roo/jumpland00.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	146 117 26 65
-	frame	data/chars/enemies/roo/pain00.png
-	frame	data/chars/enemies/roo/pain01.png
-	frame	data/chars/enemies/roo/pain00.png
-	frame	data/chars/enemies/roo/pain01.png
-	frame	data/chars/enemies/roo/pain00.png
-	frame	data/chars/enemies/roo/pain01.png
-	frame	data/chars/enemies/roo/pain00.png
-	frame	data/chars/enemies/roo/pain01.png
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     146 117 26 65
+    frame    data/chars/enemies/roo/pain00.png
+    frame    data/chars/enemies/roo/pain01.png
+    frame    data/chars/enemies/roo/pain00.png
+    frame    data/chars/enemies/roo/pain01.png
+    frame    data/chars/enemies/roo/pain00.png
+    frame    data/chars/enemies/roo/pain01.png
+    frame    data/chars/enemies/roo/pain00.png
+    frame    data/chars/enemies/roo/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	137 119 42 59
-	frame	data/chars/enemies/roo/pain200.png
-	frame	data/chars/enemies/roo/pain201.png
-	frame	data/chars/enemies/roo/pain200.png
-	frame	data/chars/enemies/roo/pain201.png
-	frame	data/chars/enemies/roo/pain200.png
-	frame	data/chars/enemies/roo/pain201.png
-	frame	data/chars/enemies/roo/pain200.png
-	frame	data/chars/enemies/roo/pain201.png
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     137 119 42 59
+    frame    data/chars/enemies/roo/pain200.png
+    frame    data/chars/enemies/roo/pain201.png
+    frame    data/chars/enemies/roo/pain200.png
+    frame    data/chars/enemies/roo/pain201.png
+    frame    data/chars/enemies/roo/pain200.png
+    frame    data/chars/enemies/roo/pain201.png
+    frame    data/chars/enemies/roo/pain200.png
+    frame    data/chars/enemies/roo/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	159 180
-	bbox 	132 116 48 44
-	frame	data/chars/enemies/roo/fall00.png
-		delay	8
-	bbox 	109 162 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/roo/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    159 180
+    bbox     132 116 48 44
+    frame    data/chars/enemies/roo/fall00.png
+        delay    8
+    bbox     109 162 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/roo/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	159 180
-	bbox 	132 116 48 44
-	frame	data/chars/enemies/roo/fall00.png
-		delay	8
-	bbox 	109 162 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/roo/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    159 180
+    bbox     132 116 48 44
+    frame    data/chars/enemies/roo/fall00.png
+        delay    8
+    bbox     109 162 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/roo/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	159 180
-	bbox 	132 116 48 44
-	frame	data/chars/enemies/roo/fall00.png
-		delay	8
-	bbox 	109 162 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/roo/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    159 180
+    bbox     132 116 48 44
+    frame    data/chars/enemies/roo/fall00.png
+        delay    8
+    bbox     109 162 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/roo/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	159 180
-	frame	data/chars/enemies/roo/fall600.png
-	frame	data/chars/enemies/roo/fall601.png
-	frame	data/chars/enemies/roo/fall602.png
-	frame	data/chars/enemies/roo/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/roo/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    159 180
+    frame    data/chars/enemies/roo/fall600.png
+    frame    data/chars/enemies/roo/fall601.png
+    frame    data/chars/enemies/roo/fall602.png
+    frame    data/chars/enemies/roo/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/roo/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	159 180
-	frame	data/chars/enemies/roo/fall700.png
-	frame	data/chars/enemies/roo/fall701.png
-	frame	data/chars/enemies/roo/fall702.png
-	frame	data/chars/enemies/roo/fall703.png
-	frame	data/chars/enemies/roo/fall704.png
-	frame	data/chars/enemies/roo/fall705.png
+    loop    0
+    delay    1000
+    offset    159 180
+    frame    data/chars/enemies/roo/fall700.png
+    frame    data/chars/enemies/roo/fall701.png
+    frame    data/chars/enemies/roo/fall702.png
+    frame    data/chars/enemies/roo/fall703.png
+    frame    data/chars/enemies/roo/fall704.png
+    frame    data/chars/enemies/roo/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	159 180
-	bbox 	132 116 48 44
-	hitfx	data/sounds/MediumKick.wav
-	attack 132 116 48 44 4 1 0 0 20 12
-	frame	data/chars/enemies/roo/fall00.png
-		delay	999
-	frame	data/chars/enemies/roo/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	109 162 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/roo/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    159 180
+    bbox     132 116 48 44
+    hitfx    data/sounds/MediumKick.wav
+    attack 132 116 48 44 4 1 0 0 20 12
+    frame    data/chars/enemies/roo/fall00.png
+        delay    999
+    frame    data/chars/enemies/roo/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     109 162 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/roo/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	159 180
-	bbox 	142 134 39 46
-	hitfx	data/sounds/MediumKick.wav
-	attack 142 134 39 46 4 1 0 0 20 12
-	frame	data/chars/enemies/roo/fall900.png
-		delay	999
-	frame	data/chars/enemies/roo/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	109 162 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/roo/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    159 180
+    bbox     142 134 39 46
+    hitfx    data/sounds/MediumKick.wav
+    attack 142 134 39 46 4 1 0 0 20 12
+    frame    data/chars/enemies/roo/fall900.png
+        delay    999
+    frame    data/chars/enemies/roo/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     109 162 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/roo/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	159 180
-	frame	data/chars/enemies/roo/fall01.png
-	frame	data/chars/enemies/roo/fall01.png
-	frame	data/chars/enemies/roo/fall01.png
+    loop    0
+    delay    16
+    offset    159 180
+    frame    data/chars/enemies/roo/fall01.png
+    frame    data/chars/enemies/roo/fall01.png
+    frame    data/chars/enemies/roo/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	159 180
-	frame	data/chars/enemies/roo/rise00.png
-	frame	data/chars/enemies/roo/rise01.png
-	frame	data/chars/enemies/roo/rise02.png
-	frame	data/chars/enemies/roo/rise03.png
+    loop    0
+    delay    16
+    offset    159 180
+    frame    data/chars/enemies/roo/rise00.png
+    frame    data/chars/enemies/roo/rise01.png
+    frame    data/chars/enemies/roo/rise02.png
+    frame    data/chars/enemies/roo/rise03.png
 
 anim riseattack
-	loop	0
-	delay	2
-	offset	159 180
-	@cmd invinc 2
-	@cmd dasher 2 0 0
-	@cmd copyMove
-	frame	data/chars/enemies/roo/dodge00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge04.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/enemies/roo/dodge05.png
+    loop    0
+    delay    2
+    offset    159 180
+    @cmd invinc 2
+    @cmd dasher 2 0 0
+    @cmd copyMove
+    frame    data/chars/enemies/roo/dodge00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge04.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/enemies/roo/dodge05.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	2
-	offset	159 180
-	bbox 	146 119 24 63
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/roo/a100.png
-	attack 155 128 35 20 2 0 0 0 5 12
-	frame	data/chars/enemies/roo/a101.png
-	frame	data/chars/enemies/roo/a102.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/a103.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    2
+    offset    159 180
+    bbox     146 119 24 63
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/roo/a100.png
+    attack 155 128 35 20 2 0 0 0 5 12
+    frame    data/chars/enemies/roo/a101.png
+    frame    data/chars/enemies/roo/a102.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/a103.png
 
 anim attack2
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	134 114 23 68
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/roo/a200.png
-	bbox 	143 117 30 65
-	frame	data/chars/enemies/roo/a201.png
-	attack 159 127 46 23 4 0 0 0 15 12
-	bbox 	153 119 36 63
-	frame	data/chars/enemies/roo/a202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	143 117 30 65
-	frame	data/chars/enemies/roo/a203.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     134 114 23 68
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/roo/a200.png
+    bbox     143 117 30 65
+    frame    data/chars/enemies/roo/a201.png
+    attack 159 127 46 23 4 0 0 0 15 12
+    bbox     153 119 36 63
+    frame    data/chars/enemies/roo/a202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     143 117 30 65
+    frame    data/chars/enemies/roo/a203.png
 
 anim attack3
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	159 180
-	bbox 	138 144 42 38
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/roo/a300.png
-	attack 143 124 62 28 4 0 0 0 5 12
-	bbox 	143 103 31 49
-	frame	data/chars/enemies/roo/a301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/a301.png
-	attack 143 118 83 30 8 1 0 0 15 12
-	bbox 	143 107 44 41
-	frame	data/chars/enemies/roo/a302.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	137 103 34 43
-	frame	data/chars/enemies/roo/a303.png
-	frame	data/chars/enemies/roo/a303.png
-	bbox 	132 107 39 36
-	frame	data/chars/enemies/roo/a304.png
-	bbox 	138 144 42 38
-	frame	data/chars/enemies/roo/a305.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    159 180
+    bbox     138 144 42 38
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/roo/a300.png
+    attack 143 124 62 28 4 0 0 0 5 12
+    bbox     143 103 31 49
+    frame    data/chars/enemies/roo/a301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/a301.png
+    attack 143 118 83 30 8 1 0 0 15 12
+    bbox     143 107 44 41
+    frame    data/chars/enemies/roo/a302.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     137 103 34 43
+    frame    data/chars/enemies/roo/a303.png
+    frame    data/chars/enemies/roo/a303.png
+    bbox     132 107 39 36
+    frame    data/chars/enemies/roo/a304.png
+    bbox     138 144 42 38
+    frame    data/chars/enemies/roo/a305.png
 
 anim attackboth #BACK ATTACK
-	fastattack 1
-	jugglecost 1
-	forcedirection 1
-	otg 1
-	loop	0
-	delay	6
-	offset	159 180
-	bbox 	142 144 27 38
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/roo/aboth00.png
-	bbox 	133 138 33 44
-	frame	data/chars/enemies/roo/aboth01.png
-		delay	12
-		move	-16
-	attack 107 135 71 26 4 1 0 0 5 12
-	bbox 	150 135 49 47
-	frame	data/chars/enemies/roo/aboth02.png
-		delay	6
-		move	0
-	@cmd dasher 0 0 0
-	bbox 	141 142 42 40
-	frame	data/chars/enemies/roo/aboth03.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 1
+    otg 1
+    loop    0
+    delay    6
+    offset    159 180
+    bbox     142 144 27 38
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/roo/aboth00.png
+    bbox     133 138 33 44
+    frame    data/chars/enemies/roo/aboth01.png
+        delay    12
+        move    -16
+    attack 107 135 71 26 4 1 0 0 5 12
+    bbox     150 135 49 47
+    frame    data/chars/enemies/roo/aboth02.png
+        delay    6
+        move    0
+    @cmd dasher 0 0 0
+    bbox     141 142 42 40
+    frame    data/chars/enemies/roo/aboth03.png
 
 anim grabattack #MULTI KICKS
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	133 110 30 72
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/roo/grabatk300.png
-	attack 138 119 50 38 2 0 0 0 5 12
-	bbox 	138 103 21 79
-	frame	data/chars/enemies/roo/grabatk301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk302.png
-	sound	data/sounds/MediumAttack.wav
-	bbox 	133 110 30 72
-	frame	data/chars/enemies/roo/grabatk303.png
-	attack 138 115 50 42 2 0 0 0 5 12
-	bbox 	138 103 21 79
-	frame	data/chars/enemies/roo/grabatk304.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk305.png
-	bbox 	133 110 30 72
-	frame	data/chars/enemies/roo/grabatk300.png
-	@cmd looper 0 2
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/roo/grabatk300.png
-	attack 138 119 50 38 2 1 0 0 5 12
-	bbox 	138 103 21 79
-	frame	data/chars/enemies/roo/grabatk301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk302.png
-	bbox 	133 110 30 72
-	frame	data/chars/enemies/roo/grabatk303.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     133 110 30 72
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/roo/grabatk300.png
+    attack 138 119 50 38 2 0 0 0 5 12
+    bbox     138 103 21 79
+    frame    data/chars/enemies/roo/grabatk301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk302.png
+    sound    data/sounds/MediumAttack.wav
+    bbox     133 110 30 72
+    frame    data/chars/enemies/roo/grabatk303.png
+    attack 138 115 50 42 2 0 0 0 5 12
+    bbox     138 103 21 79
+    frame    data/chars/enemies/roo/grabatk304.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk305.png
+    bbox     133 110 30 72
+    frame    data/chars/enemies/roo/grabatk300.png
+    @cmd looper 0 2
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/roo/grabatk300.png
+    attack 138 119 50 38 2 1 0 0 5 12
+    bbox     138 103 21 79
+    frame    data/chars/enemies/roo/grabatk301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk302.png
+    bbox     133 110 30 72
+    frame    data/chars/enemies/roo/grabatk303.png
 
 anim grabattack2 #VAULT FRONT TO BACK
-	loop	0
-	delay	6
-	offset	137 229
-	frame	data/chars/enemies/roo/vault00.png
-	frame	data/chars/enemies/roo/vault01.png
-	frame	data/chars/enemies/roo/vault02.png
-	frame	data/chars/enemies/roo/vault03.png
-	frame	data/chars/enemies/roo/vault04.png
-		delay	2
-		offset	159 180
-	@cmd vaultFix
-	frame	data/chars/enemies/roo/grab00.png
-	bbox 	144 112 24 70
-	frame	data/chars/enemies/roo/grab00.png
+    loop    0
+    delay    6
+    offset    137 229
+    frame    data/chars/enemies/roo/vault00.png
+    frame    data/chars/enemies/roo/vault01.png
+    frame    data/chars/enemies/roo/vault02.png
+    frame    data/chars/enemies/roo/vault03.png
+    frame    data/chars/enemies/roo/vault04.png
+        delay    2
+        offset    159 180
+    @cmd vaultFix
+    frame    data/chars/enemies/roo/grab00.png
+    bbox     144 112 24 70
+    frame    data/chars/enemies/roo/grab00.png
 
 anim grabup2 #VAULT BACK TO FRONT
-	loop	0
-	delay	6
-	offset	137 229
-	frame	data/chars/enemies/roo/vault00.png
-	frame	data/chars/enemies/roo/vault01.png
-	frame	data/chars/enemies/roo/vault02.png
-	frame	data/chars/enemies/roo/vault03.png
-	frame	data/chars/enemies/roo/vault04.png
-		delay	2
-		offset	159 180
-	@cmd vaultFix
-	frame	data/chars/enemies/roo/idle00.png
-	bbox 	146 119 24 63
-	frame	data/chars/enemies/roo/idle00.png
+    loop    0
+    delay    6
+    offset    137 229
+    frame    data/chars/enemies/roo/vault00.png
+    frame    data/chars/enemies/roo/vault01.png
+    frame    data/chars/enemies/roo/vault02.png
+    frame    data/chars/enemies/roo/vault03.png
+    frame    data/chars/enemies/roo/vault04.png
+        delay    2
+        offset    159 180
+    @cmd vaultFix
+    frame    data/chars/enemies/roo/idle00.png
+    bbox     146 119 24 63
+    frame    data/chars/enemies/roo/idle00.png
 
 anim grabforward #KICK
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	136 107 37 75
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/roo/grabatk00.png
-	bbox 	140 103 21 79
-	frame	data/chars/enemies/roo/grabatk01.png
-	attack2 140 115 51 39 2 0 0 0 5 12
-	frame	data/chars/enemies/roo/grabatk02.png
-	frame	data/chars/enemies/roo/grabatk03.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	144 107 28 75
-	frame	data/chars/enemies/roo/grabatk04.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     136 107 37 75
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/roo/grabatk00.png
+    bbox     140 103 21 79
+    frame    data/chars/enemies/roo/grabatk01.png
+    attack2 140 115 51 39 2 0 0 0 5 12
+    frame    data/chars/enemies/roo/grabatk02.png
+    frame    data/chars/enemies/roo/grabatk03.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     144 107 28 75
+    frame    data/chars/enemies/roo/grabatk04.png
 
 anim grabforward2 #KICK
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	136 107 37 75
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/roo/grabatk200.png
-	attack2 140 121 50 34 4 0 0 0 10 12
-	bbox 	140 103 21 79
-	sound	data/voices/Sammy2.wav
-	frame	data/chars/enemies/roo/grabatk201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk201.png
-	attack 146 115 58 29 4 1 0 0 30 12
-	dropv 2 2 0
-	bbox 	131 116 45 42
-	frame	data/chars/enemies/roo/grabatk202.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	132 112 30 50
-	frame	data/chars/enemies/roo/grabatk203.png
-	bbox 	139 107 28 75
-	frame	data/chars/enemies/roo/grabatk204.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     136 107 37 75
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/roo/grabatk200.png
+    attack2 140 121 50 34 4 0 0 0 10 12
+    bbox     140 103 21 79
+    sound    data/voices/Sammy2.wav
+    frame    data/chars/enemies/roo/grabatk201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk201.png
+    attack 146 115 58 29 4 1 0 0 30 12
+    dropv 2 2 0
+    bbox     131 116 45 42
+    frame    data/chars/enemies/roo/grabatk202.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     132 112 30 50
+    frame    data/chars/enemies/roo/grabatk203.png
+    bbox     139 107 28 75
+    frame    data/chars/enemies/roo/grabatk204.png
 
 anim grabdown2 #MULTI KICKS
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	133 110 30 72
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/roo/grabatk300.png
-	attack 138 119 50 38 2 0 0 0 5 12
-	bbox 	138 103 21 79
-	frame	data/chars/enemies/roo/grabatk301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk302.png
-	sound	data/sounds/MediumAttack.wav
-	bbox 	133 110 30 72
-	frame	data/chars/enemies/roo/grabatk303.png
-	attack 138 115 50 42 2 0 0 0 5 12
-	bbox 	138 103 21 79
-	frame	data/chars/enemies/roo/grabatk304.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk305.png
-	bbox 	133 110 30 72
-	frame	data/chars/enemies/roo/grabatk300.png
-	@cmd looper 0 2
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/roo/grabatk300.png
-	attack 138 119 50 38 2 1 0 0 5 12
-	bbox 	138 103 21 79
-	frame	data/chars/enemies/roo/grabatk301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/grabatk302.png
-	bbox 	133 110 30 72
-	frame	data/chars/enemies/roo/grabatk303.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     133 110 30 72
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/roo/grabatk300.png
+    attack 138 119 50 38 2 0 0 0 5 12
+    bbox     138 103 21 79
+    frame    data/chars/enemies/roo/grabatk301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk302.png
+    sound    data/sounds/MediumAttack.wav
+    bbox     133 110 30 72
+    frame    data/chars/enemies/roo/grabatk303.png
+    attack 138 115 50 42 2 0 0 0 5 12
+    bbox     138 103 21 79
+    frame    data/chars/enemies/roo/grabatk304.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk305.png
+    bbox     133 110 30 72
+    frame    data/chars/enemies/roo/grabatk300.png
+    @cmd looper 0 2
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/roo/grabatk300.png
+    attack 138 119 50 38 2 1 0 0 5 12
+    bbox     138 103 21 79
+    frame    data/chars/enemies/roo/grabatk301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/grabatk302.png
+    bbox     133 110 30 72
+    frame    data/chars/enemies/roo/grabatk303.png
 
 anim jumpattack #JUMP STATIC
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	159 180
-	bbox 	143 133 29 42
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/roo/jumpatk00.png
-		delay	20
-	attack 144 125 77 27 4 1 0 0 20 12
-	bbox 	130 122 47 30
-	sound	data/voices/Sammy2.wav
-	frame	data/chars/enemies/roo/jumpatk01.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	141 107 32 44
-	frame	data/chars/enemies/roo/jumpatk02.png
-	bbox 	137 117 46 43
-	frame	data/chars/enemies/roo/jumpatk03.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    159 180
+    bbox     143 133 29 42
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/roo/jumpatk00.png
+        delay    20
+    attack 144 125 77 27 4 1 0 0 20 12
+    bbox     130 122 47 30
+    sound    data/voices/Sammy2.wav
+    frame    data/chars/enemies/roo/jumpatk01.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     141 107 32 44
+    frame    data/chars/enemies/roo/jumpatk02.png
+    bbox     137 117 46 43
+    frame    data/chars/enemies/roo/jumpatk03.png
 
 anim jumpattack2 #JUMP DOWN
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	159 180
-	bbox 	144 120 28 45
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/roo/jumpatk200.png
-	attack 144 141 51 30 4 0 0 0 20 12
-	sound	data/voices/Sammy2.wav
-	frame	data/chars/enemies/roo/jumpatk200.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    159 180
+    bbox     144 120 28 45
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/roo/jumpatk200.png
+    attack 144 141 51 30 4 0 0 0 20 12
+    sound    data/voices/Sammy2.wav
+    frame    data/chars/enemies/roo/jumpatk200.png
 
 anim jumpforward #JUMP FORWARD
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	159 180
-	bbox 	135 131 40 42
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/roo/fjumpatk00.png
-	sound	data/voices/Sammy2.wav
-	frame	data/chars/enemies/roo/fjumpatk01.png
-		delay	20
-	attack 166 134 64 40 4 1 0 0 20 12
-	bbox 	150 123 50 41
-	frame	data/chars/enemies/roo/fjumpatk02.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	145 123 32 40
-	frame	data/chars/enemies/roo/fjumpatk03.png
-	bbox 	137 117 46 43
-	frame	data/chars/enemies/roo/fjumpatk04.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    159 180
+    bbox     135 131 40 42
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/roo/fjumpatk00.png
+    sound    data/voices/Sammy2.wav
+    frame    data/chars/enemies/roo/fjumpatk01.png
+        delay    20
+    attack 166 134 64 40 4 1 0 0 20 12
+    bbox     150 123 50 41
+    frame    data/chars/enemies/roo/fjumpatk02.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     145 123 32 40
+    frame    data/chars/enemies/roo/fjumpatk03.png
+    bbox     137 117 46 43
+    frame    data/chars/enemies/roo/fjumpatk04.png
 
 anim runattack #BLITZ
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	135 130 36 43
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/voices/Sammy2.wav
-	@cmd dasher 1.8 0 0
-	@cmd keyMove 0 1.8
-	frame	data/chars/enemies/roo/runatk00.png
-	bbox 	135 127 43 36
-	frame	data/chars/enemies/roo/runatk01.png
-	bbox 	145 127 36 43
-	sound	data/sounds/Slide2.wav
-	frame	data/chars/enemies/roo/runatk02.png
-		delay	2
-	@cmd dasher 1.8 0 0
-	@cmd keyMove 0 1.8
-	attack 167 120 24 62 2 0 0 0 10 12
-	dropv 1 0.5 0
-	bbox 	167 120 24 62
-	frame	data/chars/enemies/roo/runatk03.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/runatk03.png
-	attack 163 120 25 62 2 0 0 0 10 12
-	dropv 1 0.5 0
-	bbox 	163 120 25 62
-	frame	data/chars/enemies/roo/runatk04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/runatk04.png
-	@cmd looper 3 3
-	@cmd dasher 1.8 0 0
-	@cmd keyMove 0 1.8
-	attack 167 120 24 62 2 1 0 0 10 12
-	bbox 	167 120 24 62
-	frame	data/chars/enemies/roo/runatk03.png
-	attack 163 120 25 62 2 1 0 0 10 12
-	bbox 	163 120 25 62
-	frame	data/chars/enemies/roo/runatk04.png
-		delay	4
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	145 127 36 43
-	frame	data/chars/enemies/roo/runatk05.png
-	bbox 	138 137 43 36
-	frame	data/chars/enemies/roo/runatk06.png
-	bbox 	135 130 36 43
-	frame	data/chars/enemies/roo/runatk07.png
-	bbox 	138 144 42 38
-	frame	data/chars/enemies/roo/runatk08.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     135 130 36 43
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/voices/Sammy2.wav
+    @cmd dasher 1.8 0 0
+    @cmd keyMove 0 1.8
+    frame    data/chars/enemies/roo/runatk00.png
+    bbox     135 127 43 36
+    frame    data/chars/enemies/roo/runatk01.png
+    bbox     145 127 36 43
+    sound    data/sounds/Slide2.wav
+    frame    data/chars/enemies/roo/runatk02.png
+        delay    2
+    @cmd dasher 1.8 0 0
+    @cmd keyMove 0 1.8
+    attack 167 120 24 62 2 0 0 0 10 12
+    dropv 1 0.5 0
+    bbox     167 120 24 62
+    frame    data/chars/enemies/roo/runatk03.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/runatk03.png
+    attack 163 120 25 62 2 0 0 0 10 12
+    dropv 1 0.5 0
+    bbox     163 120 25 62
+    frame    data/chars/enemies/roo/runatk04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/runatk04.png
+    @cmd looper 3 3
+    @cmd dasher 1.8 0 0
+    @cmd keyMove 0 1.8
+    attack 167 120 24 62 2 1 0 0 10 12
+    bbox     167 120 24 62
+    frame    data/chars/enemies/roo/runatk03.png
+    attack 163 120 25 62 2 1 0 0 10 12
+    bbox     163 120 25 62
+    frame    data/chars/enemies/roo/runatk04.png
+        delay    4
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     145 127 36 43
+    frame    data/chars/enemies/roo/runatk05.png
+    bbox     138 137 43 36
+    frame    data/chars/enemies/roo/runatk06.png
+    bbox     135 130 36 43
+    frame    data/chars/enemies/roo/runatk07.png
+    bbox     138 144 42 38
+    frame    data/chars/enemies/roo/runatk08.png
 
 anim special #DEFENSIVE SPECIAL
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 40 2 5
-	@cmd healStart
-	loop	0
-	delay	2
-	offset	159 180
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/voices/Sammy2.wav
-	frame	data/chars/enemies/roo/special00.png
-	@cmd leaper 0 2.5 0
-	frame	data/chars/enemies/roo/special01.png
-	frame	data/chars/enemies/roo/special02.png
-	attack 123 119 70 46 4 1 0 0 15 12
-	frame	data/chars/enemies/roo/special03.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/enemies/roo/special03.png
-	attack 135 111 47 63 4 1 0 0 15 12
-	frame	data/chars/enemies/roo/special04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/special04.png
-	attack 135 106 46 72 4 1 0 0 15 12
-	frame	data/chars/enemies/roo/special05.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/special05.png
-	attack 126 121 64 41 4 1 0 0 15 12
-	frame	data/chars/enemies/roo/special06.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/special06.png
-	@cmd landFrame 8
-		delay	12
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/roo/special07.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 40 2 5
+    @cmd healStart
+    loop    0
+    delay    2
+    offset    159 180
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/voices/Sammy2.wav
+    frame    data/chars/enemies/roo/special00.png
+    @cmd leaper 0 2.5 0
+    frame    data/chars/enemies/roo/special01.png
+    frame    data/chars/enemies/roo/special02.png
+    attack 123 119 70 46 4 1 0 0 15 12
+    frame    data/chars/enemies/roo/special03.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/enemies/roo/special03.png
+    attack 135 111 47 63 4 1 0 0 15 12
+    frame    data/chars/enemies/roo/special04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/special04.png
+    attack 135 106 46 72 4 1 0 0 15 12
+    frame    data/chars/enemies/roo/special05.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/special05.png
+    attack 126 121 64 41 4 1 0 0 15 12
+    frame    data/chars/enemies/roo/special06.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/special06.png
+    @cmd landFrame 8
+        delay    12
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/roo/special07.png
 
 anim special2 #OFFENSIVE SPECIAL
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 40 2 5
-	@cmd healStart
-	loop	0
-	delay	4
-	offset	159 180
-	bbox 	139 148 35 34
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/voices/Sammy2.wav
-	frame	data/chars/enemies/roo/special200.png
-		delay	2
-	@cmd dasher 1 0 0
-	attack 145 120 55 34 4 0 0 0 10 12
-	dropv 1 0.5 0
-	bbox 	149 108 16 46
-	frame	data/chars/enemies/roo/special201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/enemies/roo/special201.png
-	attack 143 112 28 36 4 0 0 0 10 12
-	dropv 1 0.5 0
-	frame	data/chars/enemies/roo/special202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/special202.png
-	attack 115 120 55 34 4 0 0 0 10 12
-	dropv 1 0.5 0
-	frame	data/chars/enemies/roo/special203.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/special203.png
-	attack 142 123 32 42 4 1 0 0 10 12
-	frame	data/chars/enemies/roo/special204.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/roo/special204.png
-		delay	12
-	@cmd looper 1 5
-	@cmd dasher 0 0 0
-	bbox 	139 148 35 34
-	frame	data/chars/enemies/roo/special205.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 40 2 5
+    @cmd healStart
+    loop    0
+    delay    4
+    offset    159 180
+    bbox     139 148 35 34
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/voices/Sammy2.wav
+    frame    data/chars/enemies/roo/special200.png
+        delay    2
+    @cmd dasher 1 0 0
+    attack 145 120 55 34 4 0 0 0 10 12
+    dropv 1 0.5 0
+    bbox     149 108 16 46
+    frame    data/chars/enemies/roo/special201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/enemies/roo/special201.png
+    attack 143 112 28 36 4 0 0 0 10 12
+    dropv 1 0.5 0
+    frame    data/chars/enemies/roo/special202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/special202.png
+    attack 115 120 55 34 4 0 0 0 10 12
+    dropv 1 0.5 0
+    frame    data/chars/enemies/roo/special203.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/special203.png
+    attack 142 123 32 42 4 1 0 0 10 12
+    frame    data/chars/enemies/roo/special204.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/roo/special204.png
+        delay    12
+    @cmd looper 1 5
+    @cmd dasher 0 0 0
+    bbox     139 148 35 34
+    frame    data/chars/enemies/roo/special205.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	2
-	offset	159 180
-	@cmd copyMove
-	frame	data/chars/enemies/roo/dodge00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge04.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/enemies/roo/dodge05.png
+    loop    0
+    delay    2
+    offset    159 180
+    @cmd copyMove
+    frame    data/chars/enemies/roo/dodge00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge04.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/enemies/roo/dodge05.png
 
 anim dodge
-	@cmd lockAni "dodgeType" "sor2x"
-	@cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
-	@cmd lockAni "dodgeType" "off"
-	loop	0
-	delay	2
-	offset	159 180
-	@cmd copyMove
-	frame	data/chars/enemies/roo/dodge00.png
-		delay	6
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/enemies/roo/dodge04.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/enemies/roo/dodge05.png
+    @cmd lockAni "dodgeType" "sor2x"
+    @cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
+    @cmd lockAni "dodgeType" "off"
+    loop    0
+    delay    2
+    offset    159 180
+    @cmd copyMove
+    frame    data/chars/enemies/roo/dodge00.png
+        delay    6
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/enemies/roo/dodge04.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/enemies/roo/dodge05.png

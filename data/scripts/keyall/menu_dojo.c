@@ -13,35 +13,35 @@ void menuDojo(int player)
   }
 
 
-	int highlight = getglobalvar("highlight");
+    int highlight = getglobalvar("highlight");
 
-	if(getglobalvar("activeText") == "Dojo"){
-		if(playerkeys(player, 1, "movedown")){ //HIGHLIGHT OPTIONS
-			playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
+    if(getglobalvar("activeText") == "Dojo"){
+        if(playerkeys(player, 1, "movedown")){ //HIGHLIGHT OPTIONS
+            playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
       if(highlight == 0){setglobalvar("highlight", 1);}
       if(highlight == 1){setglobalvar("highlight", 2);}
       if(highlight == 2){setglobalvar("highlight", 0);}
-		}
+        }
 
-		//HIGHLIGHT OPTIONS WHEN MOVE UP
-		if(playerkeys(player, 1, "moveup")){
-			playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
+        //HIGHLIGHT OPTIONS WHEN MOVE UP
+        if(playerkeys(player, 1, "moveup")){
+            playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
       if(highlight == 0){setglobalvar("highlight", 2);}
       if(highlight == 2){setglobalvar("highlight", 1);}
       if(highlight == 1){setglobalvar("highlight", 0);}
-		}
+        }
 
-		if(playerkeys(player, 1, "moveright")){
-			playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
+        if(playerkeys(player, 1, "moveright")){
+            playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
 
-			if(getglobalvar("highlight") == 0){
+            if(getglobalvar("highlight") == 0){
         if(getglobalvar("dojoStage") == "Dojo"){setglobalvar("dojoStage", "Sea01");}else
         if(getglobalvar("dojoStage") == "Sea01"){setglobalvar("dojoStage", "Sea02");}else
         if(getglobalvar("dojoStage") == "Sea02"){setglobalvar("dojoStage", "ChinaTown");}else
         if(getglobalvar("dojoStage") == "ChinaTown"){setglobalvar("dojoStage", "Dojo");}
       }
 
-			if(getglobalvar("highlight") == 1){
+            if(getglobalvar("highlight") == 1){
         if(getglobalvar("dojoOpponent") == "Kun"){setglobalvar("dojoOpponent", "Abadede");}else
         if(getglobalvar("dojoOpponent") == "Abadede"){setglobalvar("dojoOpponent", "Ash");}else
         if(getglobalvar("dojoOpponent") == "Ash"){setglobalvar("dojoOpponent", "Barbon");}else
@@ -83,7 +83,7 @@ void menuDojo(int player)
         if(getglobalvar("dojoOpponent") == "Signal"){setglobalvar("dojoOpponent", "Kun");}
       }
 
-			if(getglobalvar("highlight") == 2){
+            if(getglobalvar("highlight") == 2){
         if(getglobalvar("dojoEnergyRate") == 0){setglobalvar("dojoEnergyRate", 5);}else
         if(getglobalvar("dojoEnergyRate") == 5){setglobalvar("dojoEnergyRate", 10);}else
         if(getglobalvar("dojoEnergyRate") == 10){setglobalvar("dojoEnergyRate", 15);}else
@@ -91,19 +91,19 @@ void menuDojo(int player)
         if(getglobalvar("dojoEnergyRate") == 20){setglobalvar("dojoEnergyRate", 25);}else
         if(getglobalvar("dojoEnergyRate") == 25){setglobalvar("dojoEnergyRate", 0);}
       }
-		}
+        }
 
-		if(playerkeys(player, 1, "moveleft")){
-			playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
+        if(playerkeys(player, 1, "moveleft")){
+            playsample(openborconstant("SAMPLE_BEEP"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
 
-			if(getglobalvar("highlight") == 0){
+            if(getglobalvar("highlight") == 0){
         if(getglobalvar("dojoStage") == "Dojo"){setglobalvar("dojoStage", "ChinaTown");}else
         if(getglobalvar("dojoStage") == "ChinaTown"){setglobalvar("dojoStage", "Sea02");}else
         if(getglobalvar("dojoStage") == "Sea02"){setglobalvar("dojoStage", "Sea01");}else
         if(getglobalvar("dojoStage") == "Sea01"){setglobalvar("dojoStage", "Dojo");}
       }
 
-			if(getglobalvar("highlight") == 1){
+            if(getglobalvar("highlight") == 1){
         if(getglobalvar("dojoOpponent") == "Kun"){setglobalvar("dojoOpponent", "Signal");}else
         if(getglobalvar("dojoOpponent") == "Signal"){setglobalvar("dojoOpponent", "Roo");}else
         if(getglobalvar("dojoOpponent") == "Roo"){setglobalvar("dojoOpponent", "Joker");}else
@@ -145,7 +145,7 @@ void menuDojo(int player)
         if(getglobalvar("dojoOpponent") == "Abadede"){setglobalvar("dojoOpponent", "Kun");}
       }
 
-			if(getglobalvar("highlight") == 2){
+            if(getglobalvar("highlight") == 2){
         if(getglobalvar("dojoEnergyRate") == 25){setglobalvar("dojoEnergyRate", 20);}else
         if(getglobalvar("dojoEnergyRate") == 20){setglobalvar("dojoEnergyRate", 15);}else
         if(getglobalvar("dojoEnergyRate") == 15){setglobalvar("dojoEnergyRate", 10);}else
@@ -153,21 +153,21 @@ void menuDojo(int player)
         if(getglobalvar("dojoEnergyRate") == 5){setglobalvar("dojoEnergyRate", 0);}else
         if(getglobalvar("dojoEnergyRate") == 0){setglobalvar("dojoEnergyRate", 25);}
       }
-		}
+        }
 
-		//USED TO EXIT WITHOUT SELECT ANY CHARACTER
-		if(playerkeys(player, 1, "jump")){
-			gotomainmenu(3);
-		}
+        //USED TO EXIT WITHOUT SELECT ANY CHARACTER
+        if(playerkeys(player, 1, "jump")){
+            gotomainmenu(3);
+        }
 
-		else
+        else
 
-		//BEGIN GAME WHEN ANY BUTTON IS PRESSED
-		if(playerkeys(player, 1, "anybutton")){
-			if(getglobalvar("dojoStart") == 0){
-				playsample(openborconstant("SAMPLE_BEEP2"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
-				setglobalvar("dojoStart", 1);
-			}
-		}
-	}
+        //BEGIN GAME WHEN ANY BUTTON IS PRESSED
+        if(playerkeys(player, 1, "anybutton")){
+            if(getglobalvar("dojoStart") == 0){
+                playsample(openborconstant("SAMPLE_BEEP2"), 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
+                setglobalvar("dojoStart", 1);
+            }
+        }
+    }
 }

@@ -1,20 +1,20 @@
 ##MAIN
-name				Axel_SlashS
-type				none
+name                Axel_SlashS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	0
-	delay	1000
-	offset	104 87
-	frame	data/chars/heroes/axel/slash/slash00.png
-	frame	data/chars/heroes/axel/slash/slash00.png
-	frame	data/chars/heroes/axel/slash/slash01.png
-	frame	data/chars/heroes/axel/slash/slash01.png
+    loop    0
+    delay    1000
+    offset    104 87
+    frame    data/chars/heroes/axel/slash/slash00.png
+    frame    data/chars/heroes/axel/slash/slash00.png
+    frame    data/chars/heroes/axel/slash/slash01.png
+    frame    data/chars/heroes/axel/slash/slash01.png

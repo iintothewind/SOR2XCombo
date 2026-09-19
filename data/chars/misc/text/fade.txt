@@ -1,35 +1,35 @@
-name			Fade
-type			text
-subtype			noskip
-setlayer		1999999999
-shadow			0
-animationscript	data/scripts/animation/default.c
+name            Fade
+type            text
+subtype            noskip
+setlayer        1999999999
+shadow            0
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	4
-	offset	1200 1200
-	frame	data/chars/misc/text/blank.png
-	drawmethod alpha 6
-	drawmethod channel 0.9
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.8
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.7
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.6
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.5
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.4
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.3
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.2
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.1
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0
-	frame	data/chars/misc/text/blank.png
-	@cmd suicide
-	frame	data/chars/misc/text/blank.png
+    loop    0
+    delay    4
+    offset    1200 1200
+    frame    data/chars/misc/text/blank.png
+    drawmethod alpha 6
+    drawmethod channel 0.9
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.8
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.7
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.6
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.5
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.4
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.3
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.2
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.1
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0
+    frame    data/chars/misc/text/blank.png
+    @cmd suicide
+    frame    data/chars/misc/text/blank.png

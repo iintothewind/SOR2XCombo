@@ -1,11 +1,11 @@
-name		 Zan_Orb1 #DECORATION
-type		 none
-shadow		 0
-script		 data/scripts/updateentity/zan_orb.c
+name         Zan_Orb1 #DECORATION
+type         none
+shadow         0
+script         data/scripts/updateentity/zan_orb.c
 
 anim idle
-	loop	1
-	delay	4
-	offset	25 26
-	frame	data/chars/heroes/zan/orb/orb00.png
-	frame	data/chars/heroes/zan/orb/orb01.png
+    loop    1
+    delay    4
+    offset    25 26
+    frame    data/chars/heroes/zan/orb/orb00.png
+    frame    data/chars/heroes/zan/orb/orb01.png

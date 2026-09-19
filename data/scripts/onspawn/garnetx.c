@@ -2,5 +2,5 @@
 
 void main()
 {
-	randomX2("GarnetB", "GarnetB");
+    randomX2("GarnetB", "GarnetB");
 }

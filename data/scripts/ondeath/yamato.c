@@ -2,9 +2,9 @@
 
 void main()
 {
-	musicPause();
-	slowMotion();
-	screen(1);
-	resetAuraEffect();
-	dropItem("Apple");
+    musicPause();
+    slowMotion();
+    screen(1);
+    resetAuraEffect();
+    dropItem("Apple");
 }

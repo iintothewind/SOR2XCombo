@@ -3,22 +3,22 @@
 
 void main()
 {
-	void self = getlocalvar("self");
-	void type = getentityproperty(self, "type");
-	
-	if(type == openborconstant("TYPE_PLAYER")){
-		jumpVel();
-		parrow();
-		motorBike("Blaze_Bike");
-	}
-	
-	if(type == openborconstant("TYPE_NPC")){
-		parrowPartner();
-		drawLife();
-		motorBike("Blaze_Bike_");
-	}
+    void self = getlocalvar("self");
+    void type = getentityproperty(self, "type");
+    
+    if(type == openborconstant("TYPE_PLAYER")){
+        jumpVel();
+        parrow();
+        motorBike("Blaze_Bike");
+    }
+    
+    if(type == openborconstant("TYPE_NPC")){
+        parrowPartner();
+        drawLife();
+        motorBike("Blaze_Bike_");
+    }
 
-	debugMode();
-	checkText("ANI_FREESPECIAL", "RAGE");
-	checkText("ANI_FREESPECIAL2", "SUPER");
+    debugMode();
+    checkText("ANI_FREESPECIAL", "RAGE");
+    checkText("ANI_FREESPECIAL2", "SUPER");
 }

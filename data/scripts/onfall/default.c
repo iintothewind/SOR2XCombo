@@ -2,6 +2,6 @@
 
 void main()
 {
-	unBind();
-	enemyOnFall();
+    unBind();
+    enemyOnFall();
 }

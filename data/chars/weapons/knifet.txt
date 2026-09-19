@@ -1,49 +1,49 @@
-name			KnifeT #THROWNED
-type			none
-subtype			weapon
-nolife			1
-lifespan		4
-offscreenkill	50
-remove			1
-jugglepoints	99
-gfxshadow		1 1
-noatflash 		1
-flash			NoFlash
-didhitscript	data/scripts/didhit/default.c
-ondrawscript	data/scripts/ondraw/weapons.c
-onfallscript	data/scripts/onfall/weapons.c
-animationscript	data/scripts/animation/default.c
+name            KnifeT #THROWNED
+type            none
+subtype            weapon
+nolife            1
+lifespan        4
+offscreenkill    50
+remove            1
+jugglepoints    99
+gfxshadow        1 1
+noatflash         1
+flash            NoFlash
+didhitscript    data/scripts/didhit/default.c
+ondrawscript    data/scripts/ondraw/weapons.c
+onfallscript    data/scripts/onfall/weapons.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	attackone 1
-	fastattack 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	1
-	offset	25 27
-	bbox 	16 25 19 3
-	hitfx	data/sounds/Cutter.wav
-	attack 16 25 19 3 15 1 0 0 10 24
-	frame	data/chars/weapons/knife07.png
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/weapons/knife07.png
+    attackone 1
+    fastattack 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    1
+    offset    25 27
+    bbox     16 25 19 3
+    hitfx    data/sounds/Cutter.wav
+    attack 16 25 19 3 15 1 0 0 10 24
+    frame    data/chars/weapons/knife07.png
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/weapons/knife07.png
 
 anim fall
-	landframe 9
-	loop	1 1 9
-	delay	2
-	offset	25 27
-	sound	data/sounds/Clash.wav
-	frame	data/chars/weapons/knife07.png
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/weapons/knife07.png
-	frame	data/chars/weapons/knife06.png
-	frame	data/chars/weapons/knife05.png
-	frame	data/chars/weapons/knife04.png
-	frame	data/chars/weapons/knife03.png
-	frame	data/chars/weapons/knife02.png
-	frame	data/chars/weapons/knife01.png
-	frame	data/chars/weapons/knife00.png
-	frame	data/chars/weapons/knife08.png
+    landframe 9
+    loop    1 1 9
+    delay    2
+    offset    25 27
+    sound    data/sounds/Clash.wav
+    frame    data/chars/weapons/knife07.png
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/weapons/knife07.png
+    frame    data/chars/weapons/knife06.png
+    frame    data/chars/weapons/knife05.png
+    frame    data/chars/weapons/knife04.png
+    frame    data/chars/weapons/knife03.png
+    frame    data/chars/weapons/knife02.png
+    frame    data/chars/weapons/knife01.png
+    frame    data/chars/weapons/knife00.png
+    frame    data/chars/weapons/knife08.png

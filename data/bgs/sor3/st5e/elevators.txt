@@ -1,16 +1,16 @@
-name		St5_ElevatorS #ENEMY ELEVATOR SHADOW UNTIL TOP FLOOR
-type		enemy
-subtype		notgrab
-health		1
-shadow		0
-nomove		1 1
-nodrop		2
-stealth		2
-script		data/scripts/updateentity/st5_elevatorS.c
+name        St5_ElevatorS #ENEMY ELEVATOR SHADOW UNTIL TOP FLOOR
+type        enemy
+subtype        notgrab
+health        1
+shadow        0
+nomove        1 1
+nodrop        2
+stealth        2
+script        data/scripts/updateentity/st5_elevatorS.c
 
 anim idle
-	loop	0
-	delay	1
-	offset	1 743
-	platform 1 963 0 0 480 480 10000 10000
-	frame	data/bgs/sor3/st5e/_empty.png
+    loop    0
+    delay    1
+    offset    1 743
+    platform 1 963 0 0 480 480 10000 10000
+    frame    data/bgs/sor3/st5e/_empty.png

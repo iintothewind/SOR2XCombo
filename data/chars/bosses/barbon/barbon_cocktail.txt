@@ -1,40 +1,40 @@
-name			Barbon_Cocktail
-type			npc
-hostile			player
-health			1
-shadow			0
-setlayer		-1
-offscreenkill	1000
-stealth			2
-animationscript	data/scripts/animation/default.c
+name            Barbon_Cocktail
+type            npc
+hostile            player
+health            1
+shadow            0
+setlayer        -1
+offscreenkill    1000
+stealth            2
+animationscript    data/scripts/animation/default.c
 
 anim spawn #MACKING COCKTAIL
-	loop	0
-	delay	1
-	offset	143 248
-	@cmd aniChange 0 "ANI_FOLLOW1"
-	frame	data/chars/bosses/barbon/cocktail00.png
-	
+    loop    0
+    delay    1
+    offset    143 248
+    @cmd aniChange 0 "ANI_FOLLOW1"
+    frame    data/chars/bosses/barbon/cocktail00.png
+    
 anim follow1 #MACKING COCKTAIL LOOP
-	loop	1
-	delay	16
-	offset	143 248
-	@cmd cancel -999 100 -999 999 -999 999 "ANI_FOLLOW2"
-	frame	data/chars/bosses/barbon/cocktail00.png
-	frame	data/chars/bosses/barbon/cocktail01.png
-	frame	data/chars/bosses/barbon/cocktail02.png
-	
+    loop    1
+    delay    16
+    offset    143 248
+    @cmd cancel -999 100 -999 999 -999 999 "ANI_FOLLOW2"
+    frame    data/chars/bosses/barbon/cocktail00.png
+    frame    data/chars/bosses/barbon/cocktail01.png
+    frame    data/chars/bosses/barbon/cocktail02.png
+    
 anim follow2 #GOING OUTSIDE
-	loop	1 4 8
-	delay	16
-	offset	143 248
-	@cmd flip
-	@cmd dasher 1 0 0
-	frame	data/chars/bosses/barbon/outside00.png
-	frame	data/chars/bosses/barbon/outside01.png
-	frame	data/chars/bosses/barbon/outside02.png
-	frame	data/chars/bosses/barbon/outside01.png
-	frame	data/chars/bosses/barbon/outside00.png
-	frame	data/chars/bosses/barbon/outside01.png
-	frame	data/chars/bosses/barbon/outside02.png
-	frame	data/chars/bosses/barbon/outside01.png
+    loop    1 4 8
+    delay    16
+    offset    143 248
+    @cmd flip
+    @cmd dasher 1 0 0
+    frame    data/chars/bosses/barbon/outside00.png
+    frame    data/chars/bosses/barbon/outside01.png
+    frame    data/chars/bosses/barbon/outside02.png
+    frame    data/chars/bosses/barbon/outside01.png
+    frame    data/chars/bosses/barbon/outside00.png
+    frame    data/chars/bosses/barbon/outside01.png
+    frame    data/chars/bosses/barbon/outside02.png
+    frame    data/chars/bosses/barbon/outside01.png

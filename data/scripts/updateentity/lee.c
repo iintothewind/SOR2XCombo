@@ -3,23 +3,23 @@
 void main()
 {
   airGrabCheck2();
-	afterEffect();
-	blinkEffect();
-	otg();
-	versusDamage();
-	runMove();
-	energyRecover();
-	dojoEnergyRecover();
-	adjustLives();
-	freeGrabbed();
+    afterEffect();
+    blinkEffect();
+    otg();
+    versusDamage();
+    runMove();
+    energyRecover();
+    dojoEnergyRecover();
+    adjustLives();
+    freeGrabbed();
 }
 
 void afterEffect()
 {//Check defined conditions before use "after image" effect
-	void self 	= getlocalvar("self");
-	void type 	= getentityproperty(self, "type");
-	void ani 	= getentityproperty(self, "animationID");
-	void model 	= getentityproperty(self, "model");
+    void self     = getlocalvar("self");
+    void type     = getentityproperty(self, "type");
+    void ani     = getentityproperty(self, "animationID");
+    void model     = getentityproperty(self, "model");
 
   if(model == "Lee") {
     if(ani == openborconstant("ANI_SPECIAL2")) {
@@ -27,7 +27,7 @@ void afterEffect()
     }
   }
 
-	if(ani == openborconstant("ANI_FORWARDJUMP")
+    if(ani == openborconstant("ANI_FORWARDJUMP")
   || ani == openborconstant("ANI_RUNJUMP")
   || ani == openborconstant("ANI_RISEATTACK")
   || ani == openborconstant("ANI_RUNATTACK")
@@ -50,5 +50,5 @@ void afterEffect()
   || ani == openborconstant("ANI_FREESPECIAL6")
   || ani == openborconstant("ANI_DODGE")){
     afterImage("LeeS", 1);
-	}
+    }
 }

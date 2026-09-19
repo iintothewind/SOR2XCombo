@@ -1,596 +1,596 @@
 ##MAIN
-name				R._Bear
-type				player
-secret				0 1
+name                R._Bear
+type                player
+secret                0 1
 
 ##LIFE
-health				400
+health                400
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		36 #36/33/30
-grabfinish 			0 #PLAYER=0/ENEMY=1
+grabdistance         36 #36/33/30
+grabfinish             0 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-3 #-1/-2/-3
-height				85
+antigravity            -3 #-1/-2/-3
+height                85
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				none none none none R._Bear
-modelflag			3
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bounce				1
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                none none none none R._Bear
+modelflag            3
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bounce                1
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-ondrawscript		data/scripts/ondraw/bear.c
-onspawnscript		data/scripts/onspawn/player.c
-onfallscript		data/scripts/onfall/default.c
-animationscript	 	data/scripts/animation/default.c
-keyscript			data/scripts/key/bear.c
-takedamagescript	data/scripts/takedamage/armor.c
-script				data/scripts/updateentity/bear.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+ondrawscript        data/scripts/ondraw/bear.c
+onspawnscript        data/scripts/onspawn/player.c
+onfallscript        data/scripts/onfall/default.c
+animationscript         data/scripts/animation/default.c
+keyscript            data/scripts/key/bear.c
+takedamagescript    data/scripts/takedamage/armor.c
+script                data/scripts/updateentity/bear.c
 
 ##ICONS
-icon				data/chars/bosses/bear/icon.png 1
-ondeathscript		data/scripts/ondeath/default.c
+icon                data/chars/bosses/bear/icon.png 1
+ondeathscript        data/scripts/ondeath/default.c
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
+diesound            data/voices/BossDie1.wav
 
 ##REMAPS
-remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter1.png
-remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter2.png
-remap				data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter3.png
+remap                data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter1.png
+remap                data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter2.png
+remap                data/chars/bosses/bear/idle00.png data/chars/bosses/bear/alter3.png
 
 ##COMMANDS
-com 				d f a2		freespecial		#RAGE
-com 				a2 + s		freespecial		#RAGE
-com 				a2 s		freespecial		#RAGE
+com                 d f a2        freespecial        #RAGE
+com                 a2 + s        freespecial        #RAGE
+com                 a2 s        freespecial        #RAGE
 
 ##LOADS
-load				BearS
+load                BearS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim waiting
-	fshadow 0
-	loop	1
-	delay	16
-	offset	117 200
-	frame	data/chars/bosses/bear/idle00.png
-	frame	data/chars/bosses/bear/idle01.png
-	frame	data/chars/bosses/bear/idle02.png
+    fshadow 0
+    loop    1
+    delay    16
+    offset    117 200
+    frame    data/chars/bosses/bear/idle00.png
+    frame    data/chars/bosses/bear/idle01.png
+    frame    data/chars/bosses/bear/idle02.png
 
 anim select
-	fshadow 0
-	loop	0
-	delay	100000
-	offset	117 200
-	frame	data/chars/bosses/bear/idle00.png
-		delay	24
-	frame	data/chars/bosses/bear/idle00.png
-	frame	data/chars/bosses/bear/idle00.png
+    fshadow 0
+    loop    0
+    delay    100000
+    offset    117 200
+    frame    data/chars/bosses/bear/idle00.png
+        delay    24
+    frame    data/chars/bosses/bear/idle00.png
+    frame    data/chars/bosses/bear/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	117 200
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/idle00.png
-	frame	data/chars/bosses/bear/idle01.png
-	frame	data/chars/bosses/bear/idle02.png
+    loop    1
+    delay    16
+    offset    117 200
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/idle00.png
+    frame    data/chars/bosses/bear/idle01.png
+    frame    data/chars/bosses/bear/idle02.png
 
 anim chargeattack
-	chargetime 9999
-	loop	0
-	delay	1
-	offset	117 200
-	frame	data/chars/bosses/bear/idle00.png
+    chargetime 9999
+    loop    0
+    delay    1
+    offset    117 200
+    frame    data/chars/bosses/bear/idle00.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	117 200
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/walk00.png
-	frame	data/chars/bosses/bear/walk01.png
-	frame	data/chars/bosses/bear/walk02.png
-	frame	data/chars/bosses/bear/walk03.png
+    loop    1
+    delay    16
+    offset    117 200
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/walk00.png
+    frame    data/chars/bosses/bear/walk01.png
+    frame    data/chars/bosses/bear/walk02.png
+    frame    data/chars/bosses/bear/walk03.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	loop	1
-	delay	12
-	offset	117 200
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/walk00.png
-	frame	data/chars/bosses/bear/walk01.png
-	frame	data/chars/bosses/bear/walk02.png
-	frame	data/chars/bosses/bear/walk03.png
+    @cmd lockAni "runType" "off"
+    loop    1
+    delay    12
+    offset    117 200
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/walk00.png
+    frame    data/chars/bosses/bear/walk01.png
+    frame    data/chars/bosses/bear/walk02.png
+    frame    data/chars/bosses/bear/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	117 200
-	frame	data/chars/bosses/bear/get00.png
+    loop    0
+    delay    16
+    offset    117 200
+    frame    data/chars/bosses/bear/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	117 200
-	bbox 	100 112 32 90
-	frame	data/chars/bosses/bear/grab00.png
+    loop    0
+    delay    16
+    offset    117 200
+    bbox     100 112 32 90
+    frame    data/chars/bosses/bear/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	117 200
-	bbox 	100 129 35 73
-	frame	data/chars/bosses/bear/grabbed00.png
+    loop    0
+    delay    8
+    offset    117 200
+    bbox     100 129 35 73
+    frame    data/chars/bosses/bear/grabbed00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	117 200
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/bosses/bear/jump00.png
+    loop    0
+    delay    30
+    offset    117 200
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/bosses/bear/jump00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	117 200
-	bbox 	100 141 43 61
-	frame	data/chars/bosses/bear/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    117 200
+    bbox     100 141 43 61
+    frame    data/chars/bosses/bear/jumpdelay00.png
 
 anim jump
-	loop	0
-	delay	16
-	offset	117 200
-	bbox 	98 107 36 79
-	sound	data/sounds/Jumping2.wav
-	frame	data/chars/bosses/bear/jump00.png
+    loop    0
+    delay    16
+    offset    117 200
+    bbox     98 107 36 79
+    sound    data/sounds/Jumping2.wav
+    frame    data/chars/bosses/bear/jump00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	117 200
-	bbox 	98 107 36 79
-	@cmd jump 1
-	frame	data/chars/bosses/bear/jump00.png
+    loop    0
+    delay    30
+    offset    117 200
+    bbox     98 107 36 79
+    @cmd jump 1
+    frame    data/chars/bosses/bear/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	117 200
-	bbox 	100 141 43 61
-	sound	data/sounds/Jumpland2.wav
-	frame	data/chars/bosses/bear/jumpland00.png
+    loop    0
+    delay    12
+    offset    117 200
+    bbox     100 141 43 61
+    sound    data/sounds/Jumpland2.wav
+    frame    data/chars/bosses/bear/jumpland00.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	117 200
-	bbox 	98 111 41 91
-	frame	data/chars/bosses/bear/pain00.png
-	frame	data/chars/bosses/bear/pain01.png
-	frame	data/chars/bosses/bear/pain00.png
-	frame	data/chars/bosses/bear/pain01.png
-	frame	data/chars/bosses/bear/pain00.png
-	frame	data/chars/bosses/bear/pain01.png
-	frame	data/chars/bosses/bear/pain00.png
-	frame	data/chars/bosses/bear/pain01.png
+    loop    0
+    delay    4
+    offset    117 200
+    bbox     98 111 41 91
+    frame    data/chars/bosses/bear/pain00.png
+    frame    data/chars/bosses/bear/pain01.png
+    frame    data/chars/bosses/bear/pain00.png
+    frame    data/chars/bosses/bear/pain01.png
+    frame    data/chars/bosses/bear/pain00.png
+    frame    data/chars/bosses/bear/pain01.png
+    frame    data/chars/bosses/bear/pain00.png
+    frame    data/chars/bosses/bear/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	117 200
-	bbox 	106 129 36 72
-	frame	data/chars/bosses/bear/pain200.png
-	frame	data/chars/bosses/bear/pain201.png
-	frame	data/chars/bosses/bear/pain200.png
-	frame	data/chars/bosses/bear/pain201.png
-	frame	data/chars/bosses/bear/pain200.png
-	frame	data/chars/bosses/bear/pain201.png
-	frame	data/chars/bosses/bear/pain200.png
-	frame	data/chars/bosses/bear/pain201.png
+    loop    0
+    delay    4
+    offset    117 200
+    bbox     106 129 36 72
+    frame    data/chars/bosses/bear/pain200.png
+    frame    data/chars/bosses/bear/pain201.png
+    frame    data/chars/bosses/bear/pain200.png
+    frame    data/chars/bosses/bear/pain201.png
+    frame    data/chars/bosses/bear/pain200.png
+    frame    data/chars/bosses/bear/pain201.png
+    frame    data/chars/bosses/bear/pain200.png
+    frame    data/chars/bosses/bear/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	117 200
-	bbox 	87 135 62 49
-	frame	data/chars/bosses/bear/fall00.png
-		delay	8
-	bbox 	83 168 95 33
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/bear/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    117 200
+    bbox     87 135 62 49
+    frame    data/chars/bosses/bear/fall00.png
+        delay    8
+    bbox     83 168 95 33
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/bear/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	117 200
-	bbox 	87 135 62 49
-	frame	data/chars/bosses/bear/fall00.png
-		delay	8
-	bbox 	83 168 95 33
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/bear/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    117 200
+    bbox     87 135 62 49
+    frame    data/chars/bosses/bear/fall00.png
+        delay    8
+    bbox     83 168 95 33
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/bear/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	117 200
-	bbox 	87 135 62 49
-	frame	data/chars/bosses/bear/fall00.png
-		delay	8
-	bbox 	83 168 95 33
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/bear/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    117 200
+    bbox     87 135 62 49
+    frame    data/chars/bosses/bear/fall00.png
+        delay    8
+    bbox     83 168 95 33
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/bear/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	117 200
-	frame	data/chars/bosses/bear/fall600.png
-	frame	data/chars/bosses/bear/fall601.png
-	frame	data/chars/bosses/bear/fall602.png
-	frame	data/chars/bosses/bear/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/bear/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    117 200
+    frame    data/chars/bosses/bear/fall600.png
+    frame    data/chars/bosses/bear/fall601.png
+    frame    data/chars/bosses/bear/fall602.png
+    frame    data/chars/bosses/bear/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/bear/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	117 200
-	frame	data/chars/bosses/bear/fall700.png
-	frame	data/chars/bosses/bear/fall701.png
-	frame	data/chars/bosses/bear/fall702.png
-	frame	data/chars/bosses/bear/fall703.png
-	frame	data/chars/bosses/bear/fall704.png
-	frame	data/chars/bosses/bear/fall705.png
+    loop    0
+    delay    1000
+    offset    117 200
+    frame    data/chars/bosses/bear/fall700.png
+    frame    data/chars/bosses/bear/fall701.png
+    frame    data/chars/bosses/bear/fall702.png
+    frame    data/chars/bosses/bear/fall703.png
+    frame    data/chars/bosses/bear/fall704.png
+    frame    data/chars/bosses/bear/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	117 200
-	bbox 	87 135 62 49
-	hitfx	data/sounds/MediumKick.wav
-	attack 87 135 62 49 4 1 0 0 20 12
-	frame	data/chars/bosses/bear/fall00.png
-		delay	999
-	frame	data/chars/bosses/bear/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	83 168 95 33
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/bear/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    117 200
+    bbox     87 135 62 49
+    hitfx    data/sounds/MediumKick.wav
+    attack 87 135 62 49 4 1 0 0 20 12
+    frame    data/chars/bosses/bear/fall00.png
+        delay    999
+    frame    data/chars/bosses/bear/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     83 168 95 33
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/bear/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	117 200
-	bbox 	101 135 36 66
-	hitfx	data/sounds/MediumKick.wav
-	attack 101 135 36 66 4 1 0 0 20 12
-	frame	data/chars/bosses/bear/fall900.png
-		delay	999
-	frame	data/chars/bosses/bear/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	83 168 95 33
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/bear/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    117 200
+    bbox     101 135 36 66
+    hitfx    data/sounds/MediumKick.wav
+    attack 101 135 36 66 4 1 0 0 20 12
+    frame    data/chars/bosses/bear/fall900.png
+        delay    999
+    frame    data/chars/bosses/bear/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     83 168 95 33
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/bear/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	117 200
-	frame	data/chars/bosses/bear/fall01.png
-	frame	data/chars/bosses/bear/fall01.png
-	frame	data/chars/bosses/bear/fall01.png
+    loop    0
+    delay    16
+    offset    117 200
+    frame    data/chars/bosses/bear/fall01.png
+    frame    data/chars/bosses/bear/fall01.png
+    frame    data/chars/bosses/bear/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	117 200
-	frame	data/chars/bosses/bear/rise00.png
-	frame	data/chars/bosses/bear/rise01.png
-	frame	data/chars/bosses/bear/rise00.png
-	frame	data/chars/bosses/bear/rise02.png
+    loop    0
+    delay    16
+    offset    117 200
+    frame    data/chars/bosses/bear/rise00.png
+    frame    data/chars/bosses/bear/rise01.png
+    frame    data/chars/bosses/bear/rise00.png
+    frame    data/chars/bosses/bear/rise02.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	117 200
-	bbox 	98 117 34 85
-	hitfx	data/sounds/WeakPunch.wav
-	sound	data/sounds/WeakAttack.wav
-	attack 119 130 60 20 2 0 0 0 15 12
-	frame	data/chars/bosses/bear/a100.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/bear/a101.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    117 200
+    bbox     98 117 34 85
+    hitfx    data/sounds/WeakPunch.wav
+    sound    data/sounds/WeakAttack.wav
+    attack 119 130 60 20 2 0 0 0 15 12
+    frame    data/chars/bosses/bear/a100.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/bear/a101.png
 
 anim attack2
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	117 200
-	bbox 	115 117 34 85
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/StrongAttack.wav
-	frame	data/chars/bosses/bear/a200.png
-	attack 139 135 91 21 8 1 0 0 15 12
-	bbox 133 131 42 71
-	frame	data/chars/bosses/bear/a201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	115 117 34 85
-	frame	data/chars/bosses/bear/a202.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    117 200
+    bbox     115 117 34 85
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/StrongAttack.wav
+    frame    data/chars/bosses/bear/a200.png
+    attack 139 135 91 21 8 1 0 0 15 12
+    bbox 133 131 42 71
+    frame    data/chars/bosses/bear/a201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     115 117 34 85
+    frame    data/chars/bosses/bear/a202.png
 
 anim attackboth #BACK ATTACK
-	fastattack 1
-	jugglecost 1
-	forcedirection 1
-	otg 1
-	loop	0
-	delay	12
-	offset	117 200
-	bbox 	91 117 31 85
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/StrongAttack.wav
-	frame	data/chars/bosses/bear/aboth00.png
-	attack 71 131 42 32 4 1 0 0 30 12
-	dropv 3.2 1 0
-	frame	data/chars/bosses/bear/aboth01.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 1
+    otg 1
+    loop    0
+    delay    12
+    offset    117 200
+    bbox     91 117 31 85
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/StrongAttack.wav
+    frame    data/chars/bosses/bear/aboth00.png
+    attack 71 131 42 32 4 1 0 0 30 12
+    dropv 3.2 1 0
+    frame    data/chars/bosses/bear/aboth01.png
 
 
 anim runattack #BLITZ
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	hitflash Impact
-	loop	0
-	delay	6
-	offset	138 192
-	hitfx	data/sounds/Blow.wav
-	sound	data/voices/Bear2.wav
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/idle00.png
-	frame	data/chars/bosses/bear/idle01.png
-	@cmd dasher 3.5 0 0
-	bbox 	112 120 33 80
-	frame	data/chars/bosses/bear/block00.png
-	@cmd dasher 2.4 0 0
-	bbox 	119 117 34 85
-	frame	data/chars/bosses/bear/grabatk200.png
-	@cmd dasher 1.2 0 0
-	attack8 146 142 45 23 15 1 0 0 30 12
-	dropv 3 5 0
-	bbox 	126 123 33 79
-	frame	data/chars/bosses/bear/grabatk201.png
-	delay 8
-	@cmd dasher 0.8 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/grabatk202.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    hitflash Impact
+    loop    0
+    delay    6
+    offset    138 192
+    hitfx    data/sounds/Blow.wav
+    sound    data/voices/Bear2.wav
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/idle00.png
+    frame    data/chars/bosses/bear/idle01.png
+    @cmd dasher 3.5 0 0
+    bbox     112 120 33 80
+    frame    data/chars/bosses/bear/block00.png
+    @cmd dasher 2.4 0 0
+    bbox     119 117 34 85
+    frame    data/chars/bosses/bear/grabatk200.png
+    @cmd dasher 1.2 0 0
+    attack8 146 142 45 23 15 1 0 0 30 12
+    dropv 3 5 0
+    bbox     126 123 33 79
+    frame    data/chars/bosses/bear/grabatk201.png
+    delay 8
+    @cmd dasher 0.8 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/grabatk202.png
 
 
 
 anim grabattack #HEADBUTT
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	117 200
-	bbox 	105 119 32 83
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/voices/Bear1.wav
-	frame	data/chars/bosses/bear/grabatk00.png
-	attack 120 122 35 35 4 0 0 0 20 12
-	bbox 	105 121 32 81
-	frame	data/chars/bosses/bear/grabatk01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/bear/grabatk01.png
-		delay	8
-	attack 125 128 37 31 4 0 0 0 20 12
-	bbox 	110 124 38 78
-	frame	data/chars/bosses/bear/grabatk02.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    117 200
+    bbox     105 119 32 83
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/voices/Bear1.wav
+    frame    data/chars/bosses/bear/grabatk00.png
+    attack 120 122 35 35 4 0 0 0 20 12
+    bbox     105 121 32 81
+    frame    data/chars/bosses/bear/grabatk01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/bear/grabatk01.png
+        delay    8
+    attack 125 128 37 31 4 0 0 0 20 12
+    bbox     110 124 38 78
+    frame    data/chars/bosses/bear/grabatk02.png
 
 anim grabattack2 #DOWN PUNCH
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	117 200
-	bbox 	119 117 34 85
-	hitfx	data/sounds/Blow.wav
-	sound	data/sounds/StrongAttack.wav
-	frame	data/chars/bosses/bear/grabatk200.png
-	attack 146 142 45 23 8 1 0 0 30 12
-	dropv 3.2 1 0
-	bbox 	126 123 33 79
-	frame	data/chars/bosses/bear/grabatk201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/grabatk202.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    117 200
+    bbox     119 117 34 85
+    hitfx    data/sounds/Blow.wav
+    sound    data/sounds/StrongAttack.wav
+    frame    data/chars/bosses/bear/grabatk200.png
+    attack 146 142 45 23 8 1 0 0 30 12
+    dropv 3.2 1 0
+    bbox     126 123 33 79
+    frame    data/chars/bosses/bear/grabatk201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/grabatk202.png
 
 anim jumpattack
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	18
-	offset	117 200
-	bbox 	98 107 36 79
-	hitfx	data/sounds/Blow.wav
-	sound	data/sounds/StrongAttack.wav
-	attack 98 118 60 55 4 1 0 0 20 12
-	dropv 3.8 1 0
-	bbox 	98 118 36 55
-	frame	data/chars/bosses/bear/jumpatk00.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    18
+    offset    117 200
+    bbox     98 107 36 79
+    hitfx    data/sounds/Blow.wav
+    sound    data/sounds/StrongAttack.wav
+    attack 98 118 60 55 4 1 0 0 20 12
+    dropv 3.8 1 0
+    bbox     98 118 36 55
+    frame    data/chars/bosses/bear/jumpatk00.png
 
 anim special #UPPER
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 30 1 6
-	@cmd healStart
-	loop	0
-	delay	8
-	offset	117 200
-	hitfx	data/sounds/SpecialAttack6.wav
-	sound	data/sounds/SpecialAttack.wav
-	frame	data/chars/bosses/bear/upper00.png
-	attack 126 127 49 35 8 0 0 0 20 12
-	frame	data/chars/bosses/bear/upper01.png
-		delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/bear/upper01.png
-		delay	8
-	@cmd leaper 0 3 0
-	attack 126 86 49 64 12 1 0 0 20 12
-	frame	data/chars/bosses/bear/upper02.png
-		delay	24
-	attack 107 71 39 79 12 1 0 0 20 12
-	frame	data/chars/bosses/bear/upper03.png
-		delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	100 103 34 87
-	frame	data/chars/bosses/bear/upper03.png
-	@cmd landFrame
-		delay	12
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	100 141 43 61
-	sound	data/sounds/Jumpland2.wav
-	frame	data/chars/bosses/bear/upper04.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 30 1 6
+    @cmd healStart
+    loop    0
+    delay    8
+    offset    117 200
+    hitfx    data/sounds/SpecialAttack6.wav
+    sound    data/sounds/SpecialAttack.wav
+    frame    data/chars/bosses/bear/upper00.png
+    attack 126 127 49 35 8 0 0 0 20 12
+    frame    data/chars/bosses/bear/upper01.png
+        delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/bear/upper01.png
+        delay    8
+    @cmd leaper 0 3 0
+    attack 126 86 49 64 12 1 0 0 20 12
+    frame    data/chars/bosses/bear/upper02.png
+        delay    24
+    attack 107 71 39 79 12 1 0 0 20 12
+    frame    data/chars/bosses/bear/upper03.png
+        delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     100 103 34 87
+    frame    data/chars/bosses/bear/upper03.png
+    @cmd landFrame
+        delay    12
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     100 141 43 61
+    sound    data/sounds/Jumpland2.wav
+    frame    data/chars/bosses/bear/upper04.png
 
 anim special2 #SLIDE PUNCH
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 30 1 6
-	@cmd healStart
-	loop	0
-	delay	18
-	offset	117 200
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/bear/slide00.png
-		delay	8
-	@cmd dasher 2.5 0 0
-	@cmd keyMove 0 2.5
-	attack 143 126 55 24 8 0 0 0 10 12
-	frame	data/chars/bosses/bear/slide01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	hitfx	data/sounds/SpecialAttack6.wav
-	frame	data/chars/bosses/bear/slide01.png
-		delay	18
-	@cmd dasher 0 0 0
-	attack 143 106 55 44 16 1 0 0 20 12
-	bbox 	121 117 35 85
-	frame	data/chars/bosses/bear/slide02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	98 117 34 85
-	frame	data/chars/bosses/bear/slide03.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 30 1 6
+    @cmd healStart
+    loop    0
+    delay    18
+    offset    117 200
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/bear/slide00.png
+        delay    8
+    @cmd dasher 2.5 0 0
+    @cmd keyMove 0 2.5
+    attack 143 126 55 24 8 0 0 0 10 12
+    frame    data/chars/bosses/bear/slide01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    hitfx    data/sounds/SpecialAttack6.wav
+    frame    data/chars/bosses/bear/slide01.png
+        delay    18
+    @cmd dasher 0 0 0
+    attack 143 106 55 44 16 1 0 0 20 12
+    bbox     121 117 35 85
+    frame    data/chars/bosses/bear/slide02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     98 117 34 85
+    frame    data/chars/bosses/bear/slide03.png
 
 anim freespecial #RAGE
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	energycost 60 1 6
-	loop	0
-	delay	19
-	offset	117 200
-	hitfx	data/sounds/Blow.wav
-	sound	data/voices/Bear1.wav
-	@cmd spawnBind "Rage" 0 0 -1
-	frame	data/chars/bosses/bear/upper00.png
-		delay	4
-	attack 126 127 49 35 12 0 0 0 40 12
-	seal 1 1
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/bear/upper01.png
-		delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	hitflash Impact
-	frame	data/chars/bosses/bear/upper01.png
-		delay	4
-	@cmd leaper 5 4 0
-	attack6 126 86 49 64 48 4 0 0 20 12
-	seal 1 1
-	dropv 8 2 0
-	frame	data/chars/bosses/bear/upper02.png
-		delay	24
-	attack6 107 71 39 79 48 4 0 0 20 12
-	seal 1 1
-	dropv 8 2 0
-	frame	data/chars/bosses/bear/upper03.png
-		delay	2
-	@cmd leaper 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/bear/upper03.png
-	@cmd landFrame
-		delay	12
-	sound	data/sounds/Jumpland2.wav
-	frame	data/chars/bosses/bear/upper04.png
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    energycost 60 1 6
+    loop    0
+    delay    19
+    offset    117 200
+    hitfx    data/sounds/Blow.wav
+    sound    data/voices/Bear1.wav
+    @cmd spawnBind "Rage" 0 0 -1
+    frame    data/chars/bosses/bear/upper00.png
+        delay    4
+    attack 126 127 49 35 12 0 0 0 40 12
+    seal 1 1
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/bear/upper01.png
+        delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    hitflash Impact
+    frame    data/chars/bosses/bear/upper01.png
+        delay    4
+    @cmd leaper 5 4 0
+    attack6 126 86 49 64 48 4 0 0 20 12
+    seal 1 1
+    dropv 8 2 0
+    frame    data/chars/bosses/bear/upper02.png
+        delay    24
+    attack6 107 71 39 79 48 4 0 0 20 12
+    seal 1 1
+    dropv 8 2 0
+    frame    data/chars/bosses/bear/upper03.png
+        delay    2
+    @cmd leaper 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/bear/upper03.png
+    @cmd landFrame
+        delay    12
+    sound    data/sounds/Jumpland2.wav
+    frame    data/chars/bosses/bear/upper04.png

@@ -1,17 +1,17 @@
-loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
-panel		data/bgs/dojo/chinatown/panel.png
-background	data/bgs/dojo/chinatown/star_sky.png 0.8
-bglayer		data/bgs/dojo/chinatown/bglayer.png 0.5 0.5 0 -1 0 9999 9999 9999 1 0 0 0 0 0 1
+loadingbg        data/bgs/loading1.png             1 -81 248 480 999 999 0
+panel        data/bgs/dojo/chinatown/panel.png
+background    data/bgs/dojo/chinatown/star_sky.png 0.8
+bglayer        data/bgs/dojo/chinatown/bglayer.png 0.5 0.5 0 -1 0 9999 9999 9999 1 0 0 0 0 0 1
 
-direction	both
-order			a
+direction    both
+order            a
 scrollspeed 0.5
 
-type			0
-settime		0
-notime		1
-noslow		1
-stagenumber		3
+type            0
+settime        0
+notime        1
+noslow        1
+stagenumber        3
 
 spawn1  50 20 0
 spawn2  40 30 0
@@ -19,39 +19,39 @@ spawn3  60 40 0
 spawn4  70 50 0
 
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowcolor   64_64_64
 at             0
 
 shadowalpha 2
-at			0
+at            0
 
 load  chinaTownBg1 3
 load  chinaTownBg2 3
-load	Fight 3
+load    Fight 3
 
-spawn		Fight 1
-flip		1
-coords		-120 0 0
-at			0
+spawn        Fight 1
+flip        1
+coords        -120 0 0
+at            0
 
 
-spawn	chinaTownBg1 1
-flip	1
-coords	352 118
-at	0
+spawn    chinaTownBg1 1
+flip    1
+coords    352 118
+at    0
 
-spawn	chinaTownBg2 1
-flip	1
-coords	544 86
-at	0
+spawn    chinaTownBg2 1
+flip    1
+coords    544 86
+at    0
 
 
 spawn   DojoX
 coords  550 180 0
-boss		1
-at	    0
+boss        1
+at        0
 
 

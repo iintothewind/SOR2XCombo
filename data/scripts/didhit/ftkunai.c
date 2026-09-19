@@ -4,39 +4,39 @@
 
 void main()
 {
-	customGrab();
+    customGrab();
 }
 
 void customGrab()
 {//Perform custom grabs in defined animations to avoid "followcond 2" problems
-	void self 		= getlocalvar("self");
+    void self         = getlocalvar("self");
 
-	if(!selfAlive()){return;}
+    if(!selfAlive()){return;}
 
-	void parent	 = getentityproperty(self, "parent");
+    void parent     = getentityproperty(self, "parent");
 
   if(parent != NULL()) {
-    void parentType  	= getentityproperty(parent,"type");
+    void parentType      = getentityproperty(parent,"type");
     if(parentType == openborconstant("TYPE_PLAYER")){
-      void parentName		= getentityproperty(parent, "defaultname");
+      void parentName        = getentityproperty(parent, "defaultname");
       void parentAnim  = getentityproperty(parent,"animationID");
       void parentGrabbed = getentityvar(parent,"grabbed");
       void parentGrabbing = getentityproperty(parent, "grabbing");
-      int parentHeight	 = getentityproperty(parent,"y");
-      int parentBase	 = getentityproperty(parent,"base");
-      int parentFall	= getentityproperty(parent,"aiflag","falling");
-      int parentGrabValid 	= getentityproperty(parent,"animvalid", openborconstant("ANI_FOLLOW5"));
+      int parentHeight     = getentityproperty(parent,"y");
+      int parentBase     = getentityproperty(parent,"base");
+      int parentFall    = getentityproperty(parent,"aiflag","falling");
+      int parentGrabValid     = getentityproperty(parent,"animvalid", openborconstant("ANI_FOLLOW5"));
 
-      void target 	= getlocalvar("damagetaker");
-      void tAniID 	= getentityproperty(target,"animationID");
-      int targetInvincible	= getentityproperty(target, "invincible");
-      void iType  	= getentityproperty(target,"type");
-      void iSubType	= getentityproperty(target,"subtype");
-      int tX 		= getentityproperty(target,"x");
-      int tY 		= getentityproperty(target,"y");
-      int tZ 		= getentityproperty(target,"z");
-      int tBase 	= getentityproperty(target,"base");
-      int tDir		 = getentityproperty(target,"direction");
+      void target     = getlocalvar("damagetaker");
+      void tAniID     = getentityproperty(target,"animationID");
+      int targetInvincible    = getentityproperty(target, "invincible");
+      void iType      = getentityproperty(target,"type");
+      void iSubType    = getentityproperty(target,"subtype");
+      int tX         = getentityproperty(target,"x");
+      int tY         = getentityproperty(target,"y");
+      int tZ         = getentityproperty(target,"z");
+      int tBase     = getentityproperty(target,"base");
+      int tDir         = getentityproperty(target,"direction");
       int xOffset = 30;
       if(tDir == 0){xOffset = -xOffset;}
 

@@ -1,29 +1,29 @@
-name			Flash
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            Flash
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	73 54
-	frame	data/chars/misc/flash/flash00.png
-	frame	data/chars/misc/flash/flash01.png
-	frame	data/chars/misc/flash/flash02.png
-	frame	data/chars/misc/flash/flash03.png
-	frame	data/chars/misc/flash/flash04.png
-	frame	data/chars/misc/flash/flash05.png
-	frame	data/chars/misc/flash/flash06.png
-	frame	data/chars/misc/flash/flash07.png
-	frame	data/chars/misc/flash/flash08.png
-	frame	data/chars/misc/flash/flash09.png
-	frame	data/chars/misc/flash/flash10.png
-	frame	data/chars/misc/flash/flash11.png
-	@cmd suicide
-	frame	data/chars/misc/flash/empty.png
+    loop    0
+    delay    2
+    offset    73 54
+    frame    data/chars/misc/flash/flash00.png
+    frame    data/chars/misc/flash/flash01.png
+    frame    data/chars/misc/flash/flash02.png
+    frame    data/chars/misc/flash/flash03.png
+    frame    data/chars/misc/flash/flash04.png
+    frame    data/chars/misc/flash/flash05.png
+    frame    data/chars/misc/flash/flash06.png
+    frame    data/chars/misc/flash/flash07.png
+    frame    data/chars/misc/flash/flash08.png
+    frame    data/chars/misc/flash/flash09.png
+    frame    data/chars/misc/flash/flash10.png
+    frame    data/chars/misc/flash/flash11.png
+    @cmd suicide
+    frame    data/chars/misc/flash/empty.png

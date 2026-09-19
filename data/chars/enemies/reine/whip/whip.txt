@@ -1,14 +1,14 @@
-name			Reine_Whip
-type			none
-gfxshadow		1 1
-antigravity		100
-animationscript	data/scripts/animation/default.c
-script			data/scripts/updateentity/reine_whip.c
+name            Reine_Whip
+type            none
+gfxshadow        1 1
+antigravity        100
+animationscript    data/scripts/animation/default.c
+script            data/scripts/updateentity/reine_whip.c
 
 anim idle
-	loop	0
-	delay	60
-	offset	23 33
-	frame	data/chars/enemies/reine/whip/whip00.png
-	@cmd suicide
-	frame	data/chars/enemies/reine/whip/whip00.png
+    loop    0
+    delay    60
+    offset    23 33
+    frame    data/chars/enemies/reine/whip/whip00.png
+    @cmd suicide
+    frame    data/chars/enemies/reine/whip/whip00.png

@@ -1,84 +1,84 @@
-name		 		Zan_Orb2 #WEAPON ATTACK
-type				none
-health				1
-nolife				1
-lifespan			2
-offscreenkill		50
-remove				1
-nomove				1 1
-shadow				0
-stealth				2
-antigravity			100
-candamage			enemy obstacle
-didhitscript		data/scripts/didhit/zan_orb.c
-ondoattackscript	data/scripts/ondoattack/default.c
-script				data/scripts/updateentity/zan_orb.c
-animationscript		data/scripts/animation/default.c
-ondrawscript		data/scripts/ondraw/zan_orb.c
+name                 Zan_Orb2 #WEAPON ATTACK
+type                none
+health                1
+nolife                1
+lifespan            2
+offscreenkill        50
+remove                1
+nomove                1 1
+shadow                0
+stealth                2
+antigravity            100
+candamage            enemy obstacle
+didhitscript        data/scripts/didhit/zan_orb.c
+ondoattackscript    data/scripts/ondoattack/default.c
+script                data/scripts/updateentity/zan_orb.c
+animationscript        data/scripts/animation/default.c
+ondrawscript        data/scripts/ondraw/zan_orb.c
 
 anim idle
-	followanim 1
-	followcond 1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	1
-	delay	4
-	offset	25 26
-	hitfx	data/sounds/HighPunch.wav
-	burn 14 14 23 23 35 1 1 0 10 36
-	frame	data/chars/heroes/zan/orb/orb00.png
-	frame	data/chars/heroes/zan/orb/orb01.png
+    followanim 1
+    followcond 1
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    1
+    delay    4
+    offset    25 26
+    hitfx    data/sounds/HighPunch.wav
+    burn 14 14 23 23 35 1 1 0 10 36
+    frame    data/chars/heroes/zan/orb/orb00.png
+    frame    data/chars/heroes/zan/orb/orb01.png
 
 anim follow1
-	fastattack 0
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	hitflash Burn
-	loop	0
-	delay	2
-	offset	240 136
-	@cmd spawnBind "Destruction" 0 0 1
-	frame	data/chars/enemies/fog/grenade/bempty.png
-	burn 160 90 160 150 35 2 1 0 10 36
-	dropv 3 3 0
-	frame	data/chars/enemies/fog/grenade/bempty.png
-	@cmd suicide
-	frame	data/chars/enemies/fog/grenade/bempty.png
+    fastattack 0
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    hitflash Burn
+    loop    0
+    delay    2
+    offset    240 136
+    @cmd spawnBind "Destruction" 0 0 1
+    frame    data/chars/enemies/fog/grenade/bempty.png
+    burn 160 90 160 150 35 2 1 0 10 36
+    dropv 3 3 0
+    frame    data/chars/enemies/fog/grenade/bempty.png
+    @cmd suicide
+    frame    data/chars/enemies/fog/grenade/bempty.png
 
 anim fall #EXPLOSION
-	fastattack 0
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	hitflash Burn
-	loop	0
-	delay	48
-	offset	240 136
-	@cmd spawnBind "Destruction" 0 0 1
-	burn 160 90 160 150 35 2 1 0 10 36
-	dropv 3 3 0
-	frame	data/chars/enemies/fog/grenade/bempty.png
-	delay	2
-	@cmd suicide
-	frame	data/chars/enemies/fog/grenade/bempty.png
+    fastattack 0
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    hitflash Burn
+    loop    0
+    delay    48
+    offset    240 136
+    @cmd spawnBind "Destruction" 0 0 1
+    burn 160 90 160 150 35 2 1 0 10 36
+    dropv 3 3 0
+    frame    data/chars/enemies/fog/grenade/bempty.png
+    delay    2
+    @cmd suicide
+    frame    data/chars/enemies/fog/grenade/bempty.png
 
 
 anim death #EXPLOSION
-	fastattack 0
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	hitflash Burn
-	loop	0
-	delay	48
-	offset	240 136
-	@cmd spawnBind "Destruction" 0 0 1
-	burn 160 90 160 150 35 2 1 0 10 36
-	dropv 3 3 0
-	frame	data/chars/enemies/fog/grenade/bempty.png
-	delay	2
-	@cmd suicide
-	frame	data/chars/enemies/fog/grenade/bempty.png
+    fastattack 0
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    hitflash Burn
+    loop    0
+    delay    48
+    offset    240 136
+    @cmd spawnBind "Destruction" 0 0 1
+    burn 160 90 160 150 35 2 1 0 10 36
+    dropv 3 3 0
+    frame    data/chars/enemies/fog/grenade/bempty.png
+    delay    2
+    @cmd suicide
+    frame    data/chars/enemies/fog/grenade/bempty.png

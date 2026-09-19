@@ -1,41 +1,41 @@
-name			St6_Exit
-type			item
-subtype			touch
-candamage		player
-mp				1
-subject_to_wall	0
-subject_to_minz	0
-shadow			0
-nolife			1
-setlayer		-250
-offscreenkill	5000
-didhitscript	data/scripts/didhit/rooms.c
-animationscript	data/scripts/animation/default.c
-script			data/scripts/updateentity/rooms.c
+name            St6_Exit
+type            item
+subtype            touch
+candamage        player
+mp                1
+subject_to_wall    0
+subject_to_minz    0
+shadow            0
+nolife            1
+setlayer        -250
+offscreenkill    5000
+didhitscript    data/scripts/didhit/rooms.c
+animationscript    data/scripts/animation/default.c
+script            data/scripts/updateentity/rooms.c
 
 anim spawn
-	loop	0
-	delay	64
-	offset	50 100
-	frame	data/bgs/sor3/st6a/exit00.png
+    loop    0
+    delay    64
+    offset    50 100
+    frame    data/bgs/sor3/st6a/exit00.png
 
 anim idle #CLOSE
-	loop	0
-	delay	8
-	offset	50 100
-	frame	data/bgs/sor3/st6a/exit00.png
+    loop    0
+    delay    8
+    offset    50 100
+    frame    data/bgs/sor3/st6a/exit00.png
 
 anim follow1 #OPEN
-	loop	0
-	delay	8
-	offset	50 100
-	frame	data/bgs/sor3/st6a/exit00.png
-		delay	120
-	@cmd dasher 0.5 0 0
-	sound data/sounds/sorx_machine.wav
-	frame	data/bgs/sor3/st6a/exit00.png
-		delay	-1000
-	@cmd dasher 0 0 0
-	attack10 -35 3 49 97 0 0 0 1 0 15
-	noreflect 1
-	frame	data/bgs/sor3/st6a/exit00.png
+    loop    0
+    delay    8
+    offset    50 100
+    frame    data/bgs/sor3/st6a/exit00.png
+        delay    120
+    @cmd dasher 0.5 0 0
+    sound data/sounds/sorx_machine.wav
+    frame    data/bgs/sor3/st6a/exit00.png
+        delay    -1000
+    @cmd dasher 0 0 0
+    attack10 -35 3 49 97 0 0 0 1 0 15
+    noreflect 1
+    frame    data/bgs/sor3/st6a/exit00.png

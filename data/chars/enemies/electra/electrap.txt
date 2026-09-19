@@ -1,422 +1,422 @@
 ##MAIN
-name				Electra
-type				player
-secret				0 1
+name                Electra
+type                player
+secret                0 1
 
 ##LIFE
-health				400
+health                400
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				79
+antigravity            -1 #-1/-2/-3
+height                79
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 2
-weapons				none none none none Electra
-modelflag			3
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 2
+weapons                none none none none Electra
+modelflag            3
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-ondrawscript		data/scripts/ondraw/default.c
-onspawnscript		data/scripts/onspawn/player.c
-animationscript	 	data/scripts/animation/default.c
-keyscript			data/scripts/key/electra.c
-takedamagescript	data/scripts/takedamage/default.c
-script				data/scripts/updateentity/default.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+ondrawscript        data/scripts/ondraw/default.c
+onspawnscript        data/scripts/onspawn/player.c
+animationscript         data/scripts/animation/default.c
+keyscript            data/scripts/key/electra.c
+takedamagescript    data/scripts/takedamage/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/electra/icon.png 1
+icon                data/chars/enemies/electra/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/Die3.wav
+diesound            data/voices/Die3.wav
 
 ##REMAPS
-remap				data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter1.png
-remap				data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter2.png
-remap				data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter3.png
-remap				data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter4.png
+remap                data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter1.png
+remap                data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter2.png
+remap                data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter3.png
+remap                data/chars/enemies/electra/idle00.png data/chars/enemies/electra/alter4.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim waiting
-	fshadow 0
-	loop	1
-	delay	16
-	offset	130 190
-	frame	data/chars/enemies/electra/idle00.png
+    fshadow 0
+    loop    1
+    delay    16
+    offset    130 190
+    frame    data/chars/enemies/electra/idle00.png
 
 anim select
-	fshadow 0
-	loop	0
-	delay	100000
-	offset	130 190
-	frame	data/chars/enemies/electra/idle00.png
-		delay	24
-	frame	data/chars/enemies/electra/idle00.png
-	frame	data/chars/enemies/electra/idle00.png
+    fshadow 0
+    loop    0
+    delay    100000
+    offset    130 190
+    frame    data/chars/enemies/electra/idle00.png
+        delay    24
+    frame    data/chars/enemies/electra/idle00.png
+    frame    data/chars/enemies/electra/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	130 190
-	bbox 	120 115 17 77
-	frame	data/chars/enemies/electra/idle00.png
-	frame	data/chars/enemies/electra/idle00.png
-	frame	data/chars/enemies/electra/idle00.png
-	frame	data/chars/enemies/electra/idle00.png
+    loop    1
+    delay    16
+    offset    130 190
+    bbox     120 115 17 77
+    frame    data/chars/enemies/electra/idle00.png
+    frame    data/chars/enemies/electra/idle00.png
+    frame    data/chars/enemies/electra/idle00.png
+    frame    data/chars/enemies/electra/idle00.png
 
 anim chargeattack
-	chargetime 9999
-	loop	0
-	delay	1
-	offset	130 190
-	frame	data/chars/enemies/electra/idle00.png
+    chargetime 9999
+    loop    0
+    delay    1
+    offset    130 190
+    frame    data/chars/enemies/electra/idle00.png
 
 anim walk
-	loop	1
-	delay	18
-	offset	130 190
-	bbox 	120 115 17 77
-	frame	data/chars/enemies/electra/walk00.png
-	frame	data/chars/enemies/electra/walk01.png
-	frame	data/chars/enemies/electra/walk02.png
-	frame	data/chars/enemies/electra/walk03.png
+    loop    1
+    delay    18
+    offset    130 190
+    bbox     120 115 17 77
+    frame    data/chars/enemies/electra/walk00.png
+    frame    data/chars/enemies/electra/walk01.png
+    frame    data/chars/enemies/electra/walk02.png
+    frame    data/chars/enemies/electra/walk03.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	loop	1
-	delay	14
-	offset	130 190
-	bbox 	120 115 17 77
-	frame	data/chars/enemies/electra/walk00.png
-	frame	data/chars/enemies/electra/walk01.png
-	frame	data/chars/enemies/electra/walk02.png
-	frame	data/chars/enemies/electra/walk03.png
+    @cmd lockAni "runType" "off"
+    loop    1
+    delay    14
+    offset    130 190
+    bbox     120 115 17 77
+    frame    data/chars/enemies/electra/walk00.png
+    frame    data/chars/enemies/electra/walk01.png
+    frame    data/chars/enemies/electra/walk02.png
+    frame    data/chars/enemies/electra/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	130 190
-	frame	data/chars/enemies/electra/get00.png
+    loop    0
+    delay    16
+    offset    130 190
+    frame    data/chars/enemies/electra/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	130 190
-	bbox 	123 120 20 72
-	frame	data/chars/enemies/electra/grabbed00.png
+    loop    0
+    delay    8
+    offset    130 190
+    bbox     123 120 20 72
+    frame    data/chars/enemies/electra/grabbed00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	130 190
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/electra/jump00.png
+    loop    0
+    delay    30
+    offset    130 190
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/electra/jump00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	130 190
-	bbox 	125 129 15 63
-	frame	data/chars/enemies/electra/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    130 190
+    bbox     125 129 15 63
+    frame    data/chars/enemies/electra/jumpdelay00.png
 
 anim jump
-	loop	0
-	delay	30
-	offset	130 190
-	bbox 	120 112 17 63
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/electra/jump00.png
+    loop    0
+    delay    30
+    offset    130 190
+    bbox     120 112 17 63
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/electra/jump00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	130 190
-	bbox 	120 112 17 63
-	@cmd jump 1
-	frame	data/chars/enemies/electra/jump00.png
+    loop    0
+    delay    30
+    offset    130 190
+    bbox     120 112 17 63
+    @cmd jump 1
+    frame    data/chars/enemies/electra/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	130 190
-	bbox 	125 129 15 63
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/electra/jumpland00.png
+    loop    0
+    delay    12
+    offset    130 190
+    bbox     125 129 15 63
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/electra/jumpland00.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	130 190
-	bbox 	118 122 20 70
-	frame	data/chars/enemies/electra/pain00.png
-	frame	data/chars/enemies/electra/pain01.png
-	frame	data/chars/enemies/electra/pain00.png
-	frame	data/chars/enemies/electra/pain01.png
-	frame	data/chars/enemies/electra/pain00.png
-	frame	data/chars/enemies/electra/pain01.png
-	frame	data/chars/enemies/electra/pain00.png
-	frame	data/chars/enemies/electra/pain01.png
-	frame	data/chars/enemies/electra/pain00.png
-	frame	data/chars/enemies/electra/pain01.png
-	frame	data/chars/enemies/electra/pain00.png
-	frame	data/chars/enemies/electra/pain01.png
+    loop    0
+    delay    4
+    offset    130 190
+    bbox     118 122 20 70
+    frame    data/chars/enemies/electra/pain00.png
+    frame    data/chars/enemies/electra/pain01.png
+    frame    data/chars/enemies/electra/pain00.png
+    frame    data/chars/enemies/electra/pain01.png
+    frame    data/chars/enemies/electra/pain00.png
+    frame    data/chars/enemies/electra/pain01.png
+    frame    data/chars/enemies/electra/pain00.png
+    frame    data/chars/enemies/electra/pain01.png
+    frame    data/chars/enemies/electra/pain00.png
+    frame    data/chars/enemies/electra/pain01.png
+    frame    data/chars/enemies/electra/pain00.png
+    frame    data/chars/enemies/electra/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	130 190
-	bbox 	119 121 21 70
-	frame	data/chars/enemies/electra/pain200.png
-	frame	data/chars/enemies/electra/pain201.png
-	frame	data/chars/enemies/electra/pain200.png
-	frame	data/chars/enemies/electra/pain201.png
-	frame	data/chars/enemies/electra/pain200.png
-	frame	data/chars/enemies/electra/pain201.png
-	frame	data/chars/enemies/electra/pain200.png
-	frame	data/chars/enemies/electra/pain201.png
-	frame	data/chars/enemies/electra/pain200.png
-	frame	data/chars/enemies/electra/pain201.png
-	frame	data/chars/enemies/electra/pain200.png
-	frame	data/chars/enemies/electra/pain201.png
+    loop    0
+    delay    4
+    offset    130 190
+    bbox     119 121 21 70
+    frame    data/chars/enemies/electra/pain200.png
+    frame    data/chars/enemies/electra/pain201.png
+    frame    data/chars/enemies/electra/pain200.png
+    frame    data/chars/enemies/electra/pain201.png
+    frame    data/chars/enemies/electra/pain200.png
+    frame    data/chars/enemies/electra/pain201.png
+    frame    data/chars/enemies/electra/pain200.png
+    frame    data/chars/enemies/electra/pain201.png
+    frame    data/chars/enemies/electra/pain200.png
+    frame    data/chars/enemies/electra/pain201.png
+    frame    data/chars/enemies/electra/pain200.png
+    frame    data/chars/enemies/electra/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	130 190
-	bbox 	109 120 26 46
-	frame	data/chars/enemies/electra/fall00.png
-		delay	8
-	bbox 	91 172 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/electra/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    130 190
+    bbox     109 120 26 46
+    frame    data/chars/enemies/electra/fall00.png
+        delay    8
+    bbox     91 172 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/electra/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	130 190
-	bbox 	109 120 26 46
-	frame	data/chars/enemies/electra/fall00.png
-		delay	8
-	bbox 	91 172 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/electra/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    130 190
+    bbox     109 120 26 46
+    frame    data/chars/enemies/electra/fall00.png
+        delay    8
+    bbox     91 172 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/electra/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	130 190
-	bbox 	109 120 26 46
-	frame	data/chars/enemies/electra/fall00.png
-		delay	8
-	bbox 	91 172 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/electra/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    130 190
+    bbox     109 120 26 46
+    frame    data/chars/enemies/electra/fall00.png
+        delay    8
+    bbox     91 172 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/electra/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	130 190
-	frame	data/chars/enemies/electra/fall600.png
-	frame	data/chars/enemies/electra/fall601.png
-	frame	data/chars/enemies/electra/fall602.png
-	frame	data/chars/enemies/electra/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/electra/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    130 190
+    frame    data/chars/enemies/electra/fall600.png
+    frame    data/chars/enemies/electra/fall601.png
+    frame    data/chars/enemies/electra/fall602.png
+    frame    data/chars/enemies/electra/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/electra/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/electra/fall700.png
-	frame	data/chars/enemies/electra/fall701.png
-	frame	data/chars/enemies/electra/fall702.png
-	frame	data/chars/enemies/electra/fall703.png
-	frame	data/chars/enemies/electra/fall704.png
-	frame	data/chars/enemies/electra/fall705.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/electra/fall700.png
+    frame    data/chars/enemies/electra/fall701.png
+    frame    data/chars/enemies/electra/fall702.png
+    frame    data/chars/enemies/electra/fall703.png
+    frame    data/chars/enemies/electra/fall704.png
+    frame    data/chars/enemies/electra/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	130 190
-	bbox 	109 120 26 46
-	hitfx	data/sounds/MediumKick.wav
-	attack 109 120 26 46 4 1 0 0 20 12
-	frame	data/chars/enemies/electra/fall00.png
-		delay	999
-	frame	data/chars/enemies/electra/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	91 172 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/electra/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    130 190
+    bbox     109 120 26 46
+    hitfx    data/sounds/MediumKick.wav
+    attack 109 120 26 46 4 1 0 0 20 12
+    frame    data/chars/enemies/electra/fall00.png
+        delay    999
+    frame    data/chars/enemies/electra/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     91 172 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/electra/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	130 190
-	bbox 	112 144 22 46
-	hitfx	data/sounds/MediumKick.wav
-	attack 112 144 22 46 4 1 0 0 20 12
-	frame	data/chars/enemies/electra/fall900.png
-		delay	999
-	frame	data/chars/enemies/electra/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	91 172 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/electra/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    130 190
+    bbox     112 144 22 46
+    hitfx    data/sounds/MediumKick.wav
+    attack 112 144 22 46 4 1 0 0 20 12
+    frame    data/chars/enemies/electra/fall900.png
+        delay    999
+    frame    data/chars/enemies/electra/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     91 172 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/electra/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	130 190
-	frame	data/chars/enemies/electra/fall01.png
-	frame	data/chars/enemies/electra/fall01.png
-	frame	data/chars/enemies/electra/fall01.png
+    loop    0
+    delay    16
+    offset    130 190
+    frame    data/chars/enemies/electra/fall01.png
+    frame    data/chars/enemies/electra/fall01.png
+    frame    data/chars/enemies/electra/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	130 190
-	frame	data/chars/enemies/electra/rise00.png
-	frame	data/chars/enemies/electra/rise01.png
-	frame	data/chars/enemies/electra/rise00.png
-	frame	data/chars/enemies/electra/rise02.png
+    loop    0
+    delay    16
+    offset    130 190
+    frame    data/chars/enemies/electra/rise00.png
+    frame    data/chars/enemies/electra/rise01.png
+    frame    data/chars/enemies/electra/rise00.png
+    frame    data/chars/enemies/electra/rise02.png
 
 anim riseattack
-	loop	0
-	delay	16
-	offset	130 190
-	frame	data/chars/enemies/electra/rise00.png
-	frame	data/chars/enemies/electra/rise01.png
-	frame	data/chars/enemies/electra/rise00.png
-		delay	64
-	frame	data/chars/enemies/electra/rise02.png
-		delay	4
-	frame	data/chars/enemies/electra/rise03.png
+    loop    0
+    delay    16
+    offset    130 190
+    frame    data/chars/enemies/electra/rise00.png
+    frame    data/chars/enemies/electra/rise01.png
+    frame    data/chars/enemies/electra/rise00.png
+        delay    64
+    frame    data/chars/enemies/electra/rise02.png
+        delay    4
+    frame    data/chars/enemies/electra/rise03.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	5
-	offset	130 190
-	bbox 	121 116 17 76
-	hitfx	data/sounds/Whip2.wav
-	sound	data/sounds/Whoosh2.wav
-	frame	data/chars/enemies/electra/a100.png
-	frame	data/chars/enemies/electra/a101.png
-	frame	data/chars/enemies/electra/a102.png
-	frame	data/chars/enemies/electra/a103.png
-	bbox 	130 133 18 59
-	attack 149 109 54 51 8 0 0 0 10 12
-	frame	data/chars/enemies/electra/a104.png
-	attack 149 121 66 39 8 0 0 0 10 12
-	frame	data/chars/enemies/electra/a105.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/electra/a106.png
-	frame	data/chars/enemies/electra/a107.png
-	frame	data/chars/enemies/electra/a108.png
-	frame	data/chars/enemies/electra/a109.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    5
+    offset    130 190
+    bbox     121 116 17 76
+    hitfx    data/sounds/Whip2.wav
+    sound    data/sounds/Whoosh2.wav
+    frame    data/chars/enemies/electra/a100.png
+    frame    data/chars/enemies/electra/a101.png
+    frame    data/chars/enemies/electra/a102.png
+    frame    data/chars/enemies/electra/a103.png
+    bbox     130 133 18 59
+    attack 149 109 54 51 8 0 0 0 10 12
+    frame    data/chars/enemies/electra/a104.png
+    attack 149 121 66 39 8 0 0 0 10 12
+    frame    data/chars/enemies/electra/a105.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/electra/a106.png
+    frame    data/chars/enemies/electra/a107.png
+    frame    data/chars/enemies/electra/a108.png
+    frame    data/chars/enemies/electra/a109.png
 
 anim attack2
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	5
-	offset	130 190
-	bbox 	130 133 18 59
-	hitfx	data/sounds/Whip2.wav
-	sound	data/sounds/Whoosh2.wav
-	frame	data/chars/enemies/electra/a200.png
-	frame	data/chars/enemies/electra/a201.png
-	attack 149 147 78 15 8 0 0 0 10 12
-	frame	data/chars/enemies/electra/a202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	121 116 17 76
-	frame	data/chars/enemies/electra/a203.png
-	frame	data/chars/enemies/electra/a204.png
-	frame	data/chars/enemies/electra/a205.png
-	frame	data/chars/enemies/electra/a206.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    5
+    offset    130 190
+    bbox     130 133 18 59
+    hitfx    data/sounds/Whip2.wav
+    sound    data/sounds/Whoosh2.wav
+    frame    data/chars/enemies/electra/a200.png
+    frame    data/chars/enemies/electra/a201.png
+    attack 149 147 78 15 8 0 0 0 10 12
+    frame    data/chars/enemies/electra/a202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     121 116 17 76
+    frame    data/chars/enemies/electra/a203.png
+    frame    data/chars/enemies/electra/a204.png
+    frame    data/chars/enemies/electra/a205.png
+    frame    data/chars/enemies/electra/a206.png
 
 anim special #FAKE PAIN
-	energycost 40 1 6
-	@cmd healStart
-	loop	0
-	delay	128
-	offset	130 190
-	sound	data/voices/Electra1.wav
-	frame	data/chars/enemies/electra/pain300.png
+    energycost 40 1 6
+    @cmd healStart
+    loop    0
+    delay    128
+    offset    130 190
+    sound    data/voices/Electra1.wav
+    frame    data/chars/enemies/electra/pain300.png
 
 anim special2 #SHOCK
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 40 1 6
-	@cmd healStart
-	loop	0
-	delay	5
-	offset	130 190
-	bbox 	121 116 17 76
-	hitflash Shock
-	hitfx	data/sounds/Whip2.wav
-	sound	data/sounds/Whoosh2.wav
-	frame	data/chars/enemies/electra/a100.png
-	frame	data/chars/enemies/electra/a101.png
-	frame	data/chars/enemies/electra/a102.png
-	bbox 	130 133 18 59
-	frame	data/chars/enemies/electra/shock00.png
-	shock 149 96 59 54 32 3 0 0 10 12
-	frame	data/chars/enemies/electra/shock01.png
-		delay	15
-	shock 149 148 83 21 32 3 0 0 10 12
-	frame	data/chars/enemies/electra/shock02.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 40 1 6
+    @cmd healStart
+    loop    0
+    delay    5
+    offset    130 190
+    bbox     121 116 17 76
+    hitflash Shock
+    hitfx    data/sounds/Whip2.wav
+    sound    data/sounds/Whoosh2.wav
+    frame    data/chars/enemies/electra/a100.png
+    frame    data/chars/enemies/electra/a101.png
+    frame    data/chars/enemies/electra/a102.png
+    bbox     130 133 18 59
+    frame    data/chars/enemies/electra/shock00.png
+    shock 149 96 59 54 32 3 0 0 10 12
+    frame    data/chars/enemies/electra/shock01.png
+        delay    15
+    shock 149 148 83 21 32 3 0 0 10 12
+    frame    data/chars/enemies/electra/shock02.png

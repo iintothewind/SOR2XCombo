@@ -4,14 +4,14 @@
 
 void main()
 {
-	changeLives(2);
+    changeLives(2);
 
-	//USED TO LOCK THE NATIVE ENGINE "RE-FILL" MP FEATURE AT EACH RESPAWN AND LOAD THE LAST SAVED MP VALUE
-	if(getglobalvar("fullEnergy") == "never" || getglobalvar("fullEnergy") == "each_new_stage"){
-		loadMp(2);
-	}
+    //USED TO LOCK THE NATIVE ENGINE "RE-FILL" MP FEATURE AT EACH RESPAWN AND LOAD THE LAST SAVED MP VALUE
+    if(getglobalvar("fullEnergy") == "never" || getglobalvar("fullEnergy") == "each_new_stage"){
+        loadMp(2);
+    }
 
-	if(openborvariant("current_set") == 3){
-		randomMusic();
-	}
+    if(openborvariant("current_set") == 3){
+        randomMusic();
+    }
 }

@@ -1,219 +1,219 @@
 ##MAIN
-name				Arm
-type				enemy
-subtype				notgrab
+name                Arm
+type                enemy
+subtype                notgrab
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##SPEED
-speed				8
-running				12
+speed                8
+running                12
 
 ##MISC
-guardpoints			20
-guardrate			4
-gfxshadow			1 1
-facing				1
-nodrop				2
-death				1
-nodieblink			3
-noatflash			1
-flash				Flash
-aimove				chase
+guardpoints            20
+guardrate            4
+gfxshadow            1 1
+facing                1
+nodrop                2
+death                1
+nodieblink            3
+noatflash            1
+flash                Flash
+aimove                chase
 
 ##SCRIPTS
-ondoattackscript	data/scripts/ondoattack/default.c
-onspawnscript		data/scripts/onspawn/arm.c
-ondrawscript		data/scripts/ondraw/arm.c
-animationscript		data/scripts/animation/default.c
-takedamagescript 	data/scripts/takedamage/arm.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onspawnscript        data/scripts/onspawn/arm.c
+ondrawscript        data/scripts/ondraw/arm.c
+animationscript        data/scripts/animation/default.c
+takedamagescript     data/scripts/takedamage/arm.c
 
 ##ICONS
-icon				data/chars/enemies/arm/icon.png
+icon                data/chars/enemies/arm/icon.png
 
 ##DIESOUND
-diesound			data/voices/Die5.wav
+diesound            data/voices/Die5.wav
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle #CHASE
-	loop	1
-	delay	8
-	offset	100 299
-		seta	120
-	frame	data/chars/enemies/arm/arm00.png
-	frame	data/chars/enemies/arm/arm01.png
-	frame	data/chars/enemies/arm/arm02.png
-	frame	data/chars/enemies/arm/arm03.png
-	frame	data/chars/enemies/arm/arm04.png
-	frame	data/chars/enemies/arm/arm05.png
-	frame	data/chars/enemies/arm/arm06.png
-	frame	data/chars/enemies/arm/arm05.png
-	frame	data/chars/enemies/arm/arm04.png
-	frame	data/chars/enemies/arm/arm03.png
-	frame	data/chars/enemies/arm/arm02.png
-	frame	data/chars/enemies/arm/arm01.png
+    loop    1
+    delay    8
+    offset    100 299
+        seta    120
+    frame    data/chars/enemies/arm/arm00.png
+    frame    data/chars/enemies/arm/arm01.png
+    frame    data/chars/enemies/arm/arm02.png
+    frame    data/chars/enemies/arm/arm03.png
+    frame    data/chars/enemies/arm/arm04.png
+    frame    data/chars/enemies/arm/arm05.png
+    frame    data/chars/enemies/arm/arm06.png
+    frame    data/chars/enemies/arm/arm05.png
+    frame    data/chars/enemies/arm/arm04.png
+    frame    data/chars/enemies/arm/arm03.png
+    frame    data/chars/enemies/arm/arm02.png
+    frame    data/chars/enemies/arm/arm01.png
 
 anim run #CHASE
-	loop	1
-	delay	8
-	offset	100 299
-		seta	120
-	frame	data/chars/enemies/arm/arm00.png
-	frame	data/chars/enemies/arm/arm01.png
-	frame	data/chars/enemies/arm/arm02.png
-	frame	data/chars/enemies/arm/arm03.png
-	frame	data/chars/enemies/arm/arm04.png
-	frame	data/chars/enemies/arm/arm05.png
-	frame	data/chars/enemies/arm/arm06.png
-	frame	data/chars/enemies/arm/arm05.png
-	frame	data/chars/enemies/arm/arm04.png
-	frame	data/chars/enemies/arm/arm03.png
-	frame	data/chars/enemies/arm/arm02.png
-	frame	data/chars/enemies/arm/arm01.png
+    loop    1
+    delay    8
+    offset    100 299
+        seta    120
+    frame    data/chars/enemies/arm/arm00.png
+    frame    data/chars/enemies/arm/arm01.png
+    frame    data/chars/enemies/arm/arm02.png
+    frame    data/chars/enemies/arm/arm03.png
+    frame    data/chars/enemies/arm/arm04.png
+    frame    data/chars/enemies/arm/arm05.png
+    frame    data/chars/enemies/arm/arm06.png
+    frame    data/chars/enemies/arm/arm05.png
+    frame    data/chars/enemies/arm/arm04.png
+    frame    data/chars/enemies/arm/arm03.png
+    frame    data/chars/enemies/arm/arm02.png
+    frame    data/chars/enemies/arm/arm01.png
 
 anim attack1 #CHASE
-	range 0 1
-	loop	0
-	delay	8
-	offset	100 299
-		seta	120
-	frame	data/chars/enemies/arm/arm00.png
-	frame	data/chars/enemies/arm/arm01.png
-	frame	data/chars/enemies/arm/arm02.png
-	frame	data/chars/enemies/arm/arm03.png
-	frame	data/chars/enemies/arm/arm04.png
-	frame	data/chars/enemies/arm/arm05.png
-	frame	data/chars/enemies/arm/arm06.png
-	frame	data/chars/enemies/arm/arm05.png
-	frame	data/chars/enemies/arm/arm04.png
-	frame	data/chars/enemies/arm/arm03.png
-	frame	data/chars/enemies/arm/arm02.png
-	frame	data/chars/enemies/arm/arm01.png
+    range 0 1
+    loop    0
+    delay    8
+    offset    100 299
+        seta    120
+    frame    data/chars/enemies/arm/arm00.png
+    frame    data/chars/enemies/arm/arm01.png
+    frame    data/chars/enemies/arm/arm02.png
+    frame    data/chars/enemies/arm/arm03.png
+    frame    data/chars/enemies/arm/arm04.png
+    frame    data/chars/enemies/arm/arm05.png
+    frame    data/chars/enemies/arm/arm06.png
+    frame    data/chars/enemies/arm/arm05.png
+    frame    data/chars/enemies/arm/arm04.png
+    frame    data/chars/enemies/arm/arm03.png
+    frame    data/chars/enemies/arm/arm02.png
+    frame    data/chars/enemies/arm/arm01.png
 
 anim attack2 #NORMAL ATTACK
-	range 999 999
-	fastattack 1
-	jugglecost 2
-	forcedirection 0
-	otg 1
-	loop	0
-	delay	8
-	offset	100 299
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Alarm.wav
-		seta	120
-	frame	data/chars/enemies/arm/arm06.png
-	frame	data/chars/enemies/arm/arm07.png
-	frame	data/chars/enemies/arm/arm08.png
-	frame	data/chars/enemies/arm/arm09.png
-		delay	2
-		seta	0
-	attack 86 222 30 78 24 1 1 0 0 12
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/enemies/arm/arm09.png
-	frame	data/chars/enemies/arm/arm09.png
-	@cmd landFrame
-		delay	128
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	86 222 30 78
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/enemies/arm/arm09.png
-		delay	64
-	@cmd leaper 0 6 0
-	sound	data/sounds/Door.wav
-	frame	data/chars/enemies/arm/arm06.png
-		seta	120
-	frame	data/chars/enemies/arm/arm06.png
+    range 999 999
+    fastattack 1
+    jugglecost 2
+    forcedirection 0
+    otg 1
+    loop    0
+    delay    8
+    offset    100 299
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Alarm.wav
+        seta    120
+    frame    data/chars/enemies/arm/arm06.png
+    frame    data/chars/enemies/arm/arm07.png
+    frame    data/chars/enemies/arm/arm08.png
+    frame    data/chars/enemies/arm/arm09.png
+        delay    2
+        seta    0
+    attack 86 222 30 78 24 1 1 0 0 12
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/enemies/arm/arm09.png
+    frame    data/chars/enemies/arm/arm09.png
+    @cmd landFrame
+        delay    128
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     86 222 30 78
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/enemies/arm/arm09.png
+        delay    64
+    @cmd leaper 0 6 0
+    sound    data/sounds/Door.wav
+    frame    data/chars/enemies/arm/arm06.png
+        seta    120
+    frame    data/chars/enemies/arm/arm06.png
 
 anim attack3 #SHOCK ATTACK
-	range 999 999
-	fastattack 1
-	jugglecost 2
-	forcedirection 0
-	otg 1
-	hitflash Shock
-	loop	0
-	delay	4
-	offset	100 299
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Alarm.wav
-		seta	120
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-		seta	0
-	shock 86 222 30 68 48 3 1 0 0 12
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	@cmd landFrame 2
-	bbox 	86 222 30 68
-	hitfx	data/sounds/Empty.wav
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	frame	data/chars/enemies/arm/arm10.png
-	frame	data/chars/enemies/arm/arm11.png
-	@cmd looper 14 15
-		delay	64
-	@cmd leaper 0 6 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Door.wav
-	frame	data/chars/enemies/arm/arm06.png
-		seta	120
-	frame	data/chars/enemies/arm/arm06.png
+    range 999 999
+    fastattack 1
+    jugglecost 2
+    forcedirection 0
+    otg 1
+    hitflash Shock
+    loop    0
+    delay    4
+    offset    100 299
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Alarm.wav
+        seta    120
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+        seta    0
+    shock 86 222 30 68 48 3 1 0 0 12
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    @cmd landFrame 2
+    bbox     86 222 30 68
+    hitfx    data/sounds/Empty.wav
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    frame    data/chars/enemies/arm/arm10.png
+    frame    data/chars/enemies/arm/arm11.png
+    @cmd looper 14 15
+        delay    64
+    @cmd leaper 0 6 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Door.wav
+    frame    data/chars/enemies/arm/arm06.png
+        seta    120
+    frame    data/chars/enemies/arm/arm06.png
 
 anim pain
-	loop	0
-	delay	16
-	offset	100 299
-	bbox 	86 222 30 68
-	frame	data/chars/enemies/arm/arm06.png
-		delay	64
-	@cmd leaper 0 6 0
-	sound	data/sounds/Door.wav
-	frame	data/chars/enemies/arm/arm06.png
-		seta	120
-	frame	data/chars/enemies/arm/arm06.png
+    loop    0
+    delay    16
+    offset    100 299
+    bbox     86 222 30 68
+    frame    data/chars/enemies/arm/arm06.png
+        delay    64
+    @cmd leaper 0 6 0
+    sound    data/sounds/Door.wav
+    frame    data/chars/enemies/arm/arm06.png
+        seta    120
+    frame    data/chars/enemies/arm/arm06.png
 
 anim death #EXPLOSION
-	loop	0
-	delay	6
-	offset	100 299
-	@cmd spawnBind "Destruction" 0 55 1
-	@cmd setVar "removeWall" 1
-	frame	data/chars/enemies/arm/arm12.png
-	frame	data/chars/enemies/arm/arm13.png
-	frame	data/chars/enemies/arm/arm14.png
-	frame	data/chars/enemies/arm/arm15.png
-	frame	data/chars/enemies/arm/arm12.png
-	frame	data/chars/enemies/arm/arm13.png
-	frame	data/chars/enemies/arm/arm14.png
-	frame	data/chars/enemies/arm/arm15.png
-	frame	data/chars/enemies/arm/arm12.png
-	frame	data/chars/enemies/arm/arm13.png
-	frame	data/chars/enemies/arm/arm14.png
-	frame	data/chars/enemies/arm/arm15.png
-	frame	data/chars/enemies/arm/arm12.png
-	frame	data/chars/enemies/arm/arm13.png
-	frame	data/chars/enemies/arm/arm14.png
-	frame	data/chars/enemies/arm/arm15.png
-	frame	data/chars/enemies/arm/arm12.png
-	frame	data/chars/enemies/arm/arm13.png
-	frame	data/chars/enemies/arm/arm14.png
-	frame	data/chars/enemies/arm/arm15.png
-	frame	data/chars/enemies/arm/arm12.png
-	frame	data/chars/enemies/arm/arm13.png
-	frame	data/chars/enemies/arm/arm14.png
-	frame	data/chars/enemies/arm/arm15.png
-		delay	128
-	frame	data/chars/enemies/arm/arm12.png
+    loop    0
+    delay    6
+    offset    100 299
+    @cmd spawnBind "Destruction" 0 55 1
+    @cmd setVar "removeWall" 1
+    frame    data/chars/enemies/arm/arm12.png
+    frame    data/chars/enemies/arm/arm13.png
+    frame    data/chars/enemies/arm/arm14.png
+    frame    data/chars/enemies/arm/arm15.png
+    frame    data/chars/enemies/arm/arm12.png
+    frame    data/chars/enemies/arm/arm13.png
+    frame    data/chars/enemies/arm/arm14.png
+    frame    data/chars/enemies/arm/arm15.png
+    frame    data/chars/enemies/arm/arm12.png
+    frame    data/chars/enemies/arm/arm13.png
+    frame    data/chars/enemies/arm/arm14.png
+    frame    data/chars/enemies/arm/arm15.png
+    frame    data/chars/enemies/arm/arm12.png
+    frame    data/chars/enemies/arm/arm13.png
+    frame    data/chars/enemies/arm/arm14.png
+    frame    data/chars/enemies/arm/arm15.png
+    frame    data/chars/enemies/arm/arm12.png
+    frame    data/chars/enemies/arm/arm13.png
+    frame    data/chars/enemies/arm/arm14.png
+    frame    data/chars/enemies/arm/arm15.png
+    frame    data/chars/enemies/arm/arm12.png
+    frame    data/chars/enemies/arm/arm13.png
+    frame    data/chars/enemies/arm/arm14.png
+    frame    data/chars/enemies/arm/arm15.png
+        delay    128
+    frame    data/chars/enemies/arm/arm12.png

@@ -1,47 +1,47 @@
-name			St8_Cannon
-type			none
-candamage		player enemy npc obstacle
-nolife			1
-nomove			1 1
-shadow			0
-animationscript	data/scripts/animation/default.c
+name            St8_Cannon
+type            none
+candamage        player enemy npc obstacle
+nolife            1
+nomove            1 1
+shadow            0
+animationscript    data/scripts/animation/default.c
 
-load			St8_Laser
+load            St8_Laser
 
 anim spawn #WAIT SPAWN
-	loop	0
-	delay	12
-	offset	1 160
-	frame	data/bgs/sor3/st8c/cannon00.png
-	@cmd aniChange 0 "ANI_FOLLOW1"
-	frame	data/bgs/sor3/st8c/cannon00.png
-	
+    loop    0
+    delay    12
+    offset    1 160
+    frame    data/bgs/sor3/st8c/cannon00.png
+    @cmd aniChange 0 "ANI_FOLLOW1"
+    frame    data/bgs/sor3/st8c/cannon00.png
+    
 anim follow1 #WAIT LOOP
-	loop	1
-	delay	24
-	offset	1 160
-	frame	data/bgs/sor3/st8c/cannon00.png
-	@cmd aniXpos 0 0 "ANI_IDLE"
-	frame	data/bgs/sor3/st8c/cannon00.png
+    loop    1
+    delay    24
+    offset    1 160
+    frame    data/bgs/sor3/st8c/cannon00.png
+    @cmd aniXpos 0 0 "ANI_IDLE"
+    frame    data/bgs/sor3/st8c/cannon00.png
 
 anim idle #LOOP STOP
-	loop	1
-	delay	300
-	offset	1 160
-	frame	data/bgs/sor3/st8c/cannon01.png
-		delay	8
-	sound	data/voices/Attack6.wav
-	frame	data/bgs/sor3/st8c/cannon00.png
-	frame	data/bgs/sor3/st8c/cannon01.png
-	frame	data/bgs/sor3/st8c/cannon00.png
-	frame	data/bgs/sor3/st8c/cannon01.png
-	frame	data/bgs/sor3/st8c/cannon00.png
-	frame	data/bgs/sor3/st8c/cannon01.png
-	frame	data/bgs/sor3/st8c/cannon00.png
-	frame	data/bgs/sor3/st8c/cannon01.png
-	@cmd shoot "St8_Laser" 587 24 1 0 0 3
-	@cmd shoot "St8_Laser" 994 24 1 0 0 3
-	@cmd shoot "St8_Laser" 1243 24 1 0 0 3
-	@cmd shoot "St8_Laser" 1451 63 -40 0 0 3
-	sound	data/sounds/LaserShot.wav
-	frame	data/bgs/sor3/st8c/cannon01.png
+    loop    1
+    delay    300
+    offset    1 160
+    frame    data/bgs/sor3/st8c/cannon01.png
+        delay    8
+    sound    data/voices/Attack6.wav
+    frame    data/bgs/sor3/st8c/cannon00.png
+    frame    data/bgs/sor3/st8c/cannon01.png
+    frame    data/bgs/sor3/st8c/cannon00.png
+    frame    data/bgs/sor3/st8c/cannon01.png
+    frame    data/bgs/sor3/st8c/cannon00.png
+    frame    data/bgs/sor3/st8c/cannon01.png
+    frame    data/bgs/sor3/st8c/cannon00.png
+    frame    data/bgs/sor3/st8c/cannon01.png
+    @cmd shoot "St8_Laser" 587 24 1 0 0 3
+    @cmd shoot "St8_Laser" 994 24 1 0 0 3
+    @cmd shoot "St8_Laser" 1243 24 1 0 0 3
+    @cmd shoot "St8_Laser" 1451 63 -40 0 0 3
+    sound    data/sounds/LaserShot.wav
+    frame    data/bgs/sor3/st8c/cannon01.png

@@ -1,663 +1,663 @@
 ##MAIN
-name				Rocket_Enemy
-type				enemy
+name                Rocket_Enemy
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		30 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         30 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				89
+antigravity            -1 #-1/-2/-3
+height                89
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bounce				1
-aimove				chase #ENEMY ONLY
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bounce                1
+aimove                chase #ENEMY ONLY
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-ondrawscript		data/scripts/ondraw/rocket.c
-onfallscript		data/scripts/onfall/default.c
-onspawnscript		data/scripts/onspawn/rocket.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/rocket.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+ondrawscript        data/scripts/ondraw/rocket.c
+onfallscript        data/scripts/onfall/default.c
+onspawnscript        data/scripts/onspawn/rocket.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/rocket.c
 
 ##ICONS
-icon				data/chars/bosses/rocket/rocket/icon.png 1
+icon                data/chars/bosses/rocket/rocket/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/BossDie2.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/BossDie2.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter1.png
-remap				data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter2.png
-remap				data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter3.png
-remap				data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter1.png
-remap				data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter2.png
+remap                data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter1.png
+remap                data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter2.png
+remap                data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter3.png
+remap                data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter1.png
+remap                data/chars/bosses/rocket/rocket/idle00.png data/chars/bosses/rocket/rocket/alter2.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	153 191
-		seta 	90
-	frame	data/chars/bosses/rocket/rocket/idle00.png
+    loop    0
+    delay    1
+    offset    153 191
+        seta     90
+    frame    data/chars/bosses/rocket/rocket/idle00.png
 
 anim idle #STATIC FLY
-	loop	1
-	delay	4
-	offset	153 191
-	bbox 	140 105 26 88
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	48
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	32
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/idle01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/idle00.png
-	@cmd clearL
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/idle01.png
+    loop    1
+    delay    4
+    offset    153 191
+    bbox     140 105 26 88
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     48
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     32
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/idle01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/idle00.png
+    @cmd clearL
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/idle01.png
 
 anim walk
-	loop	1
-	delay	4
-	offset	153 191
-	bbox 	140 110 30 83
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	48
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	32
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/walk01.png
+    loop    1
+    delay    4
+    offset    153 191
+    bbox     140 110 30 83
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     48
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     32
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/walk01.png
 
 anim backwalk
-	loop	1
-	delay	4
-	offset	153 191
-	bbox 	140 110 30 83
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	48
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	32
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
+    loop    1
+    delay    4
+    offset    153 191
+    bbox     140 110 30 83
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     48
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     32
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
 
 anim run
-	loop	1
-	delay	4
-	offset	153 191
-	bbox 	140 110 30 83
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	48
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	46
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	44
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	42
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	40
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	32
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	34
-	frame	data/chars/bosses/rocket/rocket/walk01.png
-		seta 	36
-	frame	data/chars/bosses/rocket/rocket/walk00.png
-		seta 	38
-	frame	data/chars/bosses/rocket/rocket/walk01.png
+    loop    1
+    delay    4
+    offset    153 191
+    bbox     140 110 30 83
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     48
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     46
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     44
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     42
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     40
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     32
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     34
+    frame    data/chars/bosses/rocket/rocket/walk01.png
+        seta     36
+    frame    data/chars/bosses/rocket/rocket/walk00.png
+        seta     38
+    frame    data/chars/bosses/rocket/rocket/walk01.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	153 191
-	bbox 	140 115 33 78
-	frame	data/chars/bosses/rocket/rocket/grabbed00.png
+    loop    0
+    delay    8
+    offset    153 191
+    bbox     140 115 33 78
+    frame    data/chars/bosses/rocket/rocket/grabbed00.png
 
 anim land
-	bouncefactor 0
-	loop	0
-	delay	4
-	offset	153 191
-	@cmd landSafe
-	@cmd flipRandom
-	@cmd leaper -1.8 1.8 0
-	@cmd deGravity 1
-	frame	data/chars/bosses/rocket/rocket/land00.png
-	frame	data/chars/bosses/rocket/rocket/land01.png
-	frame	data/chars/bosses/rocket/rocket/land00.png
-	frame	data/chars/bosses/rocket/rocket/land01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	@cmd deGravity 0
-		seta	48
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	46
-	@cmd cancel 40 120 -999 0 -12 12 "ANI_ATTACK2"
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta	44
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	42
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta	40
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	38
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta	36
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	34
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
+    bouncefactor 0
+    loop    0
+    delay    4
+    offset    153 191
+    @cmd landSafe
+    @cmd flipRandom
+    @cmd leaper -1.8 1.8 0
+    @cmd deGravity 1
+    frame    data/chars/bosses/rocket/rocket/land00.png
+    frame    data/chars/bosses/rocket/rocket/land01.png
+    frame    data/chars/bosses/rocket/rocket/land00.png
+    frame    data/chars/bosses/rocket/rocket/land01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    @cmd deGravity 0
+        seta    48
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    46
+    @cmd cancel 40 120 -999 0 -12 12 "ANI_ATTACK2"
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta    44
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    42
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta    40
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    38
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta    36
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    34
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	153 191
-	bbox 	133 114 30 79
-	frame	data/chars/bosses/rocket/rocket/pain00.png
-	frame	data/chars/bosses/rocket/rocket/pain01.png
-	frame	data/chars/bosses/rocket/rocket/pain00.png
-	frame	data/chars/bosses/rocket/rocket/pain01.png
-	frame	data/chars/bosses/rocket/rocket/pain00.png
-	frame	data/chars/bosses/rocket/rocket/pain01.png
-	frame	data/chars/bosses/rocket/rocket/pain00.png
-	frame	data/chars/bosses/rocket/rocket/pain01.png
-	@cmd aniChange 1 "ANI_FOLLOW4"
-	frame	data/chars/bosses/rocket/rocket/pain01.png
+    loop    0
+    delay    4
+    offset    153 191
+    bbox     133 114 30 79
+    frame    data/chars/bosses/rocket/rocket/pain00.png
+    frame    data/chars/bosses/rocket/rocket/pain01.png
+    frame    data/chars/bosses/rocket/rocket/pain00.png
+    frame    data/chars/bosses/rocket/rocket/pain01.png
+    frame    data/chars/bosses/rocket/rocket/pain00.png
+    frame    data/chars/bosses/rocket/rocket/pain01.png
+    frame    data/chars/bosses/rocket/rocket/pain00.png
+    frame    data/chars/bosses/rocket/rocket/pain01.png
+    @cmd aniChange 1 "ANI_FOLLOW4"
+    frame    data/chars/bosses/rocket/rocket/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	153 191
-	bbox 	140 122 36 71
-	frame	data/chars/bosses/rocket/rocket/pain200.png
-	frame	data/chars/bosses/rocket/rocket/pain201.png
-	frame	data/chars/bosses/rocket/rocket/pain200.png
-	frame	data/chars/bosses/rocket/rocket/pain201.png
-	frame	data/chars/bosses/rocket/rocket/pain200.png
-	frame	data/chars/bosses/rocket/rocket/pain201.png
-	frame	data/chars/bosses/rocket/rocket/pain200.png
-	frame	data/chars/bosses/rocket/rocket/pain201.png
-	@cmd aniChange 1 "ANI_FOLLOW4"
-	frame	data/chars/bosses/rocket/rocket/pain201.png
+    loop    0
+    delay    4
+    offset    153 191
+    bbox     140 122 36 71
+    frame    data/chars/bosses/rocket/rocket/pain200.png
+    frame    data/chars/bosses/rocket/rocket/pain201.png
+    frame    data/chars/bosses/rocket/rocket/pain200.png
+    frame    data/chars/bosses/rocket/rocket/pain201.png
+    frame    data/chars/bosses/rocket/rocket/pain200.png
+    frame    data/chars/bosses/rocket/rocket/pain201.png
+    frame    data/chars/bosses/rocket/rocket/pain200.png
+    frame    data/chars/bosses/rocket/rocket/pain201.png
+    @cmd aniChange 1 "ANI_FOLLOW4"
+    frame    data/chars/bosses/rocket/rocket/pain201.png
 
 anim fall #NORMAL
-	landframe 2
-	loop	0
-	delay	30
-	offset	153 191
-	bbox 	125 126 45 56
-	@cmd deGravity 0
-	frame	data/chars/bosses/rocket/rocket/fall00.png
-		delay	999
-	@cmd cancelFall 100 "ANI_LAND"
-	frame	data/chars/bosses/rocket/rocket/fall00.png
-		delay	8
-	bbox 	108 165 81 28
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    153 191
+    bbox     125 126 45 56
+    @cmd deGravity 0
+    frame    data/chars/bosses/rocket/rocket/fall00.png
+        delay    999
+    @cmd cancelFall 100 "ANI_LAND"
+    frame    data/chars/bosses/rocket/rocket/fall00.png
+        delay    8
+    bbox     108 165 81 28
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	153 191
-	bbox 	125 126 45 56
-	@cmd deGravity 0
-	frame	data/chars/bosses/rocket/rocket/fall00.png
-		delay	8
-	bbox 	108 165 81 28
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    153 191
+    bbox     125 126 45 56
+    @cmd deGravity 0
+    frame    data/chars/bosses/rocket/rocket/fall00.png
+        delay    8
+    bbox     108 165 81 28
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	153 191
-	bbox 	125 126 45 56
-	@cmd deGravity 0
-	frame	data/chars/bosses/rocket/rocket/fall00.png
-		delay	8
-	bbox 	108 165 81 28
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    153 191
+    bbox     125 126 45 56
+    @cmd deGravity 0
+    frame    data/chars/bosses/rocket/rocket/fall00.png
+        delay    8
+    bbox     108 165 81 28
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	153 191
-	@cmd deGravity 0
-	frame	data/chars/bosses/rocket/rocket/fall600.png
-	frame	data/chars/bosses/rocket/rocket/fall601.png
-	frame	data/chars/bosses/rocket/rocket/fall602.png
-	frame	data/chars/bosses/rocket/rocket/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    153 191
+    @cmd deGravity 0
+    frame    data/chars/bosses/rocket/rocket/fall600.png
+    frame    data/chars/bosses/rocket/rocket/fall601.png
+    frame    data/chars/bosses/rocket/rocket/fall602.png
+    frame    data/chars/bosses/rocket/rocket/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	153 191
-	frame	data/chars/bosses/rocket/rocket/fall700.png
-	frame	data/chars/bosses/rocket/rocket/fall701.png
-	frame	data/chars/bosses/rocket/rocket/fall702.png
-	frame	data/chars/bosses/rocket/rocket/fall703.png
-	frame	data/chars/bosses/rocket/rocket/fall704.png
-	frame	data/chars/bosses/rocket/rocket/fall705.png
+    loop    0
+    delay    1000
+    offset    153 191
+    frame    data/chars/bosses/rocket/rocket/fall700.png
+    frame    data/chars/bosses/rocket/rocket/fall701.png
+    frame    data/chars/bosses/rocket/rocket/fall702.png
+    frame    data/chars/bosses/rocket/rocket/fall703.png
+    frame    data/chars/bosses/rocket/rocket/fall704.png
+    frame    data/chars/bosses/rocket/rocket/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	153 191
-	bbox 	125 126 45 56
-	hitfx	data/sounds/MediumKick.wav
-	@cmd deGravity 0
-	attack 125 126 45 56 4 1 0 0 20 12
-	frame	data/chars/bosses/rocket/rocket/fall00.png
-		delay	999
-	@cmd cancelFall 100 "ANI_LAND"
-	frame	data/chars/bosses/rocket/rocket/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	108 165 81 28
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    153 191
+    bbox     125 126 45 56
+    hitfx    data/sounds/MediumKick.wav
+    @cmd deGravity 0
+    attack 125 126 45 56 4 1 0 0 20 12
+    frame    data/chars/bosses/rocket/rocket/fall00.png
+        delay    999
+    @cmd cancelFall 100 "ANI_LAND"
+    frame    data/chars/bosses/rocket/rocket/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     108 165 81 28
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	153 191
-	bbox 	131 126 36 65
-	hitfx	data/sounds/MediumKick.wav
-	@cmd deGravity 0
-	attack 131 126 36 65 4 1 0 0 20 12
-	frame	data/chars/bosses/rocket/rocket/fall900.png
-		delay	999
-	@cmd cancelFall 100 "ANI_LAND"
-	frame	data/chars/bosses/rocket/rocket/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	108 165 81 28
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    153 191
+    bbox     131 126 36 65
+    hitfx    data/sounds/MediumKick.wav
+    @cmd deGravity 0
+    attack 131 126 36 65 4 1 0 0 20 12
+    frame    data/chars/bosses/rocket/rocket/fall900.png
+        delay    999
+    @cmd cancelFall 100 "ANI_LAND"
+    frame    data/chars/bosses/rocket/rocket/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     108 165 81 28
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	153 191
-	frame	data/chars/bosses/rocket/rocket/fall01.png
-	frame	data/chars/bosses/rocket/rocket/fall01.png
-	frame	data/chars/bosses/rocket/rocket/fall01.png
+    loop    0
+    delay    16
+    offset    153 191
+    frame    data/chars/bosses/rocket/rocket/fall01.png
+    frame    data/chars/bosses/rocket/rocket/fall01.png
+    frame    data/chars/bosses/rocket/rocket/fall01.png
 
 anim rise
-	loop	0
-	delay	12
-	offset	153 191
-	frame	data/chars/bosses/rocket/rocket/rise00.png
-	frame	data/chars/bosses/rocket/rocket/rise01.png
-	frame	data/chars/bosses/rocket/rocket/rise02.png
-		delay	4
-	@cmd leaper 0 1.8 0
-	@cmd deGravity 1
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	@cmd deGravity 0
-		seta	46
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	44
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta	42
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	40
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
+    loop    0
+    delay    12
+    offset    153 191
+    frame    data/chars/bosses/rocket/rocket/rise00.png
+    frame    data/chars/bosses/rocket/rocket/rise01.png
+    frame    data/chars/bosses/rocket/rocket/rise02.png
+        delay    4
+    @cmd leaper 0 1.8 0
+    @cmd deGravity 1
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    @cmd deGravity 0
+        seta    46
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    44
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta    42
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    40
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
 
 anim attack1 #GRAB/LONG RANGE CHARGE
-	range 0 400
-	rangea -999 999
-	rangeb -999 999
-	followanim 1
-	followcond 4
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	landframe 2
-	loop	1 0 2
-	delay	4
-	offset	153 191
-	bbox 	141 105 25 88
-	@cmd leaper 0 -3 0
-	frame	data/chars/bosses/rocket/rocket/a100.png
-	frame	data/chars/bosses/rocket/rocket/a101.png
-	attack 141 105 25 88 0 0 1 1 0 12
-	dropv 0 1 0
-	frame	data/chars/bosses/rocket/rocket/a100.png
-	@cmd aniChange 2 "ANI_FOLLOW2"
-	frame	data/chars/bosses/rocket/rocket/a100.png
+    range 0 400
+    rangea -999 999
+    rangeb -999 999
+    followanim 1
+    followcond 4
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    landframe 2
+    loop    1 0 2
+    delay    4
+    offset    153 191
+    bbox     141 105 25 88
+    @cmd leaper 0 -3 0
+    frame    data/chars/bosses/rocket/rocket/a100.png
+    frame    data/chars/bosses/rocket/rocket/a101.png
+    attack 141 105 25 88 0 0 1 1 0 12
+    dropv 0 1 0
+    frame    data/chars/bosses/rocket/rocket/a100.png
+    @cmd aniChange 2 "ANI_FOLLOW2"
+    frame    data/chars/bosses/rocket/rocket/a100.png
 
 anim follow1 #SLAM
-	attackone 0
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	landframe 5
-	loop	0
-	delay	16
-	offset	153 191
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/Throw.wav
-	@cmd grabStart2
-	@cmd position 0 30 10 -1 -1
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-		delay	4
-	@cmd position 0 30 10 -1 0
-	@cmd leaper 0 1 0
-	sound	data/voices/Attack2.wav
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-	@cmd position 0 30 10 -1 0
-	@cmd leaper 0 3 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/rocket/rocket/grab00.png
-	@cmd position 0 30 10 -1 0
-	@cmd leaper 0 9 0
-	frame	data/chars/bosses/rocket/rocket/grab01.png
-		delay	999
-	@cmd looper 3 11
-	@cmd position 4 20 -1 -1 0
-	@cmd deGravity -90
-	@cmd leaper 0 -90 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-		delay	12
-	attack 139 137 54 56 16 1 0 0 0 12
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	sound	data/sounds/Slam.wav
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-		delay	6
-	@cmd slam 24 2 -3 1.5 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-	@cmd dasher 2 0 0
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-	frame	data/chars/bosses/rocket/rocket/throw00.png
-	@cmd aniChange 1 "ANI_FOLLOW4"
-	frame	data/chars/bosses/rocket/rocket/throw00.png
+    attackone 0
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    landframe 5
+    loop    0
+    delay    16
+    offset    153 191
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/Throw.wav
+    @cmd grabStart2
+    @cmd position 0 30 10 -1 -1
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+        delay    4
+    @cmd position 0 30 10 -1 0
+    @cmd leaper 0 1 0
+    sound    data/voices/Attack2.wav
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+    @cmd position 0 30 10 -1 0
+    @cmd leaper 0 3 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/rocket/rocket/grab00.png
+    @cmd position 0 30 10 -1 0
+    @cmd leaper 0 9 0
+    frame    data/chars/bosses/rocket/rocket/grab01.png
+        delay    999
+    @cmd looper 3 11
+    @cmd position 4 20 -1 -1 0
+    @cmd deGravity -90
+    @cmd leaper 0 -90 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+        delay    12
+    attack 139 137 54 56 16 1 0 0 0 12
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    sound    data/sounds/Slam.wav
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+        delay    6
+    @cmd slam 24 2 -3 1.5 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+    @cmd dasher 2 0 0
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+    frame    data/chars/bosses/rocket/rocket/throw00.png
+    @cmd aniChange 1 "ANI_FOLLOW4"
+    frame    data/chars/bosses/rocket/rocket/throw00.png
 
 anim follow2 #LONG RANGE CHARGE
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	153 191
-	bbox 	140 122 36 71
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/bosses/rocket/rocket/a102.png
-	@cmd target 5.5 5.5
-	frame	data/chars/bosses/rocket/rocket/a103.png
-		delay	6
-	attack 132 134 73 31 8 0 0 0 10 12
-	@cmd dasher 0.5 0 0
-	bbox 116 140 70 25
-	frame	data/chars/bosses/rocket/rocket/a104.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dasher 1.5 0 0
-	frame	data/chars/bosses/rocket/rocket/a105.png
-	attack 132 134 73 31 8 1 0 0 10 12
-	@cmd dasher 2.5 0 0
-	sound	data/sounds/Wind3.wav
-	frame	data/chars/bosses/rocket/rocket/a106.png
-		delay	4
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dashTarget
-	frame	data/chars/bosses/rocket/rocket/a107.png
-	attack 132 134 73 31 8 1 0 0 10 12
-	@cmd dashTarget
-	frame	data/chars/bosses/rocket/rocket/a108.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dashTarget
-	frame	data/chars/bosses/rocket/rocket/a109.png
-	attack 132 134 73 31 8 1 0 0 10 12
-	@cmd dashTarget
-	frame	data/chars/bosses/rocket/rocket/a110.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dashTarget
-	frame	data/chars/bosses/rocket/rocket/a111.png
-	@cmd looper 6 3
-	@cmd aniChange 1 "ANI_FOLLOW4"
-	frame	data/chars/bosses/rocket/rocket/a111.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    153 191
+    bbox     140 122 36 71
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/bosses/rocket/rocket/a102.png
+    @cmd target 5.5 5.5
+    frame    data/chars/bosses/rocket/rocket/a103.png
+        delay    6
+    attack 132 134 73 31 8 0 0 0 10 12
+    @cmd dasher 0.5 0 0
+    bbox 116 140 70 25
+    frame    data/chars/bosses/rocket/rocket/a104.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dasher 1.5 0 0
+    frame    data/chars/bosses/rocket/rocket/a105.png
+    attack 132 134 73 31 8 1 0 0 10 12
+    @cmd dasher 2.5 0 0
+    sound    data/sounds/Wind3.wav
+    frame    data/chars/bosses/rocket/rocket/a106.png
+        delay    4
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dashTarget
+    frame    data/chars/bosses/rocket/rocket/a107.png
+    attack 132 134 73 31 8 1 0 0 10 12
+    @cmd dashTarget
+    frame    data/chars/bosses/rocket/rocket/a108.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dashTarget
+    frame    data/chars/bosses/rocket/rocket/a109.png
+    attack 132 134 73 31 8 1 0 0 10 12
+    @cmd dashTarget
+    frame    data/chars/bosses/rocket/rocket/a110.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dashTarget
+    frame    data/chars/bosses/rocket/rocket/a111.png
+    @cmd looper 6 3
+    @cmd aniChange 1 "ANI_FOLLOW4"
+    frame    data/chars/bosses/rocket/rocket/a111.png
 
 anim attack2 #SHORT RANGE CHARGE
-	range 0 200
-	rangea -999 999
-	rangeb -999 999
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	landframe 18
-	loop	1 14 18
-	delay	4
-	offset	153 191
-	bbox 	140 110 30 83
-	hitfx	data/sounds/HighKick.wav
-	@cmd deGravity 1
-	@cmd leaper 0 1.5 0
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-	@cmd deGravity 0
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		delay	4
-	sound	data/sounds/Wind3.wav
-	@cmd leaper 4 -4 0
-	attack 146 152 47 41 16 1 0 0 20 12
-	bbox 	137 126 41 46
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	@cmd leaper 4 0 0
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	@cmd leaper 3 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	@cmd leaper 2 0 0
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	@cmd leaper 1 0 0
-	@cmd cancelRandom -400 400 0 0 0 "ANI_ATTACK1"
-	frame	data/chars/bosses/rocket/rocket/a200.png
-	frame	data/chars/bosses/rocket/rocket/a201.png
-	@cmd aniChange 1 "ANI_FOLLOW4"
-	frame	data/chars/bosses/rocket/rocket/a201.png
+    range 0 200
+    rangea -999 999
+    rangeb -999 999
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    landframe 18
+    loop    1 14 18
+    delay    4
+    offset    153 191
+    bbox     140 110 30 83
+    hitfx    data/sounds/HighKick.wav
+    @cmd deGravity 1
+    @cmd leaper 0 1.5 0
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+    @cmd deGravity 0
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        delay    4
+    sound    data/sounds/Wind3.wav
+    @cmd leaper 4 -4 0
+    attack 146 152 47 41 16 1 0 0 20 12
+    bbox     137 126 41 46
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    @cmd leaper 4 0 0
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    @cmd leaper 3 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    @cmd leaper 2 0 0
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    @cmd leaper 1 0 0
+    @cmd cancelRandom -400 400 0 0 0 "ANI_ATTACK1"
+    frame    data/chars/bosses/rocket/rocket/a200.png
+    frame    data/chars/bosses/rocket/rocket/a201.png
+    @cmd aniChange 1 "ANI_FOLLOW4"
+    frame    data/chars/bosses/rocket/rocket/a201.png
 
 anim follow4 #FLY UP
-	loop	0
-	delay	4
-	offset	153 191
-	bbox 	140 115 33 78
-	@cmd leaper 0 1.8 0
-	@cmd deGravity 1
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	frame	data/chars/bosses/rocket/rocket/rise03.png
-	frame	data/chars/bosses/rocket/rocket/rise04.png
-	@cmd deGravity 0
-		seta	46
-	bbox 	140 110 30 83
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	44
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
-		seta	42
-	frame	data/chars/bosses/rocket/rocket/backwalk00.png
-		seta	40
-	@cmd clearL
-	frame	data/chars/bosses/rocket/rocket/backwalk01.png
+    loop    0
+    delay    4
+    offset    153 191
+    bbox     140 115 33 78
+    @cmd leaper 0 1.8 0
+    @cmd deGravity 1
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    frame    data/chars/bosses/rocket/rocket/rise03.png
+    frame    data/chars/bosses/rocket/rocket/rise04.png
+    @cmd deGravity 0
+        seta    46
+    bbox     140 110 30 83
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    44
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png
+        seta    42
+    frame    data/chars/bosses/rocket/rocket/backwalk00.png
+        seta    40
+    @cmd clearL
+    frame    data/chars/bosses/rocket/rocket/backwalk01.png

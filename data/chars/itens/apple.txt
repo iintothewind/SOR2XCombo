@@ -1,22 +1,22 @@
-name			Apple
-type			item
-health			300
-nolife			1
-facing 			1
-gfxshadow		1 1
-offscreenkill	50
-stealth			1
-didhitscript	data/scripts/didhit/food.c
+name            Apple
+type            item
+health            300
+nolife            1
+facing             1
+gfxshadow        1 1
+offscreenkill    50
+stealth            1
+didhitscript    data/scripts/didhit/food.c
 
 anim idle
-	loop	1
-	delay	200
-	offset	51 61
-	itembox 43 10047 14 16
-	bbox 	43 47 14 16
-	nodrawmethod
-	frame	data/chars/itens/apple00.png
-		delay	6
-	drawmethod tintmode 1
-	drawmethod tintcolor 150_150_150
-	frame	data/chars/itens/apple00.png
+    loop    1
+    delay    200
+    offset    51 61
+    itembox 43 10047 14 16
+    bbox     43 47 14 16
+    nodrawmethod
+    frame    data/chars/itens/apple00.png
+        delay    6
+    drawmethod tintmode 1
+    drawmethod tintcolor 150_150_150
+    frame    data/chars/itens/apple00.png

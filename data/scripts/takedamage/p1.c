@@ -2,13 +2,13 @@
 
 void main()
 {
-	addMp();
-	healStop();
-	customHitflash();
-	hitDmg();
-	comboDmg();
-	koCount();
-	edgeLock();
-	otg();
-	registerOpponent();
+    addMp();
+    healStop();
+    customHitflash();
+    hitDmg();
+    comboDmg();
+    koCount();
+    edgeLock();
+    otg();
+    registerOpponent();
 }

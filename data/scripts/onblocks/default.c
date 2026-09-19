@@ -2,6 +2,6 @@
 
 void main()
 {
-	screenBouncing();
-	edgeUnlock();
+    screenBouncing();
+    edgeUnlock();
 }

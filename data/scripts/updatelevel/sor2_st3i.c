@@ -2,6 +2,6 @@
 
 void main()
 {
-	changeLayer();
-	cycleSprite("bglayer", 0, 3, 60);
+    changeLayer();
+    cycleSprite("bglayer", 0, 3, 60);
 }

@@ -2,8 +2,8 @@
 
 void main()
 {
-	musicPause();
-	screen(1);
-	resetAuraEffect();
-	musicPause();
+    musicPause();
+    screen(1);
+    resetAuraEffect();
+    musicPause();
 }

@@ -1,32 +1,32 @@
-name				Menu
-type				obstacle
-subject_to_wall		0
-health				1
-nolife				1
-score				2000
-gfxshadow			1 1
-noatflash			1
-flash				Flash
-ondeathscript		data/scripts/ondeath/item.c
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/obstacles.c
+name                Menu
+type                obstacle
+subject_to_wall        0
+health                1
+nolife                1
+score                2000
+gfxshadow            1 1
+noatflash            1
+flash                Flash
+ondeathscript        data/scripts/ondeath/item.c
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/obstacles.c
 
-diesound			data/sounds/Wood.wav
+diesound            data/sounds/Wood.wav
 
 anim idle
-	loop	1
-	delay	64
-	offset	100 167
-	bbox 	89 99 23 70
-	shadowcoords 102 161
-	platform 79 79 122 122 5 1000
-	@cmd offScreenKill 50 0
-	frame	data/chars/obstacles/menu00.png
-	
+    loop    1
+    delay    64
+    offset    100 167
+    bbox     89 99 23 70
+    shadowcoords 102 161
+    platform 79 79 122 122 5 1000
+    @cmd offScreenKill 50 0
+    frame    data/chars/obstacles/menu00.png
+    
 anim fall
-	loop	0
-	delay	128
-	offset	100 167
-	frame	data/chars/obstacles/menu01.png
-	@cmd suicide
-	frame	data/chars/obstacles/menu01.png
+    loop    0
+    delay    128
+    offset    100 167
+    frame    data/chars/obstacles/menu01.png
+    @cmd suicide
+    frame    data/chars/obstacles/menu01.png

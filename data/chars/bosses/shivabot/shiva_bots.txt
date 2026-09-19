@@ -1,240 +1,240 @@
 ##MAIN
-name				Shiva_BotS
-type				none
+name                Shiva_BotS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
-remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter2.png
-remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter3.png
-remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter4.png
-remap				data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
+remap                data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
+remap                data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter2.png
+remap                data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter3.png
+remap                data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter4.png
+remap                data/chars/bosses/shivabot/idle00.png data/chars/bosses/shivabot/alter1.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 
 anim attack9 #SUPER FINAL CRASH
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash01.png
-	frame	data/chars/bosses/shivabot/finalcrash02.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash04.png
-	frame	data/chars/bosses/shivabot/finalcrash05.png
-	frame	data/chars/bosses/shivabot/finalcrash06.png
-	frame	data/chars/bosses/shivabot/finalcrash07.png
-	frame	data/chars/bosses/shivabot/finalcrash08.png
-	frame	data/chars/bosses/shivabot/finalcrash09.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash01.png
+    frame    data/chars/bosses/shivabot/finalcrash02.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash04.png
+    frame    data/chars/bosses/shivabot/finalcrash05.png
+    frame    data/chars/bosses/shivabot/finalcrash06.png
+    frame    data/chars/bosses/shivabot/finalcrash07.png
+    frame    data/chars/bosses/shivabot/finalcrash08.png
+    frame    data/chars/bosses/shivabot/finalcrash09.png
 
 
 anim riseattack
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/rise00.png
-	frame	data/chars/bosses/shivabot/rise01.png
-	frame	data/chars/bosses/shivabot/rise02.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jumpatk00.png
-	frame	data/chars/bosses/shivabot/jumpatk00.png
-	frame	data/chars/bosses/shivabot/jumpland00.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/rise00.png
+    frame    data/chars/bosses/shivabot/rise01.png
+    frame    data/chars/bosses/shivabot/rise02.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jumpatk00.png
+    frame    data/chars/bosses/shivabot/jumpatk00.png
+    frame    data/chars/bosses/shivabot/jumpland00.png
 
 anim runattack #BLITZ
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shiva/rage00.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/a101.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shiva/rage00.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/a101.png
 
 anim attackboth #final crash
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash01.png
-	frame	data/chars/bosses/shivabot/finalcrash02.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash04.png
-	frame	data/chars/bosses/shivabot/finalcrash05.png
-	frame	data/chars/bosses/shivabot/finalcrash06.png
-	frame	data/chars/bosses/shivabot/finalcrash07.png
-	frame	data/chars/bosses/shivabot/finalcrash08.png
-	frame	data/chars/bosses/shivabot/finalcrash09.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash01.png
+    frame    data/chars/bosses/shivabot/finalcrash02.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash04.png
+    frame    data/chars/bosses/shivabot/finalcrash05.png
+    frame    data/chars/bosses/shivabot/finalcrash06.png
+    frame    data/chars/bosses/shivabot/finalcrash07.png
+    frame    data/chars/bosses/shivabot/finalcrash08.png
+    frame    data/chars/bosses/shivabot/finalcrash09.png
 
 anim freespecial
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/rage00.png
-	frame	data/chars/bosses/shivabot/rage01.png
-	frame	data/chars/bosses/shivabot/rage02.png
-	frame	data/chars/bosses/shivabot/rage03.png
-	frame	data/chars/bosses/shivabot/rage04.png
-	frame	data/chars/bosses/shivabot/rage05.png
-	frame	data/chars/bosses/shivabot/rage06.png
-	frame	data/chars/bosses/shivabot/rage07.png
-	frame	data/chars/bosses/shivabot/rage08.png
-	frame	data/chars/bosses/shivabot/rage09.png
-	frame	data/chars/bosses/shivabot/rage10.png
-	frame	data/chars/bosses/shivabot/rage11.png
-	frame	data/chars/bosses/shivabot/rage12.png
-	frame	data/chars/bosses/shivabot/rage13.png
-	frame	data/chars/bosses/shivabot/rage14.png
-	frame	data/chars/bosses/shivabot/rage15.png
-	frame	data/chars/bosses/shivabot/rage16.png
-	frame	data/chars/bosses/shivabot/rage17.png
-	frame	data/chars/bosses/shivabot/rage18.png
-	frame	data/chars/bosses/shivabot/rage19.png
-	frame	data/chars/bosses/shivabot/rage20.png
-	frame	data/chars/bosses/shivabot/rage21.png
-	frame	data/chars/bosses/shivabot/rage22.png
-	frame	data/chars/bosses/shivabot/rage23.png
-	frame	data/chars/bosses/shivabot/rage24.png
-	frame	data/chars/bosses/shivabot/rage25.png
-	frame	data/chars/bosses/shivabot/rage26.png
-	frame	data/chars/bosses/shivabot/rage27.png
-	frame	data/chars/bosses/shivabot/rage28.png
-	frame	data/chars/bosses/shivabot/rage29.png
-	frame	data/chars/bosses/shivabot/rage30.png
-	frame	data/chars/bosses/shivabot/rage31.png
-	frame	data/chars/bosses/shivabot/rage31.png
-	frame	data/chars/bosses/shivabot/rage32.png
-	frame	data/chars/bosses/shivabot/rage32.png
-	frame	data/chars/bosses/shivabot/rage33.png
-	frame	data/chars/bosses/shivabot/rage33.png
-	frame	data/chars/bosses/shivabot/rage34.png
-	frame	data/chars/bosses/shivabot/rage35.png
-	frame	data/chars/bosses/shivabot/block00.png
-	frame	data/chars/bosses/shivabot/s00.png
-	frame	data/chars/bosses/shivabot/s01.png
-	frame	data/chars/bosses/shivabot/s01.png
-	frame	data/chars/bosses/shivabot/s02.png
-	frame	data/chars/bosses/shivabot/s03.png
-	frame	data/chars/bosses/shivabot/s04.png
-	frame	data/chars/bosses/shivabot/s05.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/rage00.png
+    frame    data/chars/bosses/shivabot/rage01.png
+    frame    data/chars/bosses/shivabot/rage02.png
+    frame    data/chars/bosses/shivabot/rage03.png
+    frame    data/chars/bosses/shivabot/rage04.png
+    frame    data/chars/bosses/shivabot/rage05.png
+    frame    data/chars/bosses/shivabot/rage06.png
+    frame    data/chars/bosses/shivabot/rage07.png
+    frame    data/chars/bosses/shivabot/rage08.png
+    frame    data/chars/bosses/shivabot/rage09.png
+    frame    data/chars/bosses/shivabot/rage10.png
+    frame    data/chars/bosses/shivabot/rage11.png
+    frame    data/chars/bosses/shivabot/rage12.png
+    frame    data/chars/bosses/shivabot/rage13.png
+    frame    data/chars/bosses/shivabot/rage14.png
+    frame    data/chars/bosses/shivabot/rage15.png
+    frame    data/chars/bosses/shivabot/rage16.png
+    frame    data/chars/bosses/shivabot/rage17.png
+    frame    data/chars/bosses/shivabot/rage18.png
+    frame    data/chars/bosses/shivabot/rage19.png
+    frame    data/chars/bosses/shivabot/rage20.png
+    frame    data/chars/bosses/shivabot/rage21.png
+    frame    data/chars/bosses/shivabot/rage22.png
+    frame    data/chars/bosses/shivabot/rage23.png
+    frame    data/chars/bosses/shivabot/rage24.png
+    frame    data/chars/bosses/shivabot/rage25.png
+    frame    data/chars/bosses/shivabot/rage26.png
+    frame    data/chars/bosses/shivabot/rage27.png
+    frame    data/chars/bosses/shivabot/rage28.png
+    frame    data/chars/bosses/shivabot/rage29.png
+    frame    data/chars/bosses/shivabot/rage30.png
+    frame    data/chars/bosses/shivabot/rage31.png
+    frame    data/chars/bosses/shivabot/rage31.png
+    frame    data/chars/bosses/shivabot/rage32.png
+    frame    data/chars/bosses/shivabot/rage32.png
+    frame    data/chars/bosses/shivabot/rage33.png
+    frame    data/chars/bosses/shivabot/rage33.png
+    frame    data/chars/bosses/shivabot/rage34.png
+    frame    data/chars/bosses/shivabot/rage35.png
+    frame    data/chars/bosses/shivabot/block00.png
+    frame    data/chars/bosses/shivabot/s00.png
+    frame    data/chars/bosses/shivabot/s01.png
+    frame    data/chars/bosses/shivabot/s01.png
+    frame    data/chars/bosses/shivabot/s02.png
+    frame    data/chars/bosses/shivabot/s03.png
+    frame    data/chars/bosses/shivabot/s04.png
+    frame    data/chars/bosses/shivabot/s05.png
 
 anim freespecial2
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash01.png
-	frame	data/chars/bosses/shivabot/finalcrash02.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash04.png
-	frame	data/chars/bosses/shivabot/finalcrash05.png
-	frame	data/chars/bosses/shivabot/finalcrash06.png
-	frame	data/chars/bosses/shivabot/finalcrash07.png
-	frame	data/chars/bosses/shivabot/finalcrash08.png
-	frame	data/chars/bosses/shivabot/finalcrash09.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash01.png
+    frame    data/chars/bosses/shivabot/finalcrash02.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash04.png
+    frame    data/chars/bosses/shivabot/finalcrash05.png
+    frame    data/chars/bosses/shivabot/finalcrash06.png
+    frame    data/chars/bosses/shivabot/finalcrash07.png
+    frame    data/chars/bosses/shivabot/finalcrash08.png
+    frame    data/chars/bosses/shivabot/finalcrash09.png
 
 anim freespecial4 #GRAB RUN
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/block00.png
-	frame	data/chars/bosses/shivabot/block00.png
-	frame	data/chars/bosses/shivabot/block00.png
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run00.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/block00.png
+    frame    data/chars/bosses/shivabot/block00.png
+    frame    data/chars/bosses/shivabot/block00.png
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run00.png
 
 anim freespecial5
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shiva/rage00.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/a101.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shiva/rage00.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/a101.png
 
 
 anim follow2
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash00.png
-	frame	data/chars/bosses/shivabot/finalcrash01.png
-	frame	data/chars/bosses/shivabot/finalcrash02.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash03.png
-	frame	data/chars/bosses/shivabot/finalcrash04.png
-	frame	data/chars/bosses/shivabot/finalcrash05.png
-	frame	data/chars/bosses/shivabot/finalcrash06.png
-	frame	data/chars/bosses/shivabot/finalcrash07.png
-	frame	data/chars/bosses/shivabot/finalcrash08.png
-	frame	data/chars/bosses/shivabot/finalcrash09.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash00.png
+    frame    data/chars/bosses/shivabot/finalcrash01.png
+    frame    data/chars/bosses/shivabot/finalcrash02.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash03.png
+    frame    data/chars/bosses/shivabot/finalcrash04.png
+    frame    data/chars/bosses/shivabot/finalcrash05.png
+    frame    data/chars/bosses/shivabot/finalcrash06.png
+    frame    data/chars/bosses/shivabot/finalcrash07.png
+    frame    data/chars/bosses/shivabot/finalcrash08.png
+    frame    data/chars/bosses/shivabot/finalcrash09.png
 
 anim follow3 #RAGE STRIKE
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shiva/rage00.png
-	offset	300 192
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run01.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shiva/rage00.png
+    offset    300 192
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run01.png
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/block00.png
-	frame	data/chars/bosses/shivabot/s00.png
-	frame	data/chars/bosses/shivabot/s01.png
-	frame	data/chars/bosses/shivabot/s01.png
-	frame	data/chars/bosses/shivabot/s02.png
-	frame	data/chars/bosses/shivabot/s03.png
-	frame	data/chars/bosses/shivabot/s04.png
-	frame	data/chars/bosses/shivabot/s05.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/block00.png
+    frame    data/chars/bosses/shivabot/s00.png
+    frame    data/chars/bosses/shivabot/s01.png
+    frame    data/chars/bosses/shivabot/s01.png
+    frame    data/chars/bosses/shivabot/s02.png
+    frame    data/chars/bosses/shivabot/s03.png
+    frame    data/chars/bosses/shivabot/s04.png
+    frame    data/chars/bosses/shivabot/s05.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/walk00.png
-	frame	data/chars/bosses/shivabot/walk01.png
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shivabot/run01.png
-	frame	data/chars/bosses/shivabot/run00.png
-	frame	data/chars/bosses/shivabot/run01.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/walk00.png
+    frame    data/chars/bosses/shivabot/walk01.png
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shivabot/run01.png
+    frame    data/chars/bosses/shivabot/run00.png
+    frame    data/chars/bosses/shivabot/run01.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	138 192
-	frame	data/chars/bosses/shivabot/jumpdelay00.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jump00.png
-	frame	data/chars/bosses/shivabot/jumpland00.png
-	frame	data/chars/bosses/shivabot/jumpland00.png
+    loop    0
+    delay    1000
+    offset    138 192
+    frame    data/chars/bosses/shivabot/jumpdelay00.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jump00.png
+    frame    data/chars/bosses/shivabot/jumpland00.png
+    frame    data/chars/bosses/shivabot/jumpland00.png

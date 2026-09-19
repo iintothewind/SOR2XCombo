@@ -1,141 +1,141 @@
-loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st5b/_empty.png	0.8 1 0 0 0 0 1 1 0
-bglayer			data/bgs/sor2/st5b/bg00.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg02.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg03.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg04.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg05.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg06.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg05.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg04.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg03.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg02.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st5b/bg01.png		0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
-panel			data/bgs/sor2/st5b/_map.png		none	none
-frontpanel		data/bgs/sor2/st5b/fp00.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-rock			1
-stagenumber 	5
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor2_st5a.c
+loadingbg    data/bgs/loading4.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st5b/_empty.png    0.8 1 0 0 0 0 1 1 0
+bglayer            data/bgs/sor2/st5b/bg00.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg01.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg02.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg03.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg04.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg05.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg06.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg05.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg04.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg03.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg02.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st5b/bg01.png        0 1 0 0 0 0 1 1 0 0 0 0 0 0 0 1
+panel            data/bgs/sor2/st5b/_map.png        none    none
+frontpanel        data/bgs/sor2/st5b/fp00.png
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+rock            1
+stagenumber     5
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor2_st5a.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall		660 251 0 107 1107 1107 53 5000
+wall        660 251 0 107 1107 1107 53 5000
 
 #########################################################################################
 
-spawn		Box_A 1
-flip		1
-coords		250 215 0
-at			0
+spawn        Box_A 1
+flip        1
+coords        250 215 0
+at            0
 
-spawn		Box_A 1
-flip		1
-coords		300 215 0
-at			0
+spawn        Box_A 1
+flip        1
+coords        300 215 0
+at            0
 
-spawn		Donovan_Wait 1
-map			4
-flip		0
-coords		520 240 0
-at			1
+spawn        Donovan_Wait 1
+map            4
+flip        0
+coords        520 240 0
+at            1
 
-spawn		Barbon_Wait 1
-map			4
-flip		0
-coords		650 240 0
-at			50
+spawn        Barbon_Wait 1
+map            4
+flip        0
+coords        650 240 0
+at            50
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		600 240 0
-at			50
+spawn        BasicX1 1
+map            3
+flip        1
+coords        600 240 0
+at            50
 
-spawn		RavenX 1
-map			0
-flip		0
-coords		120 240 300
-at			50
+spawn        RavenX 1
+map            0
+flip        0
+coords        120 240 300
+at            50
 
-spawn		RavenX 1
-map			1
-flip		0
-coords		240 240 400
-at			50
+spawn        RavenX 1
+map            1
+flip        0
+coords        240 240 400
+at            50
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			150
+at            150
 
-group		4 4
-at			200
+group        4 4
+at            200
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-50 230 0
-at			200
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -50 230 0
+at            200
 
-spawn		BruceB 1
-map			2
-flip		1
-coords		-100 260 0
-at			200
+spawn        BruceB 1
+map            2
+flip        1
+coords        -100 260 0
+at            200
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-50 230 0
-at			200
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -50 230 0
+at            200
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		-100 260 0
-at			200
+spawn        BasicX3 1
+map            2
+flip        1
+coords        -100 260 0
+at            200
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-50 230 0
-at			200
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -50 230 0
+at            200
 
-spawn		BruceB 1
-map			2
-flip		1
-coords		-100 260 0
-at			200
+spawn        BruceB 1
+map            2
+flip        1
+coords        -100 260 0
+at            200
 
-spawn		BasicX1 1
-map			3
-flip		1
-coords		-50 230 0
-at			200
+spawn        BasicX1 1
+map            3
+flip        1
+coords        -50 230 0
+at            200
 
-spawn		BossX1 1
-map			2
-flip		1
-coords		-100 260 0
-at			200
+spawn        BossX1 1
+map            2
+flip        1
+coords        -100 260 0
+at            200
 
-spawn		BossX1 1
-map			2
+spawn        BossX1 1
+map            2
 2pspawn
-flip		1
-coords		-100 260 0
-at			200
+flip        1
+coords        -100 260 0
+at            200

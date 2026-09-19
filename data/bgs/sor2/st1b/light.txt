@@ -1,19 +1,19 @@
-name			St1_Light
-type			panel
-speed			5
-scroll			-1
-shadow			0
-setlayer		1000
-alpha			1
+name            St1_Light
+type            panel
+speed            5
+scroll            -1
+shadow            0
+setlayer        1000
+alpha            1
 animationscript data/scripts/animation/default.c
 
-load			St1_Light_B
+load            St1_Light_B
 
 anim idle
-	loop	1
-	delay	2
-	offset	150 200
-	@cmd graphics "original" "St1_Light_B"
-	frame	data/bgs/sor2/st1b/light00.png
-		delay	3
-	frame	data/bgs/sor2/st1b/light01.png
+    loop    1
+    delay    2
+    offset    150 200
+    @cmd graphics "original" "St1_Light_B"
+    frame    data/bgs/sor2/st1b/light00.png
+        delay    3
+    frame    data/bgs/sor2/st1b/light01.png

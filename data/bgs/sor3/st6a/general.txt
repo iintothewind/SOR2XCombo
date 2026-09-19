@@ -1,91 +1,91 @@
 ##MAIN
-name			St6_General
-type			npc
-subtype			notgrab
-candamage		player enemy npc
+name            St6_General
+type            npc
+subtype            notgrab
+candamage        player enemy npc
 
 ##LIFE
-health			800
+health            800
 
 ##MISC
-nolife			1
-nomove			1 1
-subject_to_wall	0
-subject_to_minz	0
-shadow			0
-stealth			2
-offscreenkill	5000
-death			1
+nolife            1
+nomove            1 1
+subject_to_wall    0
+subject_to_minz    0
+shadow            0
+stealth            2
+offscreenkill    5000
+death            1
 
 ##SCRIPTS
-ondoattackscript	data/scripts/ondoattack/default.c
-ondrawscript		data/scripts/ondraw/general.c
-onspawnscript		data/scripts/onspawn/general.c
-ondeathscript		data/scripts/ondeath/general.c
-animationscript		data/scripts/animation/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+ondrawscript        data/scripts/ondraw/general.c
+onspawnscript        data/scripts/onspawn/general.c
+ondeathscript        data/scripts/ondeath/general.c
+animationscript        data/scripts/animation/default.c
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	2
-	offset	150 182
-	frame	data/bgs/sor3/st6a/general00.png
+    loop    0
+    delay    2
+    offset    150 182
+    frame    data/bgs/sor3/st6a/general00.png
 
 anim idle #TIED
-	fastattack 0
-	jugglecost 60
-	forcedirection 0
-	otg 0
-	hitflash Shock
-	loop	1
-	delay	32
-	offset	150 182
-	@cmd aniVar openborconstant("ANI_FOLLOW1") "gasEnable" 1
-	shock 85 97 129 97 20 3 1 0 0 24
-	frame	data/bgs/sor3/st6a/general00.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/bgs/sor3/st6a/general00.png
+    fastattack 0
+    jugglecost 60
+    forcedirection 0
+    otg 0
+    hitflash Shock
+    loop    1
+    delay    32
+    offset    150 182
+    @cmd aniVar openborconstant("ANI_FOLLOW1") "gasEnable" 1
+    shock 85 97 129 97 20 3 1 0 0 24
+    frame    data/bgs/sor3/st6a/general00.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/bgs/sor3/st6a/general00.png
 
 anim follow1 #DYING BY TOXIC GAS
-	fastattack 0
-	jugglecost 60
-	forcedirection 0
-	otg 0
-	hitflash Shock
-	loop	1
-	delay	32
-	offset	150 182
-	shock 85 97 129 97 20 3 1 0 0 24
-	frame	data/bgs/sor3/st6a/general01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/bgs/sor3/st6a/general02.png
+    fastattack 0
+    jugglecost 60
+    forcedirection 0
+    otg 0
+    hitflash Shock
+    loop    1
+    delay    32
+    offset    150 182
+    shock 85 97 129 97 20 3 1 0 0 24
+    frame    data/bgs/sor3/st6a/general01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/bgs/sor3/st6a/general02.png
 
 anim follow2 #RESCUED ALIVE
-	loop	1 1 3
-	delay	32
-	offset	150 182
-	frame	data/bgs/sor3/st6a/general03.png
-	@cmd offScreenKill 50 0
-	frame	data/bgs/sor3/st6a/general04.png
-	@cmd offScreenKill 50 0
-	frame	data/bgs/sor3/st6a/general04.png
-	
+    loop    1 1 3
+    delay    32
+    offset    150 182
+    frame    data/bgs/sor3/st6a/general03.png
+    @cmd offScreenKill 50 0
+    frame    data/bgs/sor3/st6a/general04.png
+    @cmd offScreenKill 50 0
+    frame    data/bgs/sor3/st6a/general04.png
+    
 anim death #DEAD
-	fastattack 0
-	jugglecost 60
-	forcedirection 0
-	otg 0
-	hitflash Shock
-	loop	1 3 5
-	delay	32
-	offset	150 182
-	@cmd nodieBlink 3
-	frame	data/bgs/sor3/st6a/general05.png
-	frame	data/bgs/sor3/st6a/general06.png
-	frame	data/bgs/sor3/st6a/general05.png
-	shock 85 97 129 97 20 3 1 0 0 24
-	frame	data/bgs/sor3/st6a/general06.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/bgs/sor3/st6a/general06.png
-	frame	data/bgs/sor3/st6a/general06.png
+    fastattack 0
+    jugglecost 60
+    forcedirection 0
+    otg 0
+    hitflash Shock
+    loop    1 3 5
+    delay    32
+    offset    150 182
+    @cmd nodieBlink 3
+    frame    data/bgs/sor3/st6a/general05.png
+    frame    data/bgs/sor3/st6a/general06.png
+    frame    data/bgs/sor3/st6a/general05.png
+    shock 85 97 129 97 20 3 1 0 0 24
+    frame    data/bgs/sor3/st6a/general06.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/bgs/sor3/st6a/general06.png
+    frame    data/bgs/sor3/st6a/general06.png

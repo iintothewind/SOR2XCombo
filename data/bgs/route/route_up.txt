@@ -1,22 +1,22 @@
 ##MAIN
-name			Route_Up
-type			item
+name            Route_Up
+type            item
 subject_to_wall 0
 
 ##MISC
-shadow			0
-antigravity		100
-setlayer		1000
+shadow            0
+antigravity        100
+setlayer        1000
 
 ##SCRIPTS
-ondrawscript	data/scripts/ondraw/menu_route.c
+ondrawscript    data/scripts/ondraw/menu_route.c
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	48
-	offset	15 26
-	platform -80 30 0 0 200 200 100 1000
-	frame	data/bgs/route/arrow_up.png
-	frame	data/bgs/route/empty.png
+    loop    1
+    delay    48
+    offset    15 26
+    platform -80 30 0 0 200 200 100 1000
+    frame    data/bgs/route/arrow_up.png
+    frame    data/bgs/route/empty.png

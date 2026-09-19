@@ -2,5 +2,5 @@
 
 void main()
 {
-	suicideP("ANI_DIE", 3);
+    suicideP("ANI_DIE", 3);
 }

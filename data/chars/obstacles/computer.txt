@@ -1,71 +1,71 @@
-name				Computer
-type				obstacle
-health				400
-nolife				1
-score				2000
-shadow				0
-death				1
-noatflash			1
-flash				Flash
-ondeathscript		data/scripts/ondeath/computers.c
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/computers.c
+name                Computer
+type                obstacle
+health                400
+nolife                1
+score                2000
+shadow                0
+death                1
+noatflash            1
+flash                Flash
+ondeathscript        data/scripts/ondeath/computers.c
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/computers.c
 
-load			 ComputerS
+load             ComputerS
 
 anim idle
-	loop	1 2 4
-	delay	24
-	offset	96 128
-	bbox 	56 87 88 82 30
-	platform 36 173 0 40 500 500 47 1000
-	@cmd spawnParent "ComputerS" 0 0 0
-	frame	data/chars/obstacles/computer00.png
-	frame	data/chars/obstacles/computer01.png
-	frame	data/chars/obstacles/computer00.png
-	frame	data/chars/obstacles/computer01.png
-	
+    loop    1 2 4
+    delay    24
+    offset    96 128
+    bbox     56 87 88 82 30
+    platform 36 173 0 40 500 500 47 1000
+    @cmd spawnParent "ComputerS" 0 0 0
+    frame    data/chars/obstacles/computer00.png
+    frame    data/chars/obstacles/computer01.png
+    frame    data/chars/obstacles/computer00.png
+    frame    data/chars/obstacles/computer01.png
+    
 anim follow1
-	loop	1 2 4
-	delay	24
-	offset	96 128
-	bbox 	56 87 88 82 30
-	platform 36 173 0 40 500 500 47 1000
-	sound	data/sounds/Glass.wav
-	@cmd spawnBind "Destruction" 10 40 1
-	frame	data/chars/obstacles/computer02.png
-	frame	data/chars/obstacles/computer03.png
-		delay	96
-	@cmd spawnBind "Shock" 10 25 1
-	frame	data/chars/obstacles/computer02.png
-	frame	data/chars/obstacles/computer03.png
-	
+    loop    1 2 4
+    delay    24
+    offset    96 128
+    bbox     56 87 88 82 30
+    platform 36 173 0 40 500 500 47 1000
+    sound    data/sounds/Glass.wav
+    @cmd spawnBind "Destruction" 10 40 1
+    frame    data/chars/obstacles/computer02.png
+    frame    data/chars/obstacles/computer03.png
+        delay    96
+    @cmd spawnBind "Shock" 10 25 1
+    frame    data/chars/obstacles/computer02.png
+    frame    data/chars/obstacles/computer03.png
+    
 anim follow2
-	loop	1 2 4
-	delay	24
-	offset	96 128
-	bbox 	56 87 88 82 30
-	platform 36 173 0 40 500 500 47 1000
-	sound	data/sounds/Glass.wav
-	@cmd spawnBind "Destruction" 10 40 1
-	frame	data/chars/obstacles/computer04.png
-	frame	data/chars/obstacles/computer05.png
-		delay	96
-	@cmd spawnBind "Shock" 10 25 1
-	frame	data/chars/obstacles/computer04.png
-	frame	data/chars/obstacles/computer05.png
-	
+    loop    1 2 4
+    delay    24
+    offset    96 128
+    bbox     56 87 88 82 30
+    platform 36 173 0 40 500 500 47 1000
+    sound    data/sounds/Glass.wav
+    @cmd spawnBind "Destruction" 10 40 1
+    frame    data/chars/obstacles/computer04.png
+    frame    data/chars/obstacles/computer05.png
+        delay    96
+    @cmd spawnBind "Shock" 10 25 1
+    frame    data/chars/obstacles/computer04.png
+    frame    data/chars/obstacles/computer05.png
+    
 anim death
-	loop	0
-	delay	24
-	offset	96 128
-	platform 36 173 0 40 500 500 47 1000
-	sound	data/sounds/Glass.wav
-	@cmd spawnBind "Destruction" 0 15 1
-	frame	data/chars/obstacles/computer06.png
-	@cmd spawnBind "Destruction" 10 60 1
-	frame	data/chars/obstacles/computer07.png
-	@cmd spawnBind "Destruction" 10 90 1
-	frame	data/chars/obstacles/computer06.png
-		delay	128
-	frame	data/chars/obstacles/computer07.png
+    loop    0
+    delay    24
+    offset    96 128
+    platform 36 173 0 40 500 500 47 1000
+    sound    data/sounds/Glass.wav
+    @cmd spawnBind "Destruction" 0 15 1
+    frame    data/chars/obstacles/computer06.png
+    @cmd spawnBind "Destruction" 10 60 1
+    frame    data/chars/obstacles/computer07.png
+    @cmd spawnBind "Destruction" 10 90 1
+    frame    data/chars/obstacles/computer06.png
+        delay    128
+    frame    data/chars/obstacles/computer07.png

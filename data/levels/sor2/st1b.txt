@@ -1,351 +1,351 @@
-loadingbg	data/bgs/loading3.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor2/st1b/_empty.png	1 1 0 0 0 0 1 1 1
-panel		data/bgs/sor2/st1b/_map.png		none	none
-fglayer		data/bgs/sor2/st1b/fg00.png		-125 -0.7 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-fglayer		data/bgs/sor2/st1b/fg00.png		0 -0.7 0 0 0 0 0 1 1 1 6 0 0 0 0 0 1
-fglayer		data/bgs/sor2/st1b/fg01.png		0 -0.2 0 200 0 0 0 1 1 1 0 0 0 0 0 0 1
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading3.png             1 -81 248 480 999 999 0
+background    data/bgs/sor2/st1b/_empty.png    1 1 0 0 0 0 1 1 1
+panel        data/bgs/sor2/st1b/_map.png        none    none
+fglayer        data/bgs/sor2/st1b/fg00.png        -125 -0.7 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer        data/bgs/sor2/st1b/fg00.png        0 -0.7 0 0 0 0 0 1 1 1 6 0 0 0 0 0 1
+fglayer        data/bgs/sor2/st1b/fg01.png        0 -0.2 0 200 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 1
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-load		St1_Light 3
-load		Barbon_Cocktail 3
+load        St1_Light 3
+load        Barbon_Cocktail 3
 
 #########################################################################################
 
-spawn		Table 1
-flip		1
-coords		150 230 0
-at			0
+spawn        Table 1
+flip        1
+coords        150 230 0
+at            0
 
-spawn		Chair 1
-flip		0
-coords		200 220 0
-at			0
+spawn        Chair 1
+flip        0
+coords        200 220 0
+at            0
 
-spawn		Chair 1
-flip		1
-coords		100 220 0
-at			0
+spawn        Chair 1
+flip        1
+coords        100 220 0
+at            0
 
-spawn		Table 1
-flip		1
-coords		460 240 0
-at			0
+spawn        Table 1
+flip        1
+coords        460 240 0
+at            0
 
-spawn		Chair 1
-flip		0
-coords		510 230 0
-at			0
+spawn        Chair 1
+flip        0
+coords        510 230 0
+at            0
 
-spawn		Chair 1
-flip		1
-coords		410 230 0
-at			0
+spawn        Chair 1
+flip        1
+coords        410 230 0
+at            0
 
-spawn		St1_Light 1
-flip		1
-coords		1550 180 0
-at			0
+spawn        St1_Light 1
+flip        1
+coords        1550 180 0
+at            0
 
-spawn		St1_Light 1
-flip		1
-coords		1850 180 0
-at			0
+spawn        St1_Light 1
+flip        1
+coords        1850 180 0
+at            0
 
 #########################################################################################
 
-spawn		Signal_Wait 1
-map			0
-flip		0
-coords		300 220 0
-at			0
+spawn        Signal_Wait 1
+map            0
+flip        0
+coords        300 220 0
+at            0
 
-spawn		Signal_Wait 1
-map			2
-flip		0
-coords		360 260 0
-at			0
+spawn        Signal_Wait 1
+map            2
+flip        0
+coords        360 260 0
+at            0
 
-spawn		Signal_Wait 1
-map			2
-flip		0
-coords		650 260 0
-at			0
+spawn        Signal_Wait 1
+map            2
+flip        0
+coords        650 260 0
+at            0
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		600 260 0
-at			0
+spawn        BasicX1 1
+map            0
+flip        1
+coords        600 260 0
+at            0
 
-spawn		Signal_Jump 1
-map			1
-flip		0
-coords		385 200 0
-at			200
+spawn        Signal_Jump 1
+map            1
+flip        0
+coords        385 200 0
+at            200
 
 wait
-at			300
+at            300
 
-group		4 4
-at			300
+group        4 4
+at            300
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 220 0
-at			300
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 220 0
+at            300
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-150 240 0
-at			300
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -150 240 0
+at            300
 
-spawn		Cart 1
-flip		1
-coords		600 260 0
-at			300
+spawn        Cart 1
+flip        1
+coords        600 260 0
+at            300
 
-spawn		BruceB 1
-map			0
-flip		1
-coords		-200 260 0
-at			300
+spawn        BruceB 1
+map            0
+flip        1
+coords        -200 260 0
+at            300
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		600 240 0
-at			300
+spawn        BasicX1 1
+map            0
+flip        1
+coords        600 240 0
+at            300
 
-spawn		Cart 1
-flip		1
-coords		800 220 0
-at			300
+spawn        Cart 1
+flip        1
+coords        800 220 0
+at            300
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-100 260 0
-at			300
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -100 260 0
+at            300
 
-spawn		JackB 1
-map			0
-flip		1
-coords		600 220 0
-at			300
+spawn        JackB 1
+map            0
+flip        1
+coords        600 220 0
+at            300
 
-spawn		Cart 1
-flip		1
-coords		1000 240 0
-at			300
+spawn        Cart 1
+flip        1
+coords        1000 240 0
+at            300
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-100 260 0
-at			300
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -100 260 0
+at            300
 
-spawn		BongoB 1
-map			0
-flip		1
-coords		-100 260 0
-at			300
+spawn        BongoB 1
+map            0
+flip        1
+coords        -100 260 0
+at            300
 
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		600 260 0
-at			300
+spawn        BasicX1 1
+map            0
+flip        1
+coords        600 260 0
+at            300
 
 #########################################################################################
 
-group		1000 1000
-at			350
+group        1000 1000
+at            350
 
-spawn		Table 1
-flip		1
-coords		650 230 0
-at			350
+spawn        Table 1
+flip        1
+coords        650 230 0
+at            350
 
-spawn		Chair 1
-flip		0
-coords		700 220 0
-at			350
+spawn        Chair 1
+flip        0
+coords        700 220 0
+at            350
 
-spawn		Chair 1
-flip		1
-coords		600 220 0
-at			350
+spawn        Chair 1
+flip        1
+coords        600 220 0
+at            350
 
-spawn		Table 1
-flip		1
-coords		800 260 0
-at			350
+spawn        Table 1
+flip        1
+coords        800 260 0
+at            350
 
-spawn		Chair 1
-flip		0
-coords		850 270 0
-at			350
+spawn        Chair 1
+flip        0
+coords        850 270 0
+at            350
 
-spawn		Chair 1
-flip		1
-coords		750 270 0
-at			350
+spawn        Chair 1
+flip        1
+coords        750 270 0
+at            350
 
-spawn		Table 1
-flip		1
-coords		1000 250 0
-at			350
+spawn        Table 1
+flip        1
+coords        1000 250 0
+at            350
 
-spawn		Chair 1
-flip		0
-coords		1050 260 0
-at			350
+spawn        Chair 1
+flip        0
+coords        1050 260 0
+at            350
 
-spawn		Chair 1
-flip		1
-coords		950 260 0
-at			350
+spawn        Chair 1
+flip        1
+coords        950 260 0
+at            350
 
-spawn		Barbon_Cocktail 1
+spawn        Barbon_Cocktail 1
 map     4
-flip		0
-coords		866 220 0
-at			500
+flip        0
+coords        866 220 0
+at            500
 
-spawn		Reine_Wait 1
-map			0
-flip		0
-coords		980 220 0
-at			500
+spawn        Reine_Wait 1
+map            0
+flip        0
+coords        980 220 0
+at            500
 
-spawn		JackB 1
-map			0
-flip		1
-coords		600 220 0
-at			500
+spawn        JackB 1
+map            0
+flip        1
+coords        600 220 0
+at            500
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-100 260 0
-at			550
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -100 260 0
+at            550
 
-spawn		BongoB 1
-map			0
-flip		1
-coords		-150 260 0
-at			600
+spawn        BongoB 1
+map            0
+flip        1
+coords        -150 260 0
+at            600
 
-spawn		BasicX3 1
-map			0
-flip		1
-coords		-150 260 0
-at			625
+spawn        BasicX3 1
+map            0
+flip        1
+coords        -150 260 0
+at            625
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		600 220 0
-at			650
+spawn        BasicX1 1
+map            0
+flip        1
+coords        600 220 0
+at            650
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-100 260 0
-at			700
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -100 260 0
+at            700
 
-spawn		JackB 1
-map			0
-flip		1
-coords		-100 260 0
-at			725
+spawn        JackB 1
+map            0
+flip        1
+coords        -100 260 0
+at            725
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-150 260 0
-at			750
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -150 260 0
+at            750
 
-spawn		BasicX3 1
-map			0
-flip		1
-coords		-150 260 0
-at			775
+spawn        BasicX3 1
+map            0
+flip        1
+coords        -150 260 0
+at            775
 
-spawn		KusanagiB 1
-map			0
-weapon		Sword 1
-flip		1
-coords		-150 260 0
-at			800
+spawn        KusanagiB 1
+map            0
+weapon        Sword 1
+flip        1
+coords        -150 260 0
+at            800
 
-spawn		JackB 1
-map			0
-flip		1
-coords		-150 260 0
-at			850
+spawn        JackB 1
+map            0
+flip        1
+coords        -150 260 0
+at            850
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			1200
+at            1200
 
-group		4 4
-at			1200
+group        4 4
+at            1200
 
-spawn		BruceB 1
-map			0
-flip		1
-coords		600 230 0
-at			1200
+spawn        BruceB 1
+map            0
+flip        1
+coords        600 230 0
+at            1200
 
-spawn		BossX1 1
-map			0
-flip		1
-coords		-100 230 0
-at			1200
+spawn        BossX1 1
+map            0
+flip        1
+coords        -100 230 0
+at            1200
 
-spawn		BossX1 1
-map			0
+spawn        BossX1 1
+map            0
 2pspawn
-flip		1
-coords		-100 230 0
-at			1200
+flip        1
+coords        -100 230 0
+at            1200
 
-spawn		Signal_Bottle 1
-map			5
-flip		1
-coords		600 240 0
-at			1200
+spawn        Signal_Bottle 1
+map            5
+flip        1
+coords        600 240 0
+at            1200
 
-spawn		KusanagiB 1
-map			0
-weapon		Sword 1
-flip		1
-coords		-150 260 0
-at			1200
+spawn        KusanagiB 1
+map            0
+weapon        Sword 1
+flip        1
+coords        -150 260 0
+at            1200
 
-spawn		Signal_Bottle 1
+spawn        Signal_Bottle 1
 3pspawn
-map			5
-flip		1
-coords		700 240 0
-at			1200
+map            5
+flip        1
+coords        700 240 0
+at            1200

@@ -1,22 +1,22 @@
-name		St3_Entrance1
-type		panel
-shadow		0
-speed		5
-scroll		-0.5
-setlayer	-10
+name        St3_Entrance1
+type        panel
+shadow        0
+speed        5
+scroll        -0.5
+setlayer    -10
 
 anim idle
-	loop	1
-	delay	6
-	offset	1 180
-	frame	data/bgs/sor2/st3a/entrance00.png
-	frame	data/bgs/sor2/st3a/entrance01.png
-	frame	data/bgs/sor2/st3a/entrance02.png
-	frame	data/bgs/sor2/st3a/entrance03.png
-	frame	data/bgs/sor2/st3a/entrance04.png
-	frame	data/bgs/sor2/st3a/entrance05.png
-	frame	data/bgs/sor2/st3a/entrance06.png
-	frame	data/bgs/sor2/st3a/entrance07.png
-	frame	data/bgs/sor2/st3a/entrance08.png
-	frame	data/bgs/sor2/st3a/entrance09.png
-	frame	data/bgs/sor2/st3a/entrance10.png
+    loop    1
+    delay    6
+    offset    1 180
+    frame    data/bgs/sor2/st3a/entrance00.png
+    frame    data/bgs/sor2/st3a/entrance01.png
+    frame    data/bgs/sor2/st3a/entrance02.png
+    frame    data/bgs/sor2/st3a/entrance03.png
+    frame    data/bgs/sor2/st3a/entrance04.png
+    frame    data/bgs/sor2/st3a/entrance05.png
+    frame    data/bgs/sor2/st3a/entrance06.png
+    frame    data/bgs/sor2/st3a/entrance07.png
+    frame    data/bgs/sor2/st3a/entrance08.png
+    frame    data/bgs/sor2/st3a/entrance09.png
+    frame    data/bgs/sor2/st3a/entrance10.png

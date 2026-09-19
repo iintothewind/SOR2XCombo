@@ -2,7 +2,7 @@
 
 void main()
 {
-	if(getglobalvar("activeText") == 0){
-		onScreen();
-	}
+    if(getglobalvar("activeText") == 0){
+        onScreen();
+    }
 }

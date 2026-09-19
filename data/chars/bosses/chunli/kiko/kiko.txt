@@ -1,65 +1,65 @@
-name				Chunli_Kiko
-type				none
-health				1
-nolife				1
-lifespan			1
-offscreenkill		50
-remove				1
-shadow				0
-antigravity			100
-death				1
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-animationscript		data/scripts/animation/default.c
+name                Chunli_Kiko
+type                none
+health                1
+nolife                1
+lifespan            1
+offscreenkill        50
+remove                1
+shadow                0
+antigravity            100
+death                1
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+animationscript        data/scripts/animation/default.c
 
 anim idle
-	jugglecost	0
-	fastattack	1
-	loop	1
-	offset	238 177
-	bbox	0 0 0 0
-	delay	2
-	hitfx	data/sounds/HighPunch.wav
-	shock 242 110 40 40 35 1 0 0 20 24
-	frame	data/chars/bosses/chunli/kiko/kiko01.png
-	frame	data/chars/bosses/chunli/kiko/kiko02.png
-	frame	data/chars/bosses/chunli/kiko/kiko03.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/chunli/kiko/kiko04.png
-	delay	2
-	shock 242 110 40 40 35 1 0 0 20 24
-	frame	data/chars/bosses/chunli/kiko/kiko05.png
-	frame	data/chars/bosses/chunli/kiko/kiko06.png
-	frame	data/chars/bosses/chunli/kiko/kiko07.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/chunli/kiko/kiko08.png
-	hitfx	data/sounds/StrongPunch.wav
-	delay	2
-	shock 242 110 40 40 35 1 0 0 20 24
-	frame	data/chars/bosses/chunli/kiko/kiko09.png
-	frame	data/chars/bosses/chunli/kiko/kiko10.png
-	frame	data/chars/bosses/chunli/kiko/kiko11.png
-	frame	data/chars/bosses/chunli/kiko/kiko12.png
+    jugglecost    0
+    fastattack    1
+    loop    1
+    offset    238 177
+    bbox    0 0 0 0
+    delay    2
+    hitfx    data/sounds/HighPunch.wav
+    shock 242 110 40 40 35 1 0 0 20 24
+    frame    data/chars/bosses/chunli/kiko/kiko01.png
+    frame    data/chars/bosses/chunli/kiko/kiko02.png
+    frame    data/chars/bosses/chunli/kiko/kiko03.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/chunli/kiko/kiko04.png
+    delay    2
+    shock 242 110 40 40 35 1 0 0 20 24
+    frame    data/chars/bosses/chunli/kiko/kiko05.png
+    frame    data/chars/bosses/chunli/kiko/kiko06.png
+    frame    data/chars/bosses/chunli/kiko/kiko07.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/chunli/kiko/kiko08.png
+    hitfx    data/sounds/StrongPunch.wav
+    delay    2
+    shock 242 110 40 40 35 1 0 0 20 24
+    frame    data/chars/bosses/chunli/kiko/kiko09.png
+    frame    data/chars/bosses/chunli/kiko/kiko10.png
+    frame    data/chars/bosses/chunli/kiko/kiko11.png
+    frame    data/chars/bosses/chunli/kiko/kiko12.png
 
 anim death
-	loop	0
-	offset	238 177
-	bbox	0 0 0 0
-	delay	2
-	drawmethod alpha 6
-	drawmethod channel 0 0 0.5
-	shock 242 110 40 40 35 1 0 0 20 24
-	frame	data/chars/bosses/chunli/kiko/kiko09.png
-	drawmethod channel 0 0 0.4
-	frame	data/chars/bosses/chunli/kiko/kiko10.png
-	drawmethod channel 0 0 0.3
-	frame	data/chars/bosses/chunli/kiko/kiko11.png
-	drawmethod channel 0 0 0.2
-	frame	data/chars/bosses/chunli/kiko/kiko12.png
-	drawmethod channel 0 0 0.1
-	frame	data/chars/bosses/chunli/kiko/kiko12.png
-	@cmd suicide
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/chunli/kiko/kiko12.png
+    loop    0
+    offset    238 177
+    bbox    0 0 0 0
+    delay    2
+    drawmethod alpha 6
+    drawmethod channel 0 0 0.5
+    shock 242 110 40 40 35 1 0 0 20 24
+    frame    data/chars/bosses/chunli/kiko/kiko09.png
+    drawmethod channel 0 0 0.4
+    frame    data/chars/bosses/chunli/kiko/kiko10.png
+    drawmethod channel 0 0 0.3
+    frame    data/chars/bosses/chunli/kiko/kiko11.png
+    drawmethod channel 0 0 0.2
+    frame    data/chars/bosses/chunli/kiko/kiko12.png
+    drawmethod channel 0 0 0.1
+    frame    data/chars/bosses/chunli/kiko/kiko12.png
+    @cmd suicide
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/chunli/kiko/kiko12.png

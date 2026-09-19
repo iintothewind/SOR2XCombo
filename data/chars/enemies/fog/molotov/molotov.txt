@@ -1,73 +1,73 @@
-name				Fog_Molotov #THROWNED
-type				none
-subtype				notgrab
-nolife				1
-lifespan			3
-offscreenkill		50
-remove				0
-gfxshadow			1 1
-noatflash			1
-flash				NoFlash
-death				1
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-ondrawscript		data/scripts/ondraw/weapons.c
-animationscript		data/scripts/animation/default.c
+name                Fog_Molotov #THROWNED
+type                none
+subtype                notgrab
+nolife                1
+lifespan            3
+offscreenkill        50
+remove                0
+gfxshadow            1 1
+noatflash            1
+flash                NoFlash
+death                1
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+ondrawscript        data/scripts/ondraw/weapons.c
+animationscript        data/scripts/animation/default.c
 
 anim idle
-	followanim 2
-	followcond 1
-	landframe  4
-	fastattack 0
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	hitflash Burn
-	loop	1 0 4
-	delay	6
-	offset	25 30
-	bbox 	18 18 16 16
-	hitfx	data/sounds/Glass2.wav
-	sound	data/sounds/HighAttack.wav
-	burn 14 14 24 24 50 1 0 0 0 12
-	frame	data/chars/enemies/fog/molotov/molotov00.png
-	frame	data/chars/enemies/fog/molotov/molotov01.png
-	frame	data/chars/enemies/fog/molotov/molotov02.png
-	frame	data/chars/enemies/fog/molotov/molotov03.png
-	frame	data/chars/enemies/fog/molotov/molotov03.png
+    followanim 2
+    followcond 1
+    landframe  4
+    fastattack 0
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    hitflash Burn
+    loop    1 0 4
+    delay    6
+    offset    25 30
+    bbox     18 18 16 16
+    hitfx    data/sounds/Glass2.wav
+    sound    data/sounds/HighAttack.wav
+    burn 14 14 24 24 50 1 0 0 0 12
+    frame    data/chars/enemies/fog/molotov/molotov00.png
+    frame    data/chars/enemies/fog/molotov/molotov01.png
+    frame    data/chars/enemies/fog/molotov/molotov02.png
+    frame    data/chars/enemies/fog/molotov/molotov03.png
+    frame    data/chars/enemies/fog/molotov/molotov03.png
 
 anim follow1
-	loop	0
-	delay	2
-	offset	25 30
-	@cmd hurtSelf 1
-	frame	data/chars/enemies/fog/molotov/empty.png
+    loop    0
+    delay    2
+    offset    25 30
+    @cmd hurtSelf 1
+    frame    data/chars/enemies/fog/molotov/empty.png
 
 anim follow2
-	fastattack 0
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	hitflash Burn
-	loop	0
-	delay	24
-	offset	25 30
-	sound	data/sounds/Glass2.wav
-	@cmd dashBg 0 10000
-	@cmd spawnBind "Burn" 20 20 1
-	burn 5 15 40 30 50 1 0 0 0 12
-	frame	data/chars/enemies/fog/molotov/empty.png
-	@cmd suicide
-	frame	data/chars/enemies/fog/molotov/empty.png
+    fastattack 0
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    hitflash Burn
+    loop    0
+    delay    24
+    offset    25 30
+    sound    data/sounds/Glass2.wav
+    @cmd dashBg 0 10000
+    @cmd spawnBind "Burn" 20 20 1
+    burn 5 15 40 30 50 1 0 0 0 12
+    frame    data/chars/enemies/fog/molotov/empty.png
+    @cmd suicide
+    frame    data/chars/enemies/fog/molotov/empty.png
 
 anim death
-	loop	0
-	delay	24
-	offset	25 30
-	sound	data/sounds/Glass2.wav
-	@cmd dashBg 0 10000
-	@cmd spawnBind "Burn" 20 20 1
-	burn 5 15 40 30 50 1 0 0 0 12
-	frame	data/chars/enemies/fog/molotov/empty.png
-	@cmd suicide
-	frame	data/chars/enemies/fog/molotov/empty.png
+    loop    0
+    delay    24
+    offset    25 30
+    sound    data/sounds/Glass2.wav
+    @cmd dashBg 0 10000
+    @cmd spawnBind "Burn" 20 20 1
+    burn 5 15 40 30 50 1 0 0 0 12
+    frame    data/chars/enemies/fog/molotov/empty.png
+    @cmd suicide
+    frame    data/chars/enemies/fog/molotov/empty.png

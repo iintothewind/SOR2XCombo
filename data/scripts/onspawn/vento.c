@@ -1,4 +1,4 @@
 void main()
 {
-	setglobalvar("vento", 1);
+    setglobalvar("vento", 1);
 }

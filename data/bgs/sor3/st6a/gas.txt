@@ -1,20 +1,20 @@
-name			St6_Gas
-type			none
-shadow			0
-animationscript	data/scripts/animation/default.c
+name            St6_Gas
+type            none
+shadow            0
+animationscript    data/scripts/animation/default.c
 
 anim idle #TOXIC GAS DISABLED
-	loop	1
-	delay	48
-	offset	25 25
-	@cmd aniVar openborconstant("ANI_FOLLOW1") "gasEnable" 1
-	frame	data/bgs/sor3/st6a/gas00.png
-	frame	data/bgs/sor3/st6a/gas00.png
-	
+    loop    1
+    delay    48
+    offset    25 25
+    @cmd aniVar openborconstant("ANI_FOLLOW1") "gasEnable" 1
+    frame    data/bgs/sor3/st6a/gas00.png
+    frame    data/bgs/sor3/st6a/gas00.png
+    
 anim follow1 #TOXIC GAS ENABLED
-	loop	1
-	delay	48
-	offset	25 25
-	@cmd spawnToss "Gas" 0 30 1 0 1 0
-	frame	data/bgs/sor3/st6a/gas00.png
-	frame	data/bgs/sor3/st6a/gas00.png
+    loop    1
+    delay    48
+    offset    25 25
+    @cmd spawnToss "Gas" 0 30 1 0 1 0
+    frame    data/bgs/sor3/st6a/gas00.png
+    frame    data/bgs/sor3/st6a/gas00.png

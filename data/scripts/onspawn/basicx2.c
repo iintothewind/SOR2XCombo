@@ -2,5 +2,5 @@
 
 void main()
 {
-	randomX3("SlumB", "ViceB","GarnetB");
+    randomX3("SlumB", "ViceB","GarnetB");
 }

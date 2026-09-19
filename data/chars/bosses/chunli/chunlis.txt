@@ -1,12 +1,12 @@
 ##MAIN
-name				ChunliS
-type				none
+name                ChunliS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
 palette       data/chars/bosses/chunli/idle00.png
@@ -19,321 +19,321 @@ alternatepal  data/chars/bosses/chunli/idle00.png
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim grabattack #GRAB KICK
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/b400.png
-	frame	data/chars/bosses/chunli/b401.png
-	frame	data/chars/bosses/chunli/b401.png
-	frame	data/chars/bosses/chunli/b402.png
-	frame	data/chars/bosses/chunli/b402.png
-	frame	data/chars/bosses/chunli/b403.png
-	frame	data/chars/bosses/chunli/b404.png
-	frame	data/chars/bosses/chunli/b405.png
-	frame	data/chars/bosses/chunli/jump00.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/b400.png
+    frame    data/chars/bosses/chunli/b401.png
+    frame    data/chars/bosses/chunli/b401.png
+    frame    data/chars/bosses/chunli/b402.png
+    frame    data/chars/bosses/chunli/b402.png
+    frame    data/chars/bosses/chunli/b403.png
+    frame    data/chars/bosses/chunli/b404.png
+    frame    data/chars/bosses/chunli/b405.png
+    frame    data/chars/bosses/chunli/jump00.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim grabattack2 #VAULT FRONT TO BACK
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/b500.png
-	frame	data/chars/bosses/chunli/b501.png
-	frame	data/chars/bosses/chunli/b502.png
-	frame	data/chars/bosses/chunli/b503.png
-	frame	data/chars/bosses/chunli/b504.png
-	frame	data/chars/bosses/chunli/b505.png
-	frame	data/chars/bosses/chunli/b505.png
-	frame	data/chars/bosses/chunli/jump00.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/b500.png
+    frame    data/chars/bosses/chunli/b501.png
+    frame    data/chars/bosses/chunli/b502.png
+    frame    data/chars/bosses/chunli/b503.png
+    frame    data/chars/bosses/chunli/b504.png
+    frame    data/chars/bosses/chunli/b505.png
+    frame    data/chars/bosses/chunli/b505.png
+    frame    data/chars/bosses/chunli/jump00.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim special2 #OFFENSIVE SPECIAL
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
 
 anim freespecial20 #OFFENSIVE SPECIAL
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
 
 anim freespecial #RAGE
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/b100.png
-	frame	data/chars/bosses/chunli/b101.png
-	frame	data/chars/bosses/chunli/b101.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/b100.png
+    frame    data/chars/bosses/chunli/b101.png
+    frame    data/chars/bosses/chunli/b101.png
+    frame    data/chars/bosses/chunli/land00.png
 
 
 anim freespecial2 #GRAB RUN
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/run00.png
-	frame	data/chars/bosses/chunli/run01.png
-	frame	data/chars/bosses/chunli/run02.png
-	frame	data/chars/bosses/chunli/run03.png
-	frame	data/chars/bosses/chunli/run04.png
-	frame	data/chars/bosses/chunli/run05.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/run00.png
+    frame    data/chars/bosses/chunli/run01.png
+    frame    data/chars/bosses/chunli/run02.png
+    frame    data/chars/bosses/chunli/run03.png
+    frame    data/chars/bosses/chunli/run04.png
+    frame    data/chars/bosses/chunli/run05.png
 
 anim freespecial3 #AERIAL THOUSAND KICKS
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s600.png
-	frame	data/chars/bosses/chunli/s600.png
-	frame	data/chars/bosses/chunli/s603.png
-	frame	data/chars/bosses/chunli/s604.png
-	frame	data/chars/bosses/chunli/s601.png
-	frame	data/chars/bosses/chunli/s602.png
-	frame	data/chars/bosses/chunli/s605.png
-	frame	data/chars/bosses/chunli/s606.png
-	frame	data/chars/bosses/chunli/jump01.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s600.png
+    frame    data/chars/bosses/chunli/s600.png
+    frame    data/chars/bosses/chunli/s603.png
+    frame    data/chars/bosses/chunli/s604.png
+    frame    data/chars/bosses/chunli/s601.png
+    frame    data/chars/bosses/chunli/s602.png
+    frame    data/chars/bosses/chunli/s605.png
+    frame    data/chars/bosses/chunli/s606.png
+    frame    data/chars/bosses/chunli/jump01.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim upper #UPPER
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s500.png
-	frame	data/chars/bosses/chunli/s501.png
-	frame	data/chars/bosses/chunli/s502.png
-	frame	data/chars/bosses/chunli/s503.png
-	frame	data/chars/bosses/chunli/s504.png
-	frame	data/chars/bosses/chunli/s505.png
-	frame	data/chars/bosses/chunli/s506.png
-	frame	data/chars/bosses/chunli/s507.png
-	frame	data/chars/bosses/chunli/s508.png
-	frame	data/chars/bosses/chunli/s509.png
-	frame	data/chars/bosses/chunli/s510.png
-	frame	data/chars/bosses/chunli/s500.png
-	frame	data/chars/bosses/chunli/s501.png
-	frame	data/chars/bosses/chunli/s502.png
-	frame	data/chars/bosses/chunli/s503.png
-	frame	data/chars/bosses/chunli/s504.png
-	frame	data/chars/bosses/chunli/s505.png
-	frame	data/chars/bosses/chunli/s506.png
-	frame	data/chars/bosses/chunli/jump00.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s500.png
+    frame    data/chars/bosses/chunli/s501.png
+    frame    data/chars/bosses/chunli/s502.png
+    frame    data/chars/bosses/chunli/s503.png
+    frame    data/chars/bosses/chunli/s504.png
+    frame    data/chars/bosses/chunli/s505.png
+    frame    data/chars/bosses/chunli/s506.png
+    frame    data/chars/bosses/chunli/s507.png
+    frame    data/chars/bosses/chunli/s508.png
+    frame    data/chars/bosses/chunli/s509.png
+    frame    data/chars/bosses/chunli/s510.png
+    frame    data/chars/bosses/chunli/s500.png
+    frame    data/chars/bosses/chunli/s501.png
+    frame    data/chars/bosses/chunli/s502.png
+    frame    data/chars/bosses/chunli/s503.png
+    frame    data/chars/bosses/chunli/s504.png
+    frame    data/chars/bosses/chunli/s505.png
+    frame    data/chars/bosses/chunli/s506.png
+    frame    data/chars/bosses/chunli/jump00.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim runattack #UPPER
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s500.png
-	frame	data/chars/bosses/chunli/s501.png
-	frame	data/chars/bosses/chunli/s502.png
-	frame	data/chars/bosses/chunli/s503.png
-	frame	data/chars/bosses/chunli/s504.png
-	frame	data/chars/bosses/chunli/s505.png
-	frame	data/chars/bosses/chunli/s506.png
-	frame	data/chars/bosses/chunli/s507.png
-	frame	data/chars/bosses/chunli/s508.png
-	frame	data/chars/bosses/chunli/s509.png
-	frame	data/chars/bosses/chunli/s510.png
-	frame	data/chars/bosses/chunli/s500.png
-	frame	data/chars/bosses/chunli/s501.png
-	frame	data/chars/bosses/chunli/s502.png
-	frame	data/chars/bosses/chunli/s503.png
-	frame	data/chars/bosses/chunli/s504.png
-	frame	data/chars/bosses/chunli/s505.png
-	frame	data/chars/bosses/chunli/s506.png
-	frame	data/chars/bosses/chunli/jump00.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s500.png
+    frame    data/chars/bosses/chunli/s501.png
+    frame    data/chars/bosses/chunli/s502.png
+    frame    data/chars/bosses/chunli/s503.png
+    frame    data/chars/bosses/chunli/s504.png
+    frame    data/chars/bosses/chunli/s505.png
+    frame    data/chars/bosses/chunli/s506.png
+    frame    data/chars/bosses/chunli/s507.png
+    frame    data/chars/bosses/chunli/s508.png
+    frame    data/chars/bosses/chunli/s509.png
+    frame    data/chars/bosses/chunli/s510.png
+    frame    data/chars/bosses/chunli/s500.png
+    frame    data/chars/bosses/chunli/s501.png
+    frame    data/chars/bosses/chunli/s502.png
+    frame    data/chars/bosses/chunli/s503.png
+    frame    data/chars/bosses/chunli/s504.png
+    frame    data/chars/bosses/chunli/s505.png
+    frame    data/chars/bosses/chunli/s506.png
+    frame    data/chars/bosses/chunli/jump00.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim riseattack
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/c300.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/s300.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/c300.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/s300.png
 
 anim follow1 #RAGE STRIKE
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/jb401.png
-	frame	data/chars/bosses/chunli/jb401.png
-	frame	data/chars/bosses/chunli/jump01.png
-	frame	data/chars/bosses/chunli/jump00.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/jb401.png
+    frame    data/chars/bosses/chunli/jb401.png
+    frame    data/chars/bosses/chunli/jump01.png
+    frame    data/chars/bosses/chunli/jump00.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim follow2 #SPECIAL COMBO
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/b102.png
-	frame	data/chars/bosses/chunli/b102.png
-	frame	data/chars/bosses/chunli/b102.png
-	frame	data/chars/bosses/chunli/c100.png
-	frame	data/chars/bosses/chunli/c101.png
-	frame	data/chars/bosses/chunli/c200.png
-	frame	data/chars/bosses/chunli/c201.png
-	frame	data/chars/bosses/chunli/c300.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/c300.png
-	frame	data/chars/bosses/chunli/a200.png
-	frame	data/chars/bosses/chunli/a201.png
-	frame	data/chars/bosses/chunli/a500.png #frame 12
-	frame	data/chars/bosses/chunli/a501.png
-	frame	data/chars/bosses/chunli/b100.png
-	frame	data/chars/bosses/chunli/b101.png
-	frame	data/chars/bosses/chunli/b102.png
-	frame	data/chars/bosses/chunli/b102.png
-	frame	data/chars/bosses/chunli/b103.png
-	frame	data/chars/bosses/chunli/b101.png
-	frame	data/chars/bosses/chunli/b100.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s203.png #frame30
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/b102.png
+    frame    data/chars/bosses/chunli/b102.png
+    frame    data/chars/bosses/chunli/b102.png
+    frame    data/chars/bosses/chunli/c100.png
+    frame    data/chars/bosses/chunli/c101.png
+    frame    data/chars/bosses/chunli/c200.png
+    frame    data/chars/bosses/chunli/c201.png
+    frame    data/chars/bosses/chunli/c300.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/c300.png
+    frame    data/chars/bosses/chunli/a200.png
+    frame    data/chars/bosses/chunli/a201.png
+    frame    data/chars/bosses/chunli/a500.png #frame 12
+    frame    data/chars/bosses/chunli/a501.png
+    frame    data/chars/bosses/chunli/b100.png
+    frame    data/chars/bosses/chunli/b101.png
+    frame    data/chars/bosses/chunli/b102.png
+    frame    data/chars/bosses/chunli/b102.png
+    frame    data/chars/bosses/chunli/b103.png
+    frame    data/chars/bosses/chunli/b101.png
+    frame    data/chars/bosses/chunli/b100.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s203.png #frame30
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/c300.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/c301.png
-	frame	data/chars/bosses/chunli/s300.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/c300.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/c301.png
+    frame    data/chars/bosses/chunli/s300.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/fjump00.png
-	frame	data/chars/bosses/chunli/fjump01.png
-	frame	data/chars/bosses/chunli/fjump02.png
-	frame	data/chars/bosses/chunli/fjump03.png
-	frame	data/chars/bosses/chunli/fjump04.png
-	frame	data/chars/bosses/chunli/fjump05.png
-	frame	data/chars/bosses/chunli/fjump06.png
-	frame	data/chars/bosses/chunli/fjump07.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/fjump00.png
+    frame    data/chars/bosses/chunli/fjump01.png
+    frame    data/chars/bosses/chunli/fjump02.png
+    frame    data/chars/bosses/chunli/fjump03.png
+    frame    data/chars/bosses/chunli/fjump04.png
+    frame    data/chars/bosses/chunli/fjump05.png
+    frame    data/chars/bosses/chunli/fjump06.png
+    frame    data/chars/bosses/chunli/fjump07.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim follow21 #UPPER
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s500.png
-	frame	data/chars/bosses/chunli/s501.png
-	frame	data/chars/bosses/chunli/s502.png
-	frame	data/chars/bosses/chunli/s503.png
-	frame	data/chars/bosses/chunli/s504.png
-	frame	data/chars/bosses/chunli/s505.png
-	frame	data/chars/bosses/chunli/s506.png
-	frame	data/chars/bosses/chunli/s507.png
-	frame	data/chars/bosses/chunli/s508.png
-	frame	data/chars/bosses/chunli/s509.png
-	frame	data/chars/bosses/chunli/s510.png
-	frame	data/chars/bosses/chunli/s500.png
-	frame	data/chars/bosses/chunli/s501.png
-	frame	data/chars/bosses/chunli/s502.png
-	frame	data/chars/bosses/chunli/s503.png
-	frame	data/chars/bosses/chunli/s504.png
-	frame	data/chars/bosses/chunli/s505.png
-	frame	data/chars/bosses/chunli/s506.png
-	frame	data/chars/bosses/chunli/jump00.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s500.png
+    frame    data/chars/bosses/chunli/s501.png
+    frame    data/chars/bosses/chunli/s502.png
+    frame    data/chars/bosses/chunli/s503.png
+    frame    data/chars/bosses/chunli/s504.png
+    frame    data/chars/bosses/chunli/s505.png
+    frame    data/chars/bosses/chunli/s506.png
+    frame    data/chars/bosses/chunli/s507.png
+    frame    data/chars/bosses/chunli/s508.png
+    frame    data/chars/bosses/chunli/s509.png
+    frame    data/chars/bosses/chunli/s510.png
+    frame    data/chars/bosses/chunli/s500.png
+    frame    data/chars/bosses/chunli/s501.png
+    frame    data/chars/bosses/chunli/s502.png
+    frame    data/chars/bosses/chunli/s503.png
+    frame    data/chars/bosses/chunli/s504.png
+    frame    data/chars/bosses/chunli/s505.png
+    frame    data/chars/bosses/chunli/s506.png
+    frame    data/chars/bosses/chunli/jump00.png
+    frame    data/chars/bosses/chunli/land00.png
 
 anim follow22 #OFFENSIVE SPECIAL
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s203.png
-	frame	data/chars/bosses/chunli/s204.png
-	frame	data/chars/bosses/chunli/s205.png
-	frame	data/chars/bosses/chunli/s206.png
-	frame	data/chars/bosses/chunli/s202.png
-	frame	data/chars/bosses/chunli/s200.png
-	frame	data/chars/bosses/chunli/s201.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s203.png
+    frame    data/chars/bosses/chunli/s204.png
+    frame    data/chars/bosses/chunli/s205.png
+    frame    data/chars/bosses/chunli/s206.png
+    frame    data/chars/bosses/chunli/s202.png
+    frame    data/chars/bosses/chunli/s200.png
+    frame    data/chars/bosses/chunli/s201.png
 
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	237 182
-	frame	data/chars/bosses/chunli/fjump00.png
-	frame	data/chars/bosses/chunli/fjump01.png
-	frame	data/chars/bosses/chunli/fjump02.png
-	frame	data/chars/bosses/chunli/fjump03.png
-	frame	data/chars/bosses/chunli/fjump04.png
-	frame	data/chars/bosses/chunli/fjump05.png
-	frame	data/chars/bosses/chunli/fjump06.png
-	frame	data/chars/bosses/chunli/fjump07.png
-	frame	data/chars/bosses/chunli/land00.png
+    loop    0
+    delay    1000
+    offset    237 182
+    frame    data/chars/bosses/chunli/fjump00.png
+    frame    data/chars/bosses/chunli/fjump01.png
+    frame    data/chars/bosses/chunli/fjump02.png
+    frame    data/chars/bosses/chunli/fjump03.png
+    frame    data/chars/bosses/chunli/fjump04.png
+    frame    data/chars/bosses/chunli/fjump05.png
+    frame    data/chars/bosses/chunli/fjump06.png
+    frame    data/chars/bosses/chunli/fjump07.png
+    frame    data/chars/bosses/chunli/land00.png

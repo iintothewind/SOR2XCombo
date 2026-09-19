@@ -2,9 +2,9 @@
 
 void main()
 {
-	customHitflash();
-	smokeHealth(50, 75);
-	hitDmg();
-	comboDmg();
-	koCount();
+    customHitflash();
+    smokeHealth(50, 75);
+    hitDmg();
+    comboDmg();
+    koCount();
 }

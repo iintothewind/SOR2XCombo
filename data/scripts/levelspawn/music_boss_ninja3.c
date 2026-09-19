@@ -2,5 +2,5 @@
 
 void main()
 {
-	musicBossNinja3();
+    musicBossNinja3();
 }

@@ -1,25 +1,25 @@
 ##MAIN
-name				Vehelits_Tail
-type				none
+name                Vehelits_Tail
+type                none
 subject_to_platform 0
 subject_to_obstacle 0
 
 ##MISC
-gfxshadow			1 1
-nodrop				2
+gfxshadow            1 1
+nodrop                2
 
 ##SCRIPTS
-animationscript	 	data/scripts/animation/default.c
-script				data/scripts/updateentity/vehelits.c
+animationscript         data/scripts/animation/default.c
+script                data/scripts/updateentity/vehelits.c
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	360
-	offset	49 56
-		seta 70
-	shadowcoords 49 -30
-	@cmd sampleAlias SAMPLE_VEHELITS2 "Tail0" 0
-	frame	data/chars/enemies/vehelits/tail00.png
-	frame	data/chars/enemies/vehelits/tail00.png
+    loop    1
+    delay    360
+    offset    49 56
+        seta 70
+    shadowcoords 49 -30
+    @cmd sampleAlias SAMPLE_VEHELITS2 "Tail0" 0
+    frame    data/chars/enemies/vehelits/tail00.png
+    frame    data/chars/enemies/vehelits/tail00.png

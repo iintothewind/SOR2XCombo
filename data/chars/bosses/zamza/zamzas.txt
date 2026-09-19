@@ -1,74 +1,74 @@
 ##MAIN
-name				ZamzaS
-type				none
+name                ZamzaS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter1.png
-remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter2.png
-remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter3.png
-remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter4.png
-remap				data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter1.png
+remap                data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter1.png
+remap                data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter2.png
+remap                data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter3.png
+remap                data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter4.png
+remap                data/chars/bosses/zamza/idle00.png data/chars/bosses/zamza/alter1.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim freespecial
-	loop	0
-	delay	1000
-	offset	143 200
-	frame	data/chars/bosses/zamza/upper00.png
-	frame	data/chars/bosses/zamza/a100.png
-	frame	data/chars/bosses/zamza/a100.png
-	frame	data/chars/bosses/zamza/a101.png
-	frame	data/chars/bosses/zamza/a102b.png
-	frame	data/chars/bosses/zamza/a103.png
-	frame	data/chars/bosses/zamza/a104.png
-	frame	data/chars/bosses/zamza/a105b.png
-	frame	data/chars/bosses/zamza/a100.png
-	frame	data/chars/bosses/zamza/a101.png
-	frame	data/chars/bosses/zamza/a102b.png
-	frame	data/chars/bosses/zamza/a103.png
-	frame	data/chars/bosses/zamza/a104.png
-	frame	data/chars/bosses/zamza/a105b.png
+    loop    0
+    delay    1000
+    offset    143 200
+    frame    data/chars/bosses/zamza/upper00.png
+    frame    data/chars/bosses/zamza/a100.png
+    frame    data/chars/bosses/zamza/a100.png
+    frame    data/chars/bosses/zamza/a101.png
+    frame    data/chars/bosses/zamza/a102b.png
+    frame    data/chars/bosses/zamza/a103.png
+    frame    data/chars/bosses/zamza/a104.png
+    frame    data/chars/bosses/zamza/a105b.png
+    frame    data/chars/bosses/zamza/a100.png
+    frame    data/chars/bosses/zamza/a101.png
+    frame    data/chars/bosses/zamza/a102b.png
+    frame    data/chars/bosses/zamza/a103.png
+    frame    data/chars/bosses/zamza/a104.png
+    frame    data/chars/bosses/zamza/a105b.png
 
 anim freespecial2 #GRAB RUN
-	loop	0
-	delay	1000
-	offset	143 200
-	frame	data/chars/bosses/zamza/walk00.png
-	frame	data/chars/bosses/zamza/walk01.png
-	frame	data/chars/bosses/zamza/walk02.png
-	frame	data/chars/bosses/zamza/walk00.png
+    loop    0
+    delay    1000
+    offset    143 200
+    frame    data/chars/bosses/zamza/walk00.png
+    frame    data/chars/bosses/zamza/walk01.png
+    frame    data/chars/bosses/zamza/walk02.png
+    frame    data/chars/bosses/zamza/walk00.png
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	143 200
-	frame	data/chars/bosses/zamza/block00.png
-	frame	data/chars/bosses/zamza/upper00.png
-	frame	data/chars/bosses/zamza/upper01.png
-	frame	data/chars/bosses/zamza/upper01.png
-	frame	data/chars/bosses/zamza/upper02.png
-	frame	data/chars/bosses/zamza/upper03.png
-	frame	data/chars/bosses/zamza/upper04.png
-	frame	data/chars/bosses/zamza/upper05.png
-	frame	data/chars/bosses/zamza/upper06.png
-	frame	data/chars/bosses/zamza/upper07.png
-	frame	data/chars/bosses/zamza/upper08.png
-	frame	data/chars/bosses/zamza/upper09.png
+    loop    0
+    delay    1000
+    offset    143 200
+    frame    data/chars/bosses/zamza/block00.png
+    frame    data/chars/bosses/zamza/upper00.png
+    frame    data/chars/bosses/zamza/upper01.png
+    frame    data/chars/bosses/zamza/upper01.png
+    frame    data/chars/bosses/zamza/upper02.png
+    frame    data/chars/bosses/zamza/upper03.png
+    frame    data/chars/bosses/zamza/upper04.png
+    frame    data/chars/bosses/zamza/upper05.png
+    frame    data/chars/bosses/zamza/upper06.png
+    frame    data/chars/bosses/zamza/upper07.png
+    frame    data/chars/bosses/zamza/upper08.png
+    frame    data/chars/bosses/zamza/upper09.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	143 200
-	frame	data/chars/bosses/zamza/walk00.png
-	frame	data/chars/bosses/zamza/walk01.png
-	frame	data/chars/bosses/zamza/walk02.png
-	frame	data/chars/bosses/zamza/walk03.png
-	frame	data/chars/bosses/zamza/walk04.png
-	frame	data/chars/bosses/zamza/walk05.png
+    loop    0
+    delay    1000
+    offset    143 200
+    frame    data/chars/bosses/zamza/walk00.png
+    frame    data/chars/bosses/zamza/walk01.png
+    frame    data/chars/bosses/zamza/walk02.png
+    frame    data/chars/bosses/zamza/walk03.png
+    frame    data/chars/bosses/zamza/walk04.png
+    frame    data/chars/bosses/zamza/walk05.png

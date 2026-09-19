@@ -1,409 +1,409 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor3/st8c/_empty.png	0 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor3/st8c/bg00.png		0.4 1 0 0 0 0 -1 1 1
-bglayer			data/bgs/sor3/st8c/bg01.png		0.4 1 0 0 0 0 -1 1 1
-panel			data/bgs/sor3/st8c/_map.png		none	none
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber 	8
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor3_st8c.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor3/st8c/_empty.png    0 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor3/st8c/bg00.png        0.4 1 0 0 0 0 -1 1 1
+bglayer            data/bgs/sor3/st8c/bg01.png        0.4 1 0 0 0 0 -1 1 1
+panel            data/bgs/sor3/st8c/_map.png        none    none
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber     8
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor3_st8c.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-basemap		0 300 1600 200 0.001 0.001
+basemap        0 300 1600 200 0.001 0.001
 
 #########################################################################################
 
-load		St8_Cannon 3
-load		St8_DoctorS 3
-load		St8_Machine1 3
-load		St8_Machine2 3
+load        St8_Cannon 3
+load        St8_DoctorS 3
+load        St8_Machine1 3
+load        St8_Machine2 3
 
 #########################################################################################
 
-spawn		St8_Cannon 1
-flip		1
-coords		1 160 0
-at			0
+spawn        St8_Cannon 1
+flip        1
+coords        1 160 0
+at            0
 
-spawn		St8_DoctorS 1
-flip		1
-coords		1400 140 0
-at			0
+spawn        St8_DoctorS 1
+flip        1
+coords        1400 140 0
+at            0
 
-spawn		St8_Machine1 1
-flip		1
-coords		286 276 0
-at			0
+spawn        St8_Machine1 1
+flip        1
+coords        286 276 0
+at            0
 
-spawn		St8_Machine2 1
-flip		1
-coords		800 276 0
-at			0
+spawn        St8_Machine2 1
+flip        1
+coords        800 276 0
+at            0
 
 #########################################################################################
 
-spawn		Box_E 1
-flip		1
-coords		100 170 0
-at			0
+spawn        Box_E 1
+flip        1
+coords        100 170 0
+at            0
 
-spawn		Box_E 1
-flip		1
-coords		180 170 0
-at			0
+spawn        Box_E 1
+flip        1
+coords        180 170 0
+at            0
 
-spawn		Box_E 1
-flip		1
-coords		260 170 0
-at			0
+spawn        Box_E 1
+flip        1
+coords        260 170 0
+at            0
 
-group		3 3
-at			0
+group        3 3
+at            0
 wait
-at			0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		560 200 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        560 200 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		600 230 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        600 230 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		640 260 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        640 260 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		560 200 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        560 200 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		600 230 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        600 230 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		640 260 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        640 260 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		560 200 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        560 200 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		600 230 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        600 230 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		640 260 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        640 260 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		560 200 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        560 200 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		600 230 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        600 230 0
+at            0
 
-spawn		Robotx_Run 1
-map			2
-flip		0
-coords		640 260 0
-at			0
+spawn        Robotx_Run 1
+map            2
+flip        0
+coords        640 260 0
+at            0
 
 #########################################################################################
 
-group		1000 1000
-at			50
+group        1000 1000
+at            50
 
-spawn		P1B 1
-map			0
-flip		0
-coords		550 230 0
-at			50
+spawn        P1B 1
+map            0
+flip        0
+coords        550 230 0
+at            50
 
-spawn		P1X 1
-map			4
-flip		0
-coords		600 245 0
-at			50
+spawn        P1X 1
+map            4
+flip        0
+coords        600 245 0
+at            50
 
-spawn		P1B 1
-map			1
-flip		1
-coords		650 260 0
-at			50
+spawn        P1B 1
+map            1
+flip        1
+coords        650 260 0
+at            50
 
-spawn		P1X 1
-map			4
-flip		1
-coords		-50 245 0
-at			50
+spawn        P1X 1
+map            4
+flip        1
+coords        -50 245 0
+at            50
 
 wait
-at			250
+at            250
 
-group		4 4
-at			50
+group        4 4
+at            50
 
-spawn		P1X 1
-map			4
-flip		0
-coords		-50 230 0
-at			50
+spawn        P1X 1
+map            4
+flip        0
+coords        -50 230 0
+at            50
 
-spawn		P1X 1
-map			4
-flip		0
-coords		-100 260 0
-at			50
+spawn        P1X 1
+map            4
+flip        0
+coords        -100 260 0
+at            50
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		-150 230 0
-at			50
+spawn        BruceB 1
+map            4
+flip        0
+coords        -150 230 0
+at            50
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		550 230 0
-at			50
+spawn        BasicX3 1
+map            4
+flip        0
+coords        550 230 0
+at            50
 
-spawn		P1X 1
-map			4
-flip		0
-coords		550 230 0
-at			50
+spawn        P1X 1
+map            4
+flip        0
+coords        550 230 0
+at            50
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		550 230 0
-at			50
+spawn        BongoX 1
+map            4
+flip        0
+coords        550 230 0
+at            50
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		550 230 0
-at			50
+spawn        BasicX3 1
+map            4
+flip        0
+coords        550 230 0
+at            50
 
-spawn		P1B 1
-map			0
-flip		0
-coords		600 245 0
-at			50
+spawn        P1B 1
+map            0
+flip        0
+coords        600 245 0
+at            50
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		550 230 0
-at			50
+spawn        BongoX 1
+map            4
+flip        0
+coords        550 230 0
+at            50
 
-spawn		P1X 1
-map			4
-flip		0
-coords		650 260 0
-at			50
+spawn        P1X 1
+map            4
+flip        0
+coords        650 260 0
+at            50
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		500 260 0
-at			50
+spawn        BossX1 1
+map            4
+flip        0
+coords        500 260 0
+at            50
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		500 260 0
-at			50
+flip        0
+coords        500 260 0
+at            50
 
 #########################################################################################
 
-group		1000 1000
-at			260
+group        1000 1000
+at            260
 
-spawn		Box_E 1
-flip		1
-coords		520 170 0
-at			260
+spawn        Box_E 1
+flip        1
+coords        520 170 0
+at            260
 
-spawn		Box_E 1
-flip		1
-coords		580 200 0
-at			260
+spawn        Box_E 1
+flip        1
+coords        580 200 0
+at            260
 
-spawn		BodyGuardX 1
-map			4
-flip		0
-coords		550 230 0
-at			300
+spawn        BodyGuardX 1
+map            4
+flip        0
+coords        550 230 0
+at            300
 
-spawn		BasicX3 1
-map			4
-flip		0
-coords		600 260 0
-at			300
+spawn        BasicX3 1
+map            4
+flip        0
+coords        600 260 0
+at            300
 
-spawn		BodyGuardX 1
-map			4
-flip		1
-coords		650 230 0
-at			300
+spawn        BodyGuardX 1
+map            4
+flip        1
+coords        650 230 0
+at            300
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		700 260 0
-at			300
+spawn        BongoX 1
+map            4
+flip        0
+coords        700 260 0
+at            300
 
 wait
-at			840
+at            840
 
-group		4 4
-at			350
+group        4 4
+at            350
 
-spawn		P1X 1
-map			4
-flip		0
-coords		550 230 0
-at			350
+spawn        P1X 1
+map            4
+flip        0
+coords        550 230 0
+at            350
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		600 260 0
-at			350
+spawn        BruceB 1
+map            4
+flip        0
+coords        600 260 0
+at            350
 
 
-spawn		P1X 1
-map			4
-flip		0
-coords		600 260 0
-at			350
+spawn        P1X 1
+map            4
+flip        0
+coords        600 260 0
+at            350
 
-spawn		P1X 1
-map			4
-flip		1
-coords		-50 230 0
-at			350
+spawn        P1X 1
+map            4
+flip        1
+coords        -50 230 0
+at            350
 
-spawn		P1X 1
-map			4
-flip		1
-coords		-100 260 0
-at			350
+spawn        P1X 1
+map            4
+flip        1
+coords        -100 260 0
+at            350
 
 #########################################################################################
 
-group		1000 1000
-at			850
+group        1000 1000
+at            850
 
-spawn		Box_E 1
-flip		1
-coords		520 170 0
-at			850
+spawn        Box_E 1
+flip        1
+coords        520 170 0
+at            850
 
-spawn		Box_E 1
-flip		1
-coords		570 170 0
-at			850
+spawn        Box_E 1
+flip        1
+coords        570 170 0
+at            850
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			900
+at            900
 
-group		4 4
-at			1000
+group        4 4
+at            1000
 
-spawn		Rocket_Enemy 1
-map			0
-flip		0
-coords		550 230 0
-at			1000
+spawn        Rocket_Enemy 1
+map            0
+flip        0
+coords        550 230 0
+at            1000
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		550 230 0
-at			1000
+spawn        BruceB 1
+map            4
+flip        0
+coords        550 230 0
+at            1000
 
-spawn		Rocket_Enemy 1
-map			0
-flip		0
-coords		-50 230 0
-at			1000
+spawn        Rocket_Enemy 1
+map            0
+flip        0
+coords        -50 230 0
+at            1000
 
-spawn		JackB 1
-map			4
-flip		0
-coords		550 230 0
-at			1000
+spawn        JackB 1
+map            4
+flip        0
+coords        550 230 0
+at            1000
 
-spawn		P1X 1
-map			4
-flip		0
-coords		600 260 0
-at			1000
+spawn        P1X 1
+map            4
+flip        0
+coords        600 260 0
+at            1000
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-50 230 0
-at			1000
+spawn        BossX1 1
+map            4
+flip        1
+coords        -50 230 0
+at            1000
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-50 230 0
-at			1000
+flip        1
+coords        -50 230 0
+at            1000
 
-spawn		P1X 1
-map			4
-flip		1
-coords		-100 260 0
-at			1000
+spawn        P1X 1
+map            4
+flip        1
+coords        -100 260 0
+at            1000
 
-spawn		BongoX 1
-map			4
-flip		1
-coords		-100 260 0
-at			1000
+spawn        BongoX 1
+map            4
+flip        1
+coords        -100 260 0
+at            1000

@@ -1,21 +1,21 @@
-name			Ending_B3 #LAYER 2
-type			text
-subtype			noskip
-setlayer		100000002
-shadow			0
-ondrawscript	data/scripts/ondraw/endings.c
-animationscript	data/scripts/animation/default.c
+name            Ending_B3 #LAYER 2
+type            text
+subtype            noskip
+setlayer        100000002
+shadow            0
+ondrawscript    data/scripts/ondraw/endings.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	0 0
-	@cmd dasher 0 0 0.08
-	frame	data/scenes/ending_b/endb02.png
-		delay	620
-	frame	data/scenes/ending_b/endb02.png
-		delay	240
-	@cmd dasher 0 0 0
-	frame	data/scenes/ending_b/endb02.png
-	@cmd suicide
-	frame	data/scenes/ending_b/endb02.png
+    loop    0
+    delay    2
+    offset    0 0
+    @cmd dasher 0 0 0.08
+    frame    data/scenes/ending_b/endb02.png
+        delay    620
+    frame    data/scenes/ending_b/endb02.png
+        delay    240
+    @cmd dasher 0 0 0
+    frame    data/scenes/ending_b/endb02.png
+    @cmd suicide
+    frame    data/scenes/ending_b/endb02.png

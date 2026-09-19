@@ -1,696 +1,696 @@
 ##MAIN
-name				Kusanagi_Sit
-type				enemy
+name                Kusanagi_Sit
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					100
-mprate  			5 #SCRIPT
+mp                    100
+mprate              5 #SCRIPT
 
 ##GRAB
-grabdistance 		33 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         33 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				72
+antigravity            -1 #-1/-2/-3
+height                72
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 2
-weapons				none Kusanagi_SwordB none Kusanagi_KunaiB
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-aimove				chase #ENEMY ONLY
-death				2
-blockodds 			25
-bflash				Block
-nopassiveblock		1
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 2
+weapons                none Kusanagi_SwordB none Kusanagi_KunaiB
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+aimove                chase #ENEMY ONLY
+death                2
+blockodds             25
+bflash                Block
+nopassiveblock        1
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/kusanagi.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onfallscript		data/scripts/onfall/default.c
-onspawnscript		data/scripts/onspawn/kusanagi.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/kusanagi.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/kusanagi.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onfallscript        data/scripts/onfall/default.c
+onspawnscript        data/scripts/onspawn/kusanagi.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/kusanagi.c
 
 ##ICONS
-icon				data/chars/enemies/kusanagi/icon.png 1
+icon                data/chars/enemies/kusanagi/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/Die1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Die1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter1.png
-remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter2.png
-remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter3.png
-remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter4.png
-remap				data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter5.png
+remap                data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter1.png
+remap                data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter2.png
+remap                data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter3.png
+remap                data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter4.png
+remap                data/chars/enemies/kusanagi/idle00.png data/chars/enemies/kusanagi/alter5.png
 
 ##LOADS
-load				Kusanagi_Star
-load				KusanagiS
-load				KusanagiSW1
-load				KusanagiSW2
-load				Kusanagi_KunaiB
-load				Kusanagi_SwordB
+load                Kusanagi_Star
+load                KusanagiS
+load                KusanagiSW1
+load                KusanagiSW2
+load                Kusanagi_KunaiB
+load                Kusanagi_SwordB
 
 ## CUSTOM ANIMATIONS ##########################################################################
 
 anim spawn #WAIT SPAWN
-	loop	0
-	delay	16
-	offset	145 181
-	@cmd aniChange 0 "ANI_FOLLOW26"
-	frame	data/chars/enemies/kusanagi/rise01.png
+    loop    0
+    delay    16
+    offset    145 181
+    @cmd aniChange 0 "ANI_FOLLOW26"
+    frame    data/chars/enemies/kusanagi/rise01.png
 
 anim follow26 #WAIT LOOP
-	loop	1
-	delay	16
-	offset	145 181
-	bbox 	132 136 32 47
-	@cmd cancel -999 100 -999 999 -999 999 "ANI_FOLLOW27"
-	frame	data/chars/enemies/kusanagi/rise01.png
-	frame	data/chars/enemies/kusanagi/rise01.png
+    loop    1
+    delay    16
+    offset    145 181
+    bbox     132 136 32 47
+    @cmd cancel -999 100 -999 999 -999 999 "ANI_FOLLOW27"
+    frame    data/chars/enemies/kusanagi/rise01.png
+    frame    data/chars/enemies/kusanagi/rise01.png
 
 anim follow27 #LOOP STOP
-	loop	0
-	delay	16
-	offset	145 181
-	bbox 	132 136 32 47
-	frame	data/chars/enemies/kusanagi/rise01.png
+    loop    0
+    delay    16
+    offset    145 181
+    bbox     132 136 32 47
+    frame    data/chars/enemies/kusanagi/rise01.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	16
-	offset	145 181
-	bbox 	131 111 27 72
-	frame	data/chars/enemies/kusanagi/idle00.png
-	frame	data/chars/enemies/kusanagi/idle01.png
-	frame	data/chars/enemies/kusanagi/idle02.png
-	frame	data/chars/enemies/kusanagi/idle03.png
+    loop    1
+    delay    16
+    offset    145 181
+    bbox     131 111 27 72
+    frame    data/chars/enemies/kusanagi/idle00.png
+    frame    data/chars/enemies/kusanagi/idle01.png
+    frame    data/chars/enemies/kusanagi/idle02.png
+    frame    data/chars/enemies/kusanagi/idle03.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	145 181
-	bbox 	131 111 27 72
-	frame	data/chars/enemies/kusanagi/walk00.png
-	frame	data/chars/enemies/kusanagi/walk01.png
-	frame	data/chars/enemies/kusanagi/walk02.png
-	frame	data/chars/enemies/kusanagi/walk03.png
+    loop    1
+    delay    16
+    offset    145 181
+    bbox     131 111 27 72
+    frame    data/chars/enemies/kusanagi/walk00.png
+    frame    data/chars/enemies/kusanagi/walk01.png
+    frame    data/chars/enemies/kusanagi/walk02.png
+    frame    data/chars/enemies/kusanagi/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	145 181
-	frame	data/chars/enemies/kusanagi/get00.png
+    loop    0
+    delay    16
+    offset    145 181
+    frame    data/chars/enemies/kusanagi/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	145 181
-	bbox 	134 116 24 67
-	frame	data/chars/enemies/kusanagi/grab00.png
+    loop    0
+    delay    16
+    offset    145 181
+    bbox     134 116 24 67
+    frame    data/chars/enemies/kusanagi/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	145 181
-	bbox 	131 111 31 72
-	frame	data/chars/enemies/kusanagi/grabbed00.png
+    loop    0
+    delay    8
+    offset    145 181
+    bbox     131 111 31 72
+    frame    data/chars/enemies/kusanagi/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	145 181
-	bbox 	132 134 32 49
-	frame	data/chars/enemies/kusanagi/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    145 181
+    bbox     132 134 32 49
+    frame    data/chars/enemies/kusanagi/jumpdelay00.png
 
 anim walkoff
-	loop	1 1 5
-	delay	6
-	offset	145 181
-	bbox 	127 133 32 32
-	@cmd jump 1
-	frame	data/chars/enemies/kusanagi/jump00.png
-	frame	data/chars/enemies/kusanagi/jump00.png
-	frame	data/chars/enemies/kusanagi/jump01.png
-	frame	data/chars/enemies/kusanagi/jump02.png
-	frame	data/chars/enemies/kusanagi/jump03.png
+    loop    1 1 5
+    delay    6
+    offset    145 181
+    bbox     127 133 32 32
+    @cmd jump 1
+    frame    data/chars/enemies/kusanagi/jump00.png
+    frame    data/chars/enemies/kusanagi/jump00.png
+    frame    data/chars/enemies/kusanagi/jump01.png
+    frame    data/chars/enemies/kusanagi/jump02.png
+    frame    data/chars/enemies/kusanagi/jump03.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	145 181
-	bbox 	132 134 32 49
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/kusanagi/jumpland00.png
+    loop    0
+    delay    12
+    offset    145 181
+    bbox     132 134 32 49
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/kusanagi/jumpland00.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	145 181
-	bbox 	131 111 25 72
-	frame	data/chars/enemies/kusanagi/pain00.png
-	frame	data/chars/enemies/kusanagi/pain01.png
-	frame	data/chars/enemies/kusanagi/pain00.png
-	frame	data/chars/enemies/kusanagi/pain01.png
-	frame	data/chars/enemies/kusanagi/pain00.png
-	frame	data/chars/enemies/kusanagi/pain01.png
-	frame	data/chars/enemies/kusanagi/pain00.png
-	frame	data/chars/enemies/kusanagi/pain01.png
-	frame	data/chars/enemies/kusanagi/pain00.png
-	frame	data/chars/enemies/kusanagi/pain01.png
-	frame	data/chars/enemies/kusanagi/pain00.png
-	frame	data/chars/enemies/kusanagi/pain01.png
+    loop    0
+    delay    4
+    offset    145 181
+    bbox     131 111 25 72
+    frame    data/chars/enemies/kusanagi/pain00.png
+    frame    data/chars/enemies/kusanagi/pain01.png
+    frame    data/chars/enemies/kusanagi/pain00.png
+    frame    data/chars/enemies/kusanagi/pain01.png
+    frame    data/chars/enemies/kusanagi/pain00.png
+    frame    data/chars/enemies/kusanagi/pain01.png
+    frame    data/chars/enemies/kusanagi/pain00.png
+    frame    data/chars/enemies/kusanagi/pain01.png
+    frame    data/chars/enemies/kusanagi/pain00.png
+    frame    data/chars/enemies/kusanagi/pain01.png
+    frame    data/chars/enemies/kusanagi/pain00.png
+    frame    data/chars/enemies/kusanagi/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	145 181
-	bbox 	135 111 30 72
-	frame	data/chars/enemies/kusanagi/pain200.png
-	frame	data/chars/enemies/kusanagi/pain201.png
-	frame	data/chars/enemies/kusanagi/pain200.png
-	frame	data/chars/enemies/kusanagi/pain201.png
-	frame	data/chars/enemies/kusanagi/pain200.png
-	frame	data/chars/enemies/kusanagi/pain201.png
-	frame	data/chars/enemies/kusanagi/pain200.png
-	frame	data/chars/enemies/kusanagi/pain201.png
-	frame	data/chars/enemies/kusanagi/pain200.png
-	frame	data/chars/enemies/kusanagi/pain201.png
-	frame	data/chars/enemies/kusanagi/pain200.png
-	frame	data/chars/enemies/kusanagi/pain201.png
+    loop    0
+    delay    4
+    offset    145 181
+    bbox     135 111 30 72
+    frame    data/chars/enemies/kusanagi/pain200.png
+    frame    data/chars/enemies/kusanagi/pain201.png
+    frame    data/chars/enemies/kusanagi/pain200.png
+    frame    data/chars/enemies/kusanagi/pain201.png
+    frame    data/chars/enemies/kusanagi/pain200.png
+    frame    data/chars/enemies/kusanagi/pain201.png
+    frame    data/chars/enemies/kusanagi/pain200.png
+    frame    data/chars/enemies/kusanagi/pain201.png
+    frame    data/chars/enemies/kusanagi/pain200.png
+    frame    data/chars/enemies/kusanagi/pain201.png
+    frame    data/chars/enemies/kusanagi/pain200.png
+    frame    data/chars/enemies/kusanagi/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	145 181
-	bbox 	126 115 40 42
-	frame	data/chars/enemies/kusanagi/fall00.png
-		delay	8
-	bbox 	105 164 76 18
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/kusanagi/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    145 181
+    bbox     126 115 40 42
+    frame    data/chars/enemies/kusanagi/fall00.png
+        delay    8
+    bbox     105 164 76 18
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	145 181
-	bbox 	126 115 40 42
-	frame	data/chars/enemies/kusanagi/fall00.png
-		delay	8
-	bbox 	105 164 76 18
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/kusanagi/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    145 181
+    bbox     126 115 40 42
+    frame    data/chars/enemies/kusanagi/fall00.png
+        delay    8
+    bbox     105 164 76 18
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	145 181
-	bbox 	126 115 40 42
-	frame	data/chars/enemies/kusanagi/fall00.png
-		delay	8
-	bbox 	105 164 76 18
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/kusanagi/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    145 181
+    bbox     126 115 40 42
+    frame    data/chars/enemies/kusanagi/fall00.png
+        delay    8
+    bbox     105 164 76 18
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	145 181
-	frame	data/chars/enemies/kusanagi/fall600.png
-	frame	data/chars/enemies/kusanagi/fall601.png
-	frame	data/chars/enemies/kusanagi/fall602.png
-	frame	data/chars/enemies/kusanagi/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/kusanagi/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    145 181
+    frame    data/chars/enemies/kusanagi/fall600.png
+    frame    data/chars/enemies/kusanagi/fall601.png
+    frame    data/chars/enemies/kusanagi/fall602.png
+    frame    data/chars/enemies/kusanagi/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	145 181
-	frame	data/chars/enemies/kusanagi/fall700.png
-	frame	data/chars/enemies/kusanagi/fall701.png
-	frame	data/chars/enemies/kusanagi/fall702.png
-	frame	data/chars/enemies/kusanagi/fall703.png
-	frame	data/chars/enemies/kusanagi/fall704.png
-	frame	data/chars/enemies/kusanagi/fall705.png
+    loop    0
+    delay    1000
+    offset    145 181
+    frame    data/chars/enemies/kusanagi/fall700.png
+    frame    data/chars/enemies/kusanagi/fall701.png
+    frame    data/chars/enemies/kusanagi/fall702.png
+    frame    data/chars/enemies/kusanagi/fall703.png
+    frame    data/chars/enemies/kusanagi/fall704.png
+    frame    data/chars/enemies/kusanagi/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	145 181
-	bbox 	126 115 40 42
-	hitfx	data/sounds/MediumKick.wav
-	attack 126 115 40 42 4 1 0 0 20 12
-	frame	data/chars/enemies/kusanagi/fall00.png
-		delay	999
-	frame	data/chars/enemies/kusanagi/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	105 164 76 18
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/kusanagi/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    145 181
+    bbox     126 115 40 42
+    hitfx    data/sounds/MediumKick.wav
+    attack 126 115 40 42 4 1 0 0 20 12
+    frame    data/chars/enemies/kusanagi/fall00.png
+        delay    999
+    frame    data/chars/enemies/kusanagi/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     105 164 76 18
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	145 181
-	bbox 	132 128 29 53
-	hitfx	data/sounds/MediumKick.wav
-	attack 132 128 29 53 4 1 0 0 20 12
-	frame	data/chars/enemies/kusanagi/fall900.png
-		delay	999
-	frame	data/chars/enemies/kusanagi/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	105 164 76 18
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/kusanagi/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    145 181
+    bbox     132 128 29 53
+    hitfx    data/sounds/MediumKick.wav
+    attack 132 128 29 53 4 1 0 0 20 12
+    frame    data/chars/enemies/kusanagi/fall900.png
+        delay    999
+    frame    data/chars/enemies/kusanagi/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     105 164 76 18
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	145 181
-	frame	data/chars/enemies/kusanagi/fall01.png
-	frame	data/chars/enemies/kusanagi/fall01.png
-	frame	data/chars/enemies/kusanagi/fall01.png
+    loop    0
+    delay    16
+    offset    145 181
+    frame    data/chars/enemies/kusanagi/fall01.png
+    frame    data/chars/enemies/kusanagi/fall01.png
+    frame    data/chars/enemies/kusanagi/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	145 181
-	frame	data/chars/enemies/kusanagi/rise00.png
-	frame	data/chars/enemies/kusanagi/rise00.png
-	frame	data/chars/enemies/kusanagi/rise01.png
-	frame	data/chars/enemies/kusanagi/rise01.png
+    loop    0
+    delay    16
+    offset    145 181
+    frame    data/chars/enemies/kusanagi/rise00.png
+    frame    data/chars/enemies/kusanagi/rise00.png
+    frame    data/chars/enemies/kusanagi/rise01.png
+    frame    data/chars/enemies/kusanagi/rise01.png
 
 anim attack1
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	145 181
-	bbox 	131 111 27 72
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	attack 148 115 46 14 2 0 0 0 10 12
-	frame	data/chars/enemies/kusanagi/a100.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/kusanagi/a101.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    145 181
+    bbox     131 111 27 72
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    attack 148 115 46 14 2 0 0 0 10 12
+    frame    data/chars/enemies/kusanagi/a100.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/kusanagi/a101.png
 
 anim attack2
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	145 181
-	bbox 	136 111 19 72
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/kusanagi/a200.png
-	attack 150 112 46 17 4 0 0 0 15 12
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/a201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/kusanagi/a201.png
-	attack 151 112 46 32 8 1 0 0 15 12
-	bbox 	131 111 27 72
-	frame	data/chars/enemies/kusanagi/a202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/kusanagi/a203.png
-	frame	data/chars/enemies/kusanagi/a204.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    145 181
+    bbox     136 111 19 72
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/kusanagi/a200.png
+    attack 150 112 46 17 4 0 0 0 15 12
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/a201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/kusanagi/a201.png
+    attack 151 112 46 32 8 1 0 0 15 12
+    bbox     131 111 27 72
+    frame    data/chars/enemies/kusanagi/a202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/kusanagi/a203.png
+    frame    data/chars/enemies/kusanagi/a204.png
 
 anim grabattack #THROW
-	loop	0
-	delay	16
-	offset	145 181
-	@cmd grabStart
-	@cmd position 0 20 0 0 0
-	frame	data/chars/enemies/kusanagi/throw00.png
-	@cmd position 5 10 12 0 0
-	frame	data/chars/enemies/kusanagi/throw01.png
-	@cmd position 2 -20 30 0 0
-	sound	data/voices/Attack1.wav
-	frame	data/chars/enemies/kusanagi/throw02.png
-		delay	32
-	@cmd throw 12 2 2 3 0 0
-	frame	data/chars/enemies/kusanagi/throw02.png
-		delay	8
-	@cmd clearL
-	frame	data/chars/enemies/kusanagi/throw03.png
+    loop    0
+    delay    16
+    offset    145 181
+    @cmd grabStart
+    @cmd position 0 20 0 0 0
+    frame    data/chars/enemies/kusanagi/throw00.png
+    @cmd position 5 10 12 0 0
+    frame    data/chars/enemies/kusanagi/throw01.png
+    @cmd position 2 -20 30 0 0
+    sound    data/voices/Attack1.wav
+    frame    data/chars/enemies/kusanagi/throw02.png
+        delay    32
+    @cmd throw 12 2 2 3 0 0
+    frame    data/chars/enemies/kusanagi/throw02.png
+        delay    8
+    @cmd clearL
+    frame    data/chars/enemies/kusanagi/throw03.png
 
 anim grabattack2 #THROW
-	loop	0
-	delay	16
-	offset	145 181
-	@cmd grabStart
-	@cmd position 0 20 0 0 0
-	frame	data/chars/enemies/kusanagi/throw00.png
-	@cmd position 5 10 12 0 0
-	frame	data/chars/enemies/kusanagi/throw01.png
-	@cmd position 2 -20 30 0 0
-	sound	data/voices/Attack1.wav
-	frame	data/chars/enemies/kusanagi/throw02.png
-		delay	32
-	@cmd throw 12 2 2 3 0 0
-	frame	data/chars/enemies/kusanagi/throw02.png
-		delay	8
-	@cmd clearL
-	frame	data/chars/enemies/kusanagi/throw03.png
+    loop    0
+    delay    16
+    offset    145 181
+    @cmd grabStart
+    @cmd position 0 20 0 0 0
+    frame    data/chars/enemies/kusanagi/throw00.png
+    @cmd position 5 10 12 0 0
+    frame    data/chars/enemies/kusanagi/throw01.png
+    @cmd position 2 -20 30 0 0
+    sound    data/voices/Attack1.wav
+    frame    data/chars/enemies/kusanagi/throw02.png
+        delay    32
+    @cmd throw 12 2 2 3 0 0
+    frame    data/chars/enemies/kusanagi/throw02.png
+        delay    8
+    @cmd clearL
+    frame    data/chars/enemies/kusanagi/throw03.png
 
 anim jumpattack #JUMP ATTACK
-	range 60 120
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	16
-	offset	145 181
-	bbox 	132 123 34 49
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/Jumping.wav
-	@cmd targetJump
-	@cmd leapJump
-	frame	data/chars/enemies/kusanagi/jumpatk00.png
-	sound	data/sounds/HighAttack.wav
-	attack 151 133 36 24 4 0 0 0 20 12
-	frame	data/chars/enemies/kusanagi/jumpatk01.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/jumpatk01.png
-	attack 151 133 36 24 4 0 0 0 20 12
-	frame	data/chars/enemies/kusanagi/jumpatk01.png
+    range 60 120
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    16
+    offset    145 181
+    bbox     132 123 34 49
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/Jumping.wav
+    @cmd targetJump
+    @cmd leapJump
+    frame    data/chars/enemies/kusanagi/jumpatk00.png
+    sound    data/sounds/HighAttack.wav
+    attack 151 133 36 24 4 0 0 0 20 12
+    frame    data/chars/enemies/kusanagi/jumpatk01.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/jumpatk01.png
+    attack 151 133 36 24 4 0 0 0 20 12
+    frame    data/chars/enemies/kusanagi/jumpatk01.png
 
 anim jumpattack2 #JUMP ADVANCE
-	range 100 600
-	rangea 0 0
-	rangez -999 999
-	loop	1 2 6
-	delay	1
-	offset	145 181
-	bbox 	127 133 32 32
-	@cmd targetJump
-	@cmd leapJump
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/kusanagi/jump00.png
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/jump00.png
-		delay	6
-	@cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
-	frame	data/chars/enemies/kusanagi/jump00.png
-	@cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
-	frame	data/chars/enemies/kusanagi/jump01.png
-	@cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
-	frame	data/chars/enemies/kusanagi/jump02.png
-	@cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
-	frame	data/chars/enemies/kusanagi/jump03.png
+    range 100 600
+    rangea 0 0
+    rangez -999 999
+    loop    1 2 6
+    delay    1
+    offset    145 181
+    bbox     127 133 32 32
+    @cmd targetJump
+    @cmd leapJump
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/kusanagi/jump00.png
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/jump00.png
+        delay    6
+    @cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
+    frame    data/chars/enemies/kusanagi/jump00.png
+    @cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
+    frame    data/chars/enemies/kusanagi/jump01.png
+    @cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
+    frame    data/chars/enemies/kusanagi/jump02.png
+    @cmd cancelHeight 0 60 30 "ANI_JUMPATTACK3"
+    frame    data/chars/enemies/kusanagi/jump03.png
 
 anim jumpattack3 #JUMP ATTACK CANCEL
-	range 999 999
-	rangea 999 999
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	16
-	offset	145 181
-	bbox 	132 123 34 49
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/kusanagi/jumpatk00.png
-	@cmd jump 1
-	attack 151 133 36 24 4 0 0 0 20 12
-	frame	data/chars/enemies/kusanagi/jumpatk01.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/kusanagi/jumpatk01.png
-	attack 151 133 36 24 4 0 0 0 20 12
-	frame	data/chars/enemies/kusanagi/jumpatk01.png
+    range 999 999
+    rangea 999 999
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    16
+    offset    145 181
+    bbox     132 123 34 49
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/kusanagi/jumpatk00.png
+    @cmd jump 1
+    attack 151 133 36 24 4 0 0 0 20 12
+    frame    data/chars/enemies/kusanagi/jumpatk01.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/kusanagi/jumpatk01.png
+    attack 151 133 36 24 4 0 0 0 20 12
+    frame    data/chars/enemies/kusanagi/jumpatk01.png
 
 anim freespecial #FRONT STAR
-	range 150 400
-	rangea 0 0
-	energycost 20 1 6
-	loop	0
-	delay	8
-	offset	145 181
-	bbox 	136 111 19 72
-	frame	data/chars/enemies/kusanagi/star00.png
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/star01.png
-	@cmd shoot "Kusanagi_Star" 46 61 0 3 0 0
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/enemies/kusanagi/star02.png
-	bbox 	131 111 27 72
-	frame	data/chars/enemies/kusanagi/star03.png
-	frame	data/chars/enemies/kusanagi/star04.png
+    range 150 400
+    rangea 0 0
+    energycost 20 1 6
+    loop    0
+    delay    8
+    offset    145 181
+    bbox     136 111 19 72
+    frame    data/chars/enemies/kusanagi/star00.png
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/star01.png
+    @cmd shoot "Kusanagi_Star" 46 61 0 3 0 0
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/enemies/kusanagi/star02.png
+    bbox     131 111 27 72
+    frame    data/chars/enemies/kusanagi/star03.png
+    frame    data/chars/enemies/kusanagi/star04.png
 
 anim freespecial2 #JUMP STARS
-	range 120 180
-	rangea 0 100
-	energycost 25 1 6
-	loop	0
-	delay	12
-	offset	145 181
-	bbox 	132 134 32 49
-	frame	data/chars/enemies/kusanagi/jumpdelay00.png
-		delay	2
-	bbox 	127 133 32 32
-	@cmd leaper 0 3.6 0
-	@cmd jump 1
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/kusanagi/jump00.png
-		delay	6
-	frame	data/chars/enemies/kusanagi/jump00.png
-	frame	data/chars/enemies/kusanagi/jump01.png
-	frame	data/chars/enemies/kusanagi/jump02.png
-	frame	data/chars/enemies/kusanagi/jump03.png
-	bbox 	132 123 34 49
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/star200.png
-	@cmd toss "Kusanagi_Star" 40 29 0 2 -0.5 0 0
-	@cmd toss "Kusanagi_Star" 40 29 0 2 -2 0 0
-	@cmd toss "Kusanagi_Star" 40 29 0 2 -4.5 0 0
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/enemies/kusanagi/star201.png
+    range 120 180
+    rangea 0 100
+    energycost 25 1 6
+    loop    0
+    delay    12
+    offset    145 181
+    bbox     132 134 32 49
+    frame    data/chars/enemies/kusanagi/jumpdelay00.png
+        delay    2
+    bbox     127 133 32 32
+    @cmd leaper 0 3.6 0
+    @cmd jump 1
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/kusanagi/jump00.png
+        delay    6
+    frame    data/chars/enemies/kusanagi/jump00.png
+    frame    data/chars/enemies/kusanagi/jump01.png
+    frame    data/chars/enemies/kusanagi/jump02.png
+    frame    data/chars/enemies/kusanagi/jump03.png
+    bbox     132 123 34 49
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/star200.png
+    @cmd toss "Kusanagi_Star" 40 29 0 2 -0.5 0 0
+    @cmd toss "Kusanagi_Star" 40 29 0 2 -2 0 0
+    @cmd toss "Kusanagi_Star" 40 29 0 2 -4.5 0 0
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/enemies/kusanagi/star201.png
 
 anim freespecial3 #LOW KICK
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	145 181
-	bbox 	132 136 32 48
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/kusanagi/kick00.png
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/kick01.png
-	attack 145 160 60 24 4 1 0 0 10 12
-	frame	data/chars/enemies/kusanagi/kick02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/kusanagi/kick03.png
-	bbox 	131 111 27 72
-	frame	data/chars/enemies/kusanagi/kick04.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    145 181
+    bbox     132 136 32 48
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/kusanagi/kick00.png
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/kick01.png
+    attack 145 160 60 24 4 1 0 0 10 12
+    frame    data/chars/enemies/kusanagi/kick02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/kusanagi/kick03.png
+    bbox     131 111 27 72
+    frame    data/chars/enemies/kusanagi/kick04.png
 
 anim freespecial4 #sucide
-	followanim 4
-	followcond 4
-	range 60 120
-	rangea 0 0
-	rangez -15 15
-	energycost 10 1 6
-	loop	0
-	offset	145 181
-	delay 24
-	@cmd cancelHp 0 999 0 999 25 "ANI_FREESPECIAL5"
-	sound	data/voices/attack1.wav
-	#bbox 	134 116 30 67
-	drawmethod tintmode 1
-	drawmethod tintcolor 255_0_0
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	delay	8
-	@cmd target 4 4
-	@cmd dashTarget
-	attack 140 116 30 67 1 0 1 1 0 24
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 3.5 3.5
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 3 3
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 3 3
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 2.5 2.5
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 2.5 2.5
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd dasher 0
-	nodrawmethod
-	frame	data/chars/enemies/kusanagi/dodge00.png
+    followanim 4
+    followcond 4
+    range 60 120
+    rangea 0 0
+    rangez -15 15
+    energycost 10 1 6
+    loop    0
+    offset    145 181
+    delay 24
+    @cmd cancelHp 0 999 0 999 25 "ANI_FREESPECIAL5"
+    sound    data/voices/attack1.wav
+    #bbox     134 116 30 67
+    drawmethod tintmode 1
+    drawmethod tintcolor 255_0_0
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    delay    8
+    @cmd target 4 4
+    @cmd dashTarget
+    attack 140 116 30 67 1 0 1 1 0 24
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 3.5 3.5
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 3 3
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 3 3
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 2.5 2.5
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 2.5 2.5
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd dasher 0
+    nodrawmethod
+    frame    data/chars/enemies/kusanagi/dodge00.png
 
 
 anim freespecial5 #GRAB RUN
-	followanim 5
-	followcond 4
-	range 40 100
-	rangea 0 100
-	rangez -9 9
-	energycost 999 1 6
-	loop	0
-	offset	145 181
-	delay 24
-	bbox 	134 116 30 67
-	sound	data/voices/Kusanagi1.wav
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	delay	8
-	@cmd target 3 2
-	@cmd dashTarget
-	attack 140 116 30 67 1 0 1 1 0 24
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 2.5 2
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 2 2
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd target 1.5 1.5
-	@cmd dashTarget
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd dasher 1 1
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd dasher 0
-	frame	data/chars/enemies/kusanagi/dodge00.png
+    followanim 5
+    followcond 4
+    range 40 100
+    rangea 0 100
+    rangez -9 9
+    energycost 999 1 6
+    loop    0
+    offset    145 181
+    delay 24
+    bbox     134 116 30 67
+    sound    data/voices/Kusanagi1.wav
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    delay    8
+    @cmd target 3 2
+    @cmd dashTarget
+    attack 140 116 30 67 1 0 1 1 0 24
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 2.5 2
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 2 2
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd target 1.5 1.5
+    @cmd dashTarget
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd dasher 1 1
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd dasher 0
+    frame    data/chars/enemies/kusanagi/dodge00.png
 
 anim follow4
-	loop	0
-	delay	8
-	offset	145 181
-	drawmethod tintmode 1
-	drawmethod tintcolor 255_0_0
-	@cmd dasher 0
-	@cmd spawnBind "Bang" 0 25 1
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	nodrawmethod
-	frame	data/chars/enemies/kusanagi/dodge00.png
+    loop    0
+    delay    8
+    offset    145 181
+    drawmethod tintmode 1
+    drawmethod tintcolor 255_0_0
+    @cmd dasher 0
+    @cmd spawnBind "Bang" 0 25 1
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    nodrawmethod
+    frame    data/chars/enemies/kusanagi/dodge00.png
 
 anim follow5
-	loop	0
-	delay	16
-	offset	145 181
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/enemies/kusanagi/dodge00.png
+    loop    0
+    delay    16
+    offset    145 181
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/enemies/kusanagi/dodge00.png
 
 anim follow7 #counter
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	145 181
-	bbox 	132 136 32 48
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	@cmd dasher 0.5 0 0
-	frame	data/chars/enemies/kusanagi/kick00.png
-	sound	data/voices/Attack2.wav
-	frame	data/chars/enemies/kusanagi/kick01.png
-	attack 145 160 60 24 4 1 0 0 10 12
-	frame	data/chars/enemies/kusanagi/kick02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/kusanagi/kick03.png
-	bbox 	131 111 27 72
-	frame	data/chars/enemies/kusanagi/kick04.png
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    145 181
+    bbox     132 136 32 48
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    @cmd dasher 0.5 0 0
+    frame    data/chars/enemies/kusanagi/kick00.png
+    sound    data/voices/Attack2.wav
+    frame    data/chars/enemies/kusanagi/kick01.png
+    attack 145 160 60 24 4 1 0 0 10 12
+    frame    data/chars/enemies/kusanagi/kick02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/kusanagi/kick03.png
+    bbox     131 111 27 72
+    frame    data/chars/enemies/kusanagi/kick04.png
 
 
 anim dodge
-	range 0 160
-	rangea 0 100
-	rangez -48 48
-	loop	0
-	delay	6
-	offset	145 181
-	@cmd dashRandom 2 1
-	@cmd copyMove
-	sound	data/voices/Kusanagi1.wav
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd pasteMove
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd pasteMove
-	frame	data/chars/enemies/kusanagi/dodge00.png
-	@cmd pasteMove
-	frame	data/chars/enemies/kusanagi/dodge00.png
-		delay	12
-	@cmd dasher 0 0 0
-	frame	data/chars/enemies/kusanagi/dodge00.png
+    range 0 160
+    rangea 0 100
+    rangez -48 48
+    loop    0
+    delay    6
+    offset    145 181
+    @cmd dashRandom 2 1
+    @cmd copyMove
+    sound    data/voices/Kusanagi1.wav
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd pasteMove
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd pasteMove
+    frame    data/chars/enemies/kusanagi/dodge00.png
+    @cmd pasteMove
+    frame    data/chars/enemies/kusanagi/dodge00.png
+        delay    12
+    @cmd dasher 0 0 0
+    frame    data/chars/enemies/kusanagi/dodge00.png
 
 anim block
-	range 0 160
-	rangea 0 100
-	rangez -48 48
-	loop	0
-	delay	64
-	offset	133 183
-	bbox 	124 101 23 83
-	frame	data/chars/enemies/kusanagi/block00.png
+    range 0 160
+    rangea 0 100
+    rangez -48 48
+    loop    0
+    delay    64
+    offset    133 183
+    bbox     124 101 23 83
+    frame    data/chars/enemies/kusanagi/block00.png

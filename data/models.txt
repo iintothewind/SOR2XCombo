@@ -1,330 +1,330 @@
 ##MAIN
-Ajspecial					0
-Autoland					2
-Combodelay					75
-Noaircancel					0
+Ajspecial                    0
+Autoland                    2
+Combodelay                    75
+Noaircancel                    0
 offscreen_noatk_factor 1
-Nocost 						0
-Nolost 						1
-Versusdamage				1
+Nocost                         0
+Nolost                         1
+Versusdamage                1
 
 ##SELECT SCREEN
-Colourselect				1
-Spdirection 				1 1 1 1
+Colourselect                1
+Spdirection                 1 1 1 1
 
 ##MISC
-Nocheats					0
-Nodebug						1
+Nocheats                    0
+Nodebug                        1
 
 ##LIMITS
-Maxattacks					50
-Maxattacktypes			50
-Maxfollows					50
-Maxfreespecials			50
-Maxidles					  5
+Maxattacks                    50
+Maxattacktypes            50
+Maxfollows                    50
+Maxfreespecials            50
+Maxidles                      5
 
 ##BONUS
-Lifescore					9999999999
-Credscore					9999999999
-Nomaxrushreset 				2
+Lifescore                    9999999999
+Credscore                    9999999999
+Nomaxrushreset                 2
 
 ##FLASHES/EFFECTS - MAIN
-load	Flash				data/chars/misc/flash/flash.txt
-load	Flash_B				data/chars/misc/flash/flash_b.txt
-load	NoFlash				data/chars/misc/flash/noflash.txt
-load	Block				data/chars/misc/block/block.txt
-load	Block_B				data/chars/misc/block/block_b.txt
-load	Burn				data/chars/misc/burn/burn.txt
-load	Burn_B				data/chars/misc/burn/burn_b.txt
-load	Shock				data/chars/misc/shock/shock.txt
-load	Shock_B				data/chars/misc/shock/shock_b.txt
-load	Electrocute			data/chars/misc/shock/electrocute.txt
-load	Electrocute_B		data/chars/misc/shock/electrocute_b.txt
-load	Impact				data/chars/misc/impact/impact.txt
-load	Impact_B			data/chars/misc/impact/impact_b.txt
-load	Escape				data/chars/misc/escape/escape.txt
-load	Escape_B			data/chars/misc/escape/escape_b.txt
-load	Dust				data/chars/misc/dust/dust.txt
-load	Dust_B				data/chars/misc/dust/dust_b.txt
-load	Blast				data/chars/misc/explosion/blast.txt
-load	Destruction			data/chars/misc/explosion/Destruction.txt
-load	Destruction_B		data/chars/misc/explosion/Destruction_b.txt
-load	Explosion			data/chars/misc/explosion/explosion.txt
-load	Bang			data/chars/misc/explosion/bang.txt
-load	Explosion_B			data/chars/misc/explosion/explosion_b.txt
-load	QuakeLow			data/chars/misc/quake/QuakeLow.txt
-load	QuakeHigh			data/chars/misc/quake/QuakeHigh.txt
-load	Smoke				data/chars/misc/smoke/smoke.txt
-load	Smoke_B				data/chars/misc/smoke/smoke_b.txt
-load	Gas					data/chars/misc/gas/gas.txt
-load	Gas_B				data/chars/misc/gas/gas_b.txt
+load    Flash                data/chars/misc/flash/flash.txt
+load    Flash_B                data/chars/misc/flash/flash_b.txt
+load    NoFlash                data/chars/misc/flash/noflash.txt
+load    Block                data/chars/misc/block/block.txt
+load    Block_B                data/chars/misc/block/block_b.txt
+load    Burn                data/chars/misc/burn/burn.txt
+load    Burn_B                data/chars/misc/burn/burn_b.txt
+load    Shock                data/chars/misc/shock/shock.txt
+load    Shock_B                data/chars/misc/shock/shock_b.txt
+load    Electrocute            data/chars/misc/shock/electrocute.txt
+load    Electrocute_B        data/chars/misc/shock/electrocute_b.txt
+load    Impact                data/chars/misc/impact/impact.txt
+load    Impact_B            data/chars/misc/impact/impact_b.txt
+load    Escape                data/chars/misc/escape/escape.txt
+load    Escape_B            data/chars/misc/escape/escape_b.txt
+load    Dust                data/chars/misc/dust/dust.txt
+load    Dust_B                data/chars/misc/dust/dust_b.txt
+load    Blast                data/chars/misc/explosion/blast.txt
+load    Destruction            data/chars/misc/explosion/Destruction.txt
+load    Destruction_B        data/chars/misc/explosion/Destruction_b.txt
+load    Explosion            data/chars/misc/explosion/explosion.txt
+load    Bang            data/chars/misc/explosion/bang.txt
+load    Explosion_B            data/chars/misc/explosion/explosion_b.txt
+load    QuakeLow            data/chars/misc/quake/QuakeLow.txt
+load    QuakeHigh            data/chars/misc/quake/QuakeHigh.txt
+load    Smoke                data/chars/misc/smoke/smoke.txt
+load    Smoke_B                data/chars/misc/smoke/smoke_b.txt
+load    Gas                    data/chars/misc/gas/gas.txt
+load    Gas_B                data/chars/misc/gas/gas_b.txt
 
 ##FLASHES/EFFECTS - OTHERS
-load	BloodHit			data/chars/misc/bloodhit/bloodhit.txt
-load	BigBloodHit			data/chars/misc/bloodhit/BigBlood.txt
-load	RainBloodHit			data/chars/misc/bloodhit/RainBlood.txt
-load	FallHit				data/chars/misc/fallhit/fallhit.txt
-load	Counter				data/chars/misc/counter/counter.txt
-load	Rage				data/chars/misc/rage/rage.txt
-load	Splash				data/chars/misc/splash/splash.txt
-load	Water				data/chars/misc/water/water.txt
-load	Nitro				data/chars/misc/nitro/nitro.txt
+load    BloodHit            data/chars/misc/bloodhit/bloodhit.txt
+load    BigBloodHit            data/chars/misc/bloodhit/BigBlood.txt
+load    RainBloodHit            data/chars/misc/bloodhit/RainBlood.txt
+load    FallHit                data/chars/misc/fallhit/fallhit.txt
+load    Counter                data/chars/misc/counter/counter.txt
+load    Rage                data/chars/misc/rage/rage.txt
+load    Splash                data/chars/misc/splash/splash.txt
+load    Water                data/chars/misc/water/water.txt
+load    Nitro                data/chars/misc/nitro/nitro.txt
 
 ##SHARED WEAPONS
-load	Knife				data/chars/weapons/knife.txt
-load	KnifeT				data/chars/weapons/KnifeT.txt
-load	Kunai				data/chars/weapons/kunai.txt
-load	KunaiT				data/chars/weapons/KunaiT.txt
-load	ftkunai				data/chars/weapons/ftkunai.txt
-load	hftkunai				data/chars/weapons/hftkunai.txt
-load	Pipe				data/chars/weapons/pipe.txt
-load	PipeT				data/chars/weapons/PipeT.txt
-load	Sword				data/chars/weapons/sword.txt
-load	SwordT				data/chars/weapons/SwordT.txt
-load	Cartridge			data/chars/weapons/cartridge.txt
+load    Knife                data/chars/weapons/knife.txt
+load    KnifeT                data/chars/weapons/KnifeT.txt
+load    Kunai                data/chars/weapons/kunai.txt
+load    KunaiT                data/chars/weapons/KunaiT.txt
+load    ftkunai                data/chars/weapons/ftkunai.txt
+load    hftkunai                data/chars/weapons/hftkunai.txt
+load    Pipe                data/chars/weapons/pipe.txt
+load    PipeT                data/chars/weapons/PipeT.txt
+load    Sword                data/chars/weapons/sword.txt
+load    SwordT                data/chars/weapons/SwordT.txt
+load    Cartridge            data/chars/weapons/cartridge.txt
 
 ##ITENS
-load	1up					data/chars/itens/1up.txt
-load	Apple				data/chars/itens/apple.txt
-load	Cash				data/chars/itens/cash.txt
-load	Chicken				data/chars/itens/chicken.txt
-load	Gold				data/chars/itens/gold.txt
-load	None				data/chars/itens/none.txt
+load    1up                    data/chars/itens/1up.txt
+load    Apple                data/chars/itens/apple.txt
+load    Cash                data/chars/itens/cash.txt
+load    Chicken                data/chars/itens/chicken.txt
+load    Gold                data/chars/itens/gold.txt
+load    None                data/chars/itens/none.txt
 
 ##OBSTACLES
-know	Arcade				data/chars/obstacles/arcade.txt
-know	Barrel_A			data/chars/obstacles/barrel_a.txt
-know	Barrel_B			data/chars/obstacles/barrel_b.txt
-know	Barrel_Drop			data/chars/obstacles/barrel_drop.txt
-know	Barrel_Roll			data/chars/obstacles/barrel_roll.txt
-know	Bin_A				data/chars/obstacles/bin_a.txt
-know	Bin_B				data/chars/obstacles/bin_b.txt
-know	BlockadeZ			data/chars/obstacles/blockadeZ.txt
-know	Board				data/chars/obstacles/board.txt
-know	Box_A				data/chars/obstacles/box_a.txt
-know	Box_B				data/chars/obstacles/box_b.txt
-know	Box_C				data/chars/obstacles/box_c.txt
-know	Box_D				data/chars/obstacles/box_d.txt
-know	Box_E				data/chars/obstacles/box_e.txt
-know	Cart				data/chars/obstacles/cart.txt
-know	Chair				data/chars/obstacles/chair.txt
-know	Computer			data/chars/obstacles/computer.txt
-know	ComputerS			data/chars/obstacles/computerS.txt
-know	Drum				data/chars/obstacles/drum.txt
-know	Egg					data/chars/obstacles/egg.txt
-know	Floater				data/chars/obstacles/floater.txt
-know	FakeWall			data/chars/obstacles/fakewall.txt
-know	Menu				data/chars/obstacles/menu.txt
-know	RoadBlock_A			data/chars/obstacles/roadblock_a.txt
-know	RoadBlock_B			data/chars/obstacles/roadblock_b.txt
-know	Sandbag				data/chars/obstacles/sandbag.txt
-know	Statue_A			data/chars/obstacles/statue_a.txt
-know	Statue_B			data/chars/obstacles/statue_b.txt
-know	Table				data/chars/obstacles/table.txt
-know	Tire				data/chars/obstacles/tire.txt
-know	Trash				data/chars/obstacles/trash.txt
-know	Vase				data/chars/obstacles/vase.txt
-know	Lantern				data/chars/obstacles/lantern.txt
-know	Wall				data/chars/obstacles/wall.txt
-know	cabine		data/chars/obstacles/cabine.txt
+know    Arcade                data/chars/obstacles/arcade.txt
+know    Barrel_A            data/chars/obstacles/barrel_a.txt
+know    Barrel_B            data/chars/obstacles/barrel_b.txt
+know    Barrel_Drop            data/chars/obstacles/barrel_drop.txt
+know    Barrel_Roll            data/chars/obstacles/barrel_roll.txt
+know    Bin_A                data/chars/obstacles/bin_a.txt
+know    Bin_B                data/chars/obstacles/bin_b.txt
+know    BlockadeZ            data/chars/obstacles/blockadeZ.txt
+know    Board                data/chars/obstacles/board.txt
+know    Box_A                data/chars/obstacles/box_a.txt
+know    Box_B                data/chars/obstacles/box_b.txt
+know    Box_C                data/chars/obstacles/box_c.txt
+know    Box_D                data/chars/obstacles/box_d.txt
+know    Box_E                data/chars/obstacles/box_e.txt
+know    Cart                data/chars/obstacles/cart.txt
+know    Chair                data/chars/obstacles/chair.txt
+know    Computer            data/chars/obstacles/computer.txt
+know    ComputerS            data/chars/obstacles/computerS.txt
+know    Drum                data/chars/obstacles/drum.txt
+know    Egg                    data/chars/obstacles/egg.txt
+know    Floater                data/chars/obstacles/floater.txt
+know    FakeWall            data/chars/obstacles/fakewall.txt
+know    Menu                data/chars/obstacles/menu.txt
+know    RoadBlock_A            data/chars/obstacles/roadblock_a.txt
+know    RoadBlock_B            data/chars/obstacles/roadblock_b.txt
+know    Sandbag                data/chars/obstacles/sandbag.txt
+know    Statue_A            data/chars/obstacles/statue_a.txt
+know    Statue_B            data/chars/obstacles/statue_b.txt
+know    Table                data/chars/obstacles/table.txt
+know    Tire                data/chars/obstacles/tire.txt
+know    Trash                data/chars/obstacles/trash.txt
+know    Vase                data/chars/obstacles/vase.txt
+know    Lantern                data/chars/obstacles/lantern.txt
+know    Wall                data/chars/obstacles/wall.txt
+know    cabine        data/chars/obstacles/cabine.txt
 
 ##VEHICLES
-know	Bike				data/chars/vehicles/bike.txt
-know	Boat				data/chars/vehicles/boat.txt
-know	Bulldozer			data/chars/vehicles/bulldozer.txt
-know	Train				data/chars/vehicles/train.txt
+know    Bike                data/chars/vehicles/bike.txt
+know    Boat                data/chars/vehicles/boat.txt
+know    Bulldozer            data/chars/vehicles/bulldozer.txt
+know    Train                data/chars/vehicles/train.txt
 
 ##TEXTS
-load	Moves				data/chars/misc/text/moves.txt
-know	Fight				data/chars/misc/text/fight.txt
-know	Stage				data/chars/misc/text/stage.txt
-know	Number				data/chars/misc/text/number.txt
-know	Start				data/chars/misc/text/start.txt
-know	Level_Menu			data/chars/misc/text/level_menu.txt
-know	Survival_Menu		data/chars/misc/text/survival_menu.txt
-know	Dojo_Menu		data/chars/misc/text/dojo_menu.txt
-know	Fade				data/chars/misc/text/fade.txt
+load    Moves                data/chars/misc/text/moves.txt
+know    Fight                data/chars/misc/text/fight.txt
+know    Stage                data/chars/misc/text/stage.txt
+know    Number                data/chars/misc/text/number.txt
+know    Start                data/chars/misc/text/start.txt
+know    Level_Menu            data/chars/misc/text/level_menu.txt
+know    Survival_Menu        data/chars/misc/text/survival_menu.txt
+know    Dojo_Menu        data/chars/misc/text/dojo_menu.txt
+know    Fade                data/chars/misc/text/fade.txt
 
 ##NUMBERS
-load	0					data/chars/misc/text/0.txt
-load	1					data/chars/misc/text/1.txt
-load	2					data/chars/misc/text/2.txt
-load	3					data/chars/misc/text/3.txt
-load	4					data/chars/misc/text/4.txt
-load	5					data/chars/misc/text/5.txt
-load	6					data/chars/misc/text/6.txt
-load	7					data/chars/misc/text/7.txt
-load	8					data/chars/misc/text/8.txt
-load	9					data/chars/misc/text/9.txt
-load	null				data/chars/misc/text/null.txt
+load    0                    data/chars/misc/text/0.txt
+load    1                    data/chars/misc/text/1.txt
+load    2                    data/chars/misc/text/2.txt
+load    3                    data/chars/misc/text/3.txt
+load    4                    data/chars/misc/text/4.txt
+load    5                    data/chars/misc/text/5.txt
+load    6                    data/chars/misc/text/6.txt
+load    7                    data/chars/misc/text/7.txt
+load    8                    data/chars/misc/text/8.txt
+load    9                    data/chars/misc/text/9.txt
+load    null                data/chars/misc/text/null.txt
 
 ##STAGES - SOR1
-know	L01		data/bgs/sor1/st01/L01.txt
-know	L02		data/bgs/sor1/st01/L02.txt
-know	L03		data/bgs/sor1/st01/L03.txt
-know	L04		data/bgs/sor1/st01/L04.txt
-know	L05		data/bgs/sor1/st01/L05.txt
-know	L06		data/bgs/sor1/st01/L06.txt
-know	L07		data/bgs/sor1/st01/L07.txt
-know	Barl		data/bgs/sor1/st01/Barl.txt
-know	Porta		data/bgs/sor1/st01/porta.txt
-know	Cafe		data/bgs/sor1/st01/cafe.txt
+know    L01        data/bgs/sor1/st01/L01.txt
+know    L02        data/bgs/sor1/st01/L02.txt
+know    L03        data/bgs/sor1/st01/L03.txt
+know    L04        data/bgs/sor1/st01/L04.txt
+know    L05        data/bgs/sor1/st01/L05.txt
+know    L06        data/bgs/sor1/st01/L06.txt
+know    L07        data/bgs/sor1/st01/L07.txt
+know    Barl        data/bgs/sor1/st01/Barl.txt
+know    Porta        data/bgs/sor1/st01/porta.txt
+know    Cafe        data/bgs/sor1/st01/cafe.txt
 
-know	Poster		data/bgs/sor1/st02/Poster.txt
-know	vento		data/bgs/sor1/st02/Vento.txt
-know	Gota		data/bgs/sor1/st02/Gota.txt
+know    Poster        data/bgs/sor1/st02/Poster.txt
+know    vento        data/bgs/sor1/st02/Vento.txt
+know    Gota        data/bgs/sor1/st02/Gota.txt
 
-know	Onda		data/bgs/sor1/st03/Onda.txt
-know	Chuva		data/bgs/sor1/st03/Chuva.txt
+know    Onda        data/bgs/sor1/st03/Onda.txt
+know    Chuva        data/bgs/sor1/st03/Chuva.txt
 
-know	Buraco		data/bgs/sor1/st04/Buraco.txt
+know    Buraco        data/bgs/sor1/st04/Buraco.txt
 
-know	Prensa01	data/bgs/sor1/st06/Prensa01.txt
-know	Prensa02	data/bgs/sor1/st06/Prensa02.txt
+know    Prensa01    data/bgs/sor1/st06/Prensa01.txt
+know    Prensa02    data/bgs/sor1/st06/Prensa02.txt
 
-know	elevador01	data/bgs/sor1/st07/elevador01.txt
-know	elevador02	data/bgs/sor1/st07/elevador02.txt
+know    elevador01    data/bgs/sor1/st07/elevador01.txt
+know    elevador02    data/bgs/sor1/st07/elevador02.txt
 
-know	Mx01		data/bgs/sor1/st08/Mx01.txt
-know	Mx02		data/bgs/sor1/st08/Mx02.txt
+know    Mx01        data/bgs/sor1/st08/Mx01.txt
+know    Mx02        data/bgs/sor1/st08/Mx02.txt
 
 
 ##STAGES - SOR2
-load	Select_Menu			data/bgs/select/select_menu.txt
-load	Cursor_A			data/bgs/select/cursor_a.txt
-load	Cursor_B			data/bgs/select/cursor_b.txt
-load	Route_Up			data/bgs/route/route_up.txt
-load	Route_Down			data/bgs/route/route_down.txt
-load	Route_Left			data/bgs/route/route_left.txt
-load	Route_Right			data/bgs/route/route_right.txt
-load	RouteS				data/bgs/route/routeS.txt
+load    Select_Menu            data/bgs/select/select_menu.txt
+load    Cursor_A            data/bgs/select/cursor_a.txt
+load    Cursor_B            data/bgs/select/cursor_b.txt
+load    Route_Up            data/bgs/route/route_up.txt
+load    Route_Down            data/bgs/route/route_down.txt
+load    Route_Left            data/bgs/route/route_left.txt
+load    Route_Right            data/bgs/route/route_right.txt
+load    RouteS                data/bgs/route/routeS.txt
 
-know	St1_Dunk_A			data/bgs/sor2/st1a/dunk_a.txt
-know	St1_Dunk_B			data/bgs/sor2/st1a/dunk_b.txt
-know	St1_Rim				data/bgs/sor2/st1a/rim.txt
-know	St1_Manhole			data/bgs/sor2/st1a/manhole.txt
-know	St1_Gate			data/bgs/sor2/st1a/gate.txt
-know	St1_Light			data/bgs/sor2/st1b/light.txt
-know	St1_Light_B			data/bgs/sor2/st1b/light_b.txt
-know	St1_Rain			data/bgs/sor2/st1c/rain.txt
-know	St1_Rain_B			data/bgs/sor2/st1c/rain_b.txt
-know	St1_Drop			data/bgs/sor2/st1c/drop.txt
-know	St1_Drop_B			data/bgs/sor2/st1c/drop_b.txt
-know	St1_Ray				data/bgs/sor2/st1c/ray.txt
-know	St1_Ray_B			data/bgs/sor2/st1c/ray_b.txt
-know	St1_Thunder			data/bgs/sor2/st1c/thunder.txt
-know	St1_Thunder_B		data/bgs/sor2/st1c/thunder_b.txt
+know    St1_Dunk_A            data/bgs/sor2/st1a/dunk_a.txt
+know    St1_Dunk_B            data/bgs/sor2/st1a/dunk_b.txt
+know    St1_Rim                data/bgs/sor2/st1a/rim.txt
+know    St1_Manhole            data/bgs/sor2/st1a/manhole.txt
+know    St1_Gate            data/bgs/sor2/st1a/gate.txt
+know    St1_Light            data/bgs/sor2/st1b/light.txt
+know    St1_Light_B            data/bgs/sor2/st1b/light_b.txt
+know    St1_Rain            data/bgs/sor2/st1c/rain.txt
+know    St1_Rain_B            data/bgs/sor2/st1c/rain_b.txt
+know    St1_Drop            data/bgs/sor2/st1c/drop.txt
+know    St1_Drop_B            data/bgs/sor2/st1c/drop_b.txt
+know    St1_Ray                data/bgs/sor2/st1c/ray.txt
+know    St1_Ray_B            data/bgs/sor2/st1c/ray_b.txt
+know    St1_Thunder            data/bgs/sor2/st1c/thunder.txt
+know    St1_Thunder_B        data/bgs/sor2/st1c/thunder_b.txt
 
-know	St2_TruckS			data/bgs/sor2/st2b/truckS.txt
-know	St2_Lamp			data/bgs/sor2/st2c/lamp.txt
+know    St2_TruckS            data/bgs/sor2/st2b/truckS.txt
+know    St2_Lamp            data/bgs/sor2/st2c/lamp.txt
 
-know	St3_Entrance1		data/bgs/sor2/st3a/entrance1.txt
-know	St3_Entrance2		data/bgs/sor2/st3a/entrance2.txt
-know	St3_Entrance3		data/bgs/sor2/st3a/entrance3.txt
-know	St3_Entrance3S		data/bgs/sor2/st3a/entrance3S.txt
+know    St3_Entrance1        data/bgs/sor2/st3a/entrance1.txt
+know    St3_Entrance2        data/bgs/sor2/st3a/entrance2.txt
+know    St3_Entrance3        data/bgs/sor2/st3a/entrance3.txt
+know    St3_Entrance3S        data/bgs/sor2/st3a/entrance3S.txt
 
-know	St4_Live_Screen		data/bgs/sor2/st4b/live_screen.txt
+know    St4_Live_Screen        data/bgs/sor2/st4b/live_screen.txt
 
-know	St6_Beach			data/bgs/sor2/st6a/beach.txt
+know    St6_Beach            data/bgs/sor2/st6a/beach.txt
 
-know	St7_Machine1		data/bgs/sor2/st7a/machine1.txt
-know	St7_Machine1S		data/bgs/sor2/st7a/machine1S.txt
-know	St7_Machine2		data/bgs/sor2/st7a/machine2.txt
-know	St7_Machine2S		data/bgs/sor2/st7a/machine2S.txt
-know	St7_Elevator		data/bgs/sor2/st7b/elevator.txt
-know	St7_ElevatorS		data/bgs/sor2/st7b/elevatorS.txt
-know	St7_Machine3		data/bgs/sor2/st7c/machine3.txt
-know	St7_Machine3S		data/bgs/sor2/st7c/machine3S.txt
-know	St7_Cannon			data/bgs/sor2/st7c/cannon.txt
-know	St7_Ray				data/bgs/sor2/st7c/ray.txt
-know	St7_Siren			data/bgs/sor2/st7c/siren.txt
+know    St7_Machine1        data/bgs/sor2/st7a/machine1.txt
+know    St7_Machine1S        data/bgs/sor2/st7a/machine1S.txt
+know    St7_Machine2        data/bgs/sor2/st7a/machine2.txt
+know    St7_Machine2S        data/bgs/sor2/st7a/machine2S.txt
+know    St7_Elevator        data/bgs/sor2/st7b/elevator.txt
+know    St7_ElevatorS        data/bgs/sor2/st7b/elevatorS.txt
+know    St7_Machine3        data/bgs/sor2/st7c/machine3.txt
+know    St7_Machine3S        data/bgs/sor2/st7c/machine3S.txt
+know    St7_Cannon            data/bgs/sor2/st7c/cannon.txt
+know    St7_Ray                data/bgs/sor2/st7c/ray.txt
+know    St7_Siren            data/bgs/sor2/st7c/siren.txt
 
-know	St8_Elevator		data/bgs/sor2/st8b/elevator.txt
-know	St8_ElevatorS		data/bgs/sor2/st8b/elevatorS.txt
+know    St8_Elevator        data/bgs/sor2/st8b/elevator.txt
+know    St8_ElevatorS        data/bgs/sor2/st8b/elevatorS.txt
 
 ##STAGES - SOR3
-know	St1_Chains			data/bgs/sor3/st1a/chains.txt
-know	St1_Waves			data/bgs/sor3/st1b/waves.txt
-know	St1_Wave_Splash		data/bgs/sor3/st1b/wave_splash.txt
-know	St1_Cat				data/bgs/sor3/st1c/cat.txt
+know    St1_Chains            data/bgs/sor3/st1a/chains.txt
+know    St1_Waves            data/bgs/sor3/st1b/waves.txt
+know    St1_Wave_Splash        data/bgs/sor3/st1b/wave_splash.txt
+know    St1_Cat                data/bgs/sor3/st1c/cat.txt
 
-know	St2_Disco1			data/bgs/sor3/st2b/disco1.txt
-know	St2_Disco2			data/bgs/sor3/st2b/disco2.txt
-know	St2_People			data/bgs/sor3/st2b/people.txt
-know	St2_Laser			data/bgs/sor3/st2b/laser.txt
-know	St2_Light			data/bgs/sor3/st2c/light.txt
-know	St2_Light_B			data/bgs/sor3/st2c/light_b.txt
-know	St2_Fish1			data/bgs/sor3/st2c/fish1.txt
-know	St2_Fish2			data/bgs/sor3/st2c/fish2.txt
+know    St2_Disco1            data/bgs/sor3/st2b/disco1.txt
+know    St2_Disco2            data/bgs/sor3/st2b/disco2.txt
+know    St2_People            data/bgs/sor3/st2b/people.txt
+know    St2_Laser            data/bgs/sor3/st2b/laser.txt
+know    St2_Light            data/bgs/sor3/st2c/light.txt
+know    St2_Light_B            data/bgs/sor3/st2c/light_b.txt
+know    St2_Fish1            data/bgs/sor3/st2c/fish1.txt
+know    St2_Fish2            data/bgs/sor3/st2c/fish2.txt
 
-know	St3_Lamps			data/bgs/sor3/st3a/lamps.txt
-know	St3_Gate1			data/bgs/sor3/st3a/gate1.txt
-know	St3_Gate1S			data/bgs/sor3/st3a/gate1S.txt
-know	St3_Gate2			data/bgs/sor3/st3a/gate2.txt
-know	St3_Trash1			data/bgs/sor3/st3a/trash1.txt
-know	St3_Trash2			data/bgs/sor3/st3a/trash2.txt
-know	St3_Column			data/bgs/sor3/st3b/column.txt
-know	St3_Elevator		data/bgs/sor3/st3c/elevator.txt
-know	St3_ElevatorS		data/bgs/sor3/st3c/elevatorS.txt
-know	St3_ElevatorG		data/bgs/sor3/st3c/elevatorG.txt
+know    St3_Lamps            data/bgs/sor3/st3a/lamps.txt
+know    St3_Gate1            data/bgs/sor3/st3a/gate1.txt
+know    St3_Gate1S            data/bgs/sor3/st3a/gate1S.txt
+know    St3_Gate2            data/bgs/sor3/st3a/gate2.txt
+know    St3_Trash1            data/bgs/sor3/st3a/trash1.txt
+know    St3_Trash2            data/bgs/sor3/st3a/trash2.txt
+know    St3_Column            data/bgs/sor3/st3b/column.txt
+know    St3_Elevator        data/bgs/sor3/st3c/elevator.txt
+know    St3_ElevatorS        data/bgs/sor3/st3c/elevatorS.txt
+know    St3_ElevatorG        data/bgs/sor3/st3c/elevatorG.txt
 
-know	St4_RailsX2			data/bgs/sor3/st4a/railsX2.txt
-know	St4_RailsX1			data/bgs/sor3/st4b/railsX1.txt
-know	St4_Door1			data/bgs/sor3/st4c/door1.txt
-know	St4_Door2			data/bgs/sor3/st4c/door2.txt
+know    St4_RailsX2            data/bgs/sor3/st4a/railsX2.txt
+know    St4_RailsX1            data/bgs/sor3/st4b/railsX1.txt
+know    St4_Door1            data/bgs/sor3/st4c/door1.txt
+know    St4_Door2            data/bgs/sor3/st4c/door2.txt
 
-know	St5_Elevator		data/bgs/sor3/st5e/elevator.txt
-know	St5_ElevatorS		data/bgs/sor3/st5e/elevatorS.txt
+know    St5_Elevator        data/bgs/sor3/st5e/elevator.txt
+know    St5_ElevatorS        data/bgs/sor3/st5e/elevatorS.txt
 
-know	St6_Elevator_Sor3	data/bgs/sor3/st6a/elevator.txt
-know	St6_Panel_Down		data/bgs/sor3/st6a/panel_down.txt
-know	St6_Panel_Up		data/bgs/sor3/st6a/panel_up.txt
-know	St6_Rooms			data/bgs/sor3/st6a/rooms.txt
-know	St6_Exit			data/bgs/sor3/st6a/exit.txt
-know	St6_Locks			data/bgs/sor3/st6a/locks.txt
-know	St6_Gate			data/bgs/sor3/st6a/gate.txt
-know	St6_Alarm			data/bgs/sor3/st6a/alarm.txt
-know	St6_Gas				data/bgs/sor3/st6a/gas.txt
-know	St6_General			data/bgs/sor3/st6a/general.txt
-know	St6_LaserGrid		data/bgs/sor3/st6a/laser.txt
-know	St6_Computer		data/bgs/sor3/st6b/computer.txt
-know	St6_Shooter1		data/bgs/sor3/st6c/shooter.txt
-know	St6_Laser1			data/bgs/sor3/st6c/laser.txt
-know	St6_Laser2			data/bgs/sor3/st6d/laser.txt
-know	St6_Dot				data/bgs/sor3/st6d/dot.txt
-know	St6_Laser3			data/bgs/sor3/st6e/laser.txt
-know	St6_Spark			data/bgs/sor3/st6f/spark.txt
+know    St6_Elevator_Sor3    data/bgs/sor3/st6a/elevator.txt
+know    St6_Panel_Down        data/bgs/sor3/st6a/panel_down.txt
+know    St6_Panel_Up        data/bgs/sor3/st6a/panel_up.txt
+know    St6_Rooms            data/bgs/sor3/st6a/rooms.txt
+know    St6_Exit            data/bgs/sor3/st6a/exit.txt
+know    St6_Locks            data/bgs/sor3/st6a/locks.txt
+know    St6_Gate            data/bgs/sor3/st6a/gate.txt
+know    St6_Alarm            data/bgs/sor3/st6a/alarm.txt
+know    St6_Gas                data/bgs/sor3/st6a/gas.txt
+know    St6_General            data/bgs/sor3/st6a/general.txt
+know    St6_LaserGrid        data/bgs/sor3/st6a/laser.txt
+know    St6_Computer        data/bgs/sor3/st6b/computer.txt
+know    St6_Shooter1        data/bgs/sor3/st6c/shooter.txt
+know    St6_Laser1            data/bgs/sor3/st6c/laser.txt
+know    St6_Laser2            data/bgs/sor3/st6d/laser.txt
+know    St6_Dot                data/bgs/sor3/st6d/dot.txt
+know    St6_Laser3            data/bgs/sor3/st6e/laser.txt
+know    St6_Spark            data/bgs/sor3/st6f/spark.txt
 
-know	St7_Light			data/bgs/sor3/st7c/light.txt
-know	St7_Light_B			data/bgs/sor3/st7c/light_b.txt
-know	St7_People			data/bgs/sor3/st7c/people.txt
-know	St7_Tv				data/bgs/sor3/st7c/tv.txt
-know	St7_Flash			data/bgs/sor3/st7c/flash.txt
+know    St7_Light            data/bgs/sor3/st7c/light.txt
+know    St7_Light_B            data/bgs/sor3/st7c/light_b.txt
+know    St7_People            data/bgs/sor3/st7c/people.txt
+know    St7_Tv                data/bgs/sor3/st7c/tv.txt
+know    St7_Flash            data/bgs/sor3/st7c/flash.txt
 
-know	St8_Bush			data/bgs/sor3/st8a/bush.txt
-know	St8_ElevatorF		data/bgs/sor3/st8b/elevatorF.txt
-know	St8_ElevatorFS		data/bgs/sor3/st8b/elevatorFS.txt
-know	St8_Cannon			data/bgs/sor3/st8c/cannon.txt
-know	St8_Doctor			data/bgs/sor3/st8c/doctor.txt
-know	St8_DoctorS			data/bgs/sor3/st8c/doctorS.txt
-know	St8_Laser			data/bgs/sor3/st8c/laser.txt
-know	St8_Machine1		data/bgs/sor3/st8c/machine1.txt
-know	St8_Machine1S		data/bgs/sor3/st8c/machine1S.txt
-know	St8_Machine2		data/bgs/sor3/st8c/machine2.txt
-know	St8_Machine2S		data/bgs/sor3/st8c/machine2S.txt
-know	St8_Leds			data/bgs/sor3/st8d/leds.txt
-know	St8_Left_Wall		data/bgs/sor3/st8d/left_wall.txt
-know	St8_Machine3		data/bgs/sor3/st8d/machine3.txt
-know	St8_Machine3Sa		data/bgs/sor3/st8d/machine3Sa.txt
-know	St8_Machine3Sb		data/bgs/sor3/st8d/machine3Sb.txt
-know	St8_Machine3Sc		data/bgs/sor3/st8d/machine3Sc.txt
-know	St8_Ray				data/bgs/sor3/st8d/ray.txt
-know	St8_Right_Wall		data/bgs/sor3/st8d/right_wall.txt
-know	St8_Dr_Zero			data/bgs/sor3/st8d/zero.txt
-know	St8_Alarm			data/bgs/sor3/st8e/alarm.txt
-know	St8_Bubble			data/bgs/sor3/st8e/bubble.txt
-know	St8_Emergency		data/bgs/sor3/st8e/emergency.txt
-know	St8_Liquid			data/bgs/sor3/st8e/liquid.txt
+know    St8_Bush            data/bgs/sor3/st8a/bush.txt
+know    St8_ElevatorF        data/bgs/sor3/st8b/elevatorF.txt
+know    St8_ElevatorFS        data/bgs/sor3/st8b/elevatorFS.txt
+know    St8_Cannon            data/bgs/sor3/st8c/cannon.txt
+know    St8_Doctor            data/bgs/sor3/st8c/doctor.txt
+know    St8_DoctorS            data/bgs/sor3/st8c/doctorS.txt
+know    St8_Laser            data/bgs/sor3/st8c/laser.txt
+know    St8_Machine1        data/bgs/sor3/st8c/machine1.txt
+know    St8_Machine1S        data/bgs/sor3/st8c/machine1S.txt
+know    St8_Machine2        data/bgs/sor3/st8c/machine2.txt
+know    St8_Machine2S        data/bgs/sor3/st8c/machine2S.txt
+know    St8_Leds            data/bgs/sor3/st8d/leds.txt
+know    St8_Left_Wall        data/bgs/sor3/st8d/left_wall.txt
+know    St8_Machine3        data/bgs/sor3/st8d/machine3.txt
+know    St8_Machine3Sa        data/bgs/sor3/st8d/machine3Sa.txt
+know    St8_Machine3Sb        data/bgs/sor3/st8d/machine3Sb.txt
+know    St8_Machine3Sc        data/bgs/sor3/st8d/machine3Sc.txt
+know    St8_Ray                data/bgs/sor3/st8d/ray.txt
+know    St8_Right_Wall        data/bgs/sor3/st8d/right_wall.txt
+know    St8_Dr_Zero            data/bgs/sor3/st8d/zero.txt
+know    St8_Alarm            data/bgs/sor3/st8e/alarm.txt
+know    St8_Bubble            data/bgs/sor3/st8e/bubble.txt
+know    St8_Emergency        data/bgs/sor3/st8e/emergency.txt
+know    St8_Liquid            data/bgs/sor3/st8e/liquid.txt
 
 ##Dojo
 know  sea01         data/bgs/dojo/sea01/sea01.txt
@@ -334,514 +334,514 @@ know  chinaTownBg1  data/bgs/dojo/chinatown/china_town_bg1.txt
 know  chinaTownBg2  data/bgs/dojo/chinatown/china_town_bg2.txt
 
 ##ENDINGS
-load	Ending_A			data/scenes/ending_a/ending_a.txt
-know	Ending_A1			data/scenes/ending_a/ending_a1.txt
-know	Ending_A2			data/scenes/ending_a/ending_a2.txt
+load    Ending_A            data/scenes/ending_a/ending_a.txt
+know    Ending_A1            data/scenes/ending_a/ending_a1.txt
+know    Ending_A2            data/scenes/ending_a/ending_a2.txt
 
-load	Ending_B			data/scenes/ending_b/ending_b.txt
-know	Ending_B1			data/scenes/ending_b/ending_b1.txt
-know	Ending_B2			data/scenes/ending_b/ending_b2.txt
-know	Ending_B3			data/scenes/ending_b/ending_b3.txt
-know	Ending_B4			data/scenes/ending_b/ending_b4.txt
-know	Ending_B5			data/scenes/ending_b/ending_b5.txt
+load    Ending_B            data/scenes/ending_b/ending_b.txt
+know    Ending_B1            data/scenes/ending_b/ending_b1.txt
+know    Ending_B2            data/scenes/ending_b/ending_b2.txt
+know    Ending_B3            data/scenes/ending_b/ending_b3.txt
+know    Ending_B4            data/scenes/ending_b/ending_b4.txt
+know    Ending_B5            data/scenes/ending_b/ending_b5.txt
 
-load	Ending_C			data/scenes/ending_c/ending_c.txt
-know	Ending_C1			data/scenes/ending_c/ending_c1.txt
-know	Ending_C2			data/scenes/ending_c/ending_c2.txt
+load    Ending_C            data/scenes/ending_c/ending_c.txt
+know    Ending_C1            data/scenes/ending_c/ending_c1.txt
+know    Ending_C2            data/scenes/ending_c/ending_c2.txt
 
 ##PLAYABLE HEROES
-load	Axel				data/chars/heroes/axel/axel.txt
-load	Blaze				data/chars/heroes/blaze/blaze.txt
-load	Max					data/chars/heroes/max/max.txt
-load	Sammy				data/chars/heroes/sammy/sammy.txt
-load	Adam				data/chars/heroes/adam/adam.txt
-load	Zan					data/chars/heroes/zan/zan.txt
+load    Axel                data/chars/heroes/axel/axel.txt
+load    Blaze                data/chars/heroes/blaze/blaze.txt
+load    Max                    data/chars/heroes/max/max.txt
+load    Sammy                data/chars/heroes/sammy/sammy.txt
+load    Adam                data/chars/heroes/adam/adam.txt
+load    Zan                    data/chars/heroes/zan/zan.txt
 
 ##PLAYABLE ENEMIES - SOR2
-load	Galsia				data/chars/enemies/galsia/galsiaP.txt
-load	Donovan				data/chars/enemies/donovan/donovanP.txt
-load	Signal				data/chars/enemies/signal/signalP.txt
-load	Fog					data/chars/enemies/fog/fogP.txt
-load	Hakuyo				data/chars/enemies/hakuyo/hakuyoP.txt
-load	Kusanagi			data/chars/enemies/kusanagi/kusanagiP.txt
-load	Raven				data/chars/enemies/raven/ravenP.txt
-load	Big-Ben				data/chars/enemies/bigben/bigbenP.txt
-load	Electra_			data/chars/enemies/reine/reineP.txt
-load	Jack				data/chars/enemies/jack/jackP.txt
+load    Galsia                data/chars/enemies/galsia/galsiaP.txt
+load    Donovan                data/chars/enemies/donovan/donovanP.txt
+load    Signal                data/chars/enemies/signal/signalP.txt
+load    Fog                    data/chars/enemies/fog/fogP.txt
+load    Hakuyo                data/chars/enemies/hakuyo/hakuyoP.txt
+load    Kusanagi            data/chars/enemies/kusanagi/kusanagiP.txt
+load    Raven                data/chars/enemies/raven/ravenP.txt
+load    Big-Ben                data/chars/enemies/bigben/bigbenP.txt
+load    Electra_            data/chars/enemies/reine/reineP.txt
+load    Jack                data/chars/enemies/jack/jackP.txt
 
 ##PLAYABLE BOSSES - SOR2
-load	Barbon				data/chars/bosses/barbon/barbonP.txt
-load	Jet					data/chars/bosses/jet/jetP.txt
-load	Zamza				data/chars/bosses/zamza/zamzaP.txt
-load	Abadede				data/chars/bosses/abadede/abadedeP.txt
-load	R._Bear				data/chars/bosses/bear/bearP.txt
-load	Particle			data/chars/bosses/particle/particleP.txt
-load	Shiva				data/chars/bosses/shiva/shivaP.txt
-load	Mr._X				data/chars/bosses/mrx/mrxP.txt
+load    Barbon                data/chars/bosses/barbon/barbonP.txt
+load    Jet                    data/chars/bosses/jet/jetP.txt
+load    Zamza                data/chars/bosses/zamza/zamzaP.txt
+load    Abadede                data/chars/bosses/abadede/abadedeP.txt
+load    R._Bear                data/chars/bosses/bear/bearP.txt
+load    Particle            data/chars/bosses/particle/particleP.txt
+load    Shiva                data/chars/bosses/shiva/shivaP.txt
+load    Mr._X                data/chars/bosses/mrx/mrxP.txt
 
 ##PLAYABLE ENEMIES - SOR3
-load	Slum				data/chars/enemies/slum/slumP.txt
-load	Vice				data/chars/enemies/vice/viceP.txt
-load	Garnet				data/chars/enemies/garnet/garnetP.txt
-load	Macleod				data/chars/enemies/macleod/macleodP.txt
-load	Tiger				data/chars/enemies/tiger/tigerP.txt
-load	P1					data/chars/enemies/p1/p1P.txt
-load	Bongo				data/chars/enemies/bongo/bongoP.txt
-load	Electra				data/chars/enemies/electra/electraP.txt
-load	Ash					data/chars/enemies/ash/ashP.txt
-load	Bruce				data/chars/enemies/bruce/bruceP.txt
-load	Roo					data/chars/enemies/roo/rooP.txt
+load    Slum                data/chars/enemies/slum/slumP.txt
+load    Vice                data/chars/enemies/vice/viceP.txt
+load    Garnet                data/chars/enemies/garnet/garnetP.txt
+load    Macleod                data/chars/enemies/macleod/macleodP.txt
+load    Tiger                data/chars/enemies/tiger/tigerP.txt
+load    P1                    data/chars/enemies/p1/p1P.txt
+load    Bongo                data/chars/enemies/bongo/bongoP.txt
+load    Electra                data/chars/enemies/electra/electraP.txt
+load    Ash                    data/chars/enemies/ash/ashP.txt
+load    Bruce                data/chars/enemies/bruce/bruceP.txt
+load    Roo                    data/chars/enemies/roo/rooP.txt
 
 ##PLAYABLE BOSSES - SOR3
-load	Monalisa			data/chars/bosses/monalisa/monalisaP.txt
-load	Break				data/chars/heroes/axel/breakP.txt
-load	Yamato				data/chars/bosses/yamato/yamatoP.txt
-load	Robot_X				data/chars/bosses/robotx/robotxP.txt
-load	Jet_				data/chars/bosses/rocket/rocketP.txt
-load	Shiva_				data/chars/bosses/shivabot/shiva_botP.txt
-load	Neo._X				data/chars/bosses/neox/neoxP.txt
+load    Monalisa            data/chars/bosses/monalisa/monalisaP.txt
+load    Break                data/chars/heroes/axel/breakP.txt
+load    Yamato                data/chars/bosses/yamato/yamatoP.txt
+load    Robot_X                data/chars/bosses/robotx/robotxP.txt
+load    Jet_                data/chars/bosses/rocket/rocketP.txt
+load    Shiva_                data/chars/bosses/shivabot/shiva_botP.txt
+load    Neo._X                data/chars/bosses/neox/neoxP.txt
 
 ##PLAYABLE BOSSES - BARE KNUCKLE MOBILE
-load	Harakiri			data/chars/bosses/harakiri/harakiriP.txt
+load    Harakiri            data/chars/bosses/harakiri/harakiriP.txt
 
 ##PLAYABLE BOSSES - SOR2 GAME GEAR
-load	Tracker				data/chars/bosses/tracker/trackerP.txt
+load    Tracker                data/chars/bosses/tracker/trackerP.txt
 
 ##PLAYABLE BOSSES - SOR1
-load	Ringmaster			data/chars/bosses/ringmaster/ringmasterP.txt
+load    Ringmaster            data/chars/bosses/ringmaster/ringmasterP.txt
 
 ##PLAYABLE BOSSES - St2
-load	Bison		  data/chars/bosses/bison/bisonP.txt
-load	Chunli		data/chars/bosses/chunli/chunliP.txt
-load	Kage		  data/chars/bosses/kage/kagep.txt
-load	Lee		  data/chars/bosses/lee/leep.txt
+load    Bison          data/chars/bosses/bison/bisonP.txt
+load    Chunli        data/chars/bosses/chunli/chunliP.txt
+load    Kage          data/chars/bosses/kage/kagep.txt
+load    Lee          data/chars/bosses/lee/leep.txt
 know  Shiva_Double data/chars/bosses/shiva/Shiva_Double.txt
 know  Shiva_Bot_Double data/chars/bosses/shivabot/Shiva_Bot_Double.txt
 
 ##ADDITIONAL ENTITIES (PROJECTILES, SHADOWS, ETC)
-know	Axel_Slash			data/chars/heroes/axel/slash/slash.txt
-know	Axel_SlashS			data/chars/heroes/axel/slash/slashS.txt
-know	AxelS				data/chars/heroes/axel/axelS.txt
-know	AxelSW				data/chars/heroes/axel/axelSW.txt
-know	Axel_Knife			data/chars/heroes/axel/axel_knife.txt
-know	Axel_Sword			data/chars/heroes/axel/axel_sword.txt
-know	Axel_Pipe			data/chars/heroes/axel/axel_pipe.txt
-know	Axel_Kunai			data/chars/heroes/axel/axel_kunai.txt
-know	Axel_Bike			data/chars/heroes/axel/axel_bike.txt
+know    Axel_Slash            data/chars/heroes/axel/slash/slash.txt
+know    Axel_SlashS            data/chars/heroes/axel/slash/slashS.txt
+know    AxelS                data/chars/heroes/axel/axelS.txt
+know    AxelSW                data/chars/heroes/axel/axelSW.txt
+know    Axel_Knife            data/chars/heroes/axel/axel_knife.txt
+know    Axel_Sword            data/chars/heroes/axel/axel_sword.txt
+know    Axel_Pipe            data/chars/heroes/axel/axel_pipe.txt
+know    Axel_Kunai            data/chars/heroes/axel/axel_kunai.txt
+know    Axel_Bike            data/chars/heroes/axel/axel_bike.txt
 
-know	Blaze_Orb			data/chars/heroes/blaze/orb/orb.txt
-know	Blaze_Orb_B			data/chars/heroes/blaze/orb/orb_b.txt
-know	BlazeS				data/chars/heroes/blaze/blazeS.txt
-know	BlazeSW				data/chars/heroes/blaze/blazeSW.txt
-know	Blaze_Knife			data/chars/heroes/blaze/blaze_knife.txt
-know	Blaze_Sword			data/chars/heroes/blaze/blaze_sword.txt
-know	Blaze_Pipe			data/chars/heroes/blaze/blaze_pipe.txt
-know	Blaze_Kunai			data/chars/heroes/blaze/blaze_kunai.txt
-know	Blaze_Bike			data/chars/heroes/blaze/blaze_bike.txt
+know    Blaze_Orb            data/chars/heroes/blaze/orb/orb.txt
+know    Blaze_Orb_B            data/chars/heroes/blaze/orb/orb_b.txt
+know    BlazeS                data/chars/heroes/blaze/blazeS.txt
+know    BlazeSW                data/chars/heroes/blaze/blazeSW.txt
+know    Blaze_Knife            data/chars/heroes/blaze/blaze_knife.txt
+know    Blaze_Sword            data/chars/heroes/blaze/blaze_sword.txt
+know    Blaze_Pipe            data/chars/heroes/blaze/blaze_pipe.txt
+know    Blaze_Kunai            data/chars/heroes/blaze/blaze_kunai.txt
+know    Blaze_Bike            data/chars/heroes/blaze/blaze_bike.txt
 
-know	MaxS				data/chars/heroes/max/maxS.txt
-know	MaxSW				data/chars/heroes/max/maxSW.txt
-know	Max_Knife			data/chars/heroes/max/max_knife.txt
-know	Max_Sword			data/chars/heroes/max/max_sword.txt
-know	Max_Pipe			data/chars/heroes/max/max_pipe.txt
-know	Max_Kunai			data/chars/heroes/max/max_kunai.txt
-know	Max_Bike			data/chars/heroes/max/max_bike.txt
+know    MaxS                data/chars/heroes/max/maxS.txt
+know    MaxSW                data/chars/heroes/max/maxSW.txt
+know    Max_Knife            data/chars/heroes/max/max_knife.txt
+know    Max_Sword            data/chars/heroes/max/max_sword.txt
+know    Max_Pipe            data/chars/heroes/max/max_pipe.txt
+know    Max_Kunai            data/chars/heroes/max/max_kunai.txt
+know    Max_Bike            data/chars/heroes/max/max_bike.txt
 
-know	SammyS				data/chars/heroes/sammy/sammyS.txt
-know	SammySW				data/chars/heroes/sammy/sammySW.txt
-know	Sammy_Knife			data/chars/heroes/sammy/sammy_knife.txt
-know	Sammy_Sword			data/chars/heroes/sammy/sammy_sword.txt
-know	Sammy_Pipe			data/chars/heroes/sammy/sammy_pipe.txt
-know	Sammy_Kunai			data/chars/heroes/sammy/sammy_kunai.txt
-know	Sammy_Bike			data/chars/heroes/sammy/sammy_bike.txt
+know    SammyS                data/chars/heroes/sammy/sammyS.txt
+know    SammySW                data/chars/heroes/sammy/sammySW.txt
+know    Sammy_Knife            data/chars/heroes/sammy/sammy_knife.txt
+know    Sammy_Sword            data/chars/heroes/sammy/sammy_sword.txt
+know    Sammy_Pipe            data/chars/heroes/sammy/sammy_pipe.txt
+know    Sammy_Kunai            data/chars/heroes/sammy/sammy_kunai.txt
+know    Sammy_Bike            data/chars/heroes/sammy/sammy_bike.txt
 
-know	Adam_Wave			data/chars/heroes/adam/wave/wave.txt
-know	AdamS				data/chars/heroes/adam/adamS.txt
-know	AdamSW				data/chars/heroes/adam/adamSW.txt
-know	Adam_Knife			data/chars/heroes/adam/adam_knife.txt
-know	Adam_Sword			data/chars/heroes/adam/adam_sword.txt
-know	Adam_Pipe			data/chars/heroes/adam/adam_pipe.txt
-know	Adam_Kunai			data/chars/heroes/adam/adam_kunai.txt
-know	Adam_Bike			data/chars/heroes/adam/adam_bike.txt
+know    Adam_Wave            data/chars/heroes/adam/wave/wave.txt
+know    AdamS                data/chars/heroes/adam/adamS.txt
+know    AdamSW                data/chars/heroes/adam/adamSW.txt
+know    Adam_Knife            data/chars/heroes/adam/adam_knife.txt
+know    Adam_Sword            data/chars/heroes/adam/adam_sword.txt
+know    Adam_Pipe            data/chars/heroes/adam/adam_pipe.txt
+know    Adam_Kunai            data/chars/heroes/adam/adam_kunai.txt
+know    Adam_Bike            data/chars/heroes/adam/adam_bike.txt
 
-know	Zan_Shot			data/chars/heroes/zan/shot/shot.txt
-know	Zan_Shot_B			data/chars/heroes/zan/shot/shot_b.txt
-know	Zan_Orb1			data/chars/heroes/zan/orb/orb1.txt
-know	Zan_Orb2			data/chars/heroes/zan/orb/orb2.txt
-know	Zan_Orb3			data/chars/heroes/zan/orb/orb3.txt
-know	Zan_OrbS			data/chars/heroes/zan/orb/orbS.txt
-know	ZanS				data/chars/heroes/zan/zanS.txt
-know	ZanSW				data/chars/heroes/zan/zanSW.txt
-know	Zan_Knife			data/chars/heroes/zan/zan_knife.txt
-know	Zan_Sword			data/chars/heroes/zan/zan_sword.txt
-know	Zan_Pipe			data/chars/heroes/zan/zan_pipe.txt
-know	Zan_Kunai			data/chars/heroes/zan/zan_kunai.txt
-know	Zan_Bike			data/chars/heroes/zan/zan_bike.txt
+know    Zan_Shot            data/chars/heroes/zan/shot/shot.txt
+know    Zan_Shot_B            data/chars/heroes/zan/shot/shot_b.txt
+know    Zan_Orb1            data/chars/heroes/zan/orb/orb1.txt
+know    Zan_Orb2            data/chars/heroes/zan/orb/orb2.txt
+know    Zan_Orb3            data/chars/heroes/zan/orb/orb3.txt
+know    Zan_OrbS            data/chars/heroes/zan/orb/orbS.txt
+know    ZanS                data/chars/heroes/zan/zanS.txt
+know    ZanSW                data/chars/heroes/zan/zanSW.txt
+know    Zan_Knife            data/chars/heroes/zan/zan_knife.txt
+know    Zan_Sword            data/chars/heroes/zan/zan_sword.txt
+know    Zan_Pipe            data/chars/heroes/zan/zan_pipe.txt
+know    Zan_Kunai            data/chars/heroes/zan/zan_kunai.txt
+know    Zan_Bike            data/chars/heroes/zan/zan_bike.txt
 
-know	Galsia_KnifeP		data/chars/enemies/galsia/galsia_knifeP.txt
+know    Galsia_KnifeP        data/chars/enemies/galsia/galsia_knifeP.txt
 
-know	Donovan_PipeP		data/chars/enemies/donovan/donovan_pipeP.txt
+know    Donovan_PipeP        data/chars/enemies/donovan/donovan_pipeP.txt
 
-know	Signal_Bottle1		data/chars/enemies/signal/bottle/bottle1.txt
-know	Signal_Bottle2		data/chars/enemies/signal/bottle/bottle2.txt
-know	Signal_Bottle3		data/chars/enemies/signal/bottle/bottle3.txt
+know    Signal_Bottle1        data/chars/enemies/signal/bottle/bottle1.txt
+know    Signal_Bottle2        data/chars/enemies/signal/bottle/bottle2.txt
+know    Signal_Bottle3        data/chars/enemies/signal/bottle/bottle3.txt
 
-know	Fog_Grenade			data/chars/enemies/fog/grenade/fgrenade.txt
-know	X_Grenade			data/chars/enemies/fog/grenade/grenadex.txt
-know	Grenade			data/chars/enemies/fog/grenade/grenade.txt
-know	Fog_Molotov			data/chars/enemies/fog/molotov/molotov.txt
-know	Fog_PipeP			data/chars/enemies/fog/fog_pipeP.txt
+know    Fog_Grenade            data/chars/enemies/fog/grenade/fgrenade.txt
+know    X_Grenade            data/chars/enemies/fog/grenade/grenadex.txt
+know    Grenade            data/chars/enemies/fog/grenade/grenade.txt
+know    Fog_Molotov            data/chars/enemies/fog/molotov/molotov.txt
+know    Fog_PipeP            data/chars/enemies/fog/fog_pipeP.txt
 
-know	Kusanagi_Star		data/chars/enemies/kusanagi/star/star.txt
-know	KusanagiS			data/chars/enemies/kusanagi/kusanagiS.txt
-know	KusanagiSW1			data/chars/enemies/kusanagi/kusanagiSW1.txt
-know	KusanagiSW2			data/chars/enemies/kusanagi/kusanagiSW2.txt
-know	Kusanagi_KunaiP		data/chars/enemies/kusanagi/kusanagi_kunaiP.txt
-know	Kusanagi_SwordP		data/chars/enemies/kusanagi/kusanagi_swordP.txt
+know    Kusanagi_Star        data/chars/enemies/kusanagi/star/star.txt
+know    KusanagiS            data/chars/enemies/kusanagi/kusanagiS.txt
+know    KusanagiSW1            data/chars/enemies/kusanagi/kusanagiSW1.txt
+know    KusanagiSW2            data/chars/enemies/kusanagi/kusanagiSW2.txt
+know    Kusanagi_KunaiP        data/chars/enemies/kusanagi/kusanagi_kunaiP.txt
+know    Kusanagi_SwordP        data/chars/enemies/kusanagi/kusanagi_swordP.txt
 
-know	Reine_Shock			data/chars/enemies/reine/whip/shock.txt
-know	Reine_Whip			data/chars/enemies/reine/whip/whip.txt
-know	Reine_Shawl			data/chars/enemies/reine/shawl/shawl.txt
-know	Reine_Cup			data/chars/enemies/reine/cup/cup.txt
+know    Reine_Shock            data/chars/enemies/reine/whip/shock.txt
+know    Reine_Whip            data/chars/enemies/reine/whip/whip.txt
+know    Reine_Shawl            data/chars/enemies/reine/shawl/shawl.txt
+know    Reine_Cup            data/chars/enemies/reine/cup/cup.txt
 
-know	Jack_KnifeP			data/chars/enemies/jack/jack_knifeP.txt
+know    Jack_KnifeP            data/chars/enemies/jack/jack_knifeP.txt
 
-know	BarbonS				data/chars/bosses/barbon/barbonS.txt
+know    BarbonS                data/chars/bosses/barbon/barbonS.txt
 
-know	JetS				data/chars/bosses/jet/jetS.txt
+know    JetS                data/chars/bosses/jet/jetS.txt
 
-know	ZamzaS				data/chars/bosses/zamza/zamzaS.txt
+know    ZamzaS                data/chars/bosses/zamza/zamzaS.txt
 
-know	AbadedeS			data/chars/bosses/abadede/abadedeS.txt
+know    AbadedeS            data/chars/bosses/abadede/abadedeS.txt
 
-know	BearS				data/chars/bosses/bear/bearS.txt
+know    BearS                data/chars/bosses/bear/bearS.txt
 
-know	Particle_Laser		data/chars/bosses/particle/laser/laser.txt
-know	Particle_LaserR		data/chars/bosses/particle/laser/laserR.txt
-know	Particle_LaserR_B	data/chars/bosses/particle/laser/laserR_b.txt
-know	ParticleS			data/chars/bosses/particle/particleS.txt
+know    Particle_Laser        data/chars/bosses/particle/laser/laser.txt
+know    Particle_LaserR        data/chars/bosses/particle/laser/laserR.txt
+know    Particle_LaserR_B    data/chars/bosses/particle/laser/laserR_b.txt
+know    ParticleS            data/chars/bosses/particle/particleS.txt
 
-know	ShivaS				data/chars/bosses/shiva/shivaS.txt
+know    ShivaS                data/chars/bosses/shiva/shivaS.txt
 
-know	Mrx_Shot1			data/chars/bosses/mrx/shot/shot1.txt
-know	Mrx_Shot2			data/chars/bosses/mrx/shot/shot2.txt
-know	Mrx_Shot3			data/chars/bosses/mrx/shot/shot3.txt
+know    Mrx_Shot1            data/chars/bosses/mrx/shot/shot1.txt
+know    Mrx_Shot2            data/chars/bosses/mrx/shot/shot2.txt
+know    Mrx_Shot3            data/chars/bosses/mrx/shot/shot3.txt
 
-know	Common_Shot			data/chars/enemies/macleod/shot/shot.txt
+know    Common_Shot            data/chars/enemies/macleod/shot/shot.txt
 
-know	P1_Laser			data/chars/enemies/p1/laser/laser.txt
+know    P1_Laser            data/chars/enemies/p1/laser/laser.txt
 
-know	Bongo_Fire			data/chars/enemies/bongo/fire/fire.txt
-know	Bongo_Fire_B		data/chars/enemies/bongo/fire/fire_b.txt
+know    Bongo_Fire            data/chars/enemies/bongo/fire/fire.txt
+know    Bongo_Fire_B        data/chars/enemies/bongo/fire/fire_b.txt
 
-know	BruceS				data/chars/enemies/bruce/bruceS.txt
+know    BruceS                data/chars/enemies/bruce/bruceS.txt
 
-know	RooS				data/chars/enemies/roo/rooS.txt
+know    RooS                data/chars/enemies/roo/rooS.txt
 
-know	Monalisa_Wave		data/chars/bosses/monalisa/wave/wave.txt
-know	Monalisa_WaveR		data/chars/bosses/monalisa/wave/waveR.txt
-know	MonalisaS			data/chars/bosses/monalisa/monalisaS.txt
+know    Monalisa_Wave        data/chars/bosses/monalisa/wave/wave.txt
+know    Monalisa_WaveR        data/chars/bosses/monalisa/wave/waveR.txt
+know    MonalisaS            data/chars/bosses/monalisa/monalisaS.txt
 
-know	BreakS				data/chars/heroes/axel/breakS.txt
+know    BreakS                data/chars/heroes/axel/breakS.txt
 
-know	Yamato_Star			data/chars/bosses/yamato/star/star.txt
-know	Yamato_Double		data/chars/bosses/yamato/yamato_double.txt
-know	YamatoS				data/chars/bosses/yamato/yamatoS.txt
-know	Yamato_DoubleS		data/chars/bosses/yamato/yamato_doubleS.txt
+know    Yamato_Star            data/chars/bosses/yamato/star/star.txt
+know    Yamato_Double        data/chars/bosses/yamato/yamato_double.txt
+know    YamatoS                data/chars/bosses/yamato/yamatoS.txt
+know    Yamato_DoubleS        data/chars/bosses/yamato/yamato_doubleS.txt
 
-know	Robotx_Shot			data/chars/bosses/robotx/shot/shot.txt
-know	Upper_Shot			data/chars/bosses/robotx/shot/ushot.txt
-know	Robotx_Missile		data/chars/bosses/robotx/missile/missile.txt
-know	RobotxS				data/chars/bosses/robotx/robotxS.txt
+know    Robotx_Shot            data/chars/bosses/robotx/shot/shot.txt
+know    Upper_Shot            data/chars/bosses/robotx/shot/ushot.txt
+know    Robotx_Missile        data/chars/bosses/robotx/missile/missile.txt
+know    RobotxS                data/chars/bosses/robotx/robotxS.txt
 
-know	Rocket_Bomb			data/chars/bosses/rocket/bomb/bomb.txt
-know	Rocket_FireBall		data/chars/bosses/rocket/fireball/fireball.txt
-know	Rocket_FireBall_B	data/chars/bosses/rocket/fireball/fireball_b.txt
-know	RocketS				data/chars/bosses/rocket/rocketS.txt
+know    Rocket_Bomb            data/chars/bosses/rocket/bomb/bomb.txt
+know    Rocket_FireBall        data/chars/bosses/rocket/fireball/fireball.txt
+know    Rocket_FireBall_B    data/chars/bosses/rocket/fireball/fireball_b.txt
+know    RocketS                data/chars/bosses/rocket/rocketS.txt
 
-know	Shiva_BotS			data/chars/bosses/shivabot/shiva_botS.txt
+know    Shiva_BotS            data/chars/bosses/shivabot/shiva_botS.txt
 
-know	Neox_Missile		data/chars/bosses/neox/missile/missile.txt
-know	Neox_Missile_Fake	data/chars/bosses/neox/missile_fake/missile_fake.txt
-know	NeoxS				data/chars/bosses/neox/neoxS.txt
+know    Neox_Missile        data/chars/bosses/neox/missile/missile.txt
+know    Neox_Missile_Fake    data/chars/bosses/neox/missile_fake/missile_fake.txt
+know    NeoxS                data/chars/bosses/neox/neoxS.txt
 
-know	Harakiri_Star		data/chars/bosses/harakiri/star/star.txt
-know	shuriken		data/chars/bosses/harakiri/star/shuriken.txt
-know	HarakiriS			data/chars/bosses/harakiri/harakiriS.txt
+know    Harakiri_Star        data/chars/bosses/harakiri/star/star.txt
+know    shuriken        data/chars/bosses/harakiri/star/shuriken.txt
+know    HarakiriS            data/chars/bosses/harakiri/harakiriS.txt
 
-know	Tracker_Laser		data/chars/bosses/tracker/laser/laser.txt
-know	Tracker_LaserR		data/chars/bosses/tracker/laser/laserR.txt
-know	Tracker_LaserR_B	data/chars/bosses/tracker/laser/laserR_b.txt
-know	Tracker_Target		data/chars/bosses/tracker/target/target.txt
-know	Tracker_TargetS		data/chars/bosses/tracker/target/targetS.txt
-know	TrackerS			data/chars/bosses/tracker/trackerS.txt
+know    Tracker_Laser        data/chars/bosses/tracker/laser/laser.txt
+know    Tracker_LaserR        data/chars/bosses/tracker/laser/laserR.txt
+know    Tracker_LaserR_B    data/chars/bosses/tracker/laser/laserR_b.txt
+know    Tracker_Target        data/chars/bosses/tracker/target/target.txt
+know    Tracker_TargetS        data/chars/bosses/tracker/target/targetS.txt
+know    TrackerS            data/chars/bosses/tracker/trackerS.txt
 
-know	Ringmaster_Missile	data/chars/bosses/ringmaster/missile/missile.txt
-know	umissile	data/chars/bosses/ringmaster/missile/umissile.txt
-know	sumissile	data/chars/bosses/ringmaster/missile/sumissile.txt
-know	RingmasterS			data/chars/bosses/ringmaster/ringmasterS.txt
+know    Ringmaster_Missile    data/chars/bosses/ringmaster/missile/missile.txt
+know    umissile    data/chars/bosses/ringmaster/missile/umissile.txt
+know    sumissile    data/chars/bosses/ringmaster/missile/sumissile.txt
+know    RingmasterS            data/chars/bosses/ringmaster/ringmasterS.txt
 
 ##ENEMIES - SOR2
-know	GalsiaB				data/chars/enemies/galsia/galsiaB.txt
-know	Galsia_KnifeB		data/chars/enemies/galsia/galsia_knifeB.txt
-know	Galsia_Seat			data/chars/enemies/galsia/galsia_seat.txt
-know	Galsia_Wait			data/chars/enemies/galsia/galsia_wait.txt
-know	Galsia_Hide			data/chars/enemies/galsia/galsia_hide.txt
-know	Galsia_Boat			data/chars/enemies/galsia/galsia_boat.txt
-know	Galsia_Jump1		data/chars/enemies/galsia/galsia_jump1.txt
-know	Galsia_Jump2		data/chars/enemies/galsia/galsia_Jump2.txt
+know    GalsiaB                data/chars/enemies/galsia/galsiaB.txt
+know    Galsia_KnifeB        data/chars/enemies/galsia/galsia_knifeB.txt
+know    Galsia_Seat            data/chars/enemies/galsia/galsia_seat.txt
+know    Galsia_Wait            data/chars/enemies/galsia/galsia_wait.txt
+know    Galsia_Hide            data/chars/enemies/galsia/galsia_hide.txt
+know    Galsia_Boat            data/chars/enemies/galsia/galsia_boat.txt
+know    Galsia_Jump1        data/chars/enemies/galsia/galsia_jump1.txt
+know    Galsia_Jump2        data/chars/enemies/galsia/galsia_Jump2.txt
 
-know	DonovanB			data/chars/enemies/donovan/donovanB.txt
-know	Donovan_PipeB		data/chars/enemies/donovan/donovan_pipeB.txt
-know	Donovan_Manhole		data/chars/enemies/donovan/donovan_manhole.txt
-know	Donovan_Wait		data/chars/enemies/donovan/donovan_wait.txt
-know	Donovan_Hide		data/chars/enemies/donovan/donovan_hide.txt
-know	Donovan_Boat		data/chars/enemies/donovan/donovan_boat.txt
-know	Donovan_Bulldozer	data/chars/enemies/donovan/donovan_bulldozer.txt
+know    DonovanB            data/chars/enemies/donovan/donovanB.txt
+know    Donovan_PipeB        data/chars/enemies/donovan/donovan_pipeB.txt
+know    Donovan_Manhole        data/chars/enemies/donovan/donovan_manhole.txt
+know    Donovan_Wait        data/chars/enemies/donovan/donovan_wait.txt
+know    Donovan_Hide        data/chars/enemies/donovan/donovan_hide.txt
+know    Donovan_Boat        data/chars/enemies/donovan/donovan_boat.txt
+know    Donovan_Bulldozer    data/chars/enemies/donovan/donovan_bulldozer.txt
 
-know	SignalB				data/chars/enemies/signal/signalB.txt
-know	Signal_Wait			data/chars/enemies/signal/signal_wait.txt
-know	Signal_Gate			data/chars/enemies/signal/signal_gate.txt
-know	Signal_Jump			data/chars/enemies/signal/signal_jump.txt
-know	Signal_Bottle		data/chars/enemies/signal/signal_bottle.txt
+know    SignalB                data/chars/enemies/signal/signalB.txt
+know    Signal_Wait            data/chars/enemies/signal/signal_wait.txt
+know    Signal_Gate            data/chars/enemies/signal/signal_gate.txt
+know    Signal_Jump            data/chars/enemies/signal/signal_jump.txt
+know    Signal_Bottle        data/chars/enemies/signal/signal_bottle.txt
 
-know	FogB				data/chars/enemies/fog/fogB.txt
-know	Fog_PipeB			data/chars/enemies/fog/fog_pipeB.txt
-know	Fog_Grenadier		data/chars/enemies/fog/fog_grenadier.txt
-know	Fog_Jump			data/chars/enemies/fog/fog_jump.txt
-know	Fog_Sit				data/chars/enemies/fog/fog_sit.txt
-know	Fog_Wait1			data/chars/enemies/fog/fog_wait1.txt
-know	Fog_Wait2			data/chars/enemies/fog/fog_wait2.txt
-know	Fog_Wait3			data/chars/enemies/fog/fog_wait3.txt
-know	Fog_Wait4			data/chars/enemies/fog/fog_wait4.txt
-know	Fog_Wait5			data/chars/enemies/fog/fog_wait5.txt
-know	Moto_Single			data/chars/enemies/fog/moto_single.txt
-know	Moto_Jump			data/chars/enemies/fog/moto_jump.txt
-know	Moto_Repeat			data/chars/enemies/fog/moto_repeat.txt
-know	Moto_Stage			data/chars/enemies/fog/moto_stage.txt
+know    FogB                data/chars/enemies/fog/fogB.txt
+know    Fog_PipeB            data/chars/enemies/fog/fog_pipeB.txt
+know    Fog_Grenadier        data/chars/enemies/fog/fog_grenadier.txt
+know    Fog_Jump            data/chars/enemies/fog/fog_jump.txt
+know    Fog_Sit                data/chars/enemies/fog/fog_sit.txt
+know    Fog_Wait1            data/chars/enemies/fog/fog_wait1.txt
+know    Fog_Wait2            data/chars/enemies/fog/fog_wait2.txt
+know    Fog_Wait3            data/chars/enemies/fog/fog_wait3.txt
+know    Fog_Wait4            data/chars/enemies/fog/fog_wait4.txt
+know    Fog_Wait5            data/chars/enemies/fog/fog_wait5.txt
+know    Moto_Single            data/chars/enemies/fog/moto_single.txt
+know    Moto_Jump            data/chars/enemies/fog/moto_jump.txt
+know    Moto_Repeat            data/chars/enemies/fog/moto_repeat.txt
+know    Moto_Stage            data/chars/enemies/fog/moto_stage.txt
 
-know	HakuyoB				data/chars/enemies/hakuyo/hakuyoB.txt
-know	Hakuyo_Wait			data/chars/enemies/hakuyo/hakuyo_wait.txt
+know    HakuyoB                data/chars/enemies/hakuyo/hakuyoB.txt
+know    Hakuyo_Wait            data/chars/enemies/hakuyo/hakuyo_wait.txt
 
-know	KusanagiB			data/chars/enemies/kusanagi/kusanagiB.txt
-know	Kusanagi_KunaiB		data/chars/enemies/kusanagi/kusanagi_kunaiB.txt
-know	Kusanagi_SwordB		data/chars/enemies/kusanagi/kusanagi_swordB.txt
-know	Kusanagi_Wait1		data/chars/enemies/kusanagi/kusanagi_wait1.txt
-know	Kusanagi_Wait2		data/chars/enemies/kusanagi/kusanagi_wait2.txt
-know	Kusanagi_Wait3		data/chars/enemies/kusanagi/kusanagi_wait3.txt
-know	Kusanagi_Sit		data/chars/enemies/kusanagi/kusanagi_sit.txt
-know	Kusanagi_Bush		data/chars/enemies/kusanagi/kusanagi_bush.txt
+know    KusanagiB            data/chars/enemies/kusanagi/kusanagiB.txt
+know    Kusanagi_KunaiB        data/chars/enemies/kusanagi/kusanagi_kunaiB.txt
+know    Kusanagi_SwordB        data/chars/enemies/kusanagi/kusanagi_swordB.txt
+know    Kusanagi_Wait1        data/chars/enemies/kusanagi/kusanagi_wait1.txt
+know    Kusanagi_Wait2        data/chars/enemies/kusanagi/kusanagi_wait2.txt
+know    Kusanagi_Wait3        data/chars/enemies/kusanagi/kusanagi_wait3.txt
+know    Kusanagi_Sit        data/chars/enemies/kusanagi/kusanagi_sit.txt
+know    Kusanagi_Bush        data/chars/enemies/kusanagi/kusanagi_bush.txt
 
-know	RavenB				data/chars/enemies/raven/ravenB.txt
+know    RavenB                data/chars/enemies/raven/ravenB.txt
 
-know	BigbenB				data/chars/enemies/bigben/bigbenB.txt
+know    BigbenB                data/chars/enemies/bigben/bigbenB.txt
 
-know	ReineB				data/chars/enemies/reine/reineB.txt
-know	Reine_Wait			data/chars/enemies/reine/reine_wait.txt
+know    ReineB                data/chars/enemies/reine/reineB.txt
+know    Reine_Wait            data/chars/enemies/reine/reine_wait.txt
 
-know	JackB				data/chars/enemies/jack/jackB.txt
-know	Jack_Jump			data/chars/enemies/jack/jack_jump.txt
-know	Jack_KnifeB			data/chars/enemies/jack/jack_knifeB.txt
+know    JackB                data/chars/enemies/jack/jackB.txt
+know    Jack_Jump            data/chars/enemies/jack/jack_jump.txt
+know    Jack_KnifeB            data/chars/enemies/jack/jack_knifeB.txt
 
-know	Vehelits			data/chars/enemies/vehelits/vehelits.txt
-know	Vehelits_Tail		data/chars/enemies/vehelits/tail.txt
+know    Vehelits            data/chars/enemies/vehelits/vehelits.txt
+know    Vehelits_Tail        data/chars/enemies/vehelits/tail.txt
 
 ##BOSSES - SOR2
-know	BarbonB				data/chars/bosses/barbon/barbonB.txt
-know	Barbon_Clothes		data/chars/bosses/barbon/barbon_clothes.txt
-know	Barbon_Wait			data/chars/bosses/barbon/barbon_wait.txt
-know	Barbon_Cocktail		data/chars/bosses/barbon/barbon_cocktail.txt
-know	Barbon_Jacket1		data/chars/bosses/barbon/jacket/jacket1.txt
-know	Barbon_Jacket2		data/chars/bosses/barbon/jacket/jacket2.txt
-know	Barbon_Jacket3		data/chars/bosses/barbon/jacket/jacket3.txt
-know	Barbon_Jacket4		data/chars/bosses/barbon/jacket/jacket4.txt
-know	Barbon_Jacket5		data/chars/bosses/barbon/jacket/jacket5.txt
-know	Barbon_Jacket6		data/chars/bosses/barbon/jacket/jacket6.txt
-know	Barbon_Jacket7		data/chars/bosses/barbon/jacket/jacket7.txt
+know    BarbonB                data/chars/bosses/barbon/barbonB.txt
+know    Barbon_Clothes        data/chars/bosses/barbon/barbon_clothes.txt
+know    Barbon_Wait            data/chars/bosses/barbon/barbon_wait.txt
+know    Barbon_Cocktail        data/chars/bosses/barbon/barbon_cocktail.txt
+know    Barbon_Jacket1        data/chars/bosses/barbon/jacket/jacket1.txt
+know    Barbon_Jacket2        data/chars/bosses/barbon/jacket/jacket2.txt
+know    Barbon_Jacket3        data/chars/bosses/barbon/jacket/jacket3.txt
+know    Barbon_Jacket4        data/chars/bosses/barbon/jacket/jacket4.txt
+know    Barbon_Jacket5        data/chars/bosses/barbon/jacket/jacket5.txt
+know    Barbon_Jacket6        data/chars/bosses/barbon/jacket/jacket6.txt
+know    Barbon_Jacket7        data/chars/bosses/barbon/jacket/jacket7.txt
 
-know	JetB				data/chars/bosses/jet/jetB.txt
+know    JetB                data/chars/bosses/jet/jetB.txt
 
-know	ZamzaB				data/chars/bosses/zamza/zamzaB.txt
-know	Zamza_Hide			data/chars/bosses/zamza/zamza_hide.txt
+know    ZamzaB                data/chars/bosses/zamza/zamzaB.txt
+know    Zamza_Hide            data/chars/bosses/zamza/zamza_hide.txt
 
-know	AbadedeB			data/chars/bosses/abadede/abadedeB.txt
-know	Abadede_Wait		data/chars/bosses/abadede/abadede_wait.txt
+know    AbadedeB            data/chars/bosses/abadede/abadedeB.txt
+know    Abadede_Wait        data/chars/bosses/abadede/abadede_wait.txt
 
-know	BearB				data/chars/bosses/bear/bearB.txt
-know	Bear_Wait			data/chars/bosses/bear/bear_wait.txt
+know    BearB                data/chars/bosses/bear/bearB.txt
+know    Bear_Wait            data/chars/bosses/bear/bear_wait.txt
 
-know	ParticleB			data/chars/bosses/particle/particleB.txt
+know    ParticleB            data/chars/bosses/particle/particleB.txt
 
-know	ShivaB				data/chars/bosses/shiva/shivaB.txt
-know	Shiva_Wait			data/chars/bosses/shiva/shiva_wait.txt
+know    ShivaB                data/chars/bosses/shiva/shivaB.txt
+know    Shiva_Wait            data/chars/bosses/shiva/shiva_wait.txt
 
-know	MrxB				data/chars/bosses/mrx/mrxB.txt
-know	Mrx_Wait			data/chars/bosses/mrx/mrx_wait.txt
+know    MrxB                data/chars/bosses/mrx/mrxB.txt
+know    Mrx_Wait            data/chars/bosses/mrx/mrx_wait.txt
 
 ##ENEMIES - SOR3
-know	SlumB				data/chars/enemies/slum/slumB.txt
-know	Slum_Hide1			data/chars/enemies/slum/slum_hide1.txt
-know	Slum_Hide2			data/chars/enemies/slum/slum_hide2.txt
-know	Slum_Wait			data/chars/enemies/slum/slum_wait.txt
+know    SlumB                data/chars/enemies/slum/slumB.txt
+know    Slum_Hide1            data/chars/enemies/slum/slum_hide1.txt
+know    Slum_Hide2            data/chars/enemies/slum/slum_hide2.txt
+know    Slum_Wait            data/chars/enemies/slum/slum_wait.txt
 
-know	ViceB				data/chars/enemies/vice/viceB.txt
-know	Vice_Hide1			data/chars/enemies/vice/vice_hide1.txt
-know	Vice_Hide2			data/chars/enemies/vice/vice_hide2.txt
+know    ViceB                data/chars/enemies/vice/viceB.txt
+know    Vice_Hide1            data/chars/enemies/vice/vice_hide1.txt
+know    Vice_Hide2            data/chars/enemies/vice/vice_hide2.txt
 
-know	GarnetB				data/chars/enemies/garnet/garnetB.txt
-know	Garnet_Hide			data/chars/enemies/garnet/garnet_hide.txt
-know	Garnet_Dance		data/chars/enemies/garnet/garnet_dance.txt
+know    GarnetB                data/chars/enemies/garnet/garnetB.txt
+know    Garnet_Hide            data/chars/enemies/garnet/garnet_hide.txt
+know    Garnet_Dance        data/chars/enemies/garnet/garnet_dance.txt
 
-know	McBrideB			data/chars/enemies/mcbride/mcbrideB.txt
-know	McBride_Wait		data/chars/enemies/mcbride/mcbride_wait.txt
+know    McBrideB            data/chars/enemies/mcbride/mcbrideB.txt
+know    McBride_Wait        data/chars/enemies/mcbride/mcbride_wait.txt
 
-know	MacleanB			data/chars/enemies/maclean/macleanB.txt
-know	Maclean_Wait		data/chars/enemies/maclean/maclean_wait.txt
+know    MacleanB            data/chars/enemies/maclean/macleanB.txt
+know    Maclean_Wait        data/chars/enemies/maclean/maclean_wait.txt
 
-know	MacleodB			data/chars/enemies/macleod/macleodB.txt
-know	Macleod_Wait		data/chars/enemies/macleod/macleod_wait.txt
+know    MacleodB            data/chars/enemies/macleod/macleodB.txt
+know    Macleod_Wait        data/chars/enemies/macleod/macleod_wait.txt
 
-know	TigerB				data/chars/enemies/tiger/tigerB.txt
+know    TigerB                data/chars/enemies/tiger/tigerB.txt
 
-know	P1B					data/chars/enemies/p1/p1B.txt
+know    P1B                    data/chars/enemies/p1/p1B.txt
 
-know	BongoB				data/chars/enemies/bongo/bongoB.txt
-know	Bongo_Hide			data/chars/enemies/bongo/bongo_hide.txt
-know	Bongo_Wait			data/chars/enemies/bongo/bongo_wait.txt
+know    BongoB                data/chars/enemies/bongo/bongoB.txt
+know    Bongo_Hide            data/chars/enemies/bongo/bongo_hide.txt
+know    Bongo_Wait            data/chars/enemies/bongo/bongo_wait.txt
 
-know	ElectraB			data/chars/enemies/electra/electraB.txt
-know	Electra_Wait		data/chars/enemies/electra/electra_wait.txt
+know    ElectraB            data/chars/enemies/electra/electraB.txt
+know    Electra_Wait        data/chars/enemies/electra/electra_wait.txt
 
-know	AshB				data/chars/enemies/ash/ashB.txt
-know	Ash_Cry				data/chars/enemies/ash/ash_cry.txt
-know	Ash_Boat			data/chars/enemies/ash/ash_boat.txt
+know    AshB                data/chars/enemies/ash/ashB.txt
+know    Ash_Cry                data/chars/enemies/ash/ash_cry.txt
+know    Ash_Boat            data/chars/enemies/ash/ash_boat.txt
 
-know	BruceB				data/chars/enemies/bruce/bruceB.txt
-know	Tamer				data/chars/enemies/bruce/tamer.txt
+know    BruceB                data/chars/enemies/bruce/bruceB.txt
+know    Tamer                data/chars/enemies/bruce/tamer.txt
 
-know	RooB				data/chars/enemies/roo/rooB.txt
-know	Roo_Flee			data/chars/enemies/roo/roo_flee.txt
+know    RooB                data/chars/enemies/roo/rooB.txt
+know    Roo_Flee            data/chars/enemies/roo/roo_flee.txt
 
-know	Trap				data/chars/trap/trap.txt
-know	Hunter_Trap				data/chars/trap/hunter_trap.txt
-know	WTrap				data/chars/trap/wtrap.txt
+know    Trap                data/chars/trap/trap.txt
+know    Hunter_Trap                data/chars/trap/hunter_trap.txt
+know    WTrap                data/chars/trap/wtrap.txt
 
-know	Arm					data/chars/enemies/arm/arm.txt
+know    Arm                    data/chars/enemies/arm/arm.txt
 
 ##Extra Bosses
-know	Chunli_Sho		data/chars/bosses/chunli/sho/sho.txt
-know	Chunli_Kiko		data/chars/bosses/chunli/kiko/kiko.txt
+know    Chunli_Sho        data/chars/bosses/chunli/sho/sho.txt
+know    Chunli_Kiko        data/chars/bosses/chunli/kiko/kiko.txt
 
 ##BOSSES - SOR3
-know	Monalisa_Wait1		data/chars/bosses/monalisa/monalisa_wait1.txt
-know	Monalisa_Wait2		data/chars/bosses/monalisa/monalisa_wait2.txt
-know	MonalisaB			data/chars/bosses/monalisa/monalisaB.txt
-know	MonalisaC			data/chars/bosses/monalisa/monalisaC.txt
+know    Monalisa_Wait1        data/chars/bosses/monalisa/monalisa_wait1.txt
+know    Monalisa_Wait2        data/chars/bosses/monalisa/monalisa_wait2.txt
+know    MonalisaB            data/chars/bosses/monalisa/monalisaB.txt
+know    MonalisaC            data/chars/bosses/monalisa/monalisaC.txt
 
-know	BreakB				data/chars/heroes/axel/breakB.txt
-know	Break_Death			data/chars/heroes/axel/break_death.txt
+know    BreakB                data/chars/heroes/axel/breakB.txt
+know    Break_Death            data/chars/heroes/axel/break_death.txt
 
-know	YamatoB				data/chars/bosses/yamato/yamatoB.txt
-know	Musashi				data/chars/bosses/yamato/musashi.txt
-know	Yamato_Wait1		data/chars/bosses/yamato/yamato_wait1.txt
-know	Yamato_Wait2		data/chars/bosses/yamato/yamato_wait2.txt
-know	Yamato_Wait3		data/chars/bosses/yamato/yamato_wait3.txt
+know    YamatoB                data/chars/bosses/yamato/yamatoB.txt
+know    Musashi                data/chars/bosses/yamato/musashi.txt
+know    Yamato_Wait1        data/chars/bosses/yamato/yamato_wait1.txt
+know    Yamato_Wait2        data/chars/bosses/yamato/yamato_wait2.txt
+know    Yamato_Wait3        data/chars/bosses/yamato/yamato_wait3.txt
 
-know	RobotxB				data/chars/bosses/robotx/robotxB.txt
-know	Robotx_Wait			data/chars/bosses/robotx/robotx_wait.txt
-know	Robotx_Run			data/chars/bosses/robotx/robotx_run.txt
+know    RobotxB                data/chars/bosses/robotx/robotxB.txt
+know    Robotx_Wait            data/chars/bosses/robotx/robotx_wait.txt
+know    Robotx_Run            data/chars/bosses/robotx/robotx_run.txt
 
-know	RocketB				data/chars/bosses/rocket/rocketB.txt
-know	Rocket_Enemy		data/chars/bosses/rocket/rocket_enemy.txt
-know	Rocket_Rescue		data/chars/bosses/rocket/rocket_rescue.txt
+know    RocketB                data/chars/bosses/rocket/rocketB.txt
+know    Rocket_Enemy        data/chars/bosses/rocket/rocket_enemy.txt
+know    Rocket_Rescue        data/chars/bosses/rocket/rocket_rescue.txt
 
-know	Shiva_BotB			data/chars/bosses/shivabot/shiva_botB.txt
-know	Shiva_Bot_Flee		data/chars/bosses/shivabot/shiva_bot_flee.txt
-know	Shiva_Bot_Wait		data/chars/bosses/shivabot/shiva_bot_wait.txt
+know    Shiva_BotB            data/chars/bosses/shivabot/shiva_botB.txt
+know    Shiva_Bot_Flee        data/chars/bosses/shivabot/shiva_bot_flee.txt
+know    Shiva_Bot_Wait        data/chars/bosses/shivabot/shiva_bot_wait.txt
 
-know	NeoxB				data/chars/bosses/neox/neoxB.txt
-know	Neox_Death			data/chars/bosses/neox/neox_death.txt
+know    NeoxB                data/chars/bosses/neox/neoxB.txt
+know    Neox_Death            data/chars/bosses/neox/neox_death.txt
 
 ##BOSSES - BARE KNUCKLE MOBILE
-know	HarakiriB			data/chars/bosses/harakiri/harakiriB.txt
-know	HarakiriD			data/chars/bosses/harakiri/harakiriD.txt
-know	Harakiri1_Wait		data/chars/bosses/harakiri/harakiri_wait.txt
+know    HarakiriB            data/chars/bosses/harakiri/harakiriB.txt
+know    HarakiriD            data/chars/bosses/harakiri/harakiriD.txt
+know    Harakiri1_Wait        data/chars/bosses/harakiri/harakiri_wait.txt
 
 ##BOSSES - SOR2 GAME GEAR
-know	TrackerB			data/chars/bosses/tracker/trackerB.txt
-know	Tracker_Wait		data/chars/bosses/tracker/tracker_wait.txt
+know    TrackerB            data/chars/bosses/tracker/trackerB.txt
+know    Tracker_Wait        data/chars/bosses/tracker/tracker_wait.txt
 
 ##BOSSES - SOR1
-know	RingmasterB			data/chars/bosses/ringmaster/ringmasterB.txt
+know    RingmasterB            data/chars/bosses/ringmaster/ringmasterB.txt
 
 ##BOSSES - New
-know	BisonB		data/chars/bosses/bison/bisonB.txt
-know	BisonBP		data/chars/bosses/bison/bisonBP.txt
-know	BisonS		data/chars/bosses/bison/bisonS.txt
-know	ChunliB		data/chars/bosses/chunli/chunliB.txt
-know	ChunliBP	data/chars/bosses/chunli/chunliBP.txt
-know	ChunliS		data/chars/bosses/chunli/chunliS.txt
-know	KageB		data/chars/bosses/kage/kageb.txt
-know	KageBP		data/chars/bosses/kage/kageBP.txt
-know	KageS		data/chars/bosses/kage/kages.txt
-know	LeeB		data/chars/bosses/lee/leeb.txt
-know	LeeS		data/chars/bosses/lee/lees.txt
-know	Reines		data/chars/enemies/reine/reines.txt
+know    BisonB        data/chars/bosses/bison/bisonB.txt
+know    BisonBP        data/chars/bosses/bison/bisonBP.txt
+know    BisonS        data/chars/bosses/bison/bisonS.txt
+know    ChunliB        data/chars/bosses/chunli/chunliB.txt
+know    ChunliBP    data/chars/bosses/chunli/chunliBP.txt
+know    ChunliS        data/chars/bosses/chunli/chunliS.txt
+know    KageB        data/chars/bosses/kage/kageb.txt
+know    KageBP        data/chars/bosses/kage/kageBP.txt
+know    KageS        data/chars/bosses/kage/kages.txt
+know    LeeB        data/chars/bosses/lee/leeb.txt
+know    LeeS        data/chars/bosses/lee/lees.txt
+know    Reines        data/chars/enemies/reine/reines.txt
 
 
 ##RANDOM ENTITIES
-know	BasicX1				data/chars/random/basicX1.txt
-know	BasicX2				data/chars/random/basicX2.txt
-know	BasicX3				data/chars/random/basicX3.txt
+know    BasicX1                data/chars/random/basicX1.txt
+know    BasicX2                data/chars/random/basicX2.txt
+know    BasicX3                data/chars/random/basicX3.txt
 
-know	SignalX				data/chars/random/signalx.txt
-know	FogX				data/chars/random/fogX.txt
-know	HakuyoX				data/chars/random/hakuyoX.txt
-know	KusanagiX			data/chars/random/kusanagiX.txt
-know	RavenX				data/chars/random/ravenX.txt
-know	BigbenX				data/chars/random/bigbenX.txt
-know	ReineX				data/chars/random/reineX.txt
-know	JetX				data/chars/random/jetX.txt
-know	ParticleX			data/chars/random/particleX.txt
+know    SignalX                data/chars/random/signalx.txt
+know    FogX                data/chars/random/fogX.txt
+know    HakuyoX                data/chars/random/hakuyoX.txt
+know    KusanagiX            data/chars/random/kusanagiX.txt
+know    RavenX                data/chars/random/ravenX.txt
+know    BigbenX                data/chars/random/bigbenX.txt
+know    ReineX                data/chars/random/reineX.txt
+know    JetX                data/chars/random/jetX.txt
+know    ParticleX            data/chars/random/particleX.txt
 
-know	GarnetX				data/chars/random/garnetX.txt
-know	BodyGuardX			data/chars/random/bodyguardX.txt
-know	TigerX				data/chars/random/tigerX.txt
-know	P1X					data/chars/random/p1X.txt
-know	BongoX				data/chars/random/bongoX.txt
-know	ElectraX			data/chars/random/electraX.txt
+know    GarnetX                data/chars/random/garnetX.txt
+know    BodyGuardX            data/chars/random/bodyguardX.txt
+know    TigerX                data/chars/random/tigerX.txt
+know    P1X                    data/chars/random/p1X.txt
+know    BongoX                data/chars/random/bongoX.txt
+know    ElectraX            data/chars/random/electraX.txt
 
-know	BossX				data/chars/random/bossX.txt
-know	BossX1				data/chars/random/bossX1.txt
-know	DojoX				data/chars/random/DojoX.txt
-know	WeaponX				data/chars/random/weaponX.txt
-know	FoodX				data/chars/random/foodX.txt
+know    BossX                data/chars/random/bossX.txt
+know    BossX1                data/chars/random/bossX1.txt
+know    DojoX                data/chars/random/DojoX.txt
+know    WeaponX                data/chars/random/weaponX.txt
+know    FoodX                data/chars/random/foodX.txt
 
-know	SpawnTime			data/chars/random/spawnTime.txt
+know    SpawnTime            data/chars/random/spawnTime.txt
 
 ##PARTNERS
-know	Axel_				data/chars/heroes/axel/axel_.txt
-know	Axel_Bike_			data/chars/heroes/axel/axel_bike_.txt
+know    Axel_                data/chars/heroes/axel/axel_.txt
+know    Axel_Bike_            data/chars/heroes/axel/axel_bike_.txt
 
-know	Blaze_				data/chars/heroes/blaze/blaze_.txt
-know	Blaze_Bike_			data/chars/heroes/blaze/blaze_bike_.txt
+know    Blaze_                data/chars/heroes/blaze/blaze_.txt
+know    Blaze_Bike_            data/chars/heroes/blaze/blaze_bike_.txt
 
-know	Max_				data/chars/heroes/max/max_.txt
-know	Max_Bike_			data/chars/heroes/max/max_bike_.txt
+know    Max_                data/chars/heroes/max/max_.txt
+know    Max_Bike_            data/chars/heroes/max/max_bike_.txt
 
-know	Sammy_				data/chars/heroes/sammy/sammy_.txt
-know	Sammy_Bike_			data/chars/heroes/sammy/sammy_bike_.txt
+know    Sammy_                data/chars/heroes/sammy/sammy_.txt
+know    Sammy_Bike_            data/chars/heroes/sammy/sammy_bike_.txt
 
-know	Adam_				data/chars/heroes/adam/adam_.txt
-know	Adam_Bike_			data/chars/heroes/adam/adam_bike_.txt
+know    Adam_                data/chars/heroes/adam/adam_.txt
+know    Adam_Bike_            data/chars/heroes/adam/adam_bike_.txt
 
-know	Zan_				data/chars/heroes/zan/zan_.txt
-know	Zan_Bike_			data/chars/heroes/zan/zan_bike_.txt
+know    Zan_                data/chars/heroes/zan/zan_.txt
+know    Zan_Bike_            data/chars/heroes/zan/zan_bike_.txt
 
-know	ShivaBP				data/chars/bosses/shiva/shivaBP.txt
-know	Shiva_BotBP			data/chars/bosses/shivabot/shiva_botBP.txt
-know	MusashiP			data/chars/bosses/yamato/musaship.txt
-know	ReineBP				data/chars/enemies/reine/reineBP.txt
+know    ShivaBP                data/chars/bosses/shiva/shivaBP.txt
+know    Shiva_BotBP            data/chars/bosses/shivabot/shiva_botBP.txt
+know    MusashiP            data/chars/bosses/yamato/musaship.txt
+know    ReineBP                data/chars/enemies/reine/reineBP.txt
 
 ##TRAINING DUMMY
-know	Kun				data/chars/enemies/kun/kun.txt
+know    Kun                data/chars/enemies/kun/kun.txt

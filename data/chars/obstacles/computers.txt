@@ -1,15 +1,15 @@
-name		ComputerS #ENEMY SHADOW UNTIL COMPUTER IS DESTROYED
-type		enemy
-subtype		notgrab
-health		1
-shadow		0
-nomove		1 1
-nodrop		2
-stealth		2
-script		data/scripts/updateentity/computerS.c
+name        ComputerS #ENEMY SHADOW UNTIL COMPUTER IS DESTROYED
+type        enemy
+subtype        notgrab
+health        1
+shadow        0
+nomove        1 1
+nodrop        2
+stealth        2
+script        data/scripts/updateentity/computerS.c
 
 anim idle
-	loop	0
-	delay	1
-	offset	96 128
-	frame	data/chars/obstacles/empty.png
+    loop    0
+    delay    1
+    offset    96 128
+    frame    data/chars/obstacles/empty.png

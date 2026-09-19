@@ -3,9 +3,9 @@
 
 void main()
 {
-	rageATK();
-	juggles();
-	specialCost();
-	quickRespawn();
-	applyAtt();
+    rageATK();
+    juggles();
+    specialCost();
+    quickRespawn();
+    applyAtt();
 }

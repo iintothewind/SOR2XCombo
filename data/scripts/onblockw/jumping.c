@@ -2,6 +2,6 @@
 
 void main()
 {
-	wallBouncing();
-	wallJumping();
+    wallBouncing();
+    wallJumping();
 }

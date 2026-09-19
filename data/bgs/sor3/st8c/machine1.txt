@@ -1,13 +1,13 @@
-name			St8_Machine1
-type			none
-shadow			0
-animationscript	data/scripts/animation/default.c
+name            St8_Machine1
+type            none
+shadow            0
+animationscript    data/scripts/animation/default.c
 
-load			St8_Machine1S
+load            St8_Machine1S
 
 anim idle
-	loop	1
-	delay	40
-	offset	1 116
-	@cmd spawn01 "St8_Machine1S" 0 0 0
-	frame	data/bgs/sor3/st8c/_empty.png
+    loop    1
+    delay    40
+    offset    1 116
+    @cmd spawn01 "St8_Machine1S" 0 0 0
+    frame    data/bgs/sor3/st8c/_empty.png

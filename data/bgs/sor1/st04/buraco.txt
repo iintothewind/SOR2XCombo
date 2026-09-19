@@ -1,14 +1,14 @@
-name			Buraco #GROUND
-type			None
+name            Buraco #GROUND
+type            None
 setlayer 999
 
 anim idle
-	loop	0
-	delay	100
-	offset	0 0
-	frame	data/bgs/sor1/st04/buraco00.png
-		delay  20
-	frame	data/bgs/sor1/st04/buraco01.png
-	frame	data/bgs/sor1/st04/buraco02.png
-	offset	-999 -999
-	frame	data/bgs/sor1/st04/hide00.png
+    loop    0
+    delay    100
+    offset    0 0
+    frame    data/bgs/sor1/st04/buraco00.png
+        delay  20
+    frame    data/bgs/sor1/st04/buraco01.png
+    frame    data/bgs/sor1/st04/buraco02.png
+    offset    -999 -999
+    frame    data/bgs/sor1/st04/hide00.png

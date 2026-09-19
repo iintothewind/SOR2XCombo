@@ -1,23 +1,23 @@
-name			BloodHit
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            BloodHit
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	4
-	offset	80 68
-	frame	data/chars/misc/bloodhit/bloodhit00.png
-	frame	data/chars/misc/bloodhit/bloodhit01.png
-	frame	data/chars/misc/bloodhit/bloodhit02.png
-	frame	data/chars/misc/bloodhit/bloodhit03.png
-	frame	data/chars/misc/bloodhit/bloodhit04.png
-	frame	data/chars/misc/bloodhit/bloodhit05.png
-	@cmd suicide
-	frame	data/chars/misc/bloodhit/empty.png
+    loop    0
+    delay    4
+    offset    80 68
+    frame    data/chars/misc/bloodhit/bloodhit00.png
+    frame    data/chars/misc/bloodhit/bloodhit01.png
+    frame    data/chars/misc/bloodhit/bloodhit02.png
+    frame    data/chars/misc/bloodhit/bloodhit03.png
+    frame    data/chars/misc/bloodhit/bloodhit04.png
+    frame    data/chars/misc/bloodhit/bloodhit05.png
+    @cmd suicide
+    frame    data/chars/misc/bloodhit/empty.png

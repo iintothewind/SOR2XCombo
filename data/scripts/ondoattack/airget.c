@@ -2,9 +2,9 @@
 
 void main()
 {
-	otg();
-	parry();
-	multihits();
-	rushHeat();
+    otg();
+    parry();
+    multihits();
+    rushHeat();
   airGet();
 }

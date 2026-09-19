@@ -2,6 +2,6 @@
 
 void main()
 {
-	partnerAlive(0);
-	partnerRespawn();
+    partnerAlive(0);
+    partnerRespawn();
 }

@@ -1,74 +1,74 @@
-name			St8_ElevatorF #ELEVATOR ANIMATED BGLAYER
-type			none
-hostile			enemy
-shadow			0
-setlayer		-1000
-animationscript	data/scripts/animation/default.c
-script			data/scripts/updateentity/st8_elevatorF.c
+name            St8_ElevatorF #ELEVATOR ANIMATED BGLAYER
+type            none
+hostile            enemy
+shadow            0
+setlayer        -1000
+animationscript    data/scripts/animation/default.c
+script            data/scripts/updateentity/st8_elevatorF.c
 
-load			St8_ElevatorFS
+load            St8_ElevatorFS
 
 anim idle
-	loop	0
-	delay	416
-	offset	1 1
-	@cmd spawnParent "St8_ElevatorFS" 0 0 0
-	@cmd autoLife 50
-	frame	data/bgs/sor3/st8b/bg00.png
-	frame	data/bgs/sor3/st8b/bg00.png
-	frame	data/bgs/sor3/st8b/bg00.png
-	
+    loop    0
+    delay    416
+    offset    1 1
+    @cmd spawnParent "St8_ElevatorFS" 0 0 0
+    @cmd autoLife 50
+    frame    data/bgs/sor3/st8b/bg00.png
+    frame    data/bgs/sor3/st8b/bg00.png
+    frame    data/bgs/sor3/st8b/bg00.png
+    
 anim follow1
-	loop	0
-	delay	416
-	offset	1 1
-	sound	data/sounds/elevator.wav
-	@cmd leaper 0 0 -0.308
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	@cmd reseTime
-	@cmd autoLife 200
-	@cmd zeroWait
-	frame	data/bgs/sor3/st8b/bg00.png
-		delay	128
-	@cmd leaper 0 0 0
-	frame	data/bgs/sor3/st8b/bg00.png
-	frame	data/bgs/sor3/st8b/bg00.png
-	
+    loop    0
+    delay    416
+    offset    1 1
+    sound    data/sounds/elevator.wav
+    @cmd leaper 0 0 -0.308
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    @cmd reseTime
+    @cmd autoLife 200
+    @cmd zeroWait
+    frame    data/bgs/sor3/st8b/bg00.png
+        delay    128
+    @cmd leaper 0 0 0
+    frame    data/bgs/sor3/st8b/bg00.png
+    frame    data/bgs/sor3/st8b/bg00.png
+    
 anim follow2
-	loop	0
-	delay	416
-	offset	1 1
-	sound	data/sounds/elevator.wav
-	@cmd leaper 0 0 -0.308
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	@cmd reseTime
-	@cmd autoLife 200
-	@cmd zeroWait
-	frame	data/bgs/sor3/st8b/bg00.png
-		delay	128
-	@cmd leaper 0 0 0
-	frame	data/bgs/sor3/st8b/bg00.png
-	frame	data/bgs/sor3/st8b/bg00.png
-	
+    loop    0
+    delay    416
+    offset    1 1
+    sound    data/sounds/elevator.wav
+    @cmd leaper 0 0 -0.308
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    @cmd reseTime
+    @cmd autoLife 200
+    @cmd zeroWait
+    frame    data/bgs/sor3/st8b/bg00.png
+        delay    128
+    @cmd leaper 0 0 0
+    frame    data/bgs/sor3/st8b/bg00.png
+    frame    data/bgs/sor3/st8b/bg00.png
+    
 anim follow3
-	loop	0
-	delay	416
-	offset	1 1
-	sound	data/sounds/elevator.wav
-	@cmd leaper 0 0 -0.308
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	@cmd reseTime
-	@cmd autoLife 200
-	@cmd zeroWait
-	frame	data/bgs/sor3/st8b/bg00.png
-		delay	16
-	@cmd leaper 0 0 0
-	@cmd zeroWait
-	frame	data/bgs/sor3/st8b/bg00.png
-	frame	data/bgs/sor3/st8b/bg00.png
-	
+    loop    0
+    delay    416
+    offset    1 1
+    sound    data/sounds/elevator.wav
+    @cmd leaper 0 0 -0.308
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    @cmd reseTime
+    @cmd autoLife 200
+    @cmd zeroWait
+    frame    data/bgs/sor3/st8b/bg00.png
+        delay    16
+    @cmd leaper 0 0 0
+    @cmd zeroWait
+    frame    data/bgs/sor3/st8b/bg00.png
+    frame    data/bgs/sor3/st8b/bg00.png
+    
 anim follow4
-	loop	0
-	delay	64
-	offset	1 1
-	frame	data/bgs/sor3/st8b/bg00.png
+    loop    0
+    delay    64
+    offset    1 1
+    frame    data/bgs/sor3/st8b/bg00.png

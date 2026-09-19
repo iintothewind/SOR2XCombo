@@ -1,97 +1,97 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st4d/_empty.png	0.8 1 0 0 0 0 1 1 0 0
-bglayer			data/bgs/sor2/st4d/bg00.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st4d/bg01.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st4d/bg02.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st4d/bg03.png		0.4 1 0 0 0 0 1 1 1
-panel			data/bgs/sor2/st4d/_map2.png	none	none
-frontpanel		data/bgs/sor2/st4d/fp00.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime			0
-direction		left
-spawn1			270 20 300
-spawn2			240 40 300
-spawn3			210 20 300
-spawn4			180 40 300
-updatescript 	data/scripts/updatelevel/spawn_time.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st4d/_empty.png    0.8 1 0 0 0 0 1 1 0 0
+bglayer            data/bgs/sor2/st4d/bg00.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st4d/bg01.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st4d/bg02.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st4d/bg03.png        0.4 1 0 0 0 0 1 1 1
+panel            data/bgs/sor2/st4d/_map2.png    none    none
+frontpanel        data/bgs/sor2/st4d/fp00.png
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime            0
+direction        left
+spawn1            270 20 300
+spawn2            240 40 300
+spawn3            210 20 300
+spawn4            180 40 300
+updatescript     data/scripts/updatelevel/spawn_time.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-load		Fight 3
-load		SpawnTime 3
+load        Fight 3
+load        SpawnTime 3
 
 #########################################################################################
 
 spawnscript data/scripts/levelspawn/flip_dir.c
-at			0
+at            0
 
 spawnscript data/scripts/levelspawn/sample.c
-at			0
+at            0
 
-spawn		Fight 1
-flip		1
-coords		-120 0 0
-at			0
-
-#########################################################################################
-
-spawn		Box_A 1
-flip		1
-coords		110 180 0
-at			0
-
-spawn		Barrel_A 1
-flip		1
-coords		200 180 0
-at			0
-
-spawn		Bin_A 1
-flip		1
-coords		290 180 0
-at			0
-
-spawn		Tire 1
-flip		1
-coords		380 180 0
-at			0
-
-spawn		Box_C 1
-flip		1
-coords		110 260 0
-at			0
-
-spawn		Barrel_B 1
-flip		1
-coords		200 260 0
-at			0
-
-spawn		Bin_B 1
-flip		1
-coords		290 260 0
-at			0
-
-spawn		Floater 1
-flip		1
-coords		380 260 0
-at			0
-
-spawn		WeaponX
-flip		0
-coords		440 200 0
-at			0
+spawn        Fight 1
+flip        1
+coords        -120 0 0
+at            0
 
 #########################################################################################
 
-spawn		SpawnTime 1
-flip		0
-coords		240 230 0
-at			0
+spawn        Box_A 1
+flip        1
+coords        110 180 0
+at            0
+
+spawn        Barrel_A 1
+flip        1
+coords        200 180 0
+at            0
+
+spawn        Bin_A 1
+flip        1
+coords        290 180 0
+at            0
+
+spawn        Tire 1
+flip        1
+coords        380 180 0
+at            0
+
+spawn        Box_C 1
+flip        1
+coords        110 260 0
+at            0
+
+spawn        Barrel_B 1
+flip        1
+coords        200 260 0
+at            0
+
+spawn        Bin_B 1
+flip        1
+coords        290 260 0
+at            0
+
+spawn        Floater 1
+flip        1
+coords        380 260 0
+at            0
+
+spawn        WeaponX
+flip        0
+coords        440 200 0
+at            0
+
+#########################################################################################
+
+spawn        SpawnTime 1
+flip        0
+coords        240 230 0
+at            0

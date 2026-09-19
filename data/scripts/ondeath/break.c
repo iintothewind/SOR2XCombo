@@ -2,7 +2,7 @@
 
 void main()
 {
-	screen(1);
-	resetAuraEffect();
-	dropItem("Apple");
+    screen(1);
+    resetAuraEffect();
+    dropItem("Apple");
 }

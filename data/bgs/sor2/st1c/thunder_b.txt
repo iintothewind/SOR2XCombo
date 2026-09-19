@@ -1,15 +1,15 @@
-name			St1_Thunder_B
-type			none
-shadow			0
-setlayer		1000
+name            St1_Thunder_B
+type            none
+shadow            0
+setlayer        1000
 animationscript data/scripts/animation/default.c
 
-load			St1_Thunder
+load            St1_Thunder
 
 anim idle
-	loop	1
-	delay	32
-	offset	1200 1200
-	@cmd graphics "sor2x" "St1_Thunder"
-	frame	data/bgs/sor2/st1c/thunder01.png
-	frame	data/bgs/sor2/st1c/thunder01.png
+    loop    1
+    delay    32
+    offset    1200 1200
+    @cmd graphics "sor2x" "St1_Thunder"
+    frame    data/bgs/sor2/st1c/thunder01.png
+    frame    data/bgs/sor2/st1c/thunder01.png

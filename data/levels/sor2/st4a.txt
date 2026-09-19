@@ -1,250 +1,250 @@
-loadingbg	data/bgs/loading3.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor2/st4a/bk00.png		0.9 1 0 0 0 0 1 1 0
-panel		data/bgs/sor2/st4a/_map.png		none	none
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading3.png             1 -81 248 480 999 999 0
+background    data/bgs/sor2/st4a/bk00.png        0.9 1 0 0 0 0 1 1 0
+panel        data/bgs/sor2/st4a/_map.png        none    none
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 4
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-load		Stage 3
+load        Stage 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-spawn		Bin_A 1
-flip		1
-coords		320 217 0
-at			0
+spawn        Bin_A 1
+flip        1
+coords        320 217 0
+at            0
 
-spawn		Trash 1
-flip		1
-coords		580 217 0
-at			0
+spawn        Trash 1
+flip        1
+coords        580 217 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		461 205 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        461 205 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		669 205 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        669 205 0
+at            0
 
-spawn		BruceB 1
-map			2
-flip		1
-coords		600 260 0
-at			1
+spawn        BruceB 1
+map            2
+flip        1
+coords        600 260 0
+at            1
 
-spawn		SignalX 1
-map			2
-flip		1
-coords		600 230 0
-at			1
+spawn        SignalX 1
+map            2
+flip        1
+coords        600 230 0
+at            1
 
-spawn		BasicX1 1
-map			2
-flip		1
-coords		600 260 0
-at			1
+spawn        BasicX1 1
+map            2
+flip        1
+coords        600 260 0
+at            1
 
-spawn		BasicX1 1
-map			2
-flip		1
-coords		-100 240 0
-at			100
+spawn        BasicX1 1
+map            2
+flip        1
+coords        -100 240 0
+at            100
 
 wait
-at			300
+at            300
 
-group		4 4
-at			100
+group        4 4
+at            100
 
-spawn		SignalX 1
-map			2
-flip		1
-coords		600 230 0
-at			100
+spawn        SignalX 1
+map            2
+flip        1
+coords        600 230 0
+at            100
 
-spawn		BruceB 1
-map			2
-flip		1
-coords		600 230 0
-at			100
+spawn        BruceB 1
+map            2
+flip        1
+coords        600 230 0
+at            100
 
-spawn		GalsiaB 1
-map			2
-weapon		Knife 1
-flip		1
-coords		600 260 0
-at			100
+spawn        GalsiaB 1
+map            2
+weapon        Knife 1
+flip        1
+coords        600 260 0
+at            100
 
-spawn		GalsiaB 1
-map			2
-weapon		Knife 1
-flip		1
-coords		-100 230 0
-at			100
+spawn        GalsiaB 1
+map            2
+weapon        Knife 1
+flip        1
+coords        -100 230 0
+at            100
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		-100 260 0
-at			100
+spawn        BasicX3 1
+map            2
+flip        1
+coords        -100 260 0
+at            100
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-100 260 0
-at			150
+spawn        BossX1 1
+map            4
+flip        1
+coords        -100 260 0
+at            150
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-100 260 0
-at			150
+flip        1
+coords        -100 260 0
+at            150
 
 #########################################################################################
 
-group		1000 1000
-at			310
+group        1000 1000
+at            310
 
-spawn		Bin_A 1
-flip		1
-coords		1000 217 0
-at			310
+spawn        Bin_A 1
+flip        1
+coords        1000 217 0
+at            310
 
-spawn		Bin_A 1
-flip		1
-coords		1050 217 0
-at			310
+spawn        Bin_A 1
+flip        1
+coords        1050 217 0
+at            310
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		662 205 0
-at			310
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        662 205 0
+at            310
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		870 205 0
-at			310
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        870 205 0
+at            310
 
-spawn		BruceB 1
-map			2
-flip		1
-coords		600 230 0
-at			400
+spawn        BruceB 1
+map            2
+flip        1
+coords        600 230 0
+at            400
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		-100 230 0
-at			500
+spawn        BasicX3 1
+map            2
+flip        1
+coords        -100 230 0
+at            500
 
-spawn		DonovanB 1
-map			2
-weapon		Pipe 1
-flip		1
-coords		-100 230 0
-at			600
+spawn        DonovanB 1
+map            2
+weapon        Pipe 1
+flip        1
+coords        -100 230 0
+at            600
 
-spawn		DonovanB 1
-map			2
-weapon		Pipe 1
-flip		1
-coords		600 230 0
-at			700
+spawn        DonovanB 1
+map            2
+weapon        Pipe 1
+flip        1
+coords        600 230 0
+at            700
 
-spawn		Donovan_Wait 1
-map			2
-flip		0
-coords		800 240 0
-at			700
+spawn        Donovan_Wait 1
+map            2
+flip        0
+coords        800 240 0
+at            700
 
-spawn		HakuyoX 1
-map			2
-flip		0
-coords		350 230 300
-at			1050
+spawn        HakuyoX 1
+map            2
+flip        0
+coords        350 230 300
+at            1050
 
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			1050
+at            1050
 
-group		4 4
-at			1050
+group        4 4
+at            1050
 
-spawn		BasicX1 1
-map			2
-flip		1
-coords		600 260 0
-at			1050
+spawn        BasicX1 1
+map            2
+flip        1
+coords        600 260 0
+at            1050
 
-spawn		BasicX1 1
-map			2
-flip		1
-coords		-100 260 0
-at			1050
+spawn        BasicX1 1
+map            2
+flip        1
+coords        -100 260 0
+at            1050
 
-spawn		HakuyoX 1
-map			2
-flip		0
-coords		400 230 600
-at			1050
+spawn        HakuyoX 1
+map            2
+flip        0
+coords        400 230 600
+at            1050
 
-spawn		BruceB 1
-map			2
-flip		1
-coords		600 230 0
-at			1050
+spawn        BruceB 1
+map            2
+flip        1
+coords        600 230 0
+at            1050
 
-spawn		BasicX1 1
-map			2
-flip		1
-coords		-100 230 0
-at			1050
+spawn        BasicX1 1
+map            2
+flip        1
+coords        -100 230 0
+at            1050
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		600 260 0
-at			1050
+spawn        BasicX3 1
+map            2
+flip        1
+coords        600 260 0
+at            1050
 
-spawn		BossX1 1
-map			2
-flip		1
-coords		-100 260 0
-at			1050
+spawn        BossX1 1
+map            2
+flip        1
+coords        -100 260 0
+at            1050
 
-spawn		BossX1 1
-map			2
+spawn        BossX1 1
+map            2
 2pspawn
-flip		1
-coords		-100 260 0
-at			1050
+flip        1
+coords        -100 260 0
+at            1050

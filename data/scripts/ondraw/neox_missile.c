@@ -2,5 +2,5 @@
 
 void main()
 {
-	subTarget();
+    subTarget();
 }

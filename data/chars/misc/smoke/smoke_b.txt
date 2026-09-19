@@ -1,19 +1,19 @@
-name			Smoke_B
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity		100
-toflip			1
-animationscript	data/scripts/animation/default.c
+name            Smoke_B
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity        100
+toflip            1
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	6
-	offset	25 26
-	frame	data/chars/misc/smoke/original/smoke00.png
-	frame	data/chars/misc/smoke/original/smoke01.png
-	frame	data/chars/misc/smoke/original/smoke02.png
-	frame	data/chars/misc/smoke/original/smoke03.png
-	@cmd suicide
-	frame	data/chars/misc/smoke/original/empty.png
+    loop    0
+    delay    6
+    offset    25 26
+    frame    data/chars/misc/smoke/original/smoke00.png
+    frame    data/chars/misc/smoke/original/smoke01.png
+    frame    data/chars/misc/smoke/original/smoke02.png
+    frame    data/chars/misc/smoke/original/smoke03.png
+    @cmd suicide
+    frame    data/chars/misc/smoke/original/empty.png

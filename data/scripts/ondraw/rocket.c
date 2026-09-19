@@ -3,9 +3,9 @@
 
 void main()
 {
-	jumpVel();
-	parrow();
-	debugMode();
-	flyUp("ANI_FOLLOW4");
-	checkText("ANI_FOLLOW3", "RAGE");
+    jumpVel();
+    parrow();
+    debugMode();
+    flyUp("ANI_FOLLOW4");
+    checkText("ANI_FOLLOW3", "RAGE");
 }

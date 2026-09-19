@@ -1,479 +1,479 @@
 ##MAIN
-name				Tiger
-type				player
-secret				0 1
+name                Tiger
+type                player
+secret                0 1
 
 ##LIFE
-health				400
+health                400
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				78
+antigravity            -1 #-1/-2/-3
+height                78
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				none none none none Tiger
-modelflag			3
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bflash				Block
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                none none none none Tiger
+modelflag            3
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bflash                Block
+death                2
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/no_counter.c
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-ondrawscript		data/scripts/ondraw/default.c
-onspawnscript		data/scripts/onspawn/player.c
-onpainscript		data/scripts/onpain/default.c
-animationscript	 	data/scripts/animation/default.c
-keyscript			data/scripts/key/tiger.c
-takedamagescript	data/scripts/takedamage/default.c
-script				data/scripts/updateentity/default.c
+didblockscript        data/scripts/didblock/no_counter.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+ondrawscript        data/scripts/ondraw/default.c
+onspawnscript        data/scripts/onspawn/player.c
+onpainscript        data/scripts/onpain/default.c
+animationscript         data/scripts/animation/default.c
+keyscript            data/scripts/key/tiger.c
+takedamagescript    data/scripts/takedamage/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/tiger/icon.png 1
+icon                data/chars/enemies/tiger/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/Die4.wav
+diesound            data/voices/Die4.wav
 
 ##REMAPS
-remap				data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter1.png
-remap				data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter2.png
-remap				data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter3.png
-remap				data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter4.png
+remap                data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter1.png
+remap                data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter2.png
+remap                data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter3.png
+remap                data/chars/enemies/tiger/idle00.png data/chars/enemies/tiger/alter4.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim waiting
-	fshadow 0
-	loop	1
-	delay	16
-	offset	144 177
-	frame	data/chars/enemies/tiger/idle00.png
-	frame	data/chars/enemies/tiger/idle01.png
-	frame	data/chars/enemies/tiger/idle02.png
-	frame	data/chars/enemies/tiger/idle03.png
+    fshadow 0
+    loop    1
+    delay    16
+    offset    144 177
+    frame    data/chars/enemies/tiger/idle00.png
+    frame    data/chars/enemies/tiger/idle01.png
+    frame    data/chars/enemies/tiger/idle02.png
+    frame    data/chars/enemies/tiger/idle03.png
 
 anim select
-	fshadow 0
-	loop	0
-	delay	100000
-	offset	144 177
-	frame	data/chars/enemies/tiger/idle00.png
-		delay	24
-	frame	data/chars/enemies/tiger/idle00.png
-	frame	data/chars/enemies/tiger/idle00.png
+    fshadow 0
+    loop    0
+    delay    100000
+    offset    144 177
+    frame    data/chars/enemies/tiger/idle00.png
+        delay    24
+    frame    data/chars/enemies/tiger/idle00.png
+    frame    data/chars/enemies/tiger/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	144 177
-	bbox 	128 103 31 76
-	frame	data/chars/enemies/tiger/idle00.png
-	frame	data/chars/enemies/tiger/idle01.png
-	frame	data/chars/enemies/tiger/idle02.png
-	frame	data/chars/enemies/tiger/idle03.png
+    loop    1
+    delay    16
+    offset    144 177
+    bbox     128 103 31 76
+    frame    data/chars/enemies/tiger/idle00.png
+    frame    data/chars/enemies/tiger/idle01.png
+    frame    data/chars/enemies/tiger/idle02.png
+    frame    data/chars/enemies/tiger/idle03.png
 
 anim chargeattack
-	chargetime 9999
-	loop	0
-	delay	1
-	offset	144 177
-	frame	data/chars/enemies/tiger/idle00.png
+    chargetime 9999
+    loop    0
+    delay    1
+    offset    144 177
+    frame    data/chars/enemies/tiger/idle00.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	144 177
-	bbox 	128 103 31 76
-	frame	data/chars/enemies/tiger/walk00.png
-	frame	data/chars/enemies/tiger/walk01.png
-	bbox 	129 99 27 80
-	frame	data/chars/enemies/tiger/walk02.png
-	bbox 	128 103 31 76
-	frame	data/chars/enemies/tiger/walk03.png
+    loop    1
+    delay    16
+    offset    144 177
+    bbox     128 103 31 76
+    frame    data/chars/enemies/tiger/walk00.png
+    frame    data/chars/enemies/tiger/walk01.png
+    bbox     129 99 27 80
+    frame    data/chars/enemies/tiger/walk02.png
+    bbox     128 103 31 76
+    frame    data/chars/enemies/tiger/walk03.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	loop	1
-	delay	12
-	offset	144 177
-	bbox 	128 103 31 76
-	frame	data/chars/enemies/tiger/walk00.png
-	frame	data/chars/enemies/tiger/walk01.png
-	bbox 	129 99 27 80
-	frame	data/chars/enemies/tiger/walk02.png
-	bbox 	128 103 31 76
-	frame	data/chars/enemies/tiger/walk03.png
+    @cmd lockAni "runType" "off"
+    loop    1
+    delay    12
+    offset    144 177
+    bbox     128 103 31 76
+    frame    data/chars/enemies/tiger/walk00.png
+    frame    data/chars/enemies/tiger/walk01.png
+    bbox     129 99 27 80
+    frame    data/chars/enemies/tiger/walk02.png
+    bbox     128 103 31 76
+    frame    data/chars/enemies/tiger/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	144 177
-	frame	data/chars/enemies/tiger/get00.png
+    loop    0
+    delay    16
+    offset    144 177
+    frame    data/chars/enemies/tiger/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	144 177
-	bbox 	131 106 28 73
-	frame	data/chars/enemies/tiger/grabbed00.png
+    loop    0
+    delay    8
+    offset    144 177
+    bbox     131 106 28 73
+    frame    data/chars/enemies/tiger/grabbed00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	144 177
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/tiger/jump00.png
+    loop    0
+    delay    30
+    offset    144 177
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/tiger/jump00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	135 120 30 59
-	frame	data/chars/enemies/tiger/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     135 120 30 59
+    frame    data/chars/enemies/tiger/jumpdelay00.png
 
 anim jump
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	140 94 21 66
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/enemies/tiger/jump00.png
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     140 94 21 66
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/enemies/tiger/jump00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	144 177
-	bbox 	140 94 21 66
-	@cmd jump 1
-	frame	data/chars/enemies/tiger/jump00.png
+    loop    0
+    delay    30
+    offset    144 177
+    bbox     140 94 21 66
+    @cmd jump 1
+    frame    data/chars/enemies/tiger/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	135 120 30 59
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/tiger/jumpland00.png
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     135 120 30 59
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/tiger/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	144 177
-	bbox 	131 106 28 73
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
-	frame	data/chars/enemies/tiger/grabbed00.png
-	frame	data/chars/enemies/tiger/grabbed01.png
+    loop    0
+    delay    4
+    offset    144 177
+    bbox     131 106 28 73
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
+    frame    data/chars/enemies/tiger/grabbed00.png
+    frame    data/chars/enemies/tiger/grabbed01.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	144 177
-	bbox 	132 105 26 74
-	frame	data/chars/enemies/tiger/pain00.png
-	frame	data/chars/enemies/tiger/pain01.png
-	frame	data/chars/enemies/tiger/pain00.png
-	frame	data/chars/enemies/tiger/pain01.png
-	frame	data/chars/enemies/tiger/pain00.png
-	frame	data/chars/enemies/tiger/pain01.png
-	frame	data/chars/enemies/tiger/pain00.png
-	frame	data/chars/enemies/tiger/pain01.png
-	frame	data/chars/enemies/tiger/pain00.png
-	frame	data/chars/enemies/tiger/pain01.png
-	frame	data/chars/enemies/tiger/pain00.png
-	frame	data/chars/enemies/tiger/pain01.png
+    loop    0
+    delay    4
+    offset    144 177
+    bbox     132 105 26 74
+    frame    data/chars/enemies/tiger/pain00.png
+    frame    data/chars/enemies/tiger/pain01.png
+    frame    data/chars/enemies/tiger/pain00.png
+    frame    data/chars/enemies/tiger/pain01.png
+    frame    data/chars/enemies/tiger/pain00.png
+    frame    data/chars/enemies/tiger/pain01.png
+    frame    data/chars/enemies/tiger/pain00.png
+    frame    data/chars/enemies/tiger/pain01.png
+    frame    data/chars/enemies/tiger/pain00.png
+    frame    data/chars/enemies/tiger/pain01.png
+    frame    data/chars/enemies/tiger/pain00.png
+    frame    data/chars/enemies/tiger/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	144 177
-	bbox 	135 111 29 66
-	frame	data/chars/enemies/tiger/pain200.png
-	frame	data/chars/enemies/tiger/pain201.png
-	frame	data/chars/enemies/tiger/pain200.png
-	frame	data/chars/enemies/tiger/pain201.png
-	frame	data/chars/enemies/tiger/pain200.png
-	frame	data/chars/enemies/tiger/pain201.png
-	frame	data/chars/enemies/tiger/pain200.png
-	frame	data/chars/enemies/tiger/pain201.png
-	frame	data/chars/enemies/tiger/pain200.png
-	frame	data/chars/enemies/tiger/pain201.png
-	frame	data/chars/enemies/tiger/pain200.png
-	frame	data/chars/enemies/tiger/pain201.png
+    loop    0
+    delay    4
+    offset    144 177
+    bbox     135 111 29 66
+    frame    data/chars/enemies/tiger/pain200.png
+    frame    data/chars/enemies/tiger/pain201.png
+    frame    data/chars/enemies/tiger/pain200.png
+    frame    data/chars/enemies/tiger/pain201.png
+    frame    data/chars/enemies/tiger/pain200.png
+    frame    data/chars/enemies/tiger/pain201.png
+    frame    data/chars/enemies/tiger/pain200.png
+    frame    data/chars/enemies/tiger/pain201.png
+    frame    data/chars/enemies/tiger/pain200.png
+    frame    data/chars/enemies/tiger/pain201.png
+    frame    data/chars/enemies/tiger/pain200.png
+    frame    data/chars/enemies/tiger/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	144 177
-	bbox 	121 110 39 54
-	frame	data/chars/enemies/tiger/fall00.png
-		delay	8
-	bbox 	107 158 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/tiger/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    144 177
+    bbox     121 110 39 54
+    frame    data/chars/enemies/tiger/fall00.png
+        delay    8
+    bbox     107 158 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	144 177
-	bbox 	121 110 39 54
-	frame	data/chars/enemies/tiger/fall00.png
-		delay	8
-	bbox 	107 158 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/tiger/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    144 177
+    bbox     121 110 39 54
+    frame    data/chars/enemies/tiger/fall00.png
+        delay    8
+    bbox     107 158 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	144 177
-	bbox 	121 110 39 54
-	frame	data/chars/enemies/tiger/fall00.png
-		delay	8
-	bbox 	107 158 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/tiger/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    144 177
+    bbox     121 110 39 54
+    frame    data/chars/enemies/tiger/fall00.png
+        delay    8
+    bbox     107 158 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	144 177
-	frame	data/chars/enemies/tiger/fall600.png
-	frame	data/chars/enemies/tiger/fall601.png
-	frame	data/chars/enemies/tiger/fall602.png
-	frame	data/chars/enemies/tiger/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/tiger/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    144 177
+    frame    data/chars/enemies/tiger/fall600.png
+    frame    data/chars/enemies/tiger/fall601.png
+    frame    data/chars/enemies/tiger/fall602.png
+    frame    data/chars/enemies/tiger/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	144 177
-	frame	data/chars/enemies/tiger/fall700.png
-	frame	data/chars/enemies/tiger/fall701.png
-	frame	data/chars/enemies/tiger/fall702.png
-	frame	data/chars/enemies/tiger/fall703.png
-	frame	data/chars/enemies/tiger/fall704.png
-	frame	data/chars/enemies/tiger/fall705.png
+    loop    0
+    delay    1000
+    offset    144 177
+    frame    data/chars/enemies/tiger/fall700.png
+    frame    data/chars/enemies/tiger/fall701.png
+    frame    data/chars/enemies/tiger/fall702.png
+    frame    data/chars/enemies/tiger/fall703.png
+    frame    data/chars/enemies/tiger/fall704.png
+    frame    data/chars/enemies/tiger/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	144 177
-	bbox 	121 110 39 54
-	hitfx	data/sounds/MediumKick.wav
-	attack 121 110 39 54 4 1 0 0 20 12
-	frame	data/chars/enemies/tiger/fall00.png
-		delay	999
-	frame	data/chars/enemies/tiger/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	107 158 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/tiger/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    144 177
+    bbox     121 110 39 54
+    hitfx    data/sounds/MediumKick.wav
+    attack 121 110 39 54 4 1 0 0 20 12
+    frame    data/chars/enemies/tiger/fall00.png
+        delay    999
+    frame    data/chars/enemies/tiger/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     107 158 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	144 177
-	bbox 	123 122 33 54
-	hitfx	data/sounds/MediumKick.wav
-	attack 123 122 33 54 4 1 0 0 20 12
-	frame	data/chars/enemies/tiger/fall900.png
-		delay	999
-	frame	data/chars/enemies/tiger/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	107 158 79 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/tiger/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    144 177
+    bbox     123 122 33 54
+    hitfx    data/sounds/MediumKick.wav
+    attack 123 122 33 54 4 1 0 0 20 12
+    frame    data/chars/enemies/tiger/fall900.png
+        delay    999
+    frame    data/chars/enemies/tiger/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     107 158 79 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	144 177
-	frame	data/chars/enemies/tiger/fall01.png
-	frame	data/chars/enemies/tiger/fall01.png
-	frame	data/chars/enemies/tiger/fall01.png
+    loop    0
+    delay    16
+    offset    144 177
+    frame    data/chars/enemies/tiger/fall01.png
+    frame    data/chars/enemies/tiger/fall01.png
+    frame    data/chars/enemies/tiger/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	144 177
-	frame	data/chars/enemies/tiger/rise00.png
-	frame	data/chars/enemies/tiger/rise01.png
-	frame	data/chars/enemies/tiger/rise00.png
-	frame	data/chars/enemies/tiger/rise02.png
+    loop    0
+    delay    16
+    offset    144 177
+    frame    data/chars/enemies/tiger/rise00.png
+    frame    data/chars/enemies/tiger/rise01.png
+    frame    data/chars/enemies/tiger/rise00.png
+    frame    data/chars/enemies/tiger/rise02.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	144 177
-	bbox 	129 99 27 80
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/tiger/a100.png
-	attack 137 129 28 34 2 0 0 0 10 12
-	bbox 	127 99 27 80
-	frame	data/chars/enemies/tiger/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/tiger/a101.png
-	attack 134 115 56 32 2 0 0 0 10 12
-	frame	data/chars/enemies/tiger/a102.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    144 177
+    bbox     129 99 27 80
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/tiger/a100.png
+    attack 137 129 28 34 2 0 0 0 10 12
+    bbox     127 99 27 80
+    frame    data/chars/enemies/tiger/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/tiger/a101.png
+    attack 134 115 56 32 2 0 0 0 10 12
+    frame    data/chars/enemies/tiger/a102.png
 
 anim attack2 #HIGH KICK
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	129 99 27 80
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/tiger/a200.png
-	bbox 	127 99 27 80
-	sound	data/voices/Attack3.wav
-	frame	data/chars/enemies/tiger/a201.png
-	attack 137 101 54 42 8 1 0 0 20 12
-	bbox 	127 104 26 75
-	frame	data/chars/enemies/tiger/a202.png
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     129 99 27 80
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/tiger/a200.png
+    bbox     127 99 27 80
+    sound    data/voices/Attack3.wav
+    frame    data/chars/enemies/tiger/a201.png
+    attack 137 101 54 42 8 1 0 0 20 12
+    bbox     127 104 26 75
+    frame    data/chars/enemies/tiger/a202.png
 
 anim jumpattack
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	144 177
-	bbox 	124 95 44 53
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/tiger/jumpatk00.png
-	attack 147 127 58 21 4 1 0 0 20 12
-	sound	data/voices/Attack4.wav
-	frame	data/chars/enemies/tiger/jumpatk00.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    144 177
+    bbox     124 95 44 53
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/tiger/jumpatk00.png
+    attack 147 127 58 21 4 1 0 0 20 12
+    sound    data/voices/Attack4.wav
+    frame    data/chars/enemies/tiger/jumpatk00.png
 
 anim special #HIGH KICK
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	energycost 40 2 5
-	@cmd healStart
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	129 99 27 80
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/tiger/a200.png
-	bbox 	127 99 27 80
-	sound	data/voices/Attack3.wav
-	frame	data/chars/enemies/tiger/a201.png
-	attack 137 101 54 42 8 1 0 0 20 12
-	bbox 	127 104 26 75
-	frame	data/chars/enemies/tiger/a202.png
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    energycost 40 2 5
+    @cmd healStart
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     129 99 27 80
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/tiger/a200.png
+    bbox     127 99 27 80
+    sound    data/voices/Attack3.wav
+    frame    data/chars/enemies/tiger/a201.png
+    attack 137 101 54 42 8 1 0 0 20 12
+    bbox     127 104 26 75
+    frame    data/chars/enemies/tiger/a202.png
 
 anim special2 #LOW KICK
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 40 2 5
-	@cmd healStart
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	135 120 30 59
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/enemies/tiger/kick00.png
-		delay	18
-	attack 149 151 51 28 4 1 0 0 20 12
-	sound	data/voices/Attack3.wav
-	frame	data/chars/enemies/tiger/kick01.png
-		delay	12
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/tiger/kick02.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 40 2 5
+    @cmd healStart
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     135 120 30 59
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/enemies/tiger/kick00.png
+        delay    18
+    attack 149 151 51 28 4 1 0 0 20 12
+    sound    data/voices/Attack3.wav
+    frame    data/chars/enemies/tiger/kick01.png
+        delay    12
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/tiger/kick02.png
 
 anim follow11 #BLOCK
-	loop	0
-	delay	12
-	offset	144 177
-	bbox 	128 103 31 76
-	@cmd block 1
-	frame	data/chars/enemies/tiger/block00.png
-	@cmd keyLoop "attack3" 0
-	#@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
-	@cmd block 0
-	frame	data/chars/enemies/tiger/block00.png
+    loop    0
+    delay    12
+    offset    144 177
+    bbox     128 103 31 76
+    @cmd block 1
+    frame    data/chars/enemies/tiger/block00.png
+    @cmd keyLoop "attack3" 0
+    #@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
+    @cmd block 0
+    frame    data/chars/enemies/tiger/block00.png
 
 anim follow12 #PARRY
-	loop	0
-	delay	24
-	offset	144 177
-	bbox 	128 103 31 76
-	@cmd block 1
-	frame	data/chars/enemies/tiger/block00.png
+    loop    0
+    delay    24
+    offset    144 177
+    bbox     128 103 31 76
+    @cmd block 1
+    frame    data/chars/enemies/tiger/block00.png

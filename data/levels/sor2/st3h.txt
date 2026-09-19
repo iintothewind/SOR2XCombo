@@ -1,272 +1,272 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st3h/_empty.png	1 1 0 0 0 0 1 1 0
-bglayer			data/bgs/sor2/st3h/bg00.png		0.8 1 0 0 0 0 -1 1 1 0 3 0.1 1.2 0 3
-bglayer			data/bgs/sor2/st3h/bg01.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st3h/bg02.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st3h/bg03.png		0.4 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st3h/bg04.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st3h/bg05.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st3h/bg06.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-panel			data/bgs/sor2/st3h/_map.png		none	none
-frontpanel		data/bgs/sor2/st3h/fp00.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-bgspeed			1 0
-stagenumber 	3
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor2_st3h.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st3h/_empty.png    1 1 0 0 0 0 1 1 0
+bglayer            data/bgs/sor2/st3h/bg00.png        0.8 1 0 0 0 0 -1 1 1 0 3 0.1 1.2 0 3
+bglayer            data/bgs/sor2/st3h/bg01.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st3h/bg02.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st3h/bg03.png        0.4 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st3h/bg04.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st3h/bg05.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st3h/bg06.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+panel            data/bgs/sor2/st3h/_map.png        none    none
+frontpanel        data/bgs/sor2/st3h/fp00.png
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+bgspeed            1 0
+stagenumber     3
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor2_st3h.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-spawn		Egg 1
-flip		1
-coords		450 190 0
-at			0
+spawn        Egg 1
+flip        1
+coords        450 190 0
+at            0
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			25
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            25
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 220 0
-at			50
+spawn        Moto_Jump 1
+flip        0
+coords        520 220 0
+at            50
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			100
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            100
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 220 0
-at			150
+spawn        Moto_Jump 1
+flip        0
+coords        520 220 0
+at            150
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 240 0
-at			200
+spawn        Moto_Jump 1
+flip        0
+coords        520 240 0
+at            200
 
-spawn		Moto_Jump 1
-flip		1
-coords		-50 260 0
-at			250
+spawn        Moto_Jump 1
+flip        1
+coords        -50 260 0
+at            250
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 240 0
-at			300
+spawn        Moto_Jump 1
+flip        0
+coords        520 240 0
+at            300
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			350
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            350
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 240 0
-at			400
+spawn        Moto_Jump 1
+flip        0
+coords        520 240 0
+at            400
 
-spawn		Moto_Jump 1
-flip		1
-coords		-50 260 0
-at			450
+spawn        Moto_Jump 1
+flip        1
+coords        -50 260 0
+at            450
 
 wait
-at			500
+at            500
 
 #########################################################################################
 
-spawn		Egg 1
-flip		1
-coords		520 190 0
-at			600
+spawn        Egg 1
+flip        1
+coords        520 190 0
+at            600
 
-spawn		GalsiaB 1
-map			4
-weapon		Knife 1
-flip		1
-coords		600 220 0
-at			700
+spawn        GalsiaB 1
+map            4
+weapon        Knife 1
+flip        1
+coords        600 220 0
+at            700
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		600 260 0
-at			750
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        600 260 0
+at            750
 
-spawn		BruceB 1
-map			4
-flip		1
-coords		-100 220 0
-at			800
+spawn        BruceB 1
+map            4
+flip        1
+coords        -100 220 0
+at            800
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		-100 260 0
-at			850
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        -100 260 0
+at            850
 
-spawn		BasicX3 1
-map			4
-flip		1
-coords		600 220 0
-at			900
+spawn        BasicX3 1
+map            4
+flip        1
+coords        600 220 0
+at            900
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		600 260 0
-at			950
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        600 260 0
+at            950
 
-spawn		JackB 1
-map			4
-flip		1
-coords		-100 220 0
-at			1000
+spawn        JackB 1
+map            4
+flip        1
+coords        -100 220 0
+at            1000
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		-100 260 0
-at			1000
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        -100 260 0
+at            1000
 
-spawn		Egg 1
-flip		1
-coords		600 190 0
-at			1100
+spawn        Egg 1
+flip        1
+coords        600 190 0
+at            1100
 
-spawn		JetB 1
-map			0
-flip		1
-coords		700 230 0
-at			1250
+spawn        JetB 1
+map            0
+flip        1
+coords        700 230 0
+at            1250
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-100 230 0
-at			1250
+spawn        BossX1 1
+map            4
+flip        1
+coords        -100 230 0
+at            1250
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-100 230 0
-at			1250
+flip        1
+coords        -100 230 0
+at            1250
 
 wait
-at			1300
+at            1300
 
 #########################################################################################
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 260 0
-at			1400
+spawn        Moto_Jump 1
+flip        0
+coords        520 260 0
+at            1400
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			1500
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            1500
 
-spawn		Moto_Single 1
-flip		1
-coords		-50 220 0
-at			1600
+spawn        Moto_Single 1
+flip        1
+coords        -50 220 0
+at            1600
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			1700
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            1700
 
-spawn		BruceB 1
-flip		0
-coords		520 260 0
-at			1700
+spawn        BruceB 1
+flip        0
+coords        520 260 0
+at            1700
 
-spawn		Moto_Jump 1
-flip		1
-coords		-50 220 0
-at			1800
+spawn        Moto_Jump 1
+flip        1
+coords        -50 220 0
+at            1800
 
-spawn		Egg 1
-flip		1
-coords		600 190 0
-at			1900
+spawn        Egg 1
+flip        1
+coords        600 190 0
+at            1900
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 260 0
-at			2000
+spawn        Moto_Jump 1
+flip        0
+coords        520 260 0
+at            2000
 
-spawn		FogX 1
-map			1
-flip		0
-coords		600 220 0
-at			2050
+spawn        FogX 1
+map            1
+flip        0
+coords        600 220 0
+at            2050
 
-spawn		FogX 1
-map			2
-flip		0
-coords		600 260 0
-at			2100
+spawn        FogX 1
+map            2
+flip        0
+coords        600 260 0
+at            2100
 
-spawn		FogX 1
-map			3
-flip		0
-coords		600 260 0
-at			2150
+spawn        FogX 1
+map            3
+flip        0
+coords        600 260 0
+at            2150
 
-spawn		JackB 1
-map			3
-flip		0
-coords		600 260 0
-at			2150
+spawn        JackB 1
+map            3
+flip        0
+coords        600 260 0
+at            2150
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 220 0
-at			2200
+spawn        Moto_Jump 1
+flip        0
+coords        520 220 0
+at            2200
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 260 0
-at			2250
+spawn        Moto_Jump 1
+flip        0
+coords        520 260 0
+at            2250
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			2300
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            2300
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 220 0
-at			2350
+spawn        Moto_Jump 1
+flip        0
+coords        520 220 0
+at            2350
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			2350
+at            2350
 
-spawn		BossX1 1
-flip		0
-coords		-100 220 0
-at			2350
+spawn        BossX1 1
+flip        0
+coords        -100 220 0
+at            2350
 
-spawn		BossX1 1
-flip		0
+spawn        BossX1 1
+flip        0
 2pspawn
-coords		-100 220 0
-at			2350
+coords        -100 220 0
+at            2350

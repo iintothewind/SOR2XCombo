@@ -2,6 +2,6 @@
 
 void main()
 {
-	resetAuraEffect();
-	dropItem("Apple");
+    resetAuraEffect();
+    dropItem("Apple");
 }

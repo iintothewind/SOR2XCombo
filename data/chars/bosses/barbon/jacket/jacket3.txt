@@ -1,20 +1,20 @@
-name		barbon_jacket3 #BARBON STRIPED JACKET
-type		npc
-health		1
-lifespan	1
-nomove		1 1
-death		1
-stealth		2
-gfxshadow	1
+name        barbon_jacket3 #BARBON STRIPED JACKET
+type        npc
+health        1
+lifespan    1
+nomove        1 1
+death        1
+stealth        2
+gfxshadow    1
 
 anim idle
-	loop	0
-	delay	1000
-	offset	51 90
-	frame	data/chars/bosses/barbon/jacket/jacket02.png
-	
+    loop    0
+    delay    1000
+    offset    51 90
+    frame    data/chars/bosses/barbon/jacket/jacket02.png
+    
 anim death
-	loop	0
-	delay	32
-	offset	51 90
-	frame	data/chars/bosses/barbon/jacket/jacket02.png
+    loop    0
+    delay    32
+    offset    51 90
+    frame    data/chars/bosses/barbon/jacket/jacket02.png

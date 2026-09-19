@@ -1,460 +1,460 @@
-loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st2a/_empty.png	1 1 0 0 0 0 1 1 0
-bglayer			data/bgs/sor2/st2a/bg00.png		0.8 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st2a/bg01.png		0.8 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st2a/bg02.png		0.8 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st2a/bg03.png		0.8 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st2a/bg04.png		0.8 1 0 0 0 0 1 1 1
-bglayer			data/bgs/sor2/st2a/bg05.png		0.8 1 0 0 0 0 1 1 1
-panel			data/bgs/sor2/st2a/_map.png		none	none
-fglayer			data/bgs/sor2/st2a/fg00.png		-150 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st2a/fg01.png		-150 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st2a/fg00.png		-75 0 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st2a/fg01.png		-75 0 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber		2
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor2_st2a.c
+loadingbg        data/bgs/loading1.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st2a/_empty.png    1 1 0 0 0 0 1 1 0
+bglayer            data/bgs/sor2/st2a/bg00.png        0.8 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st2a/bg01.png        0.8 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st2a/bg02.png        0.8 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st2a/bg03.png        0.8 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st2a/bg04.png        0.8 1 0 0 0 0 1 1 1
+bglayer            data/bgs/sor2/st2a/bg05.png        0.8 1 0 0 0 0 1 1 1
+panel            data/bgs/sor2/st2a/_map.png        none    none
+fglayer            data/bgs/sor2/st2a/fg00.png        -150 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st2a/fg01.png        -150 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st2a/fg00.png        -75 0 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st2a/fg01.png        -75 0 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber        2
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor2_st2a.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall		2315 275 0 0 1000 1000 38 5000
+wall        2315 275 0 0 1000 1000 38 5000
 
 #########################################################################################
 
-load		Stage 3
+load        Stage 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-spawn		Barrel_A 1
-flip		1
-coords		200 220 0
-at			0
+spawn        Barrel_A 1
+flip        1
+coords        200 220 0
+at            0
 
-spawn		Barrel_A 1
-flip		1
-coords		230 240 0
-at			0
+spawn        Barrel_A 1
+flip        1
+coords        230 240 0
+at            0
 
-spawn		Barrel_A 1
-flip		1
-coords		260 260 0
-at			0
+spawn        Barrel_A 1
+flip        1
+coords        260 260 0
+at            0
 
-spawn		Barrel_A 1
-flip		1
-coords		240 220 0
-at			0
+spawn        Barrel_A 1
+flip        1
+coords        240 220 0
+at            0
 
-spawn		Barrel_A 1
-flip		1
-coords		280 250 0
-at			0
+spawn        Barrel_A 1
+flip        1
+coords        280 250 0
+at            0
 
-spawn		Barrel_A 1
-flip		1
-coords		300 270 0
-at			0
+spawn        Barrel_A 1
+flip        1
+coords        300 270 0
+at            0
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 240 0
-at			1
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 240 0
+at            1
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 240 0
-at			1
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 240 0
+at            1
 
-spawn		BruceB 1
-map			1
-flip		1
-coords		-100 240 0
-at			1
+spawn        BruceB 1
+map            1
+flip        1
+coords        -100 240 0
+at            1
 
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 240 0
-at			50
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 240 0
+at            50
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 240 0
-at			50
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 240 0
+at            50
 
-spawn		Moto_Repeat 1
-flip		0
-coords		-100 240 0
-at			100
+spawn        Moto_Repeat 1
+flip        0
+coords        -100 240 0
+at            100
 
-spawn		Moto_Single 1
-flip		0
-coords		520 220 0
-at			150
+spawn        Moto_Single 1
+flip        0
+coords        520 220 0
+at            150
 
-spawn		Moto_Jump 1
-flip		1
-coords		-50 260 0
-at			200
+spawn        Moto_Jump 1
+flip        1
+coords        -50 260 0
+at            200
 
 wait
-at			350
+at            350
 
-group		4 4
-at			200
+group        4 4
+at            200
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 220 0
-at			200
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 220 0
+at            200
 
-spawn		BruceB 1
-map			1
-flip		1
-coords		-100 260 0
-at			200
+spawn        BruceB 1
+map            1
+flip        1
+coords        -100 260 0
+at            200
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 260 0
-at			200
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 260 0
+at            200
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 220 0
-at			200
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 220 0
+at            200
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		-100 260 0
-at			200
+spawn        BasicX3 1
+map            1
+flip        1
+coords        -100 260 0
+at            200
 
 #########################################################################################
 
-group		1000 1000
-at			400
+group        1000 1000
+at            400
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 220 0
-at			400
+spawn        Moto_Jump 1
+flip        0
+coords        520 220 0
+at            400
 
-spawn		Moto_Jump 1
-flip		1
-coords		-50 260 0
-at			450
+spawn        Moto_Jump 1
+flip        1
+coords        -50 260 0
+at            450
 
-spawn		Moto_Single 1
-flip		0
-mp			5
-coords		520 240 0
-at			500
+spawn        Moto_Single 1
+flip        0
+mp            5
+coords        520 240 0
+at            500
 
-spawn		BongoB 1
-map			1
-flip		1
-coords		600 220 0
-at			500
+spawn        BongoB 1
+map            1
+flip        1
+coords        600 220 0
+at            500
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		700 230 0
-at			550
+spawn        BasicX1 1
+map            1
+flip        1
+coords        700 230 0
+at            550
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		800 240 0
-at			600
+spawn        BasicX3 1
+map            1
+flip        1
+coords        800 240 0
+at            600
 
-spawn		Tire 1
-flip		1
-coords		520 260 0
-at			600
+spawn        Tire 1
+flip        1
+coords        520 260 0
+at            600
 
-spawn		Tire 1
-flip		1
-coords		580 270 0
-at			600
+spawn        Tire 1
+flip        1
+coords        580 270 0
+at            600
 
 wait
-at			790
+at            790
 
-group		4 4
-at			600
+group        4 4
+at            600
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 220 0
-at			600
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 220 0
+at            600
 
-spawn		JackB 1
-map			1
-flip		1
-coords		-100 220 0
-at			650
+spawn        JackB 1
+map            1
+flip        1
+coords        -100 220 0
+at            650
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 260 0
-at			700
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 260 0
+at            700
 
-spawn		BruceB 1
-map			1
-flip		1
-coords		-100 260 0
-at			700
+spawn        BruceB 1
+map            1
+flip        1
+coords        -100 260 0
+at            700
 
-spawn		Moto_Single 1
-flip		1
-coords		-50 220 0
-at			750
+spawn        Moto_Single 1
+flip        1
+coords        -50 220 0
+at            750
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 260 0
-at			750
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 260 0
+at            750
 
-spawn		Bike 1
-flip		0
-coords		520 260 0
-at			790
+spawn        Bike 1
+flip        0
+coords        520 260 0
+at            790
 
-spawn		Fog_Jump 1
-map			0
-weapon		Pipe 1
-flip		0
-coords		530 260 50
-at			790
+spawn        Fog_Jump 1
+map            0
+weapon        Pipe 1
+flip        0
+coords        530 260 50
+at            790
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-100 260 0
-at			750
+spawn        BossX1 1
+map            4
+flip        1
+coords        -100 260 0
+at            750
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-100 260 0
-at			750
+flip        1
+coords        -100 260 0
+at            750
 
 #########################################################################################
 
-group		1000 1000
-at			800
+group        1000 1000
+at            800
 
-spawn		Moto_Single 1
-flip		0
-coords		520 220 0
-at			800
+spawn        Moto_Single 1
+flip        0
+coords        520 220 0
+at            800
 
-spawn		Moto_Repeat 1
-flip		0
-coords		-100 260 0
-at			850
+spawn        Moto_Repeat 1
+flip        0
+coords        -100 260 0
+at            850
 
-spawn		BruceB 1
-map			1
-flip		1
-coords		600 220 0
-at			900
+spawn        BruceB 1
+map            1
+flip        1
+coords        600 220 0
+at            900
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 220 0
-at			900
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 220 0
+at            900
 
-spawn		TigerX 1
-map			0
-flip		0
-coords		-100 260 0
-at			900
+spawn        TigerX 1
+map            0
+flip        0
+coords        -100 260 0
+at            900
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 260 0
-at			900
+spawn        Moto_Jump 1
+flip        0
+coords        520 260 0
+at            900
 
-spawn		Moto_Single 1
-flip		0
-coords		520 220 0
-at			950
+spawn        Moto_Single 1
+flip        0
+coords        520 220 0
+at            950
 
-spawn		JackB 1
-map			1
-flip		1
-coords		700 260 0
-at			950
+spawn        JackB 1
+map            1
+flip        1
+coords        700 260 0
+at            950
 
-spawn		Moto_Single 1
-flip		1
-coords		-50 240 0
-at			1000
+spawn        Moto_Single 1
+flip        1
+coords        -50 240 0
+at            1000
 
-spawn		BongoB 1
-map			1
-flip		1
-coords		-100 220 0
-at			1000
+spawn        BongoB 1
+map            1
+flip        1
+coords        -100 220 0
+at            1000
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-200 240 0
-at			1050
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -200 240 0
+at            1050
 
-spawn		Barrel_A 1
-flip		1
-coords		520 265 0
-at			1050
+spawn        Barrel_A 1
+flip        1
+coords        520 265 0
+at            1050
 
-spawn		Barrel_A 1
-flip		1
-coords		580 265 0
-at			1050
+spawn        Barrel_A 1
+flip        1
+coords        580 265 0
+at            1050
 
 wait
-at			1200
+at            1200
 
-group		4 4
-at			1100
+group        4 4
+at            1100
 
-spawn		BruceB 1
-flip		1
-coords		-5 260 0
-at			1150
+spawn        BruceB 1
+flip        1
+coords        -5 260 0
+at            1150
 
 
-spawn		Bike 1
-flip		1
-coords		-5 260 0
-at			1150
+spawn        Bike 1
+flip        1
+coords        -5 260 0
+at            1150
 
-spawn		Fog_Jump 1
-map			0
-weapon		Pipe 1
-flip		1
-coords		-15 260 50
-at			1150
+spawn        Fog_Jump 1
+map            0
+weapon        Pipe 1
+flip        1
+coords        -15 260 50
+at            1150
 
-spawn		Moto_Repeat 1
-flip		0
-coords		-100 220 0
-at			1200
+spawn        Moto_Repeat 1
+flip        0
+coords        -100 220 0
+at            1200
 
 #########################################################################################
 
-group		1000 1000
-at			1250
+group        1000 1000
+at            1250
 
-spawn		Moto_Jump 1
-flip		0
-coords		520 260 0
-at			1250
+spawn        Moto_Jump 1
+flip        0
+coords        520 260 0
+at            1250
 
-spawn		Moto_Jump 1
-flip		1
-coords		-50 210 0
-at			1350
+spawn        Moto_Jump 1
+flip        1
+coords        -50 210 0
+at            1350
 
-spawn		Moto_Single 1
-flip		0
-coords		520 220 0
-at			1450
+spawn        Moto_Single 1
+flip        0
+coords        520 220 0
+at            1450
 
-spawn		Moto_Single 1
-flip		0
-coords		520 260 0
-at			1550
+spawn        Moto_Single 1
+flip        0
+coords        520 260 0
+at            1550
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			1600
+at            1600
 
-spawn		Barrel_A 1
-flip		1
-coords		650 230 0
-at			1600
+spawn        Barrel_A 1
+flip        1
+coords        650 230 0
+at            1600
 
-spawn		Barrel_A 1
-flip		1
-coords		670 250 0
-at			1600
+spawn        Barrel_A 1
+flip        1
+coords        670 250 0
+at            1600
 
-spawn		Barrel_A 1
-flip		1
-coords		690 270 0
-at			1600
+spawn        Barrel_A 1
+flip        1
+coords        690 270 0
+at            1600
 
-spawn		BruceB 1
-map			0
-flip		0
-coords		570 210 0
-at			1600
+spawn        BruceB 1
+map            0
+flip        0
+coords        570 210 0
+at            1600
 
-spawn		BossX1 1
-map			1
-flip		1
-coords		-100 220 0
-at			1600
+spawn        BossX1 1
+map            1
+flip        1
+coords        -100 220 0
+at            1600
 
-spawn		BossX1 1
-map			1
+spawn        BossX1 1
+map            1
 2pspawn
-flip		1
-coords		-100 220 0
-at			1600
+flip        1
+coords        -100 220 0
+at            1600
 
-spawn		Fog_Wait1 1
-map			0
-weapon		Pipe 1
-flip		0
-coords		570 210 0
-at			1600
+spawn        Fog_Wait1 1
+map            0
+weapon        Pipe 1
+flip        0
+coords        570 210 0
+at            1600
 
-spawn		Signal_Wait 1
-map			0
-flip		0
-coords		600 240 0
-at			1600
+spawn        Signal_Wait 1
+map            0
+flip        0
+coords        600 240 0
+at            1600
 
-spawn		Signal_Wait 1
-map			2
-flip		0
-coords		630 260 0
-at			1600
+spawn        Signal_Wait 1
+map            2
+flip        0
+coords        630 260 0
+at            1600

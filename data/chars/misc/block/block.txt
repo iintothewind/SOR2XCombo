@@ -1,25 +1,25 @@
-name			Block
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            Block
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	33 46
-	frame	data/chars/misc/block/block00.png
-	frame	data/chars/misc/block/block01.png
-	frame	data/chars/misc/block/block02.png
-	frame	data/chars/misc/block/block03.png
-	frame	data/chars/misc/block/block04.png
-	frame	data/chars/misc/block/block05.png
-	frame	data/chars/misc/block/block06.png
-	frame	data/chars/misc/block/block07.png
-	@cmd suicide
-	frame	data/chars/misc/block/empty.png
+    loop    0
+    delay    2
+    offset    33 46
+    frame    data/chars/misc/block/block00.png
+    frame    data/chars/misc/block/block01.png
+    frame    data/chars/misc/block/block02.png
+    frame    data/chars/misc/block/block03.png
+    frame    data/chars/misc/block/block04.png
+    frame    data/chars/misc/block/block05.png
+    frame    data/chars/misc/block/block06.png
+    frame    data/chars/misc/block/block07.png
+    @cmd suicide
+    frame    data/chars/misc/block/empty.png

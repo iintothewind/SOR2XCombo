@@ -1,15 +1,15 @@
-name			L03 #GROUND
-type			None
-offscreenkill		9999
+name            L03 #GROUND
+type            None
+offscreenkill        9999
 setlayer 5
 
 animationscript data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	16
-	offset	0 0
-	frame	data/bgs/sor1/st01/L301.png
-	@cmd offScreenKill 800 0
-	frame	data/bgs/sor1/st01/L302.png
+    loop    1
+    delay    16
+    offset    0 0
+    frame    data/bgs/sor1/st01/L301.png
+    @cmd offScreenKill 800 0
+    frame    data/bgs/sor1/st01/L302.png
 

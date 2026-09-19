@@ -1,25 +1,25 @@
-name			St1_Ray
-type			none
-shadow			0
-setlayer		1000
+name            St1_Ray
+type            none
+shadow            0
+setlayer        1000
 animationscript data/scripts/animation/default.c
 
-load			St1_Ray_B
+load            St1_Ray_B
 
 anim idle
-	loop	1
-	delay	2000
-	offset	25 25
-	@cmd graphics "original" "St1_Ray_B"
-	frame	data/bgs/sor2/st1c/ray02.png
-		delay	6
-	drawmethod alpha 1
-	frame	data/bgs/sor2/st1c/ray00.png
-	drawmethod alpha 5
-	frame	data/bgs/sor2/st1c/ray01.png
-	drawmethod alpha 1
-	frame	data/bgs/sor2/st1c/ray00.png
-	drawmethod alpha 5
-	frame	data/bgs/sor2/st1c/ray01.png
-	drawmethod alpha 1
-	frame	data/bgs/sor2/st1c/ray00.png
+    loop    1
+    delay    2000
+    offset    25 25
+    @cmd graphics "original" "St1_Ray_B"
+    frame    data/bgs/sor2/st1c/ray02.png
+        delay    6
+    drawmethod alpha 1
+    frame    data/bgs/sor2/st1c/ray00.png
+    drawmethod alpha 5
+    frame    data/bgs/sor2/st1c/ray01.png
+    drawmethod alpha 1
+    frame    data/bgs/sor2/st1c/ray00.png
+    drawmethod alpha 5
+    frame    data/bgs/sor2/st1c/ray01.png
+    drawmethod alpha 1
+    frame    data/bgs/sor2/st1c/ray00.png

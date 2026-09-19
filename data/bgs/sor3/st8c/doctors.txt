@@ -1,15 +1,15 @@
-name			St8_DoctorS #ENTITY TO MAKE SPAWN LOOP
-type			none
-shadow			0
-setlayer		-10
-animationscript	data/scripts/animation/default.c
+name            St8_DoctorS #ENTITY TO MAKE SPAWN LOOP
+type            none
+shadow            0
+setlayer        -10
+animationscript    data/scripts/animation/default.c
 
-load			St8_Doctor
+load            St8_Doctor
 
 anim idle
-	loop	1
-	delay	300
-	offset	32 44
-	@cmd spawn01 "St8_Doctor" 0 0 0
-	frame	data/bgs/sor3/st8c/_empty.png
-	frame	data/bgs/sor3/st8c/_empty.png
+    loop    1
+    delay    300
+    offset    32 44
+    @cmd spawn01 "St8_Doctor" 0 0 0
+    frame    data/bgs/sor3/st8c/_empty.png
+    frame    data/bgs/sor3/st8c/_empty.png

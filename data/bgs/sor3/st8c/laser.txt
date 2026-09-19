@@ -1,22 +1,22 @@
-name				St8_Laser
-type				none
-health				1
-nolife				1
-lifespan			3
-remove				1
-shadow				0
-antigravity			100
-ondoattackscript	data/scripts/ondoattack/default.c
+name                St8_Laser
+type                none
+health                1
+nolife                1
+lifespan            3
+remove                1
+shadow                0
+antigravity            100
+ondoattackscript    data/scripts/ondoattack/default.c
 
 anim idle
-	attackone 1
-	fastattack 1
-	jugglecost 46
-	forcedirection 0
-	otg 1
-	loop	0
-	delay	8
-	offset	32 44
-	hitfx	data/sounds/StrongPunch.wav
-	attack 29 10 7 32 40 1 0 0 0 12
-	frame	data/bgs/sor3/st8c/laser00.png
+    attackone 1
+    fastattack 1
+    jugglecost 46
+    forcedirection 0
+    otg 1
+    loop    0
+    delay    8
+    offset    32 44
+    hitfx    data/sounds/StrongPunch.wav
+    attack 29 10 7 32 40 1 0 0 0 12
+    frame    data/bgs/sor3/st8c/laser00.png

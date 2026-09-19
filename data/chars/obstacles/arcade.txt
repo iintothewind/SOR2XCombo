@@ -1,32 +1,32 @@
-name				Arcade
-type				obstacle
-health				1
-nolife				1
-score				2000
-gfxshadow			1 1
-noatflash			1
-flash				Flash
-ondeathscript		data/scripts/ondeath/item.c
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/obstacles.c
+name                Arcade
+type                obstacle
+health                1
+nolife                1
+score                2000
+gfxshadow            1 1
+noatflash            1
+flash                Flash
+ondeathscript        data/scripts/ondeath/item.c
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/obstacles.c
 
-diesound			data/sounds/Glass.wav
+diesound            data/sounds/Glass.wav
 
 anim idle
-	loop	1
-	delay	6
-	offset	100 167
-	bbox 	80 89 48 80
-	shadowcoords 100 161
-	platform 72 72 138 138 6 1000
-	frame	data/chars/obstacles/arcade00.png
-	@cmd offScreenKill 50 0
-	frame	data/chars/obstacles/arcade01.png
-	
+    loop    1
+    delay    6
+    offset    100 167
+    bbox     80 89 48 80
+    shadowcoords 100 161
+    platform 72 72 138 138 6 1000
+    frame    data/chars/obstacles/arcade00.png
+    @cmd offScreenKill 50 0
+    frame    data/chars/obstacles/arcade01.png
+    
 anim fall
-	loop	0
-	delay	128
-	offset	100 167
-	frame	data/chars/obstacles/arcade02.png
-	@cmd suicide
-	frame	data/chars/obstacles/arcade02.png
+    loop    0
+    delay    128
+    offset    100 167
+    frame    data/chars/obstacles/arcade02.png
+    @cmd suicide
+    frame    data/chars/obstacles/arcade02.png

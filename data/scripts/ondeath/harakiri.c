@@ -2,7 +2,7 @@
 
 void main()
 {
-	slowMotion();
-	resetAuraEffect();
-	dropItem("Apple");
+    slowMotion();
+    resetAuraEffect();
+    dropItem("Apple");
 }

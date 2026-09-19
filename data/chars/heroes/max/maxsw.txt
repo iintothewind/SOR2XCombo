@@ -1,12 +1,12 @@
 ##MAIN
-name				MaxSW
-type				none
+name                MaxSW
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
 palette       data/chars/heroes/max/idle00.png
@@ -17,34 +17,34 @@ alternatepal  data/chars/heroes/max/alter3.png
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim freespecial
-	loop	0
-	delay	1000
-	offset	150 188
-	frame	data/chars/heroes/max/pipe/a100.png
-	frame	data/chars/heroes/max/pipe/a100.png
-	frame	data/chars/heroes/max/pipe/a103.png
-	frame	data/chars/heroes/max/pipe/a103.png
-	frame	data/chars/heroes/max/pipe/a104.png
-	frame	data/chars/heroes/max/pipe/a105.png
+    loop    0
+    delay    1000
+    offset    150 188
+    frame    data/chars/heroes/max/pipe/a100.png
+    frame    data/chars/heroes/max/pipe/a100.png
+    frame    data/chars/heroes/max/pipe/a103.png
+    frame    data/chars/heroes/max/pipe/a103.png
+    frame    data/chars/heroes/max/pipe/a104.png
+    frame    data/chars/heroes/max/pipe/a105.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	150 188
-	frame	data/chars/heroes/max/dodge00.png
-	frame	data/chars/heroes/max/dodge01.png
-	frame	data/chars/heroes/max/dodge02.png
-	frame	data/chars/heroes/max/dodge03.png
-	frame	data/chars/heroes/max/dodge04.png
-	frame	data/chars/heroes/max/dodge05.png
+    loop    0
+    delay    1000
+    offset    150 188
+    frame    data/chars/heroes/max/dodge00.png
+    frame    data/chars/heroes/max/dodge01.png
+    frame    data/chars/heroes/max/dodge02.png
+    frame    data/chars/heroes/max/dodge03.png
+    frame    data/chars/heroes/max/dodge04.png
+    frame    data/chars/heroes/max/dodge05.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	150 188
-	frame	data/chars/heroes/max/dodge00.png
-	frame	data/chars/heroes/max/dodge01.png
-	frame	data/chars/heroes/max/dodge02.png
-	frame	data/chars/heroes/max/dodge03.png
-	frame	data/chars/heroes/max/dodge04.png
-	frame	data/chars/heroes/max/dodge05.png
+    loop    0
+    delay    1000
+    offset    150 188
+    frame    data/chars/heroes/max/dodge00.png
+    frame    data/chars/heroes/max/dodge01.png
+    frame    data/chars/heroes/max/dodge02.png
+    frame    data/chars/heroes/max/dodge03.png
+    frame    data/chars/heroes/max/dodge04.png
+    frame    data/chars/heroes/max/dodge05.png

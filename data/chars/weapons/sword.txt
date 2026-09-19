@@ -1,24 +1,24 @@
-name			Sword #GROUND
-type			item
-subtype			weapon
-nolife			1
-lifespan		90
-typeshot 		0
+name            Sword #GROUND
+type            item
+subtype            weapon
+nolife            1
+lifespan        90
+typeshot         0
 weaploss    2
-weapnum			2
-shootnum 		1
-counter			9
-gfxshadow		1 1
-offscreenkill	50
+weapnum            2
+shootnum         1
+counter            9
+gfxshadow        1 1
+offscreenkill    50
 
 anim idle
-	loop	1
-	delay	200
-	offset	49 54
-	bbox 	22 50 47 4
-	nodrawmethod
-	frame	data/chars/weapons/sword08.png
-		delay	6
-	drawmethod tintmode 1
-	drawmethod tintcolor 150_150_150
-	frame	data/chars/weapons/sword08.png
+    loop    1
+    delay    200
+    offset    49 54
+    bbox     22 50 47 4
+    nodrawmethod
+    frame    data/chars/weapons/sword08.png
+        delay    6
+    drawmethod tintmode 1
+    drawmethod tintcolor 150_150_150
+    frame    data/chars/weapons/sword08.png

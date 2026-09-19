@@ -1,21 +1,21 @@
-loadingbg		data/bgs/loading4.png 			1 -81 248 480 999 999 0
-background		data/bgs/select/select02.png	1 1 0 0 0 0 1 1 1
-panel			data/bgs/select/select02.png	none	none
-order			a
-settime			0
-stagenumber 	0
-spawn1			240 20 300
-spawn2			240 40 300
-spawn3			240 60 300
-spawn4			240 80 300
-	
+loadingbg        data/bgs/loading4.png             1 -81 248 480 999 999 0
+background        data/bgs/select/select02.png    1 1 0 0 0 0 1 1 1
+panel            data/bgs/select/select02.png    none    none
+order            a
+settime            0
+stagenumber     0
+spawn1            240 20 300
+spawn2            240 40 300
+spawn3            240 60 300
+spawn4            240 80 300
+    
 #########################################################################################
 
-load		Survival_Menu 3
+load        Survival_Menu 3
 
 #########################################################################################
 
-spawn		Survival_Menu 1
-flip		1
-coords		1 1 0
-at			0
+spawn        Survival_Menu 1
+flip        1
+coords        1 1 0
+at            0

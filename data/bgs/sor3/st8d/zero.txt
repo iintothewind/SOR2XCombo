@@ -1,72 +1,72 @@
-name			St8_Dr_Zero
-type			none
-shadow			0
-setlayer		-3
-ondrawscript	data/scripts/ondraw/zero.c
-animationscript	data/scripts/animation/default.c
+name            St8_Dr_Zero
+type            none
+shadow            0
+setlayer        -3
+ondrawscript    data/scripts/ondraw/zero.c
+animationscript    data/scripts/animation/default.c
 
-load			Arm
+load            Arm
 
 anim spawn
-	loop	0
-	delay	16
-	offset	32 44
-	@cmd spawnVar "Arm" "Arm" 0 0 100 0
-	frame	data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
+    loop    0
+    delay    16
+    offset    32 44
+    @cmd spawnVar "Arm" "Arm" 0 0 100 0
+    frame    data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
 
 anim idle
-	loop	0
-	delay	4
-	offset	32 44
-	frame	data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero01.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero02.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero03.png #RIGHT HAND FRAME
-	@cmd looper 0 3
-	frame	data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero05.png #LEFT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero06.png #LEFT HAND FRAME
-	@cmd looper 5 6
-	frame	data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero01.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero02.png #RIGHT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero03.png #RIGHT HAND FRAME
-	@cmd looper 9 6
-	frame	data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero05.png #LEFT HAND FRAME
-	frame	data/bgs/sor3/st8d/zero06.png #LEFT HAND FRAME
-	@cmd looper 14 3
-	@cmd aniChange 0 "ANI_FOLLOW1"
-	frame	data/bgs/sor3/st8d/zero06.png #LEFT HAND FRAME
-	
+    loop    0
+    delay    4
+    offset    32 44
+    frame    data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero01.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero02.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero03.png #RIGHT HAND FRAME
+    @cmd looper 0 3
+    frame    data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero05.png #LEFT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero06.png #LEFT HAND FRAME
+    @cmd looper 5 6
+    frame    data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero00.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero01.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero02.png #RIGHT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero03.png #RIGHT HAND FRAME
+    @cmd looper 9 6
+    frame    data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero04.png #LEFT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero05.png #LEFT HAND FRAME
+    frame    data/bgs/sor3/st8d/zero06.png #LEFT HAND FRAME
+    @cmd looper 14 3
+    @cmd aniChange 0 "ANI_FOLLOW1"
+    frame    data/bgs/sor3/st8d/zero06.png #LEFT HAND FRAME
+    
 anim follow1 #LAUGH
-	loop	0
-	delay	16
-	offset	32 44
-	frame	data/bgs/sor3/st8d/zero07.png
-	frame	data/bgs/sor3/st8d/zero08.png
-	frame	data/bgs/sor3/st8d/zero09.png
-	@cmd aniChange 0 "ANI_IDLE"
-	frame	data/bgs/sor3/st8d/zero09.png
-	
+    loop    0
+    delay    16
+    offset    32 44
+    frame    data/bgs/sor3/st8d/zero07.png
+    frame    data/bgs/sor3/st8d/zero08.png
+    frame    data/bgs/sor3/st8d/zero09.png
+    @cmd aniChange 0 "ANI_IDLE"
+    frame    data/bgs/sor3/st8d/zero09.png
+    
 anim follow2 #EXPLOSION
-	loop	0
-	delay	32
-	offset	32 44
-	frame	data/bgs/sor3/st8d/zero10.png
-	@cmd spawnBind "Destruction" 0 40 10
-	frame	data/bgs/sor3/st8d/zero10.png
-	@cmd spawnBind "Destruction" -50 40 10
-	frame	data/bgs/sor3/st8d/zero10.png
-	@cmd spawnBind "Destruction" 50 40 10
-	frame	data/bgs/sor3/st8d/zero10.png
-		delay	64
-	frame	data/bgs/sor3/st8d/zero10.png
-		delay	32
-	@cmd dasher 0 0 0.5
-	frame	data/bgs/sor3/st8d/zero10.png
-	@cmd suicide
-	frame	data/bgs/sor3/st8d/zero10.png
+    loop    0
+    delay    32
+    offset    32 44
+    frame    data/bgs/sor3/st8d/zero10.png
+    @cmd spawnBind "Destruction" 0 40 10
+    frame    data/bgs/sor3/st8d/zero10.png
+    @cmd spawnBind "Destruction" -50 40 10
+    frame    data/bgs/sor3/st8d/zero10.png
+    @cmd spawnBind "Destruction" 50 40 10
+    frame    data/bgs/sor3/st8d/zero10.png
+        delay    64
+    frame    data/bgs/sor3/st8d/zero10.png
+        delay    32
+    @cmd dasher 0 0 0.5
+    frame    data/bgs/sor3/st8d/zero10.png
+    @cmd suicide
+    frame    data/bgs/sor3/st8d/zero10.png

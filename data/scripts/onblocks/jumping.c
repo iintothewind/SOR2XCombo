@@ -2,7 +2,7 @@
 
 void main()
 {
-	screenBouncing();
-	screenJumping();
-	edgeUnlock();
+    screenBouncing();
+    screenJumping();
+    edgeUnlock();
 }

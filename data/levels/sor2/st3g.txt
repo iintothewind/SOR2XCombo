@@ -1,279 +1,279 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st3g/_empty.png	1 1 0 0 0 0 1 1 0
-panel			data/bgs/sor2/st3g/_map.png		none	none
-frontpanel		data/bgs/sor2/st3g/fp00.png
-fglayer			data/bgs/sor2/st3g/fg00.png		100 0.1 0 -20 0 0 0 1 1 0 1 1 10 30 0.5
-fglayer			data/bgs/sor2/st3g/fg01.png		100 0.1 0 -20 0 0 0 1 1 0 1 1 5 30 0.7
-fglayer			data/bgs/sor2/st3g/fg02.png		-150 -0.4 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st3g/fg02.png		-25 -0.4 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber 	3
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor2_st3g.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st3g/_empty.png    1 1 0 0 0 0 1 1 0
+panel            data/bgs/sor2/st3g/_map.png        none    none
+frontpanel        data/bgs/sor2/st3g/fp00.png
+fglayer            data/bgs/sor2/st3g/fg00.png        100 0.1 0 -20 0 0 0 1 1 0 1 1 10 30 0.5
+fglayer            data/bgs/sor2/st3g/fg01.png        100 0.1 0 -20 0 0 0 1 1 0 1 1 5 30 0.7
+fglayer            data/bgs/sor2/st3g/fg02.png        -150 -0.4 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st3g/fg02.png        -25 -0.4 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber     3
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor2_st3g.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-load		Vehelits 3
+load        Vehelits 3
 
 #########################################################################################
 
-spawn		Egg 1
-flip		1
-coords		200 220 0
-at			0
+spawn        Egg 1
+flip        1
+coords        200 220 0
+at            0
 
-spawn		Egg 1
-flip		1
-coords		280 180 0
-at			0
+spawn        Egg 1
+flip        1
+coords        280 180 0
+at            0
 
-spawn		Egg 1
-flip		1
-coords		360 250 0
-at			0
+spawn        Egg 1
+flip        1
+coords        360 250 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		300 290 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        300 290 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		400 290 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        400 290 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		500 290 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        500 290 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		600 290 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        600 290 0
+at            0
 
-spawn		SignalX 1
-map			2
-flip		1
-coords		600 230 0
-at			150
+spawn        SignalX 1
+map            2
+flip        1
+coords        600 230 0
+at            150
 
 wait
-at			300
+at            300
 
-group		4 4
-at			250
+group        4 4
+at            250
 
-spawn		SignalX 1
-map			2
-flip		1
-coords		600 230 0
-at			250
+spawn        SignalX 1
+map            2
+flip        1
+coords        600 230 0
+at            250
 
-spawn		BruceB 1
-map			1
-flip		1
-coords		-100 260 0
-at			250
+spawn        BruceB 1
+map            1
+flip        1
+coords        -100 260 0
+at            250
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		-100 260 0
-at			250
+spawn        BasicX1 1
+map            1
+flip        1
+coords        -100 260 0
+at            250
 
-spawn		JackB 1
-map			1
-flip		1
-coords		-100 260 0
-at			250
+spawn        JackB 1
+map            1
+flip        1
+coords        -100 260 0
+at            250
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		-100 260 0
-at			250
+spawn        BasicX3 1
+map            1
+flip        1
+coords        -100 260 0
+at            250
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-100 260 0
-at			250
+spawn        BossX1 1
+map            4
+flip        1
+coords        -100 260 0
+at            250
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-100 260 0
-at			250
+flip        1
+coords        -100 260 0
+at            250
 
 #########################################################################################
 
-group		1000 1000
-at			310
+group        1000 1000
+at            310
 
-spawn		Egg 1
-flip		1
-coords		550 220 0
-at			310
+spawn        Egg 1
+flip        1
+coords        550 220 0
+at            310
 
-spawn		Egg 1
-flip		1
-coords		700 190 0
-at			310
+spawn        Egg 1
+flip        1
+coords        700 190 0
+at            310
 
-spawn		Vehelits 1
-flip		1
+spawn        Vehelits 1
+flip        1
 item    Apple
-coords		830 240 0
-at			310
+coords        830 240 0
+at            310
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		700 290 0
-at			350
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        700 290 0
+at            350
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		800 290 0
-at			350
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        800 290 0
+at            350
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		900 290 0
-at			350
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        900 290 0
+at            350
 
-spawn		SignalX 1
-map			2
-flip		1
-coords		-50 260 0
-at			350
+spawn        SignalX 1
+map            2
+flip        1
+coords        -50 260 0
+at            350
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		-100 260 0
-at			350
+spawn        BasicX3 1
+map            2
+flip        1
+coords        -100 260 0
+at            350
 
-spawn		BongoX 1
-map			2
-flip		1
-coords		-100 260 0
-at			400
+spawn        BongoX 1
+map            2
+flip        1
+coords        -100 260 0
+at            400
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		-100 260 0
-at			450
+spawn        BasicX3 1
+map            2
+flip        1
+coords        -100 260 0
+at            450
 
-spawn		HakuyoX 1
-map			2
-flip		1
-coords		-100 260 0
-at			500
+spawn        HakuyoX 1
+map            2
+flip        1
+coords        -100 260 0
+at            500
 
-spawn		BasicX3 1
-map			2
-flip		1
-coords		-100 260 0
-at			550
+spawn        BasicX3 1
+map            2
+flip        1
+coords        -100 260 0
+at            550
 
-spawn		1up
-flip		1
-coords		480 270 0
-at			660
+spawn        1up
+flip        1
+coords        480 270 0
+at            660
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			700
+at            700
 
 wait
-at			900
+at            900
 
-group		4 4
-at			800
+group        4 4
+at            800
 
-spawn		BasicX1 1
-map			2
-flip		1
-coords		600 240 0
-at			800
+spawn        BasicX1 1
+map            2
+flip        1
+coords        600 240 0
+at            800
 
-spawn		BossX1 1
-map			2
-flip		1
-coords		-100 240 0
-at			800
+spawn        BossX1 1
+map            2
+flip        1
+coords        -100 240 0
+at            800
 
-spawn		BossX1 1
-map			2
+spawn        BossX1 1
+map            2
 2pspawn
-flip		1
-coords		-100 240 0
-at			800
+flip        1
+coords        -100 240 0
+at            800
 
 #########################################################################################
 
-group		1000 1000
-at			950
+group        1000 1000
+at            950
 
-spawn		Egg 1
-flip		1
-coords		720 210 0
-at			950
+spawn        Egg 1
+flip        1
+coords        720 210 0
+at            950
 
-spawn		Egg 1
-flip		1
-coords		770 210 0
-at			950
+spawn        Egg 1
+flip        1
+coords        770 210 0
+at            950
 
-spawn		Kusanagi_Wait1 1
-map			2
-weapon		Sword 1
-flip		0
-coords		520 180 0
-at			950
+spawn        Kusanagi_Wait1 1
+map            2
+weapon        Sword 1
+flip        0
+coords        520 180 0
+at            950
 
-spawn		Kusanagi_Wait2 1
-map			1
-weapon		Sword 1
-flip		0
-coords		620 180 0
-at			950
+spawn        Kusanagi_Wait2 1
+map            1
+weapon        Sword 1
+flip        0
+coords        620 180 0
+at            950
 
 spawnscript data/scripts/levelspawn/music_boss2.c
-at			1310
+at            1310
 
-spawn		Zamza_Hide 1
-map			4
-flip		0
-boss		1
-coords		300 220 0
-at			1310
+spawn        Zamza_Hide 1
+map            4
+flip        0
+boss        1
+coords        300 220 0
+at            1310
 
-spawn		Zamza_Hide 1
-map			4
-flip		0
-boss		1
-coords		300 240 0
-at			1310
+spawn        Zamza_Hide 1
+map            4
+flip        0
+boss        1
+coords        300 240 0
+at            1310

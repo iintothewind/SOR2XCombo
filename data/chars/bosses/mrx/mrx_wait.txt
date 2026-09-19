@@ -1,1003 +1,1003 @@
 ##MAIN
-name				Mrx_Wait
-type				enemy
+name                Mrx_Wait
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		30 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         30 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-2 #-1/-2/-3
-height				90
+antigravity            -2 #-1/-2/-3
+height                90
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bounce				1
-aimove				chase #ENEMY ONLY
-escapehits			2 #ENEMY ONLY
-blockodds 			1
-bflash				Block
-nopassiveblock		1
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bounce                1
+aimove                chase #ENEMY ONLY
+escapehits            2 #ENEMY ONLY
+blockodds             1
+bflash                Block
+nopassiveblock        1
+death                2
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/mrx.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-ondrawscript		data/scripts/ondraw/mrx.c
-onspawnscript		data/scripts/onspawn/mrx.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/mrx.c
-script				data/scripts/updateentity/mrx.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/mrx.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+ondrawscript        data/scripts/ondraw/mrx.c
+onspawnscript        data/scripts/onspawn/mrx.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/mrx.c
+script                data/scripts/updateentity/mrx.c
 
 ##ICONS
-icon				data/chars/bosses/mrx/icon.png 1
+icon                data/chars/bosses/mrx/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
+diesound            data/voices/BossDie1.wav
 
 ##REMAPS
-remap				data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter1.png
-remap				data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter2.png
-remap				data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter3.png
-remap				data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter3.png
-remap				data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter1.png
+remap                data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter1.png
+remap                data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter2.png
+remap                data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter3.png
+remap                data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter3.png
+remap                data/chars/bosses/mrx/laugh00.png data/chars/bosses/mrx/alter1.png
 
 ##LOADS
-load				Mrx_Shot1
-load				Mrx_Shot2
-load				Mrx_Shot3
-load				Robotx_Missile
-load				BossX1
+load                Mrx_Shot1
+load                Mrx_Shot2
+load                Mrx_Shot3
+load                Robotx_Missile
+load                BossX1
 
 ##CUSTOM HEADER
-nodieblink			3
-ondeathscript		data/scripts/ondeath/mrx.c
+nodieblink            3
+ondeathscript        data/scripts/ondeath/mrx.c
 
 ## CUSTOM ANIMATIONS ##########################################################################
 
 anim spawn #WAIT SPAWN
-	fshadow 0
-	loop	0
-	delay	128
-	offset	140 200
-	@cmd frozen 1
-	@cmd minz 0
-	frame	data/chars/bosses/mrx/wait00.png
-	@cmd aniChange 0 "ANI_FOLLOW20"
-	frame	data/chars/bosses/mrx/wait00.png
+    fshadow 0
+    loop    0
+    delay    128
+    offset    140 200
+    @cmd frozen 1
+    @cmd minz 0
+    frame    data/chars/bosses/mrx/wait00.png
+    @cmd aniChange 0 "ANI_FOLLOW20"
+    frame    data/chars/bosses/mrx/wait00.png
 
 anim follow20 #WAIT LOOP1 SEATED
-	fshadow 0
-	loop	1
-	delay	16
-	offset	140 200
-	@cmd aniEcount 0 "ANI_FOLLOW21" 2
-	frame	data/chars/bosses/mrx/wait00.png
-	@cmd stealth 2
-	frame	data/chars/bosses/mrx/wait00.png
+    fshadow 0
+    loop    1
+    delay    16
+    offset    140 200
+    @cmd aniEcount 0 "ANI_FOLLOW21" 2
+    frame    data/chars/bosses/mrx/wait00.png
+    @cmd stealth 2
+    frame    data/chars/bosses/mrx/wait00.png
 
 anim follow21 #WAIT SEND SHIVA
-	fshadow 0
-	loop	0
-	delay	24
-	offset	140 200
-	frame	data/chars/bosses/mrx/send00.png
-		delay	64
-	frame	data/chars/bosses/mrx/send01.png
-	sound	data/voices/Mrx2.wav
-	frame	data/chars/bosses/mrx/send02.png
-	@cmd aniChange 0 "ANI_FOLLOW22"
-	frame	data/chars/bosses/mrx/send01.png
+    fshadow 0
+    loop    0
+    delay    24
+    offset    140 200
+    frame    data/chars/bosses/mrx/send00.png
+        delay    64
+    frame    data/chars/bosses/mrx/send01.png
+    sound    data/voices/Mrx2.wav
+    frame    data/chars/bosses/mrx/send02.png
+    @cmd aniChange 0 "ANI_FOLLOW22"
+    frame    data/chars/bosses/mrx/send01.png
 
 anim follow22 #WAIT LOOP2 SEATED
-	fshadow 0
-	loop	1
-	delay	16
-	offset	140 200
-	@cmd aniEcount 0 "ANI_FOLLOW24" 1
-	frame	data/chars/bosses/mrx/wait01.png
-	frame	data/chars/bosses/mrx/wait01.png
+    fshadow 0
+    loop    1
+    delay    16
+    offset    140 200
+    @cmd aniEcount 0 "ANI_FOLLOW24" 1
+    frame    data/chars/bosses/mrx/wait01.png
+    frame    data/chars/bosses/mrx/wait01.png
 
 anim follow23 #WAIT LAUGH
-	fshadow 0
-	loop	0
-	delay	16
-	offset	140 200
-	sound	data/voices/Mrx1.wav
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-		delay	12
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-	frame	data/chars/bosses/mrx/laugh04.png
-	frame	data/chars/bosses/mrx/laugh05.png
-		delay	24
-	frame	data/chars/bosses/mrx/wait01.png
-	@cmd aniChange 0 "ANI_FOLLOW22"
-	frame	data/chars/bosses/mrx/wait01.png
+    fshadow 0
+    loop    0
+    delay    16
+    offset    140 200
+    sound    data/voices/Mrx1.wav
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+        delay    12
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+    frame    data/chars/bosses/mrx/laugh04.png
+    frame    data/chars/bosses/mrx/laugh05.png
+        delay    24
+    frame    data/chars/bosses/mrx/wait01.png
+    @cmd aniChange 0 "ANI_FOLLOW22"
+    frame    data/chars/bosses/mrx/wait01.png
 
 anim follow24 #LOOP STOP
-	loop	0
-	delay	128
-	offset	140 200
-	frame	data/chars/bosses/mrx/laugh00.png
-		delay	8
-	@cmd musicPlay "18.ogg"
-	@cmd dasher 0 0 0.5
-	@cmd reseTime
-	frame	data/chars/bosses/mrx/walk00.png
-	frame	data/chars/bosses/mrx/walk01.png
-	@cmd minz 1
-	@cmd stealth 0
-	@cmd zeroWait
-	frame	data/chars/bosses/mrx/walk02.png
-	@cmd frozen 0
-	frame	data/chars/bosses/mrx/walk03.png
+    loop    0
+    delay    128
+    offset    140 200
+    frame    data/chars/bosses/mrx/laugh00.png
+        delay    8
+    @cmd musicPlay "18.ogg"
+    @cmd dasher 0 0 0.5
+    @cmd reseTime
+    frame    data/chars/bosses/mrx/walk00.png
+    frame    data/chars/bosses/mrx/walk01.png
+    @cmd minz 1
+    @cmd stealth 0
+    @cmd zeroWait
+    frame    data/chars/bosses/mrx/walk02.png
+    @cmd frozen 0
+    frame    data/chars/bosses/mrx/walk03.png
 
 anim death
-	loop	0
-	delay	32
-	offset	140 200
-	frame	data/chars/bosses/mrx/rise00.png
-	frame	data/chars/bosses/mrx/rise02.png
-		delay	2
-	@cmd leaper -0.5 1 0
-	frame	data/chars/bosses/mrx/fall00.png
-	frame	data/chars/bosses/mrx/fall00.png
-	@cmd landFrame
-		delay	128
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/rise01.png
+    loop    0
+    delay    32
+    offset    140 200
+    frame    data/chars/bosses/mrx/rise00.png
+    frame    data/chars/bosses/mrx/rise02.png
+        delay    2
+    @cmd leaper -0.5 1 0
+    frame    data/chars/bosses/mrx/fall00.png
+    frame    data/chars/bosses/mrx/fall00.png
+    @cmd landFrame
+        delay    128
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/rise01.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	16
-	offset	140 200
-	bbox 	127 113 24 89
-	frame	data/chars/bosses/mrx/idle00.png
-	frame	data/chars/bosses/mrx/idle00.png
-	frame	data/chars/bosses/mrx/idle00.png
-	frame	data/chars/bosses/mrx/idle00.png
+    loop    1
+    delay    16
+    offset    140 200
+    bbox     127 113 24 89
+    frame    data/chars/bosses/mrx/idle00.png
+    frame    data/chars/bosses/mrx/idle00.png
+    frame    data/chars/bosses/mrx/idle00.png
+    frame    data/chars/bosses/mrx/idle00.png
 
 anim walk
-	loop	1
-	delay	8
-	offset	140 200
-	bbox 	127 113 24 89
-	#@cmd aniMp "ANI_FOLLOW6" 0
-	@cmd minz 1
-	frame	data/chars/bosses/mrx/walk00.png
-	frame	data/chars/bosses/mrx/walk01.png
-	frame	data/chars/bosses/mrx/walk02.png
-	frame	data/chars/bosses/mrx/walk03.png
-	frame	data/chars/bosses/mrx/walk04.png
-	frame	data/chars/bosses/mrx/walk05.png
-	frame	data/chars/bosses/mrx/walk04.png
-	frame	data/chars/bosses/mrx/walk03.png
-	frame	data/chars/bosses/mrx/walk02.png
-	frame	data/chars/bosses/mrx/walk01.png
+    loop    1
+    delay    8
+    offset    140 200
+    bbox     127 113 24 89
+    #@cmd aniMp "ANI_FOLLOW6" 0
+    @cmd minz 1
+    frame    data/chars/bosses/mrx/walk00.png
+    frame    data/chars/bosses/mrx/walk01.png
+    frame    data/chars/bosses/mrx/walk02.png
+    frame    data/chars/bosses/mrx/walk03.png
+    frame    data/chars/bosses/mrx/walk04.png
+    frame    data/chars/bosses/mrx/walk05.png
+    frame    data/chars/bosses/mrx/walk04.png
+    frame    data/chars/bosses/mrx/walk03.png
+    frame    data/chars/bosses/mrx/walk02.png
+    frame    data/chars/bosses/mrx/walk01.png
 
 anim run
-	loop	1
-	delay	14
-	offset	140 200
-	bbox 	136 144 37 55
-	sound	data/sounds/Slide.wav
-	frame	data/chars/bosses/mrx/run00.png
-	frame	data/chars/bosses/mrx/run01.png
-	frame	data/chars/bosses/mrx/run00.png
-	frame	data/chars/bosses/mrx/run01.png
-	frame	data/chars/bosses/mrx/run00.png
-	frame	data/chars/bosses/mrx/run01.png
+    loop    1
+    delay    14
+    offset    140 200
+    bbox     136 144 37 55
+    sound    data/sounds/Slide.wav
+    frame    data/chars/bosses/mrx/run00.png
+    frame    data/chars/bosses/mrx/run01.png
+    frame    data/chars/bosses/mrx/run00.png
+    frame    data/chars/bosses/mrx/run01.png
+    frame    data/chars/bosses/mrx/run00.png
+    frame    data/chars/bosses/mrx/run01.png
 
 
 anim get
-	loop	0
-	delay	16
-	offset	140 200
-	frame	data/chars/bosses/mrx/get00.png
+    loop    0
+    delay    16
+    offset    140 200
+    frame    data/chars/bosses/mrx/get00.png
 
 anim grab
-	range 0 60
-	rangea 0 0
-	loop	0
-	delay	16
-	offset	140 200
-	bbox 	130 112 55 88
-	@cmd vaultStuck
-	frame	data/chars/bosses/mrx/grab00.png
+    range 0 60
+    rangea 0 0
+    loop    0
+    delay    16
+    offset    140 200
+    bbox     130 112 55 88
+    @cmd vaultStuck
+    frame    data/chars/bosses/mrx/grab00.png
 
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	140 200
-	bbox 	127 134 32 68
-	frame	data/chars/bosses/mrx/grabbed00.png
+    loop    0
+    delay    8
+    offset    140 200
+    bbox     127 134 32 68
+    frame    data/chars/bosses/mrx/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	140 200
-	bbox 	127 138 30 64
-	frame	data/chars/bosses/mrx/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    140 200
+    bbox     127 138 30 64
+    frame    data/chars/bosses/mrx/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	140 200
-	bbox 	134 119 29 85
-	@cmd jump 1
-	frame	data/chars/bosses/mrx/jump00.png
+    loop    0
+    delay    30
+    offset    140 200
+    bbox     134 119 29 85
+    @cmd jump 1
+    frame    data/chars/bosses/mrx/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	140 200
-	bbox 	127 138 30 64
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/bosses/mrx/jumpland00.png
+    loop    0
+    delay    12
+    offset    140 200
+    bbox     127 138 30 64
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/bosses/mrx/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	140 200
-	bbox 	134 119 29 85
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
+    loop    0
+    delay    4
+    offset    140 200
+    bbox     134 119 29 85
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	140 200
-	bbox 	133 115 28 86
-	frame	data/chars/bosses/mrx/pain00.png
-	frame	data/chars/bosses/mrx/pain01.png
-	frame	data/chars/bosses/mrx/pain00.png
-	frame	data/chars/bosses/mrx/pain01.png
-	frame	data/chars/bosses/mrx/pain00.png
-	frame	data/chars/bosses/mrx/pain01.png
-	frame	data/chars/bosses/mrx/pain00.png
-	frame	data/chars/bosses/mrx/pain01.png
+    loop    0
+    delay    4
+    offset    140 200
+    bbox     133 115 28 86
+    frame    data/chars/bosses/mrx/pain00.png
+    frame    data/chars/bosses/mrx/pain01.png
+    frame    data/chars/bosses/mrx/pain00.png
+    frame    data/chars/bosses/mrx/pain01.png
+    frame    data/chars/bosses/mrx/pain00.png
+    frame    data/chars/bosses/mrx/pain01.png
+    frame    data/chars/bosses/mrx/pain00.png
+    frame    data/chars/bosses/mrx/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	140 200
-	bbox 	134 119 29 85
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
-	frame	data/chars/bosses/mrx/pain200.png
-	frame	data/chars/bosses/mrx/pain201.png
+    loop    0
+    delay    4
+    offset    140 200
+    bbox     134 119 29 85
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
+    frame    data/chars/bosses/mrx/pain200.png
+    frame    data/chars/bosses/mrx/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	140 200
-	bbox 	121 133 48 42
-	frame	data/chars/bosses/mrx/fall00.png
-		delay	8
-	bbox 	105 171 81 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    140 200
+    bbox     121 133 48 42
+    frame    data/chars/bosses/mrx/fall00.png
+        delay    8
+    bbox     105 171 81 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	140 200
-	bbox 	121 133 48 42
-	frame	data/chars/bosses/mrx/fall00.png
-		delay	8
-	bbox 	105 171 81 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    140 200
+    bbox     121 133 48 42
+    frame    data/chars/bosses/mrx/fall00.png
+        delay    8
+    bbox     105 171 81 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	140 200
-	bbox 	121 133 48 42
-	frame	data/chars/bosses/mrx/fall00.png
-		delay	8
-	bbox 	105 171 81 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    140 200
+    bbox     121 133 48 42
+    frame    data/chars/bosses/mrx/fall00.png
+        delay    8
+    bbox     105 171 81 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	140 200
-	frame	data/chars/bosses/mrx/fall600.png
-	frame	data/chars/bosses/mrx/fall601.png
-	frame	data/chars/bosses/mrx/fall602.png
-	frame	data/chars/bosses/mrx/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    140 200
+    frame    data/chars/bosses/mrx/fall600.png
+    frame    data/chars/bosses/mrx/fall601.png
+    frame    data/chars/bosses/mrx/fall602.png
+    frame    data/chars/bosses/mrx/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	140 200
-	frame	data/chars/bosses/mrx/fall700.png
-	frame	data/chars/bosses/mrx/fall701.png
-	frame	data/chars/bosses/mrx/fall702.png
-	frame	data/chars/bosses/mrx/fall703.png
-	frame	data/chars/bosses/mrx/fall704.png
-	frame	data/chars/bosses/mrx/fall705.png
+    loop    0
+    delay    1000
+    offset    140 200
+    frame    data/chars/bosses/mrx/fall700.png
+    frame    data/chars/bosses/mrx/fall701.png
+    frame    data/chars/bosses/mrx/fall702.png
+    frame    data/chars/bosses/mrx/fall703.png
+    frame    data/chars/bosses/mrx/fall704.png
+    frame    data/chars/bosses/mrx/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	140 200
-	bbox 	121 133 48 42
-	hitfx	data/sounds/MediumKick.wav
-	attack 121 133 48 42 4 1 0 0 20 12
-	frame	data/chars/bosses/mrx/fall00.png
-		delay	999
-	frame	data/chars/bosses/mrx/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	105 171 81 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    140 200
+    bbox     121 133 48 42
+    hitfx    data/sounds/MediumKick.wav
+    attack 121 133 48 42 4 1 0 0 20 12
+    frame    data/chars/bosses/mrx/fall00.png
+        delay    999
+    frame    data/chars/bosses/mrx/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     105 171 81 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	140 200
-	bbox 	120 128 29 74
-	hitfx	data/sounds/MediumKick.wav
-	attack 120 128 29 74 4 1 0 0 20 12
-	frame	data/chars/bosses/mrx/fall900.png
-		delay	999
-	frame	data/chars/bosses/mrx/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	105 171 81 30
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/mrx/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    140 200
+    bbox     120 128 29 74
+    hitfx    data/sounds/MediumKick.wav
+    attack 120 128 29 74 4 1 0 0 20 12
+    frame    data/chars/bosses/mrx/fall900.png
+        delay    999
+    frame    data/chars/bosses/mrx/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     105 171 81 30
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/mrx/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	140 200
-	frame	data/chars/bosses/mrx/rise00.png
-	frame	data/chars/bosses/mrx/rise01.png
-	frame	data/chars/bosses/mrx/rise00.png
-	frame	data/chars/bosses/mrx/rise02.png
+    loop    0
+    delay    16
+    offset    140 200
+    frame    data/chars/bosses/mrx/rise00.png
+    frame    data/chars/bosses/mrx/rise01.png
+    frame    data/chars/bosses/mrx/rise00.png
+    frame    data/chars/bosses/mrx/rise02.png
 
 anim riseattack
-	range 0 80
-	rangea 0 100
-	rangez -24 24
-	loop	0
-	delay	2
-	offset	140 200
-	@cmd dashRandom 2 2
-	#@cmd spawnToss "X_Grenade" 20 60 1 -0.4 1.2 0
-	@cmd copyMove
-	frame	data/chars/bosses/mrx/dodge00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge00.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge01.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/bosses/mrx/dodge02.png
+    range 0 80
+    rangea 0 100
+    rangez -24 24
+    loop    0
+    delay    2
+    offset    140 200
+    @cmd dashRandom 2 2
+    #@cmd spawnToss "X_Grenade" 20 60 1 -0.4 1.2 0
+    @cmd copyMove
+    frame    data/chars/bosses/mrx/dodge00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge00.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge01.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/bosses/mrx/dodge02.png
 
 anim attack1 #Straight
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	140 200
-	bbox 130 118 29 82
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Whoosh3.wav
-	frame	data/chars/bosses/mrx/a200.png
-	bbox 130 122 26 80
-	attack 145 135 50 65 5 0 0 0 25 24
-	frame	data/chars/bosses/mrx/a201.png
-	@cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a202.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    140 200
+    bbox 130 118 29 82
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Whoosh3.wav
+    frame    data/chars/bosses/mrx/a200.png
+    bbox 130 122 26 80
+    attack 145 135 50 65 5 0 0 0 25 24
+    frame    data/chars/bosses/mrx/a201.png
+    @cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a202.png
 
 anim attack2 #Kick
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	140 200
-	bbox 137 120 30 82
-	hitfx	data/sounds/HighKick.wav
-	sound	data/voices/Mrx3.wav
-	attack 140 146 24 40 3 0 0 0 0 25 24
-	frame	data/chars/bosses/mrx/a300.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
-	frame	data/chars/bosses/mrx/a300.png
-	delay	8
-	bbox 126 119 30 82
-	attack8 130 125 60 60 5 1 1 0 30 24
-	dropv 5 3
-	frame	data/chars/bosses/mrx/a301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel -999 999 -999 999 0 "ANI_FREESPECIAL5" "hit"
-	frame	data/chars/bosses/mrx/a302.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    140 200
+    bbox 137 120 30 82
+    hitfx    data/sounds/HighKick.wav
+    sound    data/voices/Mrx3.wav
+    attack 140 146 24 40 3 0 0 0 0 25 24
+    frame    data/chars/bosses/mrx/a300.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
+    frame    data/chars/bosses/mrx/a300.png
+    delay    8
+    bbox 126 119 30 82
+    attack8 130 125 60 60 5 1 1 0 30 24
+    dropv 5 3
+    frame    data/chars/bosses/mrx/a301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel -999 999 -999 999 0 "ANI_FREESPECIAL5" "hit"
+    frame    data/chars/bosses/mrx/a302.png
 
 
 anim special #GUN SPANK
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	energycost -20 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 200
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/voices/Rugal01.wav
-	frame	data/chars/bosses/mrx/a100.png
-	attack 152 115 31 39 3 0 0 0 10 12
-	frame	data/chars/bosses/mrx/a101.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a101.png
-	delay	8
-	hitfx	data/sounds/HighPunch.wav
-	attack 153 115 45 50 5 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a102.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a102.png
-	delay	6
-	attack 153 99 50 65 5 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a103.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a103.png
-	delay	6
-	attack 153 99 50 23 8 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a104.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
-	@cmd rageCancel -999 999 -999 999 60 "ANI_FREESPECIAL" "mp"
-	frame	data/chars/bosses/mrx/a100.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    energycost -20 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 200
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/voices/Rugal01.wav
+    frame    data/chars/bosses/mrx/a100.png
+    attack 152 115 31 39 3 0 0 0 10 12
+    frame    data/chars/bosses/mrx/a101.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a101.png
+    delay    8
+    hitfx    data/sounds/HighPunch.wav
+    attack 153 115 45 50 5 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a102.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a102.png
+    delay    6
+    attack 153 99 50 65 5 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a103.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a103.png
+    delay    6
+    attack 153 99 50 23 8 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a104.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
+    @cmd rageCancel -999 999 -999 999 60 "ANI_FREESPECIAL" "mp"
+    frame    data/chars/bosses/mrx/a100.png
 
 anim special2 #GUN SPANK
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	energycost -20 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 200
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/voices/Rugal01.wav
-	frame	data/chars/bosses/mrx/a100.png
-	attack 152 115 31 39 3 0 0 0 10 12
-	frame	data/chars/bosses/mrx/a101.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a101.png
-	delay	8
-	hitfx	data/sounds/HighPunch.wav
-	attack 153 115 45 50 5 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a102.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a102.png
-	delay	6
-	attack 153 99 50 65 5 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a103.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a103.png
-	delay	4
-	attack 153 99 50 23 8 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a104.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
-	@cmd rageCancel -999 999 -999 999 60 "ANI_FREESPECIAL" "mp"
-	frame	data/chars/bosses/mrx/a100.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    energycost -20 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 200
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/voices/Rugal01.wav
+    frame    data/chars/bosses/mrx/a100.png
+    attack 152 115 31 39 3 0 0 0 10 12
+    frame    data/chars/bosses/mrx/a101.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a101.png
+    delay    8
+    hitfx    data/sounds/HighPunch.wav
+    attack 153 115 45 50 5 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a102.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a102.png
+    delay    6
+    attack 153 99 50 65 5 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a103.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a103.png
+    delay    4
+    attack 153 99 50 23 8 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a104.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
+    @cmd rageCancel -999 999 -999 999 60 "ANI_FREESPECIAL" "mp"
+    frame    data/chars/bosses/mrx/a100.png
 
 anim grabattack
-	attackone 1
-	fastattack 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	140 200
-	@cmd dasher 0 0 0
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Whoosh3.wav
-	frame	data/chars/bosses/mrx/a200.png
-	attack 145 135 50 65 5 0 1 0 25 24
-	seal 1 1
-	frame	data/chars/bosses/mrx/a201.png
-	delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd looper 0 2
-	frame	data/chars/bosses/mrx/a202.png
-	@cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
-	delay	12
-	hitfx	data/sounds/HighKick.wav
-	sound	data/voices/Mrx3.wav
-	attack 140 146 24 40 3 0 0 0 25 24
-	seal 1 1
-	frame	data/chars/bosses/mrx/a300.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a300.png
-	delay	12
-	attack8 130 125 60 60 5 1 1 0 0 30 24
-	seal 1 1
-	dropv 5 3
-	frame	data/chars/bosses/mrx/a301.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel -999 999 -999 999 0 "ANI_FREESPECIAL5" "hit"
-	frame	data/chars/bosses/mrx/a302.png
+    attackone 1
+    fastattack 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    140 200
+    @cmd dasher 0 0 0
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Whoosh3.wav
+    frame    data/chars/bosses/mrx/a200.png
+    attack 145 135 50 65 5 0 1 0 25 24
+    seal 1 1
+    frame    data/chars/bosses/mrx/a201.png
+    delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd looper 0 2
+    frame    data/chars/bosses/mrx/a202.png
+    @cmd rageCancel 20 60 0 99 5 "ANI_FREESPECIAL9" "hit"
+    delay    12
+    hitfx    data/sounds/HighKick.wav
+    sound    data/voices/Mrx3.wav
+    attack 140 146 24 40 3 0 0 0 25 24
+    seal 1 1
+    frame    data/chars/bosses/mrx/a300.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a300.png
+    delay    12
+    attack8 130 125 60 60 5 1 1 0 0 30 24
+    seal 1 1
+    dropv 5 3
+    frame    data/chars/bosses/mrx/a301.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel -999 999 -999 999 0 "ANI_FREESPECIAL5" "hit"
+    frame    data/chars/bosses/mrx/a302.png
 
 anim freespecial #GUIDED MISSILE
-	range 60 999
-	rangea 0 0
-	rangez -100 100
-	energycost 60 1 6
-	loop	0
-	offset	140 200
-	sound	data/voices/Mrx1.wav
-		delay	8
-	frame	data/chars/bosses/mrx/laugh00.png
-	frame	data/chars/bosses/mrx/laugh01.png
-	frame	data/chars/bosses/mrx/laugh02.png
-	frame	data/chars/bosses/mrx/laugh03.png
-	frame	data/chars/bosses/mrx/laugh02.png
-	frame	data/chars/bosses/mrx/laugh01.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd spawnBind "Rage" 0 -1 0
-	sound	data/voices/Attack7.wav
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot00.png
-	@cmd shoot "Robotx_Missile" 51 62 0 1 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	frame	data/chars/bosses/mrx/shot01.png
-		delay	24
-	sound	data/sounds/Reload.wav
-	frame	data/chars/bosses/mrx/reload00.png
-	frame	data/chars/bosses/mrx/reload01.png
+    range 60 999
+    rangea 0 0
+    rangez -100 100
+    energycost 60 1 6
+    loop    0
+    offset    140 200
+    sound    data/voices/Mrx1.wav
+        delay    8
+    frame    data/chars/bosses/mrx/laugh00.png
+    frame    data/chars/bosses/mrx/laugh01.png
+    frame    data/chars/bosses/mrx/laugh02.png
+    frame    data/chars/bosses/mrx/laugh03.png
+    frame    data/chars/bosses/mrx/laugh02.png
+    frame    data/chars/bosses/mrx/laugh01.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd spawnBind "Rage" 0 -1 0
+    sound    data/voices/Attack7.wav
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot00.png
+    @cmd shoot "Robotx_Missile" 51 62 0 1 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    frame    data/chars/bosses/mrx/shot01.png
+        delay    24
+    sound    data/sounds/Reload.wav
+    frame    data/chars/bosses/mrx/reload00.png
+    frame    data/chars/bosses/mrx/reload01.png
 
 anim freespecial2 #FRONT SHOOT
-	range 150 400
-	rangea 0 0
-	rangez -10 10
-	energycost 5 1 6
-	loop	0
-	delay	5
-	offset	140 200
-	bbox 	135 113 22 89
-	frame	data/chars/bosses/mrx/shot00.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.2 1 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	frame	data/chars/bosses/mrx/shot00.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.2 1 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	frame	data/chars/bosses/mrx/shot00.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.2 1 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 -0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-		delay	32
-	sound	data/sounds/Reload.wav
-	frame	data/chars/bosses/mrx/reload00.png
-	frame	data/chars/bosses/mrx/reload01.png
+    range 150 400
+    rangea 0 0
+    rangez -10 10
+    energycost 5 1 6
+    loop    0
+    delay    5
+    offset    140 200
+    bbox     135 113 22 89
+    frame    data/chars/bosses/mrx/shot00.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.2 1 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    frame    data/chars/bosses/mrx/shot00.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.2 1 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    frame    data/chars/bosses/mrx/shot00.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.2 1 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 -0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+        delay    32
+    sound    data/sounds/Reload.wav
+    frame    data/chars/bosses/mrx/reload00.png
+    frame    data/chars/bosses/mrx/reload01.png
 
 anim freespecial3 #ALL DIRECTIONS SHOOT
-	range 100 400
-	rangea 0 0
-	rangez 20 999
-	energycost 5 1 6
-	loop	0
-	delay	5
-	offset	140 200
-	bbox 	135 113 22 89
-	frame	data/chars/bosses/mrx/shot00.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	bbox 	130 114 26 88
-	@cmd shoot "Mrx_Shot2" 37 45 0 10 0 3
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	@cmd shoot "Mrx_Shot2" 37 45 0 10 0 6
-	@cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	@cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
-	@cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	@cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	bbox 	131 114 30 88
-	@cmd shoot "Mrx_Shot3" 12 47 0 6 0 10
-	@cmd spawnToss "Cartridge" 16 60 1 0.2 1 0
-	frame	data/chars/bosses/mrx/shot04.png
-	frame	data/chars/bosses/mrx/shot05.png
-	@cmd shoot "Mrx_Shot3" 12 47 0 3 0 10
-	@cmd spawnToss "Cartridge" 16 60 1 0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot04.png
-	frame	data/chars/bosses/mrx/shot05.png
-	@cmd shoot "Mrx_Shot3" 12 47 0 0 0 10
-	@cmd spawnToss "Cartridge" 16 60 1 0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot04.png
-	frame	data/chars/bosses/mrx/shot05.png
-	@cmd shoot "Mrx_Shot3" 12 47 0 0 0 10
-	@cmd spawnToss "Cartridge" 16 60 1 0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot04.png
-	frame	data/chars/bosses/mrx/shot05.png
-	bbox 	130 114 26 88
-	@cmd shoot "Mrx_Shot2" 37 45 0 3 0 10
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	@cmd shoot "Mrx_Shot2" 37 45 0 6 0 10
-	@cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	@cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
-	@cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	@cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot02.png
-	frame	data/chars/bosses/mrx/shot03.png
-	bbox 	135 113 22 89
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 6
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 3
-	@cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-	@cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
-	@cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
-	frame	data/chars/bosses/mrx/shot00.png
-	frame	data/chars/bosses/mrx/shot01.png
-		delay	32
-	sound	data/sounds/Reload.wav
-	frame	data/chars/bosses/mrx/reload00.png
-	frame	data/chars/bosses/mrx/reload01.png
+    range 100 400
+    rangea 0 0
+    rangez 20 999
+    energycost 5 1 6
+    loop    0
+    delay    5
+    offset    140 200
+    bbox     135 113 22 89
+    frame    data/chars/bosses/mrx/shot00.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    bbox     130 114 26 88
+    @cmd shoot "Mrx_Shot2" 37 45 0 10 0 3
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    @cmd shoot "Mrx_Shot2" 37 45 0 10 0 6
+    @cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    @cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
+    @cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    @cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    bbox     131 114 30 88
+    @cmd shoot "Mrx_Shot3" 12 47 0 6 0 10
+    @cmd spawnToss "Cartridge" 16 60 1 0.2 1 0
+    frame    data/chars/bosses/mrx/shot04.png
+    frame    data/chars/bosses/mrx/shot05.png
+    @cmd shoot "Mrx_Shot3" 12 47 0 3 0 10
+    @cmd spawnToss "Cartridge" 16 60 1 0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot04.png
+    frame    data/chars/bosses/mrx/shot05.png
+    @cmd shoot "Mrx_Shot3" 12 47 0 0 0 10
+    @cmd spawnToss "Cartridge" 16 60 1 0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot04.png
+    frame    data/chars/bosses/mrx/shot05.png
+    @cmd shoot "Mrx_Shot3" 12 47 0 0 0 10
+    @cmd spawnToss "Cartridge" 16 60 1 0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot04.png
+    frame    data/chars/bosses/mrx/shot05.png
+    bbox     130 114 26 88
+    @cmd shoot "Mrx_Shot2" 37 45 0 3 0 10
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    @cmd shoot "Mrx_Shot2" 37 45 0 6 0 10
+    @cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    @cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
+    @cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    @cmd shoot "Mrx_Shot2" 37 45 0 10 0 10
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot02.png
+    frame    data/chars/bosses/mrx/shot03.png
+    bbox     135 113 22 89
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 6
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 3
+    @cmd spawnToss "Cartridge" 20 60 1 0.4 1.2 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 0.6 0.8 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+    @cmd shoot "Mrx_Shot1" 51 62 0 10 0 0
+    @cmd spawnToss "Cartridge" 20 60 1 0.2 1.4 0
+    frame    data/chars/bosses/mrx/shot00.png
+    frame    data/chars/bosses/mrx/shot01.png
+        delay    32
+    sound    data/sounds/Reload.wav
+    frame    data/chars/bosses/mrx/reload00.png
+    frame    data/chars/bosses/mrx/reload01.png
 
 anim freespecial4 #GRAB RUN
-	range 50 120
-	rangea 0 0
-	rangez -9 9
-	followanim 5
-	followcond 4
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	energycost 5 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 200
-	hitfx	data/sounds/throw.wav
-	sound	data/voices/Mrx1.wav
-	@cmd target 4 2
-	@cmd dashTarget
-	attack 130 90 70 110 1 0 1 1 0 24
-	frame	data/chars/bosses/mrx/run00.png
-	@cmd target 3.5 2
-	@cmd dashTarget
-	frame	data/chars/bosses/mrx/run01.png
-	@cmd target 3 2
-	@cmd dashTarget
-	frame	data/chars/bosses/mrx/run00.png
-	@cmd target 2.5 2
-	@cmd dashTarget
-	frame	data/chars/bosses/mrx/run01.png
-	@cmd target 2 2
-	@cmd dashTarget
-	frame	data/chars/bosses/mrx/run00.png
-	@cmd dasher 0
-	frame	data/chars/bosses/mrx/run01.png
+    range 50 120
+    rangea 0 0
+    rangez -9 9
+    followanim 5
+    followcond 4
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    energycost 5 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 200
+    hitfx    data/sounds/throw.wav
+    sound    data/voices/Mrx1.wav
+    @cmd target 4 2
+    @cmd dashTarget
+    attack 130 90 70 110 1 0 1 1 0 24
+    frame    data/chars/bosses/mrx/run00.png
+    @cmd target 3.5 2
+    @cmd dashTarget
+    frame    data/chars/bosses/mrx/run01.png
+    @cmd target 3 2
+    @cmd dashTarget
+    frame    data/chars/bosses/mrx/run00.png
+    @cmd target 2.5 2
+    @cmd dashTarget
+    frame    data/chars/bosses/mrx/run01.png
+    @cmd target 2 2
+    @cmd dashTarget
+    frame    data/chars/bosses/mrx/run00.png
+    @cmd dasher 0
+    frame    data/chars/bosses/mrx/run01.png
 
 anim freespecial5 #LAUGH
-	range 160 400
-	rangea 0 0
-	rangez -999 -20
-	energycost -15 1 6
-	loop	0
-	delay	4
-	offset	140 200
-	bbox 	128 107 24 95
-	sound	data/voices/Mrx1.wav
-	@cmd block 1
-	frame	data/chars/bosses/mrx/laugh00.png
-	frame	data/chars/bosses/mrx/laugh01.png
-	frame	data/chars/bosses/mrx/laugh02.png
-	frame	data/chars/bosses/mrx/laugh03.png
-	frame	data/chars/bosses/mrx/laugh02.png
-	frame	data/chars/bosses/mrx/laugh01.png
-	@cmd looper 1 8
-	@cmd block 0
-	frame	data/chars/bosses/mrx/laugh00.png
+    range 160 400
+    rangea 0 0
+    rangez -999 -20
+    energycost -15 1 6
+    loop    0
+    delay    4
+    offset    140 200
+    bbox     128 107 24 95
+    sound    data/voices/Mrx1.wav
+    @cmd block 1
+    frame    data/chars/bosses/mrx/laugh00.png
+    frame    data/chars/bosses/mrx/laugh01.png
+    frame    data/chars/bosses/mrx/laugh02.png
+    frame    data/chars/bosses/mrx/laugh03.png
+    frame    data/chars/bosses/mrx/laugh02.png
+    frame    data/chars/bosses/mrx/laugh01.png
+    @cmd looper 1 8
+    @cmd block 0
+    frame    data/chars/bosses/mrx/laugh00.png
 
 anim freespecial9 #Kick
-	range 20 60
-	rangea 0 100
-	rangez -9 -9
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 200
-	hitfx	data/sounds/HighKick.wav
-	sound	data/voices/Mrx3.wav
-	frame	data/chars/bosses/mrx/a300.png
-	delay	12
-	attack 130 130 100 70 3 1 1 0 25 24
-	dropv 5 3
-	frame	data/chars/bosses/mrx/a301.png
-	@cmd spawnToss "X_Grenade" 20 60 0 4 4 0
-	@cmd rageCancel -999 999 -999 999 0 "ANI_FREESPECIAL5" "hit"
-	frame	data/chars/bosses/mrx/a302.png
+    range 20 60
+    rangea 0 100
+    rangez -9 -9
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 200
+    hitfx    data/sounds/HighKick.wav
+    sound    data/voices/Mrx3.wav
+    frame    data/chars/bosses/mrx/a300.png
+    delay    12
+    attack 130 130 100 70 3 1 1 0 25 24
+    dropv 5 3
+    frame    data/chars/bosses/mrx/a301.png
+    @cmd spawnToss "X_Grenade" 20 60 0 4 4 0
+    @cmd rageCancel -999 999 -999 999 0 "ANI_FREESPECIAL5" "hit"
+    frame    data/chars/bosses/mrx/a302.png
 
 
 anim follow5
-	loop	0
-	delay	16
-	offset	130 190
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/bosses/mrx/run00.png
+    loop    0
+    delay    16
+    offset    130 190
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/bosses/mrx/run00.png
 
 anim follow7 #counter
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	140 200
-	bbox 137 114 29 85
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/voices/Rugal01.wav
-	frame	data/chars/bosses/mrx/a100.png
-	bbox 140 110 40 90
-	attack 152 115 31 39 5 0 0 0 10 12
-	frame	data/chars/bosses/mrx/a101.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a101.png
-	delay	6
-	hitfx	data/sounds/HighPunch.wav
-	bbox 140 115 34 82
-	attack 153 115 45 50 7 0 0 0 20 12
-	frame	data/chars/bosses/mrx/a102.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a102.png
-	delay	4
-	bbox 140 118 31 81
-	attack 153 99 50 65 7 0 0 0 20 12
-	frame	data/chars/bosses/mrx/a103.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/mrx/a103.png
-	delay	4
-	attack 153 99 50 23 9 1 0 0 20 12
-	frame	data/chars/bosses/mrx/a104.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 20 80 0 99 5 "ANI_FREESPECIAL4" "hit"
-	@cmd rageCancel -999 999 -999 999 60 "ANI_FREESPECIAL" "mp"
-	frame	data/chars/bosses/mrx/a100.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    140 200
+    bbox 137 114 29 85
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/voices/Rugal01.wav
+    frame    data/chars/bosses/mrx/a100.png
+    bbox 140 110 40 90
+    attack 152 115 31 39 5 0 0 0 10 12
+    frame    data/chars/bosses/mrx/a101.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a101.png
+    delay    6
+    hitfx    data/sounds/HighPunch.wav
+    bbox 140 115 34 82
+    attack 153 115 45 50 7 0 0 0 20 12
+    frame    data/chars/bosses/mrx/a102.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a102.png
+    delay    4
+    bbox 140 118 31 81
+    attack 153 99 50 65 7 0 0 0 20 12
+    frame    data/chars/bosses/mrx/a103.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/mrx/a103.png
+    delay    4
+    attack 153 99 50 23 9 1 0 0 20 12
+    frame    data/chars/bosses/mrx/a104.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 20 80 0 99 5 "ANI_FREESPECIAL4" "hit"
+    @cmd rageCancel -999 999 -999 999 60 "ANI_FREESPECIAL" "mp"
+    frame    data/chars/bosses/mrx/a100.png
 
 anim jumpattack #JUMP ADVANCE
-	range 40 160
-	rangea 0 100
-	loop	0
-	delay	12
-	offset	140 200
-	hitfx	data/sounds/HighKick.wav
-	@cmd targetJump
-	@cmd leapJump
-	sound	data/sounds/Jumping.wav
-	#bbox 	130 138 30 60
-	frame	data/chars/bosses/mrx/jumpatk00.png
-	sound	data/voices/Rugal01.wav
-	#bbox 	113 152 69 46
-	attack 113 134 70 50 1 0 1 1 0 24
-	frame	data/chars/bosses/mrx/jumpatk02.png
+    range 40 160
+    rangea 0 100
+    loop    0
+    delay    12
+    offset    140 200
+    hitfx    data/sounds/HighKick.wav
+    @cmd targetJump
+    @cmd leapJump
+    sound    data/sounds/Jumping.wav
+    #bbox     130 138 30 60
+    frame    data/chars/bosses/mrx/jumpatk00.png
+    sound    data/voices/Rugal01.wav
+    #bbox     113 152 69 46
+    attack 113 134 70 50 1 0 1 1 0 24
+    frame    data/chars/bosses/mrx/jumpatk02.png
 
 anim block
-	range 0 100
-	rangea 0 100
-	rangez -24 24
-	@cmd dasher 0 0 0
-	loop	0
-	delay	96
-	offset	140 200
-	bbox 140 110 40 90
-	sound	data/voices/Mrx1.wav
-	frame	data/chars/bosses/mrx/block00.png
+    range 0 100
+    rangea 0 100
+    rangez -24 24
+    @cmd dasher 0 0 0
+    loop    0
+    delay    96
+    offset    140 200
+    bbox 140 110 40 90
+    sound    data/voices/Mrx1.wav
+    frame    data/chars/bosses/mrx/block00.png
 
 anim dodge
-	range 0 80
-	rangea 0 100
-	rangez -24 24
-	loop	0
-	delay	2
-	offset	140 200
-	@cmd dashRandom 2 2
-	#@cmd spawnToss "X_Grenade" 20 60 1 -0.4 1.2 0
-	@cmd copyMove
-	frame	data/chars/bosses/mrx/dodge00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge00.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/bosses/mrx/dodge02.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/bosses/mrx/jumpland00.png
+    range 0 80
+    rangea 0 100
+    rangez -24 24
+    loop    0
+    delay    2
+    offset    140 200
+    @cmd dashRandom 2 2
+    #@cmd spawnToss "X_Grenade" 20 60 1 -0.4 1.2 0
+    @cmd copyMove
+    frame    data/chars/bosses/mrx/dodge00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge00.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/bosses/mrx/dodge02.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/bosses/mrx/jumpland00.png

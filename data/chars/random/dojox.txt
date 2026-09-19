@@ -1,52 +1,52 @@
-name			DojoX
-type			none
-lifespan		0.001
-shadow			0
-alpha			1
-onspawnscript 	data/scripts/onspawn/DojoX.c
+name            DojoX
+type            none
+lifespan        0.001
+shadow            0
+alpha            1
+onspawnscript     data/scripts/onspawn/DojoX.c
 
 load      Kun
-load			AbadedeB
-load			AshB
-load			BarbonB
-load			BearB
-load			BisonB
-load			BreakB
-load			Tamer
-load			RooB
-load			ChunliB
-load			HarakiriB
-load			HarakiriD
-load			JetB
-load			KageB
-load			LeeB
-load			MonalisaB
-load			MrxB
-load			NeoxB
-load			ParticleB
-load			ReineB
+load            AbadedeB
+load            AshB
+load            BarbonB
+load            BearB
+load            BisonB
+load            BreakB
+load            Tamer
+load            RooB
+load            ChunliB
+load            HarakiriB
+load            HarakiriD
+load            JetB
+load            KageB
+load            LeeB
+load            MonalisaB
+load            MrxB
+load            NeoxB
+load            ParticleB
+load            ReineB
 load      RingmasterB
-load			RobotxB
-load			RocketB
-load			ShivaB
-load			Shiva_BotB
-load			TrackerB
-load			YamatoB
-load			Musashi
-load			ZamzaB
-load  		JackB
-load  		RavenB
-load  		HakuyoB
-load  		TigerB
-load  		BongoB
-load  		BigBenB
-load  		ElectraB
-load  		KusanagiB
-load  		BruceB
+load            RobotxB
+load            RocketB
+load            ShivaB
+load            Shiva_BotB
+load            TrackerB
+load            YamatoB
+load            Musashi
+load            ZamzaB
+load          JackB
+load          RavenB
+load          HakuyoB
+load          TigerB
+load          BongoB
+load          BigBenB
+load          ElectraB
+load          KusanagiB
+load          BruceB
 load      Signal_Bottle
 
 anim idle
-	loop	0
-	delay	1
-	offset	50 72
-	frame	data/chars/random/empty0.png
+    loop    0
+    delay    1
+    offset    50 72
+    frame    data/chars/random/empty0.png

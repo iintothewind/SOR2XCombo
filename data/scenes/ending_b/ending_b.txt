@@ -1,78 +1,78 @@
-name			Ending_B #TIMELINE
-type			text
-subtype			noskip
-setlayer		100000001
-shadow			0
-ondrawscript	data/scripts/ondraw/endings.c
-animationscript	data/scripts/animation/default.c
+name            Ending_B #TIMELINE
+type            text
+subtype            noskip
+setlayer        100000001
+shadow            0
+ondrawscript    data/scripts/ondraw/endings.c
+animationscript    data/scripts/animation/default.c
 
-load			Ending_B1
-load			Ending_B2
-load			Ending_B3
-load			Ending_B4
-load			Ending_B5
+load            Ending_B1
+load            Ending_B2
+load            Ending_B3
+load            Ending_B4
+load            Ending_B5
 
 anim idle
-	loop	0
-	delay	2
-	offset	0 1
-	frame	data/scenes/ending_b/endb23.png
-		delay	620
-	@cmd spawn01 "Ending_B1" 0 0 0
-	@cmd spawn01 "Ending_B2" 0 45 0
-	@cmd spawn01 "Ending_B3" 0 44 0
-	frame	data/scenes/ending_b/endb03.png #SPAWN FADE-IN AND LAYERS
-		delay	240
-	frame	data/scenes/ending_b/endb03.png #WAIT
-		delay	8
-	frame	data/scenes/ending_b/endb05.png #EXPLOSION
-	frame	data/scenes/ending_b/endb06.png
-	frame	data/scenes/ending_b/endb07.png
-	frame	data/scenes/ending_b/endb08.png
-	frame	data/scenes/ending_b/endb09.png
-	frame	data/scenes/ending_b/endb10.png
-	frame	data/scenes/ending_b/endb11.png
-	frame	data/scenes/ending_b/endb12.png
-	frame	data/scenes/ending_b/endb13.png
-	frame	data/scenes/ending_b/endb14.png
-	frame	data/scenes/ending_b/endb15.png
-	frame	data/scenes/ending_b/endb16.png
-	frame	data/scenes/ending_b/endb17.png
-	frame	data/scenes/ending_b/endb18.png
-	frame	data/scenes/ending_b/endb19.png
-		delay	200
-	@cmd spawn01 "Ending_B4" 0 0 0
-	frame	data/scenes/ending_b/endb20.png #DOUBLE FADE-IN/OUT
-		delay	440
-	frame	data/scenes/ending_b/endb23.png #WAIT
-		delay	16
-	drawmethod alpha 6
-	drawmethod channel 0.1
-	frame	data/scenes/ending_b/endb21.png #FADE-IN, CITY DESTROYED
-	drawmethod channel 0.2
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.3
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.4
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.5
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.6
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.7
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.8
-	frame	data/scenes/ending_b/endb21.png
-	drawmethod channel 0.9
-	frame	data/scenes/ending_b/endb21.png
-		delay	400
-	nodrawmethod
-	frame	data/scenes/ending_b/endb21.png #WAIT
-		delay	2100
-	@cmd spawn01 "Ending_B1" 0 0 200
-	frame	data/scenes/ending_b/endb21.png #FADE-IN AND DRAW "THE END?"
-		delay	260
-	@cmd spawn01 "Ending_B5" 0 0 0
-	frame	data/scenes/ending_b/endb21.png #FINAL FADE-OUT
-	@cmd suicide
-	frame	data/scenes/ending_b/endb23.png
+    loop    0
+    delay    2
+    offset    0 1
+    frame    data/scenes/ending_b/endb23.png
+        delay    620
+    @cmd spawn01 "Ending_B1" 0 0 0
+    @cmd spawn01 "Ending_B2" 0 45 0
+    @cmd spawn01 "Ending_B3" 0 44 0
+    frame    data/scenes/ending_b/endb03.png #SPAWN FADE-IN AND LAYERS
+        delay    240
+    frame    data/scenes/ending_b/endb03.png #WAIT
+        delay    8
+    frame    data/scenes/ending_b/endb05.png #EXPLOSION
+    frame    data/scenes/ending_b/endb06.png
+    frame    data/scenes/ending_b/endb07.png
+    frame    data/scenes/ending_b/endb08.png
+    frame    data/scenes/ending_b/endb09.png
+    frame    data/scenes/ending_b/endb10.png
+    frame    data/scenes/ending_b/endb11.png
+    frame    data/scenes/ending_b/endb12.png
+    frame    data/scenes/ending_b/endb13.png
+    frame    data/scenes/ending_b/endb14.png
+    frame    data/scenes/ending_b/endb15.png
+    frame    data/scenes/ending_b/endb16.png
+    frame    data/scenes/ending_b/endb17.png
+    frame    data/scenes/ending_b/endb18.png
+    frame    data/scenes/ending_b/endb19.png
+        delay    200
+    @cmd spawn01 "Ending_B4" 0 0 0
+    frame    data/scenes/ending_b/endb20.png #DOUBLE FADE-IN/OUT
+        delay    440
+    frame    data/scenes/ending_b/endb23.png #WAIT
+        delay    16
+    drawmethod alpha 6
+    drawmethod channel 0.1
+    frame    data/scenes/ending_b/endb21.png #FADE-IN, CITY DESTROYED
+    drawmethod channel 0.2
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.3
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.4
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.5
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.6
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.7
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.8
+    frame    data/scenes/ending_b/endb21.png
+    drawmethod channel 0.9
+    frame    data/scenes/ending_b/endb21.png
+        delay    400
+    nodrawmethod
+    frame    data/scenes/ending_b/endb21.png #WAIT
+        delay    2100
+    @cmd spawn01 "Ending_B1" 0 0 200
+    frame    data/scenes/ending_b/endb21.png #FADE-IN AND DRAW "THE END?"
+        delay    260
+    @cmd spawn01 "Ending_B5" 0 0 0
+    frame    data/scenes/ending_b/endb21.png #FINAL FADE-OUT
+    @cmd suicide
+    frame    data/scenes/ending_b/endb23.png

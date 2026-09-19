@@ -17,20 +17,20 @@
 void main()
 {//Global keyall scripts, detects player index
   int player = getlocalvar("player");
-	menuExtra(player);
-	menuGameplay(player);
-	menuControls(player);
-	menuFeatures(player);
-	menuPartners(player);
-	menuCommands(player);
-	menuMultiplayer(player);
-	menuSelect(player);
-	menuLevel(player);
-	menuSurvival(player);
-	menuDojo(player);
-	arcadeLock(player);
-	turboKey(player);
-	rankName(player);
-	debugMode(player);
-	menuRoute(player);
+    menuExtra(player);
+    menuGameplay(player);
+    menuControls(player);
+    menuFeatures(player);
+    menuPartners(player);
+    menuCommands(player);
+    menuMultiplayer(player);
+    menuSelect(player);
+    menuLevel(player);
+    menuSurvival(player);
+    menuDojo(player);
+    arcadeLock(player);
+    turboKey(player);
+    rankName(player);
+    debugMode(player);
+    menuRoute(player);
 }

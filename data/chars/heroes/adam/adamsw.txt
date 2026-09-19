@@ -1,199 +1,199 @@
 ##MAIN
-name				AdamSW
-type				none
+name                AdamSW
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter1.png
-remap				data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter2.png
-remap				data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter3.png
+remap                data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter1.png
+remap                data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter2.png
+remap                data/chars/heroes/adam/idle00.png data/chars/heroes/adam/alter3.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim special2 #OFFENSIVE SPECIAL
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/a601.png
-	frame	data/chars/heroes/adam/a602.png
-	frame	data/chars/heroes/adam/a603.png
-	frame	data/chars/heroes/adam/a604.png
-	frame	data/chars/heroes/adam/a605.png
-	frame	data/chars/heroes/adam/a606.png
-	frame	data/chars/heroes/adam/a601.png
-	frame	data/chars/heroes/adam/a602.png
-	frame	data/chars/heroes/adam/a603.png
-	frame	data/chars/heroes/adam/a604.png
-	frame	data/chars/heroes/adam/a605.png
-	frame	data/chars/heroes/adam/a606.png
-	frame	data/chars/heroes/adam/a601.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/a601.png
+    frame    data/chars/heroes/adam/a602.png
+    frame    data/chars/heroes/adam/a603.png
+    frame    data/chars/heroes/adam/a604.png
+    frame    data/chars/heroes/adam/a605.png
+    frame    data/chars/heroes/adam/a606.png
+    frame    data/chars/heroes/adam/a601.png
+    frame    data/chars/heroes/adam/a602.png
+    frame    data/chars/heroes/adam/a603.png
+    frame    data/chars/heroes/adam/a604.png
+    frame    data/chars/heroes/adam/a605.png
+    frame    data/chars/heroes/adam/a606.png
+    frame    data/chars/heroes/adam/a601.png
 
 
 anim freespecial
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/sword/s00.png
-	frame	data/chars/heroes/adam/sword/s01.png
-	frame	data/chars/heroes/adam/sword/s02.png
-	frame	data/chars/heroes/adam/sword/s02.png
-	frame	data/chars/heroes/adam/sword/s03.png
-	frame	data/chars/heroes/adam/sword/s03.png
-	frame	data/chars/heroes/adam/sword/s04.png
-	frame	data/chars/heroes/adam/sword/s04.png
-	frame	data/chars/heroes/adam/sword/s05.png
-	frame	data/chars/heroes/adam/sword/s05.png
-	frame	data/chars/heroes/adam/sword/s05.png
-	frame	data/chars/heroes/adam/sword/s05.png
-	frame	data/chars/heroes/adam/sword/s26.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s26.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s26.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s21.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s22.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s23.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s24.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s25.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s26.png
-	frame	data/chars/heroes/adam/sword/s20.png
-	frame	data/chars/heroes/adam/sword/s27.png
-	frame	data/chars/heroes/adam/sword/jumpdelay00.png
-	frame	data/chars/heroes/adam/sword/jumpdelay00.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/sword/s00.png
+    frame    data/chars/heroes/adam/sword/s01.png
+    frame    data/chars/heroes/adam/sword/s02.png
+    frame    data/chars/heroes/adam/sword/s02.png
+    frame    data/chars/heroes/adam/sword/s03.png
+    frame    data/chars/heroes/adam/sword/s03.png
+    frame    data/chars/heroes/adam/sword/s04.png
+    frame    data/chars/heroes/adam/sword/s04.png
+    frame    data/chars/heroes/adam/sword/s05.png
+    frame    data/chars/heroes/adam/sword/s05.png
+    frame    data/chars/heroes/adam/sword/s05.png
+    frame    data/chars/heroes/adam/sword/s05.png
+    frame    data/chars/heroes/adam/sword/s26.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s26.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s26.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s21.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s22.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s23.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s24.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s25.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s26.png
+    frame    data/chars/heroes/adam/sword/s20.png
+    frame    data/chars/heroes/adam/sword/s27.png
+    frame    data/chars/heroes/adam/sword/jumpdelay00.png
+    frame    data/chars/heroes/adam/sword/jumpdelay00.png
 
 anim freespecial2 #SUPER
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/special00.png
-	frame	data/chars/heroes/adam/special01.png
-	frame	data/chars/heroes/adam/special02.png
-	frame	data/chars/heroes/adam/special10.png
-	frame	data/chars/heroes/adam/special08.png
-	frame	data/chars/heroes/adam/special09.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/special00.png
+    frame    data/chars/heroes/adam/special01.png
+    frame    data/chars/heroes/adam/special02.png
+    frame    data/chars/heroes/adam/special10.png
+    frame    data/chars/heroes/adam/special08.png
+    frame    data/chars/heroes/adam/special09.png
 
 anim freespecial3 #RAGE DASH
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/rage00.png
-	frame	data/chars/heroes/adam/rage01.png
-	frame	data/chars/heroes/adam/rage02.png
-	frame	data/chars/heroes/adam/rage03.png
-	frame	data/chars/heroes/adam/rage04.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/rage00.png
+    frame    data/chars/heroes/adam/rage01.png
+    frame    data/chars/heroes/adam/rage02.png
+    frame    data/chars/heroes/adam/rage03.png
+    frame    data/chars/heroes/adam/rage04.png
 
 
 anim runattack #SWORD SLIDE
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/sword/a100.png
-	frame	data/chars/heroes/adam/sword/a101.png
-	frame	data/chars/heroes/adam/sword/a101.png
-	frame	data/chars/heroes/adam/sword/a101.png
-	frame	data/chars/heroes/adam/sword/jumpdelay00.png
-	frame	data/chars/heroes/adam/sword/jumpdelay00.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/sword/a100.png
+    frame    data/chars/heroes/adam/sword/a101.png
+    frame    data/chars/heroes/adam/sword/a101.png
+    frame    data/chars/heroes/adam/sword/a101.png
+    frame    data/chars/heroes/adam/sword/jumpdelay00.png
+    frame    data/chars/heroes/adam/sword/jumpdelay00.png
 
 anim riseattack
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/dodge00.png
-	frame	data/chars/heroes/adam/dodge01.png
-	frame	data/chars/heroes/adam/dodge02.png
-	frame	data/chars/heroes/adam/dodge03.png
-	frame	data/chars/heroes/adam/dodge04.png
-	frame	data/chars/heroes/adam/dodge05.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/dodge00.png
+    frame    data/chars/heroes/adam/dodge01.png
+    frame    data/chars/heroes/adam/dodge02.png
+    frame    data/chars/heroes/adam/dodge03.png
+    frame    data/chars/heroes/adam/dodge04.png
+    frame    data/chars/heroes/adam/dodge05.png
 
 anim follow1 #RAGE
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/special300.png
-	frame	data/chars/heroes/adam/special300.png
-	frame	data/chars/heroes/adam/special300.png
-	frame	data/chars/heroes/adam/special301.png
-	frame	data/chars/heroes/adam/special302.png
-	frame	data/chars/heroes/adam/special303.png
-	frame	data/chars/heroes/adam/a100.png
-	frame	data/chars/heroes/adam/a101.png
-	frame	data/chars/heroes/adam/a100.png
-	frame	data/chars/heroes/adam/a200.png
-	frame	data/chars/heroes/adam/a201.png
-	frame	data/chars/heroes/adam/a200.png
-	frame	data/chars/heroes/adam/a300.png
-	frame	data/chars/heroes/adam/a301.png
-	frame	data/chars/heroes/adam/a302.png
-	frame	data/chars/heroes/adam/a303.png
-	frame	data/chars/heroes/adam/a304.png
-	frame	data/chars/heroes/adam/a303.png
-	frame	data/chars/heroes/adam/a302.png
-	frame	data/chars/heroes/adam/a301.png
-	frame	data/chars/heroes/adam/a300.png
-	frame	data/chars/heroes/adam/a301.png
-	frame	data/chars/heroes/adam/a302.png
-	frame	data/chars/heroes/adam/a303.png
-	frame	data/chars/heroes/adam/a304.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/special300.png
+    frame    data/chars/heroes/adam/special300.png
+    frame    data/chars/heroes/adam/special300.png
+    frame    data/chars/heroes/adam/special301.png
+    frame    data/chars/heroes/adam/special302.png
+    frame    data/chars/heroes/adam/special303.png
+    frame    data/chars/heroes/adam/a100.png
+    frame    data/chars/heroes/adam/a101.png
+    frame    data/chars/heroes/adam/a100.png
+    frame    data/chars/heroes/adam/a200.png
+    frame    data/chars/heroes/adam/a201.png
+    frame    data/chars/heroes/adam/a200.png
+    frame    data/chars/heroes/adam/a300.png
+    frame    data/chars/heroes/adam/a301.png
+    frame    data/chars/heroes/adam/a302.png
+    frame    data/chars/heroes/adam/a303.png
+    frame    data/chars/heroes/adam/a304.png
+    frame    data/chars/heroes/adam/a303.png
+    frame    data/chars/heroes/adam/a302.png
+    frame    data/chars/heroes/adam/a301.png
+    frame    data/chars/heroes/adam/a300.png
+    frame    data/chars/heroes/adam/a301.png
+    frame    data/chars/heroes/adam/a302.png
+    frame    data/chars/heroes/adam/a303.png
+    frame    data/chars/heroes/adam/a304.png
 
 anim follow4 #RAGE COMBO
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/rage03.png
-	frame	data/chars/heroes/adam/rage03.png
-	frame	data/chars/heroes/adam/rage04.png
-	frame	data/chars/heroes/adam/rage05.png
-	frame	data/chars/heroes/adam/rage06.png
-	frame	data/chars/heroes/adam/rage07.png
-	frame	data/chars/heroes/adam/rage08.png
-	frame	data/chars/heroes/adam/rage09.png
-	frame	data/chars/heroes/adam/rage10.png
-	frame	data/chars/heroes/adam/rage11.png
-	frame	data/chars/heroes/adam/rage12.png
-	frame	data/chars/heroes/adam/rage13.png
-	frame	data/chars/heroes/adam/rage14.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/rage03.png
+    frame    data/chars/heroes/adam/rage03.png
+    frame    data/chars/heroes/adam/rage04.png
+    frame    data/chars/heroes/adam/rage05.png
+    frame    data/chars/heroes/adam/rage06.png
+    frame    data/chars/heroes/adam/rage07.png
+    frame    data/chars/heroes/adam/rage08.png
+    frame    data/chars/heroes/adam/rage09.png
+    frame    data/chars/heroes/adam/rage10.png
+    frame    data/chars/heroes/adam/rage11.png
+    frame    data/chars/heroes/adam/rage12.png
+    frame    data/chars/heroes/adam/rage13.png
+    frame    data/chars/heroes/adam/rage14.png
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/block00.png
-	frame	data/chars/heroes/adam/a304.png
-	frame	data/chars/heroes/adam/a303.png
-	frame	data/chars/heroes/adam/a302.png
-	frame	data/chars/heroes/adam/a301.png
-	frame	data/chars/heroes/adam/a300.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/block00.png
+    frame    data/chars/heroes/adam/a304.png
+    frame    data/chars/heroes/adam/a303.png
+    frame    data/chars/heroes/adam/a302.png
+    frame    data/chars/heroes/adam/a301.png
+    frame    data/chars/heroes/adam/a300.png
 
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/dodge00.png
-	frame	data/chars/heroes/adam/dodge01.png
-	frame	data/chars/heroes/adam/dodge02.png
-	frame	data/chars/heroes/adam/dodge03.png
-	frame	data/chars/heroes/adam/dodge04.png
-	frame	data/chars/heroes/adam/dodge05.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/dodge00.png
+    frame    data/chars/heroes/adam/dodge01.png
+    frame    data/chars/heroes/adam/dodge02.png
+    frame    data/chars/heroes/adam/dodge03.png
+    frame    data/chars/heroes/adam/dodge04.png
+    frame    data/chars/heroes/adam/dodge05.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	137 172
-	frame	data/chars/heroes/adam/dodge00.png
-	frame	data/chars/heroes/adam/dodge01.png
-	frame	data/chars/heroes/adam/dodge02.png
-	frame	data/chars/heroes/adam/dodge03.png
-	frame	data/chars/heroes/adam/dodge04.png
-	frame	data/chars/heroes/adam/dodge05.png
+    loop    0
+    delay    1000
+    offset    137 172
+    frame    data/chars/heroes/adam/dodge00.png
+    frame    data/chars/heroes/adam/dodge01.png
+    frame    data/chars/heroes/adam/dodge02.png
+    frame    data/chars/heroes/adam/dodge03.png
+    frame    data/chars/heroes/adam/dodge04.png
+    frame    data/chars/heroes/adam/dodge05.png

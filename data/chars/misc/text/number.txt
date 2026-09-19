@@ -1,48 +1,48 @@
-name			Number
-type			text
-subtype			noskip
-setlayer		1000000001
-shadow			0
-ondrawscript	data/scripts/ondraw/stage.c
-animationscript	data/scripts/animation/default.c
+name            Number
+type            text
+subtype            noskip
+setlayer        1000000001
+shadow            0
+ondrawscript    data/scripts/ondraw/stage.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	8
-	offset	1200 1200
-	frame	data/chars/misc/text/blank.png #FRAME 0 - SPAWN
-		delay	40
-	@cmd dasher 0 0 6
-	frame	data/chars/misc/text/blank.png #FRAME 1 - MOVING/DISABLE SCREENSHOT KEY
-		delay	240
-	@cmd dasher 0 0 0
-	frame	data/chars/misc/text/blank.png #FRAME 2 - STOPING
-		delay	40
-	@cmd dasher 0 0 9
-	frame	data/chars/misc/text/blank.png #FRAME 3 - MOVING
-		delay	8
-	frame	data/chars/misc/text/blank.png #FRAME 4 - MOVING/RE-ENABLE SCREENSHOT KEY
-		delay	1
-	drawmethod alpha 6
-	drawmethod channel 0.9
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.8
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.7
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.6
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.5
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.4
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.3
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.2
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0.1
-	frame	data/chars/misc/text/blank.png
-	drawmethod channel 0
-	frame	data/chars/misc/text/blank.png
-	@cmd suicide
-	frame	data/chars/misc/text/blank.png #REMOVE
+    loop    0
+    delay    8
+    offset    1200 1200
+    frame    data/chars/misc/text/blank.png #FRAME 0 - SPAWN
+        delay    40
+    @cmd dasher 0 0 6
+    frame    data/chars/misc/text/blank.png #FRAME 1 - MOVING/DISABLE SCREENSHOT KEY
+        delay    240
+    @cmd dasher 0 0 0
+    frame    data/chars/misc/text/blank.png #FRAME 2 - STOPING
+        delay    40
+    @cmd dasher 0 0 9
+    frame    data/chars/misc/text/blank.png #FRAME 3 - MOVING
+        delay    8
+    frame    data/chars/misc/text/blank.png #FRAME 4 - MOVING/RE-ENABLE SCREENSHOT KEY
+        delay    1
+    drawmethod alpha 6
+    drawmethod channel 0.9
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.8
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.7
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.6
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.5
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.4
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.3
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.2
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0.1
+    frame    data/chars/misc/text/blank.png
+    drawmethod channel 0
+    frame    data/chars/misc/text/blank.png
+    @cmd suicide
+    frame    data/chars/misc/text/blank.png #REMOVE

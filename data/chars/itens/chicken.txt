@@ -1,23 +1,23 @@
-name			Chicken
-type			item
-health			9999
-nolife			1
-facing 			1
-gfxshadow		1 1
-offscreenkill	50
-stealth			1
-didhitscript	data/scripts/didhit/food.c
+name            Chicken
+type            item
+health            9999
+nolife            1
+facing             1
+gfxshadow        1 1
+offscreenkill    50
+stealth            1
+didhitscript    data/scripts/didhit/food.c
 
 anim idle
-	loop	1
-	delay	200
-	offset	51 61
-	itembox 39 10041 20 22
-	bbox 	39 41 20 22
-	nodrawmethod
-	frame	data/chars/itens/chicken00.png
-		delay	6
-	drawmethod tintmode 1
-	drawmethod tintcolor 150_150_150
-	frame	data/chars/itens/chicken00.png
+    loop    1
+    delay    200
+    offset    51 61
+    itembox 39 10041 20 22
+    bbox     39 41 20 22
+    nodrawmethod
+    frame    data/chars/itens/chicken00.png
+        delay    6
+    drawmethod tintmode 1
+    drawmethod tintcolor 150_150_150
+    frame    data/chars/itens/chicken00.png
 

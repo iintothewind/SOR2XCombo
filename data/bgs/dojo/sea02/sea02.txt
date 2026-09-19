@@ -1,19 +1,19 @@
-name	sea02
-type	none
-subject_to_gravity	0
-setlayer	-15
-noquake		1 1
-facing	1
+name    sea02
+type    none
+subject_to_gravity    0
+setlayer    -15
+noquake        1 1
+facing    1
 
-anim	idle
-	loop	1
-	delay	15
-	offset	0 0
-	frame	data/bgs/dojo/sea02/idle00.png
-	frame	data/bgs/dojo/sea02/idle01.png
-	frame	data/bgs/dojo/sea02/idle02.png
-	frame	data/bgs/dojo/sea02/idle03.png
-	frame	data/bgs/dojo/sea02/idle04.png
-	frame	data/bgs/dojo/sea02/idle05.png
-	frame	data/bgs/dojo/sea02/idle06.png
-	frame	data/bgs/dojo/sea02/idle07.png
+anim    idle
+    loop    1
+    delay    15
+    offset    0 0
+    frame    data/bgs/dojo/sea02/idle00.png
+    frame    data/bgs/dojo/sea02/idle01.png
+    frame    data/bgs/dojo/sea02/idle02.png
+    frame    data/bgs/dojo/sea02/idle03.png
+    frame    data/bgs/dojo/sea02/idle04.png
+    frame    data/bgs/dojo/sea02/idle05.png
+    frame    data/bgs/dojo/sea02/idle06.png
+    frame    data/bgs/dojo/sea02/idle07.png

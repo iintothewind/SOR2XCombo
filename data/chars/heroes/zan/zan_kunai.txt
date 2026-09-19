@@ -1,351 +1,351 @@
 ##MAIN
-name				Zan_Kunai
-type				none
+name                Zan_Kunai
+type                none
 
 ##LIFE
-health				0
+health                0
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					0
-mprate  			5 #SCRIPT
+mp                    0
+mprate              5 #SCRIPT
 
 ##GRAB
-grabdistance 		33 #36/33/30
-grabfinish 			0 #PLAYER=0/ENEMY=1
+grabdistance         33 #36/33/30
+grabfinish             0 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-3 #-1/-2/-3
-height				83
+antigravity            -3 #-1/-2/-3
+height                83
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bflash				Block
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bflash                Block
 
 ##SCRIPTS
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-animationscript	 	data/scripts/animation/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+animationscript         data/scripts/animation/default.c
 
 ##ICONS
-icon				data/chars/heroes/zan/icon.png 1
+icon                data/chars/heroes/zan/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/Zan1.wav
+diesound            data/voices/Zan1.wav
 
 ##REMAPS
-remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter1.png
-remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter2.png
-remap				data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter3.png
+remap                data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter1.png
+remap                data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter2.png
+remap                data/chars/heroes/zan/idle00.png data/chars/heroes/zan/alter3.png
 
 ##COMMANDS
-com 				a2	a2		freespecial		#RAGE
-com 				d f a2		freespecial		#RAGE
-com 				a2 + s		freespecial		#RAGE
-com 				a2 s		freespecial		#RAGE
-com 				f f a2		freespecial2	#SUPER
+com                 a2    a2        freespecial        #RAGE
+com                 d f a2        freespecial        #RAGE
+com                 a2 + s        freespecial        #RAGE
+com                 a2 s        freespecial        #RAGE
+com                 f f a2        freespecial2    #SUPER
 
 ##LOADS
-knife				Zan_Orb2
+knife                Zan_Orb2
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	18
-	offset	130 164
-	bbox 	115 85 27 81
-	@cmd bindPos "Zan_Orb1" -17 51 1
-	frame	data/chars/heroes/zan/idle00.png
-	@cmd bindPos "Zan_Orb1" -17 52 1
-	frame	data/chars/heroes/zan/idle01.png
-	@cmd bindPos "Zan_Orb1" -17 53 1
-	frame	data/chars/heroes/zan/idle02.png
-	@cmd bindPos "Zan_Orb1" -17 52 1
-	frame	data/chars/heroes/zan/idle03.png
+    loop    1
+    delay    18
+    offset    130 164
+    bbox     115 85 27 81
+    @cmd bindPos "Zan_Orb1" -17 51 1
+    frame    data/chars/heroes/zan/idle00.png
+    @cmd bindPos "Zan_Orb1" -17 52 1
+    frame    data/chars/heroes/zan/idle01.png
+    @cmd bindPos "Zan_Orb1" -17 53 1
+    frame    data/chars/heroes/zan/idle02.png
+    @cmd bindPos "Zan_Orb1" -17 52 1
+    frame    data/chars/heroes/zan/idle03.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	130 164
-	bbox 	126 83 16 83
-	@cmd bindPos "Zan_Orb1" 19 38 1
-	frame	data/chars/heroes/zan/walk00.png
-	@cmd bindPos "Zan_Orb1" 13 34 1
-	frame	data/chars/heroes/zan/walk01.png
-	@cmd bindPos "Zan_Orb1" 2 32 1
-	frame	data/chars/heroes/zan/walk02.png
-	@cmd bindPos "Zan_Orb1" -8 32 1
-	frame	data/chars/heroes/zan/walk03.png
-	@cmd bindPos "Zan_Orb1" 2 32 1
-	frame	data/chars/heroes/zan/walk04.png
-	@cmd bindPos "Zan_Orb1" 13 34 1
-	frame	data/chars/heroes/zan/walk05.png
+    loop    1
+    delay    16
+    offset    130 164
+    bbox     126 83 16 83
+    @cmd bindPos "Zan_Orb1" 19 38 1
+    frame    data/chars/heroes/zan/walk00.png
+    @cmd bindPos "Zan_Orb1" 13 34 1
+    frame    data/chars/heroes/zan/walk01.png
+    @cmd bindPos "Zan_Orb1" 2 32 1
+    frame    data/chars/heroes/zan/walk02.png
+    @cmd bindPos "Zan_Orb1" -8 32 1
+    frame    data/chars/heroes/zan/walk03.png
+    @cmd bindPos "Zan_Orb1" 2 32 1
+    frame    data/chars/heroes/zan/walk04.png
+    @cmd bindPos "Zan_Orb1" 13 34 1
+    frame    data/chars/heroes/zan/walk05.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	cancel 0 5 0 a2 freespecial2
-	loop	1
-	delay	4
-	offset	130 164
-	bbox 	121 100 31 67
-	sound	data/sounds/Run4.wav
-	@cmd bindPos "Zan_Orb1" -2 35 1
-	frame	data/chars/heroes/zan/run00.png
-	frame	data/chars/heroes/zan/run01.png
+    @cmd lockAni "runType" "off"
+    cancel 0 5 0 a2 freespecial2
+    loop    1
+    delay    4
+    offset    130 164
+    bbox     121 100 31 67
+    sound    data/sounds/Run4.wav
+    @cmd bindPos "Zan_Orb1" -2 35 1
+    frame    data/chars/heroes/zan/run00.png
+    frame    data/chars/heroes/zan/run01.png
 
 anim get
-	loop	0
-	delay	16
-	offset	130 164
-	@cmd bindPos "Zan_Orb1" -17 3 1
-	frame	data/chars/heroes/zan/get00.png
+    loop    0
+    delay    16
+    offset    130 164
+    @cmd bindPos "Zan_Orb1" -17 3 1
+    frame    data/chars/heroes/zan/get00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	130 164
-	@cmd landSafe
-	@cmd bindPos "Zan_Orb1" -2 55 1
-	sound	data/sounds/Jumping2.wav
-	frame	data/chars/heroes/zan/jump01.png
-	frame	data/chars/heroes/zan/jump02.png
+    loop    0
+    delay    30
+    offset    130 164
+    @cmd landSafe
+    @cmd bindPos "Zan_Orb1" -2 55 1
+    sound    data/sounds/Jumping2.wav
+    frame    data/chars/heroes/zan/jump01.png
+    frame    data/chars/heroes/zan/jump02.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	130 164
-	bbox 	121 100 31 67
-	@cmd bindPos "Zan_Orb1" -4 37 1
-	frame	data/chars/heroes/zan/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    130 164
+    bbox     121 100 31 67
+    @cmd bindPos "Zan_Orb1" -4 37 1
+    frame    data/chars/heroes/zan/jumpdelay00.png
 
 anim jump
-	loop	0
-	delay	12
-	offset	130 164
-	bbox 	121 81 30 67
-	sound	data/sounds/Jumping2.wav
-	@cmd bindPos "Zan_Orb1" -2 55 1
-	frame	data/chars/heroes/zan/jump00.png
-	frame	data/chars/heroes/zan/jump01.png
-	frame	data/chars/heroes/zan/jump02.png
+    loop    0
+    delay    12
+    offset    130 164
+    bbox     121 81 30 67
+    sound    data/sounds/Jumping2.wav
+    @cmd bindPos "Zan_Orb1" -2 55 1
+    frame    data/chars/heroes/zan/jump00.png
+    frame    data/chars/heroes/zan/jump01.png
+    frame    data/chars/heroes/zan/jump02.png
 
 anim walkoff
-	loop	0
-	delay	12
-	offset	130 164
-	bbox 	121 81 30 67
-	@cmd jump 1
-	@cmd bindPos "Zan_Orb1" -2 55 1
-	frame	data/chars/heroes/zan/jump00.png
-	frame	data/chars/heroes/zan/jump01.png
-	frame	data/chars/heroes/zan/jump02.png
+    loop    0
+    delay    12
+    offset    130 164
+    bbox     121 81 30 67
+    @cmd jump 1
+    @cmd bindPos "Zan_Orb1" -2 55 1
+    frame    data/chars/heroes/zan/jump00.png
+    frame    data/chars/heroes/zan/jump01.png
+    frame    data/chars/heroes/zan/jump02.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	130 164
-	bbox 	121 100 31 67
-	sound	data/sounds/Jumpland3.wav
-	@cmd bindPos "Zan_Orb1" -4 37 1
-	frame	data/chars/heroes/zan/jumpland00.png
+    loop    0
+    delay    12
+    offset    130 164
+    bbox     121 100 31 67
+    sound    data/sounds/Jumpland3.wav
+    @cmd bindPos "Zan_Orb1" -4 37 1
+    frame    data/chars/heroes/zan/jumpland00.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	130 164
-	bbox 	125 84 21 82
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	#attack 62 61 999 999 99999 0 0 0 5 999 #DEBUG TEST
-	@cmd bindPos "Zan_Orb1" 29 59 1
-	frame	data/chars/heroes/zan/a100.png
-	@cmd bindPos "Zan_Orb1" -13 43 1
-	attack 139 96 62 22 5 0 0 25 12
-	bbox 	125 87 29 79
-	frame	data/chars/heroes/zan/a101.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    130 164
+    bbox     125 84 21 82
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    #attack 62 61 999 999 99999 0 0 0 5 999 #DEBUG TEST
+    @cmd bindPos "Zan_Orb1" 29 59 1
+    frame    data/chars/heroes/zan/a100.png
+    @cmd bindPos "Zan_Orb1" -13 43 1
+    attack 139 96 62 22 5 0 0 25 12
+    bbox     125 87 29 79
+    frame    data/chars/heroes/zan/a101.png
 
 anim attack2
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	130 164
-	bbox 	125 84 21 82
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/HighAttack.wav
-	@cmd bindPos "Zan_Orb1" 29 60 1
-	frame	data/chars/heroes/zan/a200.png
-	@cmd bindPos "Zan_Orb1" 68 60 1
-	attack 152 94 53 69 7 0 0 0 35 12
-	bbox 	130 92 31 74
-	frame	data/chars/heroes/zan/a201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/zan/a201.png
-	@cmd bindPos "Zan_Orb1" 84 60 1
-	attack 165 94 55 69 9 1 0 0 30 12
-	dropv 2.5 1 0
-	bbox 	136 92 30 74
-	frame	data/chars/heroes/zan/a202.png
-	@cmd bindPos "Zan_Orb1" 29 60 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	125 84 21 82
-	frame	data/chars/heroes/zan/a203.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    130 164
+    bbox     125 84 21 82
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/HighAttack.wav
+    @cmd bindPos "Zan_Orb1" 29 60 1
+    frame    data/chars/heroes/zan/a200.png
+    @cmd bindPos "Zan_Orb1" 68 60 1
+    attack 152 94 53 69 7 0 0 0 35 12
+    bbox     130 92 31 74
+    frame    data/chars/heroes/zan/a201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/zan/a201.png
+    @cmd bindPos "Zan_Orb1" 84 60 1
+    attack 165 94 55 69 9 1 0 0 30 12
+    dropv 2.5 1 0
+    bbox     136 92 30 74
+    frame    data/chars/heroes/zan/a202.png
+    @cmd bindPos "Zan_Orb1" 29 60 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     125 84 21 82
+    frame    data/chars/heroes/zan/a203.png
 
 anim attackboth #THROW WEAPON
-	throwframe 3 9999
-	loop	0
-	delay	12
-	offset	130 164
-	sound	data/sounds/Shock.wav
-	frame	data/chars/heroes/zan/knife/shoot00.png
-	frame	data/chars/heroes/zan/knife/shoot01.png
-	frame	data/chars/heroes/zan/knife/shoot02.png
-	delay	18
-	@cmd throWeapon 40 10 0 2 0 0
-	bbox 	127 97 28 69
-	frame	data/chars/heroes/zan/knife/shoot03.png
+    throwframe 3 9999
+    loop    0
+    delay    12
+    offset    130 164
+    sound    data/sounds/Shock.wav
+    frame    data/chars/heroes/zan/knife/shoot00.png
+    frame    data/chars/heroes/zan/knife/shoot01.png
+    frame    data/chars/heroes/zan/knife/shoot02.png
+    delay    18
+    @cmd throWeapon 40 10 0 2 0 0
+    bbox     127 97 28 69
+    frame    data/chars/heroes/zan/knife/shoot03.png
 
 anim special2 #THROW ENERGY ORB
-	energycost 6 1 6
-	fastattack 0
-	loop	0
-	delay	12
-	offset	130 164
-	sound	data/sounds/Shock.wav
-	@cmd bindPos "Zan_Orb1" -999 999 999
-	frame	data/chars/heroes/zan/knife/shoot00.png
-	frame	data/chars/heroes/zan/knife/shoot01.png
-	frame	data/chars/heroes/zan/knife/shoot02.png
-	delay	18
-	@cmd shoot "Zan_Orb2" 40 10 0 1.5 0 0
-	#bbox 	127 97 28 69
-	frame	data/chars/heroes/zan/knife/shoot03.png
+    energycost 6 1 6
+    fastattack 0
+    loop    0
+    delay    12
+    offset    130 164
+    sound    data/sounds/Shock.wav
+    @cmd bindPos "Zan_Orb1" -999 999 999
+    frame    data/chars/heroes/zan/knife/shoot00.png
+    frame    data/chars/heroes/zan/knife/shoot01.png
+    frame    data/chars/heroes/zan/knife/shoot02.png
+    delay    18
+    @cmd shoot "Zan_Orb2" 40 10 0 1.5 0 0
+    #bbox     127 97 28 69
+    frame    data/chars/heroes/zan/knife/shoot03.png
 
 anim freespecial #RAGE ORB
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	energycost 30 1 6
-	loop	0
-	delay	20
-	offset	130 164
-	@cmd bindPos "Zan_Orb1" -999 999 999
-	@cmd spawnBind "Rage" 0 0 -1
-	sound	data/voices/Zan3.wav
-	frame	data/chars/heroes/zan/rage00.png
-		delay	12
-	sound	data/sounds/Shock.wav
-	frame	data/chars/heroes/zan/knife/shoot00.png
-	frame	data/chars/heroes/zan/knife/shoot01.png
-	frame	data/chars/heroes/zan/knife/shoot02.png
-		delay	24
-	@cmd shoot "Zan_Orb3" 40 10 0 0.5 0 0
-	frame	data/chars/heroes/zan/knife/shoot03.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    energycost 30 1 6
+    loop    0
+    delay    20
+    offset    130 164
+    @cmd bindPos "Zan_Orb1" -999 999 999
+    @cmd spawnBind "Rage" 0 0 -1
+    sound    data/voices/Zan3.wav
+    frame    data/chars/heroes/zan/rage00.png
+        delay    12
+    sound    data/sounds/Shock.wav
+    frame    data/chars/heroes/zan/knife/shoot00.png
+    frame    data/chars/heroes/zan/knife/shoot01.png
+    frame    data/chars/heroes/zan/knife/shoot02.png
+        delay    24
+    @cmd shoot "Zan_Orb3" 40 10 0 0.5 0 0
+    frame    data/chars/heroes/zan/knife/shoot03.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	2
-	offset	130 164
-	@cmd bindPos "Zan_Orb1" -17 3 1
-	@cmd copyMove
-	frame	data/chars/heroes/zan/dodge00.png
-	delay	6
-	@cmd bindPos "Zan_Orb1" 18 11 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge01.png
-	@cmd bindPos "Zan_Orb1" 1 8 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge02.png
-	@cmd bindPos "Zan_Orb1" 1 24 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge03.png
-	@cmd bindPos "Zan_Orb1" 16 26 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge04.png
-	@cmd bindPos "Zan_Orb1" -17 3 1
-	@cmd dasher 0 0 0
-	@cmd invinc 1
-	frame	data/chars/heroes/zan/dodge05.png
+    loop    0
+    delay    2
+    offset    130 164
+    @cmd bindPos "Zan_Orb1" -17 3 1
+    @cmd copyMove
+    frame    data/chars/heroes/zan/dodge00.png
+    delay    6
+    @cmd bindPos "Zan_Orb1" 18 11 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge01.png
+    @cmd bindPos "Zan_Orb1" 1 8 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge02.png
+    @cmd bindPos "Zan_Orb1" 1 24 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge03.png
+    @cmd bindPos "Zan_Orb1" 16 26 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge04.png
+    @cmd bindPos "Zan_Orb1" -17 3 1
+    @cmd dasher 0 0 0
+    @cmd invinc 1
+    frame    data/chars/heroes/zan/dodge05.png
 
 anim dodge
-	@cmd lockAni "dodgeType" "sor2x"
-	@cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
-	@cmd lockAni "dodgeType" "off"
-	loop	0
-	delay	2
-	offset	130 164
-	@cmd bindPos "Zan_Orb1" -17 3 1
-	@cmd copyMove
-	frame	data/chars/heroes/zan/dodge00.png
-		delay	6
-	@cmd bindPos "Zan_Orb1" 18 11 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge01.png
-	@cmd bindPos "Zan_Orb1" 1 8 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge02.png
-	@cmd bindPos "Zan_Orb1" 1 24 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge03.png
-	@cmd bindPos "Zan_Orb1" 16 26 1
-	@cmd pasteMove
-	frame	data/chars/heroes/zan/dodge04.png
-	@cmd bindPos "Zan_Orb1" -17 3 1
-	@cmd invinc 1
-	@cmd dasher 0 0 0
-	frame	data/chars/heroes/zan/dodge05.png
+    @cmd lockAni "dodgeType" "sor2x"
+    @cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
+    @cmd lockAni "dodgeType" "off"
+    loop    0
+    delay    2
+    offset    130 164
+    @cmd bindPos "Zan_Orb1" -17 3 1
+    @cmd copyMove
+    frame    data/chars/heroes/zan/dodge00.png
+        delay    6
+    @cmd bindPos "Zan_Orb1" 18 11 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge01.png
+    @cmd bindPos "Zan_Orb1" 1 8 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge02.png
+    @cmd bindPos "Zan_Orb1" 1 24 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge03.png
+    @cmd bindPos "Zan_Orb1" 16 26 1
+    @cmd pasteMove
+    frame    data/chars/heroes/zan/dodge04.png
+    @cmd bindPos "Zan_Orb1" -17 3 1
+    @cmd invinc 1
+    @cmd dasher 0 0 0
+    frame    data/chars/heroes/zan/dodge05.png
 
 anim follow11 #BLOCK
-	@cmd checkBlock
-	loop	0
-	delay	12
-	offset	130 164
-	bbox 	104 96 32 70
-	@cmd bindPos "Zan_Orb1" -15 46 1
-	@cmd block 1
-	@cmd blockCost
-	frame	data/chars/heroes/zan/block00.png
-	@cmd keyLoop "attack3" 0
-	#@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
-	@cmd block 0
-	frame	data/chars/heroes/zan/block00.png
+    @cmd checkBlock
+    loop    0
+    delay    12
+    offset    130 164
+    bbox     104 96 32 70
+    @cmd bindPos "Zan_Orb1" -15 46 1
+    @cmd block 1
+    @cmd blockCost
+    frame    data/chars/heroes/zan/block00.png
+    @cmd keyLoop "attack3" 0
+    #@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
+    @cmd block 0
+    frame    data/chars/heroes/zan/block00.png
 
 anim follow12 #PARRY
-	loop	0
-	delay	24
-	offset	130 164
-	bbox 	104 96 32 70
-	@cmd bindPos "Zan_Orb1" -15 46 1
-	@cmd block 1
-	frame	data/chars/heroes/zan/block00.png
+    loop    0
+    delay    24
+    offset    130 164
+    bbox     104 96 32 70
+    @cmd bindPos "Zan_Orb1" -15 46 1
+    @cmd block 1
+    frame    data/chars/heroes/zan/block00.png

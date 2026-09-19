@@ -2,16 +2,16 @@
 
 void main()
 {
-	addMp();
-	healStop();
-	superArmor();
-	customHitflash();
+    addMp();
+    healStop();
+    superArmor();
+    customHitflash();
   escapeDeath();
-	// escapeCount();
-	hitDmg();
-	comboDmg();
-	koCount();
-	edgeLock();
-	otg();
-	registerOpponent();
+    // escapeCount();
+    hitDmg();
+    comboDmg();
+    koCount();
+    edgeLock();
+    otg();
+    registerOpponent();
 }

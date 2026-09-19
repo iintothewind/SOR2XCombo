@@ -2,5 +2,5 @@
 
 void main()
 {
-	quakeDetect("ANI_IDLE", "ANI_FOLLOW1");
+    quakeDetect("ANI_IDLE", "ANI_FOLLOW1");
 }

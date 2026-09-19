@@ -2,8 +2,8 @@
 
 void main()
 {
-	otg();
-	parry();
-	multihits();
-	hitFall(1);
+    otg();
+    parry();
+    multihits();
+    hitFall(1);
 }

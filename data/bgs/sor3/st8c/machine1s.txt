@@ -1,15 +1,15 @@
-name			St8_Machine1S
-type			none
-shadow			0
-setlayer		-10
-animationscript	data/scripts/animation/default.c
+name            St8_Machine1S
+type            none
+shadow            0
+setlayer        -10
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	128
-	offset	1 116
-	@cmd dasher -0.05 0 0
-	platform 0 240 305 545 116 0.001
-	frame	data/bgs/sor3/st8c/machine00.png
-	@cmd suicide
-	frame	data/bgs/sor3/st8c/machine00.png
+    loop    0
+    delay    128
+    offset    1 116
+    @cmd dasher -0.05 0 0
+    platform 0 240 305 545 116 0.001
+    frame    data/bgs/sor3/st8c/machine00.png
+    @cmd suicide
+    frame    data/bgs/sor3/st8c/machine00.png

@@ -1,105 +1,105 @@
 ##MAIN
-name				TrackerS
-type				none
+name                TrackerS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter1.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter2.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter3.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter4.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter5.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter6.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter7.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter1.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter2.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter3.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter4.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter5.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter6.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter7.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim freespecial #FREE RAGE PLASMA SHOT
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/laser00.png
-	frame	data/chars/bosses/tracker/laser00.png
-	frame	data/chars/bosses/tracker/laser01.png
-	frame	data/chars/bosses/tracker/laser02.png
-	frame	data/chars/bosses/tracker/laser03.png
-	frame	data/chars/bosses/tracker/laser04.png
-	frame	data/chars/bosses/tracker/laser04.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/laser00.png
+    frame    data/chars/bosses/tracker/laser00.png
+    frame    data/chars/bosses/tracker/laser01.png
+    frame    data/chars/bosses/tracker/laser02.png
+    frame    data/chars/bosses/tracker/laser03.png
+    frame    data/chars/bosses/tracker/laser04.png
+    frame    data/chars/bosses/tracker/laser04.png
 
 anim riseattack
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/dodge00.png
-	frame	data/chars/bosses/tracker/dodge01.png
-	frame	data/chars/bosses/tracker/dodge02.png
-	frame	data/chars/bosses/tracker/dodge03.png
-	frame	data/chars/bosses/tracker/dodge04.png
-	frame	data/chars/bosses/tracker/dodge05.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/dodge00.png
+    frame    data/chars/bosses/tracker/dodge01.png
+    frame    data/chars/bosses/tracker/dodge02.png
+    frame    data/chars/bosses/tracker/dodge03.png
+    frame    data/chars/bosses/tracker/dodge04.png
+    frame    data/chars/bosses/tracker/dodge05.png
 
 
 anim freespecial4 #GRAB RUN
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/run02.png
-	frame	data/chars/bosses/tracker/run01.png
-	frame	data/chars/bosses/tracker/run00.png
-	frame	data/chars/bosses/tracker/run02.png
-	frame	data/chars/bosses/tracker/run02.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/run02.png
+    frame    data/chars/bosses/tracker/run01.png
+    frame    data/chars/bosses/tracker/run00.png
+    frame    data/chars/bosses/tracker/run02.png
+    frame    data/chars/bosses/tracker/run02.png
 
 
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/special00.png
-	frame	data/chars/bosses/tracker/special00.png
-	frame	data/chars/bosses/tracker/special01.png
-	frame	data/chars/bosses/tracker/special02.png
-	frame	data/chars/bosses/tracker/special03.png
-	frame	data/chars/bosses/tracker/special04.png
-	frame	data/chars/bosses/tracker/jumpland00.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/special00.png
+    frame    data/chars/bosses/tracker/special00.png
+    frame    data/chars/bosses/tracker/special01.png
+    frame    data/chars/bosses/tracker/special02.png
+    frame    data/chars/bosses/tracker/special03.png
+    frame    data/chars/bosses/tracker/special04.png
+    frame    data/chars/bosses/tracker/jumpland00.png
 
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/dodge00.png
-	frame	data/chars/bosses/tracker/dodge01.png
-	frame	data/chars/bosses/tracker/dodge02.png
-	frame	data/chars/bosses/tracker/dodge03.png
-	frame	data/chars/bosses/tracker/dodge04.png
-	frame	data/chars/bosses/tracker/dodge05.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/dodge00.png
+    frame    data/chars/bosses/tracker/dodge01.png
+    frame    data/chars/bosses/tracker/dodge02.png
+    frame    data/chars/bosses/tracker/dodge03.png
+    frame    data/chars/bosses/tracker/dodge04.png
+    frame    data/chars/bosses/tracker/dodge05.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle00.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle00.png

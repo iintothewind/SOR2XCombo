@@ -1,27 +1,27 @@
-name				Robotx_Shot
-type				none
-subtype				project
-health				1
-nolife				1
-lifespan			2
-offscreenkill		50
-remove				1
-shadow				0
-antigravity			100
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-animationscript		data/scripts/animation/default.c
+name                Robotx_Shot
+type                none
+subtype                project
+health                1
+nolife                1
+lifespan            2
+offscreenkill        50
+remove                1
+shadow                0
+antigravity            100
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+animationscript        data/scripts/animation/default.c
 
 anim idle
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	2
-	offset	25 27
-	sound	data/sounds/Shot.wav
-	attack 20 25 8 3 4 1 1 0 0 12
-	dropv 1.5 1 0
-	frame	data/chars/bosses/robotx/shot/shot00.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    2
+    offset    25 27
+    sound    data/sounds/Shot.wav
+    attack 20 25 8 3 4 1 1 0 0 12
+    dropv 1.5 1 0
+    frame    data/chars/bosses/robotx/shot/shot00.png

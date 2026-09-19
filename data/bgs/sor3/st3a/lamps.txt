@@ -1,70 +1,70 @@
-name			St3_Lamps
-type			panel
-shadow			0
-speed			5
-scroll			-1.13
-setlayer		1010
-animationscript	data/scripts/animation/default.c
+name            St3_Lamps
+type            panel
+shadow            0
+speed            5
+scroll            -1.13
+setlayer        1010
+animationscript    data/scripts/animation/default.c
 
-load			St3_Trash1
-load			St3_Trash2
+load            St3_Trash1
+load            St3_Trash2
 
 anim idle
-	loop	1
-	delay	24
-	offset	1 180
-	@cmd setVar "windForce" -0.015
-	frame	data/bgs/sor3/st3a/lamps00.png
-	frame	data/bgs/sor3/st3a/lamps01.png
-		delay	18
-	@cmd looper 0 2
-	@cmd sampleRandom SAMPLE_WIND 50 SAMPLE_WIND2 50 0
-	frame	data/bgs/sor3/st3a/lamps00.png
-	frame	data/bgs/sor3/st3a/lamps01.png
-	frame	data/bgs/sor3/st3a/lamps02.png  
-	frame	data/bgs/sor3/st3a/lamps01.png
-		delay	12
-	@cmd looper 4 4
-	frame	data/bgs/sor3/st3a/lamps02.png
-	@cmd spawnScreen "St3_Trash2" 480 140 240
-	frame	data/bgs/sor3/st3a/lamps01.png
-	frame	data/bgs/sor3/st3a/lamps02.png  
-	frame	data/bgs/sor3/st3a/lamps03.png
-	@cmd looper 8 8
-	frame	data/bgs/sor3/st3a/lamps02.png
-	frame	data/bgs/sor3/st3a/lamps01.png
-		delay	320
-	@cmd setVar "windForce" 0
-	frame	data/bgs/sor3/st3a/lamps00.png
-	@cmd aniRandom "ANI_IDLE2"
-	frame	data/bgs/sor3/st3a/lamps00.png
-	
+    loop    1
+    delay    24
+    offset    1 180
+    @cmd setVar "windForce" -0.015
+    frame    data/bgs/sor3/st3a/lamps00.png
+    frame    data/bgs/sor3/st3a/lamps01.png
+        delay    18
+    @cmd looper 0 2
+    @cmd sampleRandom SAMPLE_WIND 50 SAMPLE_WIND2 50 0
+    frame    data/bgs/sor3/st3a/lamps00.png
+    frame    data/bgs/sor3/st3a/lamps01.png
+    frame    data/bgs/sor3/st3a/lamps02.png  
+    frame    data/bgs/sor3/st3a/lamps01.png
+        delay    12
+    @cmd looper 4 4
+    frame    data/bgs/sor3/st3a/lamps02.png
+    @cmd spawnScreen "St3_Trash2" 480 140 240
+    frame    data/bgs/sor3/st3a/lamps01.png
+    frame    data/bgs/sor3/st3a/lamps02.png  
+    frame    data/bgs/sor3/st3a/lamps03.png
+    @cmd looper 8 8
+    frame    data/bgs/sor3/st3a/lamps02.png
+    frame    data/bgs/sor3/st3a/lamps01.png
+        delay    320
+    @cmd setVar "windForce" 0
+    frame    data/bgs/sor3/st3a/lamps00.png
+    @cmd aniRandom "ANI_IDLE2"
+    frame    data/bgs/sor3/st3a/lamps00.png
+    
 anim idle2
-	loop	1
-	delay	24
-	offset	1 180
-	@cmd setVar "windForce" 0.015
-	frame	data/bgs/sor3/st3a/lamps00.png
-	frame	data/bgs/sor3/st3a/lamps04.png
-		delay	18
-	@cmd looper 0 2
-	@cmd sampleRandom SAMPLE_WIND 50 SAMPLE_WIND2 50 0
-	frame	data/bgs/sor3/st3a/lamps00.png
-	@cmd spawnScreen "St3_Trash1" 0 0 230
-	frame	data/bgs/sor3/st3a/lamps04.png
-	frame	data/bgs/sor3/st3a/lamps05.png  
-	frame	data/bgs/sor3/st3a/lamps04.png
-		delay	12
-	@cmd looper 4 4
-	frame	data/bgs/sor3/st3a/lamps05.png
-	frame	data/bgs/sor3/st3a/lamps04.png
-	frame	data/bgs/sor3/st3a/lamps05.png  
-	frame	data/bgs/sor3/st3a/lamps06.png
-	@cmd looper 8 8
-	frame	data/bgs/sor3/st3a/lamps05.png
-	frame	data/bgs/sor3/st3a/lamps04.png
-		delay	320
-	@cmd setVar "windForce" 0
-	frame	data/bgs/sor3/st3a/lamps00.png
-	@cmd aniRandom "ANI_IDLE"
-	frame	data/bgs/sor3/st3a/lamps00.png
+    loop    1
+    delay    24
+    offset    1 180
+    @cmd setVar "windForce" 0.015
+    frame    data/bgs/sor3/st3a/lamps00.png
+    frame    data/bgs/sor3/st3a/lamps04.png
+        delay    18
+    @cmd looper 0 2
+    @cmd sampleRandom SAMPLE_WIND 50 SAMPLE_WIND2 50 0
+    frame    data/bgs/sor3/st3a/lamps00.png
+    @cmd spawnScreen "St3_Trash1" 0 0 230
+    frame    data/bgs/sor3/st3a/lamps04.png
+    frame    data/bgs/sor3/st3a/lamps05.png  
+    frame    data/bgs/sor3/st3a/lamps04.png
+        delay    12
+    @cmd looper 4 4
+    frame    data/bgs/sor3/st3a/lamps05.png
+    frame    data/bgs/sor3/st3a/lamps04.png
+    frame    data/bgs/sor3/st3a/lamps05.png  
+    frame    data/bgs/sor3/st3a/lamps06.png
+    @cmd looper 8 8
+    frame    data/bgs/sor3/st3a/lamps05.png
+    frame    data/bgs/sor3/st3a/lamps04.png
+        delay    320
+    @cmd setVar "windForce" 0
+    frame    data/bgs/sor3/st3a/lamps00.png
+    @cmd aniRandom "ANI_IDLE"
+    frame    data/bgs/sor3/st3a/lamps00.png

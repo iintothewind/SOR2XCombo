@@ -1,264 +1,264 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st3i/_empty.png	1 1 0 0 0 0 1 1 0
-bglayer			data/bgs/sor2/st3i/bg00.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st3i/bg01.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st3i/bg02.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-bglayer			data/bgs/sor2/st3i/bg01.png		0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-panel			data/bgs/sor2/st3i/_map.png		none	none
-frontpanel		data/bgs/sor2/st3i/fp00.png
-fglayer			data/bgs/sor2/st3i/fg00.png		100 0.005 0 -20 0 0 0 1 1 0 1 1 10 30 0.5
-fglayer			data/bgs/sor2/st3i/fg01.png		100 0.005 0 -20 0 0 0 1 1 0 1 1 5 30 0.7
-fglayer			data/bgs/sor2/st3i/fg02.png		-175 -0.4 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st3i/fg02.png		-25 -0.4 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber 	3
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
-updatescript	data/scripts/updatelevel/sor2_st3i.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st3i/_empty.png    1 1 0 0 0 0 1 1 0
+bglayer            data/bgs/sor2/st3i/bg00.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st3i/bg01.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st3i/bg02.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+bglayer            data/bgs/sor2/st3i/bg01.png        0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+panel            data/bgs/sor2/st3i/_map.png        none    none
+frontpanel        data/bgs/sor2/st3i/fp00.png
+fglayer            data/bgs/sor2/st3i/fg00.png        100 0.005 0 -20 0 0 0 1 1 0 1 1 10 30 0.5
+fglayer            data/bgs/sor2/st3i/fg01.png        100 0.005 0 -20 0 0 0 1 1 0 1 1 5 30 0.7
+fglayer            data/bgs/sor2/st3i/fg02.png        -175 -0.4 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st3i/fg02.png        -25 -0.4 0 0 0 0 0 -1 -1 1 6 0 0 0 0 0 1
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber     3
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
+updatescript    data/scripts/updatelevel/sor2_st3i.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-spawn		Egg 1
-flip		1
-coords		400 170 0
-at			0
+spawn        Egg 1
+flip        1
+coords        400 170 0
+at            0
 
-spawn		Egg 1
-flip		1
-coords		780 170 0
-at			0
+spawn        Egg 1
+flip        1
+coords        780 170 0
+at            0
 
-spawn		GalsiaB 1
-map			4
-weapon		Knife 1
-flip		1
-coords		520 230 0
-at			0
+spawn        GalsiaB 1
+map            4
+weapon        Knife 1
+flip        1
+coords        520 230 0
+at            0
 
-spawn		JackB 1
-map			4
-flip		1
-coords		600 260 0
-at			50
+spawn        JackB 1
+map            4
+flip        1
+coords        600 260 0
+at            50
 
-spawn		GalsiaB 1
-map			4
-weapon		Knife 1
-flip		1
-coords		520 230 0
-at			50
+spawn        GalsiaB 1
+map            4
+weapon        Knife 1
+flip        1
+coords        520 230 0
+at            50
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		600 230 0
-at			100
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        600 230 0
+at            100
 
-spawn		BasicX3 1
-map			4
-flip		1
-coords		600 260 0
-at			150
+spawn        BasicX3 1
+map            4
+flip        1
+coords        600 260 0
+at            150
 
-spawn		DonovanB 1
-map			4
-flip		1
-coords		600 260 0
-at			200
+spawn        DonovanB 1
+map            4
+flip        1
+coords        600 260 0
+at            200
 
 wait
-at			350
+at            350
 
-group		4 4
-at			200
+group        4 4
+at            200
 
-spawn		BruceB 1
-map			4
-flip		1
-coords		600 230 0
-at			250
+spawn        BruceB 1
+map            4
+flip        1
+coords        600 230 0
+at            250
 
-spawn		BasicX3 1
-map			4
-flip		1
-coords		600 260 0
-at			250
+spawn        BasicX3 1
+map            4
+flip        1
+coords        600 260 0
+at            250
 
-spawn		DonovanB 1
-map			4
-flip		1
-coords		600 260 0
-at			300
+spawn        DonovanB 1
+map            4
+flip        1
+coords        600 260 0
+at            300
 
-spawn		GalsiaB 1
-map			4
-weapon		Knife 1
-flip		1
-coords		-100 230 0
-at			348
+spawn        GalsiaB 1
+map            4
+weapon        Knife 1
+flip        1
+coords        -100 230 0
+at            348
 
 #########################################################################################
 
-group		1000 1000
-at			400
+group        1000 1000
+at            400
 
-spawn		Egg 1
-flip		1
-coords		700 170 0
-at			400
+spawn        Egg 1
+flip        1
+coords        700 170 0
+at            400
 
-spawn		Zamza_Hide 1
-map			4
-flip		0
-coords		300 220 0
-at			695
+spawn        Zamza_Hide 1
+map            4
+flip        0
+coords        300 220 0
+at            695
 
 wait
-at			700
+at            700
 
 #########################################################################################
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			800
+at            800
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		600 220 0
-at			800
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        600 220 0
+at            800
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		600 260 0
-at			850
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        600 260 0
+at            850
 
-spawn		Egg 1
-flip		1
-coords		600 220 0
-at			900
+spawn        Egg 1
+flip        1
+coords        600 220 0
+at            900
 
-spawn		JackB 1
-map			4
-flip		1
-coords		-100 220 0
-at			900
+spawn        JackB 1
+map            4
+flip        1
+coords        -100 220 0
+at            900
 
-spawn		Egg 1
-flip		1
-coords		600 260 0
-at			950
+spawn        Egg 1
+flip        1
+coords        600 260 0
+at            950
 
-spawn		GalsiaB 1
-map			4
-flip		1
-coords		-100 220 0
-at			1000
+spawn        GalsiaB 1
+map            4
+flip        1
+coords        -100 220 0
+at            1000
 
-spawn		BruceB 1
-map			4
-flip		1
-coords		-100 260 0
-at			1050
+spawn        BruceB 1
+map            4
+flip        1
+coords        -100 260 0
+at            1050
 
-spawn		HakuyoB 1
-map			4
-flip		1
-coords		600 220 0
-at			1100
+spawn        HakuyoB 1
+map            4
+flip        1
+coords        600 220 0
+at            1100
 
-spawn		HakuyoB 1
-map			4
-flip		1
-coords		600 260 0
-at			1100
+spawn        HakuyoB 1
+map            4
+flip        1
+coords        600 260 0
+at            1100
 
-spawn		Egg 1
-map			4
-flip		1
-coords		600 220 0
-at			1100
-
-
-spawn		HakuyoB 1
-map			4
-flip		1
-coords		-100 220 0
-at			1100
-
-spawn		HakuyoB 1
-map			4
-flip		1
-coords		-100 260 0
-at			1100
+spawn        Egg 1
+map            4
+flip        1
+coords        600 220 0
+at            1100
 
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-100 260 0
-at			1100
+spawn        HakuyoB 1
+map            4
+flip        1
+coords        -100 220 0
+at            1100
 
-spawn		BossX1 1
-map			4
+spawn        HakuyoB 1
+map            4
+flip        1
+coords        -100 260 0
+at            1100
+
+
+spawn        BossX1 1
+map            4
+flip        1
+coords        -100 260 0
+at            1100
+
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-100 260 0
-at			1100
+flip        1
+coords        -100 260 0
+at            1100
 
 wait
-at			1150
+at            1150
 
 #########################################################################################
 
 spawnscript data/scripts/levelspawn/music_boss2.c
-at			1151
+at            1151
 
 wait
-at			1810
+at            1810
 
-group		5 5
-at			1810
+group        5 5
+at            1810
 
-spawn		Egg 1
-flip		0
-coords		150 220 300
-at			1810
+spawn        Egg 1
+flip        0
+coords        150 220 300
+at            1810
 
-spawn		Egg 1
-flip		0
-coords		300 220 300
-at			1810
+spawn        Egg 1
+flip        0
+coords        300 220 300
+at            1810
 
 
-spawn		Egg 1
-flip		0
-coords		350 220 300
-at			1810
+spawn        Egg 1
+flip        0
+coords        350 220 300
+at            1810
 
-spawn		Tracker_Wait 1
-map			4
-flip		0
-boss		1
-coords		400 210 300
-at			1810
+spawn        Tracker_Wait 1
+map            4
+flip        0
+boss        1
+coords        400 210 300
+at            1810
 
-spawn		Tracker_Wait 1
-map			4
-flip		0
-boss		1
-coords		400 220 300
-at			1810
+spawn        Tracker_Wait 1
+map            4
+flip        0
+boss        1
+coords        400 220 300
+at            1810
 

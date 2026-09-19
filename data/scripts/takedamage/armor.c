@@ -2,17 +2,17 @@
 
 void main()
 {
-	addMp();
-	healStop();
-	lastChance();
-	deathPunish();
-	superArmor();
+    addMp();
+    healStop();
+    lastChance();
+    deathPunish();
+    superArmor();
   escapeDeath();
-	// escapeCount();
-	hitDmg();
-	comboDmg();
-	koCount();
-	edgeLock();
-	otg();
-	registerOpponent();
+    // escapeCount();
+    hitDmg();
+    comboDmg();
+    koCount();
+    edgeLock();
+    otg();
+    registerOpponent();
 }

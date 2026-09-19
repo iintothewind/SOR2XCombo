@@ -1,412 +1,412 @@
 ##MAIN
-name				DonovanB
-type				enemy
+name                DonovanB
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				75
+antigravity            -1 #-1/-2/-3
+height                75
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				none none Donovan_PipeB none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                none none Donovan_PipeB none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+death                2
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onspawnscript		data/scripts/onspawn/donovan.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/default.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onspawnscript        data/scripts/onspawn/donovan.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/donovan/icon.png 1
+icon                data/chars/enemies/donovan/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/Die1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Die1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter1.png
-remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter2.png
-remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter3.png
-remap				data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter4.png
+remap                data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter1.png
+remap                data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter2.png
+remap                data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter3.png
+remap                data/chars/enemies/donovan/idle00.png data/chars/enemies/donovan/alter4.png
 
 ##LOADS
-load				Donovan_PipeB
+load                Donovan_PipeB
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	140 182
-	frame	data/chars/enemies/donovan/idle00.png
+    loop    0
+    delay    1
+    offset    140 182
+    frame    data/chars/enemies/donovan/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	140 182
-	bbox 	128 110 23 74
-	frame	data/chars/enemies/donovan/idle00.png
-	frame	data/chars/enemies/donovan/idle01.png
-	frame	data/chars/enemies/donovan/idle02.png
-	frame	data/chars/enemies/donovan/idle01.png
+    loop    1
+    delay    16
+    offset    140 182
+    bbox     128 110 23 74
+    frame    data/chars/enemies/donovan/idle00.png
+    frame    data/chars/enemies/donovan/idle01.png
+    frame    data/chars/enemies/donovan/idle02.png
+    frame    data/chars/enemies/donovan/idle01.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	140 182
-	bbox 	128 110 23 74
-	frame	data/chars/enemies/donovan/walk00.png
-	frame	data/chars/enemies/donovan/walk01.png
-	frame	data/chars/enemies/donovan/walk02.png
-	frame	data/chars/enemies/donovan/walk03.png
+    loop    1
+    delay    16
+    offset    140 182
+    bbox     128 110 23 74
+    frame    data/chars/enemies/donovan/walk00.png
+    frame    data/chars/enemies/donovan/walk01.png
+    frame    data/chars/enemies/donovan/walk02.png
+    frame    data/chars/enemies/donovan/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	140 182
-	frame	data/chars/enemies/donovan/get00.png
+    loop    0
+    delay    16
+    offset    140 182
+    frame    data/chars/enemies/donovan/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	140 182
-	bbox 	128 119 23 64
-	frame	data/chars/enemies/donovan/grabbed00.png
+    loop    0
+    delay    8
+    offset    140 182
+    bbox     128 119 23 64
+    frame    data/chars/enemies/donovan/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	140 182
-	bbox 	127 142 29 41
-	frame	data/chars/enemies/donovan/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    140 182
+    bbox     127 142 29 41
+    frame    data/chars/enemies/donovan/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	140 182
-	bbox 	127 111 24 65
-	@cmd jump 1
-	frame	data/chars/enemies/donovan/jump00.png
+    loop    0
+    delay    30
+    offset    140 182
+    bbox     127 111 24 65
+    @cmd jump 1
+    frame    data/chars/enemies/donovan/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	140 182
-	bbox 	127 142 29 41
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/donovan/jumpland00.png
+    loop    0
+    delay    12
+    offset    140 182
+    bbox     127 142 29 41
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/donovan/jumpland00.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	140 182
-	bbox 	121 118 26 66
-	frame	data/chars/enemies/donovan/pain00.png
-	frame	data/chars/enemies/donovan/pain01.png
-	frame	data/chars/enemies/donovan/pain00.png
-	frame	data/chars/enemies/donovan/pain01.png
-	frame	data/chars/enemies/donovan/pain00.png
-	frame	data/chars/enemies/donovan/pain01.png
-	frame	data/chars/enemies/donovan/pain00.png
-	frame	data/chars/enemies/donovan/pain01.png
-	frame	data/chars/enemies/donovan/pain00.png
-	frame	data/chars/enemies/donovan/pain01.png
-	frame	data/chars/enemies/donovan/pain00.png
-	frame	data/chars/enemies/donovan/pain01.png
+    loop    0
+    delay    4
+    offset    140 182
+    bbox     121 118 26 66
+    frame    data/chars/enemies/donovan/pain00.png
+    frame    data/chars/enemies/donovan/pain01.png
+    frame    data/chars/enemies/donovan/pain00.png
+    frame    data/chars/enemies/donovan/pain01.png
+    frame    data/chars/enemies/donovan/pain00.png
+    frame    data/chars/enemies/donovan/pain01.png
+    frame    data/chars/enemies/donovan/pain00.png
+    frame    data/chars/enemies/donovan/pain01.png
+    frame    data/chars/enemies/donovan/pain00.png
+    frame    data/chars/enemies/donovan/pain01.png
+    frame    data/chars/enemies/donovan/pain00.png
+    frame    data/chars/enemies/donovan/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	140 182
-	bbox 	125 122 32 62
-	frame	data/chars/enemies/donovan/pain200.png
-	frame	data/chars/enemies/donovan/pain201.png
-	frame	data/chars/enemies/donovan/pain200.png
-	frame	data/chars/enemies/donovan/pain201.png
-	frame	data/chars/enemies/donovan/pain200.png
-	frame	data/chars/enemies/donovan/pain201.png
-	frame	data/chars/enemies/donovan/pain200.png
-	frame	data/chars/enemies/donovan/pain201.png
-	frame	data/chars/enemies/donovan/pain200.png
-	frame	data/chars/enemies/donovan/pain201.png
-	frame	data/chars/enemies/donovan/pain200.png
-	frame	data/chars/enemies/donovan/pain201.png
+    loop    0
+    delay    4
+    offset    140 182
+    bbox     125 122 32 62
+    frame    data/chars/enemies/donovan/pain200.png
+    frame    data/chars/enemies/donovan/pain201.png
+    frame    data/chars/enemies/donovan/pain200.png
+    frame    data/chars/enemies/donovan/pain201.png
+    frame    data/chars/enemies/donovan/pain200.png
+    frame    data/chars/enemies/donovan/pain201.png
+    frame    data/chars/enemies/donovan/pain200.png
+    frame    data/chars/enemies/donovan/pain201.png
+    frame    data/chars/enemies/donovan/pain200.png
+    frame    data/chars/enemies/donovan/pain201.png
+    frame    data/chars/enemies/donovan/pain200.png
+    frame    data/chars/enemies/donovan/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	140 182
-	bbox 	107 125 39 46
-	frame	data/chars/enemies/donovan/fall00.png
-		delay	8
-	bbox 	101 162 74 21
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/donovan/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    140 182
+    bbox     107 125 39 46
+    frame    data/chars/enemies/donovan/fall00.png
+        delay    8
+    bbox     101 162 74 21
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	140 182
-	bbox 	107 125 39 46
-	frame	data/chars/enemies/donovan/fall00.png
-		delay	8
-	bbox 	101 162 74 21
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/donovan/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    140 182
+    bbox     107 125 39 46
+    frame    data/chars/enemies/donovan/fall00.png
+        delay    8
+    bbox     101 162 74 21
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	140 182
-	bbox 	107 125 39 46
-	frame	data/chars/enemies/donovan/fall00.png
-		delay	8
-	bbox 	101 162 74 21
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/donovan/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    140 182
+    bbox     107 125 39 46
+    frame    data/chars/enemies/donovan/fall00.png
+        delay    8
+    bbox     101 162 74 21
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	140 182
-	frame	data/chars/enemies/donovan/fall600.png
-	frame	data/chars/enemies/donovan/fall601.png
-	frame	data/chars/enemies/donovan/fall602.png
-	frame	data/chars/enemies/donovan/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/donovan/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    140 182
+    frame    data/chars/enemies/donovan/fall600.png
+    frame    data/chars/enemies/donovan/fall601.png
+    frame    data/chars/enemies/donovan/fall602.png
+    frame    data/chars/enemies/donovan/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	140 182
-	frame	data/chars/enemies/donovan/fall700.png
-	frame	data/chars/enemies/donovan/fall701.png
-	frame	data/chars/enemies/donovan/fall702.png
-	frame	data/chars/enemies/donovan/fall703.png
-	frame	data/chars/enemies/donovan/fall704.png
-	frame	data/chars/enemies/donovan/fall705.png
+    loop    0
+    delay    1000
+    offset    140 182
+    frame    data/chars/enemies/donovan/fall700.png
+    frame    data/chars/enemies/donovan/fall701.png
+    frame    data/chars/enemies/donovan/fall702.png
+    frame    data/chars/enemies/donovan/fall703.png
+    frame    data/chars/enemies/donovan/fall704.png
+    frame    data/chars/enemies/donovan/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	140 182
-	bbox 	107 125 39 46
-	hitfx	data/sounds/MediumKick.wav
-	attack 107 125 39 46 4 1 0 0 20 12
-	frame	data/chars/enemies/donovan/fall00.png
-		delay	999
-	frame	data/chars/enemies/donovan/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	101 162 74 21
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/donovan/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    140 182
+    bbox     107 125 39 46
+    hitfx    data/sounds/MediumKick.wav
+    attack 107 125 39 46 4 1 0 0 20 12
+    frame    data/chars/enemies/donovan/fall00.png
+        delay    999
+    frame    data/chars/enemies/donovan/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     101 162 74 21
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	140 182
-	bbox 	121 133 31 48
-	hitfx	data/sounds/MediumKick.wav
-	attack 121 133 31 48 4 1 0 0 20 12
-	frame	data/chars/enemies/donovan/fall900.png
-		delay	999
-	frame	data/chars/enemies/donovan/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	101 162 74 21
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/donovan/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    140 182
+    bbox     121 133 31 48
+    hitfx    data/sounds/MediumKick.wav
+    attack 121 133 31 48 4 1 0 0 20 12
+    frame    data/chars/enemies/donovan/fall900.png
+        delay    999
+    frame    data/chars/enemies/donovan/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     101 162 74 21
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	140 182
-	frame	data/chars/enemies/donovan/fall01.png
-	frame	data/chars/enemies/donovan/fall01.png
-	frame	data/chars/enemies/donovan/fall01.png
+    loop    0
+    delay    16
+    offset    140 182
+    frame    data/chars/enemies/donovan/fall01.png
+    frame    data/chars/enemies/donovan/fall01.png
+    frame    data/chars/enemies/donovan/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	140 182
-	frame	data/chars/enemies/donovan/rise00.png
-	frame	data/chars/enemies/donovan/rise01.png
-	frame	data/chars/enemies/donovan/rise00.png
-	frame	data/chars/enemies/donovan/rise02.png
+    loop    0
+    delay    16
+    offset    140 182
+    frame    data/chars/enemies/donovan/rise00.png
+    frame    data/chars/enemies/donovan/rise01.png
+    frame    data/chars/enemies/donovan/rise00.png
+    frame    data/chars/enemies/donovan/rise02.png
 
 anim riseattack
-	range 20 60
-	rangea 0 120
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 182
-	bbox 	132 108 30 76
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/StrongAttack.wav
-	@cmd target 2 1.5
-	@cmd dashTarget
-	frame	data/chars/enemies/donovan/a200.png
-	bbox 	138 108 24 76
-	attack 156 111 34 29 8 1 0 0 35 12
-	frame	data/chars/enemies/donovan/a201.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/donovan/a201.png
-	attack 146 88 28 29 8 1 0 0 30 12
-	frame	data/chars/enemies/donovan/a202.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/donovan/a202.png
-	delay	16
-	hitflash Impact
-	attack 152 88 28 29 8 1 0 0 30 12
-	frame	data/chars/enemies/donovan/a203.png
-	delay	8
-	move  12
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	128 110 23 74
-	frame	data/chars/enemies/donovan/a204.png
+    range 20 60
+    rangea 0 120
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 182
+    bbox     132 108 30 76
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/StrongAttack.wav
+    @cmd target 2 1.5
+    @cmd dashTarget
+    frame    data/chars/enemies/donovan/a200.png
+    bbox     138 108 24 76
+    attack 156 111 34 29 8 1 0 0 35 12
+    frame    data/chars/enemies/donovan/a201.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/donovan/a201.png
+    attack 146 88 28 29 8 1 0 0 30 12
+    frame    data/chars/enemies/donovan/a202.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/donovan/a202.png
+    delay    16
+    hitflash Impact
+    attack 152 88 28 29 8 1 0 0 30 12
+    frame    data/chars/enemies/donovan/a203.png
+    delay    8
+    move  12
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     128 110 23 74
+    frame    data/chars/enemies/donovan/a204.png
 
 anim attack1
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 182
-	bbox 	128 110 23 74
-	hitfx	data/sounds/WeakPunch.wav
-	sound	data/sounds/WeakAttack.wav
-	frame	data/chars/enemies/donovan/a100.png
-	bbox 	134 111 24 73
-	frame	data/chars/enemies/donovan/a101.png
-	attack 152 121 46 16 2 0 0 0 10 12
-	frame	data/chars/enemies/donovan/a102.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/donovan/a101.png
-	bbox 	128 110 23 74
-	frame	data/chars/enemies/donovan/a100.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 182
+    bbox     128 110 23 74
+    hitfx    data/sounds/WeakPunch.wav
+    sound    data/sounds/WeakAttack.wav
+    frame    data/chars/enemies/donovan/a100.png
+    bbox     134 111 24 73
+    frame    data/chars/enemies/donovan/a101.png
+    attack 152 121 46 16 2 0 0 0 10 12
+    frame    data/chars/enemies/donovan/a102.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/donovan/a101.png
+    bbox     128 110 23 74
+    frame    data/chars/enemies/donovan/a100.png
 
 anim attack2 #UPPER
-	range 20 80
-	rangea 0 200
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 182
-	bbox 	132 108 30 76
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/StrongAttack.wav
-	frame	data/chars/enemies/donovan/a200.png
-	bbox 	138 108 24 76
-	attack 156 111 34 29 8 1 0 0 35 12
-	frame	data/chars/enemies/donovan/a201.png
-	attack 146 88 28 29 8 1 0 0 30 12
-	frame	data/chars/enemies/donovan/a202.png
-		delay	16
-	attack 152 88 28 29 8 1 0 0 30 12
-	frame	data/chars/enemies/donovan/a203.png
-		delay	8
-		move  12
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	128 110 23 74
-	frame	data/chars/enemies/donovan/a204.png
+    range 20 80
+    rangea 0 200
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 182
+    bbox     132 108 30 76
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/StrongAttack.wav
+    frame    data/chars/enemies/donovan/a200.png
+    bbox     138 108 24 76
+    attack 156 111 34 29 8 1 0 0 35 12
+    frame    data/chars/enemies/donovan/a201.png
+    attack 146 88 28 29 8 1 0 0 30 12
+    frame    data/chars/enemies/donovan/a202.png
+        delay    16
+    attack 152 88 28 29 8 1 0 0 30 12
+    frame    data/chars/enemies/donovan/a203.png
+        delay    8
+        move  12
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     128 110 23 74
+    frame    data/chars/enemies/donovan/a204.png
 
 anim freespecial #HAMMER
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 182
-	bbox 	119 103 22 81
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/StrongAttack.wav
-	frame	data/chars/enemies/donovan/a300.png
-	bbox 	127 103 22 81
-	frame	data/chars/enemies/donovan/a301.png
-	attack 144 122 27 29 8 1 0 0 30 12
-	bbox 	134 118 29 66
-	frame	data/chars/enemies/donovan/a302.png
-		delay	16
-	frame	data/chars/enemies/donovan/a303.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 182
+    bbox     119 103 22 81
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/StrongAttack.wav
+    frame    data/chars/enemies/donovan/a300.png
+    bbox     127 103 22 81
+    frame    data/chars/enemies/donovan/a301.png
+    attack 144 122 27 29 8 1 0 0 30 12
+    bbox     134 118 29 66
+    frame    data/chars/enemies/donovan/a302.png
+        delay    16
+    frame    data/chars/enemies/donovan/a303.png
 
 anim upper
-	range 20 60
-	rangea 30 120
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	140 182
-	bbox 	132 108 30 76
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/StrongAttack.wav
-	frame	data/chars/enemies/donovan/a200.png
-	bbox 	138 108 24 76
-	attack 156 111 34 29 8 1 0 0 35 12
-	frame	data/chars/enemies/donovan/a201.png
-	attack 146 88 28 29 8 1 0 0 30 12
-	frame	data/chars/enemies/donovan/a202.png
-		delay	16
-	attack 152 88 28 29 8 1 0 0 30 12
-	frame	data/chars/enemies/donovan/a203.png
-		delay	8
-		move  12
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	128 110 23 74
-	frame	data/chars/enemies/donovan/a204.png
+    range 20 60
+    rangea 30 120
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    140 182
+    bbox     132 108 30 76
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/StrongAttack.wav
+    frame    data/chars/enemies/donovan/a200.png
+    bbox     138 108 24 76
+    attack 156 111 34 29 8 1 0 0 35 12
+    frame    data/chars/enemies/donovan/a201.png
+    attack 146 88 28 29 8 1 0 0 30 12
+    frame    data/chars/enemies/donovan/a202.png
+        delay    16
+    attack 152 88 28 29 8 1 0 0 30 12
+    frame    data/chars/enemies/donovan/a203.png
+        delay    8
+        move  12
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     128 110 23 74
+    frame    data/chars/enemies/donovan/a204.png

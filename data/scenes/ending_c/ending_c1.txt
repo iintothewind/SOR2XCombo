@@ -1,57 +1,57 @@
-name			Ending_C1 #BLACK FADE, GET THE TOTAL DELAY AND APPLY IN THE TIMELINE ENTITY
-type			text
-subtype			noskip
-setlayer		100000050
-shadow			0
-ondrawscript	data/scripts/ondraw/endings.c
-animationscript	data/scripts/animation/default.c
+name            Ending_C1 #BLACK FADE, GET THE TOTAL DELAY AND APPLY IN THE TIMELINE ENTITY
+type            text
+subtype            noskip
+setlayer        100000050
+shadow            0
+ondrawscript    data/scripts/ondraw/endings.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	20
-	offset	0 0
-	drawmethod alpha 6
-	drawmethod channel 0.9
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.8
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.7
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.6
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.5
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.4
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.3
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.2
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.1
-	frame	data/scenes/ending_c/endc00.png #X9
-		delay	1980
-	drawmethod channel 0
-	frame	data/scenes/ending_c/endc00.png #X1
-		delay	20
-	drawmethod channel 0.1
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.2
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.3
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.4
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.5
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.6
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.7
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.8
-	frame	data/scenes/ending_c/endc00.png
-	drawmethod channel 0.9
-	frame	data/scenes/ending_c/endc00.png
-	nodrawmethod
-	frame	data/scenes/ending_c/endc00.png #X10
-	@cmd suicide
-	frame	data/scenes/ending_c/endc00.png
+    loop    0
+    delay    20
+    offset    0 0
+    drawmethod alpha 6
+    drawmethod channel 0.9
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.8
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.7
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.6
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.5
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.4
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.3
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.2
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.1
+    frame    data/scenes/ending_c/endc00.png #X9
+        delay    1980
+    drawmethod channel 0
+    frame    data/scenes/ending_c/endc00.png #X1
+        delay    20
+    drawmethod channel 0.1
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.2
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.3
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.4
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.5
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.6
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.7
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.8
+    frame    data/scenes/ending_c/endc00.png
+    drawmethod channel 0.9
+    frame    data/scenes/ending_c/endc00.png
+    nodrawmethod
+    frame    data/scenes/ending_c/endc00.png #X10
+    @cmd suicide
+    frame    data/scenes/ending_c/endc00.png

@@ -1,31 +1,31 @@
-name				Sandbag
-type				obstacle
-health				1
-nolife				1
-score				2000
-gfxshadow			1 1
-noatflash			1
-flash				Flash
-ondeathscript		data/scripts/ondeath/item.c
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/obstacles.c
+name                Sandbag
+type                obstacle
+health                1
+nolife                1
+score                2000
+gfxshadow            1 1
+noatflash            1
+flash                Flash
+ondeathscript        data/scripts/ondeath/item.c
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/obstacles.c
 
-diesound			data/sounds/Tire.wav
+diesound            data/sounds/Tire.wav
 
 anim idle
-	loop	1
-	delay	64
-	offset	100 167
-	bbox 	78 99 45 70
-	shadowcoords 100 160
-	platform 76 76 124 124 5 31
-	@cmd offScreenKill 50 0
-	frame	data/chars/obstacles/sandbag00.png
-	
+    loop    1
+    delay    64
+    offset    100 167
+    bbox     78 99 45 70
+    shadowcoords 100 160
+    platform 76 76 124 124 5 31
+    @cmd offScreenKill 50 0
+    frame    data/chars/obstacles/sandbag00.png
+    
 anim fall
-	loop	0
-	delay	128
-	offset	100 167
-	frame	data/chars/obstacles/sandbag01.png
-	@cmd suicide
-	frame	data/chars/obstacles/sandbag01.png
+    loop    0
+    delay    128
+    offset    100 167
+    frame    data/chars/obstacles/sandbag01.png
+    @cmd suicide
+    frame    data/chars/obstacles/sandbag01.png

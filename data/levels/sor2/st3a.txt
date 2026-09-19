@@ -1,176 +1,176 @@
-loadingbg	data/bgs/loading4.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor2/st3a/_empty.png	1 1 0 0 0 0 1 1 0
-panel		data/bgs/sor2/st3a/_map.png		none	none
-frontpanel	data/bgs/sor2/st3a/fp00.png
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading4.png             1 -81 248 480 999 999 0
+background    data/bgs/sor2/st3a/_empty.png    1 1 0 0 0 0 1 1 0
+panel        data/bgs/sor2/st3a/_map.png        none    none
+frontpanel    data/bgs/sor2/st3a/fp00.png
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 3
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall		695 225 0 0 1000 1000 25 5000
+wall        695 225 0 0 1000 1000 25 5000
 
 #########################################################################################
 
-load		Stage 3
-load		St3_Entrance1 3
-load		St3_Entrance2 3
-load		St3_Entrance3 3
+load        Stage 3
+load        St3_Entrance1 3
+load        St3_Entrance2 3
+load        St3_Entrance3 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-spawn		St3_Entrance1 1
-flip		1
-coords		1 180 0
-at			0
+spawn        St3_Entrance1 1
+flip        1
+coords        1 180 0
+at            0
 
-spawn		St3_Entrance2 1
-flip		1
-coords		1 180 0
-at			0
+spawn        St3_Entrance2 1
+flip        1
+coords        1 180 0
+at            0
 
-spawn		St3_Entrance3 1
-flip		1
-coords		1 180 0
-at			0
+spawn        St3_Entrance3 1
+flip        1
+coords        1 180 0
+at            0
 
 #########################################################################################
 
-spawn		Bin_A 1
-flip		1
-coords		150 177 0
-at			0
+spawn        Bin_A 1
+flip        1
+coords        150 177 0
+at            0
 
-spawn		Trash 1
-flip		1
-coords		250 268 0
-at			0
+spawn        Trash 1
+flip        1
+coords        250 268 0
+at            0
 
-spawn		Trash 1
-flip		1
-coords		450 177 0
-at			0
+spawn        Trash 1
+flip        1
+coords        450 177 0
+at            0
 
-spawn		Bin_A 1
-flip		1
-coords		600 268 0
-at			0
+spawn        Bin_A 1
+flip        1
+coords        600 268 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		225 169 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        225 169 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		513 169 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        513 169 0
+at            0
 
-spawn		Donovan_Wait 1
-map			2
-flip		0
-coords		620 190 0
-at			0
+spawn        Donovan_Wait 1
+map            2
+flip        0
+coords        620 190 0
+at            0
 
-spawn		Donovan_Wait 1
-map			2
-flip		0
-coords		670 210 0
-at			0
+spawn        Donovan_Wait 1
+map            2
+flip        0
+coords        670 210 0
+at            0
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		700 270 0
-at			1
+spawn        BasicX3 1
+map            1
+flip        1
+coords        700 270 0
+at            1
 
-spawn		FogB 1
-map			1
-weapon		Pipe 1
-flip		1
-coords		-100 230 0
-at			100
+spawn        FogB 1
+map            1
+weapon        Pipe 1
+flip        1
+coords        -100 230 0
+at            100
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			100
+at            100
 
-group		4 4
-at			100
+group        4 4
+at            100
 
-spawn		BongoB 1
-map			1
-flip		1
-coords		600 270 0
-at			100
+spawn        BongoB 1
+map            1
+flip        1
+coords        600 270 0
+at            100
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		600 270 0
-at			100
+spawn        BasicX3 1
+map            1
+flip        1
+coords        600 270 0
+at            100
 
-spawn		JackB 1
-map			1
-flip		1
-coords		600 270 0
-at			100
+spawn        JackB 1
+map            1
+flip        1
+coords        600 270 0
+at            100
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 270 0
-at			100
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 270 0
+at            100
 
-spawn		FogB 1
-map			0
-flip		1
-coords		-100 230 0
-at			100
+spawn        FogB 1
+map            0
+flip        1
+coords        -100 230 0
+at            100
 
-spawn		BongoB 1
-map			1
-flip		1
-coords		600 270 0
-at			100
+spawn        BongoB 1
+map            1
+flip        1
+coords        600 270 0
+at            100
 
 
-spawn		BossX1 1
-map			1
-flip		1
-coords		-100 230 0
-at			100
+spawn        BossX1 1
+map            1
+flip        1
+coords        -100 230 0
+at            100
 
-spawn		BossX1 1
-map			1
+spawn        BossX1 1
+map            1
 2pspawn
-flip		1
-coords		-100 230 0
-at			100
+flip        1
+coords        -100 230 0
+at            100
 
-spawn		HakuyoX 1
-map			1
-flip		1
-coords		-100 260 0
-at			100
+spawn        HakuyoX 1
+map            1
+flip        1
+coords        -100 260 0
+at            100

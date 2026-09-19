@@ -1,19 +1,19 @@
-name			BArl #GROUND
-type			None
-offscreenkill		9999
+name            BArl #GROUND
+type            None
+offscreenkill        9999
 setlayer 5
 
 animationscript data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	25
-	offset	0 0
-	frame	data/bgs/sor1/st01/barL01.png
-	frame	data/bgs/sor1/st01/barL02.png
-	frame	data/bgs/sor1/st01/barL03.png
-	frame	data/bgs/sor1/st01/barL04.png
-	frame	data/bgs/sor1/st01/barL03.png
-	@cmd offScreenKill 800 0
-	frame	data/bgs/sor1/st01/barL02.png
+    loop    1
+    delay    25
+    offset    0 0
+    frame    data/bgs/sor1/st01/barL01.png
+    frame    data/bgs/sor1/st01/barL02.png
+    frame    data/bgs/sor1/st01/barL03.png
+    frame    data/bgs/sor1/st01/barL04.png
+    frame    data/bgs/sor1/st01/barL03.png
+    @cmd offScreenKill 800 0
+    frame    data/bgs/sor1/st01/barL02.png
 

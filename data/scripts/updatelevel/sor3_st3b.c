@@ -2,6 +2,6 @@
 
 void main()
 {
-	changeCamera();
-	cycleSprite("bglayer", 0, 11, 10);
+    changeCamera();
+    cycleSprite("bglayer", 0, 11, 10);
 }

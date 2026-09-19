@@ -2,5 +2,5 @@
 
 void main()
 {
-	suicideP("ANI_FOLLOW5", 1);
+    suicideP("ANI_FOLLOW5", 1);
 }

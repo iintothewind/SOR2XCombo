@@ -1,994 +1,994 @@
 ##MAIN
-name				TrackerB
-type				enemy
+name                TrackerB
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		30 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         30 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-2 #-1/-2/-3
-height				81
+antigravity            -2 #-1/-2/-3
+height                81
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2 3
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-escapehits			2 #ENEMY ONLY
-escapehits			2 #ENEMY ONLY
-noquake				1 0
-bounce				1
-blockodds 			1
-bflash				Block
-nopassiveblock		1
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2 3
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+escapehits            2 #ENEMY ONLY
+escapehits            2 #ENEMY ONLY
+noquake                1 0
+bounce                1
+blockodds             1
+bflash                Block
+nopassiveblock        1
+death                2
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/tracker.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-ondrawscript		data/scripts/ondraw/tracker.c
-onfallscript		data/scripts/onfall/default.c
-onspawnscript		data/scripts/onspawn/tracker.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/armor.c
-thinkscript			data/scripts/think/tracker.c
-script				data/scripts/updateentity/tracker.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/tracker.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+ondrawscript        data/scripts/ondraw/tracker.c
+onfallscript        data/scripts/onfall/default.c
+onspawnscript        data/scripts/onspawn/tracker.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/armor.c
+thinkscript            data/scripts/think/tracker.c
+script                data/scripts/updateentity/tracker.c
 
 ##ICONS
-icon				data/chars/bosses/tracker/icon.png 1
+icon                data/chars/bosses/tracker/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/BossDie1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter1.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter2.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter3.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter4.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter5.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter6.png
-remap				data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter7.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter1.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter2.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter3.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter4.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter5.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter6.png
+remap                data/chars/bosses/tracker/run01.png data/chars/bosses/tracker/alter7.png
 
 ##LOADS
-load				Tracker_Laser
-load				Tracker_LaserR
-load				Tracker_LaserR_B
-load				Tracker_Target
-load				Tracker_TargetS
-load				TrackerS
+load                Tracker_Laser
+load                Tracker_LaserR
+load                Tracker_LaserR_B
+load                Tracker_Target
+load                Tracker_TargetS
+load                TrackerS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	150 189
-	frame	data/chars/bosses/tracker/idle00.png
+    loop    0
+    delay    1
+    offset    150 189
+    frame    data/chars/bosses/tracker/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	150 189
-	bbox 	140 112 19 78
-	@cmd frozen 0
-	frame	data/chars/bosses/tracker/idle00.png
-	frame	data/chars/bosses/tracker/idle01.png
-	frame	data/chars/bosses/tracker/idle02.png
-	frame	data/chars/bosses/tracker/idle01.png
+    loop    1
+    delay    16
+    offset    150 189
+    bbox     140 112 19 78
+    @cmd frozen 0
+    frame    data/chars/bosses/tracker/idle00.png
+    frame    data/chars/bosses/tracker/idle01.png
+    frame    data/chars/bosses/tracker/idle02.png
+    frame    data/chars/bosses/tracker/idle01.png
 
 anim walk
-	loop	1
-	delay	18
-	offset	150 189
-	bbox 	140 112 19 78
-	frame	data/chars/bosses/tracker/walk00.png
-	frame	data/chars/bosses/tracker/walk01.png
-	frame	data/chars/bosses/tracker/walk02.png
-	frame	data/chars/bosses/tracker/walk01.png
+    loop    1
+    delay    18
+    offset    150 189
+    bbox     140 112 19 78
+    frame    data/chars/bosses/tracker/walk00.png
+    frame    data/chars/bosses/tracker/walk01.png
+    frame    data/chars/bosses/tracker/walk02.png
+    frame    data/chars/bosses/tracker/walk01.png
 
 anim backwalk
-	loop	1
-	delay	18
-	offset	150 189
-	bbox 	140 112 19 78
-	frame	data/chars/bosses/tracker/walk00.png
-	frame	data/chars/bosses/tracker/walk01.png
-	frame	data/chars/bosses/tracker/walk02.png
-	frame	data/chars/bosses/tracker/walk01.png
+    loop    1
+    delay    18
+    offset    150 189
+    bbox     140 112 19 78
+    frame    data/chars/bosses/tracker/walk00.png
+    frame    data/chars/bosses/tracker/walk01.png
+    frame    data/chars/bosses/tracker/walk02.png
+    frame    data/chars/bosses/tracker/walk01.png
 
 anim run
-	loop	1
-	delay	9
-	offset	150 189
-	bbox 	140 112 19 78
-	frame	data/chars/bosses/tracker/run02.png
-	frame	data/chars/bosses/tracker/run01.png
-	frame	data/chars/bosses/tracker/run00.png
-	frame	data/chars/bosses/tracker/run02.png
+    loop    1
+    delay    9
+    offset    150 189
+    bbox     140 112 19 78
+    frame    data/chars/bosses/tracker/run02.png
+    frame    data/chars/bosses/tracker/run01.png
+    frame    data/chars/bosses/tracker/run00.png
+    frame    data/chars/bosses/tracker/run02.png
 
 anim get
-	loop	0
-	delay	16
-	offset	150 189
-	frame	data/chars/bosses/tracker/get00.png
+    loop    0
+    delay    16
+    offset    150 189
+    frame    data/chars/bosses/tracker/get00.png
 
 anim grab
-	@cmd dasher 0
-	loop	0
-	delay	16
-	offset	150 189
-	bbox 	140 123 21 68
-	frame	data/chars/bosses/tracker/grab00.png
+    @cmd dasher 0
+    loop    0
+    delay    16
+    offset    150 189
+    bbox     140 123 21 68
+    frame    data/chars/bosses/tracker/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	150 189
-	bbox 	140 123 25 69
-	frame	data/chars/bosses/tracker/grabbed00.png
+    loop    0
+    delay    8
+    offset    150 189
+    bbox     140 123 25 69
+    frame    data/chars/bosses/tracker/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	150 189
-	bbox 	137 134 27 56
-	frame	data/chars/bosses/tracker/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    150 189
+    bbox     137 134 27 56
+    frame    data/chars/bosses/tracker/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	150 189
-	bbox 	137 116 27 56
-	@cmd jump 1
-	frame	data/chars/bosses/tracker/jump01.png
+    loop    0
+    delay    30
+    offset    150 189
+    bbox     137 116 27 56
+    @cmd jump 1
+    frame    data/chars/bosses/tracker/jump01.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	150 189
-	bbox 	137 134 27 56
-	sound	data/sounds/Jumpland.wav
-	@cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "random"
-	frame	data/chars/bosses/tracker/jumpland00.png
+    loop    0
+    delay    12
+    offset    150 189
+    bbox     137 134 27 56
+    sound    data/sounds/Jumpland.wav
+    @cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "random"
+    frame    data/chars/bosses/tracker/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	150 189
-	bbox 	132 124 29 68
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
+    loop    0
+    delay    4
+    offset    150 189
+    bbox     132 124 29 68
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	150 189
-	bbox 	137 124 26 67
-	frame	data/chars/bosses/tracker/pain00.png
-	frame	data/chars/bosses/tracker/pain01.png
-	frame	data/chars/bosses/tracker/pain00.png
-	frame	data/chars/bosses/tracker/pain01.png
-	frame	data/chars/bosses/tracker/pain00.png
-	frame	data/chars/bosses/tracker/pain01.png
-	frame	data/chars/bosses/tracker/pain00.png
-	frame	data/chars/bosses/tracker/pain01.png
+    loop    0
+    delay    4
+    offset    150 189
+    bbox     137 124 26 67
+    frame    data/chars/bosses/tracker/pain00.png
+    frame    data/chars/bosses/tracker/pain01.png
+    frame    data/chars/bosses/tracker/pain00.png
+    frame    data/chars/bosses/tracker/pain01.png
+    frame    data/chars/bosses/tracker/pain00.png
+    frame    data/chars/bosses/tracker/pain01.png
+    frame    data/chars/bosses/tracker/pain00.png
+    frame    data/chars/bosses/tracker/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	150 189
-	bbox 	132 124 29 68
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
-	frame	data/chars/bosses/tracker/pain200.png
-	frame	data/chars/bosses/tracker/pain201.png
+    loop    0
+    delay    4
+    offset    150 189
+    bbox     132 124 29 68
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
+    frame    data/chars/bosses/tracker/pain200.png
+    frame    data/chars/bosses/tracker/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	150 189
-	bbox 	124 125 42 41
-	frame	data/chars/bosses/tracker/fall00.png
-		delay	8
-	bbox 	112 154 70 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/tracker/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    150 189
+    bbox     124 125 42 41
+    frame    data/chars/bosses/tracker/fall00.png
+        delay    8
+    bbox     112 154 70 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	150 189
-	bbox 	124 125 42 41
-	frame	data/chars/bosses/tracker/fall00.png
-		delay	8
-	bbox 	112 154 70 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/tracker/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    150 189
+    bbox     124 125 42 41
+    frame    data/chars/bosses/tracker/fall00.png
+        delay    8
+    bbox     112 154 70 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	150 189
-	bbox 	124 125 42 41
-	frame	data/chars/bosses/tracker/fall00.png
-		delay	8
-	bbox 	112 154 70 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/tracker/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    150 189
+    bbox     124 125 42 41
+    frame    data/chars/bosses/tracker/fall00.png
+        delay    8
+    bbox     112 154 70 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	150 189
-	frame	data/chars/bosses/tracker/fall600.png
-	frame	data/chars/bosses/tracker/fall601.png
-	frame	data/chars/bosses/tracker/fall602.png
-	frame	data/chars/bosses/tracker/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/tracker/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    150 189
+    frame    data/chars/bosses/tracker/fall600.png
+    frame    data/chars/bosses/tracker/fall601.png
+    frame    data/chars/bosses/tracker/fall602.png
+    frame    data/chars/bosses/tracker/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	150 189
-	frame	data/chars/bosses/tracker/fall700.png
-	frame	data/chars/bosses/tracker/fall701.png
-	frame	data/chars/bosses/tracker/fall702.png
-	frame	data/chars/bosses/tracker/fall703.png
-	frame	data/chars/bosses/tracker/fall704.png
-	frame	data/chars/bosses/tracker/fall705.png
+    loop    0
+    delay    1000
+    offset    150 189
+    frame    data/chars/bosses/tracker/fall700.png
+    frame    data/chars/bosses/tracker/fall701.png
+    frame    data/chars/bosses/tracker/fall702.png
+    frame    data/chars/bosses/tracker/fall703.png
+    frame    data/chars/bosses/tracker/fall704.png
+    frame    data/chars/bosses/tracker/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	150 189
-	bbox 	124 125 42 41
-	hitfx	data/sounds/MediumKick.wav
-	attack 124 125 42 41 4 1 0 0 20 12
-	frame	data/chars/bosses/tracker/fall00.png
-		delay	999
-	frame	data/chars/bosses/tracker/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	112 154 70 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/tracker/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    150 189
+    bbox     124 125 42 41
+    hitfx    data/sounds/MediumKick.wav
+    attack 124 125 42 41 4 1 0 0 20 12
+    frame    data/chars/bosses/tracker/fall00.png
+        delay    999
+    frame    data/chars/bosses/tracker/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     112 154 70 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	150 189
-	bbox 	141 132 27 56
-	hitfx	data/sounds/MediumKick.wav
-	attack 141 132 27 56 4 1 0 0 20 12
-	frame	data/chars/bosses/tracker/fall900.png
-		delay	999
-	frame	data/chars/bosses/tracker/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	112 154 70 36
-	sound	data/sounds/Falling.wav
-	frame	data/chars/bosses/tracker/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    150 189
+    bbox     141 132 27 56
+    hitfx    data/sounds/MediumKick.wav
+    attack 141 132 27 56 4 1 0 0 20 12
+    frame    data/chars/bosses/tracker/fall900.png
+        delay    999
+    frame    data/chars/bosses/tracker/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     112 154 70 36
+    sound    data/sounds/Falling.wav
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	150 189
-	frame	data/chars/bosses/tracker/fall01.png
-	frame	data/chars/bosses/tracker/fall01.png
-	frame	data/chars/bosses/tracker/fall01.png
+    loop    0
+    delay    16
+    offset    150 189
+    frame    data/chars/bosses/tracker/fall01.png
+    frame    data/chars/bosses/tracker/fall01.png
+    frame    data/chars/bosses/tracker/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	150 189
-	frame	data/chars/bosses/tracker/rise00.png
-	frame	data/chars/bosses/tracker/rise01.png
-	frame	data/chars/bosses/tracker/rise01.png
-	frame	data/chars/bosses/tracker/rise02.png
+    loop    0
+    delay    16
+    offset    150 189
+    frame    data/chars/bosses/tracker/rise00.png
+    frame    data/chars/bosses/tracker/rise01.png
+    frame    data/chars/bosses/tracker/rise01.png
+    frame    data/chars/bosses/tracker/rise02.png
 
 anim riseattack
-	range 60 160
-	rangea 0 100
-	rangez -24 24
-	attackone 1
-	fastattack 1
-	forcedirection -1
-	loop	0
-	delay	1
-	offset	150 189
-	sound	data/sounds/Stealth.wav
-	@cmd dasher 0 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.9 1.4 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.4 0 1.5
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.6 1.8 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.2 0 1.8
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.7 1.5 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.3 0 1.2
-	frame	data/chars/bosses/tracker/idle00.png
-	@cmd stealthCamo 250 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-		delay	2
-	@cmd targetMove -150 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-		delay	1
-	@cmd stealthCamo 250 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.3 0 1.2
-	@cmd dasher 0 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-	nodrawmethod
-	frame	data/chars/bosses/tracker/idle00.png
-	bbox 	138 124 27 68
-	sound	data/sounds/LaserAim.wav
-	frame	data/chars/bosses/tracker/laser00.png
-	frame	data/chars/bosses/tracker/laser01.png
-	frame	data/chars/bosses/tracker/laser02.png
-	frame	data/chars/bosses/tracker/laser03.png
-	frame	data/chars/bosses/tracker/laser04.png
-		delay	24
-	@cmd shoot "Tracker_Laser" 10 56 -1 6 0 0
-	sound	data/sounds/LaserShot.wav
-	frame	data/chars/bosses/tracker/laser04.png
+    range 60 160
+    rangea 0 100
+    rangez -24 24
+    attackone 1
+    fastattack 1
+    forcedirection -1
+    loop    0
+    delay    1
+    offset    150 189
+    sound    data/sounds/Stealth.wav
+    @cmd dasher 0 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.9 1.4 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.4 0 1.5
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.6 1.8 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.2 0 1.8
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.7 1.5 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.3 0 1.2
+    frame    data/chars/bosses/tracker/idle00.png
+    @cmd stealthCamo 250 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+        delay    2
+    @cmd targetMove -150 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+        delay    1
+    @cmd stealthCamo 250 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.3 0 1.2
+    @cmd dasher 0 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+    nodrawmethod
+    frame    data/chars/bosses/tracker/idle00.png
+    bbox     138 124 27 68
+    sound    data/sounds/LaserAim.wav
+    frame    data/chars/bosses/tracker/laser00.png
+    frame    data/chars/bosses/tracker/laser01.png
+    frame    data/chars/bosses/tracker/laser02.png
+    frame    data/chars/bosses/tracker/laser03.png
+    frame    data/chars/bosses/tracker/laser04.png
+        delay    24
+    @cmd shoot "Tracker_Laser" 10 56 -1 6 0 0
+    sound    data/sounds/LaserShot.wav
+    frame    data/chars/bosses/tracker/laser04.png
 
 anim attack1
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	150 189
-	bbox 	140 123 25 69
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/bosses/tracker/a100.png
-	attack 154 129 42 18 2 0 0 0 10 12
-	frame	data/chars/bosses/tracker/a101.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    150 189
+    bbox     140 123 25 69
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/bosses/tracker/a100.png
+    attack 154 129 42 18 2 0 0 0 10 12
+    frame    data/chars/bosses/tracker/a101.png
 
 anim attack2
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	6
-	offset	150 189
-	bbox 	132 124 29 68
-	hitfx	data/sounds/Cutter2.wav
-	sound	data/sounds/claw.wav
-	frame	data/chars/bosses/tracker/a200.png
-	attack 150 128 46 18 4 0 0 0 30 12
-	bbox 	148 122 17 70
-	frame	data/chars/bosses/tracker/a201.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    6
+    offset    150 189
+    bbox     132 124 29 68
+    hitfx    data/sounds/Cutter2.wav
+    sound    data/sounds/claw.wav
+    frame    data/chars/bosses/tracker/a200.png
+    attack 150 128 46 18 4 0 0 0 30 12
+    bbox     148 122 17 70
+    frame    data/chars/bosses/tracker/a201.png
 
 anim attack3
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	4
-	offset	150 189
-	hitfx	data/sounds/Cutter.wav
-	sound	data/sounds/claw.wav
-	bbox 	132 124 29 68
-	attack 128 142 62 30 3 0 0 0 30 12
-	frame	data/chars/bosses/tracker/a300.png
-	bbox 	138 123 25 69
-	attack 160 100 20 50 5 0 0 0 30 12
-	frame	data/chars/bosses/tracker/a301.png
-	@cmd rageCancel 0 75 0 120 20 "ANI_SPECIAL" "hit"
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-		delay	4
-	bbox 	145 110 22 82
-	attack 154 83 35 61 8 1 0 0 30 12
-	frame	data/chars/bosses/tracker/a302.png
-		delay	12
-	frame	data/chars/bosses/tracker/a302.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    4
+    offset    150 189
+    hitfx    data/sounds/Cutter.wav
+    sound    data/sounds/claw.wav
+    bbox     132 124 29 68
+    attack 128 142 62 30 3 0 0 0 30 12
+    frame    data/chars/bosses/tracker/a300.png
+    bbox     138 123 25 69
+    attack 160 100 20 50 5 0 0 0 30 12
+    frame    data/chars/bosses/tracker/a301.png
+    @cmd rageCancel 0 75 0 120 20 "ANI_SPECIAL" "hit"
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+        delay    4
+    bbox     145 110 22 82
+    attack 154 83 35 61 8 1 0 0 30 12
+    frame    data/chars/bosses/tracker/a302.png
+        delay    12
+    frame    data/chars/bosses/tracker/a302.png
 
 anim grabattack #ELBOW
-	@cmd dasher 0
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	hitflash Shock
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	150 189
-	bbox 	155 123 16 68
-	hitfx	data/sounds/whip.wav
-	sound	data/sounds/Shock.wav
-	shock 164 119 27 36 5 0 0 0 30 12
-	seal 1 1
-	frame	data/chars/bosses/tracker/grabatk00.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/grab00.png
-	@cmd looper 0 2
-	frame	data/chars/bosses/tracker/grab00.png
-	@cmd clearL
-	frame	data/chars/bosses/tracker/grab00.png
+    @cmd dasher 0
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    hitflash Shock
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    150 189
+    bbox     155 123 16 68
+    hitfx    data/sounds/whip.wav
+    sound    data/sounds/Shock.wav
+    shock 164 119 27 36 5 0 0 0 30 12
+    seal 1 1
+    frame    data/chars/bosses/tracker/grabatk00.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/grab00.png
+    @cmd looper 0 2
+    frame    data/chars/bosses/tracker/grab00.png
+    @cmd clearL
+    frame    data/chars/bosses/tracker/grab00.png
 
 anim grabattack2 #ELBOW
-	@cmd dasher 0
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	hitflash Shock
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	150 189
-	bbox 	155 123 16 68
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/Shock.wav
-	shock 164 119 27 36 5 0 0 0 30 12
-	seal 1 1
-	frame	data/chars/bosses/tracker/grabatk00.png
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	frame	data/chars/bosses/tracker/grab00.png
-	@cmd clearL
-	frame	data/chars/bosses/tracker/grab00.png
+    @cmd dasher 0
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    hitflash Shock
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    150 189
+    bbox     155 123 16 68
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/Shock.wav
+    shock 164 119 27 36 5 0 0 0 30 12
+    seal 1 1
+    frame    data/chars/bosses/tracker/grabatk00.png
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    frame    data/chars/bosses/tracker/grab00.png
+    @cmd clearL
+    frame    data/chars/bosses/tracker/grab00.png
 
 anim grabbackward2 #ELBOW
-	@cmd dasher 0
-	attackone 0
-	fastattack 1
-	hitflash Shock
-	forcedirection -1
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	12
-	offset	150 189
-	@cmd grabStart2
-	frame	data/chars/bosses/tracker/grab00.png
-	delay	24
-	@cmd position 1 25 -1 0 -1
-	shock 164 119 27 36 5 0 0 0 30 12
-	frame	data/chars/bosses/tracker/grabatk00.png
-	sound	data/sounds/StrongPunch.wav
-	@cmd spawnBind "Shock" 45 55 -1
-	@cmd position 1 23 -1 0 -1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/grab00.png
-	@cmd looper 1 2
-	@cmd slam 30 1 -1 4 0 0
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	frame	data/chars/bosses/tracker/grab00.png
-	@cmd clearL
-	frame	data/chars/bosses/tracker/grab00.png
+    @cmd dasher 0
+    attackone 0
+    fastattack 1
+    hitflash Shock
+    forcedirection -1
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    12
+    offset    150 189
+    @cmd grabStart2
+    frame    data/chars/bosses/tracker/grab00.png
+    delay    24
+    @cmd position 1 25 -1 0 -1
+    shock 164 119 27 36 5 0 0 0 30 12
+    frame    data/chars/bosses/tracker/grabatk00.png
+    sound    data/sounds/StrongPunch.wav
+    @cmd spawnBind "Shock" 45 55 -1
+    @cmd position 1 23 -1 0 -1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/grab00.png
+    @cmd looper 1 2
+    @cmd slam 30 1 -1 4 0 0
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    frame    data/chars/bosses/tracker/grab00.png
+    @cmd clearL
+    frame    data/chars/bosses/tracker/grab00.png
 
 anim jumpattack
-	range 60 130
-	rangea 999 999
-	rangez -24 24
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	24
-	offset	150 189
-	bbox 	141 102 19 67
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/Jumping.wav
-	@cmd targetJump
-	@cmd leapJump
-	frame	data/chars/bosses/tracker/jump00.png
-		delay	2
-	bbox 	138 107 23 46
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/bosses/tracker/jumpatk00.png
-	attack 138 133 58 20 4 1 0 0 20 12
-	frame	data/chars/bosses/tracker/jumpatk01.png
+    range 60 130
+    rangea 999 999
+    rangez -24 24
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    24
+    offset    150 189
+    bbox     141 102 19 67
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/Jumping.wav
+    @cmd targetJump
+    @cmd leapJump
+    frame    data/chars/bosses/tracker/jump00.png
+        delay    2
+    bbox     138 107 23 46
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/bosses/tracker/jumpatk00.png
+    attack 138 133 58 20 4 1 0 0 20 12
+    frame    data/chars/bosses/tracker/jumpatk01.png
 
 anim jumpattack2 #POUNCE
-	range 40 160
-	rangea 0 150
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	24
-	offset	150 189
-	#bbox 	141 102 19 67
-	hitfx	data/sounds/Cutter2.wav
-	sound	data/sounds/Jumping.wav
-	@cmd targetJump
-	@cmd leapJump
-	frame	data/chars/bosses/tracker/jump00.png
-		delay	2
-	#bbox 	137 116 27 46
-	sound	data/sounds/claw.wav
-	frame	data/chars/bosses/tracker/jumpatk200.png
-	attack 143 116 65 55 1 0 1 1 0 24
-	frame	data/chars/bosses/tracker/jumpatk200.png
+    range 40 160
+    rangea 0 150
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    24
+    offset    150 189
+    #bbox     141 102 19 67
+    hitfx    data/sounds/Cutter2.wav
+    sound    data/sounds/Jumping.wav
+    @cmd targetJump
+    @cmd leapJump
+    frame    data/chars/bosses/tracker/jump00.png
+        delay    2
+    #bbox     137 116 27 46
+    sound    data/sounds/claw.wav
+    frame    data/chars/bosses/tracker/jumpatk200.png
+    attack 143 116 65 55 1 0 1 1 0 24
+    frame    data/chars/bosses/tracker/jumpatk200.png
 
 anim special #UPPER
-	range 20 50
-	rangea 30 120
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 20 1 6
-	hitflash BloodHit
-	loop	0
-	@cmd dasher 0 0 0
-	delay	8
-	offset	150 189
-	hitfx	data/sounds/Cutter2.wav
-	shock 150 138 39 16 4 0 0 0 30 24
-	frame	data/chars/bosses/tracker/special00.png
-		delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Shring2.wav
-	frame	data/chars/bosses/tracker/special00.png
-	hitflash shock
-		delay	8
-	shock 150 105 29 44 8 1 0 0 25 24
-	dropv 3 0 0
-	frame	data/chars/bosses/tracker/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special02.png
-		delay	16
-	@cmd leaper 2 3 0
-	shock 150 74 29 63 8 1 0 0 20 24
-	frame	data/chars/bosses/tracker/special03.png
-		delay	2
-	@cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special04.png
-	@cmd landFrame
-		delay	12
-	sound	data/sounds/Jumpland.wav
-	@cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "mp"
-	frame	data/chars/bosses/tracker/jumpland00.png
+    range 20 50
+    rangea 30 120
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 20 1 6
+    hitflash BloodHit
+    loop    0
+    @cmd dasher 0 0 0
+    delay    8
+    offset    150 189
+    hitfx    data/sounds/Cutter2.wav
+    shock 150 138 39 16 4 0 0 0 30 24
+    frame    data/chars/bosses/tracker/special00.png
+        delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Shring2.wav
+    frame    data/chars/bosses/tracker/special00.png
+    hitflash shock
+        delay    8
+    shock 150 105 29 44 8 1 0 0 25 24
+    dropv 3 0 0
+    frame    data/chars/bosses/tracker/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special02.png
+        delay    16
+    @cmd leaper 2 3 0
+    shock 150 74 29 63 8 1 0 0 20 24
+    frame    data/chars/bosses/tracker/special03.png
+        delay    2
+    @cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special04.png
+    @cmd landFrame
+        delay    12
+    sound    data/sounds/Jumpland.wav
+    @cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "mp"
+    frame    data/chars/bosses/tracker/jumpland00.png
 
 anim special2 #UPPER
-	range 20 50
-	rangea 30 120
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 20 1 6
-	hitflash BloodHit
-	loop	0
-	@cmd dasher 0 0 0
-	delay	8
-	offset	150 189
-	hitfx	data/sounds/Cutter2.wav
-	shock 150 138 39 16 4 0 0 0 30 24
-	frame	data/chars/bosses/tracker/special00.png
-		delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Shring2.wav
-	frame	data/chars/bosses/tracker/special00.png
-	hitflash shock
-		delay	8
-	shock 150 105 29 44 8 1 0 0 25 24
-	dropv 3 0 0
-	frame	data/chars/bosses/tracker/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special02.png
-		delay	16
-	@cmd leaper 2 3 0
-	shock 150 74 29 63 8 1 0 0 20 24
-	frame	data/chars/bosses/tracker/special03.png
-		delay	2
-	@cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special04.png
-	@cmd landFrame
-		delay	12
-	sound	data/sounds/Jumpland.wav
-	@cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "mp"
-	frame	data/chars/bosses/tracker/jumpland00.png
+    range 20 50
+    rangea 30 120
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 20 1 6
+    hitflash BloodHit
+    loop    0
+    @cmd dasher 0 0 0
+    delay    8
+    offset    150 189
+    hitfx    data/sounds/Cutter2.wav
+    shock 150 138 39 16 4 0 0 0 30 24
+    frame    data/chars/bosses/tracker/special00.png
+        delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Shring2.wav
+    frame    data/chars/bosses/tracker/special00.png
+    hitflash shock
+        delay    8
+    shock 150 105 29 44 8 1 0 0 25 24
+    dropv 3 0 0
+    frame    data/chars/bosses/tracker/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special02.png
+        delay    16
+    @cmd leaper 2 3 0
+    shock 150 74 29 63 8 1 0 0 20 24
+    frame    data/chars/bosses/tracker/special03.png
+        delay    2
+    @cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special04.png
+    @cmd landFrame
+        delay    12
+    sound    data/sounds/Jumpland.wav
+    @cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "mp"
+    frame    data/chars/bosses/tracker/jumpland00.png
 
 anim freespecial #TARGET LOCK
-	range 80 400
-	rangea -100 100
-	rangez -25 25
-	energycost 60 1 6
-	loop	0
-	delay	4
-	offset	150 189
-	sound	data/sounds/Stealth.wav
-	@cmd dasher 0 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.9 1.4 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.4 0 1.5
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.6 1.8 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.2 0 1.8
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.7 1.5 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.3 0 1.2
-	frame	data/chars/bosses/tracker/idle00.png
-	delay	333
-	sound	data/voices/tracker2.wav
-	@cmd shoot "Tracker_Target" 0 50 0 1.2 0 0.6
-	@cmd stealthCamo 250 0 0
-	@cmd frozen 1
-	seta	999
-	frame	data/chars/bosses/tracker/idle00.png
+    range 80 400
+    rangea -100 100
+    rangez -25 25
+    energycost 60 1 6
+    loop    0
+    delay    4
+    offset    150 189
+    sound    data/sounds/Stealth.wav
+    @cmd dasher 0 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.9 1.4 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.4 0 1.5
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.6 1.8 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.2 0 1.8
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.7 1.5 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.3 0 1.2
+    frame    data/chars/bosses/tracker/idle00.png
+    delay    333
+    sound    data/voices/tracker2.wav
+    @cmd shoot "Tracker_Target" 0 50 0 1.2 0 0.6
+    @cmd stealthCamo 250 0 0
+    @cmd frozen 1
+    seta    999
+    frame    data/chars/bosses/tracker/idle00.png
 
 anim follow4 #AIMED RAGE PLASMA SHOT
-	loop	0
-	delay	4
-	@cmd dasher 0 0 0
-	offset	150 189
-	sound	data/sounds/LaserAim.wav
-	frame	data/chars/bosses/tracker/laser00.png
-	frame	data/chars/bosses/tracker/laser01.png
-	frame	data/chars/bosses/tracker/laser02.png
-	frame	data/chars/bosses/tracker/laser03.png
-	frame	data/chars/bosses/tracker/laser04.png
-	delay	24
-	@cmd shoot "Tracker_LaserR" 15 56 -1 5 0 "dual"
-	sound	data/sounds/LaserShot.wav
-	frame	data/chars/bosses/tracker/laser04.png
-		delay	4
-	@cmd stealthCamo 250 0 0
-	@cmd frozen 0
-	drawmethod alpha 6
-	drawmethod channel 1.3 0 1.2
-	sound	data/sounds/Stealth.wav
-	frame	data/chars/bosses/tracker/laser04.png
-	nodrawmethod
-	frame	data/chars/bosses/tracker/laser04.png
+    loop    0
+    delay    4
+    @cmd dasher 0 0 0
+    offset    150 189
+    sound    data/sounds/LaserAim.wav
+    frame    data/chars/bosses/tracker/laser00.png
+    frame    data/chars/bosses/tracker/laser01.png
+    frame    data/chars/bosses/tracker/laser02.png
+    frame    data/chars/bosses/tracker/laser03.png
+    frame    data/chars/bosses/tracker/laser04.png
+    delay    24
+    @cmd shoot "Tracker_LaserR" 15 56 -1 5 0 "dual"
+    sound    data/sounds/LaserShot.wav
+    frame    data/chars/bosses/tracker/laser04.png
+        delay    4
+    @cmd stealthCamo 250 0 0
+    @cmd frozen 0
+    drawmethod alpha 6
+    drawmethod channel 1.3 0 1.2
+    sound    data/sounds/Stealth.wav
+    frame    data/chars/bosses/tracker/laser04.png
+    nodrawmethod
+    frame    data/chars/bosses/tracker/laser04.png
 
 anim freespecial2 #SLIDE
-	range 40 120
-	rangea 0 0
-	rangez -9 9
-	fastattack 1
-	jugglecost 1
-	energycost 15 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	150 189
-	hitfx	data/sounds/throw2.wav
-	sound	data/voices/tracker1.wav
-	frame	data/chars/bosses/tracker/runatk00.png
-		delay	8
-	@cmd selfNoGrab 1
-	@cmd dasher 4
-	@cmd spawn01 "Dust" 40 0 0
-	#bbox 	123 156 31 36
-	attack 120 140 70 52 0 0 1 1 0 36
-	sound	data/sounds/SpecialAttack2.wav
-	frame	data/chars/bosses/tracker/runatk01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/runatk01.png
-	@cmd dasher 3.5
-	attack 120 140 70 52 0 0 1 1 0 36
-	frame	data/chars/bosses/tracker/runatk02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/runatk02.png
-	@cmd dasher 3.2
-	attack 120 140 70 52 0 0 1 1 0 36
-	frame	data/chars/bosses/tracker/runatk02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/runatk02.png
-	@cmd dasher 3
-	attack 120 140 70 52 0 0 1 1 0 36
-	frame	data/chars/bosses/tracker/runatk02.png
-	@cmd selfNoGrab 0
-	@cmd dasher 0
-	@cmd rageCancel 0 999 0 999 0 "ANI_FREESPECIAL3" "random"
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/runatk02.png
-	delay	12
-	attack 0 0 0 0 0 0 0 0 0 0
-	#bbox 	137 142 27 49
-	frame	data/chars/bosses/tracker/runatk03.png
+    range 40 120
+    rangea 0 0
+    rangez -9 9
+    fastattack 1
+    jugglecost 1
+    energycost 15 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    150 189
+    hitfx    data/sounds/throw2.wav
+    sound    data/voices/tracker1.wav
+    frame    data/chars/bosses/tracker/runatk00.png
+        delay    8
+    @cmd selfNoGrab 1
+    @cmd dasher 4
+    @cmd spawn01 "Dust" 40 0 0
+    #bbox     123 156 31 36
+    attack 120 140 70 52 0 0 1 1 0 36
+    sound    data/sounds/SpecialAttack2.wav
+    frame    data/chars/bosses/tracker/runatk01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/runatk01.png
+    @cmd dasher 3.5
+    attack 120 140 70 52 0 0 1 1 0 36
+    frame    data/chars/bosses/tracker/runatk02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/runatk02.png
+    @cmd dasher 3.2
+    attack 120 140 70 52 0 0 1 1 0 36
+    frame    data/chars/bosses/tracker/runatk02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/runatk02.png
+    @cmd dasher 3
+    attack 120 140 70 52 0 0 1 1 0 36
+    frame    data/chars/bosses/tracker/runatk02.png
+    @cmd selfNoGrab 0
+    @cmd dasher 0
+    @cmd rageCancel 0 999 0 999 0 "ANI_FREESPECIAL3" "random"
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/runatk02.png
+    delay    12
+    attack 0 0 0 0 0 0 0 0 0 0
+    #bbox     137 142 27 49
+    frame    data/chars/bosses/tracker/runatk03.png
 
 anim freespecial3 #SIMPLE PLASMA SHOT
-	range 70 300
-	rangea 0 0
-	energycost 20 1 6
-	loop	0
-	@cmd dasher 0 0 0
-	delay	8
-	offset	150 189
-	bbox 	138 124 27 68
-	sound	data/sounds/LaserAim.wav
-	frame	data/chars/bosses/tracker/laser00.png
-	frame	data/chars/bosses/tracker/laser01.png
-	frame	data/chars/bosses/tracker/laser02.png
-	frame	data/chars/bosses/tracker/laser03.png
-	frame	data/chars/bosses/tracker/laser04.png
-		delay	24
-	@cmd shoot "Tracker_Laser" 10 56 -1 6 0 0
-	sound	data/sounds/LaserShot.wav
-	frame	data/chars/bosses/tracker/laser04.png
+    range 70 300
+    rangea 0 0
+    energycost 20 1 6
+    loop    0
+    @cmd dasher 0 0 0
+    delay    8
+    offset    150 189
+    bbox     138 124 27 68
+    sound    data/sounds/LaserAim.wav
+    frame    data/chars/bosses/tracker/laser00.png
+    frame    data/chars/bosses/tracker/laser01.png
+    frame    data/chars/bosses/tracker/laser02.png
+    frame    data/chars/bosses/tracker/laser03.png
+    frame    data/chars/bosses/tracker/laser04.png
+        delay    24
+    @cmd shoot "Tracker_Laser" 10 56 -1 6 0 0
+    sound    data/sounds/LaserShot.wav
+    frame    data/chars/bosses/tracker/laser04.png
 
 anim freespecial4 #GRAB RUN
-	range 40 240
-	rangea 0 0
-	followanim 5
-	followcond 4
-	energycost 25 1 6
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	offset	150 189
-	sound	data/voices/tracker3.wav
-	delay	1
-	sound	data/sounds/Stealth.wav
-	@cmd dasher 0 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.9 1.4 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.4 0 1.5
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.6 1.8 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.2 0 1.8
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.7 1.5 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.3 0 1.2
-	frame	data/chars/bosses/tracker/idle00.png
-	@cmd stealthCamo 250 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-		delay	2
-	@cmd targetMove -100 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-		delay	1
-	@cmd stealthCamo 250 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.3 0 1.2
-	@cmd dasher 0 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-	nodrawmethod
-	frame	data/chars/bosses/tracker/idle00.png
-	delay	12
-	@cmd selfNoGrab 1
-	#bbox 	134 122 34 68
-	@cmd target 4 2
-	@cmd dashTarget
-	attack 134 122 34 68 1 0 1 1 0 24
-	frame	data/chars/bosses/tracker/run02.png
-	@cmd target 4 2
-	@cmd dashTarget
-	frame	data/chars/bosses/tracker/run01.png
-	@cmd target 4 2
-	@cmd dashTarget
-	frame	data/chars/bosses/tracker/run00.png
-	@cmd target 4 2
-	@cmd dashTarget
-	frame	data/chars/bosses/tracker/run02.png
-	@cmd selfNoGrab 0
-	@cmd dasher 0
-	frame	data/chars/bosses/tracker/run02.png
+    range 40 240
+    rangea 0 0
+    followanim 5
+    followcond 4
+    energycost 25 1 6
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    offset    150 189
+    sound    data/voices/tracker3.wav
+    delay    1
+    sound    data/sounds/Stealth.wav
+    @cmd dasher 0 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.9 1.4 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.4 0 1.5
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.6 1.8 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.2 0 1.8
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.7 1.5 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.3 0 1.2
+    frame    data/chars/bosses/tracker/idle00.png
+    @cmd stealthCamo 250 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+        delay    2
+    @cmd targetMove -100 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+        delay    1
+    @cmd stealthCamo 250 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.3 0 1.2
+    @cmd dasher 0 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+    nodrawmethod
+    frame    data/chars/bosses/tracker/idle00.png
+    delay    12
+    @cmd selfNoGrab 1
+    #bbox     134 122 34 68
+    @cmd target 4 2
+    @cmd dashTarget
+    attack 134 122 34 68 1 0 1 1 0 24
+    frame    data/chars/bosses/tracker/run02.png
+    @cmd target 4 2
+    @cmd dashTarget
+    frame    data/chars/bosses/tracker/run01.png
+    @cmd target 4 2
+    @cmd dashTarget
+    frame    data/chars/bosses/tracker/run00.png
+    @cmd target 4 2
+    @cmd dashTarget
+    frame    data/chars/bosses/tracker/run02.png
+    @cmd selfNoGrab 0
+    @cmd dasher 0
+    frame    data/chars/bosses/tracker/run02.png
 
 anim follow5 #ANIMATION FOR DOGRAB ONLY
-	@cmd dasher 0
-	loop	0
-	delay	16
-	offset	139 200
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/bosses/tracker/run02.png
+    @cmd dasher 0
+    loop    0
+    delay    16
+    offset    139 200
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/bosses/tracker/run02.png
 
 anim upper
-	range 0 50
-	rangea 0 100
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	@cmd dasher 0 0 0
-	delay	8
-	offset	150 189
-	bbox 	135 115 43 73
-	hitfx	data/sounds/Cutter2.wav
-	shock 150 138 39 16 4 0 0 0 30 24
-	frame	data/chars/bosses/tracker/special00.png
-		delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Shring2.wav
-	frame	data/chars/bosses/tracker/special00.png
-		delay	8
-	attack 150 105 29 44 8 1 0 0 35 24
-	dropv 3 1 0
-	frame	data/chars/bosses/tracker/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special02.png
-		delay	16
-	bbox 130 90 40 80
-	@cmd leaper 2 3 0
-	attack 150 74 29 63 8 1 0 0 35 24
-	frame	data/chars/bosses/tracker/special03.png
-		delay	2
-	@cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special04.png
-	@cmd landFrame
-		delay	12
-	bbox 	137 134 27 56
-	sound	data/sounds/Jumpland.wav
-	@cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "hit"
-	frame	data/chars/bosses/tracker/jumpland00.png
+    range 0 50
+    rangea 0 100
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    @cmd dasher 0 0 0
+    delay    8
+    offset    150 189
+    bbox     135 115 43 73
+    hitfx    data/sounds/Cutter2.wav
+    shock 150 138 39 16 4 0 0 0 30 24
+    frame    data/chars/bosses/tracker/special00.png
+        delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Shring2.wav
+    frame    data/chars/bosses/tracker/special00.png
+        delay    8
+    attack 150 105 29 44 8 1 0 0 35 24
+    dropv 3 1 0
+    frame    data/chars/bosses/tracker/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special02.png
+        delay    16
+    bbox 130 90 40 80
+    @cmd leaper 2 3 0
+    attack 150 74 29 63 8 1 0 0 35 24
+    frame    data/chars/bosses/tracker/special03.png
+        delay    2
+    @cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special04.png
+    @cmd landFrame
+        delay    12
+    bbox     137 134 27 56
+    sound    data/sounds/Jumpland.wav
+    @cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "hit"
+    frame    data/chars/bosses/tracker/jumpland00.png
 
 anim follow7 #COUNTER
-	range 0 50
-	rangea 0 100
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	8
-	offset	150 189
-	bbox 	135 115 43 73
-	hitfx	data/sounds/Cutter2.wav
-	sound	data/sounds/Clash5.wav
-	shock 150 138 39 12 4 0 0 0 30 24
-	frame	data/chars/bosses/tracker/special00.png
-		delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special00.png
-	hitflash shock
-		delay	8
-	shock 150 105 29 44 15 1 0 0 25 24
-	dropv 3 1 0
-	frame	data/chars/bosses/tracker/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special02.png
-		delay	16
-	bbox 130 90 40 80
-	@cmd leaper 1 3 0
-	shock 150 74 29 63 16 1 0 0 20 24
-	frame	data/chars/bosses/tracker/special03.png
-		delay	2
-	@cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
-	@cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/tracker/special04.png
-	@cmd landFrame
-		delay	12
-	bbox 	137 134 27 56
-	sound	data/sounds/Jumpland.wav
-	@cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "hit"
-	frame	data/chars/bosses/tracker/jumpland00.png
+    range 0 50
+    rangea 0 100
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    8
+    offset    150 189
+    bbox     135 115 43 73
+    hitfx    data/sounds/Cutter2.wav
+    sound    data/sounds/Clash5.wav
+    shock 150 138 39 12 4 0 0 0 30 24
+    frame    data/chars/bosses/tracker/special00.png
+        delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special00.png
+    hitflash shock
+        delay    8
+    shock 150 105 29 44 15 1 0 0 25 24
+    dropv 3 1 0
+    frame    data/chars/bosses/tracker/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special02.png
+        delay    16
+    bbox 130 90 40 80
+    @cmd leaper 1 3 0
+    shock 150 74 29 63 16 1 0 0 20 24
+    frame    data/chars/bosses/tracker/special03.png
+        delay    2
+    @cmd rageCancel 0 75 0 160 20 "ANI_UPPER" "hit"
+    @cmd rageCancel 20 100 0 120 5 "ANI_JUMPATTACK2" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/tracker/special04.png
+    @cmd landFrame
+        delay    12
+    bbox     137 134 27 56
+    sound    data/sounds/Jumpland.wav
+    @cmd rageCancel 0 999 0 999 20 "ANI_FREESPECIAL3" "hit"
+    frame    data/chars/bosses/tracker/jumpland00.png
 
 anim block
-	range 0 100
-	rangea 0 100
-	rangez -24 24
-	@cmd dasher 0 0 0
-	loop	0
-	delay	96
-	offset	150 189
-	bbox 	128 124 47 62
-	sound	data/voices/tracker3.wav
-	frame	data/chars/bosses/tracker/block00.png
+    range 0 100
+    rangea 0 100
+    rangez -24 24
+    @cmd dasher 0 0 0
+    loop    0
+    delay    96
+    offset    150 189
+    bbox     128 124 47 62
+    sound    data/voices/tracker3.wav
+    frame    data/chars/bosses/tracker/block00.png
 
 anim dodge
-	range 0 60
-	rangea 0 100
-	rangez -24 24
-	loop	0
-	delay	1
-	offset	150 189
-	sound	data/sounds/Stealth.wav
-	@cmd dasher 0 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.9 1.4 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.4 0 1.5
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.6 1.8 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.2 0 1.8
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.7 1.5 0
-	frame	data/chars/bosses/tracker/idle00.png
-	drawmethod channel 1.3 0 1.2
-	frame	data/chars/bosses/tracker/idle00.png
-	@cmd stealthCamo 250 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-		delay	2
-	@cmd targetMove -100 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-		delay	1
-	@cmd stealthCamo 250 0 0
-	drawmethod alpha 6
-	drawmethod channel 1.3 0 1.2
-	@cmd dasher 0 0 0
-	frame	data/chars/bosses/tracker/idle00.png
-	nodrawmethod
-	frame	data/chars/bosses/tracker/idle00.png
+    range 0 60
+    rangea 0 100
+    rangez -24 24
+    loop    0
+    delay    1
+    offset    150 189
+    sound    data/sounds/Stealth.wav
+    @cmd dasher 0 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.9 1.4 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.4 0 1.5
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.6 1.8 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.2 0 1.8
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.7 1.5 0
+    frame    data/chars/bosses/tracker/idle00.png
+    drawmethod channel 1.3 0 1.2
+    frame    data/chars/bosses/tracker/idle00.png
+    @cmd stealthCamo 250 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+        delay    2
+    @cmd targetMove -100 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+        delay    1
+    @cmd stealthCamo 250 0 0
+    drawmethod alpha 6
+    drawmethod channel 1.3 0 1.2
+    @cmd dasher 0 0 0
+    frame    data/chars/bosses/tracker/idle00.png
+    nodrawmethod
+    frame    data/chars/bosses/tracker/idle00.png

@@ -1,23 +1,23 @@
-name		reine_shawl #ELECTRA TOSS SHAWL
-type		npc
-health		1
-lifespan	1
-nomove		1 1
-death		1
-stealth		2
-gfxshadow	1
+name        reine_shawl #ELECTRA TOSS SHAWL
+type        npc
+health        1
+lifespan    1
+nomove        1 1
+death        1
+stealth        2
+gfxshadow    1
 
 anim idle
-	loop	0
-	delay	1000
-	offset	50 60
-	frame	data/chars/enemies/reine/shawl/shawl00.png
-	
+    loop    0
+    delay    1000
+    offset    50 60
+    frame    data/chars/enemies/reine/shawl/shawl00.png
+    
 anim death
-	loop	0
-	delay	32
-	offset	50 60
-	frame	data/chars/enemies/reine/shawl/shawl00.png
-	
-	
+    loop    0
+    delay    32
+    offset    50 60
+    frame    data/chars/enemies/reine/shawl/shawl00.png
+    
+    
 

@@ -1,32 +1,32 @@
-name				Monalisa_Wave
-type				none
-health				1
-nolife				1
-lifespan			2
-offscreenkill		50
-remove				0
-shadow				0
-antigravity			100
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
+name                Monalisa_Wave
+type                none
+health                1
+nolife                1
+lifespan            2
+offscreenkill        50
+remove                0
+shadow                0
+antigravity            100
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
 
 anim idle
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	1 3 5
-	delay	2
-	offset	144 196
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/Wind3.wav
-	shock 147 194 7 6 35 1 0 0 10 24
-	frame	data/chars/bosses/monalisa/wave/wave00.png
-	shock 147 190 13 10 35 1 0 0 10 24
-	frame	data/chars/bosses/monalisa/wave/wave01.png
-	shock 147 187 26 13 35 1 0 0 10 24
-	frame	data/chars/bosses/monalisa/wave/wave02.png
-	shock 147 179 38 21 35 1 0 0 10 24
-	frame	data/chars/bosses/monalisa/wave/wave03.png
-		delay	3
-	frame	data/chars/bosses/monalisa/wave/empty.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    1 3 5
+    delay    2
+    offset    144 196
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/Wind3.wav
+    shock 147 194 7 6 35 1 0 0 10 24
+    frame    data/chars/bosses/monalisa/wave/wave00.png
+    shock 147 190 13 10 35 1 0 0 10 24
+    frame    data/chars/bosses/monalisa/wave/wave01.png
+    shock 147 187 26 13 35 1 0 0 10 24
+    frame    data/chars/bosses/monalisa/wave/wave02.png
+    shock 147 179 38 21 35 1 0 0 10 24
+    frame    data/chars/bosses/monalisa/wave/wave03.png
+        delay    3
+    frame    data/chars/bosses/monalisa/wave/empty.png

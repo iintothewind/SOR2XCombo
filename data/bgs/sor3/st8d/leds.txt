@@ -1,21 +1,21 @@
-name		St8_Leds
-type		none
-shadow		0
-setlayer	-1
+name        St8_Leds
+type        none
+shadow        0
+setlayer    -1
 
 anim idle
-	loop	1
-	delay	8
-	offset	1 170
-	frame	data/bgs/sor3/st8d/leds00.png
-	frame	data/bgs/sor3/st8d/leds01.png
-	frame	data/bgs/sor3/st8d/leds02.png
-	frame	data/bgs/sor3/st8d/leds03.png
-	frame	data/bgs/sor3/st8d/leds04.png
-	frame	data/bgs/sor3/st8d/leds05.png
-	frame	data/bgs/sor3/st8d/leds06.png
-	frame	data/bgs/sor3/st8d/leds05.png
-	frame	data/bgs/sor3/st8d/leds04.png
-	frame	data/bgs/sor3/st8d/leds03.png
-	frame	data/bgs/sor3/st8d/leds02.png
-	frame	data/bgs/sor3/st8d/leds01.png
+    loop    1
+    delay    8
+    offset    1 170
+    frame    data/bgs/sor3/st8d/leds00.png
+    frame    data/bgs/sor3/st8d/leds01.png
+    frame    data/bgs/sor3/st8d/leds02.png
+    frame    data/bgs/sor3/st8d/leds03.png
+    frame    data/bgs/sor3/st8d/leds04.png
+    frame    data/bgs/sor3/st8d/leds05.png
+    frame    data/bgs/sor3/st8d/leds06.png
+    frame    data/bgs/sor3/st8d/leds05.png
+    frame    data/bgs/sor3/st8d/leds04.png
+    frame    data/bgs/sor3/st8d/leds03.png
+    frame    data/bgs/sor3/st8d/leds02.png
+    frame    data/bgs/sor3/st8d/leds01.png

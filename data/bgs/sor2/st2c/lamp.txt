@@ -1,60 +1,60 @@
-name		 	st2_lamp
-type		 	none
-shadow		 	0
-antigravity	 	100
-ondrawscript 	data/scripts/ondraw/lamp.c
-animationscript	data/scripts/animation/default.c
+name             st2_lamp
+type             none
+shadow             0
+antigravity         100
+ondrawscript     data/scripts/ondraw/lamp.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	4
-	offset	1 180
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	
+    loop    1
+    delay    4
+    offset    1 180
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    
 anim follow1
-	loop	0
-	delay	2
-	offset	1 180
-	frame	data/bgs/sor2/st2c/lamp02.png
-	frame	data/bgs/sor2/st2c/lamp03.png
-	frame	data/bgs/sor2/st2c/lamp02.png
-	frame	data/bgs/sor2/st2c/lamp03.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp04.png
-	frame	data/bgs/sor2/st2c/lamp05.png
-	frame	data/bgs/sor2/st2c/lamp04.png
-	frame	data/bgs/sor2/st2c/lamp05.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp02.png
-	frame	data/bgs/sor2/st2c/lamp03.png
-	frame	data/bgs/sor2/st2c/lamp02.png
-	frame	data/bgs/sor2/st2c/lamp03.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp04.png
-	frame	data/bgs/sor2/st2c/lamp05.png
-	frame	data/bgs/sor2/st2c/lamp04.png
-	frame	data/bgs/sor2/st2c/lamp05.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp02.png
-	frame	data/bgs/sor2/st2c/lamp03.png
-	frame	data/bgs/sor2/st2c/lamp02.png
-	frame	data/bgs/sor2/st2c/lamp03.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	frame	data/bgs/sor2/st2c/lamp00.png
-	frame	data/bgs/sor2/st2c/lamp01.png
-	@cmd aniChange 0 "ANI_IDLE"
-	frame	data/bgs/sor2/st2c/lamp00.png
+    loop    0
+    delay    2
+    offset    1 180
+    frame    data/bgs/sor2/st2c/lamp02.png
+    frame    data/bgs/sor2/st2c/lamp03.png
+    frame    data/bgs/sor2/st2c/lamp02.png
+    frame    data/bgs/sor2/st2c/lamp03.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp04.png
+    frame    data/bgs/sor2/st2c/lamp05.png
+    frame    data/bgs/sor2/st2c/lamp04.png
+    frame    data/bgs/sor2/st2c/lamp05.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp02.png
+    frame    data/bgs/sor2/st2c/lamp03.png
+    frame    data/bgs/sor2/st2c/lamp02.png
+    frame    data/bgs/sor2/st2c/lamp03.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp04.png
+    frame    data/bgs/sor2/st2c/lamp05.png
+    frame    data/bgs/sor2/st2c/lamp04.png
+    frame    data/bgs/sor2/st2c/lamp05.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp02.png
+    frame    data/bgs/sor2/st2c/lamp03.png
+    frame    data/bgs/sor2/st2c/lamp02.png
+    frame    data/bgs/sor2/st2c/lamp03.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    frame    data/bgs/sor2/st2c/lamp00.png
+    frame    data/bgs/sor2/st2c/lamp01.png
+    @cmd aniChange 0 "ANI_IDLE"
+    frame    data/bgs/sor2/st2c/lamp00.png

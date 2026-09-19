@@ -1,15 +1,15 @@
-name			Cafe #GROUND
-type			None
-offscreenkill		9999
+name            Cafe #GROUND
+type            None
+offscreenkill        9999
 setlayer 5
 
 animationscript data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	20
-	offset	0 0
-	frame	data/bgs/sor1/st01/cafe01.png
-	@cmd offScreenKill 800 0
-	frame	data/bgs/sor1/st01/cafe02.png
+    loop    1
+    delay    20
+    offset    0 0
+    frame    data/bgs/sor1/st01/cafe01.png
+    @cmd offScreenKill 800 0
+    frame    data/bgs/sor1/st01/cafe02.png
 

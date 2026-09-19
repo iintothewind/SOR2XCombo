@@ -1,19 +1,19 @@
-name			St2_Fish1
-type			none
-shadow			0
-antigravity		100
-setlayer		-50
-animationscript	data/scripts/animation/default.c
+name            St2_Fish1
+type            none
+shadow            0
+antigravity        100
+setlayer        -50
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	6
-	offset	5 2
-	@cmd dasher 0.1 0 0
-	frame	data/bgs/sor3/st2c/fish100.png
-	@cmd dasher 0.05 0 0
-	frame	data/bgs/sor3/st2c/fish101.png
-		delay	1
-	@cmd looper 0 80
-	@cmd flip
-	frame	data/bgs/sor3/st2c/fish100.png
+    loop    1
+    delay    6
+    offset    5 2
+    @cmd dasher 0.1 0 0
+    frame    data/bgs/sor3/st2c/fish100.png
+    @cmd dasher 0.05 0 0
+    frame    data/bgs/sor3/st2c/fish101.png
+        delay    1
+    @cmd looper 0 80
+    @cmd flip
+    frame    data/bgs/sor3/st2c/fish100.png

@@ -1,6 +1,6 @@
 void main()
 {
-	void self = getlocalvar("self");
+    void self = getlocalvar("self");
 
-	setglobalvar("St7_People", self);
+    setglobalvar("St7_People", self);
 }

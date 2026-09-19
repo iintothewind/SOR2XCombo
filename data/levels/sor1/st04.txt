@@ -1,28 +1,28 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor1/st04/Back01.png
-panel		data/bgs/sor1/st04/Pn01.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		0
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background    data/bgs/sor1/st04/Back01.png
+panel        data/bgs/sor1/st04/Pn01.png
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        0
 stagenumber 4
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
 
 cameratype 1
 cameraoffset 0 -30
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowcolor   64_64_64
 at             0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
@@ -35,22 +35,22 @@ Hole  2480  275  22  0  611  701  48
 
 #########################################################################################
 
-load		Stage 3
-load		Buraco 3
-load		Egg 3
-load		RoadBlock_B 3
+load        Stage 3
+load        Buraco 3
+load        Egg 3
+load        RoadBlock_B 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-group		4 4
-at		0
+group        4 4
+at        0
 
 spawn  BossX1 1
 coords  -100  191
@@ -60,29 +60,29 @@ Wait
 at  600
 
 spawn  BasicX3 1
-map			4
+map            4
 coords  550 230
 at  200
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			4
+spawn        KusanagiB 1
+weapon    Sword 1
+map            4
 coords  550 245
 at  300
 
-spawn		KusanagiB 1
-weapon	Kunai 1
-map			4
+spawn        KusanagiB 1
+weapon    Kunai 1
+map            4
 coords  -200 245
 at  400
 
 spawn  SignalX 1
-map			4
+map            4
 coords  550 230
 at  550
 
 spawn  BasicX2 1
-map			4
+map            4
 coords  550 230
 at  550
 
@@ -90,8 +90,8 @@ spawn  BongoX 1
 coords  550 190
 at  550
 
-group		5 5
-at		601
+group        5 5
+at        601
 
 spawn  Egg 1
 coords  564  256
@@ -114,65 +114,65 @@ at  712
 Wait
 at  1100
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			4
+spawn        DonovanB 1
+weapon        Pipe 1
+map            4
 coords  600  191
 at  750
 
 spawn  SignalX 1
-map			4
+map            4
 coords  -100  200
 at  800
 
 spawn  BasicX3 1
-map			4
+map            4
 coords  -50  191
 at  900
 
 spawn  ElectraX 1
-map			4
+map            4
 coords  600  190
 at  1000
 
 spawn  ReineX 1
-map			4
+map            4
 coords  -100  190
 at  1100
 
 Wait
 at  1300
 
-group		2 2
+group        2 2
 at  1300
 
-spawn		KusanagiB 1
-weapon	Kunai 1
-map			4
+spawn        KusanagiB 1
+weapon    Kunai 1
+map            4
 coords  -100  190
 at  1300
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			4
+spawn        KusanagiB 1
+weapon    Sword 1
+map            4
 coords  600  190
 at  1300
 
 spawn  SignalX 1
-map			4
+map            4
 coords  -100  195
 at  1300
 
 spawn  BasicX2 1
-map			4
+map            4
 coords  -100 190
 at  1300
 
 Wait
 at  2200
 
-group		5 5
-at		1351
+group        5 5
+at        1351
 
 spawn  Egg 1
 coords  635 254
@@ -196,12 +196,12 @@ coords  1704  200
 at  1351
 
 spawn  BasicX3 1
-map			4
+map            4
 coords  550 250
 at  1614
 
 spawn  Buraco 1
-map			4
+map            4
 Flip 1
 coords  479  228
 at  1767
@@ -211,37 +211,37 @@ Wait
 at  2800
 
 spawn  KusanagiB 1
-map			4
+map            4
 coords  550 190
 at  2300
 
 spawn  KusanagiB 1
-map			4
+map            4
 coords  550 195
 at  2500
 
-group		2 2
+group        2 2
 at  2650
 
 spawn  BasicX3 1
-map			1
+map            1
 coords  -50  195
 at  2650
 
 spawn  BasicX3 1
-map			1
+map            1
 coords  550 190
 at  2650
 
 #########################################################################################
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			2850
+at            2850
 
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			1
+spawn        DonovanB 1
+weapon        Pipe 1
+map            1
 coords  550  200
 at  2850
 
@@ -249,24 +249,24 @@ spawn  Egg 1
 coords  600  250
 at  2900
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			1
+spawn        KusanagiB 1
+weapon    Sword 1
+map            1
 coords  550  250
 at  2950
 
 spawn  BasicX3 1
-map			1
+map            1
 coords  -100 190
 at  3050
 
 spawn  BongoX 1
-map			1
+map            1
 coords  -100 190
 at  3150
 
-group		3 3
-at		3319
+group        3 3
+at        3319
 
 spawn  AbadedeB 1
 map    4

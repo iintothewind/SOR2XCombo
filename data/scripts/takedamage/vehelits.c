@@ -2,8 +2,8 @@
 
 void main()
 {
-	hitDmg();
-	comboDmg();
-	koCount();
-	savePause();
+    hitDmg();
+    comboDmg();
+    koCount();
+    savePause();
 }

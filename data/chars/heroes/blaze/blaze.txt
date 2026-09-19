@@ -1,1458 +1,1458 @@
 ##MAIN
-name				Blaze
-type				player
+name                Blaze
+type                player
 
 ##LIFE
-health				999
+health                999
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight			1 #SCRIPT
+jumpheight            1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			5 #SCRIPT
+mp                    120
+mprate              5 #SCRIPT
 
 ##GRAB
-grabdistance 		18 #36/33/30
-grabfinish 			0 #PLAYER=0/ENEMY=1
+grabdistance         18 #36/33/30
+grabfinish             0 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				72
+antigravity            -1 #-1/-2/-3
+height                72
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2 3
-weapons				Blaze_Knife Blaze_Sword Blaze_Pipe Blaze_Kunai Blaze
-weaploss			2
-modelflag			3
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bflash				Block
-death				1
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2 3
+weapons                Blaze_Knife Blaze_Sword Blaze_Pipe Blaze_Kunai Blaze
+weaploss            2
+modelflag            3
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bflash                Block
+death                1
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/blaze.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/jumping.c
-onblocksscript		data/scripts/onblocks/jumping.c
-onmoveascript		data/scripts/onmove/default.c
-onmodelcopyscript	data/scripts/onmodelcopy/default.c
-ondrawscript		data/scripts/ondraw/blaze.c
-onspawnscript		data/scripts/onspawn/player.c
-onfallscript		data/scripts/onfall/default.c
-onpainscript		data/scripts/onpain/default.c
-animationscript	 	data/scripts/animation/default.c
-keyscript			data/scripts/key/blaze.c
-takedamagescript	data/scripts/takedamage/default.c
-script				data/scripts/updateentity/blaze.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/blaze.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/jumping.c
+onblocksscript        data/scripts/onblocks/jumping.c
+onmoveascript        data/scripts/onmove/default.c
+onmodelcopyscript    data/scripts/onmodelcopy/default.c
+ondrawscript        data/scripts/ondraw/blaze.c
+onspawnscript        data/scripts/onspawn/player.c
+onfallscript        data/scripts/onfall/default.c
+onpainscript        data/scripts/onpain/default.c
+animationscript         data/scripts/animation/default.c
+keyscript            data/scripts/key/blaze.c
+takedamagescript    data/scripts/takedamage/default.c
+script                data/scripts/updateentity/blaze.c
 
 ##ICONS
-icon				data/chars/heroes/blaze/icon.png 1
+icon                data/chars/heroes/blaze/icon.png 1
 
 ##PARROWS
-parrow				data/sprites/parrow.png 	-15 -140
-parrow2				data/sprites/parrow2.png 	-15 -140
-parrow3				data/sprites/parrow3.png 	-15 -140
-parrow4				data/sprites/parrow4.png 	-15 -140
+parrow                data/sprites/parrow.png     -15 -140
+parrow2                data/sprites/parrow2.png     -15 -140
+parrow3                data/sprites/parrow3.png     -15 -140
+parrow4                data/sprites/parrow4.png     -15 -140
 
 ##DIESOUND
-diesound			data/voices/Blaze1.wav
+diesound            data/voices/Blaze1.wav
 
 ##REMAPS
-remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter1.png
-remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter2.png
-remap				data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter3.png
+remap                data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter1.png
+remap                data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter2.png
+remap                data/chars/heroes/blaze/idle00.png data/chars/heroes/blaze/alter3.png
 
 ##COMMANDS
-com 				a2	a2		freespecial3		#RAGE
-com 				d f a2		freespecial		#RAGE
-com 				a2 + s		freespecial3		#RAGE
-com 				f f a2		freespecial2	#SUPER
+com                 a2    a2        freespecial3        #RAGE
+com                 d f a2        freespecial        #RAGE
+com                 a2 + s        freespecial3        #RAGE
+com                 f f a2        freespecial2    #SUPER
 
 ##LOADS
-load				Blaze_Orb
-load				Blaze_Orb_B
-load				BlazeS
-load				BlazeSW
-load				Blaze_Knife
-load				Blaze_Sword
-load				Blaze_Pipe
-load				Blaze_Kunai
-load				Blaze_Bike
-load				Upper_Shot
-load				umissile
-load				Grenade
+load                Blaze_Orb
+load                Blaze_Orb_B
+load                BlazeS
+load                BlazeSW
+load                Blaze_Knife
+load                Blaze_Sword
+load                Blaze_Pipe
+load                Blaze_Kunai
+load                Blaze_Bike
+load                Upper_Shot
+load                umissile
+load                Grenade
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim waiting
-	fshadow 0
-	loop	1
-	delay	16
-	offset	127 179
-	frame	data/chars/heroes/blaze/idle00.png
-	frame	data/chars/heroes/blaze/idle01.png
-	frame	data/chars/heroes/blaze/idle02.png
-	frame	data/chars/heroes/blaze/idle03.png
-	frame	data/chars/heroes/blaze/idle00.png
-	frame	data/chars/heroes/blaze/idle01.png
-	frame	data/chars/heroes/blaze/idle02.png
-	frame	data/chars/heroes/blaze/idle03.png
-		delay	12
-	@cmd looper 4 9
-	frame	data/chars/heroes/blaze/idle04.png
-	frame	data/chars/heroes/blaze/idle05.png
-	frame	data/chars/heroes/blaze/idle06.png
-	frame	data/chars/heroes/blaze/idle07.png
-	frame	data/chars/heroes/blaze/idle08.png
+    fshadow 0
+    loop    1
+    delay    16
+    offset    127 179
+    frame    data/chars/heroes/blaze/idle00.png
+    frame    data/chars/heroes/blaze/idle01.png
+    frame    data/chars/heroes/blaze/idle02.png
+    frame    data/chars/heroes/blaze/idle03.png
+    frame    data/chars/heroes/blaze/idle00.png
+    frame    data/chars/heroes/blaze/idle01.png
+    frame    data/chars/heroes/blaze/idle02.png
+    frame    data/chars/heroes/blaze/idle03.png
+        delay    12
+    @cmd looper 4 9
+    frame    data/chars/heroes/blaze/idle04.png
+    frame    data/chars/heroes/blaze/idle05.png
+    frame    data/chars/heroes/blaze/idle06.png
+    frame    data/chars/heroes/blaze/idle07.png
+    frame    data/chars/heroes/blaze/idle08.png
 
 anim select
-	fshadow 0
-	loop	0
-	delay	100000
-	offset	127 179
-	frame	data/chars/heroes/blaze/idle00.png
-		delay	24
-	frame	data/chars/heroes/blaze/idle00.png
-	frame	data/chars/heroes/blaze/idle00.png
+    fshadow 0
+    loop    0
+    delay    100000
+    offset    127 179
+    frame    data/chars/heroes/blaze/idle00.png
+        delay    24
+    frame    data/chars/heroes/blaze/idle00.png
+    frame    data/chars/heroes/blaze/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	127 179
-	bbox 	112 108 30 71
-	frame	data/chars/heroes/blaze/idle00.png
-	frame	data/chars/heroes/blaze/idle01.png
-	frame	data/chars/heroes/blaze/idle02.png
-	frame	data/chars/heroes/blaze/idle03.png
-	frame	data/chars/heroes/blaze/idle00.png
-	frame	data/chars/heroes/blaze/idle01.png
-	frame	data/chars/heroes/blaze/idle02.png
-	frame	data/chars/heroes/blaze/idle03.png
-		delay	12
-	@cmd looper 4 9
-	frame	data/chars/heroes/blaze/idle04.png
-	frame	data/chars/heroes/blaze/idle05.png
-	frame	data/chars/heroes/blaze/idle06.png
-	frame	data/chars/heroes/blaze/idle07.png
-	frame	data/chars/heroes/blaze/idle08.png
+    loop    1
+    delay    16
+    offset    127 179
+    bbox     112 108 30 71
+    frame    data/chars/heroes/blaze/idle00.png
+    frame    data/chars/heroes/blaze/idle01.png
+    frame    data/chars/heroes/blaze/idle02.png
+    frame    data/chars/heroes/blaze/idle03.png
+    frame    data/chars/heroes/blaze/idle00.png
+    frame    data/chars/heroes/blaze/idle01.png
+    frame    data/chars/heroes/blaze/idle02.png
+    frame    data/chars/heroes/blaze/idle03.png
+        delay    12
+    @cmd looper 4 9
+    frame    data/chars/heroes/blaze/idle04.png
+    frame    data/chars/heroes/blaze/idle05.png
+    frame    data/chars/heroes/blaze/idle06.png
+    frame    data/chars/heroes/blaze/idle07.png
+    frame    data/chars/heroes/blaze/idle08.png
 
 anim chargeattack
-	chargetime 9999
-	loop	0
-	delay	1
-	offset	127 179
-	frame	data/chars/heroes/blaze/idle00.png
+    chargetime 9999
+    loop    0
+    delay    1
+    offset    127 179
+    frame    data/chars/heroes/blaze/idle00.png
 
 anim walk
-	loop	1
-	delay	14
-	offset	127 179
-	bbox 	124 107 12 73
-	frame	data/chars/heroes/blaze/walk00.png
-	frame	data/chars/heroes/blaze/walk01.png
-	frame	data/chars/heroes/blaze/walk02.png
-	frame	data/chars/heroes/blaze/walk03.png
-	frame	data/chars/heroes/blaze/walk04.png
-	frame	data/chars/heroes/blaze/walk05.png
+    loop    1
+    delay    14
+    offset    127 179
+    bbox     124 107 12 73
+    frame    data/chars/heroes/blaze/walk00.png
+    frame    data/chars/heroes/blaze/walk01.png
+    frame    data/chars/heroes/blaze/walk02.png
+    frame    data/chars/heroes/blaze/walk03.png
+    frame    data/chars/heroes/blaze/walk04.png
+    frame    data/chars/heroes/blaze/walk05.png
 
 anim run
-	@cmd lockAni "runType" "off"
-	cancel 0 5 0 a2 freespecial2
-	loop	1
-	delay	10
-	offset	127 179
-	bbox 	123 113 17 68
-	frame	data/chars/heroes/blaze/run00.png
-	frame	data/chars/heroes/blaze/run01.png
-	sound	data/sounds/Run.wav
-	frame	data/chars/heroes/blaze/run02.png
-	frame	data/chars/heroes/blaze/run03.png
-	frame	data/chars/heroes/blaze/run04.png
-	sound	data/sounds/Run2.wav
-	frame	data/chars/heroes/blaze/run05.png
+    @cmd lockAni "runType" "off"
+    cancel 0 5 0 a2 freespecial2
+    loop    1
+    delay    10
+    offset    127 179
+    bbox     123 113 17 68
+    frame    data/chars/heroes/blaze/run00.png
+    frame    data/chars/heroes/blaze/run01.png
+    sound    data/sounds/Run.wav
+    frame    data/chars/heroes/blaze/run02.png
+    frame    data/chars/heroes/blaze/run03.png
+    frame    data/chars/heroes/blaze/run04.png
+    sound    data/sounds/Run2.wav
+    frame    data/chars/heroes/blaze/run05.png
 
 anim get
-	loop	0
-	delay	16
-	offset	127 179
-	frame	data/chars/heroes/blaze/get00.png
+    loop    0
+    delay    16
+    offset    127 179
+    frame    data/chars/heroes/blaze/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	127 179
-	#bbox 	114 105 11 76
-	@cmd vaultStuck
-	frame	data/chars/heroes/blaze/grab00.png
+    loop    0
+    delay    16
+    offset    127 179
+    #bbox     114 105 11 76
+    @cmd vaultStuck
+    frame    data/chars/heroes/blaze/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	127 179
-	bbox 	117 118 23 63
-	sound	data/voices/girl_pain2.wav
-	frame	data/chars/heroes/blaze/grabbed00.png
+    loop    0
+    delay    8
+    offset    127 179
+    bbox     117 118 23 63
+    sound    data/voices/girl_pain2.wav
+    frame    data/chars/heroes/blaze/grabbed00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	127 179
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/heroes/blaze/jump00.png
-	frame	data/chars/heroes/blaze/jump01.png
+    loop    0
+    delay    30
+    offset    127 179
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/heroes/blaze/jump00.png
+    frame    data/chars/heroes/blaze/jump01.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	127 179
-	bbox 	115 121 21 60
-	frame	data/chars/heroes/blaze/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    127 179
+    bbox     115 121 21 60
+    frame    data/chars/heroes/blaze/jumpdelay00.png
 
 anim jump
-	loop	0
-	delay	30
-	offset	127 179
-	bbox 	121 107 16 52
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/heroes/blaze/jump00.png
-	frame	data/chars/heroes/blaze/jump01.png
+    loop    0
+    delay    30
+    offset    127 179
+    bbox     121 107 16 52
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/heroes/blaze/jump00.png
+    frame    data/chars/heroes/blaze/jump01.png
 
 anim walkoff
-	loop	0
-	delay	6
-	offset	127 179
-	bbox 	121 107 16 52
-	@cmd jump 1
-	frame	data/chars/heroes/blaze/jump00.png
-	frame	data/chars/heroes/blaze/jump01.png
+    loop    0
+    delay    6
+    offset    127 179
+    bbox     121 107 16 52
+    @cmd jump 1
+    frame    data/chars/heroes/blaze/jump00.png
+    frame    data/chars/heroes/blaze/jump01.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	127 179
-	bbox 	115 121 21 60
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/blaze/jumpland00.png
+    loop    0
+    delay    12
+    offset    127 179
+    bbox     115 121 21 60
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/blaze/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	127 179
-	bbox 	117 118 23 63
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
-	frame	data/chars/heroes/blaze/grabbed00.png
-	frame	data/chars/heroes/blaze/grabbed01.png
+    loop    0
+    delay    4
+    offset    127 179
+    bbox     117 118 23 63
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
+    frame    data/chars/heroes/blaze/grabbed00.png
+    frame    data/chars/heroes/blaze/grabbed01.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	127 179
-	bbox 	115 116 23 65
-	frame	data/chars/heroes/blaze/pain00.png
-	frame	data/chars/heroes/blaze/pain01.png
-	frame	data/chars/heroes/blaze/pain00.png
-	frame	data/chars/heroes/blaze/pain01.png
-	frame	data/chars/heroes/blaze/pain00.png
-	frame	data/chars/heroes/blaze/pain01.png
-	frame	data/chars/heroes/blaze/pain00.png
-	frame	data/chars/heroes/blaze/pain01.png
+    loop    0
+    delay    4
+    offset    127 179
+    bbox     115 116 23 65
+    frame    data/chars/heroes/blaze/pain00.png
+    frame    data/chars/heroes/blaze/pain01.png
+    frame    data/chars/heroes/blaze/pain00.png
+    frame    data/chars/heroes/blaze/pain01.png
+    frame    data/chars/heroes/blaze/pain00.png
+    frame    data/chars/heroes/blaze/pain01.png
+    frame    data/chars/heroes/blaze/pain00.png
+    frame    data/chars/heroes/blaze/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	127 179
-	bbox 	109 117 18 63
-	frame	data/chars/heroes/blaze/pain200.png
-	frame	data/chars/heroes/blaze/pain201.png
-	frame	data/chars/heroes/blaze/pain200.png
-	frame	data/chars/heroes/blaze/pain201.png
-	frame	data/chars/heroes/blaze/pain200.png
-	frame	data/chars/heroes/blaze/pain201.png
-	frame	data/chars/heroes/blaze/pain200.png
-	frame	data/chars/heroes/blaze/pain201.png
+    loop    0
+    delay    4
+    offset    127 179
+    bbox     109 117 18 63
+    frame    data/chars/heroes/blaze/pain200.png
+    frame    data/chars/heroes/blaze/pain201.png
+    frame    data/chars/heroes/blaze/pain200.png
+    frame    data/chars/heroes/blaze/pain201.png
+    frame    data/chars/heroes/blaze/pain200.png
+    frame    data/chars/heroes/blaze/pain201.png
+    frame    data/chars/heroes/blaze/pain200.png
+    frame    data/chars/heroes/blaze/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	127 179
-	bbox 	104 121 41 29
-	frame	data/chars/heroes/blaze/fall00.png
-		delay	8
-	bbox 	92 159 75 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/blaze/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    127 179
+    bbox     104 121 41 29
+    frame    data/chars/heroes/blaze/fall00.png
+        delay    8
+    bbox     92 159 75 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	127 179
-	bbox 	104 121 41 29
-	frame	data/chars/heroes/blaze/fall00.png
-		delay	8
-	bbox 	92 159 75 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/blaze/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    127 179
+    bbox     104 121 41 29
+    frame    data/chars/heroes/blaze/fall00.png
+        delay    8
+    bbox     92 159 75 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	127 179
-	bbox 	104 121 41 29
-	frame	data/chars/heroes/blaze/fall00.png
-		delay	8
-	bbox 	92 159 75 22
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/blaze/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    127 179
+    bbox     104 121 41 29
+    frame    data/chars/heroes/blaze/fall00.png
+        delay    8
+    bbox     92 159 75 22
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	127 179
-	frame	data/chars/heroes/blaze/fall600.png
-	frame	data/chars/heroes/blaze/fall601.png
-	frame	data/chars/heroes/blaze/fall602.png
-	frame	data/chars/heroes/blaze/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/blaze/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    127 179
+    frame    data/chars/heroes/blaze/fall600.png
+    frame    data/chars/heroes/blaze/fall601.png
+    frame    data/chars/heroes/blaze/fall602.png
+    frame    data/chars/heroes/blaze/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	127 179
-	frame	data/chars/heroes/blaze/fall700.png
-	frame	data/chars/heroes/blaze/fall701.png
-	frame	data/chars/heroes/blaze/fall702.png
-	frame	data/chars/heroes/blaze/fall703.png
-	frame	data/chars/heroes/blaze/fall704.png
-	frame	data/chars/heroes/blaze/fall705.png
+    loop    0
+    delay    1000
+    offset    127 179
+    frame    data/chars/heroes/blaze/fall700.png
+    frame    data/chars/heroes/blaze/fall701.png
+    frame    data/chars/heroes/blaze/fall702.png
+    frame    data/chars/heroes/blaze/fall703.png
+    frame    data/chars/heroes/blaze/fall704.png
+    frame    data/chars/heroes/blaze/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	127 179
-	bbox 	104 121 41 29
-	hitfx	data/sounds/MediumKick.wav
-	attack 104 121 41 29 4 1 0 0 20 12
-	frame	data/chars/heroes/blaze/fall00.png
-		delay	999
-	frame	data/chars/heroes/blaze/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	92 159 75 22
-	#sound	data/sounds/Falling.wav
-	sound	data/voices/girl_pain5.wav
-	frame	data/chars/heroes/blaze/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    127 179
+    bbox     104 121 41 29
+    hitfx    data/sounds/MediumKick.wav
+    attack 104 121 41 29 4 1 0 0 20 12
+    frame    data/chars/heroes/blaze/fall00.png
+        delay    999
+    frame    data/chars/heroes/blaze/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     92 159 75 22
+    #sound    data/sounds/Falling.wav
+    sound    data/voices/girl_pain5.wav
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	127 179
-	bbox 	122 122 18 51
-	hitfx	data/sounds/MediumKick.wav
-	attack 122 122 18 51 4 1 0 0 20 12
-	frame	data/chars/heroes/blaze/fall900.png
-		delay	999
-	frame	data/chars/heroes/blaze/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	92 159 75 22
-	#sound	data/sounds/Falling.wav
-	sound	data/voices/girl_pain5.wav
-	frame	data/chars/heroes/blaze/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    127 179
+    bbox     122 122 18 51
+    hitfx    data/sounds/MediumKick.wav
+    attack 122 122 18 51 4 1 0 0 20 12
+    frame    data/chars/heroes/blaze/fall900.png
+        delay    999
+    frame    data/chars/heroes/blaze/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     92 159 75 22
+    #sound    data/sounds/Falling.wav
+    sound    data/voices/girl_pain5.wav
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	127 179
-	frame	data/chars/heroes/blaze/fall01.png
-	frame	data/chars/heroes/blaze/fall01.png
-	frame	data/chars/heroes/blaze/fall01.png
+    loop    0
+    delay    16
+    offset    127 179
+    frame    data/chars/heroes/blaze/fall01.png
+    frame    data/chars/heroes/blaze/fall01.png
+    frame    data/chars/heroes/blaze/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	127 179
-	@cmd recoverGp
-	frame	data/chars/heroes/blaze/rise00.png
-	frame	data/chars/heroes/blaze/rise01.png
-	frame	data/chars/heroes/blaze/rise00.png
-	frame	data/chars/heroes/blaze/rise02.png
+    loop    0
+    delay    16
+    offset    127 179
+    @cmd recoverGp
+    frame    data/chars/heroes/blaze/rise00.png
+    frame    data/chars/heroes/blaze/rise01.png
+    frame    data/chars/heroes/blaze/rise00.png
+    frame    data/chars/heroes/blaze/rise02.png
 
 anim riseattack
-	loop	0
-	delay	2
-	offset	127 179
-	@cmd invinc 2
-	@cmd recoverGp
-	@cmd dasher 2 0 0
-	@cmd copyMove
-	frame	data/chars/heroes/blaze/dodge00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge04.png
-	delay	8
-	@cmd dasher 0 0 0
-	@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold"
-	frame	data/chars/heroes/blaze/dodge05.png
+    loop    0
+    delay    2
+    offset    127 179
+    @cmd invinc 2
+    @cmd recoverGp
+    @cmd dasher 2 0 0
+    @cmd copyMove
+    frame    data/chars/heroes/blaze/dodge00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge04.png
+    delay    8
+    @cmd dasher 0 0 0
+    @cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold"
+    frame    data/chars/heroes/blaze/dodge05.png
 
 anim attack1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	127 179
-	bbox 	119 112 16 69
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/heroes/blaze/a100.png
-	attack 142 123 30 40 6 0 0 0 10 12
-	bbox 	127 116 17 65
-	frame	data/chars/heroes/blaze/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	119 112 16 69
-	frame	data/chars/heroes/blaze/a100.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    127 179
+    bbox     119 112 16 69
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/heroes/blaze/a100.png
+    attack 142 123 30 40 6 0 0 0 10 12
+    bbox     127 116 17 65
+    frame    data/chars/heroes/blaze/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     119 112 16 69
+    frame    data/chars/heroes/blaze/a100.png
 
 anim attack2
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	127 179
-	bbox 	118 111 19 70
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/heroes/blaze/a200.png
-	attack 129 118 30 40 12 0 0 0 10 12
-	bbox 	130 111 13 70
-	frame	data/chars/heroes/blaze/a201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/a201.png
-	attack 163 120 30 40 12 0 0 0 10 12
-	bbox 	154 117 19 64
-	frame	data/chars/heroes/blaze/a202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	142 107 16 74
-	frame	data/chars/heroes/blaze/a203.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    127 179
+    bbox     118 111 19 70
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/heroes/blaze/a200.png
+    attack 129 118 30 40 12 0 0 0 10 12
+    bbox     130 111 13 70
+    frame    data/chars/heroes/blaze/a201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/a201.png
+    attack 163 120 30 40 12 0 0 0 10 12
+    bbox     154 117 19 64
+    frame    data/chars/heroes/blaze/a202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     142 107 16 74
+    frame    data/chars/heroes/blaze/a203.png
 
 anim attack3
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	@script
-	if(frame == 0) {
-		void self 	= getlocalvar("self");
-		void target = getentityproperty(self, "opponent");
-		void type  	= getentityproperty(target,"type");
-		void subType	= getentityproperty(target,"subtype");
-		if(target != NULL()
-		&& getentityproperty(target, "dead") == 0
-		&& type == openborconstant("TYPE_ENEMY")
-		&& subType != openborconstant("SUBTYPE_NOTGRAB")){
-			if (readKey("d")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
-			else if (readKey("u")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
-		}
-	}
-	@end_script
-	@cmd keyMove 1 0
-	offset	127 179
-	bbox 	127 108 16 73
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/a300.png
-	attack2 154 130 20 50 7 0 0 0 30 18
-	bbox 	147 108 14 73
-	frame	data/chars/heroes/blaze/a301.png
-	hitfx	data/sounds/HighKick.wav
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/a301.png
-	attack8 154 120 40 60 9 1 0 0 25 18
-	frame	data/chars/heroes/blaze/a302.png
-	delay 2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/a302.png
-		delay	18
-	attack8 154 100 40 80 9 1 0 0 25 18
-	frame	data/chars/heroes/blaze/a303.png
-		delay	6
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/a302.png
-	frame	data/chars/heroes/blaze/a301.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    @script
+    if(frame == 0) {
+        void self     = getlocalvar("self");
+        void target = getentityproperty(self, "opponent");
+        void type      = getentityproperty(target,"type");
+        void subType    = getentityproperty(target,"subtype");
+        if(target != NULL()
+        && getentityproperty(target, "dead") == 0
+        && type == openborconstant("TYPE_ENEMY")
+        && subType != openborconstant("SUBTYPE_NOTGRAB")){
+            if (readKey("d")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
+            else if (readKey("u")) { performattack(self, openborconstant("ANI_FOLLOW5"), 0); }
+        }
+    }
+    @end_script
+    @cmd keyMove 1 0
+    offset    127 179
+    bbox     127 108 16 73
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/a300.png
+    attack2 154 130 20 50 7 0 0 0 30 18
+    bbox     147 108 14 73
+    frame    data/chars/heroes/blaze/a301.png
+    hitfx    data/sounds/HighKick.wav
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/a301.png
+    attack8 154 120 40 60 9 1 0 0 25 18
+    frame    data/chars/heroes/blaze/a302.png
+    delay 2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/a302.png
+        delay    18
+    attack8 154 100 40 80 9 1 0 0 25 18
+    frame    data/chars/heroes/blaze/a303.png
+        delay    6
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/a302.png
+    frame    data/chars/heroes/blaze/a301.png
 
 anim attack7 #Upper Shoot
-	loop	0
-	delay	6
-	offset	127 179
-	frame	data/chars/heroes/blaze/shoot00.png
-	delay	8
-	@cmd shoot "Upper_Shot" 30 75 0 5 5 0
-	@cmd spawnToss "Cartridge" 50 75 1 -0.2 1 0
-	frame	data/chars/heroes/blaze/shoot03.png
-	delay	12
-	@cmd dasher -0.2 0 0
-	frame	data/chars/heroes/blaze/shoot04.png
+    loop    0
+    delay    6
+    offset    127 179
+    frame    data/chars/heroes/blaze/shoot00.png
+    delay    8
+    @cmd shoot "Upper_Shot" 30 75 0 5 5 0
+    @cmd spawnToss "Cartridge" 50 75 1 -0.2 1 0
+    frame    data/chars/heroes/blaze/shoot03.png
+    delay    12
+    @cmd dasher -0.2 0 0
+    frame    data/chars/heroes/blaze/shoot04.png
 
 anim attack8 #Upper Missile
-	loop	0
-	delay	6
-	offset	127 179
-	sound	data/voices/Viper09.wav
-	frame	data/chars/heroes/blaze/shoot05.png
-	delay	8
-	@cmd shoot "umissile" 30 75 0 2 2 0
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/heroes/blaze/shoot07.png
-	delay	12
-	@cmd dasher -0.2 0 0
-	frame	data/chars/heroes/blaze/shoot08.png
+    loop    0
+    delay    6
+    offset    127 179
+    sound    data/voices/Viper09.wav
+    frame    data/chars/heroes/blaze/shoot05.png
+    delay    8
+    @cmd shoot "umissile" 30 75 0 2 2 0
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/heroes/blaze/shoot07.png
+    delay    12
+    @cmd dasher -0.2 0 0
+    frame    data/chars/heroes/blaze/shoot08.png
 
 anim attack9 #Upper Grenade
-	loop	0
-	delay	6
-	offset	127 179
-	frame	data/chars/heroes/blaze/fgrabatk200.png
-	delay	8
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/heroes/blaze/grenade00.png
-	@cmd spawnToss "Grenade" 30 75 1 2.5 3 0
-	frame	data/chars/heroes/blaze/fgrabatk202.png
-	delay	12
-	frame	data/chars/heroes/blaze/fgrabatk203.png
+    loop    0
+    delay    6
+    offset    127 179
+    frame    data/chars/heroes/blaze/fgrabatk200.png
+    delay    8
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/heroes/blaze/grenade00.png
+    @cmd spawnToss "Grenade" 30 75 1 2.5 3 0
+    frame    data/chars/heroes/blaze/fgrabatk202.png
+    delay    12
+    frame    data/chars/heroes/blaze/fgrabatk203.png
 
 
 anim attackboth #BACK ATTACK
-	fastattack 1
-	jugglecost 1
-	forcedirection 1
-	otg 1
-	loop	0
-	delay	6
-	offset	127 179
-	bbox 	115 121 21 60
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/aboth00.png
-	bbox 	118 132 21 49
-	frame	data/chars/heroes/blaze/aboth01.png
-		delay	12
-	attack 72 160 49 21 4 1 0 0 15 24
-	bbox 	114 134 21 47
-	frame	data/chars/heroes/blaze/aboth02.png
-		delay	6
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/aboth03.png
-	bbox 	125 134 24 46
-	frame	data/chars/heroes/blaze/aboth04.png
-	bbox 	115 121 21 60
-	frame	data/chars/heroes/blaze/aboth05.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 1
+    otg 1
+    loop    0
+    delay    6
+    offset    127 179
+    bbox     115 121 21 60
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/aboth00.png
+    bbox     118 132 21 49
+    frame    data/chars/heroes/blaze/aboth01.png
+        delay    12
+    attack 72 160 49 21 4 1 0 0 15 24
+    bbox     114 134 21 47
+    frame    data/chars/heroes/blaze/aboth02.png
+        delay    6
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/aboth03.png
+    bbox     125 134 24 46
+    frame    data/chars/heroes/blaze/aboth04.png
+    bbox     115 121 21 60
+    frame    data/chars/heroes/blaze/aboth05.png
 
 anim grabattack #FRONT SLAM
-	loop	0
-	delay	8
-	offset	127 179
-	energycost 5 1 6
-	@cmd grabStart2
-	@cmd position 1 6 0 0 0
-	sound	data/voices/Blaze2.wav
-	frame	data/chars/heroes/blaze/grabatk00.png
-	delay	14
-	@cmd position 3 12 6 0 0
-	frame	data/chars/heroes/blaze/grabatk01.png
-	@cmd position 4 40 -1 0 0
-	#@cmd spawn01 "QuakeHigh" 0 0 0
-	sound	data/sounds/Slam.wav
-	frame	data/chars/heroes/blaze/grabatk02.png
-	delay	16
-	@cmd leaper -0.1 2 0
-	@cmd slam 45 2 -0.1 3 0 0
-	frame	data/chars/heroes/blaze/grabatk03.png
-	delay	2
-	frame	data/chars/heroes/blaze/grabatk04.png
-	delay	6
-	@cmd landFrame
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/blaze/grabatk05.png
-	@cmd clearL
-	frame	data/chars/heroes/blaze/grabatk05.png
+    loop    0
+    delay    8
+    offset    127 179
+    energycost 5 1 6
+    @cmd grabStart2
+    @cmd position 1 6 0 0 0
+    sound    data/voices/Blaze2.wav
+    frame    data/chars/heroes/blaze/grabatk00.png
+    delay    14
+    @cmd position 3 12 6 0 0
+    frame    data/chars/heroes/blaze/grabatk01.png
+    @cmd position 4 40 -1 0 0
+    #@cmd spawn01 "QuakeHigh" 0 0 0
+    sound    data/sounds/Slam.wav
+    frame    data/chars/heroes/blaze/grabatk02.png
+    delay    16
+    @cmd leaper -0.1 2 0
+    @cmd slam 45 2 -0.1 3 0 0
+    frame    data/chars/heroes/blaze/grabatk03.png
+    delay    2
+    frame    data/chars/heroes/blaze/grabatk04.png
+    delay    6
+    @cmd landFrame
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/blaze/grabatk05.png
+    @cmd clearL
+    frame    data/chars/heroes/blaze/grabatk05.png
 
 anim grabattack2 #VAULT FRONT TO BACK
-	loop	0
-	delay	8
-	offset	105 238
-	frame	data/chars/heroes/blaze/vault00.png
-	frame	data/chars/heroes/blaze/vault01.png
-	frame	data/chars/heroes/blaze/vault02.png
-	frame	data/chars/heroes/blaze/vault03.png
-	frame	data/chars/heroes/blaze/vault04.png
-		delay	2
-		offset	127 179
-	@cmd vaultFix
-	frame	data/chars/heroes/blaze/grab00.png
-	bbox 	114 105 11 76
-	frame	data/chars/heroes/blaze/grab00.png
+    loop    0
+    delay    8
+    offset    105 238
+    frame    data/chars/heroes/blaze/vault00.png
+    frame    data/chars/heroes/blaze/vault01.png
+    frame    data/chars/heroes/blaze/vault02.png
+    frame    data/chars/heroes/blaze/vault03.png
+    frame    data/chars/heroes/blaze/vault04.png
+        delay    2
+        offset    127 179
+    @cmd vaultFix
+    frame    data/chars/heroes/blaze/grab00.png
+    bbox     114 105 11 76
+    frame    data/chars/heroes/blaze/grab00.png
 
 anim grabup2 #VAULT BACK TO FRONT
-	loop	0
-	delay	8
-	offset	105 238
-	frame	data/chars/heroes/blaze/vault00.png
-	frame	data/chars/heroes/blaze/vault01.png
-	frame	data/chars/heroes/blaze/vault02.png
-	frame	data/chars/heroes/blaze/vault03.png
-	frame	data/chars/heroes/blaze/vault04.png
-		delay	2
-		offset	127 179
-	@cmd vaultFix
-	frame	data/chars/heroes/blaze/idle00.png
-	bbox 	117 109 19 72
-	frame	data/chars/heroes/blaze/idle00.png
+    loop    0
+    delay    8
+    offset    105 238
+    frame    data/chars/heroes/blaze/vault00.png
+    frame    data/chars/heroes/blaze/vault01.png
+    frame    data/chars/heroes/blaze/vault02.png
+    frame    data/chars/heroes/blaze/vault03.png
+    frame    data/chars/heroes/blaze/vault04.png
+        delay    2
+        offset    127 179
+    @cmd vaultFix
+    frame    data/chars/heroes/blaze/idle00.png
+    bbox     117 109 19 72
+    frame    data/chars/heroes/blaze/idle00.png
 
 anim grabforward #KNEE
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	127 179
-	#bbox 	113 107 16 74
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/LowAttack.wav
-	attack2 116 122 24 29 15 0 0 0 20 12
-	seal 1 1
-	frame	data/chars/heroes/blaze/fgrabatk00.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    127 179
+    #bbox     113 107 16 74
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/LowAttack.wav
+    attack2 116 122 24 29 15 0 0 0 20 12
+    seal 1 1
+    frame    data/chars/heroes/blaze/fgrabatk00.png
 
 anim grabforward2 #PUNCH
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	127 179
-	#bbox 	116 109 16 72
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/fgrabatk200.png
-	#bbox 	109 109 17 72
-	sound	data/sounds/Whoosh.wav
-	frame	data/chars/heroes/blaze/fgrabatk201.png
-	delay	12
-	attack 145 116 23 20 20 1 0 30 12
-	seal 1 1
-	#bbox 	140 112 14 69
-	frame	data/chars/heroes/blaze/fgrabatk202.png
-	delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	#bbox 	136 120 18 61
-	frame	data/chars/heroes/blaze/fgrabatk203.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    127 179
+    #bbox     116 109 16 72
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/fgrabatk200.png
+    #bbox     109 109 17 72
+    sound    data/sounds/Whoosh.wav
+    frame    data/chars/heroes/blaze/fgrabatk201.png
+    delay    12
+    attack 145 116 23 20 20 1 0 30 12
+    seal 1 1
+    #bbox     140 112 14 69
+    frame    data/chars/heroes/blaze/fgrabatk202.png
+    delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    #bbox     136 120 18 61
+    frame    data/chars/heroes/blaze/fgrabatk203.png
 
 anim grabbackward #THROW
-	loop	0
-	delay	24
-	offset	127 179
-	energycost 5 1 6
-	@cmd grabStart
-	@cmd position 0 8 0 0 0
-	sound	data/voices/Blaze2.wav
-	frame	data/chars/heroes/blaze/throw00.png
-		delay	8
-	@cmd position 5 0 8 0 0
-	frame	data/chars/heroes/blaze/throw01.png
-	@cmd position 4 -40 12 0 -1
-	frame	data/chars/heroes/blaze/throw02.png
-	@cmd position 4 -60 12 0 0
-	frame	data/chars/heroes/blaze/throw03.png
-		delay	16
-	@cmd throw 45 2 1 3 0 0
-	frame	data/chars/heroes/blaze/throw03.png
-		delay	8
-	@cmd clearL
-	frame	data/chars/heroes/blaze/throw01.png
+    loop    0
+    delay    24
+    offset    127 179
+    energycost 5 1 6
+    @cmd grabStart
+    @cmd position 0 8 0 0 0
+    sound    data/voices/Blaze2.wav
+    frame    data/chars/heroes/blaze/throw00.png
+        delay    8
+    @cmd position 5 0 8 0 0
+    frame    data/chars/heroes/blaze/throw01.png
+    @cmd position 4 -40 12 0 -1
+    frame    data/chars/heroes/blaze/throw02.png
+    @cmd position 4 -60 12 0 0
+    frame    data/chars/heroes/blaze/throw03.png
+        delay    16
+    @cmd throw 45 2 1 3 0 0
+    frame    data/chars/heroes/blaze/throw03.png
+        delay    8
+    @cmd clearL
+    frame    data/chars/heroes/blaze/throw01.png
 
 anim grabbackward2 #AERIAL SPECIAL PILE
-	attackone 0
-	fastattack 1
-	forcedirection 0
-	otg 1
-	energycost 5 1 6
-	@cmd healStart
-	loop	0
-	delay	2
-	offset	127 179
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/voices/Blaze2.wav
-	@cmd jump 0
-	@cmd grabStart2
-	@cmd position 3 12 6 0 -1
-	frame	data/chars/heroes/blaze/grabatk03.png
-	@cmd position 4 35 -1 0 -1
-	frame	data/chars/heroes/blaze/grabatk03.png
-	@cmd landFrame
-		delay	16
-	@cmd position 5 35 -1 0 0
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	@cmd spawn01 "Dust" 20 0 1
-	attack 125 115 85 70 10 1 0 0 0 12
-	sound	data/sounds/Slam.wav
-	frame	data/chars/heroes/blaze/grabatk02.png
-	@cmd slam 50 1 -1 3 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/grabatk02.png
-		delay	8
-	frame	data/chars/heroes/blaze/grabatk04.png
-	@cmd clearL
-	frame	data/chars/heroes/blaze/grabatk05.png
+    attackone 0
+    fastattack 1
+    forcedirection 0
+    otg 1
+    energycost 5 1 6
+    @cmd healStart
+    loop    0
+    delay    2
+    offset    127 179
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/voices/Blaze2.wav
+    @cmd jump 0
+    @cmd grabStart2
+    @cmd position 3 12 6 0 -1
+    frame    data/chars/heroes/blaze/grabatk03.png
+    @cmd position 4 35 -1 0 -1
+    frame    data/chars/heroes/blaze/grabatk03.png
+    @cmd landFrame
+        delay    16
+    @cmd position 5 35 -1 0 0
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    @cmd spawn01 "Dust" 20 0 1
+    attack 125 115 85 70 10 1 0 0 0 12
+    sound    data/sounds/Slam.wav
+    frame    data/chars/heroes/blaze/grabatk02.png
+    @cmd slam 50 1 -1 3 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/grabatk02.png
+        delay    8
+    frame    data/chars/heroes/blaze/grabatk04.png
+    @cmd clearL
+    frame    data/chars/heroes/blaze/grabatk05.png
 
 anim grabdown2 #BACK SLAM
-	loop	0
-	delay	24
-	offset	127 179
-	energycost 5 1 6
-	@cmd grabStart2
-	@cmd position 0 4 0 0 1
-	sound	data/voices/Blaze2.wav
-	frame	data/chars/heroes/blaze/slam00.png
-		delay	8
-	@cmd position 5 -8 5 0 0
-	frame	data/chars/heroes/blaze/slam01.png
-	@cmd position 4 -35 25 0 0
-	frame	data/chars/heroes/blaze/slam02.png
-		delay	12
-	@cmd position 4 -60 -1 0 0
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	sound	data/sounds/Slam.wav
-	frame	data/chars/heroes/blaze/slam03.png
-		delay	16
-	@cmd slam 45 2 -0.5 3 0 0
-	frame	data/chars/heroes/blaze/slam03.png
-		delay	8
-	@cmd clearL
-	frame	data/chars/heroes/blaze/slam02.png
+    loop    0
+    delay    24
+    offset    127 179
+    energycost 5 1 6
+    @cmd grabStart2
+    @cmd position 0 4 0 0 1
+    sound    data/voices/Blaze2.wav
+    frame    data/chars/heroes/blaze/slam00.png
+        delay    8
+    @cmd position 5 -8 5 0 0
+    frame    data/chars/heroes/blaze/slam01.png
+    @cmd position 4 -35 25 0 0
+    frame    data/chars/heroes/blaze/slam02.png
+        delay    12
+    @cmd position 4 -60 -1 0 0
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    sound    data/sounds/Slam.wav
+    frame    data/chars/heroes/blaze/slam03.png
+        delay    16
+    @cmd slam 45 2 -0.5 3 0 0
+    frame    data/chars/heroes/blaze/slam03.png
+        delay    8
+    @cmd clearL
+    frame    data/chars/heroes/blaze/slam02.png
 
 anim jumpattack #JUMP STATIC
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	127 179
-	bbox 	114 108 17 46
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/jumpatk00.png
-	frame	data/chars/heroes/blaze/jumpatk01.png
-	delay	12
-	attack 127 131 50 30 5 1 0 25 24
-	bbox 	116 108 23 38
-	frame	data/chars/heroes/blaze/jumpatk02.png
-	delay	6
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	114 108 17 46
-	frame	data/chars/heroes/blaze/jumpatk03.png
-	bbox 	121 107 16 52
-	frame	data/chars/heroes/blaze/jumpatk04.png
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    127 179
+    bbox     114 108 17 46
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/jumpatk00.png
+    frame    data/chars/heroes/blaze/jumpatk01.png
+    delay    12
+    attack 127 131 50 30 5 1 0 25 24
+    bbox     116 108 23 38
+    frame    data/chars/heroes/blaze/jumpatk02.png
+    delay    6
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     114 108 17 46
+    frame    data/chars/heroes/blaze/jumpatk03.png
+    bbox     121 107 16 52
+    frame    data/chars/heroes/blaze/jumpatk04.png
 
 anim jumpattack2 #JUMP DOWN
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	127 179
-	bbox 	114 118 21 40
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/jumpatk200.png
-	attack 120 105 70 80 1 0 1 1 0 24
-	#sound	data/voices/Blaze2.wav
-	frame	data/chars/heroes/blaze/jumpatk200.png
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    127 179
+    bbox     114 118 21 40
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/jumpatk200.png
+    attack 120 105 70 80 1 0 1 1 0 24
+    #sound    data/voices/Blaze2.wav
+    frame    data/chars/heroes/blaze/jumpatk200.png
 
 #anim jumpattack3 #JUMP UP
-#	jugglecost 1
-#	forcedirection -1
-#	otg 1
-#	loop	0
-#	delay	4
-#	offset	127 179
-#	bbox 	99 113 40 33
-#	hitfx	data/sounds/MediumKick.wav
-#	sound	data/sounds/MediumAttack.wav
-#	frame	data/chars/heroes/blaze/jumpatk200.png
-#	attack 120 125 40 40 7 1 0 0 30 24
-#	sound	data/voices/Blaze2.wav
-#	frame	data/chars/heroes/blaze/jumpatk200.png
+#    jugglecost 1
+#    forcedirection -1
+#    otg 1
+#    loop    0
+#    delay    4
+#    offset    127 179
+#    bbox     99 113 40 33
+#    hitfx    data/sounds/MediumKick.wav
+#    sound    data/sounds/MediumAttack.wav
+#    frame    data/chars/heroes/blaze/jumpatk200.png
+#    attack 120 125 40 40 7 1 0 0 30 24
+#    sound    data/voices/Blaze2.wav
+#    frame    data/chars/heroes/blaze/jumpatk200.png
 
 anim jumpattack3 #JUMP UP
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	3
-	offset	127 179
-	bbox 	103 125 30 55
-	sound	data/sounds/SpecialAttack4.wav
-	frame	data/chars/heroes/blaze/special300.png
-	bbox 	111 105 25 75
-	frame	data/chars/heroes/blaze/special301.png
-	bbox 	110 121 25 60
-	frame	data/chars/heroes/blaze/special301.png
-	delay	5
-	hitfx	data/sounds/StrongPunch.wav
-	bbox 	110 125 25 55
-	attack 120 135 45 40 3 0 0 30 24
-	frame	data/chars/heroes/blaze/special302.png
-	delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special302.png
-	delay	5
-	sound	data/sounds/Whoosh2.wav
-	@cmd leaper 1 1.5 0
-	attack 120 105 50 50 7 1 0 25 24
-	frame	data/chars/heroes/blaze/special303.png
-	delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special303.png
-	delay	5
-	attack 100 95 50 70 5 1 0 20 24
-	frame	data/chars/heroes/blaze/special304.png
-	delay	3
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special304.png
-	bbox 	0 0 0 0
-	frame	data/chars/heroes/blaze/special305.png
-	frame	data/chars/heroes/blaze/special306.png
-	frame	data/chars/heroes/blaze/special307.png
-	bbox 	115 105 25 70
-	frame	data/chars/heroes/blaze/special308.png
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    3
+    offset    127 179
+    bbox     103 125 30 55
+    sound    data/sounds/SpecialAttack4.wav
+    frame    data/chars/heroes/blaze/special300.png
+    bbox     111 105 25 75
+    frame    data/chars/heroes/blaze/special301.png
+    bbox     110 121 25 60
+    frame    data/chars/heroes/blaze/special301.png
+    delay    5
+    hitfx    data/sounds/StrongPunch.wav
+    bbox     110 125 25 55
+    attack 120 135 45 40 3 0 0 30 24
+    frame    data/chars/heroes/blaze/special302.png
+    delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special302.png
+    delay    5
+    sound    data/sounds/Whoosh2.wav
+    @cmd leaper 1 1.5 0
+    attack 120 105 50 50 7 1 0 25 24
+    frame    data/chars/heroes/blaze/special303.png
+    delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special303.png
+    delay    5
+    attack 100 95 50 70 5 1 0 20 24
+    frame    data/chars/heroes/blaze/special304.png
+    delay    3
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special304.png
+    bbox     0 0 0 0
+    frame    data/chars/heroes/blaze/special305.png
+    frame    data/chars/heroes/blaze/special306.png
+    frame    data/chars/heroes/blaze/special307.png
+    bbox     115 105 25 70
+    frame    data/chars/heroes/blaze/special308.png
 
 
 anim jumpforward #JUMP FORWARD
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	1 1 4
-	delay	6
-	offset	127 179
-	bbox 	117 115 28 28
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/fjumpatk00.png
-	delay	3
-	bbox 	111 118 38 28
-	attack 121 131 68 24 7 1 0 0 25 24
-	frame	data/chars/heroes/blaze/fjumpatk01.png
-	frame	data/chars/heroes/blaze/fjumpatk02.png
-	frame	data/chars/heroes/blaze/fjumpatk03.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    1 1 4
+    delay    6
+    offset    127 179
+    bbox     117 115 28 28
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/fjumpatk00.png
+    delay    3
+    bbox     111 118 38 28
+    attack 121 131 68 24 7 1 0 0 25 24
+    frame    data/chars/heroes/blaze/fjumpatk01.png
+    frame    data/chars/heroes/blaze/fjumpatk02.png
+    frame    data/chars/heroes/blaze/fjumpatk03.png
 
 anim runattack #BLITZ
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	loop	0
-	offset	127 179
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/SpecialAttack.wav
-	frame	data/chars/heroes/blaze/runatk00.png
-	sound	data/voices/Blaze3.wav
-	frame	data/chars/heroes/blaze/runatk01.png
-		delay	5
-	@cmd leaper 1.5 2.5 0
-	frame	data/chars/heroes/blaze/runatk02.png
-	attack 139 139 28 36 3 0 0 0 20 18
-	frame	data/chars/heroes/blaze/runatk03.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/runatk03.png
-	attack 125 104 24 66 3 0 0 0 20 18
-	frame	data/chars/heroes/blaze/runatk04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/runatk04.png
-	attack 127 95 27 34 3 0 0 0 20 18
-	bbox 	119 107 12 58
-	frame	data/chars/heroes/blaze/runatk05.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/runatk05.png
-	attack 110 117 49 34 7 1 0 0 20 18
-	bbox 	101 117 26 38
-	frame	data/chars/heroes/blaze/runatk06.png
-		delay	2
-	attack 98 134 57 29 5 1 0 0 25 18
-	frame	data/chars/heroes/blaze/runatk07.png
-	@cmd landFrame
-		delay	12
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	115 121 21 60
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/blaze/jumpland00.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    loop    0
+    offset    127 179
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/SpecialAttack.wav
+    frame    data/chars/heroes/blaze/runatk00.png
+    sound    data/voices/Blaze3.wav
+    frame    data/chars/heroes/blaze/runatk01.png
+        delay    5
+    @cmd leaper 1.5 2.5 0
+    frame    data/chars/heroes/blaze/runatk02.png
+    attack 139 139 28 36 3 0 0 0 20 18
+    frame    data/chars/heroes/blaze/runatk03.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/runatk03.png
+    attack 125 104 24 66 3 0 0 0 20 18
+    frame    data/chars/heroes/blaze/runatk04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/runatk04.png
+    attack 127 95 27 34 3 0 0 0 20 18
+    bbox     119 107 12 58
+    frame    data/chars/heroes/blaze/runatk05.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/runatk05.png
+    attack 110 117 49 34 7 1 0 0 20 18
+    bbox     101 117 26 38
+    frame    data/chars/heroes/blaze/runatk06.png
+        delay    2
+    attack 98 134 57 29 5 1 0 0 25 18
+    frame    data/chars/heroes/blaze/runatk07.png
+    @cmd landFrame
+        delay    12
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     115 121 21 60
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/blaze/jumpland00.png
 
 anim special #DEFENSIVE SPECIAL
-	fastattack 1
-	forcedirection 0
-	otg 1
-	jugglecost 5
-	energycost 25 1 6
-	@cmd dasher 0 0 0
-	@cmd healStart
-	loop	0
-	delay	10
-	offset	127 179
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/SpecialAttack4.wav
-	frame	data/chars/heroes/blaze/special00.png
-	frame	data/chars/heroes/blaze/special01.png
-	frame	data/chars/heroes/blaze/special02.png
-		delay	5
-	attack 120 105 50 76 16 1 1 0 30 36
-	dropv 4 0 0
-	frame	data/chars/heroes/blaze/special03.png
-	attack 103 95 67 86 16 1 1 0 25 36
-	dropv 4 0 0
-	frame	data/chars/heroes/blaze/special04.png
-	@cmd leaper -0.5 2.5 0
-	attack 97 93 43 49 16 1 1 0 20 36
-	frame	data/chars/heroes/blaze/special05.png
-	dropv 3 0 0
-	attack 88 133 41 47 16 1 1 0 20 36
-	frame	data/chars/heroes/blaze/special06.png
-	attack 80 105 110 70 16 1 1 0 20 36
-	frame	data/chars/heroes/blaze/special07.png
-	dropv 2 0 0
-		delay 2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special08.png
-	@cmd landFrame
-		delay	12
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/blaze/jumpland00.png
+    fastattack 1
+    forcedirection 0
+    otg 1
+    jugglecost 5
+    energycost 25 1 6
+    @cmd dasher 0 0 0
+    @cmd healStart
+    loop    0
+    delay    10
+    offset    127 179
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/SpecialAttack4.wav
+    frame    data/chars/heroes/blaze/special00.png
+    frame    data/chars/heroes/blaze/special01.png
+    frame    data/chars/heroes/blaze/special02.png
+        delay    5
+    attack 120 105 50 76 16 1 1 0 30 36
+    dropv 4 0 0
+    frame    data/chars/heroes/blaze/special03.png
+    attack 103 95 67 86 16 1 1 0 25 36
+    dropv 4 0 0
+    frame    data/chars/heroes/blaze/special04.png
+    @cmd leaper -0.5 2.5 0
+    attack 97 93 43 49 16 1 1 0 20 36
+    frame    data/chars/heroes/blaze/special05.png
+    dropv 3 0 0
+    attack 88 133 41 47 16 1 1 0 20 36
+    frame    data/chars/heroes/blaze/special06.png
+    attack 80 105 110 70 16 1 1 0 20 36
+    frame    data/chars/heroes/blaze/special07.png
+    dropv 2 0 0
+        delay 2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special08.png
+    @cmd landFrame
+        delay    12
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/blaze/jumpland00.png
 
 anim special2 #OFFENSIVE SPECIAL
-	fastattack 1
-	forcedirection -1
-	otg 1
-	jugglecost 2
-	energycost 15 1 6
-	@cmd dasher 0 0 0
-	@cmd healStart
-	loop	0
-	delay	4
-	offset	127 179
-	#bbox 	128 114 19 67
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/SpecialAttack2.wav
-	attack 128 114 67 21 1 0 0 0 10 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/special200.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/voices/Blaze4.wav
-	frame	data/chars/heroes/blaze/special200.png
-	attack 128 114 66 21 1 0 0 0 10 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/special201.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special201.png
-	attack 128 114 66 21 1 0 0 0 10 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/special202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	#bbox 	128 117 19 64
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/heroes/blaze/special203.png
-	frame	data/chars/heroes/blaze/special204.png
-	bbox 	130 129 22 52
-	frame	data/chars/heroes/blaze/special205.png
-	attack 130 125 71 31 1 0 0 0 10 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/special206.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special206.png
-	attack 130 125 88 31 1 0 0 0 10 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/special207.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special207.png
-	attack 130 125 93 31 1 0 0 0 10 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/special208.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special208.png
-		delay	8
-	attack 130 125 93 31 50 1 0 0 20 18
-	seal 1 1
-	dropv 3 0 0
-	frame	data/chars/heroes/blaze/special209.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special209.png
+    fastattack 1
+    forcedirection -1
+    otg 1
+    jugglecost 2
+    energycost 15 1 6
+    @cmd dasher 0 0 0
+    @cmd healStart
+    loop    0
+    delay    4
+    offset    127 179
+    #bbox     128 114 19 67
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/SpecialAttack2.wav
+    attack 128 114 67 21 1 0 0 0 10 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/special200.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/voices/Blaze4.wav
+    frame    data/chars/heroes/blaze/special200.png
+    attack 128 114 66 21 1 0 0 0 10 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/special201.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special201.png
+    attack 128 114 66 21 1 0 0 0 10 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/special202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    #bbox     128 117 19 64
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/heroes/blaze/special203.png
+    frame    data/chars/heroes/blaze/special204.png
+    bbox     130 129 22 52
+    frame    data/chars/heroes/blaze/special205.png
+    attack 130 125 71 31 1 0 0 0 10 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/special206.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special206.png
+    attack 130 125 88 31 1 0 0 0 10 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/special207.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special207.png
+    attack 130 125 93 31 1 0 0 0 10 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/special208.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special208.png
+        delay    8
+    attack 130 125 93 31 50 1 0 0 20 18
+    seal 1 1
+    dropv 3 0 0
+    frame    data/chars/heroes/blaze/special209.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special209.png
 
 anim freespecial #RAGE
-	fastattack 1
-	forcedirection -1
-	otg 1
-	jugglecost 0
-	energycost 45 1 6
-	loop	0
-	sound	data/voices/Blaze7.wav
-	@cmd dasher 0 0 0
-	offset	127 179
-	@cmd spawnBind "Rage" -10 0 -1
-	frame	data/chars/heroes/blaze/rage00.png
-		delay	3
-	frame	data/chars/heroes/blaze/rage01.png
-	frame	data/chars/heroes/blaze/rage02.png
-	frame	data/chars/heroes/blaze/rage03.png
-	@cmd shootBind "Blaze_Orb" 55 40 0 "dual"
-	frame	data/chars/heroes/blaze/rage04.png
-	frame	data/chars/heroes/blaze/rage05.png
-	frame	data/chars/heroes/blaze/rage06.png
-	frame	data/chars/heroes/blaze/rage04.png
-	frame	data/chars/heroes/blaze/rage05.png
-	frame	data/chars/heroes/blaze/rage06.png
-	@cmd looParent 7
-	frame	data/chars/heroes/blaze/rage07.png
-		delay	16
-	frame	data/chars/heroes/blaze/rage07.png
+    fastattack 1
+    forcedirection -1
+    otg 1
+    jugglecost 0
+    energycost 45 1 6
+    loop    0
+    sound    data/voices/Blaze7.wav
+    @cmd dasher 0 0 0
+    offset    127 179
+    @cmd spawnBind "Rage" -10 0 -1
+    frame    data/chars/heroes/blaze/rage00.png
+        delay    3
+    frame    data/chars/heroes/blaze/rage01.png
+    frame    data/chars/heroes/blaze/rage02.png
+    frame    data/chars/heroes/blaze/rage03.png
+    @cmd shootBind "Blaze_Orb" 55 40 0 "dual"
+    frame    data/chars/heroes/blaze/rage04.png
+    frame    data/chars/heroes/blaze/rage05.png
+    frame    data/chars/heroes/blaze/rage06.png
+    frame    data/chars/heroes/blaze/rage04.png
+    frame    data/chars/heroes/blaze/rage05.png
+    frame    data/chars/heroes/blaze/rage06.png
+    @cmd looParent 7
+    frame    data/chars/heroes/blaze/rage07.png
+        delay    16
+    frame    data/chars/heroes/blaze/rage07.png
 
 anim freespecial2 #SUPER
-	fastattack 1
-	jugglecost 3
-	forcedirection -1
-	followanim 5
-	followcond 4
-	attackone 1
-	otg 1
-	energycost 5 1 6 #grabrun cost
-	loop	0
-	delay	4
-	offset 90 182
-	hitfx	data/sounds/LowKick.wav
-	sound	data/voices/Blaze5.wav
-	bbox 	65 145 85 40
-	@cmd dasher 3 0 0
-	attack 90 121 61 60 0 0 1 1 0 12
-	seal 1 1
-	frame	data/chars/heroes/blaze/counter04.png
-	delay	6
-	@cmd dasher 2.7 0 0
-	attack 90 121 61 60 0 0 1 1 0 12
-	seal 1 1
-	frame	data/chars/heroes/blaze/counter05.png
-	delay	12
-	@cmd dasher 2.5 0 0
-	attack 90 121 61 60 0 0 1 1 0 12
-	seal 1 1
-	frame	data/chars/heroes/blaze/counter05.png
-	@cmd dasher 2.5 0 0
-	attack 90 121 61 60 0 0 1 1 0 12
-	seal 1 1
-	frame	data/chars/heroes/blaze/counter05.png
-	delay	4
-	@cmd dasher 2.3 0 0
-	attack 90 121 61 60 0 0 1 1 0 12
-	seal 1 1
-	frame	data/chars/heroes/blaze/counter05.png
-	@cmd dasher 0 0 0
-	frame	data/chars/heroes/blaze/counter04.png
+    fastattack 1
+    jugglecost 3
+    forcedirection -1
+    followanim 5
+    followcond 4
+    attackone 1
+    otg 1
+    energycost 5 1 6 #grabrun cost
+    loop    0
+    delay    4
+    offset 90 182
+    hitfx    data/sounds/LowKick.wav
+    sound    data/voices/Blaze5.wav
+    bbox     65 145 85 40
+    @cmd dasher 3 0 0
+    attack 90 121 61 60 0 0 1 1 0 12
+    seal 1 1
+    frame    data/chars/heroes/blaze/counter04.png
+    delay    6
+    @cmd dasher 2.7 0 0
+    attack 90 121 61 60 0 0 1 1 0 12
+    seal 1 1
+    frame    data/chars/heroes/blaze/counter05.png
+    delay    12
+    @cmd dasher 2.5 0 0
+    attack 90 121 61 60 0 0 1 1 0 12
+    seal 1 1
+    frame    data/chars/heroes/blaze/counter05.png
+    @cmd dasher 2.5 0 0
+    attack 90 121 61 60 0 0 1 1 0 12
+    seal 1 1
+    frame    data/chars/heroes/blaze/counter05.png
+    delay    4
+    @cmd dasher 2.3 0 0
+    attack 90 121 61 60 0 0 1 1 0 12
+    seal 1 1
+    frame    data/chars/heroes/blaze/counter05.png
+    @cmd dasher 0 0 0
+    frame    data/chars/heroes/blaze/counter04.png
 
 anim freespecial3 #RAGE Dash
-	followanim 4
-	followcond 1
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	energycost 45 1 6
-	loop	0
-	offset	127 179
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/voices/Blaze6.wav
-	@cmd spawnBind "Rage" 0 0 -1
-	frame	data/chars/heroes/blaze/rage00.png
-	frame	data/chars/heroes/blaze/rage01.png
-	frame	data/chars/heroes/blaze/rage02.png
-	frame	data/chars/heroes/blaze/rage03.png
-		delay	32
-	@cmd dasher 3 0 0
-	attack 130 101 43 80 2 0 0 0 0 18
-	dropv 3 2 0
-	frame	data/chars/heroes/blaze/rage04.png
-		delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/rage05.png
-	@cmd landFrame
-	@cmd dasher 1 0 0
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/blaze/rage06.png
-	frame	data/chars/heroes/blaze/rage07.png
+    followanim 4
+    followcond 1
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    energycost 45 1 6
+    loop    0
+    offset    127 179
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/voices/Blaze6.wav
+    @cmd spawnBind "Rage" 0 0 -1
+    frame    data/chars/heroes/blaze/rage00.png
+    frame    data/chars/heroes/blaze/rage01.png
+    frame    data/chars/heroes/blaze/rage02.png
+    frame    data/chars/heroes/blaze/rage03.png
+        delay    32
+    @cmd dasher 3 0 0
+    attack 130 101 43 80 2 0 0 0 0 18
+    dropv 3 2 0
+    frame    data/chars/heroes/blaze/rage04.png
+        delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/rage05.png
+    @cmd landFrame
+    @cmd dasher 1 0 0
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/blaze/rage06.png
+    frame    data/chars/heroes/blaze/rage07.png
 
 anim follow4 #RAGE COMBO
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	energycost 60 1 6
-	loop	0
-	delay	4
-	offset	127 179
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/SpecialAttack2.wav
-	frame	data/chars/heroes/blaze/rage03.png
-	attack2 130 101 50 80 1 0 1 0 15 24
-	seal 1 1
-	frame	data/chars/heroes/blaze/rage04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/rage05.png
-	@cmd looper 1 3 #3
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/heroes/blaze/special203.png
-	attack 130 100 55 80 1 0 1 0 25 24
-	seal 1 1
-	frame	data/chars/heroes/blaze/special204.png
-	frame	data/chars/heroes/blaze/special205.png
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special205.png
-	attack 130 118 70 62 1 0 1 0 5 24
-	seal 1 1
-	frame	data/chars/heroes/blaze/special206.png
-	offset 90 182
-	delay 2
-	@cmd looper 4 5 #8
-	frame	data/chars/heroes/blaze/counter05.png
-	delay	4
-	@cmd dasher 0.2 0 0
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/SpecialAttack.wav
-	attack2 105 100 45 80 1 0 1 0 35 24
-	seal 1 1
-	frame	data/chars/heroes/blaze/counter04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/counter05.png
-	@cmd looper 9 2 #11
-	delay	4
-	offset	127 179
-	@cmd dasher 0.3 0 0
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/blaze/a300.png
-	attack2 154 130 20 50 2 0 0 0 35 24
-	seal 1 1
-	frame	data/chars/heroes/blaze/a301.png
-	delay 2
-	hitfx	data/sounds/HighKick.wav
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/a301.png
-	hitflash Impact
-	delay	4
-	attack 154 120 40 60 2 1 1 0 30 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/a302.png
-	delay 2
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/a302.png
-	hitflash Flash
-	delay	4
-	attack 154 100 40 80 2 1 1 0 25 18
-	seal 1 1
-	frame	data/chars/heroes/blaze/a303.png
-	delay 2
-	hitflash Impact
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/voices/Blaze7.wav
-	@cmd dasher 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/rage01.png #17
-	frame	data/chars/heroes/blaze/rage02.png
-	frame	data/chars/heroes/blaze/rage03.png
-	frame	data/chars/heroes/blaze/rage04.png
-	delay	4
-	attack8 125 75 125 108 30 1 0 0 30 36
-	seal 1 1
-	dropv 3 5
-	frame	data/chars/heroes/blaze/special206.png
-	delay	2
-	@cmd spawn01 "Dust" 20 0 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special207.png
-	delay	4
-	attack8 125 75 125 108 30 1 0 0 30 36
-	seal 1 1
-	dropv 3 5
-	frame	data/chars/heroes/blaze/special206.png
-	delay	2
-	@cmd spawn01 "Dust" 20 0 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special207.png
-	delay	4
-	attack8 125 75 125 108 30 1 0 0 30 36
-	seal 1 1
-	dropv 3 5
-	frame	data/chars/heroes/blaze/special206.png
-	delay	2
-	@cmd spawn01 "Dust" 20 0 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special207.png
-	delay	4
-	attack8 125 75 125 108 30 1 0 0 30 36
-	seal 1 1
-	dropv 3 5
-	frame	data/chars/heroes/blaze/special206.png
-	delay	2
-	@cmd spawn01 "Dust" 20 0 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special207.png
-	delay	4
-	attack8 125 75 125 108 30 1 0 0 30 36
-	seal 1 1
-	dropv 3 5
-	frame	data/chars/heroes/blaze/special206.png
-	delay	2
-	@cmd spawn01 "Dust" 20 0 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/special207.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    energycost 60 1 6
+    loop    0
+    delay    4
+    offset    127 179
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/SpecialAttack2.wav
+    frame    data/chars/heroes/blaze/rage03.png
+    attack2 130 101 50 80 1 0 1 0 15 24
+    seal 1 1
+    frame    data/chars/heroes/blaze/rage04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/rage05.png
+    @cmd looper 1 3 #3
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/heroes/blaze/special203.png
+    attack 130 100 55 80 1 0 1 0 25 24
+    seal 1 1
+    frame    data/chars/heroes/blaze/special204.png
+    frame    data/chars/heroes/blaze/special205.png
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special205.png
+    attack 130 118 70 62 1 0 1 0 5 24
+    seal 1 1
+    frame    data/chars/heroes/blaze/special206.png
+    offset 90 182
+    delay 2
+    @cmd looper 4 5 #8
+    frame    data/chars/heroes/blaze/counter05.png
+    delay    4
+    @cmd dasher 0.2 0 0
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/SpecialAttack.wav
+    attack2 105 100 45 80 1 0 1 0 35 24
+    seal 1 1
+    frame    data/chars/heroes/blaze/counter04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/counter05.png
+    @cmd looper 9 2 #11
+    delay    4
+    offset    127 179
+    @cmd dasher 0.3 0 0
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/blaze/a300.png
+    attack2 154 130 20 50 2 0 0 0 35 24
+    seal 1 1
+    frame    data/chars/heroes/blaze/a301.png
+    delay 2
+    hitfx    data/sounds/HighKick.wav
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/a301.png
+    hitflash Impact
+    delay    4
+    attack 154 120 40 60 2 1 1 0 30 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/a302.png
+    delay 2
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/a302.png
+    hitflash Flash
+    delay    4
+    attack 154 100 40 80 2 1 1 0 25 18
+    seal 1 1
+    frame    data/chars/heroes/blaze/a303.png
+    delay 2
+    hitflash Impact
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/voices/Blaze7.wav
+    @cmd dasher 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/rage01.png #17
+    frame    data/chars/heroes/blaze/rage02.png
+    frame    data/chars/heroes/blaze/rage03.png
+    frame    data/chars/heroes/blaze/rage04.png
+    delay    4
+    attack8 125 75 125 108 30 1 0 0 30 36
+    seal 1 1
+    dropv 3 5
+    frame    data/chars/heroes/blaze/special206.png
+    delay    2
+    @cmd spawn01 "Dust" 20 0 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special207.png
+    delay    4
+    attack8 125 75 125 108 30 1 0 0 30 36
+    seal 1 1
+    dropv 3 5
+    frame    data/chars/heroes/blaze/special206.png
+    delay    2
+    @cmd spawn01 "Dust" 20 0 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special207.png
+    delay    4
+    attack8 125 75 125 108 30 1 0 0 30 36
+    seal 1 1
+    dropv 3 5
+    frame    data/chars/heroes/blaze/special206.png
+    delay    2
+    @cmd spawn01 "Dust" 20 0 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special207.png
+    delay    4
+    attack8 125 75 125 108 30 1 0 0 30 36
+    seal 1 1
+    dropv 3 5
+    frame    data/chars/heroes/blaze/special206.png
+    delay    2
+    @cmd spawn01 "Dust" 20 0 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special207.png
+    delay    4
+    attack8 125 75 125 108 30 1 0 0 30 36
+    seal 1 1
+    dropv 3 5
+    frame    data/chars/heroes/blaze/special206.png
+    delay    2
+    @cmd spawn01 "Dust" 20 0 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/special207.png
 
 anim follow41 #RAGE STRIKE
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	energycost 60 1 6
-	otg 1
-	hitflash flash
-	loop	0
-	delay	16
-	offset	127 179
-	#hitfx	data/sounds/Cutter.wav
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/voices/Blaze7.wav
-	@cmd dasher 10 0 0
-	frame	data/chars/heroes/blaze/sword/rage00.png
-		delay	4
-	@cmd dasher 0 0 0
-	attack 0 30 175 150 5 1 1 0 5 36
-	seal 1 1
-	frame	data/chars/heroes/blaze/rage04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/rage04.png
-	@cmd looper 1 9
-	shock 0 30 175 150 150 1 1 0 5 36
-	dropv 3 2
-	seal 1 1
-	frame	data/chars/heroes/blaze/rage04.png
-	delay	6
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/rage04.png
-	frame	data/chars/heroes/blaze/rage05.png
-	frame	data/chars/heroes/blaze/rage06.png
-	frame	data/chars/heroes/blaze/rage07.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    energycost 60 1 6
+    otg 1
+    hitflash flash
+    loop    0
+    delay    16
+    offset    127 179
+    #hitfx    data/sounds/Cutter.wav
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/voices/Blaze7.wav
+    @cmd dasher 10 0 0
+    frame    data/chars/heroes/blaze/sword/rage00.png
+        delay    4
+    @cmd dasher 0 0 0
+    attack 0 30 175 150 5 1 1 0 5 36
+    seal 1 1
+    frame    data/chars/heroes/blaze/rage04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/rage04.png
+    @cmd looper 1 9
+    shock 0 30 175 150 150 1 1 0 5 36
+    dropv 3 2
+    seal 1 1
+    frame    data/chars/heroes/blaze/rage04.png
+    delay    6
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/rage04.png
+    frame    data/chars/heroes/blaze/rage05.png
+    frame    data/chars/heroes/blaze/rage06.png
+    frame    data/chars/heroes/blaze/rage07.png
 
 
 anim follow5
-	loop	0
-	jugglecost 2
-	delay	16
-	offset	90 182
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/heroes/blaze/counter05.png
+    loop    0
+    jugglecost 2
+    delay    16
+    offset    90 182
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/heroes/blaze/counter05.png
 
 anim follow6 #GRAB ESCAPE
-	loop	0
-	delay	8
-	offset	127 179
-	sound	data/sounds/Throw.wav
-	@cmd dasher -0.5 0 0
-	@cmd spawn01 "Escape" 35 40 1
-	frame	data/chars/heroes/blaze/a301.png
-		delay	16
-	sound	data/sounds/Slide.wav
-	@cmd dasher -2 0 0
-	@cmd spawn01 "Dust" 20 0 1
-	frame	data/chars/heroes/blaze/a302.png
-		delay	12
-	@cmd dasher -0.5 0 0
-	frame	data/chars/heroes/blaze/a300.png
+    loop    0
+    delay    8
+    offset    127 179
+    sound    data/sounds/Throw.wav
+    @cmd dasher -0.5 0 0
+    @cmd spawn01 "Escape" 35 40 1
+    frame    data/chars/heroes/blaze/a301.png
+        delay    16
+    sound    data/sounds/Slide.wav
+    @cmd dasher -2 0 0
+    @cmd spawn01 "Dust" 20 0 1
+    frame    data/chars/heroes/blaze/a302.png
+        delay    12
+    @cmd dasher -0.5 0 0
+    frame    data/chars/heroes/blaze/a300.png
 
 anim follow7 #COUNTER
-	fastattack 1
-	forcedirection -1
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	4
-	offset	127 179
-	@cmd recoverGp
-	sound	data/voices/Blaze6.wav
-	frame	data/chars/heroes/blaze/block00.png
-	offset	90 182
-	@cmd spawn01 "Counter" 0 0 1
-	@cmd block 0
-	hitfx	data/sounds/LowKick.wav
-	delay	6
-	@cmd dasher 2 0 0
-	attack2 105 100 45 82 5 0 0 0 35 24
-	frame	data/chars/heroes/blaze/counter04.png
-	delay	4
-	@cmd dasher 2.5 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/blaze/counter05.png
-	delay	9
-	@cmd dasher 1.5 0 0
-	attack8 105 100 45 82 65 1 0 0 30 24
-	dropv 3 0.5 0
-	frame	data/chars/heroes/blaze/counter05.png
-	delay	16
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd dasher 0.5 0 0
-	frame	data/chars/heroes/blaze/counter05.png
+    fastattack 1
+    forcedirection -1
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    4
+    offset    127 179
+    @cmd recoverGp
+    sound    data/voices/Blaze6.wav
+    frame    data/chars/heroes/blaze/block00.png
+    offset    90 182
+    @cmd spawn01 "Counter" 0 0 1
+    @cmd block 0
+    hitfx    data/sounds/LowKick.wav
+    delay    6
+    @cmd dasher 2 0 0
+    attack2 105 100 45 82 5 0 0 0 35 24
+    frame    data/chars/heroes/blaze/counter04.png
+    delay    4
+    @cmd dasher 2.5 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/blaze/counter05.png
+    delay    9
+    @cmd dasher 1.5 0 0
+    attack8 105 100 45 82 65 1 0 0 30 24
+    dropv 3 0.5 0
+    frame    data/chars/heroes/blaze/counter05.png
+    delay    16
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd dasher 0.5 0 0
+    frame    data/chars/heroes/blaze/counter05.png
 
 anim follow8 #AERIAL SPECIAL
-	fastattack 1
-	forcedirection 0
-	otg 1
-	jugglecost 1
-	energycost 10 1 6
-	@cmd healStart
-	loop	0
-	delay	8
-	offset	127 179
-	bbox 	100 110 30 70
-	frame	data/chars/heroes/blaze/grabatk00.png
-	attack 130 118 45 42 0 0 1 1 0 12
-	dropv 0 1 0
-	bbox 	115 119 30 61
-	frame	data/chars/heroes/blaze/grabatk01.png
-		delay	24
-	attack 127 117 53 58 0 0 1 1 0 12
-	dropv 0 1 0
-	bbox 	127 117 28 63
-	frame	data/chars/heroes/blaze/grabatk02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	121 107 16 52
-	frame	data/chars/heroes/blaze/jump01.png
+    fastattack 1
+    forcedirection 0
+    otg 1
+    jugglecost 1
+    energycost 10 1 6
+    @cmd healStart
+    loop    0
+    delay    8
+    offset    127 179
+    bbox     100 110 30 70
+    frame    data/chars/heroes/blaze/grabatk00.png
+    attack 130 118 45 42 0 0 1 1 0 12
+    dropv 0 1 0
+    bbox     115 119 30 61
+    frame    data/chars/heroes/blaze/grabatk01.png
+        delay    24
+    attack 127 117 53 58 0 0 1 1 0 12
+    dropv 0 1 0
+    bbox     127 117 28 63
+    frame    data/chars/heroes/blaze/grabatk02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     121 107 16 52
+    frame    data/chars/heroes/blaze/jump01.png
 
 anim follow9 #AERIAL RECOVER
-	loop	0
-	delay	12
-	offset	127 179
-	sound	data/sounds/SpecialAttack5.wav
-	@cmd landSafe
-	@cmd invinc 2
-	@cmd leaper -1.3 1.6 0
-	frame	data/chars/heroes/blaze/jump00.png
-	frame	data/chars/heroes/blaze/jump01.png
+    loop    0
+    delay    12
+    offset    127 179
+    sound    data/sounds/SpecialAttack5.wav
+    @cmd landSafe
+    @cmd invinc 2
+    @cmd leaper -1.3 1.6 0
+    frame    data/chars/heroes/blaze/jump00.png
+    frame    data/chars/heroes/blaze/jump01.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	2
-	offset	127 179
-	@cmd copyMove
-	frame	data/chars/heroes/blaze/dodge00.png
-	delay	6
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge04.png
-	@cmd dasher 0 0 0
-	@cmd invinc 1
-	frame	data/chars/heroes/blaze/dodge05.png
+    loop    0
+    delay    2
+    offset    127 179
+    @cmd copyMove
+    frame    data/chars/heroes/blaze/dodge00.png
+    delay    6
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge04.png
+    @cmd dasher 0 0 0
+    @cmd invinc 1
+    frame    data/chars/heroes/blaze/dodge05.png
 
 anim dodge
-	@cmd lockAni "dodgeType" "sor2x"
-	@cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
-	@cmd lockAni "dodgeType" "off"
-	loop	0
-	delay	2
-	offset	127 179
-	@cmd copyMove
-	frame	data/chars/heroes/blaze/dodge00.png
-		delay	6
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/heroes/blaze/dodge04.png
-	@cmd dasher 0 0 0
-	@cmd invinc 1
-	frame	data/chars/heroes/blaze/dodge05.png
+    @cmd lockAni "dodgeType" "sor2x"
+    @cmd lockAni "dodgeType" "sor2x_(alt._mode_on)"
+    @cmd lockAni "dodgeType" "off"
+    loop    0
+    delay    2
+    offset    127 179
+    @cmd copyMove
+    frame    data/chars/heroes/blaze/dodge00.png
+        delay    6
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/heroes/blaze/dodge04.png
+    @cmd dasher 0 0 0
+    @cmd invinc 1
+    frame    data/chars/heroes/blaze/dodge05.png
 
 anim follow11 #BLOCK
-	@cmd checkBlock
-	loop	0
-	delay	12
-	offset	127 179
-	bbox 	108 106 32 74
-	@cmd block 1
-	@cmd blockCost
-	frame	data/chars/heroes/blaze/block00.png
-	@cmd keyLoop "attack3" 0
-	#@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
-	@cmd block 0
-	frame	data/chars/heroes/blaze/block00.png
+    @cmd checkBlock
+    loop    0
+    delay    12
+    offset    127 179
+    bbox     108 106 32 74
+    @cmd block 1
+    @cmd blockCost
+    frame    data/chars/heroes/blaze/block00.png
+    @cmd keyLoop "attack3" 0
+    #@cmd keyLoop "special" 0 "blockType" "hold_(alt._mode_on)"
+    @cmd block 0
+    frame    data/chars/heroes/blaze/block00.png
 
 anim follow12 #PARRY
-	loop	0
-	delay	24
-	offset	127 179
-	bbox 	108 106 32 74
-	@cmd block 1
-	frame	data/chars/heroes/blaze/block00.png
+    loop    0
+    delay    24
+    offset    127 179
+    bbox     108 106 32 74
+    @cmd block 1
+    frame    data/chars/heroes/blaze/block00.png

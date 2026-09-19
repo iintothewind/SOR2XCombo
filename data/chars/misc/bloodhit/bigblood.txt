@@ -1,28 +1,28 @@
-name	BigBloodHit
-type	none
-shadow	0
+name    BigBloodHit
+type    none
+shadow    0
 toflip 1
 nomove 1 0
 setlayer 2
-antigravity 	100
-alpha			1
-no_adjust_base	0
-subject_to_hole	1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+antigravity     100
+alpha            1
+no_adjust_base    0
+subject_to_hole    1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
-palette	data/chars/misc/bloodhit/bblod1.png
+palette    data/chars/misc/bloodhit/bblod1.png
 
 anim idle
-	delay	5
-	offset	68 86
-	bbox 0 0 0 0
-	frame	data/chars/misc/bloodhit/bblod1.png
-	frame	data/chars/misc/bloodhit/bblod2.png
-	frame	data/chars/misc/bloodhit/bblod3.png
-	frame	data/chars/misc/bloodhit/bblod4.png
-	frame	data/chars/misc/bloodhit/bblod5.png
-	frame	data/chars/misc/bloodhit/bblod6.png
-	frame	data/chars/misc/bloodhit/bblod7.png
-	@cmd suicide
-	frame	data/chars/misc/bloodhit/bblod8.png
+    delay    5
+    offset    68 86
+    bbox 0 0 0 0
+    frame    data/chars/misc/bloodhit/bblod1.png
+    frame    data/chars/misc/bloodhit/bblod2.png
+    frame    data/chars/misc/bloodhit/bblod3.png
+    frame    data/chars/misc/bloodhit/bblod4.png
+    frame    data/chars/misc/bloodhit/bblod5.png
+    frame    data/chars/misc/bloodhit/bblod6.png
+    frame    data/chars/misc/bloodhit/bblod7.png
+    @cmd suicide
+    frame    data/chars/misc/bloodhit/bblod8.png

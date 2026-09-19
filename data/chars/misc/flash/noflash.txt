@@ -1,12 +1,12 @@
-name			NoFlash
-type			none
-shadow			0
-animationscript	data/scripts/animation/default.c
+name            NoFlash
+type            none
+shadow            0
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	73 54
-	frame	data/chars/misc/flash/empty.png
-	@cmd suicide
-	frame	data/chars/misc/flash/empty.png
+    loop    0
+    delay    2
+    offset    73 54
+    frame    data/chars/misc/flash/empty.png
+    @cmd suicide
+    frame    data/chars/misc/flash/empty.png

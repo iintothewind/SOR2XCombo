@@ -1,54 +1,54 @@
-name	  	 		St7_Cannon
-type	  	 		npc
-subtype				notgrab
-hostile				player npc obstacle
-candamage 	 		player enemy npc obstacle
-nolife	 	 		1
-nomove				1 1
-nodrop				2
-stealth				2
-shadow	  	 		0
-setlayer			2
-offscreenkill		6000
-onspawnscript		data/scripts/onspawn/siren.c
-animationscript		data/scripts/animation/default.c
+name                   St7_Cannon
+type                   npc
+subtype                notgrab
+hostile                player npc obstacle
+candamage              player enemy npc obstacle
+nolife                  1
+nomove                1 1
+nodrop                2
+stealth                2
+shadow                   0
+setlayer            2
+offscreenkill        6000
+onspawnscript        data/scripts/onspawn/siren.c
+animationscript        data/scripts/animation/default.c
 
-load				St7_Ray
-load				St7_Siren
+load                St7_Ray
+load                St7_Siren
 
 anim idle
-	loop	1
-	delay	32
-	offset	56 229
-	@cmd offScreenKill 50 0
-	frame	data/bgs/sor2/st7c/cannon00.png
+    loop    1
+    delay    32
+    offset    56 229
+    @cmd offScreenKill 50 0
+    frame    data/bgs/sor2/st7c/cannon00.png
 
 anim attack1
-	range -60 60
-	rangea 0 100
-	rangez -999 999
-	fastattack 0
-	jugglecost 46
-	forcedirection 0
-	hitflash Shock
-	loop	0
-	delay	12
-	offset	56 229
-	@cmd aniParent 1 "ANI_FOLLOW1"
-	frame	data/bgs/sor2/st7c/cannon01.png
-	frame	data/bgs/sor2/st7c/cannon02.png
-	frame	data/bgs/sor2/st7c/cannon01.png
-	frame	data/bgs/sor2/st7c/cannon02.png
-	frame	data/bgs/sor2/st7c/cannon01.png
-	frame	data/bgs/sor2/st7c/cannon02.png
-	frame	data/bgs/sor2/st7c/cannon01.png
-	frame	data/bgs/sor2/st7c/cannon02.png
-		delay	48
-	sound	data/sounds/Shock.wav
-	@cmd spawnToss "St7_Ray" -32 0 -38 0 0 0 "ANI_FOLLOW1" 1
-	@cmd spawnToss "St7_Ray" 0 0 -22 0 0 0 "ANI_FOLLOW2" 1
-	@cmd spawnToss "St7_Ray" 32 0 -6 0 0 0 "ANI_FOLLOW1" 1
-	frame	data/bgs/sor2/st7c/cannon00.png
-		delay	4
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/bgs/sor2/st7c/cannon00.png
+    range -60 60
+    rangea 0 100
+    rangez -999 999
+    fastattack 0
+    jugglecost 46
+    forcedirection 0
+    hitflash Shock
+    loop    0
+    delay    12
+    offset    56 229
+    @cmd aniParent 1 "ANI_FOLLOW1"
+    frame    data/bgs/sor2/st7c/cannon01.png
+    frame    data/bgs/sor2/st7c/cannon02.png
+    frame    data/bgs/sor2/st7c/cannon01.png
+    frame    data/bgs/sor2/st7c/cannon02.png
+    frame    data/bgs/sor2/st7c/cannon01.png
+    frame    data/bgs/sor2/st7c/cannon02.png
+    frame    data/bgs/sor2/st7c/cannon01.png
+    frame    data/bgs/sor2/st7c/cannon02.png
+        delay    48
+    sound    data/sounds/Shock.wav
+    @cmd spawnToss "St7_Ray" -32 0 -38 0 0 0 "ANI_FOLLOW1" 1
+    @cmd spawnToss "St7_Ray" 0 0 -22 0 0 0 "ANI_FOLLOW2" 1
+    @cmd spawnToss "St7_Ray" 32 0 -6 0 0 0 "ANI_FOLLOW1" 1
+    frame    data/bgs/sor2/st7c/cannon00.png
+        delay    4
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/bgs/sor2/st7c/cannon00.png

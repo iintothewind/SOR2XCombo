@@ -2,8 +2,8 @@
 
 void main()
 {
-	musicPause();
-	screen(1);
-	resetAuraEffect();
-	dropItem("Apple");
+    musicPause();
+    screen(1);
+    resetAuraEffect();
+    dropItem("Apple");
 }

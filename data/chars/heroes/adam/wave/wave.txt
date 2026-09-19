@@ -1,61 +1,61 @@
-name				Adam_Wave
-type				none
-health				1
-nolife				1
-lifespan			1
-offscreenkill		50
-remove				0
-shadow				0
-antigravity			100
-death				1
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-animationscript		data/scripts/animation/default.c
+name                Adam_Wave
+type                none
+health                1
+nolife                1
+lifespan            1
+offscreenkill        50
+remove                0
+shadow                0
+antigravity            100
+death                1
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+animationscript        data/scripts/animation/default.c
 
 anim idle
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	loop	1 1 5
-	delay	2
-	offset	104 87
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/heroes/adam/wave/wave00.png
-	nodrawmethod
-	attack 85 61 19 53 9 1 0 0 20 18
-	dropv 2 1 0
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod alpha 6
-	drawmethod channel 0 0.2 0.8
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/adam/wave/wave00.png
-	nodrawmethod
-	attack 85 61 19 53 9 1 0 0 20 18
-	dropv 2 1 0
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod alpha 6
-	drawmethod channel 0 0.2 0.8
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/adam/wave/wave00.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    loop    1 1 5
+    delay    2
+    offset    104 87
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/heroes/adam/wave/wave00.png
+    nodrawmethod
+    attack 85 61 19 53 9 1 0 0 20 18
+    dropv 2 1 0
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod alpha 6
+    drawmethod channel 0 0.2 0.8
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/adam/wave/wave00.png
+    nodrawmethod
+    attack 85 61 19 53 9 1 0 0 20 18
+    dropv 2 1 0
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod alpha 6
+    drawmethod channel 0 0.2 0.8
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/adam/wave/wave00.png
 
 anim death
-	loop	0
-	delay	2
-	offset	104 87
-	@cmd dasher 0.5 0 0
-	drawmethod alpha 6
-	drawmethod channel 0 0 0.6
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod channel 0 0 0.5
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod channel 0 0 0.4
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod channel 0 0 0.3
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod channel 0 0 0.2
-	frame	data/chars/heroes/adam/wave/wave00.png
-	drawmethod channel 0 0 0.1
-	frame	data/chars/heroes/adam/wave/wave00.png
-	@cmd suicide
-	frame	data/chars/heroes/adam/wave/wave00.png
+    loop    0
+    delay    2
+    offset    104 87
+    @cmd dasher 0.5 0 0
+    drawmethod alpha 6
+    drawmethod channel 0 0 0.6
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod channel 0 0 0.5
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod channel 0 0 0.4
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod channel 0 0 0.3
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod channel 0 0 0.2
+    frame    data/chars/heroes/adam/wave/wave00.png
+    drawmethod channel 0 0 0.1
+    frame    data/chars/heroes/adam/wave/wave00.png
+    @cmd suicide
+    frame    data/chars/heroes/adam/wave/wave00.png

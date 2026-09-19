@@ -1,23 +1,23 @@
-name			St1_Waves
-type			panel
-shadow			0
-speed			5
-scroll			0.2
-setlayer		-200
-noquake 		1 1
+name            St1_Waves
+type            panel
+shadow            0
+speed            5
+scroll            0.2
+setlayer        -200
+noquake         1 1
 animationscript data/scripts/animation/default.c
 
-load			St1_Wave_Splash
+load            St1_Wave_Splash
 
 anim idle
-	loop	1
-	delay	36
-	offset	1 1
-	@cmd spawnScreenX "St1_Wave_Splash" 0 0 144
-	frame	data/bgs/sor3/st1b/waves00.png
-	@cmd spawnScreenX "St1_Wave_Splash" 0 0 144
-	frame	data/bgs/sor3/st1b/waves01.png
-	@cmd spawnScreenX "St1_Wave_Splash" 0 0 144
-	frame	data/bgs/sor3/st1b/waves02.png
-	@cmd spawnScreenX "St1_Wave_Splash" 0 0 144
-	frame	data/bgs/sor3/st1b/waves03.png
+    loop    1
+    delay    36
+    offset    1 1
+    @cmd spawnScreenX "St1_Wave_Splash" 0 0 144
+    frame    data/bgs/sor3/st1b/waves00.png
+    @cmd spawnScreenX "St1_Wave_Splash" 0 0 144
+    frame    data/bgs/sor3/st1b/waves01.png
+    @cmd spawnScreenX "St1_Wave_Splash" 0 0 144
+    frame    data/bgs/sor3/st1b/waves02.png
+    @cmd spawnScreenX "St1_Wave_Splash" 0 0 144
+    frame    data/bgs/sor3/st1b/waves03.png

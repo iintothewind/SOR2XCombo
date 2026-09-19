@@ -1,70 +1,70 @@
 ##MAIN
-name				RingmasterS
-type				none
+name                RingmasterS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter2.png
-remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter3.png
-remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter4.png
-remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter1.png
-remap				data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter1.png
+remap                data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter2.png
+remap                data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter3.png
+remap                data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter4.png
+remap                data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter1.png
+remap                data/chars/bosses/ringmaster/idle00.png data/chars/bosses/ringmaster/alter1.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim freespecial
-	loop	0
-	delay	1000
-	offset	139 200
-	frame	data/chars/bosses/ringmaster/missile00.png
-	frame	data/chars/bosses/ringmaster/missile01.png
-	frame	data/chars/bosses/ringmaster/missile02.png
-	frame	data/chars/bosses/ringmaster/missile03.png
-	frame	data/chars/bosses/ringmaster/missile02.png
-	frame	data/chars/bosses/ringmaster/missile03.png
-	frame	data/chars/bosses/ringmaster/missile02.png
-	frame	data/chars/bosses/ringmaster/missile03.png
-	frame	data/chars/bosses/ringmaster/missile02.png
-	frame	data/chars/bosses/ringmaster/missile01.png
-	frame	data/chars/bosses/ringmaster/missile00.png
+    loop    0
+    delay    1000
+    offset    139 200
+    frame    data/chars/bosses/ringmaster/missile00.png
+    frame    data/chars/bosses/ringmaster/missile01.png
+    frame    data/chars/bosses/ringmaster/missile02.png
+    frame    data/chars/bosses/ringmaster/missile03.png
+    frame    data/chars/bosses/ringmaster/missile02.png
+    frame    data/chars/bosses/ringmaster/missile03.png
+    frame    data/chars/bosses/ringmaster/missile02.png
+    frame    data/chars/bosses/ringmaster/missile03.png
+    frame    data/chars/bosses/ringmaster/missile02.png
+    frame    data/chars/bosses/ringmaster/missile01.png
+    frame    data/chars/bosses/ringmaster/missile00.png
 
 anim freespecial4 #GRAB RUN
-	loop	0
-	delay	1000
-	offset	139 200
-	frame	data/chars/bosses/ringmaster/slide00.png
-	frame	data/chars/bosses/ringmaster/slide00.png
-	frame	data/chars/bosses/ringmaster/slide00.png
-	frame	data/chars/bosses/ringmaster/walk00.png
-	frame	data/chars/bosses/ringmaster/walk01.png
-	frame	data/chars/bosses/ringmaster/walk02.png
-	frame	data/chars/bosses/ringmaster/walk03.png
-	frame	data/chars/bosses/ringmaster/walk00.png
+    loop    0
+    delay    1000
+    offset    139 200
+    frame    data/chars/bosses/ringmaster/slide00.png
+    frame    data/chars/bosses/ringmaster/slide00.png
+    frame    data/chars/bosses/ringmaster/slide00.png
+    frame    data/chars/bosses/ringmaster/walk00.png
+    frame    data/chars/bosses/ringmaster/walk01.png
+    frame    data/chars/bosses/ringmaster/walk02.png
+    frame    data/chars/bosses/ringmaster/walk03.png
+    frame    data/chars/bosses/ringmaster/walk00.png
 
 anim freespecial9 #UPPER MISSILE
-	loop	0
-	delay	1000
-	offset	139 200
-	frame	data/chars/bosses/ringmaster/s00.png
-	frame	data/chars/bosses/ringmaster/s01.png
-	frame	data/chars/bosses/ringmaster/s02.png
-	frame	data/chars/bosses/ringmaster/s03.png
-	frame	data/chars/bosses/ringmaster/s03.png
+    loop    0
+    delay    1000
+    offset    139 200
+    frame    data/chars/bosses/ringmaster/s00.png
+    frame    data/chars/bosses/ringmaster/s01.png
+    frame    data/chars/bosses/ringmaster/s02.png
+    frame    data/chars/bosses/ringmaster/s03.png
+    frame    data/chars/bosses/ringmaster/s03.png
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	139 200
-	frame	data/chars/bosses/ringmaster/walk00.png
-	frame	data/chars/bosses/ringmaster/walk01.png
-	frame	data/chars/bosses/ringmaster/walk02.png
-	frame	data/chars/bosses/ringmaster/walk03.png
-	frame	data/chars/bosses/ringmaster/walk00.png
-	frame	data/chars/bosses/ringmaster/walk01.png
-	frame	data/chars/bosses/ringmaster/walk02.png
-	frame	data/chars/bosses/ringmaster/walk03.png
+    loop    0
+    delay    1000
+    offset    139 200
+    frame    data/chars/bosses/ringmaster/walk00.png
+    frame    data/chars/bosses/ringmaster/walk01.png
+    frame    data/chars/bosses/ringmaster/walk02.png
+    frame    data/chars/bosses/ringmaster/walk03.png
+    frame    data/chars/bosses/ringmaster/walk00.png
+    frame    data/chars/bosses/ringmaster/walk01.png
+    frame    data/chars/bosses/ringmaster/walk02.png
+    frame    data/chars/bosses/ringmaster/walk03.png

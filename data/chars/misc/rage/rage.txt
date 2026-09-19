@@ -1,45 +1,45 @@
-name			Rage
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            Rage
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	2
-	offset	330 280
-	sound	data/sounds/RageSpend.wav
-	frame	data/chars/misc/rage/rage00.png
-	frame	data/chars/misc/rage/rage01.png
-	frame	data/chars/misc/rage/rage02.png
-	frame	data/chars/misc/rage/rage03.png
-	frame	data/chars/misc/rage/rage04.png
-	frame	data/chars/misc/rage/rage05.png
-	frame	data/chars/misc/rage/rage06.png
-	frame	data/chars/misc/rage/rage07.png
-	frame	data/chars/misc/rage/rage08.png
-	frame	data/chars/misc/rage/rage09.png
-	frame	data/chars/misc/rage/rage10.png
-	frame	data/chars/misc/rage/rage11.png
-	frame	data/chars/misc/rage/rage12.png
-	frame	data/chars/misc/rage/rage13.png
-	frame	data/chars/misc/rage/rage14.png
-	frame	data/chars/misc/rage/rage15.png
-	frame	data/chars/misc/rage/rage16.png
-	frame	data/chars/misc/rage/rage17.png
-	frame	data/chars/misc/rage/rage18.png
-	frame	data/chars/misc/rage/rage19.png
-	frame	data/chars/misc/rage/rage20.png
-	frame	data/chars/misc/rage/rage20.png
-	frame	data/chars/misc/rage/rage21.png
-	frame	data/chars/misc/rage/rage22.png
-	frame	data/chars/misc/rage/rage23.png
-	frame	data/chars/misc/rage/rage24.png
-	frame	data/chars/misc/rage/rage25.png
-	@cmd suicide
-	frame	data/chars/misc/rage/rage26.png
+    loop    0
+    delay    2
+    offset    330 280
+    sound    data/sounds/RageSpend.wav
+    frame    data/chars/misc/rage/rage00.png
+    frame    data/chars/misc/rage/rage01.png
+    frame    data/chars/misc/rage/rage02.png
+    frame    data/chars/misc/rage/rage03.png
+    frame    data/chars/misc/rage/rage04.png
+    frame    data/chars/misc/rage/rage05.png
+    frame    data/chars/misc/rage/rage06.png
+    frame    data/chars/misc/rage/rage07.png
+    frame    data/chars/misc/rage/rage08.png
+    frame    data/chars/misc/rage/rage09.png
+    frame    data/chars/misc/rage/rage10.png
+    frame    data/chars/misc/rage/rage11.png
+    frame    data/chars/misc/rage/rage12.png
+    frame    data/chars/misc/rage/rage13.png
+    frame    data/chars/misc/rage/rage14.png
+    frame    data/chars/misc/rage/rage15.png
+    frame    data/chars/misc/rage/rage16.png
+    frame    data/chars/misc/rage/rage17.png
+    frame    data/chars/misc/rage/rage18.png
+    frame    data/chars/misc/rage/rage19.png
+    frame    data/chars/misc/rage/rage20.png
+    frame    data/chars/misc/rage/rage20.png
+    frame    data/chars/misc/rage/rage21.png
+    frame    data/chars/misc/rage/rage22.png
+    frame    data/chars/misc/rage/rage23.png
+    frame    data/chars/misc/rage/rage24.png
+    frame    data/chars/misc/rage/rage25.png
+    @cmd suicide
+    frame    data/chars/misc/rage/rage26.png

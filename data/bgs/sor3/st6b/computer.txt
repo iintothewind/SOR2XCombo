@@ -1,115 +1,115 @@
-name				St6_Computer
-type				enemy
-subtype				notgrab
-subject_to_wall		0
-health				300
-nolife				1
-score				5000
-shadow				0
-nomove				1 1
-nopain				1
-nodrop				2
-stealth				2
-death				1
-noatflash			1
-flash				Flash
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/computers.c
+name                St6_Computer
+type                enemy
+subtype                notgrab
+subject_to_wall        0
+health                300
+nolife                1
+score                5000
+shadow                0
+nomove                1 1
+nopain                1
+nodrop                2
+stealth                2
+death                1
+noatflash            1
+flash                Flash
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/computers.c
 
 anim idle
-	loop	1
-	delay	24
-	offset	180 128
-	bbox	56 7 88 162 30
-	frame	data/bgs/sor3/st6b/computer00.png
-	frame	data/bgs/sor3/st6b/computer01.png
-	frame	data/bgs/sor3/st6b/computer00.png
-	frame	data/bgs/sor3/st6b/computer01.png
+    loop    1
+    delay    24
+    offset    180 128
+    bbox    56 7 88 162 30
+    frame    data/bgs/sor3/st6b/computer00.png
+    frame    data/bgs/sor3/st6b/computer01.png
+    frame    data/bgs/sor3/st6b/computer00.png
+    frame    data/bgs/sor3/st6b/computer01.png
 
 anim follow1
-	loop	0
-	delay	2
-	offset	180 128
-	bbox	56 7 88 162 30
-	@cmd spawnToss "Smoke" -85 30 1 0 1 0
-	frame	data/bgs/sor3/st6b/computer00b.png
-	frame	data/bgs/sor3/st6b/computer00.png
-	frame	data/bgs/sor3/st6b/computer01b.png
-	frame	data/bgs/sor3/st6b/computer01.png
-	frame	data/bgs/sor3/st6b/computer00b.png
-	frame	data/bgs/sor3/st6b/computer00.png
-	frame	data/bgs/sor3/st6b/computer01b.png
-	frame	data/bgs/sor3/st6b/computer01.png
-	@cmd aniChange 0 openborconstant("ANI_IDLE")
-	frame	data/bgs/sor3/st6b/computer00.png
+    loop    0
+    delay    2
+    offset    180 128
+    bbox    56 7 88 162 30
+    @cmd spawnToss "Smoke" -85 30 1 0 1 0
+    frame    data/bgs/sor3/st6b/computer00b.png
+    frame    data/bgs/sor3/st6b/computer00.png
+    frame    data/bgs/sor3/st6b/computer01b.png
+    frame    data/bgs/sor3/st6b/computer01.png
+    frame    data/bgs/sor3/st6b/computer00b.png
+    frame    data/bgs/sor3/st6b/computer00.png
+    frame    data/bgs/sor3/st6b/computer01b.png
+    frame    data/bgs/sor3/st6b/computer01.png
+    @cmd aniChange 0 openborconstant("ANI_IDLE")
+    frame    data/bgs/sor3/st6b/computer00.png
 
 anim follow2
-	loop	1
-	delay	96
-	offset	180 128
-	bbox	56 7 88 162 30
-	@cmd spawnBind "Shock" -74 25 1
-	frame	data/bgs/sor3/st6b/computer02.png
-	frame	data/bgs/sor3/st6b/computer03.png
-	frame	data/bgs/sor3/st6b/computer02.png
-	frame	data/bgs/sor3/st6b/computer03.png
+    loop    1
+    delay    96
+    offset    180 128
+    bbox    56 7 88 162 30
+    @cmd spawnBind "Shock" -74 25 1
+    frame    data/bgs/sor3/st6b/computer02.png
+    frame    data/bgs/sor3/st6b/computer03.png
+    frame    data/bgs/sor3/st6b/computer02.png
+    frame    data/bgs/sor3/st6b/computer03.png
 
 anim follow3
-	loop	0
-	delay	2
-	offset	180 128
-	bbox	56 7 88 162 30
-	@cmd spawnToss "Smoke" -85 30 1 0 1 0
-	frame	data/bgs/sor3/st6b/computer02b.png
-	frame	data/bgs/sor3/st6b/computer02.png
-	frame	data/bgs/sor3/st6b/computer03b.png
-	frame	data/bgs/sor3/st6b/computer03.png
-	frame	data/bgs/sor3/st6b/computer02b.png
-	frame	data/bgs/sor3/st6b/computer02.png
-	frame	data/bgs/sor3/st6b/computer03b.png
-	frame	data/bgs/sor3/st6b/computer03.png
-	@cmd aniChange 0 openborconstant("ANI_FOLLOW2")
-	frame	data/bgs/sor3/st6b/computer02.png
+    loop    0
+    delay    2
+    offset    180 128
+    bbox    56 7 88 162 30
+    @cmd spawnToss "Smoke" -85 30 1 0 1 0
+    frame    data/bgs/sor3/st6b/computer02b.png
+    frame    data/bgs/sor3/st6b/computer02.png
+    frame    data/bgs/sor3/st6b/computer03b.png
+    frame    data/bgs/sor3/st6b/computer03.png
+    frame    data/bgs/sor3/st6b/computer02b.png
+    frame    data/bgs/sor3/st6b/computer02.png
+    frame    data/bgs/sor3/st6b/computer03b.png
+    frame    data/bgs/sor3/st6b/computer03.png
+    @cmd aniChange 0 openborconstant("ANI_FOLLOW2")
+    frame    data/bgs/sor3/st6b/computer02.png
 
 anim follow4
-	loop	1
-	delay	96
-	offset	180 128
-	bbox	56 7 88 162 30
-	@cmd spawnBind "Shock" -74 25 1
-	frame	data/bgs/sor3/st6b/computer04.png
-	frame	data/bgs/sor3/st6b/computer05.png
-	frame	data/bgs/sor3/st6b/computer04.png
-	frame	data/bgs/sor3/st6b/computer05.png
+    loop    1
+    delay    96
+    offset    180 128
+    bbox    56 7 88 162 30
+    @cmd spawnBind "Shock" -74 25 1
+    frame    data/bgs/sor3/st6b/computer04.png
+    frame    data/bgs/sor3/st6b/computer05.png
+    frame    data/bgs/sor3/st6b/computer04.png
+    frame    data/bgs/sor3/st6b/computer05.png
 
 anim follow5
-	loop	0
-	delay	2
-	offset	180 128
-	bbox	56 7 88 162 30
-	@cmd spawnToss "Smoke" -85 30 1 0 1 0
-	frame	data/bgs/sor3/st6b/computer04b.png
-	frame	data/bgs/sor3/st6b/computer04.png
-	frame	data/bgs/sor3/st6b/computer05b.png
-	frame	data/bgs/sor3/st6b/computer05.png
-	frame	data/bgs/sor3/st6b/computer04b.png
-	frame	data/bgs/sor3/st6b/computer04.png
-	frame	data/bgs/sor3/st6b/computer05b.png
-	frame	data/bgs/sor3/st6b/computer05.png
-	@cmd aniChange 0 openborconstant("ANI_FOLLOW4")
-	frame	data/bgs/sor3/st6b/computer04.png
+    loop    0
+    delay    2
+    offset    180 128
+    bbox    56 7 88 162 30
+    @cmd spawnToss "Smoke" -85 30 1 0 1 0
+    frame    data/bgs/sor3/st6b/computer04b.png
+    frame    data/bgs/sor3/st6b/computer04.png
+    frame    data/bgs/sor3/st6b/computer05b.png
+    frame    data/bgs/sor3/st6b/computer05.png
+    frame    data/bgs/sor3/st6b/computer04b.png
+    frame    data/bgs/sor3/st6b/computer04.png
+    frame    data/bgs/sor3/st6b/computer05b.png
+    frame    data/bgs/sor3/st6b/computer05.png
+    @cmd aniChange 0 openborconstant("ANI_FOLLOW4")
+    frame    data/bgs/sor3/st6b/computer04.png
 
 anim death
-	loop	0
-	delay	24
-	offset	180 128
-	sound data/sounds/sor3_hit10.wav
-	@cmd spawnBind "Destruction" -84 15 1
-	@cmd nodieBlink 3
-	frame	data/bgs/sor3/st6b/computer06.png
-	@cmd spawnBind "Destruction" -74 60 1
-	frame	data/bgs/sor3/st6b/computer07.png
-	@cmd spawnBind "Destruction" -74 90 1
-	frame	data/bgs/sor3/st6b/computer06.png
-		delay	128
-	frame	data/bgs/sor3/st6b/computer07.png
+    loop    0
+    delay    24
+    offset    180 128
+    sound data/sounds/sor3_hit10.wav
+    @cmd spawnBind "Destruction" -84 15 1
+    @cmd nodieBlink 3
+    frame    data/bgs/sor3/st6b/computer06.png
+    @cmd spawnBind "Destruction" -74 60 1
+    frame    data/bgs/sor3/st6b/computer07.png
+    @cmd spawnBind "Destruction" -74 90 1
+    frame    data/bgs/sor3/st6b/computer06.png
+        delay    128
+    frame    data/bgs/sor3/st6b/computer07.png

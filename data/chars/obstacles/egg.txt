@@ -1,39 +1,39 @@
-name				Egg
-type				obstacle
-health				1
-nolife				1
-score				2000
-gfxshadow			1 1
-noatflash			1
-flash				Flash
-ondeathscript		data/scripts/ondeath/item.c
-animationscript		data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/obstacles.c
+name                Egg
+type                obstacle
+health                1
+nolife                1
+score                2000
+gfxshadow            1 1
+noatflash            1
+flash                Flash
+ondeathscript        data/scripts/ondeath/item.c
+animationscript        data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/obstacles.c
 
-diesound			data/sounds/Glass2.wav
+diesound            data/sounds/Glass2.wav
 
 anim idle
-	loop	1
-	delay	8
-	offset	100 167
-	bbox 	84 99 32 70
-	platform 74 74 126 126 5 1000
-	@cmd offScreenKill 50 0
-	frame	data/chars/obstacles/egg00.png
-	frame	data/chars/obstacles/egg01.png
-	frame	data/chars/obstacles/egg02.png
-	frame	data/chars/obstacles/egg01.png
+    loop    1
+    delay    8
+    offset    100 167
+    bbox     84 99 32 70
+    platform 74 74 126 126 5 1000
+    @cmd offScreenKill 50 0
+    frame    data/chars/obstacles/egg00.png
+    frame    data/chars/obstacles/egg01.png
+    frame    data/chars/obstacles/egg02.png
+    frame    data/chars/obstacles/egg01.png
 
 anim fall
-	landframe 4
-	loop	1 0 4
-	delay	8
-	offset	100 167
-	frame	data/chars/obstacles/egg03.png
-	frame	data/chars/obstacles/egg04.png
-	frame	data/chars/obstacles/egg05.png
-	frame	data/chars/obstacles/egg04.png
-	@cmd spawnBind "Bang" 0 15 1
-	frame	data/chars/obstacles/egg05.png
-	@cmd suicide
-	frame	data/chars/obstacles/egg05.png
+    landframe 4
+    loop    1 0 4
+    delay    8
+    offset    100 167
+    frame    data/chars/obstacles/egg03.png
+    frame    data/chars/obstacles/egg04.png
+    frame    data/chars/obstacles/egg05.png
+    frame    data/chars/obstacles/egg04.png
+    @cmd spawnBind "Bang" 0 15 1
+    frame    data/chars/obstacles/egg05.png
+    @cmd suicide
+    frame    data/chars/obstacles/egg05.png

@@ -1,22 +1,22 @@
 ##MAIN
-name			Route_Left
-type			item
+name            Route_Left
+type            item
 subject_to_wall 0
 
 ##MISC
-shadow			0
-antigravity		100
-setlayer		1000
+shadow            0
+antigravity        100
+setlayer        1000
 
 ##SCRIPTS
-ondrawscript	data/scripts/ondraw/menu_route.c
+ondrawscript    data/scripts/ondraw/menu_route.c
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	1
-	delay	48
-	offset	15 26
-	platform -80 500 0 0 100 100 1000 1000
-	frame	data/bgs/route/arrow_left.png
-	frame	data/bgs/route/empty.png
+    loop    1
+    delay    48
+    offset    15 26
+    platform -80 500 0 0 100 100 1000 1000
+    frame    data/bgs/route/arrow_left.png
+    frame    data/bgs/route/empty.png

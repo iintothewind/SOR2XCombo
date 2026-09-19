@@ -1,101 +1,101 @@
-name				Yamato_Star #THROWNED
-type				none
-nolife				1
-lifespan			4
-offscreenkill		50
-remove				1
-jugglepoints		50
-gfxshadow			1 1
-noatflash 			1
-flash				NoFlash
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-ondrawscript		data/scripts/ondraw/weapons.c
-onfallscript		data/scripts/onfall/weapons.c
-animationscript		data/scripts/animation/default.c
+name                Yamato_Star #THROWNED
+type                none
+nolife                1
+lifespan            4
+offscreenkill        50
+remove                1
+jugglepoints        50
+gfxshadow            1 1
+noatflash             1
+flash                NoFlash
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+ondrawscript        data/scripts/ondraw/weapons.c
+onfallscript        data/scripts/onfall/weapons.c
+animationscript        data/scripts/animation/default.c
 
 anim idle #LEFT/RIGHT
-	landframe 2
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	1 0 2
-	delay	8
-	offset	25 29
-	bbox 	19 25 12 7
-	hitfx	data/sounds/Cutter.wav
-	attack 19 25 12 7 9 1 0 0 0 24
-	frame	data/chars/bosses/yamato/star/star00.png
-	frame	data/chars/bosses/yamato/star/star01.png
-	@cmd aniChange 0 "ANI_FOLLOW3"
-	frame	data/chars/bosses/yamato/star/star00.png
+    landframe 2
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    1 0 2
+    delay    8
+    offset    25 29
+    bbox     19 25 12 7
+    hitfx    data/sounds/Cutter.wav
+    attack 19 25 12 7 9 1 0 0 0 24
+    frame    data/chars/bosses/yamato/star/star00.png
+    frame    data/chars/bosses/yamato/star/star01.png
+    @cmd aniChange 0 "ANI_FOLLOW3"
+    frame    data/chars/bosses/yamato/star/star00.png
 
 anim follow1 #DIAGONAL
-	landframe 2
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	hitflash BloodHit
-	loop	1 0 2
-	delay	8
-	offset	25 29
-	bbox 	21 24 9 9
-	hitfx	data/sounds/Cutter.wav
-	attack 21 24 9 9 9 1 0 0 0 24
-	frame	data/chars/bosses/yamato/star/star02.png
-	frame	data/chars/bosses/yamato/star/star03.png
-	@cmd aniChange 0 "ANI_FOLLOW3"
-	frame	data/chars/bosses/yamato/star/star02.png
+    landframe 2
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    hitflash BloodHit
+    loop    1 0 2
+    delay    8
+    offset    25 29
+    bbox     21 24 9 9
+    hitfx    data/sounds/Cutter.wav
+    attack 21 24 9 9 9 1 0 0 0 24
+    frame    data/chars/bosses/yamato/star/star02.png
+    frame    data/chars/bosses/yamato/star/star03.png
+    @cmd aniChange 0 "ANI_FOLLOW3"
+    frame    data/chars/bosses/yamato/star/star02.png
 
 anim follow2 #DOWN
-	landframe 2
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	hitflash BloodHit
-	loop	1 0 2
-	delay	8
-	offset	25 29
-	bbox 	21 22 7 12
-	hitfx	data/sounds/Cutter.wav
-	attack 21 22 7 12 9 1 0 0 0 24
-	frame	data/chars/bosses/yamato/star/star06.png
-	frame	data/chars/bosses/yamato/star/star07.png
-	@cmd aniChange 0 "ANI_FOLLOW3"
-	frame	data/chars/bosses/yamato/star/star06.png
+    landframe 2
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    hitflash BloodHit
+    loop    1 0 2
+    delay    8
+    offset    25 29
+    bbox     21 22 7 12
+    hitfx    data/sounds/Cutter.wav
+    attack 21 22 7 12 9 1 0 0 0 24
+    frame    data/chars/bosses/yamato/star/star06.png
+    frame    data/chars/bosses/yamato/star/star07.png
+    @cmd aniChange 0 "ANI_FOLLOW3"
+    frame    data/chars/bosses/yamato/star/star06.png
 
 anim follow3 #GROUND
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	hitflash BloodHit
-	loop	0
-	delay	32
-	offset	25 29
-	shadowcoords 25 33
-	hitfx	data/sounds/Cutter.wav
-	@cmd stop
-	@cmd spawn01 "Flash" 0 0 0
-	sound	data/sounds/Clash.wav
-	attack 20 24 9 8 9 1 0 0 0 24
-	frame	data/chars/bosses/yamato/star/star08.png
-	@cmd suicide
-	frame	data/chars/bosses/yamato/star/star08.png
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    hitflash BloodHit
+    loop    0
+    delay    32
+    offset    25 29
+    shadowcoords 25 33
+    hitfx    data/sounds/Cutter.wav
+    @cmd stop
+    @cmd spawn01 "Flash" 0 0 0
+    sound    data/sounds/Clash.wav
+    attack 20 24 9 8 9 1 0 0 0 24
+    frame    data/chars/bosses/yamato/star/star08.png
+    @cmd suicide
+    frame    data/chars/bosses/yamato/star/star08.png
 
 anim fall
-	loop	0
-	delay	8
-	offset	25 29
-	shadowcoords 25 33
-	sound	data/sounds/Clash.wav
-	frame	data/chars/bosses/yamato/star/star08.png
-	frame	data/chars/bosses/yamato/star/star08.png
+    loop    0
+    delay    8
+    offset    25 29
+    shadowcoords 25 33
+    sound    data/sounds/Clash.wav
+    frame    data/chars/bosses/yamato/star/star08.png
+    frame    data/chars/bosses/yamato/star/star08.png

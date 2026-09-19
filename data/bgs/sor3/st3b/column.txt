@@ -1,19 +1,19 @@
-name		St3_Column
-type		npc
-subtype		notgrab
-health		1000000
-nolife		1
-nomove		1 1
-gfxshadow	1 1
-noatflash	1
-flash		Flash
-stealth		2
+name        St3_Column
+type        npc
+subtype        notgrab
+health        1000000
+nolife        1
+nomove        1 1
+gfxshadow    1 1
+noatflash    1
+flash        Flash
+stealth        2
 
 anim idle
-	loop	0
-	delay	6
-	offset	83 245
-	bbox 	63 0 31 248
-	shadowcoords 83 240
-	platform 1 252 44 44 110 110 16 1000
-	frame	data/bgs/sor3/st3b/column00.png
+    loop    0
+    delay    6
+    offset    83 245
+    bbox     63 0 31 248
+    shadowcoords 83 240
+    platform 1 252 44 44 110 110 16 1000
+    frame    data/bgs/sor3/st3b/column00.png

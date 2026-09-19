@@ -1,30 +1,30 @@
-name			Splash
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			6
-setlayer 		-1
-animationscript	data/scripts/animation/default.c
+name            Splash
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            6
+setlayer         -1
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	1
-	offset	190 150
-	frame	data/chars/misc/splash/splash00.png
-		delay	4
-	@cmd spawn01 "Water" 0 0 1
-	sound	data/sounds/Splash.wav
-	frame	data/chars/misc/splash/splash00.png
-	frame	data/chars/misc/splash/splash01.png
-	frame	data/chars/misc/splash/splash02.png
-	frame	data/chars/misc/splash/splash03.png
-	frame	data/chars/misc/splash/splash04.png
-		delay	8
-	frame	data/chars/misc/splash/splash05.png
-	frame	data/chars/misc/splash/splash06.png
-	frame	data/chars/misc/splash/splash07.png
-	frame	data/chars/misc/splash/splash08.png
-	@cmd suicide
-	frame	data/chars/misc/splash/empty.png
+    loop    0
+    delay    1
+    offset    190 150
+    frame    data/chars/misc/splash/splash00.png
+        delay    4
+    @cmd spawn01 "Water" 0 0 1
+    sound    data/sounds/Splash.wav
+    frame    data/chars/misc/splash/splash00.png
+    frame    data/chars/misc/splash/splash01.png
+    frame    data/chars/misc/splash/splash02.png
+    frame    data/chars/misc/splash/splash03.png
+    frame    data/chars/misc/splash/splash04.png
+        delay    8
+    frame    data/chars/misc/splash/splash05.png
+    frame    data/chars/misc/splash/splash06.png
+    frame    data/chars/misc/splash/splash07.png
+    frame    data/chars/misc/splash/splash08.png
+    @cmd suicide
+    frame    data/chars/misc/splash/empty.png

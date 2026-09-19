@@ -1,51 +1,51 @@
-name			Boat #Seaport Ash Boat
-type			none
-subject_to_minz	0
-shadow		 	0
-antigravity		100
-setlayer		-100
-stealth			2
-onspawnscript	data/scripts/onspawn/boat.c
-animationscript	data/scripts/animation/default.c
+name            Boat #Seaport Ash Boat
+type            none
+subject_to_minz    0
+shadow             0
+antigravity        100
+setlayer        -100
+stealth            2
+onspawnscript    data/scripts/onspawn/boat.c
+animationscript    data/scripts/animation/default.c
 
 anim idle #BRING ENEMIES AND BACK TO CATCH MORE
-	loop	1 4 6
-	delay	96
-	offset	150 181
-	sound	data/sounds/Boat.wav
-	platform 54 54 246 246 6 1
-	@cmd dasher 0.25 0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher 0.25 -0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd loopXpos 100 0 0
-	@cmd dasher -0.25 0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher -0.25 -0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher -0.25 0.05 0
-	@cmd offScreenKill 160 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher -0.25 -0.05 0
-	@cmd offScreenKill 160 0
-	frame	data/chars/vehicles/boat00.png
+    loop    1 4 6
+    delay    96
+    offset    150 181
+    sound    data/sounds/Boat.wav
+    platform 54 54 246 246 6 1
+    @cmd dasher 0.25 0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher 0.25 -0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd loopXpos 100 0 0
+    @cmd dasher -0.25 0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher -0.25 -0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher -0.25 0.05 0
+    @cmd offScreenKill 160 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher -0.25 -0.05 0
+    @cmd offScreenKill 160 0
+    frame    data/chars/vehicles/boat00.png
 
 anim follow1 #BRING LAST ENEMIES AND STOP
-	loop	1 4 6
-	delay	96
-	offset	150 181
-	sound	data/sounds/Boat.wav
-	platform 54 54 246 246 6 1
-	@cmd dasher 0.25 0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher 0.25 -0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd looper 0 3
-	@cmd dasher 0 0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher 0 -0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher 0 0.05 0
-	frame	data/chars/vehicles/boat00.png
-	@cmd dasher 0 -0.05 0
-	frame	data/chars/vehicles/boat00.png
+    loop    1 4 6
+    delay    96
+    offset    150 181
+    sound    data/sounds/Boat.wav
+    platform 54 54 246 246 6 1
+    @cmd dasher 0.25 0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher 0.25 -0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd looper 0 3
+    @cmd dasher 0 0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher 0 -0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher 0 0.05 0
+    frame    data/chars/vehicles/boat00.png
+    @cmd dasher 0 -0.05 0
+    frame    data/chars/vehicles/boat00.png

@@ -1,364 +1,364 @@
-loadingbg		data/bgs/loading3.png 			1 -81 248 480 999 999 0
-bglayer			data/bgs/sor1/st07/e05.png		0 1 0 0 0 0 1 1 1 2
-background	data/bgs/sor1/st07/Back01.png
-panel		data/bgs/sor1/st07/pn01.png
+loadingbg        data/bgs/loading3.png             1 -81 248 480 999 999 0
+bglayer            data/bgs/sor1/st07/e05.png        0 1 0 0 0 0 1 1 1 2
+background    data/bgs/sor1/st07/Back01.png
+panel        data/bgs/sor1/st07/pn01.png
 frontpanel      data/bgs/sor1/st07/Front01.png
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 7
-spawn1			60 20 300
-spawn2			90 40 300
-spawn3			120 20 300
-spawn4			150 40 300
+spawn1            60 20 300
+spawn2            90 40 300
+spawn3            120 20 300
+spawn4            150 40 300
 
 cameratype 1
 cameraoffset 0 -30
 
 #########################################################################################
 
-light		128 16
-at			0
+light        128 16
+at            0
 
 shadowcolor   64_64_64
 at             0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-Hole  		432  271  0  0  591  620  87
-Wall  		-139  230  -29  0  239  130  70  5000
+Hole          432  271  0  0  591  620  87
+Wall          -139  230  -29  0  239  130  70  5000
 
 #########################################################################################
 
-load		Stage 3
-load		Elevador01 3
+load        Stage 3
+load        Elevador01 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-spawn  		Elevador01 1
-flip   		1
-coords  	0 -2000 0
-at  		0
+spawn          Elevador01 1
+flip           1
+coords      0 -2000 0
+at          0
 
-
-#########################################################################################
-
-wait
-at		300
-
-group 		5 5
-at		300
-
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-coords  	250  250 300
-at  		300
-
-spawn		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	150  240 300
-at  		300
-
-spawn  		SignalX 1
-map			3
-coords  	-100  245
-at  		300
-
-spawn  		BasicX3 1
-map			4
-coords  	250  240 300
-at  		300
-
-spawn		GalsiaB 1
-weapon		Knife 1
-map			4
-coords  	150  240 300
-at  		300
 
 #########################################################################################
 
 wait
-at		1200
+at        300
 
-group 		5 5
-at		1200
+group         5 5
+at        300
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-coords  	250  250 300
-at  		1200
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+coords      250  250 300
+at          300
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	150  240 300
-at  		1200
+spawn        KusanagiB 1
+weapon    Sword 1
+map            3
+coords      150  240 300
+at          300
 
-spawn  		SignalX 1
-map			4
-coords  	-100  245
-at  		1200
+spawn          SignalX 1
+map            3
+coords      -100  245
+at          300
 
-spawn		GalsiaB 1
-weapon		Knife 1
-map			4
-coords  	250  240 300
-at  		1200
+spawn          BasicX3 1
+map            4
+coords      250  240 300
+at          300
 
-spawn  		BasicX3 1
-map			3
-coords  	150  240 300
-at  		1200
-
-#########################################################################################
-
-wait
-at		2000
-
-group 		5 5
-at		2000
-
-spawn  		BasicX3 1
-map			3
-coords  	-50  250
-at  		2000
-
-spawn  		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	250  200 300
-at  		2000
-
-spawn  		KusanagiB 1
-weapon	Sword 1
-map			4
-coords  	350  200 300
-at  		2000
-
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-coords  	350  250 300
-at  		2000
-
-spawn  		BasicX3 1
-map			3
-coords  	-50  245
-at  		2000
+spawn        GalsiaB 1
+weapon        Knife 1
+map            4
+coords      150  240 300
+at          300
 
 #########################################################################################
 
 wait
-at		2500
+at        1200
 
-group 		5 5
-at		2500
+group         5 5
+at        1200
 
-spawn  		BossX1 1
-map			3
-coords  	-50  250 0
-at  		2500
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+coords      250  250 300
+at          1200
 
-spawn  		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	250  200 300
-at  		2500
+spawn        KusanagiB 1
+weapon    Sword 1
+map            3
+coords      150  240 300
+at          1200
 
-spawn  		KusanagiB 1
-weapon	Sword 1
-map			4
-coords  	350  200 300
-at  		2500
+spawn          SignalX 1
+map            4
+coords      -100  245
+at          1200
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-coords  	350  250 300
-at  		2500
+spawn        GalsiaB 1
+weapon        Knife 1
+map            4
+coords      250  240 300
+at          1200
 
-spawn  		BasicX3 1
-map			3
-coords  	-50  245 0
-at  		2500
-
-#########################################################################################
-
-wait
-at		3000
-
-group 		5 5
-at		3000
-
-spawn  		BasicX3 1
-map			3
-coords  	-50  250
-at  		3000
-
-spawn  		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	250  200 300
-at  		3000
-
-spawn  		KusanagiB 1
-weapon	Sword 1
-map			4
-coords  	350  200 300
-at  		3000
-
-spawn		DonovanB 1
-weapon		Pipe 1
-map			3
-coords  	350  250 300
-at  		3000
-
-spawn  		BasicX3 1
-map			3
-coords  	-50  245
-at  		3000
+spawn          BasicX3 1
+map            3
+coords      150  240 300
+at          1200
 
 #########################################################################################
 
 wait
-at		3500
+at        2000
 
-group 		5 5
-at		3500
+group         5 5
+at        2000
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	250  200 300
-at  		3500
+spawn          BasicX3 1
+map            3
+coords      -50  250
+at          2000
 
-spawn		KusanagiB 1
-weapon	Kunai 1
-map			3
-coords  	-50  200 300
-at 		3500
+spawn          KusanagiB 1
+weapon    Sword 1
+map            3
+coords      250  200 300
+at          2000
 
-spawn  		BasicX3 1
-map			3
-coords  	-50  240
-at  		3500
+spawn          KusanagiB 1
+weapon    Sword 1
+map            4
+coords      350  200 300
+at          2000
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			4
-coords  	-50  200 300
-at 		3500
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+coords      350  250 300
+at          2000
 
-spawn  		SignalX 1
-map			3
-coords  	250  250 300
-at  		3500
-
-#########################################################################################
-
-wait
-at		4000
-
-group 		5 5
-at		4000
-
-spawn		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	250  200 300
-at  		4000
-
-spawn		KusanagiB 1
-weapon	Kunai 1
-map			3
-coords  	-50  200 300
-at 		4000
-
-spawn  		BasicX3 1
-map			3
-coords  	-50  240 300
-at  		4000
-
-spawn		DonovanB 1
-weapon		Pipe 1
-map			4
-coords  	-50  200 300
-at 		4000
-
-spawn  		BossX1 1
-map			3
-coords  	-100  250 300
-at  		4000
+spawn          BasicX3 1
+map            3
+coords      -50  245
+at          2000
 
 #########################################################################################
 
 wait
-at		4500
+at        2500
 
-group 		5 5
-at		4500
+group         5 5
+at        2500
 
-spawn		KusanagiB 1
-weapon	Sword 1
-map			3
-coords  	250  200 300
-at  		4500
+spawn          BossX1 1
+map            3
+coords      -50  250 0
+at          2500
 
-spawn		KusanagiB 1
-weapon	Kunai 1
-map			3
-coords  	-50  200 300
-at 		4500
+spawn          KusanagiB 1
+weapon    Sword 1
+map            3
+coords      250  200 300
+at          2500
 
-spawn  		BasicX3 1
-map			3
-coords  	-50  240 300
-at  		4500
+spawn          KusanagiB 1
+weapon    Sword 1
+map            4
+coords      350  200 300
+at          2500
 
-spawn		DonovanB 1
-weapon		Pipe 1
-map			4
-coords  	-50  200 300
-at 		4500
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+coords      350  250 300
+at          2500
 
-spawn  		BasicX3 1
-map			3
-coords  	250  250 300
-at  		4500
+spawn          BasicX3 1
+map            3
+coords      -50  245 0
+at          2500
 
 #########################################################################################
 
 wait
-at		5000
+at        3000
 
-group 		2 2
-at		5000
+group         5 5
+at        3000
+
+spawn          BasicX3 1
+map            3
+coords      -50  250
+at          3000
+
+spawn          KusanagiB 1
+weapon    Sword 1
+map            3
+coords      250  200 300
+at          3000
+
+spawn          KusanagiB 1
+weapon    Sword 1
+map            4
+coords      350  200 300
+at          3000
+
+spawn        DonovanB 1
+weapon        Pipe 1
+map            3
+coords      350  250 300
+at          3000
+
+spawn          BasicX3 1
+map            3
+coords      -50  245
+at          3000
+
+#########################################################################################
+
+wait
+at        3500
+
+group         5 5
+at        3500
+
+spawn        KusanagiB 1
+weapon    Sword 1
+map            3
+coords      250  200 300
+at          3500
+
+spawn        KusanagiB 1
+weapon    Kunai 1
+map            3
+coords      -50  200 300
+at         3500
+
+spawn          BasicX3 1
+map            3
+coords      -50  240
+at          3500
+
+spawn        DonovanB 1
+weapon        Pipe 1
+map            4
+coords      -50  200 300
+at         3500
+
+spawn          SignalX 1
+map            3
+coords      250  250 300
+at          3500
+
+#########################################################################################
+
+wait
+at        4000
+
+group         5 5
+at        4000
+
+spawn        KusanagiB 1
+weapon    Sword 1
+map            3
+coords      250  200 300
+at          4000
+
+spawn        KusanagiB 1
+weapon    Kunai 1
+map            3
+coords      -50  200 300
+at         4000
+
+spawn          BasicX3 1
+map            3
+coords      -50  240 300
+at          4000
+
+spawn        DonovanB 1
+weapon        Pipe 1
+map            4
+coords      -50  200 300
+at         4000
+
+spawn          BossX1 1
+map            3
+coords      -100  250 300
+at          4000
+
+#########################################################################################
+
+wait
+at        4500
+
+group         5 5
+at        4500
+
+spawn        KusanagiB 1
+weapon    Sword 1
+map            3
+coords      250  200 300
+at          4500
+
+spawn        KusanagiB 1
+weapon    Kunai 1
+map            3
+coords      -50  200 300
+at         4500
+
+spawn          BasicX3 1
+map            3
+coords      -50  240 300
+at          4500
+
+spawn        DonovanB 1
+weapon        Pipe 1
+map            4
+coords      -50  200 300
+at         4500
+
+spawn          BasicX3 1
+map            3
+coords      250  250 300
+at          4500
+
+#########################################################################################
+
+wait
+at        5000
+
+group         2 2
+at        5000
 
 spawnscript data/scripts/levelspawn/music_random.c
-at		5000
+at        5000
 
-spawn		Musashi 1
+spawn        Musashi 1
 map     4
-boss 		1
-coords  	200 200 300
-at 		5000
+boss         1
+coords      200 200 300
+at         5000
 
-spawn		HarakiriD 1
+spawn        HarakiriD 1
 map     4
-flip		1
-boss 		1
-coords		100 200 300
-at 		5000
+flip        1
+boss         1
+coords        100 200 300
+at         5000

@@ -2,5 +2,5 @@
 
 void main()
 {
-	changeCamera();
+    changeCamera();
 }

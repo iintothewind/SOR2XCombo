@@ -1,35 +1,35 @@
-name	chinaTownBg1
-type	none
-subject_to_gravity	0
-setlayer	1
+name    chinaTownBg1
+type    none
+subject_to_gravity    0
+setlayer    1
 animationscript data/scripts/animation/default.c
 
-anim	idle
-	loop	1
-	delay	300
-	offset	0 0
-	frame	data/bgs/dojo/chinatown/idle100.png
-	delay	15
-	frame	data/bgs/dojo/chinatown/idle101.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle103.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle101.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle103.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle101.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle103.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle101.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle103.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle101.png
-	frame	data/bgs/dojo/chinatown/idle102.png
-	frame	data/bgs/dojo/chinatown/idle103.png
-	@cmd offScreenKill 1000 0
-	frame	data/bgs/dojo/chinatown/idle102.png
+anim    idle
+    loop    1
+    delay    300
+    offset    0 0
+    frame    data/bgs/dojo/chinatown/idle100.png
+    delay    15
+    frame    data/bgs/dojo/chinatown/idle101.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle103.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle101.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle103.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle101.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle103.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle101.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle103.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle101.png
+    frame    data/bgs/dojo/chinatown/idle102.png
+    frame    data/bgs/dojo/chinatown/idle103.png
+    @cmd offScreenKill 1000 0
+    frame    data/bgs/dojo/chinatown/idle102.png
 
 

@@ -1,32 +1,32 @@
-name				st1_gate
-type				enemy
-subtype				notgrab
-subject_to_wall		0
-subject_to_platform	0
-health				1
-nomove				1 1
-shadow				0
-setlayer			-10
-stealth				2
-animationscript		data/scripts/animation/default.c
+name                st1_gate
+type                enemy
+subtype                notgrab
+subject_to_wall        0
+subject_to_platform    0
+health                1
+nomove                1 1
+shadow                0
+setlayer            -10
+stealth                2
+animationscript        data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	32
-	offset	28 79
-	@cmd aniXpos 1700 2 "ANI_FOLLOW1"
-	frame	data/bgs/sor2/st1a/gate00.png
-	frame	data/bgs/sor2/st1a/gate00.png
-	
+    loop    1
+    delay    32
+    offset    28 79
+    @cmd aniXpos 1700 2 "ANI_FOLLOW1"
+    frame    data/bgs/sor2/st1a/gate00.png
+    frame    data/bgs/sor2/st1a/gate00.png
+    
 anim follow1
-	loop	0
-	delay	96
-	offset	28 79
-	sound	data/sounds/Gate.wav
-	@cmd dasher 0 0 -1
-	frame	data/bgs/sor2/st1a/gate00.png
-	@cmd dasher 0 0 0
-	frame	data/bgs/sor2/st1a/gate00.png
-	frame	data/bgs/sor2/st1a/gate00.png
-	@cmd suicide
-	frame	data/bgs/sor2/st1a/gate00.png
+    loop    0
+    delay    96
+    offset    28 79
+    sound    data/sounds/Gate.wav
+    @cmd dasher 0 0 -1
+    frame    data/bgs/sor2/st1a/gate00.png
+    @cmd dasher 0 0 0
+    frame    data/bgs/sor2/st1a/gate00.png
+    frame    data/bgs/sor2/st1a/gate00.png
+    @cmd suicide
+    frame    data/bgs/sor2/st1a/gate00.png

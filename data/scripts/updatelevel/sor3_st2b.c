@@ -2,5 +2,5 @@
 
 void main()
 {
-	cycleSprite("fglayer", 0, 3, 60);
+    cycleSprite("fglayer", 0, 3, 60);
 }

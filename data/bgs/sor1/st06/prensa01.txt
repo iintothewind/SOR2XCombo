@@ -1,66 +1,66 @@
-name			Prensa01 #GROUND
-type			None
-offscreenkill		9999
-candamage		player enemy npc obstacle
+name            Prensa01 #GROUND
+type            None
+offscreenkill        9999
+candamage        player enemy npc obstacle
 setlayer 80
 nolife 1
 noname 1
-stealth				2
+stealth                2
 
 animationscript data/scripts/animation/default.c
 
 anim idle
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	loop	1
-	delay	150
-	offset	0 219
-	quakeframe 19 2 2
-	hitflash impact
-	frame	data/bgs/sor1/st06/P101.png
-		delay  8
-	frame  data/bgs/sor1/st06/P100.png
-	frame	data/bgs/sor1/st06/P101.png
-	frame	data/bgs/sor1/st06/P100.png
-	frame	data/bgs/sor1/st06/P101.png
-	frame	data/bgs/sor1/st06/P100.png
-	frame	data/bgs/sor1/st06/P101.png
-	frame	data/bgs/sor1/st06/P100.png
-	frame	data/bgs/sor1/st06/P101.png
-	frame	data/bgs/sor1/st06/P100.png
-	frame	data/bgs/sor1/st06/P101.png
-	frame	data/bgs/sor1/st06/P100.png
-	frame	data/bgs/sor1/st06/P101.png
-		delay  4
-	attack3  65  90  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P102.png
-	attack3  102  128  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P103.png
-	attack3  65  118  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P104.png
-	attack3  102  154  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P105.png
-	attack3  65  150  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P106.png
-	attack3  102  184  60  30  180  7  1  0  0  21
-	Sound   Data/sounds/elevator_stop.wav
-	frame	data/bgs/sor1/st06/P107.png
-	attack3  65  174  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P108.png
-	attack3  102  207  60  30  180  7  1  0  0  21
-	frame	data/bgs/sor1/st06/P109.png
-		delay  58
-	Attack  0
-	frame  data/bgs/sor1/st06/P109.png
-		delay  8
-	frame	data/bgs/sor1/st06/P108.png
-	frame	data/bgs/sor1/st06/P107.png
-	frame	data/bgs/sor1/st06/P106.png
-	frame	data/bgs/sor1/st06/P105.png
-	frame	data/bgs/sor1/st06/P104.png
-	frame	data/bgs/sor1/st06/P103.png
-	frame	data/bgs/sor1/st06/P102.png
-	@cmd offScreenKill 500 0
-	frame	data/bgs/sor1/st06/P101.png
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    loop    1
+    delay    150
+    offset    0 219
+    quakeframe 19 2 2
+    hitflash impact
+    frame    data/bgs/sor1/st06/P101.png
+        delay  8
+    frame  data/bgs/sor1/st06/P100.png
+    frame    data/bgs/sor1/st06/P101.png
+    frame    data/bgs/sor1/st06/P100.png
+    frame    data/bgs/sor1/st06/P101.png
+    frame    data/bgs/sor1/st06/P100.png
+    frame    data/bgs/sor1/st06/P101.png
+    frame    data/bgs/sor1/st06/P100.png
+    frame    data/bgs/sor1/st06/P101.png
+    frame    data/bgs/sor1/st06/P100.png
+    frame    data/bgs/sor1/st06/P101.png
+    frame    data/bgs/sor1/st06/P100.png
+    frame    data/bgs/sor1/st06/P101.png
+        delay  4
+    attack3  65  90  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P102.png
+    attack3  102  128  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P103.png
+    attack3  65  118  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P104.png
+    attack3  102  154  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P105.png
+    attack3  65  150  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P106.png
+    attack3  102  184  60  30  180  7  1  0  0  21
+    Sound   Data/sounds/elevator_stop.wav
+    frame    data/bgs/sor1/st06/P107.png
+    attack3  65  174  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P108.png
+    attack3  102  207  60  30  180  7  1  0  0  21
+    frame    data/bgs/sor1/st06/P109.png
+        delay  58
+    Attack  0
+    frame  data/bgs/sor1/st06/P109.png
+        delay  8
+    frame    data/bgs/sor1/st06/P108.png
+    frame    data/bgs/sor1/st06/P107.png
+    frame    data/bgs/sor1/st06/P106.png
+    frame    data/bgs/sor1/st06/P105.png
+    frame    data/bgs/sor1/st06/P104.png
+    frame    data/bgs/sor1/st06/P103.png
+    frame    data/bgs/sor1/st06/P102.png
+    @cmd offScreenKill 500 0
+    frame    data/bgs/sor1/st06/P101.png

@@ -1,1332 +1,1332 @@
 ##MAIN
-name				Break_Death
-type				enemy
+name                Break_Death
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			5 #SCRIPT
+mp                    120
+mprate              5 #SCRIPT
 
 ##GRAB
-grabdistance 		33 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         33 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-2 #-1/-2/-3
-height				74
+antigravity            -2 #-1/-2/-3
+height                74
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2 3
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-aimove				chase #ENEMY ONLY
-escapehits			2 #ENEMY ONLY
-blockodds 			1
-bflash				Block
-nopassiveblock		1
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2 3
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+aimove                chase #ENEMY ONLY
+escapehits            2 #ENEMY ONLY
+blockodds             1
+bflash                Block
+nopassiveblock        1
+death                2
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/break.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-ondrawscript		data/scripts/ondraw/break.c
-onfallscript		data/scripts/onfall/default.c
-onspawnscript		data/scripts/onspawn/break.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/break.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/break.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/break.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+ondrawscript        data/scripts/ondraw/break.c
+onfallscript        data/scripts/onfall/default.c
+onspawnscript        data/scripts/onspawn/break.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/break.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/break.c
 
 ##ICONS
-icon				data/chars/heroes/axel/iconb.png 1
+icon                data/chars/heroes/axel/iconb.png 1
 
 ##DIESOUND
-diesound			data/voices/Axel1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Axel1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter4.png
-remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter5.png
-remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter6.png
-remap				data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter7.png
+remap                data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter4.png
+remap                data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter5.png
+remap                data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter6.png
+remap                data/chars/heroes/axel/idle00.png data/chars/heroes/axel/alter7.png
 
 ##LOADS
-load				BreakS
+load                BreakS
 
 ##CUSTOM HEADER
-nodieblink			3
-ondeathscript		data/scripts/ondeath/break.c
+nodieblink            3
+ondeathscript        data/scripts/ondeath/break.c
 
 ## CUSTOM ANIMATIONS ##########################################################################
 
 anim death #EXPLOSION
-	loop	0
-	delay	16
-	offset	62 126
-	@cmd spawnBind "Explosion" 0 15 1
-	frame	data/chars/heroes/axel/fall01.png
-	@cmd spawnBind "Explosion" -30 15 1
-	frame	data/chars/heroes/axel/fall01.png
-	@cmd spawnBind "Explosion" 30 15 1
-	frame	data/chars/heroes/axel/fall02.png
-	@cmd spawnBind "Explosion" 0 15 1
-	frame	data/chars/heroes/axel/fall02.png
-		delay	180
-	frame	data/chars/heroes/axel/fall02.png
+    loop    0
+    delay    16
+    offset    62 126
+    @cmd spawnBind "Explosion" 0 15 1
+    frame    data/chars/heroes/axel/fall01.png
+    @cmd spawnBind "Explosion" -30 15 1
+    frame    data/chars/heroes/axel/fall01.png
+    @cmd spawnBind "Explosion" 30 15 1
+    frame    data/chars/heroes/axel/fall02.png
+    @cmd spawnBind "Explosion" 0 15 1
+    frame    data/chars/heroes/axel/fall02.png
+        delay    180
+    frame    data/chars/heroes/axel/fall02.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	62 126
-	frame	data/chars/heroes/axel/idle00.png
+    loop    0
+    delay    1
+    offset    62 126
+    frame    data/chars/heroes/axel/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	62 126
-	bbox 	50 55 23 74
-	frame	data/chars/heroes/axel/idle00.png
-	frame	data/chars/heroes/axel/idle01.png
-	frame	data/chars/heroes/axel/idle02.png
-	frame	data/chars/heroes/axel/idle03.png
-	frame	data/chars/heroes/axel/idle00.png
-	frame	data/chars/heroes/axel/idle01.png
-	frame	data/chars/heroes/axel/idle02.png
-	frame	data/chars/heroes/axel/idle03.png
+    loop    1
+    delay    16
+    offset    62 126
+    bbox     50 55 23 74
+    frame    data/chars/heroes/axel/idle00.png
+    frame    data/chars/heroes/axel/idle01.png
+    frame    data/chars/heroes/axel/idle02.png
+    frame    data/chars/heroes/axel/idle03.png
+    frame    data/chars/heroes/axel/idle00.png
+    frame    data/chars/heroes/axel/idle01.png
+    frame    data/chars/heroes/axel/idle02.png
+    frame    data/chars/heroes/axel/idle03.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	62 126
-	bbox 	54 49 20 79
-	frame	data/chars/heroes/axel/walk00.png
-	frame	data/chars/heroes/axel/walk01.png
-	frame	data/chars/heroes/axel/walk02.png
-	frame	data/chars/heroes/axel/walk03.png
-	frame	data/chars/heroes/axel/walk04.png
-	frame	data/chars/heroes/axel/walk05.png
+    loop    1
+    delay    16
+    offset    62 126
+    bbox     54 49 20 79
+    frame    data/chars/heroes/axel/walk00.png
+    frame    data/chars/heroes/axel/walk01.png
+    frame    data/chars/heroes/axel/walk02.png
+    frame    data/chars/heroes/axel/walk03.png
+    frame    data/chars/heroes/axel/walk04.png
+    frame    data/chars/heroes/axel/walk05.png
 
 anim backwalk
-	loop	1
-	delay	16
-	offset	62 126
-	bbox 	54 49 20 79
-	frame	data/chars/heroes/axel/walk05.png
-	frame	data/chars/heroes/axel/walk04.png
-	frame	data/chars/heroes/axel/walk03.png
-	frame	data/chars/heroes/axel/walk02.png
-	frame	data/chars/heroes/axel/walk01.png
-	frame	data/chars/heroes/axel/walk00.png
+    loop    1
+    delay    16
+    offset    62 126
+    bbox     54 49 20 79
+    frame    data/chars/heroes/axel/walk05.png
+    frame    data/chars/heroes/axel/walk04.png
+    frame    data/chars/heroes/axel/walk03.png
+    frame    data/chars/heroes/axel/walk02.png
+    frame    data/chars/heroes/axel/walk01.png
+    frame    data/chars/heroes/axel/walk00.png
 
 anim run
-	loop	1
-	delay	14
-	offset	62 126
-	bbox 	61 60 20 68
-	frame	data/chars/heroes/axel/run00.png
-	frame	data/chars/heroes/axel/run01.png
-	sound	data/sounds/Run.wav
-	frame	data/chars/heroes/axel/run02.png
-	frame	data/chars/heroes/axel/run03.png
-	frame	data/chars/heroes/axel/run04.png
-	sound	data/sounds/Run2.wav
-	frame	data/chars/heroes/axel/run05.png
+    loop    1
+    delay    14
+    offset    62 126
+    bbox     61 60 20 68
+    frame    data/chars/heroes/axel/run00.png
+    frame    data/chars/heroes/axel/run01.png
+    sound    data/sounds/Run.wav
+    frame    data/chars/heroes/axel/run02.png
+    frame    data/chars/heroes/axel/run03.png
+    frame    data/chars/heroes/axel/run04.png
+    sound    data/sounds/Run2.wav
+    frame    data/chars/heroes/axel/run05.png
 
 anim get
-	loop	0
-	delay	16
-	offset	62 126
-	frame	data/chars/heroes/axel/get00.png
+    loop    0
+    delay    16
+    offset    62 126
+    frame    data/chars/heroes/axel/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	62 126
-	bbox 	60 54 17 74
-	@cmd vaultStuck
-	frame	data/chars/heroes/axel/grab00.png
+    loop    0
+    delay    16
+    offset    62 126
+    bbox     60 54 17 74
+    @cmd vaultStuck
+    frame    data/chars/heroes/axel/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	62 126
-	bbox 	50 65 24 62
-	frame	data/chars/heroes/axel/grabbed00.png
+    loop    0
+    delay    8
+    offset    62 126
+    bbox     50 65 24 62
+    frame    data/chars/heroes/axel/grabbed00.png
 
 anim land
-	loop	0
-	delay	30
-	offset	62 126
-	@cmd landSafe
-	sound	data/sounds/Jumping.wav
-	frame	data/chars/heroes/axel/jump00.png
-	frame	data/chars/heroes/axel/jump01.png
+    loop    0
+    delay    30
+    offset    62 126
+    @cmd landSafe
+    sound    data/sounds/Jumping.wav
+    frame    data/chars/heroes/axel/jump00.png
+    frame    data/chars/heroes/axel/jump01.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	62 126
-	bbox 	52 70 25 58
-	frame	data/chars/heroes/axel/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    62 126
+    bbox     52 70 25 58
+    frame    data/chars/heroes/axel/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	62 126
-	bbox 	56 50 19 61
-	@cmd jump 1
-	frame	data/chars/heroes/axel/jump00.png
-	frame	data/chars/heroes/axel/jump01.png
+    loop    0
+    delay    30
+    offset    62 126
+    bbox     56 50 19 61
+    @cmd jump 1
+    frame    data/chars/heroes/axel/jump00.png
+    frame    data/chars/heroes/axel/jump01.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	62 126
-	bbox 	52 70 25 58
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/axel/jumpland00.png
+    loop    0
+    delay    12
+    offset    62 126
+    bbox     52 70 25 58
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/axel/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	62 126
-	bbox 	50 65 24 62
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
-	frame	data/chars/heroes/axel/grabbed00.png
-	frame	data/chars/heroes/axel/grabbed01.png
+    loop    0
+    delay    4
+    offset    62 126
+    bbox     50 65 24 62
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
+    frame    data/chars/heroes/axel/grabbed00.png
+    frame    data/chars/heroes/axel/grabbed01.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	62 126
-	bbox 	51 57 21 71
-	frame	data/chars/heroes/axel/pain00.png
-	frame	data/chars/heroes/axel/pain01.png
-	frame	data/chars/heroes/axel/pain00.png
-	frame	data/chars/heroes/axel/pain01.png
-	frame	data/chars/heroes/axel/pain00.png
-	frame	data/chars/heroes/axel/pain01.png
-	frame	data/chars/heroes/axel/pain00.png
-	frame	data/chars/heroes/axel/pain01.png
+    loop    0
+    delay    4
+    offset    62 126
+    bbox     51 57 21 71
+    frame    data/chars/heroes/axel/pain00.png
+    frame    data/chars/heroes/axel/pain01.png
+    frame    data/chars/heroes/axel/pain00.png
+    frame    data/chars/heroes/axel/pain01.png
+    frame    data/chars/heroes/axel/pain00.png
+    frame    data/chars/heroes/axel/pain01.png
+    frame    data/chars/heroes/axel/pain00.png
+    frame    data/chars/heroes/axel/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	62 126
-	bbox 	47 66 31 60
-	frame	data/chars/heroes/axel/pain200.png
-	frame	data/chars/heroes/axel/pain201.png
-	frame	data/chars/heroes/axel/pain200.png
-	frame	data/chars/heroes/axel/pain201.png
-	frame	data/chars/heroes/axel/pain200.png
-	frame	data/chars/heroes/axel/pain201.png
-	frame	data/chars/heroes/axel/pain200.png
-	frame	data/chars/heroes/axel/pain201.png
+    loop    0
+    delay    4
+    offset    62 126
+    bbox     47 66 31 60
+    frame    data/chars/heroes/axel/pain200.png
+    frame    data/chars/heroes/axel/pain201.png
+    frame    data/chars/heroes/axel/pain200.png
+    frame    data/chars/heroes/axel/pain201.png
+    frame    data/chars/heroes/axel/pain200.png
+    frame    data/chars/heroes/axel/pain201.png
+    frame    data/chars/heroes/axel/pain200.png
+    frame    data/chars/heroes/axel/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	62 126
-	bbox 	39 75 41 34
-	frame	data/chars/heroes/axel/fall00.png
-		delay	8
-	bbox 	23 100 76 27
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/axel/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    62 126
+    bbox     39 75 41 34
+    frame    data/chars/heroes/axel/fall00.png
+        delay    8
+    bbox     23 100 76 27
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/axel/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	62 126
-	bbox 	39 75 41 34
-	frame	data/chars/heroes/axel/fall00.png
-		delay	8
-	bbox 	23 100 76 27
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/axel/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    62 126
+    bbox     39 75 41 34
+    frame    data/chars/heroes/axel/fall00.png
+        delay    8
+    bbox     23 100 76 27
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/axel/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	62 126
-	bbox 	39 75 41 34
-	frame	data/chars/heroes/axel/fall00.png
-		delay	8
-	bbox 	23 100 76 27
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/axel/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    62 126
+    bbox     39 75 41 34
+    frame    data/chars/heroes/axel/fall00.png
+        delay    8
+    bbox     23 100 76 27
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/axel/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	62 126
-	frame	data/chars/heroes/axel/fall600.png
-	frame	data/chars/heroes/axel/fall601.png
-	frame	data/chars/heroes/axel/fall602.png
-	frame	data/chars/heroes/axel/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/axel/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    62 126
+    frame    data/chars/heroes/axel/fall600.png
+    frame    data/chars/heroes/axel/fall601.png
+    frame    data/chars/heroes/axel/fall602.png
+    frame    data/chars/heroes/axel/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/axel/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	62 126
-	frame	data/chars/heroes/axel/fall700.png
-	frame	data/chars/heroes/axel/fall701.png
-	frame	data/chars/heroes/axel/fall702.png
-	frame	data/chars/heroes/axel/fall703.png
-	frame	data/chars/heroes/axel/fall704.png
-	frame	data/chars/heroes/axel/fall705.png
+    loop    0
+    delay    1000
+    offset    62 126
+    frame    data/chars/heroes/axel/fall700.png
+    frame    data/chars/heroes/axel/fall701.png
+    frame    data/chars/heroes/axel/fall702.png
+    frame    data/chars/heroes/axel/fall703.png
+    frame    data/chars/heroes/axel/fall704.png
+    frame    data/chars/heroes/axel/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	62 126
-	bbox 	39 75 41 34
-	hitfx	data/sounds/MediumKick.wav
-	attack 39 75 41 34 4 1 0 0 20 12
-	frame	data/chars/heroes/axel/fall00.png
-		delay	999
-	@cmd cancelFall 50 "ANI_LAND"
-	frame	data/chars/heroes/axel/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	23 100 76 27
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/axel/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    62 126
+    bbox     39 75 41 34
+    hitfx    data/sounds/MediumKick.wav
+    attack 39 75 41 34 4 1 0 0 20 12
+    frame    data/chars/heroes/axel/fall00.png
+        delay    999
+    @cmd cancelFall 50 "ANI_LAND"
+    frame    data/chars/heroes/axel/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     23 100 76 27
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/axel/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	62 126
-	bbox 	52 90 32 35
-	hitfx	data/sounds/MediumKick.wav
-	attack 52 90 32 35 4 1 0 0 20 12
-	frame	data/chars/heroes/axel/fall900.png
-		delay	999
-	@cmd cancelFall 50 "ANI_LAND"
-	frame	data/chars/heroes/axel/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	23 100 76 27
-	sound	data/sounds/Falling.wav
-	frame	data/chars/heroes/axel/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    62 126
+    bbox     52 90 32 35
+    hitfx    data/sounds/MediumKick.wav
+    attack 52 90 32 35 4 1 0 0 20 12
+    frame    data/chars/heroes/axel/fall900.png
+        delay    999
+    @cmd cancelFall 50 "ANI_LAND"
+    frame    data/chars/heroes/axel/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     23 100 76 27
+    sound    data/sounds/Falling.wav
+    frame    data/chars/heroes/axel/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	62 126
-	frame	data/chars/heroes/axel/rise00.png
-	frame	data/chars/heroes/axel/rise01.png
-	frame	data/chars/heroes/axel/rise00.png
-	frame	data/chars/heroes/axel/rise02.png
+    loop    0
+    delay    16
+    offset    62 126
+    frame    data/chars/heroes/axel/rise00.png
+    frame    data/chars/heroes/axel/rise01.png
+    frame    data/chars/heroes/axel/rise00.png
+    frame    data/chars/heroes/axel/rise02.png
 
 anim riseattack
-	range 40 120
-	rangea 0 0
-	rangez -24 24
-	followanim 5
-	followcond 4
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	62 126
-	sound	data/voices/Axel2.wav
-	@cmd target 4 2
-	#bbox 	61 60 20 68
-	@cmd dashTarget
-	attack 61 60 20 68 1 0 1 1 0 24
-	frame	data/chars/heroes/axel/run00.png
-	@cmd target 4 2
-	@cmd dashTarget
-	frame	data/chars/heroes/axel/run01.png
-	sound	data/sounds/Run.wav
-	@cmd target 4 2
-	@cmd dashTarget
-	frame	data/chars/heroes/axel/run02.png
-	@cmd target 4 2
-	@cmd dashTarget
-	frame	data/chars/heroes/axel/run03.png
-	@cmd dasher 0.5 0 0
-	frame	data/chars/heroes/axel/run04.png
-	sound	data/sounds/Run2.wav
-	@cmd dasher 0 0 0
-	frame	data/chars/heroes/axel/run05.png
+    range 40 120
+    rangea 0 0
+    rangez -24 24
+    followanim 5
+    followcond 4
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    62 126
+    sound    data/voices/Axel2.wav
+    @cmd target 4 2
+    #bbox     61 60 20 68
+    @cmd dashTarget
+    attack 61 60 20 68 1 0 1 1 0 24
+    frame    data/chars/heroes/axel/run00.png
+    @cmd target 4 2
+    @cmd dashTarget
+    frame    data/chars/heroes/axel/run01.png
+    sound    data/sounds/Run.wav
+    @cmd target 4 2
+    @cmd dashTarget
+    frame    data/chars/heroes/axel/run02.png
+    @cmd target 4 2
+    @cmd dashTarget
+    frame    data/chars/heroes/axel/run03.png
+    @cmd dasher 0.5 0 0
+    frame    data/chars/heroes/axel/run04.png
+    sound    data/sounds/Run2.wav
+    @cmd dasher 0 0 0
+    frame    data/chars/heroes/axel/run05.png
 
 anim attack1
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	62 126
-	bbox 	50 55 23 74
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/heroes/axel/a100.png
-	attack 62 61 42 13 6 0 0 0 5 12
-	frame	data/chars/heroes/axel/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/a100.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    62 126
+    bbox     50 55 23 74
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/heroes/axel/a100.png
+    attack 62 61 42 13 6 0 0 0 5 12
+    frame    data/chars/heroes/axel/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/a100.png
 
 anim attack2
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	62 126
-	bbox 	55 53 22 75
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/heroes/axel/a200.png
-		delay	8
-	bbox 	66 55 17 73
-	attack 77 60 45 14 9 0 0 0 10 12
-	frame	data/chars/heroes/axel/a201.png
-	@cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
-		delay	4
-	bbox 	55 53 22 75
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/a200.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    62 126
+    bbox     55 53 22 75
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/heroes/axel/a200.png
+        delay    8
+    bbox     66 55 17 73
+    attack 77 60 45 14 9 0 0 0 10 12
+    frame    data/chars/heroes/axel/a201.png
+    @cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
+        delay    4
+    bbox     55 53 22 75
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/a200.png
 
 anim attack3
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	62 126
-	bbox 	55 51 20 77
-	hitfx	data/sounds/MediumKick.wav
-	frame	data/chars/heroes/axel/a300.png
-	sound	data/sounds/MediumAttack.wav
-	frame	data/chars/heroes/axel/a301.png
-	bbox 	49 62 27 66
-	attack 70 80 48 48 5 0 0 0 25 18
-	frame	data/chars/heroes/axel/a302.png
-	sound	data/sounds/HighAttack.wav
-	bbox 	55 51 20 77
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/a303.png
-		delay	12
-	hitfx	data/sounds/HighKick.wav
-	bbox 	49 62 27 66
-	attack 71 60 40 68 10 1 0 0 25 18
-	frame	data/chars/heroes/axel/a304.png
-		delay	8
-	bbox 	55 51 20 77
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/a305.png
-	@cmd rageCancel 20 60 0 120 0 "ANI_FREESPECIAL3" "hit"
-	frame	data/chars/heroes/axel/a306.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    62 126
+    bbox     55 51 20 77
+    hitfx    data/sounds/MediumKick.wav
+    frame    data/chars/heroes/axel/a300.png
+    sound    data/sounds/MediumAttack.wav
+    frame    data/chars/heroes/axel/a301.png
+    bbox     49 62 27 66
+    attack 70 80 48 48 5 0 0 0 25 18
+    frame    data/chars/heroes/axel/a302.png
+    sound    data/sounds/HighAttack.wav
+    bbox     55 51 20 77
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/a303.png
+        delay    12
+    hitfx    data/sounds/HighKick.wav
+    bbox     49 62 27 66
+    attack 71 60 40 68 10 1 0 0 25 18
+    frame    data/chars/heroes/axel/a304.png
+        delay    8
+    bbox     55 51 20 77
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/a305.png
+    @cmd rageCancel 20 60 0 120 0 "ANI_FREESPECIAL3" "hit"
+    frame    data/chars/heroes/axel/a306.png
 
 anim grabattack #HEADBUTT
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	62 126
-	bbox 	59 55 21 73
-	@cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/grabatk00.png
-		delay	24
-	bbox	 55 56 27 72
-	sound	data/voices/Axel2.wav
-	frame	data/chars/heroes/axel/grabatk01.png
-	attack8 74 61 25 27 16 1 0 0 10 12
-	bbox 	59 61 27 67
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/grabatk02.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    62 126
+    bbox     59 55 21 73
+    @cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/grabatk00.png
+        delay    24
+    bbox     55 56 27 72
+    sound    data/voices/Axel2.wav
+    frame    data/chars/heroes/axel/grabatk01.png
+    attack8 74 61 25 27 16 1 0 0 10 12
+    bbox     59 61 27 67
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/grabatk02.png
 
 anim grabattack2 #VAULT FRONT TO BACK
-	loop	0
-	delay	8
-	offset	30 189
-	frame	data/chars/heroes/axel/vault00.png
-	frame	data/chars/heroes/axel/vault01.png
-	frame	data/chars/heroes/axel/vault02.png
-	frame	data/chars/heroes/axel/vault03.png
-	frame	data/chars/heroes/axel/vault04.png
-		delay	2
-		offset	62 126
-	@cmd vaultFix
-	frame	data/chars/heroes/axel/grab00.png
-	@cmd cancelVault "ANI_GRABDOWN2"
-	bbox 	60 54 17 74
-	frame	data/chars/heroes/axel/grab00.png
+    loop    0
+    delay    8
+    offset    30 189
+    frame    data/chars/heroes/axel/vault00.png
+    frame    data/chars/heroes/axel/vault01.png
+    frame    data/chars/heroes/axel/vault02.png
+    frame    data/chars/heroes/axel/vault03.png
+    frame    data/chars/heroes/axel/vault04.png
+        delay    2
+        offset    62 126
+    @cmd vaultFix
+    frame    data/chars/heroes/axel/grab00.png
+    @cmd cancelVault "ANI_GRABDOWN2"
+    bbox     60 54 17 74
+    frame    data/chars/heroes/axel/grab00.png
 
 anim grabup2 #VAULT BACK TO FRONT
-	loop	0
-	delay	8
-	offset	30 189
-	frame	data/chars/heroes/axel/vault00.png
-	frame	data/chars/heroes/axel/vault01.png
-	frame	data/chars/heroes/axel/vault02.png
-	frame	data/chars/heroes/axel/vault03.png
-	frame	data/chars/heroes/axel/vault04.png
-		delay	2
-		offset	62 126
-	@cmd vaultFix
-	frame	data/chars/heroes/axel/idle00.png
-	@cmd cancelVault "ANI_GRABATTACK"
-	bbox 	50 55 23 74
-	frame	data/chars/heroes/axel/idle00.png
+    loop    0
+    delay    8
+    offset    30 189
+    frame    data/chars/heroes/axel/vault00.png
+    frame    data/chars/heroes/axel/vault01.png
+    frame    data/chars/heroes/axel/vault02.png
+    frame    data/chars/heroes/axel/vault03.png
+    frame    data/chars/heroes/axel/vault04.png
+        delay    2
+        offset    62 126
+    @cmd vaultFix
+    frame    data/chars/heroes/axel/idle00.png
+    @cmd cancelVault "ANI_GRABATTACK"
+    bbox     50 55 23 74
+    frame    data/chars/heroes/axel/idle00.png
 
 anim grabforward #KNEE
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	62 126
-	bbox 	77 50 16 78
-	hitfx	data/sounds/LowKick.wav
-	sound	data/sounds/LowAttack.wav
-	attack2 82 72 28 25 16 0 0 0 15 12
-	frame	data/chars/heroes/axel/fgrabatk00.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    62 126
+    bbox     77 50 16 78
+    hitfx    data/sounds/LowKick.wav
+    sound    data/sounds/LowAttack.wav
+    attack2 82 72 28 25 16 0 0 0 15 12
+    frame    data/chars/heroes/axel/fgrabatk00.png
 
 anim grabforward2 #KNEE END
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	62 126
-	bbox 	77 50 16 78
-	@cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	attack2 82 72 28 25 2 0 0 0 15 12
-	frame	data/chars/heroes/axel/fgrabatk200.png
-	bbox 	62 50 14 78
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/fgrabatk201.png
-		delay	12
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	bbox 	63 57 16 71
-	attack2 69 73 28 25 16 1 0 0 15 12
-	frame	data/chars/heroes/axel/fgrabatk202.png
-		delay	6
-	bbox 	62 50 14 78
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/fgrabatk203.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    62 126
+    bbox     77 50 16 78
+    @cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    attack2 82 72 28 25 2 0 0 0 15 12
+    frame    data/chars/heroes/axel/fgrabatk200.png
+    bbox     62 50 14 78
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/fgrabatk201.png
+        delay    12
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    bbox     63 57 16 71
+    attack2 69 73 28 25 16 1 0 0 15 12
+    frame    data/chars/heroes/axel/fgrabatk202.png
+        delay    6
+    bbox     62 50 14 78
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/fgrabatk203.png
 
 anim grabbackward #THROW
-	loop	0
-	delay	24
-	offset	62 126
-	@cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
-	@cmd grabStart
-	@cmd position 0 5 0 0 0
-	sound	data/voices/Axel2.wav
-	frame	data/chars/heroes/axel/throw00.png
-		delay	8
-	@cmd position 5 -5 5 0 0
-	frame	data/chars/heroes/axel/throw01.png
-	@cmd position 2 -30 25 0 0
-	frame	data/chars/heroes/axel/throw02.png
-		delay	24
-	@cmd throw 30 2 1 3 0 0
-	frame	data/chars/heroes/axel/throw03.png
-		delay	8
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	@cmd clearL
-	frame	data/chars/heroes/axel/throw01.png
+    loop    0
+    delay    24
+    offset    62 126
+    @cmd rageCancel 20 60 0 0 10 "ANI_FREESPECIAL4" "random"
+    @cmd grabStart
+    @cmd position 0 5 0 0 0
+    sound    data/voices/Axel2.wav
+    frame    data/chars/heroes/axel/throw00.png
+        delay    8
+    @cmd position 5 -5 5 0 0
+    frame    data/chars/heroes/axel/throw01.png
+    @cmd position 2 -30 25 0 0
+    frame    data/chars/heroes/axel/throw02.png
+        delay    24
+    @cmd throw 30 2 1 3 0 0
+    frame    data/chars/heroes/axel/throw03.png
+        delay    8
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    @cmd clearL
+    frame    data/chars/heroes/axel/throw01.png
 
 anim grabdown2 #BACK SLAM
-	loop	0
-	delay	24
-	offset	62 126
-	@cmd grabStart2
-	@cmd position 0 15 0 0 1
-	sound	data/voices/Axel6.wav
-	frame	data/chars/heroes/axel/slam00.png
-		delay	8
-	@cmd position 3 10 5 0 0
-	frame	data/chars/heroes/axel/slam01.png
-	@cmd position 2 -15 55 0 -1
-	frame	data/chars/heroes/axel/slam02.png
-		delay	4
-	@cmd position 2 -40 30 0 0
-	frame	data/chars/heroes/axel/slam03.png
-		delay	12
-	@cmd position 4 -55 -1 0 0
-	@cmd spawn01 "QuakeHigh" 0 0 0
-	sound	data/sounds/Slam.wav
-	frame	data/chars/heroes/axel/slam04.png
-	@cmd slam 30 2 0 4 0 0
-	@cmd leaper 0 2 0
-	frame	data/chars/heroes/axel/slam04.png
-	frame	data/chars/heroes/axel/slam05.png
-	@cmd landFrame
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/axel/slam06.png
-	@cmd flip
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	@cmd clearL
-	frame	data/chars/heroes/axel/slam07.png
+    loop    0
+    delay    24
+    offset    62 126
+    @cmd grabStart2
+    @cmd position 0 15 0 0 1
+    sound    data/voices/Axel6.wav
+    frame    data/chars/heroes/axel/slam00.png
+        delay    8
+    @cmd position 3 10 5 0 0
+    frame    data/chars/heroes/axel/slam01.png
+    @cmd position 2 -15 55 0 -1
+    frame    data/chars/heroes/axel/slam02.png
+        delay    4
+    @cmd position 2 -40 30 0 0
+    frame    data/chars/heroes/axel/slam03.png
+        delay    12
+    @cmd position 4 -55 -1 0 0
+    @cmd spawn01 "QuakeHigh" 0 0 0
+    sound    data/sounds/Slam.wav
+    frame    data/chars/heroes/axel/slam04.png
+    @cmd slam 30 2 0 4 0 0
+    @cmd leaper 0 2 0
+    frame    data/chars/heroes/axel/slam04.png
+    frame    data/chars/heroes/axel/slam05.png
+    @cmd landFrame
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/axel/slam06.png
+    @cmd flip
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    @cmd clearL
+    frame    data/chars/heroes/axel/slam07.png
 
 anim jumpattack #JUMP STATIC
-	range 40 120
-	rangea 999 999
-	rangez -999 999
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	62 126
-	bbox 	56 50 19 61
-	hitfx	data/sounds/MediumKick.wav
-	sound	data/sounds/MediumAttack.wav
-	@cmd aniRandom "ANI_JUMPATTACK2"
-	@cmd targetJump
-	@cmd leapJump
-	bbox 	53 45 16 59
-	frame	data/chars/heroes/axel/jump00.png
-	frame	data/chars/heroes/axel/jump01.png
-		delay	2
-	frame	data/chars/heroes/axel/jumpatk00.png
-	bbox 	62 49 15 55
-	attack 64 73 30 28 3 0 0 0 20 24
-	sound	data/voices/Axel2.wav
-	frame	data/chars/heroes/axel/jumpatk01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/jumpatk01.png
-		delay	18
-	hitfx	data/sounds/HighKick.wav
-	bbox 	66 51 24 48
-	attack 73 39 38 66 4 1 0 0 20 12
-	frame	data/chars/heroes/axel/jumpatk02.png
-	@cmd cancelHeightHit 0 75 20 "ANI_JUMPFORWARD"
-		delay	6
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	62 49 15 55
-	frame	data/chars/heroes/axel/jumpatk03.png
-	bbox 	53 45 16 59
-	frame	data/chars/heroes/axel/jumpatk04.png
+    range 40 120
+    rangea 999 999
+    rangez -999 999
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    62 126
+    bbox     56 50 19 61
+    hitfx    data/sounds/MediumKick.wav
+    sound    data/sounds/MediumAttack.wav
+    @cmd aniRandom "ANI_JUMPATTACK2"
+    @cmd targetJump
+    @cmd leapJump
+    bbox     53 45 16 59
+    frame    data/chars/heroes/axel/jump00.png
+    frame    data/chars/heroes/axel/jump01.png
+        delay    2
+    frame    data/chars/heroes/axel/jumpatk00.png
+    bbox     62 49 15 55
+    attack 64 73 30 28 3 0 0 0 20 24
+    sound    data/voices/Axel2.wav
+    frame    data/chars/heroes/axel/jumpatk01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/jumpatk01.png
+        delay    18
+    hitfx    data/sounds/HighKick.wav
+    bbox     66 51 24 48
+    attack 73 39 38 66 4 1 0 0 20 12
+    frame    data/chars/heroes/axel/jumpatk02.png
+    @cmd cancelHeightHit 0 75 20 "ANI_JUMPFORWARD"
+        delay    6
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     62 49 15 55
+    frame    data/chars/heroes/axel/jumpatk03.png
+    bbox     53 45 16 59
+    frame    data/chars/heroes/axel/jumpatk04.png
 
 anim jumpattack2 #JUMP UP
-	range 40 160
-	rangea 0 120
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	62 126
-	bbox 	56 50 19 61
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/Jumping.wav
-	@cmd targetJump
-	@cmd leapJump
-	frame	data/chars/heroes/axel/jump00.png
-	frame	data/chars/heroes/axel/jump01.png
-		delay	2
-	bbox 	44 74 54 22
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/jumpatk300.png
-	attack 62 70 38 30 1 0 1 1 0 24
-	sound	data/voices/Axel2.wav
-	frame	data/chars/heroes/axel/jumpatk300.png
+    range 40 160
+    rangea 0 120
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    62 126
+    bbox     56 50 19 61
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/Jumping.wav
+    @cmd targetJump
+    @cmd leapJump
+    frame    data/chars/heroes/axel/jump00.png
+    frame    data/chars/heroes/axel/jump01.png
+        delay    2
+    bbox     44 74 54 22
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/jumpatk300.png
+    attack 62 70 38 30 1 0 1 1 0 24
+    sound    data/voices/Axel2.wav
+    frame    data/chars/heroes/axel/jumpatk300.png
 
 anim jumpforward #JUMP STATIC/FORWARD
-	range 40 120
-	rangea 999 999
-	rangez -999 999
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	62 126
-	bbox 	56 50 19 61
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/Jumping.wav
-	@cmd aniRandom "ANI_JUMPATTACK2"
-	@cmd targetJump
-	@cmd leapJump
-	frame	data/chars/heroes/axel/jump00.png
-	frame	data/chars/heroes/axel/jump01.png
-		delay	2
-	bbox 	54 52 25 45
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/fjumpatk00.png
-	attack 52 75 57 27 16 1 0 0 30 24
-	bbox 	43 52 25 45
-	sound	data/voices/Axel2.wav
-	@cmd cancelHeightHit 0 75 20 "ANI_JUMPATTACK"
-	frame	data/chars/heroes/axel/fjumpatk02.png
+    range 40 120
+    rangea 999 999
+    rangez -999 999
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    62 126
+    bbox     56 50 19 61
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/Jumping.wav
+    @cmd aniRandom "ANI_JUMPATTACK2"
+    @cmd targetJump
+    @cmd leapJump
+    frame    data/chars/heroes/axel/jump00.png
+    frame    data/chars/heroes/axel/jump01.png
+        delay    2
+    bbox     54 52 25 45
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/fjumpatk00.png
+    attack 52 75 57 27 16 1 0 0 30 24
+    bbox     43 52 25 45
+    sound    data/voices/Axel2.wav
+    @cmd cancelHeightHit 0 75 20 "ANI_JUMPATTACK"
+    frame    data/chars/heroes/axel/fjumpatk02.png
 
 anim special #DEFENSIVE SPECIAL
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	6
-	offset	62 126
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/Fire.wav
-	frame	data/chars/heroes/axel/special00.png
-	attack 72 64 64 40 9 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special01.png
-	attack 44 26 64 54 10 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special02.png
-	attack 10 25 58 43 11 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special03.png
-	attack 21 56 76 47 12 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special04.png
-		delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special04.png
-		delay	6
-	attack8 85 78 63 37 16 1 0 0 20 12
-	dropv 2 2 0
-	frame	data/chars/heroes/axel/special05.png
-	frame	data/chars/heroes/axel/special06.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/special07.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    6
+    offset    62 126
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/Fire.wav
+    frame    data/chars/heroes/axel/special00.png
+    attack 72 64 64 40 9 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special01.png
+    attack 44 26 64 54 10 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special02.png
+    attack 10 25 58 43 11 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special03.png
+    attack 21 56 76 47 12 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special04.png
+        delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special04.png
+        delay    6
+    attack8 85 78 63 37 16 1 0 0 20 12
+    dropv 2 2 0
+    frame    data/chars/heroes/axel/special05.png
+    frame    data/chars/heroes/axel/special06.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/special07.png
 
 anim special2 #DFFENSIVE SPECIAL
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	6
-	offset	62 126
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/Fire.wav
-	frame	data/chars/heroes/axel/special00.png
-	attack 72 64 64 40 9 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special01.png
-	attack 44 26 64 54 9 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special02.png
-	attack 10 25 58 43 9 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special03.png
-	attack 21 56 76 47 9 1 0 0 20 12
-	dropv 2 1 0
-	frame	data/chars/heroes/axel/special04.png
-		delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special04.png
-		delay	6
-	attack8 85 78 63 37 9 1 0 0 20 12
-	dropv 2 2 0
-	frame	data/chars/heroes/axel/special05.png
-	frame	data/chars/heroes/axel/special06.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/special07.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    6
+    offset    62 126
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/Fire.wav
+    frame    data/chars/heroes/axel/special00.png
+    attack 72 64 64 40 9 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special01.png
+    attack 44 26 64 54 9 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special02.png
+    attack 10 25 58 43 9 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special03.png
+    attack 21 56 76 47 9 1 0 0 20 12
+    dropv 2 1 0
+    frame    data/chars/heroes/axel/special04.png
+        delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special04.png
+        delay    6
+    attack8 85 78 63 37 9 1 0 0 20 12
+    dropv 2 2 0
+    frame    data/chars/heroes/axel/special05.png
+    frame    data/chars/heroes/axel/special06.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/special07.png
 
 anim freespecial #RAGE
-	range 20 40
-	rangea 0 0
-	fastattack 1
-	forcedirection -1
-	otg 1
-	loop	0
-	jugglecost 0
-	energycost 60 1 6
-	@cmd dasher 0 0 0
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/voices/Axel2.wav
-	offset	62 126
-	@cmd spawnBind "Rage" 0 0 -1
-	frame	data/chars/heroes/axel/rage00.png
-		delay	2
-	frame	data/chars/heroes/axel/rage00.png
-	attack 72 78 44 41 4 0 0 0 5 24
-	seal 1 1
-	frame	data/chars/heroes/axel/rage01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/rage02.png
-	frame	data/chars/heroes/axel/rage03.png
-		delay	1
-	@cmd looper 1 11
-	frame	data/chars/heroes/axel/rage04.png
-	delay	4
-	hitflash Burn
-	hitfx	data/sounds/SpecialAttack6.wav
-	burn 66 69 35 36 24 7 0 0 30 24
-	seal 1 1
-	frame	data/chars/heroes/axel/rage04.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/rage04.png
-	delay	4
-	burn 65 44 32 37 24 8 0 5 24
-	seal 1 1
-	frame	data/chars/heroes/axel/rage05.png
-	delay 1
-	frame	data/chars/heroes/axel/rage05.png
-	delay	16
-	hitflash Impact
-	@cmd leaper 1.5 1.8 0
-	burn 64 26 30 50 24 9 0 0 35 24
-	seal 1 1
-	frame	data/chars/heroes/axel/rage06.png
-	delay	2
-	@cmd rageCancel 0 75 0 160 15 "ANI_FREESPECIAL9" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special211.png
-	@cmd landFrame
-		delay	8
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/axel/special212.png
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/special213.png
+    range 20 40
+    rangea 0 0
+    fastattack 1
+    forcedirection -1
+    otg 1
+    loop    0
+    jugglecost 0
+    energycost 60 1 6
+    @cmd dasher 0 0 0
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/voices/Axel2.wav
+    offset    62 126
+    @cmd spawnBind "Rage" 0 0 -1
+    frame    data/chars/heroes/axel/rage00.png
+        delay    2
+    frame    data/chars/heroes/axel/rage00.png
+    attack 72 78 44 41 4 0 0 0 5 24
+    seal 1 1
+    frame    data/chars/heroes/axel/rage01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/rage02.png
+    frame    data/chars/heroes/axel/rage03.png
+        delay    1
+    @cmd looper 1 11
+    frame    data/chars/heroes/axel/rage04.png
+    delay    4
+    hitflash Burn
+    hitfx    data/sounds/SpecialAttack6.wav
+    burn 66 69 35 36 24 7 0 0 30 24
+    seal 1 1
+    frame    data/chars/heroes/axel/rage04.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/rage04.png
+    delay    4
+    burn 65 44 32 37 24 8 0 5 24
+    seal 1 1
+    frame    data/chars/heroes/axel/rage05.png
+    delay 1
+    frame    data/chars/heroes/axel/rage05.png
+    delay    16
+    hitflash Impact
+    @cmd leaper 1.5 1.8 0
+    burn 64 26 30 50 24 9 0 0 35 24
+    seal 1 1
+    frame    data/chars/heroes/axel/rage06.png
+    delay    2
+    @cmd rageCancel 0 75 0 160 15 "ANI_FREESPECIAL9" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special211.png
+    @cmd landFrame
+        delay    8
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/axel/special212.png
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/special213.png
 
 anim freespecial2 #GRAB RUN
-	range 40 120
-	rangea 0 0
-	rangez -9 9
-	followanim 5
-	followcond 4
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	energycost 15 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	62 126
-	@cmd mpCost -30
-	sound	data/voices/Axel2.wav
-	#bbox 	61 60 20 68
-	@cmd target 3 2
-	@cmd dashTarget
-	attack 61 60 20 68 1 0 1 1 0 24
-	frame	data/chars/heroes/axel/run00.png
-	@cmd target 3 2
-	@cmd dashTarget
-	frame	data/chars/heroes/axel/run01.png
-	sound	data/sounds/Run.wav
-	@cmd target 3 2
-	@cmd dashTarget
-	frame	data/chars/heroes/axel/run02.png
-	@cmd target 3 2
-	@cmd dashTarget
-	frame	data/chars/heroes/axel/run03.png
-	@cmd dasher 0.5 0 0
-	frame	data/chars/heroes/axel/run04.png
-	sound	data/sounds/Run2.wav
-	@cmd dasher 0 0 0
-	frame	data/chars/heroes/axel/run05.png
+    range 40 120
+    rangea 0 0
+    rangez -9 9
+    followanim 5
+    followcond 4
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    energycost 15 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    62 126
+    @cmd mpCost -30
+    sound    data/voices/Axel2.wav
+    #bbox     61 60 20 68
+    @cmd target 3 2
+    @cmd dashTarget
+    attack 61 60 20 68 1 0 1 1 0 24
+    frame    data/chars/heroes/axel/run00.png
+    @cmd target 3 2
+    @cmd dashTarget
+    frame    data/chars/heroes/axel/run01.png
+    sound    data/sounds/Run.wav
+    @cmd target 3 2
+    @cmd dashTarget
+    frame    data/chars/heroes/axel/run02.png
+    @cmd target 3 2
+    @cmd dashTarget
+    frame    data/chars/heroes/axel/run03.png
+    @cmd dasher 0.5 0 0
+    frame    data/chars/heroes/axel/run04.png
+    sound    data/sounds/Run2.wav
+    @cmd dasher 0 0 0
+    frame    data/chars/heroes/axel/run05.png
 
 anim freespecial3 #GRANDUPPER #RUNATTACK
-	Range 30 60
-	rangea 0 100
-	rangez -5 5
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	energycost -15 1 6
-	otg 1
-	loop	0
-	delay	4
-	offset	62 126
-	@cmd dasher 0 0 0
-	@cmd mpCost -15
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/sounds/SpecialAttack.wav
-	frame	data/chars/heroes/axel/runatk00.png
-	@cmd dasher 1.5 0 0
-	attack2 68 98 32 30 3 0 0 20 12
-	sound	data/voices/Break1.wav
-	frame	data/chars/heroes/axel/runatk01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/runatk02.png
-	attack2 68 98 32 30 4 0 0 20 12
-	frame	data/chars/heroes/axel/runatk01.png
-	@cmd rageCancel 0 40 0 100 10 "ANI_FREESPECIAL4" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/runatk02.png
-		delay	3
-	attack 65 66 42 38 5 1 0 20 12
-	bbox 	55 60 22 69
-	frame	data/chars/heroes/axel/runatk03.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/runatk03.png
-	@cmd dasher 0.5 0 0
-	attack 71 50 43 30 6 1 0 20 12
-	bbox 	59 54 23 75
-	frame	data/chars/heroes/axel/runatk04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/runatk04.png
-		delay	6
-	@cmd dasher 0 0 0
-	attack 62 14 24 43 7 1 0 0 10 12
-	bbox 	46 49 24 79
-	frame	data/chars/heroes/axel/runatk05.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/runatk06.png
-	delay	18
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
-	frame	data/chars/heroes/axel/runatk07.png
+    Range 30 60
+    rangea 0 100
+    rangez -5 5
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    energycost -15 1 6
+    otg 1
+    loop    0
+    delay    4
+    offset    62 126
+    @cmd dasher 0 0 0
+    @cmd mpCost -15
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/sounds/SpecialAttack.wav
+    frame    data/chars/heroes/axel/runatk00.png
+    @cmd dasher 1.5 0 0
+    attack2 68 98 32 30 3 0 0 20 12
+    sound    data/voices/Break1.wav
+    frame    data/chars/heroes/axel/runatk01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/runatk02.png
+    attack2 68 98 32 30 4 0 0 20 12
+    frame    data/chars/heroes/axel/runatk01.png
+    @cmd rageCancel 0 40 0 100 10 "ANI_FREESPECIAL4" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/runatk02.png
+        delay    3
+    attack 65 66 42 38 5 1 0 20 12
+    bbox     55 60 22 69
+    frame    data/chars/heroes/axel/runatk03.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/runatk03.png
+    @cmd dasher 0.5 0 0
+    attack 71 50 43 30 6 1 0 20 12
+    bbox     59 54 23 75
+    frame    data/chars/heroes/axel/runatk04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/runatk04.png
+        delay    6
+    @cmd dasher 0 0 0
+    attack 62 14 24 43 7 1 0 0 10 12
+    bbox     46 49 24 79
+    frame    data/chars/heroes/axel/runatk05.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/runatk06.png
+    delay    18
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    @cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "hit"
+    frame    data/chars/heroes/axel/runatk07.png
 
 anim freespecial4 #OFFENSIVE SPECIAL
-	range 20 40
-	rangea 0 0
-	rangez -5 5
-	fastattack 1
-	jugglecost 0
-	energycost 10 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	62 126
-	@cmd dasher 0 0 0
-	bbox 	50 64 23 64
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	attack 61 66 42 20 3 0 1 0 12 12
-	seal 1 1
-	frame	data/chars/heroes/axel/special200.png
-	bbox 	59 70 22 58
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special201.png
-	sound	data/sounds/HighAttack.wav
-	bbox 	55 57 19 71
-	attack 66 59 38 29 4 0 1 0 12 12
-	seal 1 1
-	frame	data/chars/heroes/axel/special202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	59 55 15 73
-	frame	data/chars/heroes/axel/special203.png
-	sound	data/sounds/HighAttack.wav
-	attack 70 57 34 33 4 0 1 0 12 12
-	seal 1 1
-	bbox 	57 58 21 70
-	frame	data/chars/heroes/axel/special204.png
-	bbox 	55 64 21 64
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special205.png
-	bbox 	55 71 27 57
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special206.png
-	bbox 	63 61 20 67
-	attack 73 68 31 34 4 0 1 0 12 12
-	seal 1 1
-	frame	data/chars/heroes/axel/special207.png
-	bbox 	58 55 17 73
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special208.png
-	bbox 	48 57 23 71
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special209.png
-	attack 61 66 42 20 4 0 1 0 12 12
-	seal 1 1
-	bbox 	50 64 23 64
-	frame	data/chars/heroes/axel/special200.png
-	bbox 	59 70 22 58
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special201.png
-	hitfx	data/sounds/MediumPunch.wav
-	bbox 	55 57 19 71
-	attack 66 59 38 29 4 0 1 0 12 12
-	seal 1 1
-	frame	data/chars/heroes/axel/special202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	59 55 15 73
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special203.png
-	attack 70 57 34 33 4 0 1 0 12 12
-	seal 1 1
-	bbox 	57 58 21 70
-	frame	data/chars/heroes/axel/special204.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	55 64 21 64
-	frame	data/chars/heroes/axel/special205.png
-	@cmd rageCancel 20 60 0 0 60 "ANI_FREESPECIAL" "hit"
-	@cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "random"
-	bbox 	55 71 27 57
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special206.png
-	hitfx	data/sounds/HighPunch.wav
-	delay 5
-	attack 73 68 31 34 4 0 1 0 12 12
-	seal 1 1
-	bbox 	63 61 20 67
-	frame	data/chars/heroes/axel/special207.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special207.png
-	delay 5
-	attack 69 45 32 37 4 1 1 0 12 12
-	seal 1 1
-	bbox 	58 55 17 73
-	frame	data/chars/heroes/axel/special208.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special208.png
-	delay	16
-	@cmd leaper 1.5 1.2 0
-	attack 64 26 30 50 4 1 1 0 12 12
-	seal 1 1
-	bbox 	60 51 17 53
-	frame	data/chars/heroes/axel/special210.png
-	delay	2
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	46 57 19 44
-	frame	data/chars/heroes/axel/special211.png
-	@cmd landFrame
-		delay	8
-	bbox 	52 62 19 66
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/axel/special212.png
-	bbox 	54 69 28 59
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	@cmd rageCancel 20 80 0 120 0 "ANI_FREESPECIAL5" "hit"
-	frame	data/chars/heroes/axel/special213.png
+    range 20 40
+    rangea 0 0
+    rangez -5 5
+    fastattack 1
+    jugglecost 0
+    energycost 10 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    62 126
+    @cmd dasher 0 0 0
+    bbox     50 64 23 64
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    attack 61 66 42 20 3 0 1 0 12 12
+    seal 1 1
+    frame    data/chars/heroes/axel/special200.png
+    bbox     59 70 22 58
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special201.png
+    sound    data/sounds/HighAttack.wav
+    bbox     55 57 19 71
+    attack 66 59 38 29 4 0 1 0 12 12
+    seal 1 1
+    frame    data/chars/heroes/axel/special202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     59 55 15 73
+    frame    data/chars/heroes/axel/special203.png
+    sound    data/sounds/HighAttack.wav
+    attack 70 57 34 33 4 0 1 0 12 12
+    seal 1 1
+    bbox     57 58 21 70
+    frame    data/chars/heroes/axel/special204.png
+    bbox     55 64 21 64
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special205.png
+    bbox     55 71 27 57
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special206.png
+    bbox     63 61 20 67
+    attack 73 68 31 34 4 0 1 0 12 12
+    seal 1 1
+    frame    data/chars/heroes/axel/special207.png
+    bbox     58 55 17 73
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special208.png
+    bbox     48 57 23 71
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special209.png
+    attack 61 66 42 20 4 0 1 0 12 12
+    seal 1 1
+    bbox     50 64 23 64
+    frame    data/chars/heroes/axel/special200.png
+    bbox     59 70 22 58
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special201.png
+    hitfx    data/sounds/MediumPunch.wav
+    bbox     55 57 19 71
+    attack 66 59 38 29 4 0 1 0 12 12
+    seal 1 1
+    frame    data/chars/heroes/axel/special202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     59 55 15 73
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special203.png
+    attack 70 57 34 33 4 0 1 0 12 12
+    seal 1 1
+    bbox     57 58 21 70
+    frame    data/chars/heroes/axel/special204.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     55 64 21 64
+    frame    data/chars/heroes/axel/special205.png
+    @cmd rageCancel 20 60 0 0 60 "ANI_FREESPECIAL" "hit"
+    @cmd rageCancel 20 100 0 120 0 "ANI_JUMPATTACK2" "random"
+    bbox     55 71 27 57
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special206.png
+    hitfx    data/sounds/HighPunch.wav
+    delay 5
+    attack 73 68 31 34 4 0 1 0 12 12
+    seal 1 1
+    bbox     63 61 20 67
+    frame    data/chars/heroes/axel/special207.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special207.png
+    delay 5
+    attack 69 45 32 37 4 1 1 0 12 12
+    seal 1 1
+    bbox     58 55 17 73
+    frame    data/chars/heroes/axel/special208.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special208.png
+    delay    16
+    @cmd leaper 1.5 1.2 0
+    attack 64 26 30 50 4 1 1 0 12 12
+    seal 1 1
+    bbox     60 51 17 53
+    frame    data/chars/heroes/axel/special210.png
+    delay    2
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     46 57 19 44
+    frame    data/chars/heroes/axel/special211.png
+    @cmd landFrame
+        delay    8
+    bbox     52 62 19 66
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/axel/special212.png
+    bbox     54 69 28 59
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    @cmd rageCancel 20 80 0 120 0 "ANI_FREESPECIAL5" "hit"
+    frame    data/chars/heroes/axel/special213.png
 
 anim freespecial6
-	range 80 150
-	rangea 25 80
-	rangez -24 24
-	fastattack 0
-	jugglecost 0
-	forcedirection -1
-	energycost 30 1 6
-	otg 1
-	hitflash flash
-	loop	0
-	delay	6
-	offset	62 126
-	hitfx	data/sounds/SpecialAttack2.wav
-	sound	data/voices/gouken03.wav
-	frame	data/chars/heroes/axel/special00.png
-		delay 24
-	@cmd dasher 10 0 0
-	attack 22 1 56 127 2 1 0 0 30 36
-	seal 1 1
-	sound	data/sounds/Shring5.wav
-	frame	data/chars/heroes/axel/sword/rage00.png
-		delay 8
-	@cmd dasher 0 0 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special03.png
-	frame	data/chars/heroes/axel/special04.png
+    range 80 150
+    rangea 25 80
+    rangez -24 24
+    fastattack 0
+    jugglecost 0
+    forcedirection -1
+    energycost 30 1 6
+    otg 1
+    hitflash flash
+    loop    0
+    delay    6
+    offset    62 126
+    hitfx    data/sounds/SpecialAttack2.wav
+    sound    data/voices/gouken03.wav
+    frame    data/chars/heroes/axel/special00.png
+        delay 24
+    @cmd dasher 10 0 0
+    attack 22 1 56 127 2 1 0 0 30 36
+    seal 1 1
+    sound    data/sounds/Shring5.wav
+    frame    data/chars/heroes/axel/sword/rage00.png
+        delay 8
+    @cmd dasher 0 0 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special03.png
+    frame    data/chars/heroes/axel/special04.png
 
 anim freespecial8 #GRAB RUN
-	range 60 120
-	rangea 0 0
-	rangez -24 24
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	energycost -15 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	62 126
-	@cmd mpCost -30
-	sound	data/voices/Axel2.wav
-	@cmd target 4 2
-	@cmd dashTarget
-	@cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
-	frame	data/chars/heroes/axel/run00.png
-	@cmd target 4 2
-	@cmd dashTarget
-	@cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
-	frame	data/chars/heroes/axel/run01.png
-	sound	data/sounds/Run.wav
-	@cmd target 3 2
-	@cmd dashTarget
-	@cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
-	frame	data/chars/heroes/axel/run02.png
-	@cmd target 3 2
-	@cmd dashTarget
-	@cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
-	frame	data/chars/heroes/axel/run03.png
-	@cmd target 2 2
-	@cmd dashTarget
-	@cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
-	frame	data/chars/heroes/axel/run04.png
-	sound	data/sounds/Run2.wav
-	@cmd dasher 0 0 0
-	@cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL4"
-	frame	data/chars/heroes/axel/run05.png
+    range 60 120
+    rangea 0 0
+    rangez -24 24
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    energycost -15 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    62 126
+    @cmd mpCost -30
+    sound    data/voices/Axel2.wav
+    @cmd target 4 2
+    @cmd dashTarget
+    @cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
+    frame    data/chars/heroes/axel/run00.png
+    @cmd target 4 2
+    @cmd dashTarget
+    @cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
+    frame    data/chars/heroes/axel/run01.png
+    sound    data/sounds/Run.wav
+    @cmd target 3 2
+    @cmd dashTarget
+    @cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
+    frame    data/chars/heroes/axel/run02.png
+    @cmd target 3 2
+    @cmd dashTarget
+    @cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
+    frame    data/chars/heroes/axel/run03.png
+    @cmd target 2 2
+    @cmd dashTarget
+    @cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL3"
+    frame    data/chars/heroes/axel/run04.png
+    sound    data/sounds/Run2.wav
+    @cmd dasher 0 0 0
+    @cmd cancel 20 60 0 0 -9 9 "ANI_FREESPECIAL4"
+    frame    data/chars/heroes/axel/run05.png
 
 anim freespecial9 #UPPER
-	range 20 40
-	rangea 0 100
-	rangez -9 9
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	energycost -5 1 6
-	otg 1
-	loop	0
-	delay	4
-	offset	62 126
-	@cmd mpCost -30
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/heroes/axel/rage00.png
-	attack 66 69 35 58 15 1 0 0 30 12
-	seal 1 1
-	dropv 3 1 0
-	frame	data/chars/heroes/axel/rage04.png
-	burn 65 44 32 57 15 1 0 0 25 12
-	dropv 3 1 0
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/rage05.png
-		delay	24
-	@cmd leaper 2 2.5 0
-	burn 64 26 30 50 10 1 0 0 20 12
-	seal 1 1
-	frame	data/chars/heroes/axel/rage06.png
-		delay	2
-	@cmd rageCancel 0 75 0 160 15 "ANI_FREESPECIAL9" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	46 57 19 44
-	frame	data/chars/heroes/axel/special211.png
-	@cmd landFrame
-	bbox 	52 62 19 66
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/axel/special212.png
-	bbox 	54 69 28 59
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/special213.png
+    range 20 40
+    rangea 0 100
+    rangez -9 9
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    energycost -5 1 6
+    otg 1
+    loop    0
+    delay    4
+    offset    62 126
+    @cmd mpCost -30
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/heroes/axel/rage00.png
+    attack 66 69 35 58 15 1 0 0 30 12
+    seal 1 1
+    dropv 3 1 0
+    frame    data/chars/heroes/axel/rage04.png
+    burn 65 44 32 57 15 1 0 0 25 12
+    dropv 3 1 0
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/rage05.png
+        delay    24
+    @cmd leaper 2 2.5 0
+    burn 64 26 30 50 10 1 0 0 20 12
+    seal 1 1
+    frame    data/chars/heroes/axel/rage06.png
+        delay    2
+    @cmd rageCancel 0 75 0 160 15 "ANI_FREESPECIAL9" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     46 57 19 44
+    frame    data/chars/heroes/axel/special211.png
+    @cmd landFrame
+    bbox     52 62 19 66
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/axel/special212.png
+    bbox     54 69 28 59
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/special213.png
 
 anim follow3 #RAGE STRIKE
-	fastattack 1
-	jugglecost 0
-	forcedirection -1
-	otg 1
-	hitflash flash
-	loop	0
-	delay	16
-	offset	62 126
-	hitfx	data/sounds/HighPunch.wav
-	@cmd dasher 10 0 0
-	frame	data/chars/bosses/shiva/rage00.png
-		delay	4
-	@cmd dasher 0 0 0
-	attack -160 1 195 127 3 0 0 0 5 36
-	seal 1 1
-	frame	data/chars/heroes/axel/special04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special04.png
-	@cmd looper 1 9
-	attack -160 1 195 127 5 1 0 0 5 36
-	seal 1 1
-	frame	data/chars/heroes/axel/special04.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special04.png
+    fastattack 1
+    jugglecost 0
+    forcedirection -1
+    otg 1
+    hitflash flash
+    loop    0
+    delay    16
+    offset    62 126
+    hitfx    data/sounds/HighPunch.wav
+    @cmd dasher 10 0 0
+    frame    data/chars/bosses/shiva/rage00.png
+        delay    4
+    @cmd dasher 0 0 0
+    attack -160 1 195 127 3 0 0 0 5 36
+    seal 1 1
+    frame    data/chars/heroes/axel/special04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special04.png
+    @cmd looper 1 9
+    attack -160 1 195 127 5 1 0 0 5 36
+    seal 1 1
+    frame    data/chars/heroes/axel/special04.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special04.png
 
 anim follow5 #ANIMATION FOR DOGRAB ONLY
-	loop	0
-	delay	16
-	offset	62 126
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/heroes/axel/run00.png
+    loop    0
+    delay    16
+    offset    62 126
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/heroes/axel/run00.png
 
 anim follow7 #COUNTER
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	4
-	offset	62 126
-	@cmd recoverGp
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/voices/Axel4.wav
-	frame	data/chars/heroes/axel/block00.png
-	@cmd spawn01 "Counter" 0 0 1
-	frame	data/chars/heroes/axel/rage00.png
-	burn 66 69 35 58 25 1 0 0 30 12
-	frame	data/chars/heroes/axel/rage04.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/rage04.png
-	delay	4
-	burn 65 44 32 57 15 1 0 0 25 12
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/rage05.png
-	delay 1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/rage05.png
-	delay	16
-	@cmd leaper 1.25 2.5 0
-	burn 64 26 30 50 10 1 0 0 20 12
-	frame	data/chars/heroes/axel/rage06.png
-	delay	2
-	@cmd rageCancel 0 50 10 100 15 "ANI_FREESPECIAL9" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special211.png
-	@cmd landFrame
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/heroes/axel/special212.png
-	@cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/heroes/axel/special213.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    4
+    offset    62 126
+    @cmd recoverGp
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/voices/Axel4.wav
+    frame    data/chars/heroes/axel/block00.png
+    @cmd spawn01 "Counter" 0 0 1
+    frame    data/chars/heroes/axel/rage00.png
+    burn 66 69 35 58 25 1 0 0 30 12
+    frame    data/chars/heroes/axel/rage04.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/rage04.png
+    delay    4
+    burn 65 44 32 57 15 1 0 0 25 12
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/rage05.png
+    delay 1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/rage05.png
+    delay    16
+    @cmd leaper 1.25 2.5 0
+    burn 64 26 30 50 10 1 0 0 20 12
+    frame    data/chars/heroes/axel/rage06.png
+    delay    2
+    @cmd rageCancel 0 50 10 100 15 "ANI_FREESPECIAL9" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special211.png
+    @cmd landFrame
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/heroes/axel/special212.png
+    @cmd rageCancel -150 150 0 80 20 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/heroes/axel/special213.png
 
 anim follow8 #AERIAL SPECIAL
-	fastattack 1
-	jugglecost 0.5
-	forcedirection -1
-	otg 1
-	energycost 5 1 6
-	@cmd healStart
-	loop	0
-	delay	6
-	offset	62 126
-	bbox 	58 52 19 57
-	hitfx	data/sounds/MediumPunch.wav
-	sound	data/sounds/SpecialAttack2.wav
-	frame	data/chars/heroes/axel/special300.png
-	attack 68 61 42 17 6 0 0 0 20 12
-	dropv 1 1 0
-	frame	data/chars/heroes/axel/special300.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special301.png
-	bbox 	61 50 19 55
-	attack 71 61 38 23 6 0 0 0 20 12
-	dropv 1 1 0
-	frame	data/chars/heroes/axel/special302.png
-	hitfx	data/sounds/HighPunch.wav
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	59 52 16 55
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/heroes/axel/special303.png
-	attack 68 50 34 33 9 1 0 0 20 12
-	dropv 3 1 0
-	bbox 	56 50 19 59
-	frame	data/chars/heroes/axel/special304.png
-	bbox 	56 55 19 54
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/heroes/axel/special305.png
-	bbox 	56 50 19 61
-	frame	data/chars/heroes/axel/special306.png
+    fastattack 1
+    jugglecost 0.5
+    forcedirection -1
+    otg 1
+    energycost 5 1 6
+    @cmd healStart
+    loop    0
+    delay    6
+    offset    62 126
+    bbox     58 52 19 57
+    hitfx    data/sounds/MediumPunch.wav
+    sound    data/sounds/SpecialAttack2.wav
+    frame    data/chars/heroes/axel/special300.png
+    attack 68 61 42 17 6 0 0 0 20 12
+    dropv 1 1 0
+    frame    data/chars/heroes/axel/special300.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special301.png
+    bbox     61 50 19 55
+    attack 71 61 38 23 6 0 0 0 20 12
+    dropv 1 1 0
+    frame    data/chars/heroes/axel/special302.png
+    hitfx    data/sounds/HighPunch.wav
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     59 52 16 55
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/heroes/axel/special303.png
+    attack 68 50 34 33 9 1 0 0 20 12
+    dropv 3 1 0
+    bbox     56 50 19 59
+    frame    data/chars/heroes/axel/special304.png
+    bbox     56 55 19 54
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/heroes/axel/special305.png
+    bbox     56 50 19 61
+    frame    data/chars/heroes/axel/special306.png
 
 
 anim dodge
-	range 0 60
-	rangea 0 100
-	rangez -48 48
-	loop	0
-	delay	2
-	offset	62 126
-	@cmd dashRandom 1 1
-	@cmd copyMove
-	frame	data/chars/heroes/axel/dodge00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/heroes/axel/dodge01.png
-	@cmd pasteMove
-	frame	data/chars/heroes/axel/dodge02.png
-	@cmd pasteMove
-	frame	data/chars/heroes/axel/dodge03.png
-	@cmd pasteMove
-	frame	data/chars/heroes/axel/dodge04.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/heroes/axel/dodge05.png
+    range 0 60
+    rangea 0 100
+    rangez -48 48
+    loop    0
+    delay    2
+    offset    62 126
+    @cmd dashRandom 1 1
+    @cmd copyMove
+    frame    data/chars/heroes/axel/dodge00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/heroes/axel/dodge01.png
+    @cmd pasteMove
+    frame    data/chars/heroes/axel/dodge02.png
+    @cmd pasteMove
+    frame    data/chars/heroes/axel/dodge03.png
+    @cmd pasteMove
+    frame    data/chars/heroes/axel/dodge04.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/heroes/axel/dodge05.png
 
 anim block
-	range 0 100
-	rangea 0 100
-	rangez -48 48
-	@cmd dasher 0 0 0
-	loop	0
-	delay	96
-	offset	62 126
-	bbox 	50 61 27 68
-	frame	data/chars/heroes/axel/block00.png
+    range 0 100
+    rangea 0 100
+    rangez -48 48
+    @cmd dasher 0 0 0
+    loop    0
+    delay    96
+    offset    62 126
+    bbox     50 61 27 68
+    frame    data/chars/heroes/axel/block00.png

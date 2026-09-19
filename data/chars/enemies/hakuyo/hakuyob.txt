@@ -1,496 +1,496 @@
 ##MAIN
-name				HakuyoB
-type				enemy
+name                HakuyoB
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-1 #-1/-2/-3
-height				71
+antigravity            -1 #-1/-2/-3
+height                71
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			4
-risetime			170
-riseinv				0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-blockodds 			25
-bflash				Block
-nopassiveblock		1
-death				2
+jugglepoints        50
+guardpoints            20
+guardrate            4
+risetime            170
+riseinv                0 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+blockodds             25
+bflash                Block
+nopassiveblock        1
+death                2
 
 ##SCRIPTS
-#didblockscript		data/scripts/didblock/no_counter.c
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-onspawnscript		data/scripts/onspawn/hakuyo.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/default.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/default.c
+#didblockscript        data/scripts/didblock/no_counter.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+onspawnscript        data/scripts/onspawn/hakuyo.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/default.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/default.c
 
 ##ICONS
-icon				data/chars/enemies/hakuyo/icon.png 1
+icon                data/chars/enemies/hakuyo/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/Die1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/Die1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter1.png
-remap				data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter2.png
-remap				data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter3.png
-remap				data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter4.png
+remap                data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter1.png
+remap                data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter2.png
+remap                data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter3.png
+remap                data/chars/enemies/hakuyo/idle00.png data/chars/enemies/hakuyo/alter4.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	123 178
-	frame	data/chars/enemies/hakuyo/idle00.png
+    loop    0
+    delay    1
+    offset    123 178
+    frame    data/chars/enemies/hakuyo/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	123 178
-	bbox 	107 109 28 71
-	frame	data/chars/enemies/hakuyo/idle00.png
-	frame	data/chars/enemies/hakuyo/idle00.png
-	frame	data/chars/enemies/hakuyo/idle00.png
-	frame	data/chars/enemies/hakuyo/idle00.png
+    loop    1
+    delay    16
+    offset    123 178
+    bbox     107 109 28 71
+    frame    data/chars/enemies/hakuyo/idle00.png
+    frame    data/chars/enemies/hakuyo/idle00.png
+    frame    data/chars/enemies/hakuyo/idle00.png
+    frame    data/chars/enemies/hakuyo/idle00.png
 
 anim walk
-	loop	1
-	delay	16
-	offset	123 178
-	bbox 	107 109 28 71
-	frame	data/chars/enemies/hakuyo/walk00.png
-	frame	data/chars/enemies/hakuyo/walk01.png
-	frame	data/chars/enemies/hakuyo/walk02.png
-	frame	data/chars/enemies/hakuyo/walk03.png
+    loop    1
+    delay    16
+    offset    123 178
+    bbox     107 109 28 71
+    frame    data/chars/enemies/hakuyo/walk00.png
+    frame    data/chars/enemies/hakuyo/walk01.png
+    frame    data/chars/enemies/hakuyo/walk02.png
+    frame    data/chars/enemies/hakuyo/walk03.png
 
 anim get
-	loop	0
-	delay	16
-	offset	123 178
-	frame	data/chars/enemies/hakuyo/get00.png
+    loop    0
+    delay    16
+    offset    123 178
+    frame    data/chars/enemies/hakuyo/get00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	123 178
-	bbox 	106 111 33 69
-	frame	data/chars/enemies/hakuyo/grabbed00.png
+    loop    0
+    delay    8
+    offset    123 178
+    bbox     106 111 33 69
+    frame    data/chars/enemies/hakuyo/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	123 178
-	bbox 	110 125 33 54
-	frame	data/chars/enemies/hakuyo/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    123 178
+    bbox     110 125 33 54
+    frame    data/chars/enemies/hakuyo/jumpdelay00.png
 
 anim walkoff
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	123 178
-	bbox 	100 100 44 51
-	hitfx	data/sounds/HighKick.wav
-	sound	data/voices/Hakuyo1.wav
-	@cmd jump 1
-	attack 125 132 58 19 4 1 0 0 10 12
-	frame	data/chars/enemies/hakuyo/jumpatk00.png
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    123 178
+    bbox     100 100 44 51
+    hitfx    data/sounds/HighKick.wav
+    sound    data/voices/Hakuyo1.wav
+    @cmd jump 1
+    attack 125 132 58 19 4 1 0 0 10 12
+    frame    data/chars/enemies/hakuyo/jumpatk00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	123 178
-	bbox 	110 125 33 54
-	sound	data/sounds/Jumpland.wav
-	frame	data/chars/enemies/hakuyo/jumpland00.png
+    loop    0
+    delay    12
+    offset    123 178
+    bbox     110 125 33 54
+    sound    data/sounds/Jumpland.wav
+    frame    data/chars/enemies/hakuyo/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	123 178
-	bbox 	104 116 34 65
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
+    loop    0
+    delay    4
+    offset    123 178
+    bbox     104 116 34 65
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	123 178
-	bbox 	107 105 28 75
-	frame	data/chars/enemies/hakuyo/pain00.png
-	frame	data/chars/enemies/hakuyo/pain01.png
-	frame	data/chars/enemies/hakuyo/pain00.png
-	frame	data/chars/enemies/hakuyo/pain01.png
-	frame	data/chars/enemies/hakuyo/pain00.png
-	frame	data/chars/enemies/hakuyo/pain01.png
-	frame	data/chars/enemies/hakuyo/pain00.png
-	frame	data/chars/enemies/hakuyo/pain01.png
-	frame	data/chars/enemies/hakuyo/pain00.png
-	frame	data/chars/enemies/hakuyo/pain01.png
-	frame	data/chars/enemies/hakuyo/pain00.png
-	frame	data/chars/enemies/hakuyo/pain01.png
+    loop    0
+    delay    4
+    offset    123 178
+    bbox     107 105 28 75
+    frame    data/chars/enemies/hakuyo/pain00.png
+    frame    data/chars/enemies/hakuyo/pain01.png
+    frame    data/chars/enemies/hakuyo/pain00.png
+    frame    data/chars/enemies/hakuyo/pain01.png
+    frame    data/chars/enemies/hakuyo/pain00.png
+    frame    data/chars/enemies/hakuyo/pain01.png
+    frame    data/chars/enemies/hakuyo/pain00.png
+    frame    data/chars/enemies/hakuyo/pain01.png
+    frame    data/chars/enemies/hakuyo/pain00.png
+    frame    data/chars/enemies/hakuyo/pain01.png
+    frame    data/chars/enemies/hakuyo/pain00.png
+    frame    data/chars/enemies/hakuyo/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	123 178
-	bbox 	104 116 34 65
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
-	frame	data/chars/enemies/hakuyo/pain200.png
-	frame	data/chars/enemies/hakuyo/pain201.png
+    loop    0
+    delay    4
+    offset    123 178
+    bbox     104 116 34 65
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
+    frame    data/chars/enemies/hakuyo/pain200.png
+    frame    data/chars/enemies/hakuyo/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	123 178
-	bbox 	100 110 39 54
-	frame	data/chars/enemies/hakuyo/fall00.png
-		delay	8
-	bbox 	86 159 84 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/hakuyo/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    123 178
+    bbox     100 110 39 54
+    frame    data/chars/enemies/hakuyo/fall00.png
+        delay    8
+    bbox     86 159 84 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	123 178
-	bbox 	100 110 39 54
-	frame	data/chars/enemies/hakuyo/fall00.png
-		delay	8
-	bbox 	86 159 84 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/hakuyo/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    123 178
+    bbox     100 110 39 54
+    frame    data/chars/enemies/hakuyo/fall00.png
+        delay    8
+    bbox     86 159 84 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	123 178
-	bbox 	100 110 39 54
-	frame	data/chars/enemies/hakuyo/fall00.png
-		delay	8
-	bbox 	86 159 84 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/hakuyo/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    123 178
+    bbox     100 110 39 54
+    frame    data/chars/enemies/hakuyo/fall00.png
+        delay    8
+    bbox     86 159 84 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	123 178
-	frame	data/chars/enemies/hakuyo/fall600.png
-	frame	data/chars/enemies/hakuyo/fall601.png
-	frame	data/chars/enemies/hakuyo/fall602.png
-	frame	data/chars/enemies/hakuyo/fall603.png
-		delay	8
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/hakuyo/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    123 178
+    frame    data/chars/enemies/hakuyo/fall600.png
+    frame    data/chars/enemies/hakuyo/fall601.png
+    frame    data/chars/enemies/hakuyo/fall602.png
+    frame    data/chars/enemies/hakuyo/fall603.png
+        delay    8
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	123 178
-	frame	data/chars/enemies/hakuyo/fall700.png
-	frame	data/chars/enemies/hakuyo/fall701.png
-	frame	data/chars/enemies/hakuyo/fall702.png
-	frame	data/chars/enemies/hakuyo/fall703.png
-	frame	data/chars/enemies/hakuyo/fall704.png
-	frame	data/chars/enemies/hakuyo/fall705.png
+    loop    0
+    delay    1000
+    offset    123 178
+    frame    data/chars/enemies/hakuyo/fall700.png
+    frame    data/chars/enemies/hakuyo/fall701.png
+    frame    data/chars/enemies/hakuyo/fall702.png
+    frame    data/chars/enemies/hakuyo/fall703.png
+    frame    data/chars/enemies/hakuyo/fall704.png
+    frame    data/chars/enemies/hakuyo/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	123 178
-	bbox 	100 110 39 54
-	hitfx	data/sounds/MediumKick.wav
-	attack 100 110 39 54 4 1 0 0 20 12
-	frame	data/chars/enemies/hakuyo/fall00.png
-		delay	999
-	frame	data/chars/enemies/hakuyo/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	86 159 84 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/hakuyo/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    123 178
+    bbox     100 110 39 54
+    hitfx    data/sounds/MediumKick.wav
+    attack 100 110 39 54 4 1 0 0 20 12
+    frame    data/chars/enemies/hakuyo/fall00.png
+        delay    999
+    frame    data/chars/enemies/hakuyo/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     86 159 84 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	123 178
-	bbox 	107 123 33 54
-	hitfx	data/sounds/MediumKick.wav
-	attack 107 123 33 54 4 1 0 0 20 12
-	frame	data/chars/enemies/hakuyo/fall900.png
-		delay	999
-	frame	data/chars/enemies/hakuyo/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	86 159 84 20
-	sound	data/sounds/Falling.wav
-	frame	data/chars/enemies/hakuyo/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    123 178
+    bbox     107 123 33 54
+    hitfx    data/sounds/MediumKick.wav
+    attack 107 123 33 54 4 1 0 0 20 12
+    frame    data/chars/enemies/hakuyo/fall900.png
+        delay    999
+    frame    data/chars/enemies/hakuyo/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     86 159 84 20
+    sound    data/sounds/Falling.wav
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim death
-	loop	0
-	delay	16
-	offset	123 178
-	frame	data/chars/enemies/hakuyo/fall01.png
-	frame	data/chars/enemies/hakuyo/fall01.png
-	frame	data/chars/enemies/hakuyo/fall01.png
+    loop    0
+    delay    16
+    offset    123 178
+    frame    data/chars/enemies/hakuyo/fall01.png
+    frame    data/chars/enemies/hakuyo/fall01.png
+    frame    data/chars/enemies/hakuyo/fall01.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	123 178
-	frame	data/chars/enemies/hakuyo/rise00.png
-	frame	data/chars/enemies/hakuyo/rise01.png
-	frame	data/chars/enemies/hakuyo/rise00.png
-	frame	data/chars/enemies/hakuyo/rise02.png
+    loop    0
+    delay    16
+    offset    123 178
+    frame    data/chars/enemies/hakuyo/rise00.png
+    frame    data/chars/enemies/hakuyo/rise01.png
+    frame    data/chars/enemies/hakuyo/rise00.png
+    frame    data/chars/enemies/hakuyo/rise02.png
 
 anim riseattack
-	range 40 120
-	rangea 0 0
-	rangez -24 24
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	hitflash Impact
-	otg 1
-	loop	0
-	delay	8
-	offset	123 178
-	bbox 	119 100 21 70
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/Jumping.wav
-	@cmd target 4 2
-	@cmd leapTarget 2
-	@cmd jump 1
-	frame	data/chars/enemies/hakuyo/jump00.png
-	attack8 120 115 62 35 9 1 0 0 35 12
-	dropv 2 5
-	bbox 	110 100 27 50
-	frame	data/chars/enemies/hakuyo/jumpatk00.png
+    range 40 120
+    rangea 0 0
+    rangez -24 24
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    hitflash Impact
+    otg 1
+    loop    0
+    delay    8
+    offset    123 178
+    bbox     119 100 21 70
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/Jumping.wav
+    @cmd target 4 2
+    @cmd leapTarget 2
+    @cmd jump 1
+    frame    data/chars/enemies/hakuyo/jump00.png
+    attack8 120 115 62 35 9 1 0 0 35 12
+    dropv 2 5
+    bbox     110 100 27 50
+    frame    data/chars/enemies/hakuyo/jumpatk00.png
 
 anim attack1
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	123 178
-	bbox 	115 106 32 74
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/enemies/hakuyo/a100.png
-	attack 134 110 46 18 2 0 0 0 10 12
-	frame	data/chars/enemies/hakuyo/a101.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/hakuyo/a102.png
-	bbox 	107 109 28 71
-	frame	data/chars/enemies/hakuyo/a103.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    123 178
+    bbox     115 106 32 74
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/enemies/hakuyo/a100.png
+    attack 134 110 46 18 2 0 0 0 10 12
+    frame    data/chars/enemies/hakuyo/a101.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/hakuyo/a102.png
+    bbox     107 109 28 71
+    frame    data/chars/enemies/hakuyo/a103.png
 
 anim attack2
-	range 20 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	123 178
-	bbox 	115 106 32 74
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/hakuyo/a200.png
-		delay	18
-	attack 143 113 46 18 8 1 0 0 20 12
-	frame	data/chars/enemies/hakuyo/a201.png
-		delay	12
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/enemies/hakuyo/a202.png
-	bbox 	107 109 28 71
-	frame	data/chars/enemies/hakuyo/a203.png
+    range 20 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    123 178
+    bbox     115 106 32 74
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/hakuyo/a200.png
+        delay    18
+    attack 143 113 46 18 8 1 0 0 20 12
+    frame    data/chars/enemies/hakuyo/a201.png
+        delay    12
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/enemies/hakuyo/a202.png
+    bbox     107 109 28 71
+    frame    data/chars/enemies/hakuyo/a203.png
 
 anim jumpattack
-	range 60 120
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	12
-	offset	123 178
-	bbox 	119 100 21 60
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/Jumping.wav
-	@cmd targetJump
-	@cmd leapJump
-	frame	data/chars/enemies/hakuyo/jump00.png
-	attack 125 132 58 19 4 1 0 0 20 12
-	bbox 	100 100 44 51
-	sound	data/voices/Hakuyo1.wav
-	frame	data/chars/enemies/hakuyo/jumpatk00.png
+    range 60 120
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    12
+    offset    123 178
+    bbox     119 100 21 60
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/Jumping.wav
+    @cmd targetJump
+    @cmd leapJump
+    frame    data/chars/enemies/hakuyo/jump00.png
+    attack 125 132 58 19 4 1 0 0 20 12
+    bbox     100 100 44 51
+    sound    data/voices/Hakuyo1.wav
+    frame    data/chars/enemies/hakuyo/jumpatk00.png
 
 anim freespecial #FIRE
-	range 40 80
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	123 178
-	bbox 	112 106 32 74
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/hakuyo/fire00.png
-	bbox 	112 103 26 77
-	frame	data/chars/enemies/hakuyo/fire01.png
-	attack 159 124 48 16 8 0 0 0 10 12
-	bbox 	134 116 30 64
-	frame	data/chars/enemies/hakuyo/fire02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Fireball.wav
-	frame	data/chars/enemies/hakuyo/fire02.png
-	delay	2
-	attack8 159 124 59 16 5 1 0 0 10 12
-	dropv 3 5
-	frame	data/chars/enemies/hakuyo/fire03.png
-	delay	3
-	frame	data/chars/enemies/hakuyo/fire02.png
-	delay	8
-	@cmd looper 4 5
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 103 26 77
-	frame	data/chars/enemies/hakuyo/fire04.png
-	bbox 	107 109 28 71
-	frame	data/chars/enemies/hakuyo/fire05.png
+    range 40 80
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    123 178
+    bbox     112 106 32 74
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/hakuyo/fire00.png
+    bbox     112 103 26 77
+    frame    data/chars/enemies/hakuyo/fire01.png
+    attack 159 124 48 16 8 0 0 0 10 12
+    bbox     134 116 30 64
+    frame    data/chars/enemies/hakuyo/fire02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Fireball.wav
+    frame    data/chars/enemies/hakuyo/fire02.png
+    delay    2
+    attack8 159 124 59 16 5 1 0 0 10 12
+    dropv 3 5
+    frame    data/chars/enemies/hakuyo/fire03.png
+    delay    3
+    frame    data/chars/enemies/hakuyo/fire02.png
+    delay    8
+    @cmd looper 4 5
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 103 26 77
+    frame    data/chars/enemies/hakuyo/fire04.png
+    bbox     107 109 28 71
+    frame    data/chars/enemies/hakuyo/fire05.png
 
 anim upper #KICK
-	range 40 80
-	rangea 0 100
-	rangea -9 9
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	123 178
-	bbox 	105 106 32 74
-	hitfx	data/sounds/HighKick.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/hakuyo/kick00.png
-	frame	data/chars/enemies/hakuyo/kick01.png
-		delay	16
-	attack 118 100 48 38 8 1 0 0 20 12
-	frame	data/chars/enemies/hakuyo/kick02.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	105 106 32 74
-	frame	data/chars/enemies/hakuyo/kick03.png
+    range 40 80
+    rangea 0 100
+    rangea -9 9
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    123 178
+    bbox     105 106 32 74
+    hitfx    data/sounds/HighKick.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/hakuyo/kick00.png
+    frame    data/chars/enemies/hakuyo/kick01.png
+        delay    16
+    attack 118 100 48 38 8 1 0 0 20 12
+    frame    data/chars/enemies/hakuyo/kick02.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     105 106 32 74
+    frame    data/chars/enemies/hakuyo/kick03.png
 
 anim follow7 #counter
-	range 40 100
-	rangea 0 0
-	fastattack 1
-	jugglecost 2
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	123 178
-	bbox 	112 106 32 74
-	hitfx	data/sounds/HighPunch.wav
-	sound	data/sounds/HighAttack.wav
-	frame	data/chars/enemies/hakuyo/fire00.png
-	bbox 	112 103 26 77
-	frame	data/chars/enemies/hakuyo/fire01.png
-	attack 159 124 48 16 8 0 0 0 10 12
-	bbox 	134 116 30 64
-	frame	data/chars/enemies/hakuyo/fire02.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Fireball.wav
-	frame	data/chars/enemies/hakuyo/fire02.png
-	delay	2
-	attack8 159 124 59 16 8 1 0 0 10 12
-	dropv 3 5
-	frame	data/chars/enemies/hakuyo/fire03.png
-	delay	3
-	frame	data/chars/enemies/hakuyo/fire02.png
-	delay	8
-	@cmd looper 4 5
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	120 103 26 77
-	frame	data/chars/enemies/hakuyo/fire04.png
-	bbox 	107 109 28 71
-	frame	data/chars/enemies/hakuyo/fire05.png
+    range 40 100
+    rangea 0 0
+    fastattack 1
+    jugglecost 2
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    123 178
+    bbox     112 106 32 74
+    hitfx    data/sounds/HighPunch.wav
+    sound    data/sounds/HighAttack.wav
+    frame    data/chars/enemies/hakuyo/fire00.png
+    bbox     112 103 26 77
+    frame    data/chars/enemies/hakuyo/fire01.png
+    attack 159 124 48 16 8 0 0 0 10 12
+    bbox     134 116 30 64
+    frame    data/chars/enemies/hakuyo/fire02.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Fireball.wav
+    frame    data/chars/enemies/hakuyo/fire02.png
+    delay    2
+    attack8 159 124 59 16 8 1 0 0 10 12
+    dropv 3 5
+    frame    data/chars/enemies/hakuyo/fire03.png
+    delay    3
+    frame    data/chars/enemies/hakuyo/fire02.png
+    delay    8
+    @cmd looper 4 5
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     120 103 26 77
+    frame    data/chars/enemies/hakuyo/fire04.png
+    bbox     107 109 28 71
+    frame    data/chars/enemies/hakuyo/fire05.png
 
 anim block
-	range 0 100
-	rangea 0 100
-	rangez -48 48
-	loop	0
-	delay	64
-	offset	123 178
-	bbox 	112 106 32 74
-	frame	data/chars/enemies/hakuyo/block00.png
+    range 0 100
+    rangea 0 100
+    rangez -48 48
+    loop    0
+    delay    64
+    offset    123 178
+    bbox     112 106 32 74
+    frame    data/chars/enemies/hakuyo/block00.png

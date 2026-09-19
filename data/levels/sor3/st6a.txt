@@ -1,66 +1,66 @@
-loadingbg	 data/bgs/loading3.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor3/st6a/bk00.png		1 0 0 0 0 0 1 1 0 0
-fglayer			data/bgs/sor3/st6a/bg00.png		-454 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 1
-panel			data/bgs/sor3/st6a/_map.png		none	none
-order			a
-settime			300
-direction		both
-stagenumber		6
-spawn1			240 20 300
-spawn2			240 40 300
-spawn3			240 60 300
-spawn4			240 80 300
-updatescript	data/scripts/updatelevel/sor3_st6a.c
+loadingbg     data/bgs/loading3.png             1 -81 248 480 999 999 0
+background        data/bgs/sor3/st6a/bk00.png        1 0 0 0 0 0 1 1 0 0
+fglayer            data/bgs/sor3/st6a/bg00.png        -454 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0 1
+panel            data/bgs/sor3/st6a/_map.png        none    none
+order            a
+settime            300
+direction        both
+stagenumber        6
+spawn1            240 20 300
+spawn2            240 40 300
+spawn3            240 60 300
+spawn4            240 80 300
+updatescript    data/scripts/updatelevel/sor3_st6a.c
 
 #########################################################################################
 
-wall 		0 278 -100 -100 146 25 121 5000
+wall         0 278 -100 -100 146 25 121 5000
 
-wall 		604 182 -30 -30 72 33 38 5000
+wall         604 182 -30 -30 72 33 38 5000
 
-wall 		1219 278 15 136 522 401 121 5000
+wall         1219 278 15 136 522 401 121 5000
 
-wall 		2370 182 -72 -33 30 30 38 5000
+wall         2370 182 -72 -33 30 30 38 5000
 
-wall 		2974 278 -146 -25 100 100 121 5000
-
-#########################################################################################
-
-#load		Stage 3
-#load		St6_Elevator_Sor3 3
-#load		St6_Alarm 3
+wall         2974 278 -146 -25 100 100 121 5000
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+#load        Stage 3
+#load        St6_Elevator_Sor3 3
+#load        St6_Alarm 3
 
 #########################################################################################
 
-spawn		St6_Alarm 1
-flip		1
-coords		1 276 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
-spawn		St6_Elevator_Sor3 1
-flip		1
-coords		1487 1104 0
-at			0
+#########################################################################################
+
+spawn        St6_Alarm 1
+flip        1
+coords        1 276 0
+at            0
+
+spawn        St6_Elevator_Sor3 1
+flip        1
+coords        1487 1104 0
+at            0
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			0
+at            0
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		340 260 300
-at			0
+spawn        BossX1 1
+map            4
+flip        0
+coords        340 260 300
+at            0
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		350 260 300
-at			0
+flip        0
+coords        350 260 300
+at            0

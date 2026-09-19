@@ -1,32 +1,32 @@
-name	  	 	St8_Emergency #Entity to draw emergency during red alert after beating NeoX in ST8E
-type	  	 	none
-shadow	  	 	0
-animationscript	data/scripts/animation/default.c
+name               St8_Emergency #Entity to draw emergency during red alert after beating NeoX in ST8E
+type               none
+shadow               0
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	48
-	offset	1 140
-	drawmethod alpha 6
-	@cmd aniVar "ANI_FOLLOW1" "alarm" 1
-	@cmd aniVar "ANI_FOLLOW2" "alarm" 2
-	frame	data/bgs/sor3/st8e/emergency00.png
-	@cmd aniVar "ANI_FOLLOW1" "alarm" 1
-	@cmd aniVar "ANI_FOLLOW2" "alarm" 2
-	frame	data/bgs/sor3/st8e/emergency01.png
-	
+    loop    1
+    delay    48
+    offset    1 140
+    drawmethod alpha 6
+    @cmd aniVar "ANI_FOLLOW1" "alarm" 1
+    @cmd aniVar "ANI_FOLLOW2" "alarm" 2
+    frame    data/bgs/sor3/st8e/emergency00.png
+    @cmd aniVar "ANI_FOLLOW1" "alarm" 1
+    @cmd aniVar "ANI_FOLLOW2" "alarm" 2
+    frame    data/bgs/sor3/st8e/emergency01.png
+    
 anim follow1
-	loop	1
-	delay	48
-	offset	1 140
-	drawmethod alpha 6
-	frame	data/bgs/sor3/st8e/emergency00.png
-	frame	data/bgs/sor3/st8e/emergency02.png
-	
+    loop    1
+    delay    48
+    offset    1 140
+    drawmethod alpha 6
+    frame    data/bgs/sor3/st8e/emergency00.png
+    frame    data/bgs/sor3/st8e/emergency02.png
+    
 anim follow2
-	loop	1
-	delay	48
-	offset	1 140
-	drawmethod alpha 6
-	frame	data/bgs/sor3/st8e/emergency00.png
-	frame	data/bgs/sor3/st8e/emergency03.png
+    loop    1
+    delay    48
+    offset    1 140
+    drawmethod alpha 6
+    frame    data/bgs/sor3/st8e/emergency00.png
+    frame    data/bgs/sor3/st8e/emergency03.png

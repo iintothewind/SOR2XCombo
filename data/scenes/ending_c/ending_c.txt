@@ -1,32 +1,32 @@
-name			Ending_C #TIMELINE
-type			text
-subtype			noskip
-setlayer		100000001
-shadow			0
-ondrawscript	data/scripts/ondraw/endings.c
-animationscript	data/scripts/animation/default.c
+name            Ending_C #TIMELINE
+type            text
+subtype            noskip
+setlayer        100000001
+shadow            0
+ondrawscript    data/scripts/ondraw/endings.c
+animationscript    data/scripts/animation/default.c
 
-load			Ending_C1
-load			Ending_C2
+load            Ending_C1
+load            Ending_C2
 
 anim idle
-	loop	0
-	delay	64
-	offset	0 1
-	frame	data/scenes/ending_c/endc00.png #X1
-		delay	2360 #THIS IS DE DURATION OF EACH IMAGE, NEED TO BE THE SAME TOTAL DELAY OF THE BLACK FADE
-	@cmd spawn01 "Ending_C1" 0 0 0
-	@cmd spawn01 "Ending_C2" 0 0 -400
-	frame	data/scenes/ending_c/endc01.png
-	@cmd spawn01 "Ending_C1" 0 0 0
-	frame	data/scenes/ending_c/endc02.png
-	@cmd spawn01 "Ending_C1" 0 0 0
-	frame	data/scenes/ending_c/endc03.png
-	@cmd spawn01 "Ending_C1" 0 0 0
-	frame	data/scenes/ending_c/endc04.png
-	@cmd spawn01 "Ending_C1" 0 0 0
-	frame	data/scenes/ending_c/endc05.png
-	@cmd spawn01 "Ending_C1" 0 0 0
-	frame	data/scenes/ending_c/endc06.png #X6
-	@cmd suicide
-	frame	data/scenes/ending_c/endc06.png
+    loop    0
+    delay    64
+    offset    0 1
+    frame    data/scenes/ending_c/endc00.png #X1
+        delay    2360 #THIS IS DE DURATION OF EACH IMAGE, NEED TO BE THE SAME TOTAL DELAY OF THE BLACK FADE
+    @cmd spawn01 "Ending_C1" 0 0 0
+    @cmd spawn01 "Ending_C2" 0 0 -400
+    frame    data/scenes/ending_c/endc01.png
+    @cmd spawn01 "Ending_C1" 0 0 0
+    frame    data/scenes/ending_c/endc02.png
+    @cmd spawn01 "Ending_C1" 0 0 0
+    frame    data/scenes/ending_c/endc03.png
+    @cmd spawn01 "Ending_C1" 0 0 0
+    frame    data/scenes/ending_c/endc04.png
+    @cmd spawn01 "Ending_C1" 0 0 0
+    frame    data/scenes/ending_c/endc05.png
+    @cmd spawn01 "Ending_C1" 0 0 0
+    frame    data/scenes/ending_c/endc06.png #X6
+    @cmd suicide
+    frame    data/scenes/ending_c/endc06.png

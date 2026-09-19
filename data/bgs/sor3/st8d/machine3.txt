@@ -1,31 +1,31 @@
-name			St8_Machine3
-type			none
-shadow			0
-setlayer		-10
-ondrawscript	data/scripts/ondraw/zero.c
-animationscript	data/scripts/animation/default.c
+name            St8_Machine3
+type            none
+shadow            0
+setlayer        -10
+ondrawscript    data/scripts/ondraw/zero.c
+animationscript    data/scripts/animation/default.c
 
-load			St8_Machine3Sa
-load			St8_Machine3Sb
-load			St8_Machine3Sc
+load            St8_Machine3Sa
+load            St8_Machine3Sb
+load            St8_Machine3Sc
 
 anim idle
-	loop	1
-	delay	10
-	offset	1 72
-	@cmd spawn01 "St8_Machine3Sa" 0 0 20
-	@cmd spawn01 "St8_Machine3Sb" 0 0 20
-	@cmd spawn01 "St8_Machine3Sc" 0 0 20
-	frame	data/bgs/sor3/st8d/machine00.png
-	frame	data/bgs/sor3/st8d/machine01.png
-	frame	data/bgs/sor3/st8d/machine02.png
-	frame	data/bgs/sor3/st8d/machine03.png
+    loop    1
+    delay    10
+    offset    1 72
+    @cmd spawn01 "St8_Machine3Sa" 0 0 20
+    @cmd spawn01 "St8_Machine3Sb" 0 0 20
+    @cmd spawn01 "St8_Machine3Sc" 0 0 20
+    frame    data/bgs/sor3/st8d/machine00.png
+    frame    data/bgs/sor3/st8d/machine01.png
+    frame    data/bgs/sor3/st8d/machine02.png
+    frame    data/bgs/sor3/st8d/machine03.png
 
 anim follow1
-	loop	0
-	delay	10
-	offset	1 72
-	frame	data/bgs/sor3/st8d/machine00.png
-	frame	data/bgs/sor3/st8d/machine01.png
-	frame	data/bgs/sor3/st8d/machine02.png
-	frame	data/bgs/sor3/st8d/machine03.png
+    loop    0
+    delay    10
+    offset    1 72
+    frame    data/bgs/sor3/st8d/machine00.png
+    frame    data/bgs/sor3/st8d/machine01.png
+    frame    data/bgs/sor3/st8d/machine02.png
+    frame    data/bgs/sor3/st8d/machine03.png

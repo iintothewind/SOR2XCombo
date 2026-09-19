@@ -1,17 +1,17 @@
-name			Block_B
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-toflip			1
-animationscript	data/scripts/animation/default.c
+name            Block_B
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+toflip            1
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	6
-	offset	15 15
-	frame	data/chars/misc/block/original/block00.png
-	frame	data/chars/misc/block/original/block01.png
-	@cmd suicide
-	frame	data/chars/misc/block/original/empty.png
+    loop    0
+    delay    6
+    offset    15 15
+    frame    data/chars/misc/block/original/block00.png
+    frame    data/chars/misc/block/original/block01.png
+    @cmd suicide
+    frame    data/chars/misc/block/original/empty.png

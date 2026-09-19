@@ -1,510 +1,510 @@
-loadingbg		data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background		data/bgs/sor2/st1a/_empty.png	1 1 0 0 0 0 1 1 1
-panel			data/bgs/sor2/st1a/_map.png		none	none
-fglayer			data/bgs/sor2/st1a/fg00.png		-200 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st1a/fg01.png		-200 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/sor2/st1a/fg02.png		0 -0.8 0.6 0 0 0 0 1 1 1 0 0 0 0 0 0 1
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-cameraoffset 	0 -200
-stagenumber 	1
-spawn1			60 40 300
-spawn2			90 60 300
-spawn3			120 40 300
-spawn4			150 60 300
-updatescript 	data/scripts/updatelevel/sor2_st1a.c
+loadingbg        data/bgs/loading2.png             1 -81 248 480 999 999 0
+background        data/bgs/sor2/st1a/_empty.png    1 1 0 0 0 0 1 1 1
+panel            data/bgs/sor2/st1a/_map.png        none    none
+fglayer            data/bgs/sor2/st1a/fg00.png        -200 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st1a/fg01.png        -200 0 0 0 0 0 0 -1 -1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/sor2/st1a/fg02.png        0 -0.8 0.6 0 0 0 0 1 1 1 0 0 0 0 0 0 1
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+cameraoffset     0 -200
+stagenumber     1
+spawn1            60 40 300
+spawn2            90 60 300
+spawn3            120 40 300
+spawn4            150 60 300
+updatescript     data/scripts/updatelevel/sor2_st1a.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall		699 403 0 570 3000 3000 285 5000
+wall        699 403 0 570 3000 3000 285 5000
 
-wall		2853 457 0 128 1000 1000 65 5000
+wall        2853 457 0 128 1000 1000 65 5000
 
-#hole		1623 477 0 0 50 50 19 10
+#hole        1623 477 0 0 50 50 19 10
 
-#hole		1879 477 0 0 50 50 19 10
-
-#########################################################################################
-
-load		Stage 3
-load		St1_Dunk_a 3
-load		St1_Rim 3
-load		St1_Dunk_b 3
-load		St1_Manhole 3
-load		St1_Gate 3
-load		BlockadeZ 3
-load		FakeWall 3
+#hole        1879 477 0 0 50 50 19 10
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+load        Stage 3
+load        St1_Dunk_a 3
+load        St1_Rim 3
+load        St1_Dunk_b 3
+load        St1_Manhole 3
+load        St1_Gate 3
+load        BlockadeZ 3
+load        FakeWall 3
 
 #########################################################################################
 
-spawn		St1_Dunk_a 1
-flip		1
-coords		1 148 0
-at			0
-
-spawn		St1_Rim 1
-flip		1
-coords		262 148 0
-at			0
-
-spawn		St1_Dunk_b 1
-flip		1
-coords		480 190 0
-at			0
-
-spawn		BlockadeZ 1
-flip		1
-coords		0 470 0
-at			0
-
-spawn		FakeWall 1
-flip		1
-coords		1271 401 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-spawn		1up
-flip		1
-coords		20 270 0
-at			0
+spawn        St1_Dunk_a 1
+flip        1
+coords        1 148 0
+at            0
 
-spawn		Bin_A 1
-flip		1
-coords		350 150 0
-at			0
+spawn        St1_Rim 1
+flip        1
+coords        262 148 0
+at            0
+
+spawn        St1_Dunk_b 1
+flip        1
+coords        480 190 0
+at            0
+
+spawn        BlockadeZ 1
+flip        1
+coords        0 470 0
+at            0
+
+spawn        FakeWall 1
+flip        1
+coords        1271 401 0
+at            0
+
+#########################################################################################
+
+spawn        1up
+flip        1
+coords        20 270 0
+at            0
+
+spawn        Bin_A 1
+flip        1
+coords        350 150 0
+at            0
 
 
-spawn		BruceB 1
-map			0
-flip		0
-coords		550 180 0
-at			0
+spawn        BruceB 1
+map            0
+flip        0
+coords        550 180 0
+at            0
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		550 180 0
-at			0
+spawn        BasicX1 1
+map            0
+flip        0
+coords        550 180 0
+at            0
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		600 210 0
-at			0
+spawn        BasicX1 1
+map            0
+flip        0
+coords        600 210 0
+at            0
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		650 240 0
-at			0
+spawn        BasicX1 1
+map            0
+flip        0
+coords        650 240 0
+at            0
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		-200 210 0
-at			0
+spawn        BasicX1 1
+map            0
+flip        0
+coords        -200 210 0
+at            0
 
-spawn		BongoB 1
-map			0
-flip		0
-coords		600 240 0
-at			50
+spawn        BongoB 1
+map            0
+flip        0
+coords        600 240 0
+at            50
 
-spawn		JackB 1
-map			0
-flip		0
-coords		600 240 0
-at			75
+spawn        JackB 1
+map            0
+flip        0
+coords        600 240 0
+at            75
 
-spawn		SignalX 1
-map			0
-flip		0
-coords		600 240 0
-at			100
+spawn        SignalX 1
+map            0
+flip        0
+coords        600 240 0
+at            100
 
 wait
-at			300
+at            300
 
-group		4 4
-at			200
+group        4 4
+at            200
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		600 240 0
-at			200
+spawn        BasicX1 1
+map            0
+flip        0
+coords        600 240 0
+at            200
 
-spawn		JackB 1
-map			1
-flip		0
-coords		-100 180 0
-at			200
+spawn        JackB 1
+map            1
+flip        0
+coords        -100 180 0
+at            200
 
-spawn		SignalX 1
-map			0
-flip		0
-coords		-150 210 0
-at			200
+spawn        SignalX 1
+map            0
+flip        0
+coords        -150 210 0
+at            200
 
-spawn		SignalB 1
-map			1
-flip		0
-coords		-200 240 0
-at			200
+spawn        SignalB 1
+map            1
+flip        0
+coords        -200 240 0
+at            200
 
 #########################################################################################
 
-group		1000 1000
-at			310
+group        1000 1000
+at            310
 
-spawn		Bin_A 1
-flip		1
-coords		866 360 0
-at			310
+spawn        Bin_A 1
+flip        1
+coords        866 360 0
+at            310
 
-spawn		Bin_A 1
-flip		1
-coords		890 370 0
-at			310
+spawn        Bin_A 1
+flip        1
+coords        890 370 0
+at            310
 
-spawn		Bin_A 1
-flip		1
-coords		1077 410 0
-at			310
+spawn        Bin_A 1
+flip        1
+coords        1077 410 0
+at            310
 
-spawn		Donovan_Wait 1
-map			0
-flip		0
-coords		530 200 0
-at			310
+spawn        Donovan_Wait 1
+map            0
+flip        0
+coords        530 200 0
+at            310
 
-spawn		Signal_Wait 1
-map			0
-flip		0
-coords		740 300 0
-at			310
+spawn        Signal_Wait 1
+map            0
+flip        0
+coords        740 300 0
+at            310
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		-100 240 0
-at			500
+spawn        BasicX1 1
+map            0
+flip        0
+coords        -100 240 0
+at            500
 
-spawn		JackB 1
-map			0
-flip		0
-coords		-100 240 0
-at			550
+spawn        JackB 1
+map            0
+flip        0
+coords        -100 240 0
+at            550
 
-spawn		BruceB 1
-map			0
-flip		0
-coords		-100 240 0
-at			600
+spawn        BruceB 1
+map            0
+flip        0
+coords        -100 240 0
+at            600
 
-spawn		BasicX3 1
-map			0
-flip		0
-coords		-100 240 0
-at			650
+spawn        BasicX3 1
+map            0
+flip        0
+coords        -100 240 0
+at            650
 
-spawn		Signal_Wait 1
-map			0
-flip		0
-coords		750 420 0
-at			700
+spawn        Signal_Wait 1
+map            0
+flip        0
+coords        750 420 0
+at            700
 
-spawn		Donovan_Wait 1
-map			0
-flip		0
-coords		760 450 0
-at			700
+spawn        Donovan_Wait 1
+map            0
+flip        0
+coords        760 450 0
+at            700
 
 wait
-at			1050
+at            1050
 
-group		4 4
-at			700
+group        4 4
+at            700
 
-spawn		JackB 1
-map			0
-flip		0
-coords		-100 420 0
-at			700
+spawn        JackB 1
+map            0
+flip        0
+coords        -100 420 0
+at            700
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		-150 440 0
-at			700
+spawn        BasicX1 1
+map            0
+flip        0
+coords        -150 440 0
+at            700
 
-spawn		BigBenX 1
-map			0
-flip		0
-coords		-100 420 0
-at			700
+spawn        BigBenX 1
+map            0
+flip        0
+coords        -100 420 0
+at            700
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		-150 440 0
-at			700
+spawn        BasicX1 1
+map            0
+flip        0
+coords        -150 440 0
+at            700
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		-100 420 0
-at			700
+spawn        BasicX1 1
+map            0
+flip        0
+coords        -100 420 0
+at            700
 
 #########################################################################################
 
-group		1000 1000
-at			1000
+group        1000 1000
+at            1000
 
-spawn		Bin_A 1
-flip		1
-coords		900 410 0
-at			1000
+spawn        Bin_A 1
+flip        1
+coords        900 410 0
+at            1000
 
-spawn		Bin_A 1
-flip		1
-coords		950 410 0
-at			1000
+spawn        Bin_A 1
+flip        1
+coords        950 410 0
+at            1000
 
-spawn		St1_Manhole 1
-flip		0
-coords		548 468 0
-at			1100
+spawn        St1_Manhole 1
+flip        0
+coords        548 468 0
+at            1100
 
-spawn		St1_Gate 1
-flip		0
-coords		1064 392 0
-at			1100
+spawn        St1_Gate 1
+flip        0
+coords        1064 392 0
+at            1100
 
-spawn		Signal_Gate 1
-map			1
-flip		0
-coords		1064 392 0
-at			1100
+spawn        Signal_Gate 1
+map            1
+flip        0
+coords        1064 392 0
+at            1100
 
-spawn		Signal_Wait 1
-map			0
-flip		0
-coords		1150 430 0
-at			1100
+spawn        Signal_Wait 1
+map            0
+flip        0
+coords        1150 430 0
+at            1100
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		550 420 0
-at			1100
+spawn        BasicX1 1
+map            0
+flip        0
+coords        550 420 0
+at            1100
 
-spawn		BruceB 1
-map			0
-flip		0
-coords		550 420 0
-at			1200
+spawn        BruceB 1
+map            0
+flip        0
+coords        550 420 0
+at            1200
 
-spawn		JackB 1
-map			0
-flip		0
-coords		600 440 0
-at			1200
+spawn        JackB 1
+map            0
+flip        0
+coords        600 440 0
+at            1200
 
-spawn		Donovan_Manhole 1
-map			1
-weapon		Pipe 1
-flip		0
-coords		400 468 0
-at			1268
+spawn        Donovan_Manhole 1
+map            1
+weapon        Pipe 1
+flip        0
+coords        400 468 0
+at            1268
 
-spawn		BigBenB 1
-map			1
-flip		0
-coords		450 468 0
-at			1300
+spawn        BigBenB 1
+map            1
+flip        0
+coords        450 468 0
+at            1300
 
-spawn		BasicX1 1
-map			0
-flip		0
-coords		650 420 0
-at			1300
+spawn        BasicX1 1
+map            0
+flip        0
+coords        650 420 0
+at            1300
 
-spawn		BongoB 1
-map			0
-flip		0
-coords		700 440 0
-at			1300
+spawn        BongoB 1
+map            0
+flip        0
+coords        700 440 0
+at            1300
 
-spawn		St1_Manhole 1
-flip		0
-coords		548 468 0
-at			1356
+spawn        St1_Manhole 1
+flip        0
+coords        548 468 0
+at            1356
 
-spawn		BasicX3 1
-map			0
-flip		0
-coords		520 440 0
-at			1500
+spawn        BasicX3 1
+map            0
+flip        0
+coords        520 440 0
+at            1500
 
-spawn		GalsiaB 1
-map			0
-weapon		Knife 1
-flip		0
-coords		520 440 0
-at			1500
+spawn        GalsiaB 1
+map            0
+weapon        Knife 1
+flip        0
+coords        520 440 0
+at            1500
 
-spawn		Donovan_Manhole 1
-map			1
-weapon		Pipe 1
-flip		0
-coords		400 468 0
-at			1524
+spawn        Donovan_Manhole 1
+map            1
+weapon        Pipe 1
+flip        0
+coords        400 468 0
+at            1524
 
 wait
-at			1800
+at            1800
 
 #########################################################################################
 
-spawn		Menu 1
-flip		1
-coords		994 412 0
-at			1900
+spawn        Menu 1
+flip        1
+coords        994 412 0
+at            1900
 
-spawn		Menu 1
-flip		1
-coords		1083 456 0
-at			1900
+spawn        Menu 1
+flip        1
+coords        1083 456 0
+at            1900
 
-spawn		Donovan_Wait 1
-map			0
-flip		0
-coords		1020 438 0
-at			1900
+spawn        Donovan_Wait 1
+map            0
+flip        0
+coords        1020 438 0
+at            1900
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		600 420 0
-at			1900
+spawn        BasicX1 1
+map            0
+flip        1
+coords        600 420 0
+at            1900
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		650 440 0
-at			1900
+spawn        BasicX1 1
+map            0
+flip        1
+coords        650 440 0
+at            1900
 
-spawn		JackB 1
-map			0
-flip		1
-coords		600 420 0
-at			2000
+spawn        JackB 1
+map            0
+flip        1
+coords        600 420 0
+at            2000
 
-spawn		SignalX 1
-map			0
-flip		1
-coords		-100 440 0
-at			2000
+spawn        SignalX 1
+map            0
+flip        1
+coords        -100 440 0
+at            2000
 
-spawn		GalsiaB 1
-map			0
-weapon		Knife 1
-flip		1
-coords		-150 420 0
-at			2100
+spawn        GalsiaB 1
+map            0
+weapon        Knife 1
+flip        1
+coords        -150 420 0
+at            2100
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-200 440 0
-at			2100
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -200 440 0
+at            2100
 
-spawn		JackB 1
-map			0
-flip		1
-coords		-200 440 0
-at			2200
+spawn        JackB 1
+map            0
+flip        1
+coords        -200 440 0
+at            2200
 
-spawn		BruceB 1
-map			0
-flip		1
-coords		-200 440 0
-at			2300
+spawn        BruceB 1
+map            0
+flip        1
+coords        -200 440 0
+at            2300
 
-spawn		BasicX3 1
-map			0
-flip		1
-coords		-200 440 0
-at			2400
+spawn        BasicX3 1
+map            0
+flip        1
+coords        -200 440 0
+at            2400
 
-spawn		BasicX3 1
-map			0
-flip		1
-coords		-200 440 0
-at			2500
+spawn        BasicX3 1
+map            0
+flip        1
+coords        -200 440 0
+at            2500
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			2600
+at            2600
 
-group		4 4
-at			2600
+group        4 4
+at            2600
 
-spawn		Bike 1
-flip		1
-coords		-5 440 0
-at			2600
+spawn        Bike 1
+flip        1
+coords        -5 440 0
+at            2600
 
-spawn		Jack_Jump 1
-map			0
-flip		1
-coords		-15 440 50
-at			2600
+spawn        Jack_Jump 1
+map            0
+flip        1
+coords        -15 440 50
+at            2600
 
-spawn		BongoB 1
-map			0
-flip		1
-coords		-100 420 0
-at			2600
+spawn        BongoB 1
+map            0
+flip        1
+coords        -100 420 0
+at            2600
 
-spawn		JackB 1
-map			0
-flip		1
-coords		-150 440 0
-at			2600
+spawn        JackB 1
+map            0
+flip        1
+coords        -150 440 0
+at            2600
 
-spawn		BasicX1 1
-map			0
-flip		1
-coords		-200 420 0
-at			2600
+spawn        BasicX1 1
+map            0
+flip        1
+coords        -200 420 0
+at            2600
 
 
-spawn		BossX1 1
-map			4
-flip		1
-coords		-50 440 0
-at			2600
+spawn        BossX1 1
+map            4
+flip        1
+coords        -50 440 0
+at            2600
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		1
-coords		-50 440 0
-at			2600
+flip        1
+coords        -50 440 0
+at            2600

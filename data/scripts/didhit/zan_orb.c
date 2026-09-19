@@ -2,6 +2,6 @@
 
 void main()
 {
-	lockMp();
-	specialCost();
+    lockMp();
+    specialCost();
 }

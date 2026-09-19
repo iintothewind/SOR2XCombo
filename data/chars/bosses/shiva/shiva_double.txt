@@ -1,133 +1,133 @@
 ##MAIN
-name				Shiva_Double
-type				npc
-subtype				notgrab
+name                Shiva_Double
+type                npc
+subtype                notgrab
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##WEIGHT/HEIGHT
-antigravity			-2 #-1/-2/-3
-height				80
+antigravity            -2 #-1/-2/-3
+height                80
 
 ##MISC
-nolife				1
-nomove				1 0
-gfxshadow			1 1
+nolife                1
+nomove                1 0
+gfxshadow            1 1
 
 ##SCRIPTS
-didhitscript		data/scripts/didhit/default.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-animationscript	 	data/scripts/animation/default.c
-script				data/scripts/updateentity/shiva.c
+didhitscript        data/scripts/didhit/default.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+animationscript         data/scripts/animation/default.c
+script                data/scripts/updateentity/shiva.c
 
 
 ##REMAPS
-remap				data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter1.png
-remap				data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter2.png
-remap				data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter3.png
-remap				data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter4.png
-remap				data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter1.png
+remap                data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter1.png
+remap                data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter2.png
+remap                data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter3.png
+remap                data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter4.png
+remap                data/chars/bosses/shiva/idle00.png data/chars/bosses/shiva/alter1.png
 
 ##LOADS
-load				ShivaS
+load                ShivaS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 
 anim attack9 #DOUBLE RUSH
-	fastattack 0
-	forcedirection -1
-	otg 1
-	hitflash Impact
-	loop	0
-	delay	12
-	offset	138 192
-	@cmd targetXMove 240 0
-	drawmethod tintmode 1
-	drawmethod tintcolor 255_0_0
-	frame	data/chars/bosses/shiva/wait00.png
-	sound	data/sounds/Slide.wav
-	hitfx	data/sounds/HighPunch.wav
-	@cmd dasher 7 0 0
-	burn 135 137 55 55 8 1 0 0 35 36
-	dropv 4 2 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 7 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	nodrawmethod
-	@cmd suicide
-	frame	data/chars/bosses/shiva/run01.png
+    fastattack 0
+    forcedirection -1
+    otg 1
+    hitflash Impact
+    loop    0
+    delay    12
+    offset    138 192
+    @cmd targetXMove 240 0
+    drawmethod tintmode 1
+    drawmethod tintcolor 255_0_0
+    frame    data/chars/bosses/shiva/wait00.png
+    sound    data/sounds/Slide.wav
+    hitfx    data/sounds/HighPunch.wav
+    @cmd dasher 7 0 0
+    burn 135 137 55 55 8 1 0 0 35 36
+    dropv 4 2 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 7 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    nodrawmethod
+    @cmd suicide
+    frame    data/chars/bosses/shiva/run01.png
 
 
 anim freespecial9 #DOUBLE RUSH
-	fastattack 0
-	forcedirection -1
-	otg 1
-	hitflash Impact
-	loop	0
-	delay	24
-	offset	138 192
-	@cmd targetXMove 240 0
-	drawmethod tintmode 1
-	drawmethod tintcolor 255_0_0
-	frame	data/chars/bosses/shiva/wait00.png
-	delay	12
-	sound	data/sounds/Slide.wav
-	hitfx	data/sounds/HighPunch.wav
-	@cmd dasher 5 0 0
-	burn 135 137 55 55 8 1 0 0 35 36
-	dropv 3 2 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run01.png
-	@cmd dasher 5 0 0
-	frame	data/chars/bosses/shiva/run00.png
-	nodrawmethod
-	@cmd suicide
-	frame	data/chars/bosses/shiva/run01.png
+    fastattack 0
+    forcedirection -1
+    otg 1
+    hitflash Impact
+    loop    0
+    delay    24
+    offset    138 192
+    @cmd targetXMove 240 0
+    drawmethod tintmode 1
+    drawmethod tintcolor 255_0_0
+    frame    data/chars/bosses/shiva/wait00.png
+    delay    12
+    sound    data/sounds/Slide.wav
+    hitfx    data/sounds/HighPunch.wav
+    @cmd dasher 5 0 0
+    burn 135 137 55 55 8 1 0 0 35 36
+    dropv 3 2 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run01.png
+    @cmd dasher 5 0 0
+    frame    data/chars/bosses/shiva/run00.png
+    nodrawmethod
+    @cmd suicide
+    frame    data/chars/bosses/shiva/run01.png
 

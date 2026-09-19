@@ -1,1051 +1,1051 @@
 ##MAIN
-name				RobotxB
-type				enemy
+name                RobotxB
+type                enemy
 
 ##LIFE
-health				1 #SCRIPT
+health                1 #SCRIPT
 
 ##POWER
-offense 			1 #SCRIPT
+offense             1 #SCRIPT
 
 ##SPEED
-speed				1 #SCRIPT
+speed                1 #SCRIPT
 
 ##JUMP
-jumpheight 			1 #SCRIPT
+jumpheight             1 #SCRIPT
 
 ##ENERGY
-mp					120
-mprate  			1 #SCRIPT
+mp                    120
+mprate              1 #SCRIPT
 
 ##GRAB
-grabdistance 		33 #36/33/30
-grabfinish 			1 #PLAYER=0/ENEMY=1
+grabdistance         33 #36/33/30
+grabfinish             1 #PLAYER=0/ENEMY=1
 
 ##WEIGHT/HEIGHT
-antigravity			-3 #-1/-2/-3
-height				94
+antigravity            -3 #-1/-2/-3
+height                94
 
 ##MISC
-jugglepoints		50
-guardpoints			20
-guardrate			5
-risetime			170
-riseinv				0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
-makeinv				2 0
-atchain				1 1 2
-weapons				none none none none
-gfxshadow			1 1
-dust				Dust
-noquake				1 0
-bounce				1
-aimove				chase #ENEMY ONLY
-death				2
-noatflash 			1
-blockodds 			1
-bflash				Block
-nopassiveblock		1
-flash				Flash
+jugglepoints        50
+guardpoints            20
+guardrate            5
+risetime            170
+riseinv                0.4 1 #HEROES 0.4 - ENEMY 0 - BOSS 0.4
+makeinv                2 0
+atchain                1 1 2
+weapons                none none none none
+gfxshadow            1 1
+dust                Dust
+noquake                1 0
+bounce                1
+aimove                chase #ENEMY ONLY
+death                2
+noatflash             1
+blockodds             1
+bflash                Block
+nopassiveblock        1
+flash                Flash
 
 ##SCRIPTS
-didblockscript		data/scripts/didblock/default.c
-didhitscript		data/scripts/didhit/robotx.c
-ondoattackscript	data/scripts/ondoattack/default.c
-onblockpscript		data/scripts/onblockp/default.c
-onblockwscript		data/scripts/onblockw/default.c
-onblocksscript		data/scripts/onblocks/default.c
-onmoveascript		data/scripts/onmove/default.c
-ondrawscript		data/scripts/ondraw/robotx.c
-onspawnscript		data/scripts/onspawn/robotx.c
-animationscript	 	data/scripts/animation/default.c
-takedamagescript	data/scripts/takedamage/armor_robots.c
-thinkscript			data/scripts/think/default.c
-script				data/scripts/updateentity/robotx.c
+didblockscript        data/scripts/didblock/default.c
+didhitscript        data/scripts/didhit/robotx.c
+ondoattackscript    data/scripts/ondoattack/default.c
+onblockpscript        data/scripts/onblockp/default.c
+onblockwscript        data/scripts/onblockw/default.c
+onblocksscript        data/scripts/onblocks/default.c
+onmoveascript        data/scripts/onmove/default.c
+ondrawscript        data/scripts/ondraw/robotx.c
+onspawnscript        data/scripts/onspawn/robotx.c
+animationscript         data/scripts/animation/default.c
+takedamagescript    data/scripts/takedamage/armor_robots.c
+thinkscript            data/scripts/think/default.c
+script                data/scripts/updateentity/robotx.c
 
 ##ICONS
-icon				data/chars/bosses/robotx/icon.png 1
+icon                data/chars/bosses/robotx/icon.png 1
 
 ##DIESOUND
-diesound			data/voices/BossDie1.wav
-ondeathscript		data/scripts/ondeath/default.c
+diesound            data/voices/BossDie1.wav
+ondeathscript        data/scripts/ondeath/default.c
 
 ##REMAPS
-remap				data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter1.png
-remap				data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter2.png
-remap				data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter3.png
-remap				data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter3.png
-remap				data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter2.png
+remap                data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter1.png
+remap                data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter2.png
+remap                data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter3.png
+remap                data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter3.png
+remap                data/chars/bosses/robotx/idle00.png data/chars/bosses/robotx/alter2.png
 
 ##LOADS
-load				Robotx_Shot
-load				Robotx_Missile
-load				RobotxS
+load                Robotx_Shot
+load                Robotx_Missile
+load                RobotxS
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim spawn
-	loop	0
-	delay	1
-	offset	136 176
-	frame	data/chars/bosses/robotx/idle00.png
+    loop    0
+    delay    1
+    offset    136 176
+    frame    data/chars/bosses/robotx/idle00.png
 
 anim idle
-	loop	1
-	delay	16
-	offset	136 176
-	bbox 	119 87 33 91
-	frame	data/chars/bosses/robotx/idle00.png
-	frame	data/chars/bosses/robotx/idle01.png
-	frame	data/chars/bosses/robotx/idle02.png
+    loop    1
+    delay    16
+    offset    136 176
+    bbox     119 87 33 91
+    frame    data/chars/bosses/robotx/idle00.png
+    frame    data/chars/bosses/robotx/idle01.png
+    frame    data/chars/bosses/robotx/idle02.png
 
 anim walk
-	loop	1
-	delay	4
-	offset	136 176
-	bbox 	119 91 29 87
-	sound	data/sounds/Run4.wav
-	frame	data/chars/bosses/robotx/walk00.png
-	frame	data/chars/bosses/robotx/walk01.png
-	frame	data/chars/bosses/robotx/walk00.png
-	frame	data/chars/bosses/robotx/walk01.png
+    loop    1
+    delay    4
+    offset    136 176
+    bbox     119 91 29 87
+    sound    data/sounds/Run4.wav
+    frame    data/chars/bosses/robotx/walk00.png
+    frame    data/chars/bosses/robotx/walk01.png
+    frame    data/chars/bosses/robotx/walk00.png
+    frame    data/chars/bosses/robotx/walk01.png
 
 anim backwalk
-	loop	1
-	delay	4
-	offset	136 176
-	bbox 	119 87 33 91
-	sound	data/sounds/Run4.wav
-	frame	data/chars/bosses/robotx/backwalk00.png
-	frame	data/chars/bosses/robotx/backwalk01.png
-	frame	data/chars/bosses/robotx/backwalk00.png
-	frame	data/chars/bosses/robotx/backwalk01.png
+    loop    1
+    delay    4
+    offset    136 176
+    bbox     119 87 33 91
+    sound    data/sounds/Run4.wav
+    frame    data/chars/bosses/robotx/backwalk00.png
+    frame    data/chars/bosses/robotx/backwalk01.png
+    frame    data/chars/bosses/robotx/backwalk00.png
+    frame    data/chars/bosses/robotx/backwalk01.png
 
 anim run
-	loop	1
-	delay	4
-	offset	136 176
-	bbox 	119 91 29 87
-	sound	data/sounds/Run4.wav
-	frame	data/chars/bosses/robotx/walk00.png
-	frame	data/chars/bosses/robotx/walk01.png
-	frame	data/chars/bosses/robotx/walk00.png
-	frame	data/chars/bosses/robotx/walk01.png
+    loop    1
+    delay    4
+    offset    136 176
+    bbox     119 91 29 87
+    sound    data/sounds/Run4.wav
+    frame    data/chars/bosses/robotx/walk00.png
+    frame    data/chars/bosses/robotx/walk01.png
+    frame    data/chars/bosses/robotx/walk00.png
+    frame    data/chars/bosses/robotx/walk01.png
 
 anim get
-	loop	0
-	delay	16
-	offset	136 176
-	frame	data/chars/bosses/robotx/get00.png
+    loop    0
+    delay    16
+    offset    136 176
+    frame    data/chars/bosses/robotx/get00.png
 
 anim grab
-	loop	0
-	delay	16
-	offset	136 176
-	bbox 128 100 30 76
-	@cmd vaultStuck
-	frame	data/chars/bosses/robotx/grab00.png
+    loop    0
+    delay    16
+    offset    136 176
+    bbox 128 100 30 76
+    @cmd vaultStuck
+    frame    data/chars/bosses/robotx/grab00.png
 
 anim grabbed
-	loop	0
-	delay	8
-	offset	136 176
-	bbox 	120 104 33 74
-	frame	data/chars/bosses/robotx/grabbed00.png
+    loop    0
+    delay    8
+    offset    136 176
+    bbox     120 104 33 74
+    frame    data/chars/bosses/robotx/grabbed00.png
 
 anim jumpdelay
-	loop	0
-	delay	12
-	offset	136 176
-	bbox 	120 112 31 66
-	frame	data/chars/bosses/robotx/jumpdelay00.png
+    loop    0
+    delay    12
+    offset    136 176
+    bbox     120 112 31 66
+    frame    data/chars/bosses/robotx/jumpdelay00.png
 
 anim walkoff
-	loop	0
-	delay	30
-	offset	136 176
-	bbox 	124 94 31 82
-	@cmd jump 1
-	frame	data/chars/bosses/robotx/jump00.png
+    loop    0
+    delay    30
+    offset    136 176
+    bbox     124 94 31 82
+    @cmd jump 1
+    frame    data/chars/bosses/robotx/jump00.png
 
 anim jumpland
-	loop	0
-	delay	12
-	offset	136 176
-	bbox 	120 112 31 66
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/jumpland00.png
+    loop    0
+    delay    12
+    offset    136 176
+    bbox     120 112 31 66
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/jumpland00.png
 
 anim guardbreak
-	loop	0
-	delay	4
-	offset	136 176
-	bbox 	124 94 31 82
-	sound	data/sounds/GuardBreak.wav
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
+    loop    0
+    delay    4
+    offset    136 176
+    bbox     124 94 31 82
+    sound    data/sounds/GuardBreak.wav
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
 
 anim pain #UP
-	loop	0
-	delay	4
-	offset	136 176
-	bbox 	124 88 31 88
-	frame	data/chars/bosses/robotx/pain00.png
-	frame	data/chars/bosses/robotx/pain01.png
-	frame	data/chars/bosses/robotx/pain00.png
-	frame	data/chars/bosses/robotx/pain01.png
-	frame	data/chars/bosses/robotx/pain00.png
-	frame	data/chars/bosses/robotx/pain01.png
-	frame	data/chars/bosses/robotx/pain00.png
-	frame	data/chars/bosses/robotx/pain01.png
+    loop    0
+    delay    4
+    offset    136 176
+    bbox     124 88 31 88
+    frame    data/chars/bosses/robotx/pain00.png
+    frame    data/chars/bosses/robotx/pain01.png
+    frame    data/chars/bosses/robotx/pain00.png
+    frame    data/chars/bosses/robotx/pain01.png
+    frame    data/chars/bosses/robotx/pain00.png
+    frame    data/chars/bosses/robotx/pain01.png
+    frame    data/chars/bosses/robotx/pain00.png
+    frame    data/chars/bosses/robotx/pain01.png
 
 anim pain2 #DOWN
-	loop	0
-	delay	4
-	offset	136 176
-	bbox 	124 94 31 82
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
-	frame	data/chars/bosses/robotx/pain200.png
-	frame	data/chars/bosses/robotx/pain201.png
+    loop    0
+    delay    4
+    offset    136 176
+    bbox     124 94 31 82
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
+    frame    data/chars/bosses/robotx/pain200.png
+    frame    data/chars/bosses/robotx/pain201.png
 
 anim fall #NORMAL
-	landframe 1
-	loop	0
-	delay	999
-	offset	136 176
-	bbox 	123 96 39 59
-	frame	data/chars/bosses/robotx/fall00.png
-		delay	8
-	bbox 	95 150 81 27
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    136 176
+    bbox     123 96 39 59
+    frame    data/chars/bosses/robotx/fall00.png
+        delay    8
+    bbox     95 150 81 27
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/fall01.png
 
 anim burn #BURNED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	136 176
-	bbox 	123 96 39 59
-	frame	data/chars/bosses/robotx/fall00.png
-		delay	8
-	bbox 	95 150 81 27
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    136 176
+    bbox     123 96 39 59
+    frame    data/chars/bosses/robotx/fall00.png
+        delay    8
+    bbox     95 150 81 27
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/fall01.png
 
 anim shock #SHOCKED FALL
-	landframe 1
-	loop	0
-	delay	999
-	offset	136 176
-	bbox 	123 96 39 59
-	frame	data/chars/bosses/robotx/fall00.png
-		delay	8
-	bbox 	95 150 81 27
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/fall01.png
+    landframe 1
+    loop    0
+    delay    999
+    offset    136 176
+    bbox     123 96 39 59
+    frame    data/chars/bosses/robotx/fall00.png
+        delay    8
+    bbox     95 150 81 27
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/fall01.png
 
 anim fall6 #SPIN FALL
-	landframe 4
-	loop	1 0 4
-	delay	3
-	offset	136 176
-	frame	data/chars/bosses/robotx/fall600.png
-	frame	data/chars/bosses/robotx/fall601.png
-	frame	data/chars/bosses/robotx/fall602.png
-	frame	data/chars/bosses/robotx/fall603.png
-		delay	8
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/fall01.png
+    landframe 4
+    loop    1 0 4
+    delay    3
+    offset    136 176
+    frame    data/chars/bosses/robotx/fall600.png
+    frame    data/chars/bosses/robotx/fall601.png
+    frame    data/chars/bosses/robotx/fall602.png
+    frame    data/chars/bosses/robotx/fall603.png
+        delay    8
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/fall01.png
 
 anim fall7 #GRABSTART POSITION
-	loop	0
-	delay	1000
-	offset	136 176
-	frame	data/chars/bosses/robotx/fall700.png
-	frame	data/chars/bosses/robotx/fall701.png
-	frame	data/chars/bosses/robotx/fall702.png
-	frame	data/chars/bosses/robotx/fall703.png
-	frame	data/chars/bosses/robotx/fall704.png
-	frame	data/chars/bosses/robotx/fall705.png
+    loop    0
+    delay    1000
+    offset    136 176
+    frame    data/chars/bosses/robotx/fall700.png
+    frame    data/chars/bosses/robotx/fall701.png
+    frame    data/chars/bosses/robotx/fall702.png
+    frame    data/chars/bosses/robotx/fall703.png
+    frame    data/chars/bosses/robotx/fall704.png
+    frame    data/chars/bosses/robotx/fall705.png
 
 anim fall8 #FINISH/THROW TYPE 3
-	landframe 2
-	loop	0
-	delay	30
-	offset	136 176
-	bbox 	123 96 39 59
-	hitfx	data/sounds/MediumKick.wav
-	attack 123 96 39 59 4 1 0 0 20 12
-	frame	data/chars/bosses/robotx/fall00.png
-		delay	999
-	frame	data/chars/bosses/robotx/fall00.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	95 150 81 27
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    136 176
+    bbox     123 96 39 59
+    hitfx    data/sounds/MediumKick.wav
+    attack 123 96 39 59 4 1 0 0 20 12
+    frame    data/chars/bosses/robotx/fall00.png
+        delay    999
+    frame    data/chars/bosses/robotx/fall00.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     95 150 81 27
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/fall01.png
 
 anim fall9 #FINISH/THROW TYPE 2
-	landframe 2
-	loop	0
-	delay	30
-	offset	136 176
-	bbox 	119 105 31 69
-	hitfx	data/sounds/MediumKick.wav
-	attack 119 105 31 69 4 1 0 0 20 12
-	frame	data/chars/bosses/robotx/fall900.png
-		delay	999
-	frame	data/chars/bosses/robotx/fall900.png
-		delay	8
-	attack 0 0 0 0 0 0 0 0 0 0
-	bbox 	95 150 81 27
-	sound	data/sounds/Jumpland3.wav
-	frame	data/chars/bosses/robotx/fall01.png
+    landframe 2
+    loop    0
+    delay    30
+    offset    136 176
+    bbox     119 105 31 69
+    hitfx    data/sounds/MediumKick.wav
+    attack 119 105 31 69 4 1 0 0 20 12
+    frame    data/chars/bosses/robotx/fall900.png
+        delay    999
+    frame    data/chars/bosses/robotx/fall900.png
+        delay    8
+    attack 0 0 0 0 0 0 0 0 0 0
+    bbox     95 150 81 27
+    sound    data/sounds/Jumpland3.wav
+    frame    data/chars/bosses/robotx/fall01.png
 
 anim death #EXPLOSION
-	loop	0
-	delay	64
-	offset	136 176
-	frame	data/chars/bosses/robotx/rise00.png
-		delay	16
-	@cmd spawnBind "Explosion" -15 15 1
-	frame	data/chars/bosses/robotx/rise00.png
-	@cmd spawnBind "Explosion" 15 15 1
-	frame	data/chars/bosses/robotx/rise00.png
-	frame	data/chars/bosses/robotx/fall02.png
+    loop    0
+    delay    64
+    offset    136 176
+    frame    data/chars/bosses/robotx/rise00.png
+        delay    16
+    @cmd spawnBind "Explosion" -15 15 1
+    frame    data/chars/bosses/robotx/rise00.png
+    @cmd spawnBind "Explosion" 15 15 1
+    frame    data/chars/bosses/robotx/rise00.png
+    frame    data/chars/bosses/robotx/fall02.png
 
 anim rise
-	loop	0
-	delay	16
-	offset	136 176
-	frame	data/chars/bosses/robotx/rise00.png
-	frame	data/chars/bosses/robotx/rise01.png
-	frame	data/chars/bosses/robotx/rise00.png
-	frame	data/chars/bosses/robotx/rise02.png
+    loop    0
+    delay    16
+    offset    136 176
+    frame    data/chars/bosses/robotx/rise00.png
+    frame    data/chars/bosses/robotx/rise01.png
+    frame    data/chars/bosses/robotx/rise00.png
+    frame    data/chars/bosses/robotx/rise02.png
 
 anim riseattack
-	range 0 80
-	rangea 0 100
-	rangez -9 9
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	3
-	offset	136 176
-	bbox 122 94 29 80
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/bosses/robotx/special00.png
-	sound	data/sounds/Shock.wav
-	move 2
-	bbox 119 80 30 93
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	@cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	move 0
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
+    range 0 80
+    rangea 0 100
+    rangez -9 9
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    3
+    offset    136 176
+    bbox 122 94 29 80
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/bosses/robotx/special00.png
+    sound    data/sounds/Shock.wav
+    move 2
+    bbox 119 80 30 93
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    @cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    move 0
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
 
 anim attack1
-	range 0 60
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	136 176
-	bbox 	119 90 29 88
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/bosses/robotx/a100.png
-	attack 145 114 50 60 2 0 0 0 10 12
-	bbox 	122 101 41 77
-	frame	data/chars/bosses/robotx/a101.png
+    range 0 60
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    136 176
+    bbox     119 90 29 88
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/bosses/robotx/a100.png
+    attack 145 114 50 60 2 0 0 0 10 12
+    bbox     122 101 41 77
+    frame    data/chars/bosses/robotx/a101.png
 
 anim attack2
-	range 0 80
-	rangea 0 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	8
-	offset	136 176
-	bbox 	119 90 29 88
-	hitfx	data/sounds/LowPunch.wav
-	sound	data/sounds/LowAttack.wav
-	frame	data/chars/bosses/robotx/a200.png
-	bbox 	122 101 41 77
-	attack 145 114 50 60 3 0 0 0 10 12
-	frame	data/chars/bosses/robotx/a201.png
-	@cmd rageCancel 0 80 0 0 30 "ANI_FOLLOW7" "hit"
-	hitfx	data/sounds/HighPunch.wav
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/a201.png
-	attack 145 114 75 60 5 1 0 0 10 12
-	dropv 3 0.8 0
-	frame	data/chars/bosses/robotx/a202.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/bosses/robotx/a203.png
+    range 0 80
+    rangea 0 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    8
+    offset    136 176
+    bbox     119 90 29 88
+    hitfx    data/sounds/LowPunch.wav
+    sound    data/sounds/LowAttack.wav
+    frame    data/chars/bosses/robotx/a200.png
+    bbox     122 101 41 77
+    attack 145 114 50 60 3 0 0 0 10 12
+    frame    data/chars/bosses/robotx/a201.png
+    @cmd rageCancel 0 80 0 0 30 "ANI_FOLLOW7" "hit"
+    hitfx    data/sounds/HighPunch.wav
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/a201.png
+    attack 145 114 75 60 5 1 0 0 10 12
+    dropv 3 0.8 0
+    frame    data/chars/bosses/robotx/a202.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/bosses/robotx/a203.png
 
 anim special #SHOCK
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	3
-	offset	136 176
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/bosses/robotx/special00.png
-	sound	data/sounds/Shock.wav
-	#bbox 119 80 30 93
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	@cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd clearL
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/bosses/robotx/special02.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    3
+    offset    136 176
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/bosses/robotx/special00.png
+    sound    data/sounds/Shock.wav
+    #bbox 119 80 30 93
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    @cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd clearL
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/bosses/robotx/special02.png
 
 anim special2 #SHOCK
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	3
-	offset	136 176
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/bosses/robotx/special00.png
-	sound	data/sounds/Shock.wav
-	#bbox 119 80 30 93
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	@cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd clearL
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/bosses/robotx/special02.png
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    3
+    offset    136 176
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/bosses/robotx/special00.png
+    sound    data/sounds/Shock.wav
+    #bbox 119 80 30 93
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    @cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd clearL
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/bosses/robotx/special02.png
 
 anim grabattack #shock
-	attackone 0
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	3
-	loop	0
-	offset	136 176
-	hitfx	data/sounds/HighPunch.wav
-	move	14
-	frame	data/chars/bosses/robotx/special00.png
-	sound	data/sounds/Shock.wav
-	move	0
-	#bbox 119 80 30 93
-	shock 88 95 91 80 3 0 0 0 0 24
-	seal 1 1
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	seal 1 1
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	@cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	seal 1 1
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	seal 1 1
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	seal 1 1
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	@cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
-	shock 88 95 91 80 5 1 0 0 0 24
-	seal 1 1
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	seal 1 1
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	seal 1 1
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd grabEnd
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/bosses/robotx/special02.png
+    attackone 0
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    3
+    loop    0
+    offset    136 176
+    hitfx    data/sounds/HighPunch.wav
+    move    14
+    frame    data/chars/bosses/robotx/special00.png
+    sound    data/sounds/Shock.wav
+    move    0
+    #bbox 119 80 30 93
+    shock 88 95 91 80 3 0 0 0 0 24
+    seal 1 1
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    seal 1 1
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    @cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    seal 1 1
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    seal 1 1
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    seal 1 1
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    @cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
+    shock 88 95 91 80 5 1 0 0 0 24
+    seal 1 1
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    seal 1 1
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    seal 1 1
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd grabEnd
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/bosses/robotx/special02.png
 
 anim freespecial #RAGE
-	range 0 60
-	rangea 0 100
-	rangez -12 12
-	fastattack 1
-	jugglecost 0
-	forcedirection 0
-	otg 1
-	energycost 60 1 6
-	hitflash Shock
-	loop	0
-	delay	20
-	offset	136 176
-	hitfx	data/sounds/HighPunch.wav
-	@cmd spawnBind "Rage" 0 -1 0
-	frame	data/chars/bosses/robotx/rage00.png
-		delay	3
-	shock 75 68 118 109 5 0 0 0 12
-	seal 1 1
-	frame	data/chars/bosses/robotx/rage01.png
-	hitflash flash
-	attack 0 0 0 0 0 0 0 0 0 0
-	sound	data/sounds/Shock.wav
-	frame	data/chars/bosses/robotx/rage02.png
-	attack 75 68 118 109 5 0 0 0 0 12
-	seal 1 1
-	frame	data/chars/bosses/robotx/rage01.png
-	hitflash Shock
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/rage02.png
-	@cmd looper 3 15
-	shock 75 68 118 109 8 5 0 0 0 12
-	seal 1 1
-	dropv 3 4 0
-	frame	data/chars/bosses/robotx/rage01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/rage02.png
+    range 0 60
+    rangea 0 100
+    rangez -12 12
+    fastattack 1
+    jugglecost 0
+    forcedirection 0
+    otg 1
+    energycost 60 1 6
+    hitflash Shock
+    loop    0
+    delay    20
+    offset    136 176
+    hitfx    data/sounds/HighPunch.wav
+    @cmd spawnBind "Rage" 0 -1 0
+    frame    data/chars/bosses/robotx/rage00.png
+        delay    3
+    shock 75 68 118 109 5 0 0 0 12
+    seal 1 1
+    frame    data/chars/bosses/robotx/rage01.png
+    hitflash flash
+    attack 0 0 0 0 0 0 0 0 0 0
+    sound    data/sounds/Shock.wav
+    frame    data/chars/bosses/robotx/rage02.png
+    attack 75 68 118 109 5 0 0 0 0 12
+    seal 1 1
+    frame    data/chars/bosses/robotx/rage01.png
+    hitflash Shock
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/rage02.png
+    @cmd looper 3 15
+    shock 75 68 118 109 8 5 0 0 0 12
+    seal 1 1
+    dropv 3 4 0
+    frame    data/chars/bosses/robotx/rage01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/rage02.png
 
 anim freespecial2 #FRONT SHOOT
-	range 100 320
-	rangea 0 0
-	rangez -9 9
-	energycost 10 1 6
-	loop	0
-	delay	5
-	offset	136 176
-	bbox 	119 90 29 88
-	frame	data/chars/bosses/robotx/shot00.png
-	bbox 	122 101 41 77
-	frame	data/chars/bosses/robotx/shot01.png
-	frame	data/chars/bosses/robotx/shot02.png
-	frame	data/chars/bosses/robotx/shot03.png
-	@cmd shoot "Robotx_Shot" 62 59 0 10 0 0
-	@cmd spawnToss "Cartridge" 50 60 1 -0.2 1 0
-	frame	data/chars/bosses/robotx/shot04.png
-	frame	data/chars/bosses/robotx/shot03.png
-	@cmd shoot "Robotx_Shot" 62 59 0 10 0 0
-	@cmd spawnToss "Cartridge" 50 60 1 -0.4 1.2 0
-	frame	data/chars/bosses/robotx/shot04.png
-	frame	data/chars/bosses/robotx/shot03.png
-	@cmd shoot "Robotx_Shot" 62 59 0 10 0 0
-	@cmd spawnToss "Cartridge" 50 60 1 -0.6 0.8 0
-	frame	data/chars/bosses/robotx/shot04.png
-	frame	data/chars/bosses/robotx/shot03.png
-	@cmd shoot "Robotx_Shot" 62 59 0 10 0 0
-	@cmd spawnToss "Cartridge" 50 60 1 -0.2 1.4 0
-	frame	data/chars/bosses/robotx/shot04.png
-	frame	data/chars/bosses/robotx/shot03.png
-	@cmd spawnToss "Cartridge" 50 60 1 -0.4 1.2 0
-	frame	data/chars/bosses/robotx/shot04.png
-	frame	data/chars/bosses/robotx/shot03.png
-	@cmd shoot "Robotx_Shot" 62 59 0 10 0 0
-	@cmd spawnToss "Cartridge" 50 60 1 -0.6 0.8 0
-	frame	data/chars/bosses/robotx/shot04.png
-	frame	data/chars/bosses/robotx/shot03.png
-	delay	32
-	sound	data/sounds/Reload.wav
-	frame	data/chars/bosses/robotx/shot02.png
-	frame	data/chars/bosses/robotx/shot01.png
+    range 100 320
+    rangea 0 0
+    rangez -9 9
+    energycost 10 1 6
+    loop    0
+    delay    5
+    offset    136 176
+    bbox     119 90 29 88
+    frame    data/chars/bosses/robotx/shot00.png
+    bbox     122 101 41 77
+    frame    data/chars/bosses/robotx/shot01.png
+    frame    data/chars/bosses/robotx/shot02.png
+    frame    data/chars/bosses/robotx/shot03.png
+    @cmd shoot "Robotx_Shot" 62 59 0 10 0 0
+    @cmd spawnToss "Cartridge" 50 60 1 -0.2 1 0
+    frame    data/chars/bosses/robotx/shot04.png
+    frame    data/chars/bosses/robotx/shot03.png
+    @cmd shoot "Robotx_Shot" 62 59 0 10 0 0
+    @cmd spawnToss "Cartridge" 50 60 1 -0.4 1.2 0
+    frame    data/chars/bosses/robotx/shot04.png
+    frame    data/chars/bosses/robotx/shot03.png
+    @cmd shoot "Robotx_Shot" 62 59 0 10 0 0
+    @cmd spawnToss "Cartridge" 50 60 1 -0.6 0.8 0
+    frame    data/chars/bosses/robotx/shot04.png
+    frame    data/chars/bosses/robotx/shot03.png
+    @cmd shoot "Robotx_Shot" 62 59 0 10 0 0
+    @cmd spawnToss "Cartridge" 50 60 1 -0.2 1.4 0
+    frame    data/chars/bosses/robotx/shot04.png
+    frame    data/chars/bosses/robotx/shot03.png
+    @cmd spawnToss "Cartridge" 50 60 1 -0.4 1.2 0
+    frame    data/chars/bosses/robotx/shot04.png
+    frame    data/chars/bosses/robotx/shot03.png
+    @cmd shoot "Robotx_Shot" 62 59 0 10 0 0
+    @cmd spawnToss "Cartridge" 50 60 1 -0.6 0.8 0
+    frame    data/chars/bosses/robotx/shot04.png
+    frame    data/chars/bosses/robotx/shot03.png
+    delay    32
+    sound    data/sounds/Reload.wav
+    frame    data/chars/bosses/robotx/shot02.png
+    frame    data/chars/bosses/robotx/shot01.png
 
 anim freespecial3 #GUIDED MISSILE
-	range 80 240
-	rangea 0 80
-	rangez -48 48
-	energycost 60 1 6
-	loop	0
-	delay	8
-	offset	136 176
-	bbox 	119 90 29 88
-	sound	data/voices/Attack7.wav
-	frame	data/chars/bosses/robotx/missile00.png
-	bbox 	122 101 41 77
-	frame	data/chars/bosses/robotx/missile01.png
-	frame	data/chars/bosses/robotx/missile02.png
-	frame	data/chars/bosses/robotx/missile03.png
-	frame	data/chars/bosses/robotx/missile04.png
-	frame	data/chars/bosses/robotx/missile05.png
-	frame	data/chars/bosses/robotx/missile06.png
-	frame	data/chars/bosses/robotx/missile07.png
-	@cmd shoot "Robotx_Missile" 34 58 -1 0.6 0 0
-	frame	data/chars/bosses/robotx/missile08.png
-	frame	data/chars/bosses/robotx/missile09.png
-	frame	data/chars/bosses/robotx/missile10.png
-		delay	16
-	bbox 	119 87 33 91
-	@cmd spawnToss "Smoke" 20 70 1 0 1 0
-	frame	data/chars/bosses/robotx/idle00.png
-	@cmd spawnToss "Smoke" 30 60 1 0 1 0
-	frame	data/chars/bosses/robotx/idle01.png
-	frame	data/chars/bosses/robotx/idle02.png
-	@cmd spawnToss "Smoke" 10 70 1 0 1 0
-	frame	data/chars/bosses/robotx/idle00.png
-	@cmd spawnToss "Smoke" 20 60 1 0 1 0
-	frame	data/chars/bosses/robotx/idle01.png
-	frame	data/chars/bosses/robotx/idle02.png
+    range 80 240
+    rangea 0 80
+    rangez -48 48
+    energycost 60 1 6
+    loop    0
+    delay    8
+    offset    136 176
+    bbox     119 90 29 88
+    sound    data/voices/Attack7.wav
+    frame    data/chars/bosses/robotx/missile00.png
+    bbox     122 101 41 77
+    frame    data/chars/bosses/robotx/missile01.png
+    frame    data/chars/bosses/robotx/missile02.png
+    frame    data/chars/bosses/robotx/missile03.png
+    frame    data/chars/bosses/robotx/missile04.png
+    frame    data/chars/bosses/robotx/missile05.png
+    frame    data/chars/bosses/robotx/missile06.png
+    frame    data/chars/bosses/robotx/missile07.png
+    @cmd shoot "Robotx_Missile" 34 58 -1 0.6 0 0
+    frame    data/chars/bosses/robotx/missile08.png
+    frame    data/chars/bosses/robotx/missile09.png
+    frame    data/chars/bosses/robotx/missile10.png
+        delay    16
+    bbox     119 87 33 91
+    @cmd spawnToss "Smoke" 20 70 1 0 1 0
+    frame    data/chars/bosses/robotx/idle00.png
+    @cmd spawnToss "Smoke" 30 60 1 0 1 0
+    frame    data/chars/bosses/robotx/idle01.png
+    frame    data/chars/bosses/robotx/idle02.png
+    @cmd spawnToss "Smoke" 10 70 1 0 1 0
+    frame    data/chars/bosses/robotx/idle00.png
+    @cmd spawnToss "Smoke" 20 60 1 0 1 0
+    frame    data/chars/bosses/robotx/idle01.png
+    frame    data/chars/bosses/robotx/idle02.png
 
 anim freespecial4 #CHASE
-	range 50 480
-	rangea 0 90
-	rangez -45 45
-	followanim 5
-	followcond 4
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	energycost -10 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	6
-	offset	136 176
-	#bbox 	119 91 29 87
-	@cmd target 3.5 2
-	@cmd dashTarget
-	sound	data/sounds/Run4.wav
-	attack 125 90 35 85 3 0 1 1 25 24
-	frame	data/chars/bosses/robotx/walk00.png
-	@cmd target 3.5 2
-	@cmd dashTarget
-	frame	data/chars/bosses/robotx/walk01.png
-	@cmd target 3.5 2
-	@cmd dashTarget
-	frame	data/chars/bosses/robotx/walk00.png
-	sound	data/sounds/Run4.wav
-	@cmd target 3.5 2
-	@cmd dashTarget
-	frame	data/chars/bosses/robotx/walk01.png
-	@cmd target 3.5 2
-	@cmd dashTarget
-	frame	data/chars/bosses/robotx/walk00.png
-	@cmd dasher 0 0 0
-	@cmd clearL
-	frame	data/chars/bosses/robotx/walk01.png
+    range 50 480
+    rangea 0 90
+    rangez -45 45
+    followanim 5
+    followcond 4
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    energycost -10 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    6
+    offset    136 176
+    #bbox     119 91 29 87
+    @cmd target 3.5 2
+    @cmd dashTarget
+    sound    data/sounds/Run4.wav
+    attack 125 90 35 85 3 0 1 1 25 24
+    frame    data/chars/bosses/robotx/walk00.png
+    @cmd target 3.5 2
+    @cmd dashTarget
+    frame    data/chars/bosses/robotx/walk01.png
+    @cmd target 3.5 2
+    @cmd dashTarget
+    frame    data/chars/bosses/robotx/walk00.png
+    sound    data/sounds/Run4.wav
+    @cmd target 3.5 2
+    @cmd dashTarget
+    frame    data/chars/bosses/robotx/walk01.png
+    @cmd target 3.5 2
+    @cmd dashTarget
+    frame    data/chars/bosses/robotx/walk00.png
+    @cmd dasher 0 0 0
+    @cmd clearL
+    frame    data/chars/bosses/robotx/walk01.png
 
 anim freespecial5 #LAUGH
-	range 240 320
-	rangea 0 99
-	rangez -999 999
-	energycost -20 1 6
-	loop	0
-	delay	12
-	offset	136 176
-	bbox 	121 76 26 102
-	sound	data/voices/Bigben1.wav
-	@cmd block 1
-	frame	data/chars/bosses/robotx/laugh00.png
-	frame	data/chars/bosses/robotx/laugh01.png
-	frame	data/chars/bosses/robotx/laugh00.png
-	frame	data/chars/bosses/robotx/laugh01.png
-	frame	data/chars/bosses/robotx/laugh00.png
-	frame	data/chars/bosses/robotx/laugh01.png
-	frame	data/chars/bosses/robotx/laugh00.png
-	frame	data/chars/bosses/robotx/laugh01.png
-	@cmd block 0
-	frame	data/chars/bosses/robotx/laugh00.png
+    range 240 320
+    rangea 0 99
+    rangez -999 999
+    energycost -20 1 6
+    loop    0
+    delay    12
+    offset    136 176
+    bbox     121 76 26 102
+    sound    data/voices/Bigben1.wav
+    @cmd block 1
+    frame    data/chars/bosses/robotx/laugh00.png
+    frame    data/chars/bosses/robotx/laugh01.png
+    frame    data/chars/bosses/robotx/laugh00.png
+    frame    data/chars/bosses/robotx/laugh01.png
+    frame    data/chars/bosses/robotx/laugh00.png
+    frame    data/chars/bosses/robotx/laugh01.png
+    frame    data/chars/bosses/robotx/laugh00.png
+    frame    data/chars/bosses/robotx/laugh01.png
+    @cmd block 0
+    frame    data/chars/bosses/robotx/laugh00.png
 
 anim freespecial6 #GRAB
-	range 80 270
-	rangea 0 100
-	rangez -15 15
-	followanim 5
-	followcond 4
-	attackone 1
-	fastattack 1
-	jugglecost 1
-	energycost 999 1 6
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	24 176
-	hitfx	data/sounds/StrongPunch.wav
-	sound	data/voices/Zan1.wav
-	bbox 	12 87 30 89
-	frame	data/chars/bosses/robotx/s00.png
-	attack 24 100 80 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s01.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s01.png
-	delay	4
-	attack 24 100 95 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s02.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s02.png
-	delay	4
-	attack 24 100 115 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s03.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s03.png
-	delay	4
-	attack 24 100 140 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s04.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s04.png
-	delay	4
-	attack 24 100 160 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s05.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s05.png
-	delay	4
-	attack 24 100 175 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s06.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s06.png
-	delay	4
-	attack 24 100 210 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s07.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s07.png
-	delay	4
-	attack 24 100 245 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s08.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s08.png
-	delay	4
-	attack 24 100 260 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s09.png
-	delay	1
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/s09.png
-	delay	5
-	attack 24 100 275 75 3 0 1 1 0 36
-	seal 1 1
-	frame	data/chars/bosses/robotx/s10.png
+    range 80 270
+    rangea 0 100
+    rangez -15 15
+    followanim 5
+    followcond 4
+    attackone 1
+    fastattack 1
+    jugglecost 1
+    energycost 999 1 6
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    24 176
+    hitfx    data/sounds/StrongPunch.wav
+    sound    data/voices/Zan1.wav
+    bbox     12 87 30 89
+    frame    data/chars/bosses/robotx/s00.png
+    attack 24 100 80 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s01.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s01.png
+    delay    4
+    attack 24 100 95 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s02.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s02.png
+    delay    4
+    attack 24 100 115 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s03.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s03.png
+    delay    4
+    attack 24 100 140 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s04.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s04.png
+    delay    4
+    attack 24 100 160 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s05.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s05.png
+    delay    4
+    attack 24 100 175 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s06.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s06.png
+    delay    4
+    attack 24 100 210 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s07.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s07.png
+    delay    4
+    attack 24 100 245 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s08.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s08.png
+    delay    4
+    attack 24 100 260 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s09.png
+    delay    1
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/s09.png
+    delay    5
+    attack 24 100 275 75 3 0 1 1 0 36
+    seal 1 1
+    frame    data/chars/bosses/robotx/s10.png
 
 
 anim freespecial9 #SHOCK
-	range 20 80
-	rangea 5 100
-	rangez -15 15
-	fastattack 1
-	jugglecost 1
-	forcedirection 0
-	otg 1
-	energycost 10 1 6
-	loop	0
-	delay	3
-	offset	136 176
-	hitfx	data/sounds/HighPunch.wav
-	frame	data/chars/bosses/robotx/special00.png
-	sound	data/sounds/Shock.wav
-	bbox 119 80 30 93
-	shock 88 95 91 80 3 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	@cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 3 0 0 0 0 24
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
-	sound	data/sounds/Shock.wav
-	shock 88 95 91 80 5 1 0 0 0 24
-	dropv 3 1 0
-	frame	data/chars/bosses/robotx/special01.png
-	@cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
-	attack 0 0 0 0 0 0 0 0 0 0
-	frame	data/chars/bosses/robotx/special02.png
+    range 20 80
+    rangea 5 100
+    rangez -15 15
+    fastattack 1
+    jugglecost 1
+    forcedirection 0
+    otg 1
+    energycost 10 1 6
+    loop    0
+    delay    3
+    offset    136 176
+    hitfx    data/sounds/HighPunch.wav
+    frame    data/chars/bosses/robotx/special00.png
+    sound    data/sounds/Shock.wav
+    bbox 119 80 30 93
+    shock 88 95 91 80 3 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    @cmd rageCancel 0 50 0 100 60 "ANI_FREESPECIAL" "hit"
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 3 0 0 0 0 24
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd rageCancel 0 80 0 100 30 "ANI_FOLLOW7" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
+    sound    data/sounds/Shock.wav
+    shock 88 95 91 80 5 1 0 0 0 24
+    dropv 3 1 0
+    frame    data/chars/bosses/robotx/special01.png
+    @cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
+    attack 0 0 0 0 0 0 0 0 0 0
+    frame    data/chars/bosses/robotx/special02.png
 
 
 anim follow5
-	loop	0
-	delay	16
-	offset	237 182
-	@cmd dasher 0
-	@cmd landGrab
-	frame	data/chars/bosses/robotx/grab00.png
+    loop    0
+    delay    16
+    offset    237 182
+    @cmd dasher 0
+    @cmd landGrab
+    frame    data/chars/bosses/robotx/grab00.png
 
 anim follow7 #counter
-	range 80 240
-	rangea 0 80
-	rangez -48 48
-	fastattack 1
-	jugglecost 1
-	forcedirection -1
-	otg 1
-	loop	0
-	delay	4
-	offset	136 176
-	@cmd dasher 0 0 0
-	#bbox 	119 90 29 88
-	sound	data/voices/robotx1.wav
-	frame	data/chars/bosses/robotx/missile00.png
-	#bbox 	122 101 41 77
-	frame	data/chars/bosses/robotx/missile01.png
-	@cmd spawnBind "Destruction" 70 60 1
-	burn 115 80 140 70 35 3 1 0 20 36
-	dropv 3 5 0
-	frame	data/chars/bosses/robotx/missile02.png
-	frame	data/chars/bosses/robotx/missile03.png
-	frame	data/chars/bosses/robotx/missile04.png
-	frame	data/chars/bosses/robotx/missile05.png
-	frame	data/chars/bosses/robotx/missile06.png
-	frame	data/chars/bosses/robotx/missile07.png
-	frame	data/chars/bosses/robotx/missile08.png
-	frame	data/chars/bosses/robotx/missile09.png
-	frame	data/chars/bosses/robotx/missile10.png
-	delay	6
-	#bbox 	119 87 33 91
-	attack 0 0 0 0 0 0 0 0 0 0
-	@cmd spawnToss "Smoke" 20 70 1 0 1 0
-	frame	data/chars/bosses/robotx/idle00.png
-	@cmd spawnToss "Smoke" 30 60 1 0 1 0
-	frame	data/chars/bosses/robotx/idle01.png
-	@cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
-	frame	data/chars/bosses/robotx/idle02.png
+    range 80 240
+    rangea 0 80
+    rangez -48 48
+    fastattack 1
+    jugglecost 1
+    forcedirection -1
+    otg 1
+    loop    0
+    delay    4
+    offset    136 176
+    @cmd dasher 0 0 0
+    #bbox     119 90 29 88
+    sound    data/voices/robotx1.wav
+    frame    data/chars/bosses/robotx/missile00.png
+    #bbox     122 101 41 77
+    frame    data/chars/bosses/robotx/missile01.png
+    @cmd spawnBind "Destruction" 70 60 1
+    burn 115 80 140 70 35 3 1 0 20 36
+    dropv 3 5 0
+    frame    data/chars/bosses/robotx/missile02.png
+    frame    data/chars/bosses/robotx/missile03.png
+    frame    data/chars/bosses/robotx/missile04.png
+    frame    data/chars/bosses/robotx/missile05.png
+    frame    data/chars/bosses/robotx/missile06.png
+    frame    data/chars/bosses/robotx/missile07.png
+    frame    data/chars/bosses/robotx/missile08.png
+    frame    data/chars/bosses/robotx/missile09.png
+    frame    data/chars/bosses/robotx/missile10.png
+    delay    6
+    #bbox     119 87 33 91
+    attack 0 0 0 0 0 0 0 0 0 0
+    @cmd spawnToss "Smoke" 20 70 1 0 1 0
+    frame    data/chars/bosses/robotx/idle00.png
+    @cmd spawnToss "Smoke" 30 60 1 0 1 0
+    frame    data/chars/bosses/robotx/idle01.png
+    @cmd rageCancel 0 160 0 100 10 "ANI_FREESPECIAL6" "hit"
+    frame    data/chars/bosses/robotx/idle02.png
 
 anim block
-	range 0 100
-	rangea 0 100
-	rangez -24 24
-	@cmd dasher 0 0 0
-	loop	0
-	delay	96
-	offset	136 176
-	bbox 	122 108 33 86
-	sound	data/voices/robotx2.wav
-	frame	data/chars/bosses/robotx/block00.png
+    range 0 100
+    rangea 0 100
+    rangez -24 24
+    @cmd dasher 0 0 0
+    loop    0
+    delay    96
+    offset    136 176
+    bbox     122 108 33 86
+    sound    data/voices/robotx2.wav
+    frame    data/chars/bosses/robotx/block00.png
 
 anim dodge
-	range 0 60
-	rangea 0 100
-	rangez -24 24
-	loop	0
-	delay	2
-	offset	136 176
-	@cmd dashRandom 2 2
-	@cmd copyMove
-	frame	data/chars/bosses/robotx/walk00.png
-		delay	8
-	@cmd pasteMove
-	frame	data/chars/bosses/robotx/walk01.png
-	@cmd pasteMove
-	frame	data/chars/bosses/robotx/walk00.png
-	@cmd pasteMove
-	frame	data/chars/bosses/robotx/walk01.png
-	@cmd pasteMove
-	frame	data/chars/bosses/robotx/walk00.png
-		delay	16
-	@cmd dasher 0 0 0
-	frame	data/chars/bosses/robotx/walk01.png
+    range 0 60
+    rangea 0 100
+    rangez -24 24
+    loop    0
+    delay    2
+    offset    136 176
+    @cmd dashRandom 2 2
+    @cmd copyMove
+    frame    data/chars/bosses/robotx/walk00.png
+        delay    8
+    @cmd pasteMove
+    frame    data/chars/bosses/robotx/walk01.png
+    @cmd pasteMove
+    frame    data/chars/bosses/robotx/walk00.png
+    @cmd pasteMove
+    frame    data/chars/bosses/robotx/walk01.png
+    @cmd pasteMove
+    frame    data/chars/bosses/robotx/walk00.png
+        delay    16
+    @cmd dasher 0 0 0
+    frame    data/chars/bosses/robotx/walk01.png

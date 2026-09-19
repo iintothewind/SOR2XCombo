@@ -1,20 +1,20 @@
-name			St2_Light
-type			panel
-speed			5
-scroll			-0.5
-shadow			0
-alpha			1
-setlayer		1000
-lifespan		2
+name            St2_Light
+type            panel
+speed            5
+scroll            -0.5
+shadow            0
+alpha            1
+setlayer        1000
+lifespan        2
 animationscript data/scripts/animation/default.c
 
-load			St2_Light_B
+load            St2_Light_B
 
 anim idle
-	loop	1
-	delay	2
-	offset	150 200
-	@cmd graphics "original" "St2_Light_B"
-	frame	data/bgs/sor3/st2c/light00.png
-		delay	3
-	frame	data/bgs/sor3/st2c/light01.png
+    loop    1
+    delay    2
+    offset    150 200
+    @cmd graphics "original" "St2_Light_B"
+    frame    data/bgs/sor3/st2c/light00.png
+        delay    3
+    frame    data/bgs/sor3/st2c/light01.png

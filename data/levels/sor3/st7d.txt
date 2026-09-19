@@ -1,319 +1,319 @@
 ###LOADING
-loadingbg		data/bgs/loading1.png 			1 -81 248 480 999 999 0
+loadingbg        data/bgs/loading1.png             1 -81 248 480 999 999 0
 
 ###BACKGROUND
-background		data/bgs/sor3/st7d/_empty.png	1 1 0 0 0 0 1 -1 1 0
-bglayer			data/bgs/sor3/st7d/bk00.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.000003
+background        data/bgs/sor3/st7d/_empty.png    1 1 0 0 0 0 1 -1 1 0
+bglayer            data/bgs/sor3/st7d/bk00.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.000003
 
 ###SKY
-bglayer			data/bgs/sor3/st7d/bg00.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.00005
-bglayer			data/bgs/sor3/st7d/bg01.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0001
-bglayer			data/bgs/sor3/st7d/bg02.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.00015
-bglayer			data/bgs/sor3/st7d/bg03.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0002
+bglayer            data/bgs/sor3/st7d/bg00.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.00005
+bglayer            data/bgs/sor3/st7d/bg01.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0001
+bglayer            data/bgs/sor3/st7d/bg02.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.00015
+bglayer            data/bgs/sor3/st7d/bg03.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0002
 
 ###GRASS
-bglayer			data/bgs/sor3/st7d/bg04.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0005
-bglayer			data/bgs/sor3/st7d/bg05.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.001
-bglayer			data/bgs/sor3/st7d/bg06.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0015
-bglayer			data/bgs/sor3/st7d/bg07.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.002
-bglayer			data/bgs/sor3/st7d/bg08.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0025
+bglayer            data/bgs/sor3/st7d/bg04.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0005
+bglayer            data/bgs/sor3/st7d/bg05.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.001
+bglayer            data/bgs/sor3/st7d/bg06.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0015
+bglayer            data/bgs/sor3/st7d/bg07.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.002
+bglayer            data/bgs/sor3/st7d/bg08.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.0025
 
 ###BGLAYER/PANEL
-bglayer			data/bgs/sor3/st7d/bg09.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.003
-bglayer			data/bgs/sor3/st7d/bg10.png		0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.003
-panel			data/bgs/sor3/st7d/_empty.png	none	none
+bglayer            data/bgs/sor3/st7d/bg09.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.003
+bglayer            data/bgs/sor3/st7d/bg10.png        0.1 1 0 0 0 0 -1 1 1 0 0 0 0 0 0.003
+panel            data/bgs/sor3/st7d/_empty.png    none    none
 
 ###MISC
-fglayer			data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order			a
-settime		480
-stagenumber 	7
-spawn1			240 10 300
-spawn2			240 30 300
-spawn3			240 50 300
-spawn4			240 70 300
-updatescript 	data/scripts/updatelevel/sor3_st7d.c
+fglayer            data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order            a
+settime        480
+stagenumber     7
+spawn1            240 10 300
+spawn2            240 30 300
+spawn3            240 50 300
+spawn4            240 70 300
+updatescript     data/scripts/updatelevel/sor3_st7d.c
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-load		Stage 3
+load        Stage 3
 
 #########################################################################################
 
-spawn		Stage 1
-flip		1
-coords		-107 80 0
-at			0
+spawn        Stage 1
+flip        1
+coords        -107 80 0
+at            0
 
 #########################################################################################
 
-group		3 3
-at			0
+group        3 3
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-100 210 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -100 210 0
+at            0
 
-spawn		Moto_Stage 1
-flip		0
-coords		-200 260 0
-at			0
+spawn        Moto_Stage 1
+flip        0
+coords        -200 260 0
+at            0

@@ -1,43 +1,43 @@
-name			RainBloodHit
-type	none
+name            RainBloodHit
+type    none
 nolife 1
 toflip 1
 lifespan 3
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	3
-	offset	93 95
-	frame	data/chars/misc/bloodhit/bl01.png
-	frame	data/chars/misc/bloodhit/bl02.png
-	frame	data/chars/misc/bloodhit/bl03.png
-	frame	data/chars/misc/bloodhit/bl04.png
-	frame	data/chars/misc/bloodhit/bl05.png
-	frame	data/chars/misc/bloodhit/bl06.png
-	frame	data/chars/misc/bloodhit/bl07.png
-	frame	data/chars/misc/bloodhit/bl08.png
-	move 10
-	frame	data/chars/misc/bloodhit/bl09.png
-	frame	data/chars/misc/bloodhit/bl10.png
-	frame	data/chars/misc/bloodhit/bl11.png
-	frame	data/chars/misc/bloodhit/bl12.png
-	frame	data/chars/misc/bloodhit/bl13.png
-	frame	data/chars/misc/bloodhit/bl14.png
-	frame	data/chars/misc/bloodhit/bl15.png
-	frame	data/chars/misc/bloodhit/bl16.png
-	frame	data/chars/misc/bloodhit/bl17.png
-	frame	data/chars/misc/bloodhit/bl18.png
-	frame	data/chars/misc/bloodhit/bl19.png
-	@cmd suicide
-  frame	data/chars/misc/bloodhit/bl19.png
+    loop    0
+    delay    3
+    offset    93 95
+    frame    data/chars/misc/bloodhit/bl01.png
+    frame    data/chars/misc/bloodhit/bl02.png
+    frame    data/chars/misc/bloodhit/bl03.png
+    frame    data/chars/misc/bloodhit/bl04.png
+    frame    data/chars/misc/bloodhit/bl05.png
+    frame    data/chars/misc/bloodhit/bl06.png
+    frame    data/chars/misc/bloodhit/bl07.png
+    frame    data/chars/misc/bloodhit/bl08.png
+    move 10
+    frame    data/chars/misc/bloodhit/bl09.png
+    frame    data/chars/misc/bloodhit/bl10.png
+    frame    data/chars/misc/bloodhit/bl11.png
+    frame    data/chars/misc/bloodhit/bl12.png
+    frame    data/chars/misc/bloodhit/bl13.png
+    frame    data/chars/misc/bloodhit/bl14.png
+    frame    data/chars/misc/bloodhit/bl15.png
+    frame    data/chars/misc/bloodhit/bl16.png
+    frame    data/chars/misc/bloodhit/bl17.png
+    frame    data/chars/misc/bloodhit/bl18.png
+    frame    data/chars/misc/bloodhit/bl19.png
+    @cmd suicide
+  frame    data/chars/misc/bloodhit/bl19.png
 
 
 

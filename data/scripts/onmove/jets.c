@@ -2,7 +2,7 @@
 
 void main()
 {
-	jumpBack(1);
-	safeLanding();
-	windForce();
+    jumpBack(1);
+    safeLanding();
+    windForce();
 }

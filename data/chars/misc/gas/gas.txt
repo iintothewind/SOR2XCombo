@@ -1,57 +1,57 @@
-name			Gas
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity		100
-alpha			1
-toflip			1
-onspawnscript	data/scripts/onspawn/graphics.c
-animationscript	data/scripts/animation/default.c
+name            Gas
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity        100
+alpha            1
+toflip            1
+onspawnscript    data/scripts/onspawn/graphics.c
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	3
-	offset	67 50
-	frame	data/chars/misc/gas/gas00.png
-	frame	data/chars/misc/gas/gas01.png
-	frame	data/chars/misc/gas/gas02.png
-	frame	data/chars/misc/gas/gas03.png
-	frame	data/chars/misc/gas/gas04.png
-	frame	data/chars/misc/gas/gas05.png
-	frame	data/chars/misc/gas/gas06.png
-	frame	data/chars/misc/gas/gas07.png
-	frame	data/chars/misc/gas/gas08.png
-	frame	data/chars/misc/gas/gas09.png
-	frame	data/chars/misc/gas/gas10.png
-	frame	data/chars/misc/gas/gas11.png
-	frame	data/chars/misc/gas/gas12.png
-	frame	data/chars/misc/gas/gas13.png
-	frame	data/chars/misc/gas/gas14.png
-	frame	data/chars/misc/gas/gas15.png
-	frame	data/chars/misc/gas/gas16.png
-	frame	data/chars/misc/gas/gas17.png
-	frame	data/chars/misc/gas/gas18.png
-	frame	data/chars/misc/gas/gas19.png
-		delay	6
-	frame	data/chars/misc/gas/gas20.png
-	frame	data/chars/misc/gas/gas21.png
-	frame	data/chars/misc/gas/gas22.png
-	frame	data/chars/misc/gas/gas23.png
-	frame	data/chars/misc/gas/gas24.png
-	frame	data/chars/misc/gas/gas25.png
-	frame	data/chars/misc/gas/gas26.png
-	frame	data/chars/misc/gas/gas27.png
-	frame	data/chars/misc/gas/gas28.png
-	frame	data/chars/misc/gas/gas29.png
-	frame	data/chars/misc/gas/gas30.png
-	frame	data/chars/misc/gas/gas31.png
-	frame	data/chars/misc/gas/gas32.png
-	frame	data/chars/misc/gas/gas33.png
-	frame	data/chars/misc/gas/gas34.png
-	frame	data/chars/misc/gas/gas35.png
-	frame	data/chars/misc/gas/gas36.png
-	frame	data/chars/misc/gas/gas37.png
-	frame	data/chars/misc/gas/gas38.png
-	@cmd suicide
-	frame	data/chars/misc/gas/empty.png
+    loop    0
+    delay    3
+    offset    67 50
+    frame    data/chars/misc/gas/gas00.png
+    frame    data/chars/misc/gas/gas01.png
+    frame    data/chars/misc/gas/gas02.png
+    frame    data/chars/misc/gas/gas03.png
+    frame    data/chars/misc/gas/gas04.png
+    frame    data/chars/misc/gas/gas05.png
+    frame    data/chars/misc/gas/gas06.png
+    frame    data/chars/misc/gas/gas07.png
+    frame    data/chars/misc/gas/gas08.png
+    frame    data/chars/misc/gas/gas09.png
+    frame    data/chars/misc/gas/gas10.png
+    frame    data/chars/misc/gas/gas11.png
+    frame    data/chars/misc/gas/gas12.png
+    frame    data/chars/misc/gas/gas13.png
+    frame    data/chars/misc/gas/gas14.png
+    frame    data/chars/misc/gas/gas15.png
+    frame    data/chars/misc/gas/gas16.png
+    frame    data/chars/misc/gas/gas17.png
+    frame    data/chars/misc/gas/gas18.png
+    frame    data/chars/misc/gas/gas19.png
+        delay    6
+    frame    data/chars/misc/gas/gas20.png
+    frame    data/chars/misc/gas/gas21.png
+    frame    data/chars/misc/gas/gas22.png
+    frame    data/chars/misc/gas/gas23.png
+    frame    data/chars/misc/gas/gas24.png
+    frame    data/chars/misc/gas/gas25.png
+    frame    data/chars/misc/gas/gas26.png
+    frame    data/chars/misc/gas/gas27.png
+    frame    data/chars/misc/gas/gas28.png
+    frame    data/chars/misc/gas/gas29.png
+    frame    data/chars/misc/gas/gas30.png
+    frame    data/chars/misc/gas/gas31.png
+    frame    data/chars/misc/gas/gas32.png
+    frame    data/chars/misc/gas/gas33.png
+    frame    data/chars/misc/gas/gas34.png
+    frame    data/chars/misc/gas/gas35.png
+    frame    data/chars/misc/gas/gas36.png
+    frame    data/chars/misc/gas/gas37.png
+    frame    data/chars/misc/gas/gas38.png
+    @cmd suicide
+    frame    data/chars/misc/gas/empty.png

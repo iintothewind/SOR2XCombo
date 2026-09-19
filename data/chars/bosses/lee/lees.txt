@@ -1,12 +1,12 @@
 ##MAIN
-name				LeeS
-type				none
+name                LeeS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
 palette       data/chars/bosses/lee/idle25.png
@@ -21,485 +21,485 @@ alternatepal  data/chars/bosses/lee/idle25.png
 
 
 anim forwardjump
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/fjump00.png
-	frame	data/chars/bosses/lee/fjump01.png
-	frame	data/chars/bosses/lee/fjump02.png
-	frame	data/chars/bosses/lee/fjump03.png
-	frame	data/chars/bosses/lee/fjump04.png
-	frame	data/chars/bosses/lee/fjump05.png
-	frame	data/chars/bosses/lee/fjump06.png
-	frame	data/chars/bosses/lee/fjump07.png
-	frame	data/chars/bosses/lee/fjump08.png
-	frame	data/chars/bosses/lee/fjump09.png
-	frame	data/chars/bosses/lee/fjump10.png
-	frame	data/chars/bosses/lee/fjump11.png
-	frame	data/chars/bosses/lee/fjump12.png
-	frame	data/chars/bosses/lee/fjump13.png
-	frame	data/chars/bosses/lee/fjump14.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/fjump00.png
+    frame    data/chars/bosses/lee/fjump01.png
+    frame    data/chars/bosses/lee/fjump02.png
+    frame    data/chars/bosses/lee/fjump03.png
+    frame    data/chars/bosses/lee/fjump04.png
+    frame    data/chars/bosses/lee/fjump05.png
+    frame    data/chars/bosses/lee/fjump06.png
+    frame    data/chars/bosses/lee/fjump07.png
+    frame    data/chars/bosses/lee/fjump08.png
+    frame    data/chars/bosses/lee/fjump09.png
+    frame    data/chars/bosses/lee/fjump10.png
+    frame    data/chars/bosses/lee/fjump11.png
+    frame    data/chars/bosses/lee/fjump12.png
+    frame    data/chars/bosses/lee/fjump13.png
+    frame    data/chars/bosses/lee/fjump14.png
 
 
 anim runjump
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/fjump00.png
-	frame	data/chars/bosses/lee/fjump01.png
-	frame	data/chars/bosses/lee/fjump02.png
-	frame	data/chars/bosses/lee/fjump03.png
-	frame	data/chars/bosses/lee/fjump04.png
-	frame	data/chars/bosses/lee/fjump05.png
-	frame	data/chars/bosses/lee/fjump06.png
-	frame	data/chars/bosses/lee/fjump07.png
-	frame	data/chars/bosses/lee/fjump08.png
-	frame	data/chars/bosses/lee/fjump09.png
-	frame	data/chars/bosses/lee/fjump10.png
-	frame	data/chars/bosses/lee/fjump11.png
-	frame	data/chars/bosses/lee/fjump12.png
-	frame	data/chars/bosses/lee/fjump13.png
-	frame	data/chars/bosses/lee/fjump14.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/fjump00.png
+    frame    data/chars/bosses/lee/fjump01.png
+    frame    data/chars/bosses/lee/fjump02.png
+    frame    data/chars/bosses/lee/fjump03.png
+    frame    data/chars/bosses/lee/fjump04.png
+    frame    data/chars/bosses/lee/fjump05.png
+    frame    data/chars/bosses/lee/fjump06.png
+    frame    data/chars/bosses/lee/fjump07.png
+    frame    data/chars/bosses/lee/fjump08.png
+    frame    data/chars/bosses/lee/fjump09.png
+    frame    data/chars/bosses/lee/fjump10.png
+    frame    data/chars/bosses/lee/fjump11.png
+    frame    data/chars/bosses/lee/fjump12.png
+    frame    data/chars/bosses/lee/fjump13.png
+    frame    data/chars/bosses/lee/fjump14.png
 
 anim riseattack
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/s200.png
-	frame	data/chars/bosses/lee/s201.png
-	frame	data/chars/bosses/lee/s202.png
-	frame	data/chars/bosses/lee/s203.png
-	frame	data/chars/bosses/lee/s204.png
-	frame	data/chars/bosses/lee/s205.png
-	frame	data/chars/bosses/lee/s206.png
-	frame	data/chars/bosses/lee/s207.png
-	frame	data/chars/bosses/lee/s208.png
-	frame	data/chars/bosses/lee/s209.png
-	frame	data/chars/bosses/lee/s210.png
-	frame	data/chars/bosses/lee/s211.png
-	frame	data/chars/bosses/lee/s212.png
-	frame	data/chars/bosses/lee/s213.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/s200.png
+    frame    data/chars/bosses/lee/s201.png
+    frame    data/chars/bosses/lee/s202.png
+    frame    data/chars/bosses/lee/s203.png
+    frame    data/chars/bosses/lee/s204.png
+    frame    data/chars/bosses/lee/s205.png
+    frame    data/chars/bosses/lee/s206.png
+    frame    data/chars/bosses/lee/s207.png
+    frame    data/chars/bosses/lee/s208.png
+    frame    data/chars/bosses/lee/s209.png
+    frame    data/chars/bosses/lee/s210.png
+    frame    data/chars/bosses/lee/s211.png
+    frame    data/chars/bosses/lee/s212.png
+    frame    data/chars/bosses/lee/s213.png
 
 anim runattack #LCS
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/s200.png
-	frame	data/chars/bosses/lee/s201.png
-	frame	data/chars/bosses/lee/s202.png
-	frame	data/chars/bosses/lee/s203.png
-	frame	data/chars/bosses/lee/s204.png
-	frame	data/chars/bosses/lee/s205.png
-	frame	data/chars/bosses/lee/s206.png
-	frame	data/chars/bosses/lee/s207.png
-	frame	data/chars/bosses/lee/s208.png
-	frame	data/chars/bosses/lee/s209.png
-	frame	data/chars/bosses/lee/s210.png
-	frame	data/chars/bosses/lee/s211.png
-	frame	data/chars/bosses/lee/s212.png
-	frame	data/chars/bosses/lee/s213.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/s200.png
+    frame    data/chars/bosses/lee/s201.png
+    frame    data/chars/bosses/lee/s202.png
+    frame    data/chars/bosses/lee/s203.png
+    frame    data/chars/bosses/lee/s204.png
+    frame    data/chars/bosses/lee/s205.png
+    frame    data/chars/bosses/lee/s206.png
+    frame    data/chars/bosses/lee/s207.png
+    frame    data/chars/bosses/lee/s208.png
+    frame    data/chars/bosses/lee/s209.png
+    frame    data/chars/bosses/lee/s210.png
+    frame    data/chars/bosses/lee/s211.png
+    frame    data/chars/bosses/lee/s212.png
+    frame    data/chars/bosses/lee/s213.png
 
 anim jumpattack3 #JUMP DOWN
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/j400.png
-	frame	data/chars/bosses/lee/j401.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/j400.png
+    frame    data/chars/bosses/lee/j401.png
 
-anim	follow1
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/j401.png
-	frame	data/chars/bosses/lee/j402.png
-	frame	data/chars/bosses/lee/j403.png
-	frame	data/chars/bosses/lee/j404.png
-	frame	data/chars/bosses/lee/jump00.png
+anim    follow1
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/j401.png
+    frame    data/chars/bosses/lee/j402.png
+    frame    data/chars/bosses/lee/j403.png
+    frame    data/chars/bosses/lee/j404.png
+    frame    data/chars/bosses/lee/jump00.png
 
 
 anim follow2 #RAGE COMBO
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/r100.png
-	frame	data/chars/bosses/lee/r101.png
-	frame	data/chars/bosses/lee/r102.png
-	frame	data/chars/bosses/lee/r103.png
-	frame	data/chars/bosses/lee/r104.png
-	frame	data/chars/bosses/lee/r105.png
-	frame	data/chars/bosses/lee/r106.png
-	frame	data/chars/bosses/lee/r107.png
-	frame	data/chars/bosses/lee/r108.png
-	frame	data/chars/bosses/lee/r109.png
-	frame	data/chars/bosses/lee/r110.png
-	frame	data/chars/bosses/lee/r111.png
-	frame	data/chars/bosses/lee/r112.png
-	frame	data/chars/bosses/lee/r113.png
-	frame	data/chars/bosses/lee/r114.png
-	frame	data/chars/bosses/lee/r115.png
-	frame	data/chars/bosses/lee/r116.png
-	frame	data/chars/bosses/lee/r117.png
-	frame	data/chars/bosses/lee/r118.png
-	frame	data/chars/bosses/lee/r119.png
-	frame	data/chars/bosses/lee/r120.png
-	frame	data/chars/bosses/lee/r121.png
-	frame	data/chars/bosses/lee/r122.png
-	frame	data/chars/bosses/lee/r123.png
-	frame	data/chars/bosses/lee/r124.png
-	frame	data/chars/bosses/lee/r125.png
-	frame	data/chars/bosses/lee/r126.png
-	frame	data/chars/bosses/lee/r127.png
-	frame	data/chars/bosses/lee/r128.png
-	frame	data/chars/bosses/lee/r129.png
-	frame	data/chars/bosses/lee/r130.png
-	frame	data/chars/bosses/lee/r131.png
-	frame	data/chars/bosses/lee/r132.png
-	frame	data/chars/bosses/lee/r133.png
-	frame	data/chars/bosses/lee/r134.png
-	frame	data/chars/bosses/lee/r135.png #35
-	frame	data/chars/bosses/lee/r135.png
-	frame	data/chars/bosses/lee/r136.png
-	frame	data/chars/bosses/lee/r136.png
-	frame	data/chars/bosses/lee/r137.png
-	frame	data/chars/bosses/lee/r138.png
-	frame	data/chars/bosses/lee/r139.png
-	frame	data/chars/bosses/lee/r140.png #42
-	frame	data/chars/bosses/lee/r141.png
-	frame	data/chars/bosses/lee/r142.png
-	frame	data/chars/bosses/lee/r143.png
-	frame	data/chars/bosses/lee/r144.png
-	frame	data/chars/bosses/lee/r145.png
-	frame	data/chars/bosses/lee/r146.png
-	frame	data/chars/bosses/lee/r147.png
-	frame	data/chars/bosses/lee/r148.png #50
-	frame	data/chars/bosses/lee/r149.png
-	frame	data/chars/bosses/lee/r150.png
-	frame	data/chars/bosses/lee/r151.png
-	frame	data/chars/bosses/lee/r152.png
-	frame	data/chars/bosses/lee/r153.png #55
-	frame	data/chars/bosses/lee/r154.png
-	frame	data/chars/bosses/lee/r155.png
-	frame	data/chars/bosses/lee/r156.png
-	frame	data/chars/bosses/lee/r153.png
-	frame	data/chars/bosses/lee/r154.png
-	frame	data/chars/bosses/lee/r155.png
-	frame	data/chars/bosses/lee/r156.png
-	frame	data/chars/bosses/lee/r157.png #63
-	frame	data/chars/bosses/lee/r157.png
-	frame	data/chars/bosses/lee/r158.png
-	frame	data/chars/bosses/lee/r159.png
-	frame	data/chars/bosses/lee/r160.png
-	frame	data/chars/bosses/lee/r161.png
-	frame	data/chars/bosses/lee/r161.png
-	frame	data/chars/bosses/lee/r162.png
-	frame	data/chars/bosses/lee/r163.png
-	frame	data/chars/bosses/lee/r164.png
-	frame	data/chars/bosses/lee/r165.png
-	frame	data/chars/bosses/lee/r166.png
-	frame	data/chars/bosses/lee/r167.png
-	frame	data/chars/bosses/lee/r168.png
-	frame	data/chars/bosses/lee/r169.png
-	frame	data/chars/bosses/lee/r170.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/r100.png
+    frame    data/chars/bosses/lee/r101.png
+    frame    data/chars/bosses/lee/r102.png
+    frame    data/chars/bosses/lee/r103.png
+    frame    data/chars/bosses/lee/r104.png
+    frame    data/chars/bosses/lee/r105.png
+    frame    data/chars/bosses/lee/r106.png
+    frame    data/chars/bosses/lee/r107.png
+    frame    data/chars/bosses/lee/r108.png
+    frame    data/chars/bosses/lee/r109.png
+    frame    data/chars/bosses/lee/r110.png
+    frame    data/chars/bosses/lee/r111.png
+    frame    data/chars/bosses/lee/r112.png
+    frame    data/chars/bosses/lee/r113.png
+    frame    data/chars/bosses/lee/r114.png
+    frame    data/chars/bosses/lee/r115.png
+    frame    data/chars/bosses/lee/r116.png
+    frame    data/chars/bosses/lee/r117.png
+    frame    data/chars/bosses/lee/r118.png
+    frame    data/chars/bosses/lee/r119.png
+    frame    data/chars/bosses/lee/r120.png
+    frame    data/chars/bosses/lee/r121.png
+    frame    data/chars/bosses/lee/r122.png
+    frame    data/chars/bosses/lee/r123.png
+    frame    data/chars/bosses/lee/r124.png
+    frame    data/chars/bosses/lee/r125.png
+    frame    data/chars/bosses/lee/r126.png
+    frame    data/chars/bosses/lee/r127.png
+    frame    data/chars/bosses/lee/r128.png
+    frame    data/chars/bosses/lee/r129.png
+    frame    data/chars/bosses/lee/r130.png
+    frame    data/chars/bosses/lee/r131.png
+    frame    data/chars/bosses/lee/r132.png
+    frame    data/chars/bosses/lee/r133.png
+    frame    data/chars/bosses/lee/r134.png
+    frame    data/chars/bosses/lee/r135.png #35
+    frame    data/chars/bosses/lee/r135.png
+    frame    data/chars/bosses/lee/r136.png
+    frame    data/chars/bosses/lee/r136.png
+    frame    data/chars/bosses/lee/r137.png
+    frame    data/chars/bosses/lee/r138.png
+    frame    data/chars/bosses/lee/r139.png
+    frame    data/chars/bosses/lee/r140.png #42
+    frame    data/chars/bosses/lee/r141.png
+    frame    data/chars/bosses/lee/r142.png
+    frame    data/chars/bosses/lee/r143.png
+    frame    data/chars/bosses/lee/r144.png
+    frame    data/chars/bosses/lee/r145.png
+    frame    data/chars/bosses/lee/r146.png
+    frame    data/chars/bosses/lee/r147.png
+    frame    data/chars/bosses/lee/r148.png #50
+    frame    data/chars/bosses/lee/r149.png
+    frame    data/chars/bosses/lee/r150.png
+    frame    data/chars/bosses/lee/r151.png
+    frame    data/chars/bosses/lee/r152.png
+    frame    data/chars/bosses/lee/r153.png #55
+    frame    data/chars/bosses/lee/r154.png
+    frame    data/chars/bosses/lee/r155.png
+    frame    data/chars/bosses/lee/r156.png
+    frame    data/chars/bosses/lee/r153.png
+    frame    data/chars/bosses/lee/r154.png
+    frame    data/chars/bosses/lee/r155.png
+    frame    data/chars/bosses/lee/r156.png
+    frame    data/chars/bosses/lee/r157.png #63
+    frame    data/chars/bosses/lee/r157.png
+    frame    data/chars/bosses/lee/r158.png
+    frame    data/chars/bosses/lee/r159.png
+    frame    data/chars/bosses/lee/r160.png
+    frame    data/chars/bosses/lee/r161.png
+    frame    data/chars/bosses/lee/r161.png
+    frame    data/chars/bosses/lee/r162.png
+    frame    data/chars/bosses/lee/r163.png
+    frame    data/chars/bosses/lee/r164.png
+    frame    data/chars/bosses/lee/r165.png
+    frame    data/chars/bosses/lee/r166.png
+    frame    data/chars/bosses/lee/r167.png
+    frame    data/chars/bosses/lee/r168.png
+    frame    data/chars/bosses/lee/r169.png
+    frame    data/chars/bosses/lee/r170.png
 
 
 anim follow3
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/s305.png
-	frame	data/chars/bosses/lee/s306.png
-	frame	data/chars/bosses/lee/r204.png
-	frame	data/chars/bosses/lee/r205.png
-	frame	data/chars/bosses/lee/r206.png
-	frame	data/chars/bosses/lee/r207.png
-	frame	data/chars/bosses/lee/r208.png
-	frame	data/chars/bosses/lee/r209.png
-	frame	data/chars/bosses/lee/r210.png
-	frame	data/chars/bosses/lee/r211.png
-	frame	data/chars/bosses/lee/r212.png
-	frame	data/chars/bosses/lee/r213.png
-	frame	data/chars/bosses/lee/r214.png
-	frame	data/chars/bosses/lee/empty.png
-	offset	380 180
-	frame	data/chars/bosses/lee/a102.png
-	frame	data/chars/bosses/lee/a102.png
-	frame	data/chars/bosses/lee/a102.png
-	frame	data/chars/bosses/lee/a102.png
-	offset	240 180
-	frame	data/chars/bosses/lee/r214.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/s305.png
+    frame    data/chars/bosses/lee/s306.png
+    frame    data/chars/bosses/lee/r204.png
+    frame    data/chars/bosses/lee/r205.png
+    frame    data/chars/bosses/lee/r206.png
+    frame    data/chars/bosses/lee/r207.png
+    frame    data/chars/bosses/lee/r208.png
+    frame    data/chars/bosses/lee/r209.png
+    frame    data/chars/bosses/lee/r210.png
+    frame    data/chars/bosses/lee/r211.png
+    frame    data/chars/bosses/lee/r212.png
+    frame    data/chars/bosses/lee/r213.png
+    frame    data/chars/bosses/lee/r214.png
+    frame    data/chars/bosses/lee/empty.png
+    offset    380 180
+    frame    data/chars/bosses/lee/a102.png
+    frame    data/chars/bosses/lee/a102.png
+    frame    data/chars/bosses/lee/a102.png
+    frame    data/chars/bosses/lee/a102.png
+    offset    240 180
+    frame    data/chars/bosses/lee/r214.png
 
 anim follow7 #COUNTER
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/f100.png
-	frame	data/chars/bosses/lee/f101.png
-	frame	data/chars/bosses/lee/f102.png
-	frame	data/chars/bosses/lee/f103.png
-	frame	data/chars/bosses/lee/f104.png
-	frame	data/chars/bosses/lee/f105.png
-	frame	data/chars/bosses/lee/f106.png
-	frame	data/chars/bosses/lee/f106.png
-	frame	data/chars/bosses/lee/f107.png
-	frame	data/chars/bosses/lee/f107.png
-	frame	data/chars/bosses/lee/f108.png
-	frame	data/chars/bosses/lee/jump06.png
-	frame	data/chars/bosses/lee/jump07.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/f100.png
+    frame    data/chars/bosses/lee/f101.png
+    frame    data/chars/bosses/lee/f102.png
+    frame    data/chars/bosses/lee/f103.png
+    frame    data/chars/bosses/lee/f104.png
+    frame    data/chars/bosses/lee/f105.png
+    frame    data/chars/bosses/lee/f106.png
+    frame    data/chars/bosses/lee/f106.png
+    frame    data/chars/bosses/lee/f107.png
+    frame    data/chars/bosses/lee/f107.png
+    frame    data/chars/bosses/lee/f108.png
+    frame    data/chars/bosses/lee/jump06.png
+    frame    data/chars/bosses/lee/jump07.png
 
 anim follow8 #AERIAL SPECIAL
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/r005.png
-	frame	data/chars/bosses/lee/r006.png
-	frame	data/chars/bosses/lee/r007.png
-	frame	data/chars/bosses/lee/r008.png
-	frame	data/chars/bosses/lee/r009.png
-	frame	data/chars/bosses/lee/r010.png
-	frame	data/chars/bosses/lee/r011.png
-	frame	data/chars/bosses/lee/r012.png
-	frame	data/chars/bosses/lee/r013.png
-	frame	data/chars/bosses/lee/r014.png
-	frame	data/chars/bosses/lee/r015.png
-	frame	data/chars/bosses/lee/r016.png
-	frame	data/chars/bosses/lee/r017.png
-	frame	data/chars/bosses/lee/r018.png
-	frame	data/chars/bosses/lee/r019.png
-	frame	data/chars/bosses/lee/r020.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/r005.png
+    frame    data/chars/bosses/lee/r006.png
+    frame    data/chars/bosses/lee/r007.png
+    frame    data/chars/bosses/lee/r008.png
+    frame    data/chars/bosses/lee/r009.png
+    frame    data/chars/bosses/lee/r010.png
+    frame    data/chars/bosses/lee/r011.png
+    frame    data/chars/bosses/lee/r012.png
+    frame    data/chars/bosses/lee/r013.png
+    frame    data/chars/bosses/lee/r014.png
+    frame    data/chars/bosses/lee/r015.png
+    frame    data/chars/bosses/lee/r016.png
+    frame    data/chars/bosses/lee/r017.png
+    frame    data/chars/bosses/lee/r018.png
+    frame    data/chars/bosses/lee/r019.png
+    frame    data/chars/bosses/lee/r020.png
 
 anim follow10 #DODGE
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/dodge01.png
-	frame	data/chars/bosses/lee/dodge02.png
-	frame	data/chars/bosses/lee/dodge03.png
-	frame	data/chars/bosses/lee/dodge04.png
-	frame	data/chars/bosses/lee/dodge05.png
-	frame	data/chars/bosses/lee/dodge06.png
-	frame	data/chars/bosses/lee/dodge07.png
-	frame	data/chars/bosses/lee/dodge08.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/dodge01.png
+    frame    data/chars/bosses/lee/dodge02.png
+    frame    data/chars/bosses/lee/dodge03.png
+    frame    data/chars/bosses/lee/dodge04.png
+    frame    data/chars/bosses/lee/dodge05.png
+    frame    data/chars/bosses/lee/dodge06.png
+    frame    data/chars/bosses/lee/dodge07.png
+    frame    data/chars/bosses/lee/dodge08.png
 
 
 anim follow21 #LCS
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/r005.png
-	frame	data/chars/bosses/lee/r006.png
-	frame	data/chars/bosses/lee/r007.png
-	frame	data/chars/bosses/lee/r008.png
-	frame	data/chars/bosses/lee/r009.png
-	frame	data/chars/bosses/lee/r010.png
-	frame	data/chars/bosses/lee/r011.png
-	frame	data/chars/bosses/lee/r012.png
-	frame	data/chars/bosses/lee/r013.png
-	frame	data/chars/bosses/lee/r014.png
-	frame	data/chars/bosses/lee/r015.png
-	frame	data/chars/bosses/lee/r016.png
-	frame	data/chars/bosses/lee/r017.png
-	frame	data/chars/bosses/lee/r018.png
-	frame	data/chars/bosses/lee/r019.png
-	frame	data/chars/bosses/lee/r020.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/r005.png
+    frame    data/chars/bosses/lee/r006.png
+    frame    data/chars/bosses/lee/r007.png
+    frame    data/chars/bosses/lee/r008.png
+    frame    data/chars/bosses/lee/r009.png
+    frame    data/chars/bosses/lee/r010.png
+    frame    data/chars/bosses/lee/r011.png
+    frame    data/chars/bosses/lee/r012.png
+    frame    data/chars/bosses/lee/r013.png
+    frame    data/chars/bosses/lee/r014.png
+    frame    data/chars/bosses/lee/r015.png
+    frame    data/chars/bosses/lee/r016.png
+    frame    data/chars/bosses/lee/r017.png
+    frame    data/chars/bosses/lee/r018.png
+    frame    data/chars/bosses/lee/r019.png
+    frame    data/chars/bosses/lee/r020.png
 
 anim follow22 #LCS
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/r005.png
-	frame	data/chars/bosses/lee/r006.png
-	frame	data/chars/bosses/lee/r007.png
-	frame	data/chars/bosses/lee/r008.png
-	frame	data/chars/bosses/lee/r009.png
-	frame	data/chars/bosses/lee/r010.png
-	frame	data/chars/bosses/lee/r011.png
-	frame	data/chars/bosses/lee/r012.png
-	frame	data/chars/bosses/lee/r013.png
-	frame	data/chars/bosses/lee/r014.png
-	frame	data/chars/bosses/lee/r015.png
-	frame	data/chars/bosses/lee/r016.png
-	frame	data/chars/bosses/lee/r017.png
-	frame	data/chars/bosses/lee/r018.png
-	frame	data/chars/bosses/lee/r019.png
-	frame	data/chars/bosses/lee/r020.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/r005.png
+    frame    data/chars/bosses/lee/r006.png
+    frame    data/chars/bosses/lee/r007.png
+    frame    data/chars/bosses/lee/r008.png
+    frame    data/chars/bosses/lee/r009.png
+    frame    data/chars/bosses/lee/r010.png
+    frame    data/chars/bosses/lee/r011.png
+    frame    data/chars/bosses/lee/r012.png
+    frame    data/chars/bosses/lee/r013.png
+    frame    data/chars/bosses/lee/r014.png
+    frame    data/chars/bosses/lee/r015.png
+    frame    data/chars/bosses/lee/r016.png
+    frame    data/chars/bosses/lee/r017.png
+    frame    data/chars/bosses/lee/r018.png
+    frame    data/chars/bosses/lee/r019.png
+    frame    data/chars/bosses/lee/r020.png
 
 
 anim grabdown ##
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/j520.png
-	frame	data/chars/bosses/lee/j521.png
-	frame	data/chars/bosses/lee/j522.png
-	frame	data/chars/bosses/lee/j523.png
-	frame	data/chars/bosses/lee/j524.png
-	frame	data/chars/bosses/lee/j525.png
-	frame	data/chars/bosses/lee/j526.png
-	frame	data/chars/bosses/lee/j527.png
-	frame	data/chars/bosses/lee/j528.png
-	frame	data/chars/bosses/lee/j525.png
-	frame	data/chars/bosses/lee/j526.png
-	frame	data/chars/bosses/lee/j527.png
-	frame	data/chars/bosses/lee/j528.png
-	frame	data/chars/bosses/lee/j529.png
-	frame	data/chars/bosses/lee/j530.png
-	frame	data/chars/bosses/lee/j531.png
-	frame	data/chars/bosses/lee/j532.png
-	frame	data/chars/bosses/lee/j533.png
-	frame	data/chars/bosses/lee/j534.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/j520.png
+    frame    data/chars/bosses/lee/j521.png
+    frame    data/chars/bosses/lee/j522.png
+    frame    data/chars/bosses/lee/j523.png
+    frame    data/chars/bosses/lee/j524.png
+    frame    data/chars/bosses/lee/j525.png
+    frame    data/chars/bosses/lee/j526.png
+    frame    data/chars/bosses/lee/j527.png
+    frame    data/chars/bosses/lee/j528.png
+    frame    data/chars/bosses/lee/j525.png
+    frame    data/chars/bosses/lee/j526.png
+    frame    data/chars/bosses/lee/j527.png
+    frame    data/chars/bosses/lee/j528.png
+    frame    data/chars/bosses/lee/j529.png
+    frame    data/chars/bosses/lee/j530.png
+    frame    data/chars/bosses/lee/j531.png
+    frame    data/chars/bosses/lee/j532.png
+    frame    data/chars/bosses/lee/j533.png
+    frame    data/chars/bosses/lee/j534.png
 
 anim grabup ##
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/j600.png
-	frame	data/chars/bosses/lee/j601.png
-	frame	data/chars/bosses/lee/j602.png
-	frame	data/chars/bosses/lee/j603.png
-	frame	data/chars/bosses/lee/j604.png
-	frame	data/chars/bosses/lee/j605.png
-	frame	data/chars/bosses/lee/j606.png
-	frame	data/chars/bosses/lee/j607.png
-	frame	data/chars/bosses/lee/j608.png
-	frame	data/chars/bosses/lee/j609.png
-	frame	data/chars/bosses/lee/j610.png
-	frame	data/chars/bosses/lee/j611.png
-	frame	data/chars/bosses/lee/j612.png
-	frame	data/chars/bosses/lee/jump07.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/j600.png
+    frame    data/chars/bosses/lee/j601.png
+    frame    data/chars/bosses/lee/j602.png
+    frame    data/chars/bosses/lee/j603.png
+    frame    data/chars/bosses/lee/j604.png
+    frame    data/chars/bosses/lee/j605.png
+    frame    data/chars/bosses/lee/j606.png
+    frame    data/chars/bosses/lee/j607.png
+    frame    data/chars/bosses/lee/j608.png
+    frame    data/chars/bosses/lee/j609.png
+    frame    data/chars/bosses/lee/j610.png
+    frame    data/chars/bosses/lee/j611.png
+    frame    data/chars/bosses/lee/j612.png
+    frame    data/chars/bosses/lee/jump07.png
 
 anim special2 #LCS
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/r000.png
-	frame	data/chars/bosses/lee/r001.png
-	frame	data/chars/bosses/lee/r002.png
-	frame	data/chars/bosses/lee/r003.png
-	frame	data/chars/bosses/lee/r004.png
-	frame	data/chars/bosses/lee/r005.png
-	frame	data/chars/bosses/lee/r006.png
-	frame	data/chars/bosses/lee/r007.png
-	frame	data/chars/bosses/lee/r008.png
-	frame	data/chars/bosses/lee/r009.png
-	frame	data/chars/bosses/lee/r010.png
-	frame	data/chars/bosses/lee/r011.png
-	frame	data/chars/bosses/lee/r012.png
-	frame	data/chars/bosses/lee/r013.png
-	frame	data/chars/bosses/lee/r014.png
-	frame	data/chars/bosses/lee/r015.png
-	frame	data/chars/bosses/lee/r016.png
-	frame	data/chars/bosses/lee/r017.png
-	frame	data/chars/bosses/lee/r018.png
-	frame	data/chars/bosses/lee/r019.png
-	frame	data/chars/bosses/lee/r020.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/r000.png
+    frame    data/chars/bosses/lee/r001.png
+    frame    data/chars/bosses/lee/r002.png
+    frame    data/chars/bosses/lee/r003.png
+    frame    data/chars/bosses/lee/r004.png
+    frame    data/chars/bosses/lee/r005.png
+    frame    data/chars/bosses/lee/r006.png
+    frame    data/chars/bosses/lee/r007.png
+    frame    data/chars/bosses/lee/r008.png
+    frame    data/chars/bosses/lee/r009.png
+    frame    data/chars/bosses/lee/r010.png
+    frame    data/chars/bosses/lee/r011.png
+    frame    data/chars/bosses/lee/r012.png
+    frame    data/chars/bosses/lee/r013.png
+    frame    data/chars/bosses/lee/r014.png
+    frame    data/chars/bosses/lee/r015.png
+    frame    data/chars/bosses/lee/r016.png
+    frame    data/chars/bosses/lee/r017.png
+    frame    data/chars/bosses/lee/r018.png
+    frame    data/chars/bosses/lee/r019.png
+    frame    data/chars/bosses/lee/r020.png
 
 anim freespecial #
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/s300.png
-	frame	data/chars/bosses/lee/s301.png
-	frame	data/chars/bosses/lee/s302.png
-	frame	data/chars/bosses/lee/s303.png
-	frame	data/chars/bosses/lee/s304.png
-	frame	data/chars/bosses/lee/s305.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/s300.png
+    frame    data/chars/bosses/lee/s301.png
+    frame    data/chars/bosses/lee/s302.png
+    frame    data/chars/bosses/lee/s303.png
+    frame    data/chars/bosses/lee/s304.png
+    frame    data/chars/bosses/lee/s305.png
 
 anim freespecial2 #
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/run02.png
-	frame	data/chars/bosses/lee/run03.png
-	frame	data/chars/bosses/lee/run04.png
-	frame	data/chars/bosses/lee/run05.png
-	frame	data/chars/bosses/lee/run06.png
-	frame	data/chars/bosses/lee/run07.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/run02.png
+    frame    data/chars/bosses/lee/run03.png
+    frame    data/chars/bosses/lee/run04.png
+    frame    data/chars/bosses/lee/run05.png
+    frame    data/chars/bosses/lee/run06.png
+    frame    data/chars/bosses/lee/run07.png
 
 anim freespecial3 #
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/j600.png
-	frame	data/chars/bosses/lee/j601.png
-	frame	data/chars/bosses/lee/j602.png
-	frame	data/chars/bosses/lee/j603.png
-	frame	data/chars/bosses/lee/j604.png
-	frame	data/chars/bosses/lee/j605.png
-	frame	data/chars/bosses/lee/j606.png
-	frame	data/chars/bosses/lee/j607.png
-	frame	data/chars/bosses/lee/j608.png
-	frame	data/chars/bosses/lee/j609.png
-	frame	data/chars/bosses/lee/j610.png
-	frame	data/chars/bosses/lee/j611.png
-	frame	data/chars/bosses/lee/j612.png
-	frame	data/chars/bosses/lee/jump07.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/j600.png
+    frame    data/chars/bosses/lee/j601.png
+    frame    data/chars/bosses/lee/j602.png
+    frame    data/chars/bosses/lee/j603.png
+    frame    data/chars/bosses/lee/j604.png
+    frame    data/chars/bosses/lee/j605.png
+    frame    data/chars/bosses/lee/j606.png
+    frame    data/chars/bosses/lee/j607.png
+    frame    data/chars/bosses/lee/j608.png
+    frame    data/chars/bosses/lee/j609.png
+    frame    data/chars/bosses/lee/j610.png
+    frame    data/chars/bosses/lee/j611.png
+    frame    data/chars/bosses/lee/j612.png
+    frame    data/chars/bosses/lee/jump07.png
 
 anim freespecial4 #RAGE COMBO
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/s300.png
-	frame	data/chars/bosses/lee/s301.png
-	frame	data/chars/bosses/lee/s302.png
-	frame	data/chars/bosses/lee/s303.png
-	frame	data/chars/bosses/lee/s304.png
-	frame	data/chars/bosses/lee/s305.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/s300.png
+    frame    data/chars/bosses/lee/s301.png
+    frame    data/chars/bosses/lee/s302.png
+    frame    data/chars/bosses/lee/s303.png
+    frame    data/chars/bosses/lee/s304.png
+    frame    data/chars/bosses/lee/s305.png
 
 anim freespecial5 #run attack
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/s200.png
-	frame	data/chars/bosses/lee/s201.png
-	frame	data/chars/bosses/lee/s202.png
-	frame	data/chars/bosses/lee/s203.png
-	frame	data/chars/bosses/lee/s204.png
-	frame	data/chars/bosses/lee/s205.png
-	frame	data/chars/bosses/lee/s206.png
-	frame	data/chars/bosses/lee/s207.png
-	frame	data/chars/bosses/lee/s208.png
-	frame	data/chars/bosses/lee/s209.png
-	frame	data/chars/bosses/lee/s210.png
-	frame	data/chars/bosses/lee/s211.png
-	frame	data/chars/bosses/lee/s212.png
-	frame	data/chars/bosses/lee/s213.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/s200.png
+    frame    data/chars/bosses/lee/s201.png
+    frame    data/chars/bosses/lee/s202.png
+    frame    data/chars/bosses/lee/s203.png
+    frame    data/chars/bosses/lee/s204.png
+    frame    data/chars/bosses/lee/s205.png
+    frame    data/chars/bosses/lee/s206.png
+    frame    data/chars/bosses/lee/s207.png
+    frame    data/chars/bosses/lee/s208.png
+    frame    data/chars/bosses/lee/s209.png
+    frame    data/chars/bosses/lee/s210.png
+    frame    data/chars/bosses/lee/s211.png
+    frame    data/chars/bosses/lee/s212.png
+    frame    data/chars/bosses/lee/s213.png
 
 anim freespecial6 #Flaming Spin Kicks
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/r000.png
-	frame	data/chars/bosses/lee/r001.png
-	frame	data/chars/bosses/lee/r002.png
-	frame	data/chars/bosses/lee/r003.png
-	frame	data/chars/bosses/lee/r004.png
-	frame	data/chars/bosses/lee/r005.png
-	frame	data/chars/bosses/lee/r006.png
-	frame	data/chars/bosses/lee/r007.png
-	frame	data/chars/bosses/lee/r008.png
-	frame	data/chars/bosses/lee/r009.png
-	frame	data/chars/bosses/lee/r010.png
-	frame	data/chars/bosses/lee/r011.png
-	frame	data/chars/bosses/lee/r012.png
-	frame	data/chars/bosses/lee/r013.png
-	frame	data/chars/bosses/lee/r014.png
-	frame	data/chars/bosses/lee/r015.png
-	frame	data/chars/bosses/lee/r016.png
-	frame	data/chars/bosses/lee/r017.png
-	frame	data/chars/bosses/lee/r018.png
-	frame	data/chars/bosses/lee/r019.png
-	frame	data/chars/bosses/lee/r020.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/r000.png
+    frame    data/chars/bosses/lee/r001.png
+    frame    data/chars/bosses/lee/r002.png
+    frame    data/chars/bosses/lee/r003.png
+    frame    data/chars/bosses/lee/r004.png
+    frame    data/chars/bosses/lee/r005.png
+    frame    data/chars/bosses/lee/r006.png
+    frame    data/chars/bosses/lee/r007.png
+    frame    data/chars/bosses/lee/r008.png
+    frame    data/chars/bosses/lee/r009.png
+    frame    data/chars/bosses/lee/r010.png
+    frame    data/chars/bosses/lee/r011.png
+    frame    data/chars/bosses/lee/r012.png
+    frame    data/chars/bosses/lee/r013.png
+    frame    data/chars/bosses/lee/r014.png
+    frame    data/chars/bosses/lee/r015.png
+    frame    data/chars/bosses/lee/r016.png
+    frame    data/chars/bosses/lee/r017.png
+    frame    data/chars/bosses/lee/r018.png
+    frame    data/chars/bosses/lee/r019.png
+    frame    data/chars/bosses/lee/r020.png
 
 
 anim dodge
-	loop	0
-	delay	1000
-	offset	240 180
-	frame	data/chars/bosses/lee/dodge01.png
-	frame	data/chars/bosses/lee/dodge02.png
-	frame	data/chars/bosses/lee/dodge03.png
-	frame	data/chars/bosses/lee/dodge04.png
-	frame	data/chars/bosses/lee/dodge05.png
-	frame	data/chars/bosses/lee/dodge06.png
-	frame	data/chars/bosses/lee/dodge07.png
-	frame	data/chars/bosses/lee/dodge08.png
+    loop    0
+    delay    1000
+    offset    240 180
+    frame    data/chars/bosses/lee/dodge01.png
+    frame    data/chars/bosses/lee/dodge02.png
+    frame    data/chars/bosses/lee/dodge03.png
+    frame    data/chars/bosses/lee/dodge04.png
+    frame    data/chars/bosses/lee/dodge05.png
+    frame    data/chars/bosses/lee/dodge06.png
+    frame    data/chars/bosses/lee/dodge07.png
+    frame    data/chars/bosses/lee/dodge08.png

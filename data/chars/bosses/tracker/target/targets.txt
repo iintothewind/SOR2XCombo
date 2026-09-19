@@ -1,33 +1,33 @@
 ##MAIN
-name				Tracker_TargetS
-type				none
+name                Tracker_TargetS
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 anim idle
-	loop	0
-	delay	1000
-	offset	50 50
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
-	frame	data/chars/bosses/tracker/target/target01.png
-	frame	data/chars/bosses/tracker/target/target00.png
+    loop    0
+    delay    1000
+    offset    50 50
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png
+    frame    data/chars/bosses/tracker/target/target01.png
+    frame    data/chars/bosses/tracker/target/target00.png

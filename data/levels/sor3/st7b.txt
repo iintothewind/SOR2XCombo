@@ -1,263 +1,263 @@
-loadingbg	data/bgs/loading2.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor3/st7b/_empty.png	1 1 0 0 0 0 -1 1 1
-panel		data/bgs/sor3/st7b/_map.png		none	none
-frontpanel	data/bgs/sor3/st7b/fp00.png
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading2.png             1 -81 248 480 999 999 0
+background    data/bgs/sor3/st7b/_empty.png    1 1 0 0 0 0 -1 1 1
+panel        data/bgs/sor3/st7b/_map.png        none    none
+frontpanel    data/bgs/sor3/st7b/fp00.png
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 7
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-spawn		1up
-flip		1
-coords		10 270 0
-at			0
+spawn        1up
+flip        1
+coords        10 270 0
+at            0
 
-spawn		Statue_B 1
-flip		1
-coords		150 175 0
-at			0
+spawn        Statue_B 1
+flip        1
+coords        150 175 0
+at            0
 
-spawn		Statue_B 1
-flip		1
-coords		200 175 0
-at			0
+spawn        Statue_B 1
+flip        1
+coords        200 175 0
+at            0
 
-spawn		Statue_B 1
-flip		1
-coords		500 175 0
-at			0
+spawn        Statue_B 1
+flip        1
+coords        500 175 0
+at            0
 
-spawn		Statue_B 1
-flip		1
-coords		550 175 0
-at			0
+spawn        Statue_B 1
+flip        1
+coords        550 175 0
+at            0
 
-spawn		BasicX2 1
-map			3
-flip		0
-coords		550 210 0
-at			0
+spawn        BasicX2 1
+map            3
+flip        0
+coords        550 210 0
+at            0
 
-spawn		BasicX2 1
-map			4
-flip		0
-coords		600 230 0
-at			0
+spawn        BasicX2 1
+map            4
+flip        0
+coords        600 230 0
+at            0
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		600 230 0
-at			0
+spawn        BruceB 1
+map            4
+flip        0
+coords        600 230 0
+at            0
 
-spawn		BasicX2 1
-map			3
-flip		0
-coords		650 260 0
-at			0
+spawn        BasicX2 1
+map            3
+flip        0
+coords        650 260 0
+at            0
 
-spawn		BasicX2 1
-map			4
-flip		0
-coords		-100 230 0
-at			0
+spawn        BasicX2 1
+map            4
+flip        0
+coords        -100 230 0
+at            0
 
 wait
-at			250
+at            250
 
-group		4 4
-at			0
+group        4 4
+at            0
 
-spawn		BodyGuardX 1
-map			4
-flip		0
-coords		-50 230 0
-at			0
+spawn        BodyGuardX 1
+map            4
+flip        0
+coords        -50 230 0
+at            0
 
-spawn		BasicX2 1
-map			4
-flip		0
-coords		-100 260 0
-at			0
+spawn        BasicX2 1
+map            4
+flip        0
+coords        -100 260 0
+at            0
 
-spawn		BodyGuardX 1
-map			4
-flip		0
-coords		550 230 0
-at			0
+spawn        BodyGuardX 1
+map            4
+flip        0
+coords        550 230 0
+at            0
 
-spawn		BasicX2 1
-map			4
-flip		0
-coords		600 260 0
-at			0
+spawn        BasicX2 1
+map            4
+flip        0
+coords        600 260 0
+at            0
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		600 260 0
-at			0
+spawn        BruceB 1
+map            4
+flip        0
+coords        600 260 0
+at            0
 
-spawn		BodyGuardX 1
-map			4
-flip		0
-coords		-50 230 0
-at			0
+spawn        BodyGuardX 1
+map            4
+flip        0
+coords        -50 230 0
+at            0
 
-spawn		BasicX2 1
-map			3
-flip		0
-coords		-100 260 0
-at			0
+spawn        BasicX2 1
+map            3
+flip        0
+coords        -100 260 0
+at            0
 
-spawn		BasicX2 1
-map			4
-flip		0
-coords		-50 230 0
-at			0
+spawn        BasicX2 1
+map            4
+flip        0
+coords        -50 230 0
+at            0
 
-spawn		BasicX2 1
-map			4
-flip		0
-coords		-100 260 0
-at			0
+spawn        BasicX2 1
+map            4
+flip        0
+coords        -100 260 0
+at            0
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		-50 260 0
-at			0
+spawn        BossX1 1
+map            4
+flip        0
+coords        -50 260 0
+at            0
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 3pspawn
-flip		0
-coords		-50 260 0
-at			0
+flip        0
+coords        -50 260 0
+at            0
 
 #########################################################################################
 
-group		1000 1000
-at			260
+group        1000 1000
+at            260
 
-spawn		Statue_B 1
-flip		1
-coords		520 175 0
-at			260
+spawn        Statue_B 1
+flip        1
+coords        520 175 0
+at            260
 
-spawn		Statue_B 1
-flip		1
-coords		570 175 0
-at			260
+spawn        Statue_B 1
+flip        1
+coords        570 175 0
+at            260
 
-spawn		McBride_Wait 1
-map			1
-flip		0
-coords		570 200 0
-at			300
+spawn        McBride_Wait 1
+map            1
+flip        0
+coords        570 200 0
+at            300
 
-spawn		Maclean_Wait 1
-map			1
-flip		0
-coords		570 260 0
-at			300
+spawn        Maclean_Wait 1
+map            1
+flip        0
+coords        570 260 0
+at            300
 
-spawn		Macleod_Wait 1
-map			1
-flip		0
-coords		610 230 0
-at			300
+spawn        Macleod_Wait 1
+map            1
+flip        0
+coords        610 230 0
+at            300
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		520 210 0
-at			300
+spawn        BruceB 1
+map            4
+flip        0
+coords        520 210 0
+at            300
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		520 210 0
-at			300
+spawn        BongoX 1
+map            4
+flip        0
+coords        520 210 0
+at            300
 
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		520 260 0
-at			300
+spawn        BongoX 1
+map            4
+flip        0
+coords        520 260 0
+at            300
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			300
+at            300
 
-group		4 4
-at			300
+group        4 4
+at            300
 
-spawn		BongoB 1
-map			0
-flip		0
-coords		-50 230 0
-at			300
+spawn        BongoB 1
+map            0
+flip        0
+coords        -50 230 0
+at            300
 
-spawn		BongoB 1
-map			1
-flip		0
-coords		-100 210 0
-at			300
+spawn        BongoB 1
+map            1
+flip        0
+coords        -100 210 0
+at            300
 
-spawn		BruceB 1
-map			4
-flip		0
-coords		-150 230 0
-at			300
+spawn        BruceB 1
+map            4
+flip        0
+coords        -150 230 0
+at            300
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		-150 230 0
-at			300
+spawn        BongoX 1
+map            4
+flip        0
+coords        -150 230 0
+at            300
 
-spawn		BongoB 1
-map			0
-flip		0
-coords		-50 260 0
-at			300
+spawn        BongoB 1
+map            0
+flip        0
+coords        -50 260 0
+at            300
 
-spawn		BongoB 1
-map			1
-flip		0
-coords		-100 210 0
-at			300
+spawn        BongoB 1
+map            1
+flip        0
+coords        -100 210 0
+at            300
 
-spawn		BossX1 1
-map			4
-flip		0
-coords		-150 230 0
-at			300
+spawn        BossX1 1
+map            4
+flip        0
+coords        -150 230 0
+at            300
 
-spawn		BossX1 1
-map			4
+spawn        BossX1 1
+map            4
 2pspawn
-flip		0
-coords		-50 230 0
-at			300
+flip        0
+coords        -50 230 0
+at            300
 
-spawn		BongoX 1
-map			4
-flip		0
-coords		-50 230 0
-at			300
+spawn        BongoX 1
+map            4
+flip        0
+coords        -50 230 0
+at            300

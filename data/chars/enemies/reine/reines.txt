@@ -1,415 +1,415 @@
 ##MAIN
-name				Reines
-type				none
+name                Reines
+type                none
 
 ##MISC
-antigravity			100
+antigravity            100
 
 ##SCRIPTS
-script				data/scripts/updateentity/channel.c
+script                data/scripts/updateentity/channel.c
 
 ##REMAPS
-remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter1.png
-remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter2.png
-remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter3.png
-remap				data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter4.png
+remap                data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter1.png
+remap                data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter2.png
+remap                data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter3.png
+remap                data/chars/enemies/reine/idle00.png data/chars/enemies/reine/alter4.png
 
 ## DEFAULT ANIMATIONS #########################################################################
 
 
 anim attack7 #WHIP Upper
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/a306.png
-	frame	data/chars/enemies/reine/a307.png
-	frame	data/chars/enemies/reine/a308.png
-	frame	data/chars/enemies/reine/a309.png
-	frame	data/chars/enemies/reine/a309.png
-	frame	data/chars/enemies/reine/a310.png
-	frame	data/chars/enemies/reine/a311.png
-	frame	data/chars/enemies/reine/a311.png
-	frame	data/chars/enemies/reine/a312.png
-	frame	data/chars/enemies/reine/a312.png
-	frame	data/chars/enemies/reine/a313.png
-	frame	data/chars/enemies/reine/a313.png
-	frame	data/chars/enemies/reine/a314.png
-	frame	data/chars/enemies/reine/a314.png
-	frame	data/chars/enemies/reine/a315.png
-	frame	data/chars/enemies/reine/a315.png
-	frame	data/chars/enemies/reine/a316.png
-	frame	data/chars/enemies/reine/a316.png
-	frame	data/chars/enemies/reine/a317.png
-	frame	data/chars/enemies/reine/a317.png
-	frame	data/chars/enemies/reine/a318.png
-	frame	data/chars/enemies/reine/a318.png
-	frame	data/chars/enemies/reine/a319.png
-	frame	data/chars/enemies/reine/a319.png
-	frame	data/chars/enemies/reine/a320.png
-	frame	data/chars/enemies/reine/a320.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/a306.png
+    frame    data/chars/enemies/reine/a307.png
+    frame    data/chars/enemies/reine/a308.png
+    frame    data/chars/enemies/reine/a309.png
+    frame    data/chars/enemies/reine/a309.png
+    frame    data/chars/enemies/reine/a310.png
+    frame    data/chars/enemies/reine/a311.png
+    frame    data/chars/enemies/reine/a311.png
+    frame    data/chars/enemies/reine/a312.png
+    frame    data/chars/enemies/reine/a312.png
+    frame    data/chars/enemies/reine/a313.png
+    frame    data/chars/enemies/reine/a313.png
+    frame    data/chars/enemies/reine/a314.png
+    frame    data/chars/enemies/reine/a314.png
+    frame    data/chars/enemies/reine/a315.png
+    frame    data/chars/enemies/reine/a315.png
+    frame    data/chars/enemies/reine/a316.png
+    frame    data/chars/enemies/reine/a316.png
+    frame    data/chars/enemies/reine/a317.png
+    frame    data/chars/enemies/reine/a317.png
+    frame    data/chars/enemies/reine/a318.png
+    frame    data/chars/enemies/reine/a318.png
+    frame    data/chars/enemies/reine/a319.png
+    frame    data/chars/enemies/reine/a319.png
+    frame    data/chars/enemies/reine/a320.png
+    frame    data/chars/enemies/reine/a320.png
 
 anim attack8 #WHIP AIR GRAB
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/a306.png
-	frame	data/chars/enemies/reine/a307.png
-	frame	data/chars/enemies/reine/a308.png
-	frame	data/chars/enemies/reine/a309.png
-	frame	data/chars/enemies/reine/a309.png
-	frame	data/chars/enemies/reine/a310.png
-	frame	data/chars/enemies/reine/a311.png
-	frame	data/chars/enemies/reine/a311.png
-	frame	data/chars/enemies/reine/a312.png
-	frame	data/chars/enemies/reine/a312.png
-	frame	data/chars/enemies/reine/a313.png
-	frame	data/chars/enemies/reine/a313.png
-	frame	data/chars/enemies/reine/a314.png
-	frame	data/chars/enemies/reine/a314.png
-	frame	data/chars/enemies/reine/a315.png
-	frame	data/chars/enemies/reine/a315.png
-	frame	data/chars/enemies/reine/a316.png
-	frame	data/chars/enemies/reine/a316.png
-	frame	data/chars/enemies/reine/a317.png
-	frame	data/chars/enemies/reine/a317.png
-	frame	data/chars/enemies/reine/a318.png
-	frame	data/chars/enemies/reine/a318.png
-	frame	data/chars/enemies/reine/a319.png
-	frame	data/chars/enemies/reine/a319.png
-	frame	data/chars/enemies/reine/a320.png
-	frame	data/chars/enemies/reine/a320.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/a306.png
+    frame    data/chars/enemies/reine/a307.png
+    frame    data/chars/enemies/reine/a308.png
+    frame    data/chars/enemies/reine/a309.png
+    frame    data/chars/enemies/reine/a309.png
+    frame    data/chars/enemies/reine/a310.png
+    frame    data/chars/enemies/reine/a311.png
+    frame    data/chars/enemies/reine/a311.png
+    frame    data/chars/enemies/reine/a312.png
+    frame    data/chars/enemies/reine/a312.png
+    frame    data/chars/enemies/reine/a313.png
+    frame    data/chars/enemies/reine/a313.png
+    frame    data/chars/enemies/reine/a314.png
+    frame    data/chars/enemies/reine/a314.png
+    frame    data/chars/enemies/reine/a315.png
+    frame    data/chars/enemies/reine/a315.png
+    frame    data/chars/enemies/reine/a316.png
+    frame    data/chars/enemies/reine/a316.png
+    frame    data/chars/enemies/reine/a317.png
+    frame    data/chars/enemies/reine/a317.png
+    frame    data/chars/enemies/reine/a318.png
+    frame    data/chars/enemies/reine/a318.png
+    frame    data/chars/enemies/reine/a319.png
+    frame    data/chars/enemies/reine/a319.png
+    frame    data/chars/enemies/reine/a320.png
+    frame    data/chars/enemies/reine/a320.png
 
 
 anim attack9 #WHIP GRAB
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s300.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s305.png
-	frame	data/chars/enemies/reine/s305.png
-	offset	223 178
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s310.png
-	frame	data/chars/enemies/reine/s310.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s300.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s305.png
+    frame    data/chars/enemies/reine/s305.png
+    offset    223 178
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s310.png
+    frame    data/chars/enemies/reine/s310.png
 
 anim grabattack #WHIP
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/a100.png
-	frame	data/chars/enemies/reine/a101.png
-	frame	data/chars/enemies/reine/a102.png
-	frame	data/chars/enemies/reine/a403.png
-	frame	data/chars/enemies/reine/a404.png
-	frame	data/chars/enemies/reine/a405.png
-	frame	data/chars/enemies/reine/a406.png
-	frame	data/chars/enemies/reine/a407.png
-	frame	data/chars/enemies/reine/a100.png
-	frame	data/chars/enemies/reine/a101.png
-	frame	data/chars/enemies/reine/a102.png
-	frame	data/chars/enemies/reine/a403.png
-	frame	data/chars/enemies/reine/a404.png
-	frame	data/chars/enemies/reine/a405.png
-	frame	data/chars/enemies/reine/a406.png
-	frame	data/chars/enemies/reine/a407.png
-	frame	data/chars/enemies/reine/a100.png
-	frame	data/chars/enemies/reine/a101.png
-	frame	data/chars/enemies/reine/a102.png
-	frame	data/chars/enemies/reine/a403.png
-	frame	data/chars/enemies/reine/a404.png
-	frame	data/chars/enemies/reine/a405.png
-	frame	data/chars/enemies/reine/a406.png
-	frame	data/chars/enemies/reine/a407.png
-	frame	data/chars/enemies/reine/a100.png
-	frame	data/chars/enemies/reine/a101.png
-	frame	data/chars/enemies/reine/a102.png
-	frame	data/chars/enemies/reine/a403.png
-	frame	data/chars/enemies/reine/a404.png
-	frame	data/chars/enemies/reine/a405.png
-	frame	data/chars/enemies/reine/a406.png
-	frame	data/chars/enemies/reine/a407.png
-	frame	data/chars/enemies/reine/a100.png
-	frame	data/chars/enemies/reine/a101.png
-	frame	data/chars/enemies/reine/a102.png
-	frame	data/chars/enemies/reine/a403.png
-	frame	data/chars/enemies/reine/a404.png
-	frame	data/chars/enemies/reine/a405.png
-	frame	data/chars/enemies/reine/a406.png
-	frame	data/chars/enemies/reine/a407.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/a100.png
+    frame    data/chars/enemies/reine/a101.png
+    frame    data/chars/enemies/reine/a102.png
+    frame    data/chars/enemies/reine/a403.png
+    frame    data/chars/enemies/reine/a404.png
+    frame    data/chars/enemies/reine/a405.png
+    frame    data/chars/enemies/reine/a406.png
+    frame    data/chars/enemies/reine/a407.png
+    frame    data/chars/enemies/reine/a100.png
+    frame    data/chars/enemies/reine/a101.png
+    frame    data/chars/enemies/reine/a102.png
+    frame    data/chars/enemies/reine/a403.png
+    frame    data/chars/enemies/reine/a404.png
+    frame    data/chars/enemies/reine/a405.png
+    frame    data/chars/enemies/reine/a406.png
+    frame    data/chars/enemies/reine/a407.png
+    frame    data/chars/enemies/reine/a100.png
+    frame    data/chars/enemies/reine/a101.png
+    frame    data/chars/enemies/reine/a102.png
+    frame    data/chars/enemies/reine/a403.png
+    frame    data/chars/enemies/reine/a404.png
+    frame    data/chars/enemies/reine/a405.png
+    frame    data/chars/enemies/reine/a406.png
+    frame    data/chars/enemies/reine/a407.png
+    frame    data/chars/enemies/reine/a100.png
+    frame    data/chars/enemies/reine/a101.png
+    frame    data/chars/enemies/reine/a102.png
+    frame    data/chars/enemies/reine/a403.png
+    frame    data/chars/enemies/reine/a404.png
+    frame    data/chars/enemies/reine/a405.png
+    frame    data/chars/enemies/reine/a406.png
+    frame    data/chars/enemies/reine/a407.png
+    frame    data/chars/enemies/reine/a100.png
+    frame    data/chars/enemies/reine/a101.png
+    frame    data/chars/enemies/reine/a102.png
+    frame    data/chars/enemies/reine/a403.png
+    frame    data/chars/enemies/reine/a404.png
+    frame    data/chars/enemies/reine/a405.png
+    frame    data/chars/enemies/reine/a406.png
+    frame    data/chars/enemies/reine/a407.png
 
 
 
 anim special #WHIP DANCE
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s100.png
-	frame	data/chars/enemies/reine/s101.png
-	frame	data/chars/enemies/reine/s102.png
-	frame	data/chars/enemies/reine/s102.png
-	frame	data/chars/enemies/reine/s103.png
-	frame	data/chars/enemies/reine/s103.png
-	frame	data/chars/enemies/reine/s104.png
-	frame	data/chars/enemies/reine/s104.png
-	frame	data/chars/enemies/reine/s105.png
-	frame	data/chars/enemies/reine/s105.png
-	frame	data/chars/enemies/reine/s106.png
-	frame	data/chars/enemies/reine/s106.png
-	frame	data/chars/enemies/reine/s107.png
-	frame	data/chars/enemies/reine/s107.png
-	frame	data/chars/enemies/reine/s108.png
-	frame	data/chars/enemies/reine/s108.png
-	frame	data/chars/enemies/reine/s109.png
-	frame	data/chars/enemies/reine/s109.png
-	frame	data/chars/enemies/reine/s110.png
-	frame	data/chars/enemies/reine/s110.png
-	frame	data/chars/enemies/reine/s111.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s100.png
+    frame    data/chars/enemies/reine/s101.png
+    frame    data/chars/enemies/reine/s102.png
+    frame    data/chars/enemies/reine/s102.png
+    frame    data/chars/enemies/reine/s103.png
+    frame    data/chars/enemies/reine/s103.png
+    frame    data/chars/enemies/reine/s104.png
+    frame    data/chars/enemies/reine/s104.png
+    frame    data/chars/enemies/reine/s105.png
+    frame    data/chars/enemies/reine/s105.png
+    frame    data/chars/enemies/reine/s106.png
+    frame    data/chars/enemies/reine/s106.png
+    frame    data/chars/enemies/reine/s107.png
+    frame    data/chars/enemies/reine/s107.png
+    frame    data/chars/enemies/reine/s108.png
+    frame    data/chars/enemies/reine/s108.png
+    frame    data/chars/enemies/reine/s109.png
+    frame    data/chars/enemies/reine/s109.png
+    frame    data/chars/enemies/reine/s110.png
+    frame    data/chars/enemies/reine/s110.png
+    frame    data/chars/enemies/reine/s111.png
 
 anim special2 #SHOCK
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s300.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s305.png
-	frame	data/chars/enemies/reine/s305.png
-	offset	223 178
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s310.png
-	frame	data/chars/enemies/reine/s310.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s300.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s305.png
+    frame    data/chars/enemies/reine/s305.png
+    offset    223 178
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s310.png
+    frame    data/chars/enemies/reine/s310.png
 
 
 anim freespecial #SHOCK
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s300.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s305.png
-	frame	data/chars/enemies/reine/s305.png
-	frame	data/chars/enemies/reine/s400.png
-	frame	data/chars/enemies/reine/s400.png
-	frame	data/chars/enemies/reine/s401.png
-	frame	data/chars/enemies/reine/s401.png
-	frame	data/chars/enemies/reine/s402.png
-	frame	data/chars/enemies/reine/s402.png
-	frame	data/chars/enemies/reine/s403.png
-	frame	data/chars/enemies/reine/s403.png
-	frame	data/chars/enemies/reine/s100.png
-	frame	data/chars/enemies/reine/s101.png
-	frame	data/chars/enemies/reine/s102.png
-	frame	data/chars/enemies/reine/s102.png
-	frame	data/chars/enemies/reine/s103.png
-	frame	data/chars/enemies/reine/s103.png
-	frame	data/chars/enemies/reine/s104.png
-	frame	data/chars/enemies/reine/s104.png
-	frame	data/chars/enemies/reine/s105.png
-	frame	data/chars/enemies/reine/s105.png
-	frame	data/chars/enemies/reine/s106.png
-	frame	data/chars/enemies/reine/s106.png
-	frame	data/chars/enemies/reine/s107.png
-	frame	data/chars/enemies/reine/s107.png
-	frame	data/chars/enemies/reine/s108.png
-	frame	data/chars/enemies/reine/s108.png
-	frame	data/chars/enemies/reine/s109.png
-	frame	data/chars/enemies/reine/s109.png
-	frame	data/chars/enemies/reine/s110.png
-	frame	data/chars/enemies/reine/s110.png
-	frame	data/chars/enemies/reine/s101.png
-	frame	data/chars/enemies/reine/s102.png
-	frame	data/chars/enemies/reine/s102.png
-	frame	data/chars/enemies/reine/s103.png
-	frame	data/chars/enemies/reine/s103.png
-	frame	data/chars/enemies/reine/s104.png
-	frame	data/chars/enemies/reine/s104.png
-	frame	data/chars/enemies/reine/s105.png
-	frame	data/chars/enemies/reine/s105.png
-	frame	data/chars/enemies/reine/s106.png
-	frame	data/chars/enemies/reine/s106.png
-	frame	data/chars/enemies/reine/s107.png
-	frame	data/chars/enemies/reine/s107.png
-	frame	data/chars/enemies/reine/s108.png
-	frame	data/chars/enemies/reine/s108.png
-	frame	data/chars/enemies/reine/s109.png
-	frame	data/chars/enemies/reine/s109.png
-	frame	data/chars/enemies/reine/s110.png
-	frame	data/chars/enemies/reine/s110.png
-	frame	data/chars/enemies/reine/s111.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s300.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s305.png
+    frame    data/chars/enemies/reine/s305.png
+    frame    data/chars/enemies/reine/s400.png
+    frame    data/chars/enemies/reine/s400.png
+    frame    data/chars/enemies/reine/s401.png
+    frame    data/chars/enemies/reine/s401.png
+    frame    data/chars/enemies/reine/s402.png
+    frame    data/chars/enemies/reine/s402.png
+    frame    data/chars/enemies/reine/s403.png
+    frame    data/chars/enemies/reine/s403.png
+    frame    data/chars/enemies/reine/s100.png
+    frame    data/chars/enemies/reine/s101.png
+    frame    data/chars/enemies/reine/s102.png
+    frame    data/chars/enemies/reine/s102.png
+    frame    data/chars/enemies/reine/s103.png
+    frame    data/chars/enemies/reine/s103.png
+    frame    data/chars/enemies/reine/s104.png
+    frame    data/chars/enemies/reine/s104.png
+    frame    data/chars/enemies/reine/s105.png
+    frame    data/chars/enemies/reine/s105.png
+    frame    data/chars/enemies/reine/s106.png
+    frame    data/chars/enemies/reine/s106.png
+    frame    data/chars/enemies/reine/s107.png
+    frame    data/chars/enemies/reine/s107.png
+    frame    data/chars/enemies/reine/s108.png
+    frame    data/chars/enemies/reine/s108.png
+    frame    data/chars/enemies/reine/s109.png
+    frame    data/chars/enemies/reine/s109.png
+    frame    data/chars/enemies/reine/s110.png
+    frame    data/chars/enemies/reine/s110.png
+    frame    data/chars/enemies/reine/s101.png
+    frame    data/chars/enemies/reine/s102.png
+    frame    data/chars/enemies/reine/s102.png
+    frame    data/chars/enemies/reine/s103.png
+    frame    data/chars/enemies/reine/s103.png
+    frame    data/chars/enemies/reine/s104.png
+    frame    data/chars/enemies/reine/s104.png
+    frame    data/chars/enemies/reine/s105.png
+    frame    data/chars/enemies/reine/s105.png
+    frame    data/chars/enemies/reine/s106.png
+    frame    data/chars/enemies/reine/s106.png
+    frame    data/chars/enemies/reine/s107.png
+    frame    data/chars/enemies/reine/s107.png
+    frame    data/chars/enemies/reine/s108.png
+    frame    data/chars/enemies/reine/s108.png
+    frame    data/chars/enemies/reine/s109.png
+    frame    data/chars/enemies/reine/s109.png
+    frame    data/chars/enemies/reine/s110.png
+    frame    data/chars/enemies/reine/s110.png
+    frame    data/chars/enemies/reine/s111.png
 
 anim freespecial2 #GRAB RUN
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/idle01.png
-	frame	data/chars/enemies/reine/run00.png
-	frame	data/chars/enemies/reine/run01.png
-	frame	data/chars/enemies/reine/run02.png
-	frame	data/chars/enemies/reine/run03.png
-	frame	data/chars/enemies/reine/run04.png
-	frame	data/chars/enemies/reine/run05.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/idle01.png
+    frame    data/chars/enemies/reine/run00.png
+    frame    data/chars/enemies/reine/run01.png
+    frame    data/chars/enemies/reine/run02.png
+    frame    data/chars/enemies/reine/run03.png
+    frame    data/chars/enemies/reine/run04.png
+    frame    data/chars/enemies/reine/run05.png
 
 anim freespecial3 #BLITZ RUN
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/idle01.png
-	frame	data/chars/enemies/reine/run00.png
-	frame	data/chars/enemies/reine/run01.png
-	frame	data/chars/enemies/reine/run02.png
-	frame	data/chars/enemies/reine/run03.png
-	frame	data/chars/enemies/reine/run04.png
-	frame	data/chars/enemies/reine/run05.png
-	frame	data/chars/enemies/reine/run00.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/idle01.png
+    frame    data/chars/enemies/reine/run00.png
+    frame    data/chars/enemies/reine/run01.png
+    frame    data/chars/enemies/reine/run02.png
+    frame    data/chars/enemies/reine/run03.png
+    frame    data/chars/enemies/reine/run04.png
+    frame    data/chars/enemies/reine/run05.png
+    frame    data/chars/enemies/reine/run00.png
 
 anim freespecial4 #WHIP SHOOT
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s300.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s305.png
-	frame	data/chars/enemies/reine/s305.png
-	offset	223 178
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s310.png
-	frame	data/chars/enemies/reine/s310.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s300.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s305.png
+    frame    data/chars/enemies/reine/s305.png
+    offset    223 178
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s310.png
+    frame    data/chars/enemies/reine/s310.png
 
 anim freespecial5 #WHIP GRAB
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s300.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s301.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s302.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s303.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s304.png
-	frame	data/chars/enemies/reine/s305.png
-	frame	data/chars/enemies/reine/s305.png
-	offset	223 178
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s306.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s307.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s308.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s309.png
-	frame	data/chars/enemies/reine/s310.png
-	frame	data/chars/enemies/reine/s310.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s300.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s301.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s302.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s303.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s304.png
+    frame    data/chars/enemies/reine/s305.png
+    frame    data/chars/enemies/reine/s305.png
+    offset    223 178
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s306.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s307.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s308.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s309.png
+    frame    data/chars/enemies/reine/s310.png
+    frame    data/chars/enemies/reine/s310.png
 
 anim freespecial7 #WHIP AIR GRAB
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/a306.png
-	frame	data/chars/enemies/reine/a307.png
-	frame	data/chars/enemies/reine/a308.png
-	frame	data/chars/enemies/reine/a309.png
-	frame	data/chars/enemies/reine/a309.png
-	frame	data/chars/enemies/reine/a310.png
-	frame	data/chars/enemies/reine/a311.png
-	frame	data/chars/enemies/reine/a311.png
-	frame	data/chars/enemies/reine/a312.png
-	frame	data/chars/enemies/reine/a312.png
-	frame	data/chars/enemies/reine/a313.png
-	frame	data/chars/enemies/reine/a313.png
-	frame	data/chars/enemies/reine/a314.png
-	frame	data/chars/enemies/reine/a314.png
-	frame	data/chars/enemies/reine/a315.png
-	frame	data/chars/enemies/reine/a315.png
-	frame	data/chars/enemies/reine/a316.png
-	frame	data/chars/enemies/reine/a316.png
-	frame	data/chars/enemies/reine/a317.png
-	frame	data/chars/enemies/reine/a317.png
-	frame	data/chars/enemies/reine/a318.png
-	frame	data/chars/enemies/reine/a318.png
-	frame	data/chars/enemies/reine/a319.png
-	frame	data/chars/enemies/reine/a319.png
-	frame	data/chars/enemies/reine/a320.png
-	frame	data/chars/enemies/reine/a320.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/a306.png
+    frame    data/chars/enemies/reine/a307.png
+    frame    data/chars/enemies/reine/a308.png
+    frame    data/chars/enemies/reine/a309.png
+    frame    data/chars/enemies/reine/a309.png
+    frame    data/chars/enemies/reine/a310.png
+    frame    data/chars/enemies/reine/a311.png
+    frame    data/chars/enemies/reine/a311.png
+    frame    data/chars/enemies/reine/a312.png
+    frame    data/chars/enemies/reine/a312.png
+    frame    data/chars/enemies/reine/a313.png
+    frame    data/chars/enemies/reine/a313.png
+    frame    data/chars/enemies/reine/a314.png
+    frame    data/chars/enemies/reine/a314.png
+    frame    data/chars/enemies/reine/a315.png
+    frame    data/chars/enemies/reine/a315.png
+    frame    data/chars/enemies/reine/a316.png
+    frame    data/chars/enemies/reine/a316.png
+    frame    data/chars/enemies/reine/a317.png
+    frame    data/chars/enemies/reine/a317.png
+    frame    data/chars/enemies/reine/a318.png
+    frame    data/chars/enemies/reine/a318.png
+    frame    data/chars/enemies/reine/a319.png
+    frame    data/chars/enemies/reine/a319.png
+    frame    data/chars/enemies/reine/a320.png
+    frame    data/chars/enemies/reine/a320.png
 
 
 anim runattack
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s200.png
-	frame	data/chars/enemies/reine/s201.png
-	frame	data/chars/enemies/reine/s202.png
-	frame	data/chars/enemies/reine/s203.png
-	frame	data/chars/enemies/reine/s205.png
-	frame	data/chars/enemies/reine/s205.png
-	frame	data/chars/enemies/reine/s206.png
-	frame	data/chars/enemies/reine/s206.png
-	frame	data/chars/enemies/reine/s207.png
-	frame	data/chars/enemies/reine/s208.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s200.png
+    frame    data/chars/enemies/reine/s201.png
+    frame    data/chars/enemies/reine/s202.png
+    frame    data/chars/enemies/reine/s203.png
+    frame    data/chars/enemies/reine/s205.png
+    frame    data/chars/enemies/reine/s205.png
+    frame    data/chars/enemies/reine/s206.png
+    frame    data/chars/enemies/reine/s206.png
+    frame    data/chars/enemies/reine/s207.png
+    frame    data/chars/enemies/reine/s208.png
 
 
 anim upper
-	loop	0
-	delay	1000
-	offset	130 190
-	frame	data/chars/enemies/reine/s200.png
-	frame	data/chars/enemies/reine/s201.png
-	frame	data/chars/enemies/reine/s202.png
-	frame	data/chars/enemies/reine/s203.png
-	frame	data/chars/enemies/reine/s205.png
-	frame	data/chars/enemies/reine/s205.png
-	frame	data/chars/enemies/reine/s206.png
-	frame	data/chars/enemies/reine/s206.png
-	frame	data/chars/enemies/reine/s207.png
-	frame	data/chars/enemies/reine/s208.png
+    loop    0
+    delay    1000
+    offset    130 190
+    frame    data/chars/enemies/reine/s200.png
+    frame    data/chars/enemies/reine/s201.png
+    frame    data/chars/enemies/reine/s202.png
+    frame    data/chars/enemies/reine/s203.png
+    frame    data/chars/enemies/reine/s205.png
+    frame    data/chars/enemies/reine/s205.png
+    frame    data/chars/enemies/reine/s206.png
+    frame    data/chars/enemies/reine/s206.png
+    frame    data/chars/enemies/reine/s207.png
+    frame    data/chars/enemies/reine/s208.png

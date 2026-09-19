@@ -3,9 +3,9 @@
 
 void main()
 {
-	jumpVel();
-	parrow();
-	debugMode();
-	superArmor();
-	checkText("ANI_FREESPECIAL", "RAGE");
+    jumpVel();
+    parrow();
+    debugMode();
+    superArmor();
+    checkText("ANI_FREESPECIAL", "RAGE");
 }

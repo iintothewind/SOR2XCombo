@@ -1,142 +1,142 @@
-loadingbg	data/bgs/loading1.png 			1 -81 248 480 999 999 0
-background	data/bgs/sor2/st3f/_empty.png	1 1 0 0 0 0 1 1 0
-panel		data/bgs/sor2/st3f/_map.png		none	none
-frontpanel	data/bgs/sor2/st3f/fp00.png
-fglayer		data/bgs/sor2/st3f/fg00.png		-85 0 0 0 0 0 0 -1 -1 1 0
-fglayer		data/bgs/border.png 			1000 1 1 0 0 0 0 -1 -1 1 2
-order		a
-settime		480
+loadingbg    data/bgs/loading1.png             1 -81 248 480 999 999 0
+background    data/bgs/sor2/st3f/_empty.png    1 1 0 0 0 0 1 1 0
+panel        data/bgs/sor2/st3f/_map.png        none    none
+frontpanel    data/bgs/sor2/st3f/fp00.png
+fglayer        data/bgs/sor2/st3f/fg00.png        -85 0 0 0 0 0 0 -1 -1 1 0
+fglayer        data/bgs/border.png             1000 1 1 0 0 0 0 -1 -1 1 2
+order        a
+settime        480
 stagenumber 3
-spawn1		60 20 300
-spawn2		90 40 300
-spawn3		120 20 300
-spawn4		150 40 300
+spawn1        60 20 300
+spawn2        90 40 300
+spawn3        120 20 300
+spawn4        150 40 300
 
 #########################################################################################
 
-light		128 -128
-at			0
+light        128 -128
+at            0
 
 shadowalpha 2
-at			0
+at            0
 
 #########################################################################################
 
-wall		736 240 0 0 1000 1000 25 5000
+wall        736 240 0 0 1000 1000 25 5000
 
 #########################################################################################
 
-load		RouteS 3
-load		Route_Up 3
-load		Route_Right 3
+load        RouteS 3
+load        Route_Up 3
+load        Route_Right 3
 
 #########################################################################################
 
-spawn		Bin_A 1
-flip		1
-coords		450 180 0
-at			0
+spawn        Bin_A 1
+flip        1
+coords        450 180 0
+at            0
 
-spawn		Trash 1
-flip		1
-coords		600 268 0
-at			0
+spawn        Trash 1
+flip        1
+coords        600 268 0
+at            0
 
-spawn		Galsia_Seat 1
-map			2
-flip		0
-coords		385 177 0
-at			0
+spawn        Galsia_Seat 1
+map            2
+flip        0
+coords        385 177 0
+at            0
 
-spawn		Donovan_Wait 1
-map			2
-flip		0
-coords		600 210 0
-at			0
+spawn        Donovan_Wait 1
+map            2
+flip        0
+coords        600 210 0
+at            0
 
-spawn		Donovan_Wait 1
-map			2
-flip		0
-coords		650 230 0
-at			0
+spawn        Donovan_Wait 1
+map            2
+flip        0
+coords        650 230 0
+at            0
 
-spawn		BasicX1 1
-map			1
-flip		1
-coords		600 230 0
-at			50
+spawn        BasicX1 1
+map            1
+flip        1
+coords        600 230 0
+at            50
 
-spawn		BruceB 1
-map			1
-flip		1
-coords		-100 260 0
-at			50
+spawn        BruceB 1
+map            1
+flip        1
+coords        -100 260 0
+at            50
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		-100 260 0
-at			100
+spawn        BasicX3 1
+map            1
+flip        1
+coords        -100 260 0
+at            100
 
-spawn		BasicX3 1
-map			1
-flip		1
-coords		-100 260 0
-at			150
+spawn        BasicX3 1
+map            1
+flip        1
+coords        -100 260 0
+at            150
 
 spawnscript data/scripts/levelspawn/music_random.c
-at			200
+at            200
 
-spawn		JackB 1
-map			4
-weapon		Knife 1
-flip		1
-coords		550 190 0
-at			200
+spawn        JackB 1
+map            4
+weapon        Knife 1
+flip        1
+coords        550 190 0
+at            200
 
-spawn		ElectraX 1
-map			1
-flip		1
-coords		600 190 0
-at			200
+spawn        ElectraX 1
+map            1
+flip        1
+coords        600 190 0
+at            200
 
-spawn		ReineX 1
-map			2
-flip		1
-coords		700 190 0
-at			200
+spawn        ReineX 1
+map            2
+flip        1
+coords        700 190 0
+at            200
 
-spawn		BossX1 1
-map			2
-flip		1
-coords		-100 190 0
-at			200
+spawn        BossX1 1
+map            2
+flip        1
+coords        -100 190 0
+at            200
 
-spawn		BossX1 1
-map			2
+spawn        BossX1 1
+map            2
 2pspawn
-flip		1
-coords		-100 190 0
-at			200
+flip        1
+coords        -100 190 0
+at            200
 
 #########################################################################################
 ###CAUTION - ALL ENTITIES BELOW ARE NECESSARY FOR ALTERNATIVE ROUTES
 ###THE NUMBER OF "RouteS" ENTITIES NEED TO BE: MAX GROUP SIZE -1
 
-group		2 2
-at			288
+group        2 2
+at            288
 
-spawn		RouteS 1
-flip		1
-coords		999 999 0
-at			288
+spawn        RouteS 1
+flip        1
+coords        999 999 0
+at            288
 
-spawn		Route_Up 1
-flip		1
-coords		266 177 40
-at			288
+spawn        Route_Up 1
+flip        1
+coords        266 177 40
+at            288
 
-spawn		Route_Right 1
-flip		1
-coords		440 180 0
-at			288
+spawn        Route_Right 1
+flip        1
+coords        440 180 0
+at            288

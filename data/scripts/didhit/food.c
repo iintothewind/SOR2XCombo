@@ -4,5 +4,5 @@
 void main()
 {//Alternative method to play "get food" sample
 
-	playsample(SAMPLE_FOOD, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
+    playsample(SAMPLE_FOOD, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
 }

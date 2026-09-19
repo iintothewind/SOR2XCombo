@@ -1,57 +1,57 @@
-name			St8_Liquid
-type			obstacle
-subtype			notgrab
-health			1
-nolife			1
-shadow			0
-death			1
-nodieblink		3
-noatflash		1
-flash			Destruction
-stealth			2
-alpha			6
-animationscript	data/scripts/animation/default.c
-#script			data/scripts/updateentity/liquid.c
+name            St8_Liquid
+type            obstacle
+subtype            notgrab
+health            1
+nolife            1
+shadow            0
+death            1
+nodieblink        3
+noatflash        1
+flash            Destruction
+stealth            2
+alpha            6
+animationscript    data/scripts/animation/default.c
+#script            data/scripts/updateentity/liquid.c
 
-load			St8_Bubble
+load            St8_Bubble
 
 anim idle
-	loop	0
-	delay	8
-	offset	244 130
-	bbox 226 41 35 60
-	platform -999 999 1 1 1 1 1 1
-	drawmethod channel 0.8
-	frame	data/bgs/sor3/st8e/liquid00.png
+    loop    0
+    delay    8
+    offset    244 130
+    bbox 226 41 35 60
+    platform -999 999 1 1 1 1 1 1
+    drawmethod channel 0.8
+    frame    data/bgs/sor3/st8e/liquid00.png
 
 anim follow1
-	loop	1
-	delay	600
-	offset	244 130
-	bbox 228 42 32 57
-	platform -999 999 1 1 1 1 1 1
-	drawmethod channel 0.8
-	frame	data/bgs/sor3/st8e/liquid00.png
-	@cmd setVar "alarm" 2
-	frame	data/bgs/sor3/st8e/liquid00.png
+    loop    1
+    delay    600
+    offset    244 130
+    bbox 228 42 32 57
+    platform -999 999 1 1 1 1 1 1
+    drawmethod channel 0.8
+    frame    data/bgs/sor3/st8e/liquid00.png
+    @cmd setVar "alarm" 2
+    frame    data/bgs/sor3/st8e/liquid00.png
 
 anim death
-	loop	1 8 9
-	delay	8
-	offset	244 130
-	sound	data/sounds/Glass.wav
-	drawmethod channel 0.8
-	frame	data/bgs/sor3/st8e/liquid01.png
-	frame	data/bgs/sor3/st8e/liquid02.png
-	frame	data/bgs/sor3/st8e/liquid03.png
-	frame	data/bgs/sor3/st8e/liquid04.png
-	frame	data/bgs/sor3/st8e/liquid05.png
-	frame	data/bgs/sor3/st8e/liquid06.png
-		delay	100
-	frame	data/bgs/sor3/st8e/liquid07.png
-		delay	500
-	@cmd setVar "alarm" 1
-	frame	data/bgs/sor3/st8e/liquid07.png
-	frame	data/bgs/sor3/st8e/liquid07.png
-	frame	data/bgs/sor3/st8e/liquid07.png
-	frame	data/bgs/sor3/st8e/liquid07.png
+    loop    1 8 9
+    delay    8
+    offset    244 130
+    sound    data/sounds/Glass.wav
+    drawmethod channel 0.8
+    frame    data/bgs/sor3/st8e/liquid01.png
+    frame    data/bgs/sor3/st8e/liquid02.png
+    frame    data/bgs/sor3/st8e/liquid03.png
+    frame    data/bgs/sor3/st8e/liquid04.png
+    frame    data/bgs/sor3/st8e/liquid05.png
+    frame    data/bgs/sor3/st8e/liquid06.png
+        delay    100
+    frame    data/bgs/sor3/st8e/liquid07.png
+        delay    500
+    @cmd setVar "alarm" 1
+    frame    data/bgs/sor3/st8e/liquid07.png
+    frame    data/bgs/sor3/st8e/liquid07.png
+    frame    data/bgs/sor3/st8e/liquid07.png
+    frame    data/bgs/sor3/st8e/liquid07.png

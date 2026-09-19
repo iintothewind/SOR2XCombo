@@ -1,18 +1,18 @@
-name			Flash_B
-type			none
-no_adjust_base	0
-subject_to_hole	1
-shadow			0
-antigravity 	100
-toflip			1
-animationscript	data/scripts/animation/default.c
+name            Flash_B
+type            none
+no_adjust_base    0
+subject_to_hole    1
+shadow            0
+antigravity     100
+toflip            1
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	0
-	delay	4
-	offset	15 15
-	frame	data/chars/misc/flash/original/flash00.png
-	frame	data/chars/misc/flash/original/flash01.png
-	frame	data/chars/misc/flash/original/flash02.png
-	@cmd suicide
-	frame	data/chars/misc/flash/original/empty.png
+    loop    0
+    delay    4
+    offset    15 15
+    frame    data/chars/misc/flash/original/flash00.png
+    frame    data/chars/misc/flash/original/flash01.png
+    frame    data/chars/misc/flash/original/flash02.png
+    @cmd suicide
+    frame    data/chars/misc/flash/original/empty.png

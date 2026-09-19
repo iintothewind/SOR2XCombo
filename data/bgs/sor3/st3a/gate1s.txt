@@ -1,11 +1,11 @@
-name		St3_Gate1S #SHADOW ENTITY FOR PLATFORM
-type		none
-shadow		0
-antigravity	100
+name        St3_Gate1S #SHADOW ENTITY FOR PLATFORM
+type        none
+shadow        0
+antigravity    100
 
 anim idle
-	loop	0
-	delay	16
-	offset	1 1
-	platform 1 1 60 60 50 1000
-	frame	data/bgs/sor3/st3a/_empty.png
+    loop    0
+    delay    16
+    offset    1 1
+    platform 1 1 60 60 50 1000
+    frame    data/bgs/sor3/st3a/_empty.png

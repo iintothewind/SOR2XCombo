@@ -3,8 +3,8 @@
 
 void main()
 {
-	jumpVel();
-	parrow();
-	debugMode();
-	checkText("ANI_FREESPECIAL", "RAGE");
+    jumpVel();
+    parrow();
+    debugMode();
+    checkText("ANI_FREESPECIAL", "RAGE");
 }

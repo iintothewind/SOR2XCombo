@@ -1,10 +1,10 @@
-name		St3_Gate2
-type		none	
-shadow		0
-setlayer	1000
+name        St3_Gate2
+type        none    
+shadow        0
+setlayer    1000
 
 anim idle
-	loop	0
-	delay	6
-	offset	1 180
-	frame	data/bgs/sor3/st3a/gate200.png
+    loop    0
+    delay    6
+    offset    1 180
+    frame    data/bgs/sor3/st3a/gate200.png

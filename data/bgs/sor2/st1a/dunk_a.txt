@@ -1,22 +1,22 @@
-name			st1_dunk_a
-type			none
-shadow			0
-setlayer		-1
-animationscript	data/scripts/animation/default.c
+name            st1_dunk_a
+type            none
+shadow            0
+setlayer        -1
+animationscript    data/scripts/animation/default.c
 
 anim idle
-	loop	1
-	delay	9
-	offset	1 200
-	@cmd offScreenKill 500 0
-	frame	data/bgs/sor2/st1a/dunk_a00.png
-	frame	data/bgs/sor2/st1a/dunk_a01.png
-	frame	data/bgs/sor2/st1a/dunk_a02.png
-	frame	data/bgs/sor2/st1a/dunk_a03.png
-	frame	data/bgs/sor2/st1a/dunk_a04.png
-	frame	data/bgs/sor2/st1a/dunk_a05.png
-	frame	data/bgs/sor2/st1a/dunk_a06.png
-	frame	data/bgs/sor2/st1a/dunk_a07.png
-	frame	data/bgs/sor2/st1a/dunk_a08.png
-	frame	data/bgs/sor2/st1a/dunk_a09.png
-	frame	data/bgs/sor2/st1a/dunk_a10.png
+    loop    1
+    delay    9
+    offset    1 200
+    @cmd offScreenKill 500 0
+    frame    data/bgs/sor2/st1a/dunk_a00.png
+    frame    data/bgs/sor2/st1a/dunk_a01.png
+    frame    data/bgs/sor2/st1a/dunk_a02.png
+    frame    data/bgs/sor2/st1a/dunk_a03.png
+    frame    data/bgs/sor2/st1a/dunk_a04.png
+    frame    data/bgs/sor2/st1a/dunk_a05.png
+    frame    data/bgs/sor2/st1a/dunk_a06.png
+    frame    data/bgs/sor2/st1a/dunk_a07.png
+    frame    data/bgs/sor2/st1a/dunk_a08.png
+    frame    data/bgs/sor2/st1a/dunk_a09.png
+    frame    data/bgs/sor2/st1a/dunk_a10.png

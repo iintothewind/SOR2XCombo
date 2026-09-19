@@ -1,1 +1,1 @@
-animation	data/scenes/ending_a.gif 999 999
+animation    data/scenes/ending_a.gif 999 999
