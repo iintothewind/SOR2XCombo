@@ -3,11 +3,14 @@
 *.gif
 *.wav
 *.exe
+*.ex
+*.exe.bak
 *.pak
-
+.vscode/
+.workbody-ai/
+.reasonix/
 Pak/
 Logs/
 Saves/
 Screenshots
 Music/
-.reasonix/
