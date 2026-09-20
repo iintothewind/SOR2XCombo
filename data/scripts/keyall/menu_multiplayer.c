@@ -5,7 +5,6 @@ void menuMultiplayer(int player)
 
 //HIGHLIGHT OPTIONS:
 //1 - VERSUS DAMAGE                (UPDATED.C, KEYALL.C)
-//2 - MULTIHIT "GLITCH"            (UPDATED.C, KEYALL.C)
 
     int highlight = getglobalvar("highlight");
     int hasplayed = getplayerproperty(player, "hasplayed");
@@ -39,12 +38,6 @@ void menuMultiplayer(int player)
                     if(getglobalvar("versusDamage") == "enabled"){setglobalvar("versusDamage", "disabled");}else
                     if(getglobalvar("versusDamage") == "disabled"){setglobalvar("versusDamage", "enabled");}
                 }
-                
-                //IS MULTIHIT "BUG" HIGHLIGHTED??
-                if(getglobalvar("highlight") == 2){
-                    if(getglobalvar("multiHit") == "enabled"){setglobalvar("multiHit", "disabled");}else
-                    if(getglobalvar("multiHit") == "disabled"){setglobalvar("multiHit", "enabled");}
-                }
                 saveCfg();
             }
             
@@ -56,12 +49,6 @@ void menuMultiplayer(int player)
                 if(getglobalvar("highlight") == 1){
                     if(getglobalvar("versusDamage") == "enabled"){setglobalvar("versusDamage", "disabled");}else
                     if(getglobalvar("versusDamage") == "disabled"){setglobalvar("versusDamage", "enabled");}
-                }
-                
-                //IS MULTIHIT "BUG" HIGHLIGHTED??
-                if(getglobalvar("highlight") == 2){
-                    if(getglobalvar("multiHit") == "enabled"){setglobalvar("multiHit", "disabled");}else
-                    if(getglobalvar("multiHit") == "disabled"){setglobalvar("multiHit", "enabled");}
                 }
                 saveCfg();
             }
