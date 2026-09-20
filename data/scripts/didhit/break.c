@@ -40,7 +40,7 @@ void customGrab()
     int tBase     = getentityproperty(target,"base");
 
     //JUMP GRAB
-    if(vAniID == openborconstant("ANI_JUMPATTACK2") || vAniID == openborconstant("ANI_JUMPATTACK3") && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
+    if((vAniID == openborconstant("ANI_JUMPATTACK2") || vAniID == openborconstant("ANI_JUMPATTACK3")) && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
         if(tAniID != openborconstant("ANI_FALL8") && tAniID != openborconstant("ANI_FALL9")){ //AVOID THROW/SLAM FALLING ANIMATION TO NOT REPEAT THE SAME GRAB MOVE
             if(iType == openborconstant("TYPE_PLAYER") || iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_NPC")){
                 if(iSubType != openborconstant("SUBTYPE_NOTGRAB")){

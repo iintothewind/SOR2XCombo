@@ -68,7 +68,7 @@ void customGrab()
     }
 
     //JUMP GRAB
-    if(vAniID == openborconstant("ANI_JUMPATTACK") || vAniID == openborconstant("ANI_ATTACK4") && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
+    if((vAniID == openborconstant("ANI_JUMPATTACK") || vAniID == openborconstant("ANI_ATTACK4")) && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
         if(tAniID != openborconstant("ANI_FALL8") && tAniID != openborconstant("ANI_FALL9")){ //AVOID THROW/SLAM FALLING ANIMATION TO NOT REPEAT THE SAME GRAB MOVE
             if(iType == openborconstant("TYPE_PLAYER") || iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_NPC")){
                 if(iSubType != openborconstant("SUBTYPE_NOTGRAB")){

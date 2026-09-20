@@ -25,7 +25,7 @@ void customGrab()
 
     //RAGE GRAB
     if(vAniID == openborconstant("ANI_FOLLOW5")){
-        if(iType == openborconstant("TYPE_PLAYER") || iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_NPC") && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
+        if((iType == openborconstant("TYPE_PLAYER") || iType == openborconstant("TYPE_ENEMY") || iType == openborconstant("TYPE_NPC")) && tAniID != openborconstant("ANI_FREESPECIAL") && entityAlive(target) && targetInvincible == 0){
             if(iSubType != openborconstant("SUBTYPE_NOTGRAB")){
                 performattack(self, openborconstant("ANI_FOLLOW6"), 0);
             }
