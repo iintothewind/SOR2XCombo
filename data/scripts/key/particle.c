@@ -99,7 +99,7 @@ void specialCancel()
                 else
                 if(mPonly == 2 && health > cost || mPonly == 0 && health > cost){
                     if(vAniID == openborconstant("ANI_ATTACK1")){
-                        mpCost(cost);
+                        hpCost(cost);
                         setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                         performattack(self, openborconstant("ANI_SPECIAL2"), 0);
                     }
@@ -108,7 +108,7 @@ void specialCancel()
                         vAniID == openborconstant("ANI_FOLLOW1")||
                         vAniID == openborconstant("ANI_FOLLOW2")||
                         vAniID == openborconstant("ANI_FOLLOW3")){
-                        mpCost(cost);
+                        hpCost(cost);
                         setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                         performattack(self, openborconstant("ANI_SPECIAL2"), 0);
                     }
@@ -156,7 +156,7 @@ void specialCancel()
             if(mPonly == 2 && health > cost || mPonly == 0 && health > cost){
                 if(rush >= 1 && hits >= 1){
                     if(vAniID == openborconstant("ANI_ATTACK1")){
-                        mpCost(cost);
+                        hpCost(cost);
                         setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                         performattack(self, openborconstant("ANI_SPECIAL"), 0);
                     }
@@ -165,7 +165,7 @@ void specialCancel()
                         vAniID == openborconstant("ANI_FOLLOW1")||
                         vAniID == openborconstant("ANI_FOLLOW2")||
                         vAniID == openborconstant("ANI_FOLLOW3")){
-                        mpCost(cost);
+                        hpCost(cost);
                         setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                         performattack(self, openborconstant("ANI_SPECIAL"), 0);
                     }
