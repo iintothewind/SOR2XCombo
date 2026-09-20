@@ -390,6 +390,7 @@ void ftkunai()
             vAniID == openborconstant("ANI_BACKRUN")    ||
             vAniID == openborconstant("ANI_RISE")    ||
             vAniID == openborconstant("ANI_RISE")    ||
+            vAniID == openborconstant("ANI_LAND")    ||
             vAniID == openborconstant("ANI_JUMPLAND")){
             if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK8")) == 1 && gp >= gpCostAmt){
                 gpCost(gpCostAmt);

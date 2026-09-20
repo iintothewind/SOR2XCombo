@@ -130,7 +130,7 @@ void specialCancel()
         float gp         = getentityproperty(self,"guardpoints");
         float gpCostAmt    = maxGp/3;
 
-        if(vAniID == openborconstant("ANI_GRABATTACK") || vAniID == openborconstant("ANI_GRABATTACK")){
+        if(vAniID == openborconstant("ANI_GRABATTACK")){
             if(gp >= gpCostAmt && frame > 6 && frame < 23 && rush > 1 && hits > 5  && base == height){
                 gpCost(gpCostAmt);
                 mpCost(-1);
