@@ -114,19 +114,19 @@ void specialCancel()
     if(playerkeys(iPIndex, 1, "attack")){
         float maxGp    = getentityproperty(self,"maxguardpoints");
         float gp         = getentityproperty(self,"guardpoints");
-        float gpCost    = maxGp/3;
+        float gpCostAmt    = maxGp/3;
 
         if(vAniID == openborconstant("ANI_SPECIAL2")){
-            if(gp >= gpCost && frame > 8 && frame < 15 && rush > 1 && hits > 1 && base == height){
-                    gpCost(gpCost);
+            if(gp >= gpCostAmt && frame > 8 && frame < 15 && rush > 1 && hits > 1 && base == height){
+                    gpCost(gpCostAmt);
                     mpCost(-3);
                     performattack(self, openborconstant("ANI_FREESPECIAL20"), 0);
             }
         }
 
         if(vAniID == openborconstant("ANI_FREESPECIAL20")){
-            if(gp >= gpCost && frame > 5 && frame < 14 && rush > 1 && hits > 3  && base == height){
-                    gpCost(gpCost);
+            if(gp >= gpCostAmt && frame > 5 && frame < 14 && rush > 1 && hits > 3  && base == height){
+                    gpCost(gpCostAmt);
                     mpCost(-3);
                     updateframe(self, 0);
             }

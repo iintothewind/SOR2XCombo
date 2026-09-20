@@ -115,19 +115,19 @@ void specialCancel()
     if(playerkeys(iPIndex, 1, "attack")){
         float maxGp    = getentityproperty(self,"maxguardpoints");
         float gp         = getentityproperty(self,"guardpoints");
-        float gpCost    = maxGp/3;
+        float gpCostAmt    = maxGp/3;
 
         if(vAniID == openborconstant("ANI_SPECIAL2")){
-            if(gp >= gpCost && frame > 8 && frame < 15 && rush > 1 && hits > 1  && base == height){
-                gpCost(gpCost);
+            if(gp >= gpCostAmt && frame > 8 && frame < 15 && rush > 1 && hits > 1  && base == height){
+                gpCost(gpCostAmt);
                 mpCost(-3);
                 performattack(self, openborconstant("ANI_FREESPECIAL20"), 0);
             }
         }
 
         if(vAniID == openborconstant("ANI_FREESPECIAL20")){
-            if(gp >= gpCost && frame > 8 && frame < 19 && rush > 1 && hits > 1 && base == height){
-                gpCost(gpCost);
+            if(gp >= gpCostAmt && frame > 8 && frame < 19 && rush > 1 && hits > 1 && base == height){
+                gpCost(gpCostAmt);
                 mpCost(-3);
                 updateframe(self, 0);
             }
@@ -163,9 +163,9 @@ void specialCancel()
     else if(playerkeys(iPIndex, 1, "special") && playerkeys(iPIndex, 0, "moveup")) {
         float maxGp    = getentityproperty(self,"maxguardpoints");
         float gp         = getentityproperty(self,"guardpoints");
-        float gpCost    = maxGp/3;
-        if(gp >= gpCost && vAniID == openborconstant("ANI_FOLLOW8") && rush >= 1 && hits >= 1 && height > base){
-            gpCost(gpCost);
+        float gpCostAmt    = maxGp/3;
+        if(gp >= gpCostAmt && vAniID == openborconstant("ANI_FOLLOW8") && rush >= 1 && hits >= 1 && height > base){
+            gpCost(gpCostAmt);
             changeentityproperty(self, "velocity", 0, 0, 0);
             setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
             performattack(self, openborconstant("ANI_ATTACK9"), 0);
@@ -174,12 +174,12 @@ void specialCancel()
     else if(playerkeys(iPIndex, 1, "attack4") && playerkeys(iPIndex, 0, "moveup")) {
         float maxGp    = getentityproperty(self,"maxguardpoints");
         float gp         = getentityproperty(self,"guardpoints");
-        float gpCost    = maxGp/3;
-        if(gp >= gpCost && (vAniID == openborconstant("ANI_RUNATTACK")
+        float gpCostAmt    = maxGp/3;
+        if(gp >= gpCostAmt && (vAniID == openborconstant("ANI_RUNATTACK")
          || vAniID == openborconstant("ANI_SPECIAL2")
          || vAniID == openborconstant("ANI_FREESPECIAL20")
          || vAniID == openborconstant("ANI_ATTACK3")) && rush >= 1 && hits >= 1 && height == base){
-            gpCost(gpCost);
+            gpCost(gpCostAmt);
             changeentityproperty(self, "velocity", 0, 0, 0);
             setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
             performattack(self, openborconstant("ANI_ATTACK9"), 0);
@@ -223,7 +223,7 @@ void airCombo()
     int mPonly        = getentityproperty(self,"energycost", "mponly", openborconstant("ANI_SPECIAL2"));
     int maxGp    = getentityproperty(self,"maxguardpoints");
     int gp         = getentityproperty(self,"guardpoints");
-    int gpCost    = maxGp/3;
+    int gpCostAmt    = maxGp/3;
     int xDir        = getentityproperty(self,"xdir");
     int zDir        = getentityproperty(self,"zdir");
     int Vx            = 1.5;
@@ -278,7 +278,7 @@ void airCombo()
             if((vAniID == openborconstant("ANI_SPECIAL2")
              || vAniID == openborconstant("ANI_FREESPECIAL20")
              || vAniID == openborconstant("ANI_FOLLOW7")) && rush >= 1 && hits >= 1 && height > base){
-                gpCost(gpCost);
+                gpCost(gpCostAmt);
                 tossentity(self, Vy, Vx, zDir);
                 setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                 performattack(self, openborconstant("ANI_ATTACK9"), 0);
@@ -287,7 +287,7 @@ void airCombo()
             }
 
             if((vAniID == openborconstant("ANI_FREESPECIAL")||vAniID == openborconstant("ANI_FREESPECIAL21")) && rush >= 1 && hits >= 1 && height > base){
-                gpCost(gpCost);
+                gpCost(gpCostAmt);
                 tossentity(self, Vy, Vx, zDir);
                 setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                 performattack(self, openborconstant("ANI_ATTACK9"), 0);
@@ -296,7 +296,7 @@ void airCombo()
             }
 
             if(vAniID == openborconstant("ANI_JUMP") || vAniID == openborconstant("ANI_WALKOFF")){
-                gpCost(gpCost);
+                gpCost(gpCostAmt);
                 performattack(self, openborconstant("ANI_ATTACK9"), 0);
                 changeentityproperty(self, "aiflag", "jumping", 1);
                 changeentityproperty(self, "takeaction", "common_jump");
@@ -304,7 +304,7 @@ void airCombo()
 
             if(vAniID == openborconstant("ANI_JUMPATTACK") || vAniID == openborconstant("ANI_JUMPATTACK2") ||
                 vAniID == openborconstant("ANI_JUMPATTACK3") || vAniID == openborconstant("ANI_JUMPFORWARD")){
-                gpCost(gpCost);
+                gpCost(gpCostAmt);
                 tossentity(self, Vy, Vx, zDir);
                 performattack(self, openborconstant("ANI_ATTACK9"), 0);
                 changeentityproperty(self, "aiflag", "jumping", 1);
@@ -458,15 +458,15 @@ void upper()
     void eButton = getglobalvar("extraButton");
     int maxGp    = getentityproperty(self,"maxguardpoints");
     int gp         = getentityproperty(self,"guardpoints");
-    int gpCost    = maxGp/3;
+    int gpCostAmt    = maxGp/3;
 
     if(playerkeys(iPIndex, 1, "attack4") && playerkeys(iPIndex, 0, "moveup")){
         if(vAniID == openborconstant("ANI_IDLE")    ||
             vAniID == openborconstant("ANI_WALK")    ||
             vAniID == openborconstant("ANI_RUN")    ||
             vAniID == openborconstant("ANI_JUMPLAND")){
-            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCost){
-                gpCost(gpCost);
+            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCostAmt){
+                gpCost(gpCostAmt);
                 setidle(self, openborconstant("ANI_IDLE"));
                 changeentityproperty(self, "velocity", 0, 0, 0);
                 performattack(self, openborconstant("ANI_ATTACK9"), 1);

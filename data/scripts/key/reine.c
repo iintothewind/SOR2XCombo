@@ -95,7 +95,7 @@ void specialCancel()
     int health     = getentityproperty(self,"health");
     int maxGp    = getentityproperty(self,"maxguardpoints");
     int gp         = getentityproperty(self,"guardpoints");
-    int gpCost    = maxGp/3;
+    int gpCostAmt    = maxGp/3;
     int mp         = getentityproperty(self,"mp");
     int cost     = getentityproperty(self,"energycost", "cost", openborconstant("ANI_SPECIAL2"));
     int cost2     = getentityproperty(self,"energycost", "cost", openborconstant("ANI_FREESPECIAL6"));
@@ -104,11 +104,11 @@ void specialCancel()
     if(playerkeys(iPIndex, 1, "attack")){
         float maxGp    = getentityproperty(self,"maxguardpoints");
         float gp         = getentityproperty(self,"guardpoints");
-        float gpCost    = maxGp/3;
+        float gpCostAmt    = maxGp/3;
 
         if(vAniID == openborconstant("ANI_GRABATTACK")){
-            if(gp >= gpCost && frame > 7 && frame < 31 && rush > 1 && hits > 1  && base == height){
-                gpCost(gpCost);
+            if(gp >= gpCostAmt && frame > 7 && frame < 31 && rush > 1 && hits > 1  && base == height){
+                gpCost(gpCostAmt);
                 mpCost(-1);
                 updateframe(self, 1);
             }
@@ -336,15 +336,15 @@ void whipGrab()
     void eButton = getglobalvar("extraButton");
     int maxGp    = getentityproperty(self,"maxguardpoints");
     int gp         = getentityproperty(self,"guardpoints");
-    int gpCost    = maxGp/3;
+    int gpCostAmt    = maxGp/3;
 
     if(playerkeys(iPIndex, 1, "attack4") && playerkeys(iPIndex, 0, "moveup")){
         if(    vAniID == openborconstant("ANI_IDLE")    ||
             vAniID == openborconstant("ANI_WALK")    ||
             vAniID == openborconstant("ANI_RUN")    ||
             vAniID == openborconstant("ANI_JUMPLAND")){
-            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCost){
-                gpCost(gpCost);
+            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCostAmt){
+                gpCost(gpCostAmt);
                 setidle(self, openborconstant("ANI_IDLE"));
                 changeentityproperty(self, "velocity", 0, 0, 0);
                 performattack(self, openborconstant("ANI_ATTACK9"), 1);

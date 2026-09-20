@@ -107,19 +107,19 @@ void specialCancel()
     if(playerkeys(iPIndex, 1, "attack")){
         float maxGp    = getentityproperty(self,"maxguardpoints");
         float gp         = getentityproperty(self,"guardpoints");
-        float gpCost    = maxGp/3;
+        float gpCostAmt    = maxGp/3;
 
         if(vAniID == openborconstant("ANI_GRABDOWN") && model == "Kage"){
-            if(gp >= gpCost && frame > 1 && frame < 15 && rush > 1 && hits > 1 && base == height){
-                    gpCost(gpCost);
+            if(gp >= gpCostAmt && frame > 1 && frame < 15 && rush > 1 && hits > 1 && base == height){
+                    gpCost(gpCostAmt);
                     mpCost(-1);
                     performattack(self, openborconstant("ANI_FOLLOW20"), 0);
             }
         }
 
         if(vAniID == openborconstant("ANI_FOLLOW20") && model == "Kage"){
-            if(gp >= gpCost && frame < 27 && rush > 1 && hits > 5 && base == height){
-                    gpCost(gpCost);
+            if(gp >= gpCostAmt && frame < 27 && rush > 1 && hits > 5 && base == height){
+                    gpCost(gpCostAmt);
                     mpCost(-1);
                     updateframe(self, 0);
             }
@@ -359,7 +359,7 @@ void ftkunai()
     void eButton = getglobalvar("extraButton");
     int maxGp    = getentityproperty(self,"maxguardpoints");
     int gp         = getentityproperty(self,"guardpoints");
-    int gpCost    = maxGp/3;
+    int gpCostAmt    = maxGp/3;
 
     if(playerkeys(iPIndex, 1, "attack4") && playerkeys(iPIndex, 0, "moveup")){
         if(    vAniID == openborconstant("ANI_IDLE")    ||
@@ -369,8 +369,8 @@ void ftkunai()
             vAniID == openborconstant("ANI_RISE")    ||
             vAniID == openborconstant("ANI_LAND")    ||
             vAniID == openborconstant("ANI_JUMPLAND")){
-            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCost){
-                gpCost(gpCost);
+            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCostAmt){
+                gpCost(gpCostAmt);
                 setidle(self, openborconstant("ANI_IDLE"));
                 changeentityproperty(self, "velocity", 0, 0, 0);
                 performattack(self, openborconstant("ANI_ATTACK9"), 1);
@@ -391,8 +391,8 @@ void ftkunai()
             vAniID == openborconstant("ANI_RISE")    ||
             vAniID == openborconstant("ANI_RISE")    ||
             vAniID == openborconstant("ANI_JUMPLAND")){
-            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK8")) == 1 && gp >= gpCost){
-                gpCost(gpCost);
+            if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK8")) == 1 && gp >= gpCostAmt){
+                gpCost(gpCostAmt);
                 setidle(self, openborconstant("ANI_IDLE"));
                 changeentityproperty(self, "velocity", 0, 0, 0);
                 performattack(self, openborconstant("ANI_ATTACK8"), 1);
