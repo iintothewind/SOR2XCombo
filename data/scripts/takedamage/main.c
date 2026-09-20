@@ -195,23 +195,20 @@ void escapeCount()
     int escapeH        = getentityproperty(self, "escapehits");
 
     if(escapeH > 0){
-        void type = getentityproperty(self, "type");
-        int dif   = 1;
-        int chance;
-        int iR    = rand()%100;
+        void type      = getentityproperty(self, "type");
+        int dif        = 1;
+        int chance     = 0;
+        int iR         = rand()%100;
 
         if(type == openborconstant("TYPE_ENEMY")){
-
             //100% CHANCE
-            if(difficult == "normal"){    chance = 100;}else
-            //75% CHANCE
-            if(difficult == "hard"){    chance = 75;}else
-            //50% CHANCE
-            if(difficult == "mania"){    chance = 50;}
+            if(difficult == "normal"){
+                chance = 100;
+            }else if(difficult == "hard"){
+                chance = 75;
+            }else if(difficult == "mania"){
+                chance = 50;
             }
-            else
-            {
-            chance = 0;
         }
         if(iR < chance){changeentityproperty(self, "escapecount", escapeC-dif);}
     }
