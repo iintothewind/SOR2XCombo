@@ -202,16 +202,15 @@ void escapeCount()
 
         if(type == openborconstant("TYPE_ENEMY")){
 
-            //50% CHANCE
-            if(difficult == "normal"){    chance = 50;}else
+            //100% CHANCE
+            if(difficult == "normal"){    chance = 100;}else
             //75% CHANCE
             if(difficult == "hard"){    chance = 75;}else
-            //100% CHANCE
-            if(difficult == "mania"){    chance = 100;}
+            //50% CHANCE
+            if(difficult == "mania"){    chance = 50;}
             }
             else
             {
-            //100% CHANCE
             chance = 0;
         }
         if(iR < chance){changeentityproperty(self, "escapecount", escapeC-dif);}
