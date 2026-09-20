@@ -536,10 +536,8 @@ void koCount()
                 if(parent != NULL()){
                     if(pType == openborconstant("TYPE_PLAYER")){
                         pIndex = getentityproperty(parent,"playerindex");
-                        if(pIndex != NULL()) {
-                            setglobalvar("ko"+pIndex, getglobalvar("ko"+pIndex)+add);
-                            playsample(SAMPLE_KO, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
-                        }
+                        setglobalvar("ko"+pIndex, getglobalvar("ko"+pIndex)+add);
+                        playsample(SAMPLE_KO, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, 0);
                     }
                 }
             }

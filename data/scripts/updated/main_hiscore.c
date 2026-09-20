@@ -154,6 +154,8 @@ void saveS(void file, int tier, int newLine)
 void saveScore()
 {//Save custom hi-score variables to a external file for load each time the game is started
 
+    if(getglobalvar("hiscoreSaved") == 1) return;   //already wrote; avoid per-frame disk write
+    setglobalvar("hiscoreSaved", 1);
     void file = createfilestream();
     int add   = 1;
     int tier  = 0;
@@ -793,85 +795,11 @@ void drawScore()
     drawstring(align, line, font0, str, layer1);line = yPos+title;
 
     //COLUMN 7 - CHARACTER'S ICON
-    align = column+xAdd*3.3;line = line+icon;
-
-    //RANK 1
-    tier = 0;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
+    align = column+xAdd*3.3; line = line+icon;
+    for(tier = 0; tier < 10; tier++){
+        if(getglobalvar("icon"+tier) == NULL()){
+            setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
+        }
+        drawsprite(getglobalvar("icon"+tier), align, line, layer1); line = line+yAdd;
     }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 2
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 3
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 4
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 5
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 6
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 7
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 8
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 9
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
-
-    //RANK 10
-    tier = tier+1;
-    if(getglobalvar("icon"+tier) != NULL()){free(getglobalvar("icon"+tier));setglobalvar("icon"+tier, NULL());}
-    if(getglobalvar("icon"+tier) == NULL()){
-        setglobalvar("icon"+tier, loadsprite("data/sprites/icons/"+getglobalvar("hiscoreIcon"+tier)+".png"));
-    }
-    drawsprite(getglobalvar("icon"+tier), align, line, layer1);line = line+yAdd;
 }

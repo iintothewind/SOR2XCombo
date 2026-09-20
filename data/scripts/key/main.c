@@ -83,7 +83,7 @@ void runAttack()
     int iPIndex  = getlocalvar("player");
     int maxMp     = getentityproperty(self,"maxMp");
     int mp         = getentityproperty(self,"mp");
-    int costMp;
+    int costMp = getentityproperty(self,"energycost", "cost", openborconstant("ANI_FREESPECIAL2"));
     float time     = openborvariant("elapsed_time");
 
 

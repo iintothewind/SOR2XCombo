@@ -157,6 +157,8 @@ void spawnTime()
     float limit        = 50;
 
     if(time <= limit/2){if(openborvariant("count_players") > 0){changeopenborvariant("game_time", limit*1.5);}}
+    //RE-READ game_time AFTER THE WARM-UP EXTENSION SO THE SPAWN GATE BELOW SEES IT (was stale from line 156)
+    time = openborvariant("game_time");
     if(getglobalvar("count_enemies") == NULL()){setglobalvar("count_enemies", 0);}
     if(getlocalvar("bossSpawn") == NULL()){setlocalvar("bossSpawn", bossTrigger);}
 

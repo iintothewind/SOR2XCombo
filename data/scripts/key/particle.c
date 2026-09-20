@@ -99,7 +99,7 @@ void specialCancel()
                 else
                 if(mPonly == 2 && health > cost || mPonly == 0 && health > cost){
                     if(vAniID == openborconstant("ANI_ATTACK1")){
-                        hpCost(cost);
+                        mpCost(cost);
                         setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                         performattack(self, openborconstant("ANI_SPECIAL2"), 0);
                     }
@@ -156,7 +156,7 @@ void specialCancel()
             if(mPonly == 2 && health > cost || mPonly == 0 && health > cost){
                 if(rush >= 1 && hits >= 1){
                     if(vAniID == openborconstant("ANI_ATTACK1")){
-                        hpCost(cost);
+                        mpCost(cost);
                         setglobalvar("specialCancel"+self, openborvariant("elapsed_time"));
                         performattack(self, openborconstant("ANI_SPECIAL"), 0);
                     }

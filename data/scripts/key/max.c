@@ -83,6 +83,7 @@ void rageCancel()
         if(playerkeys(iPIndex, 1, "special")){
             if(vAniID == openborconstant("ANI_ATTACK3")){
                 tossentity(self, Vy, xDir, zDir);
+                mpCost(costMp);
                 performattack(self, openborconstant("ANI_FOLLOW8"), 0);
                 changeentityproperty(self, "aiflag", "jumping", 1);
                 changeentityproperty(self, "takeaction", "common_jump");
@@ -90,6 +91,7 @@ void rageCancel()
 
             if(vAniID == openborconstant("ANI_RUNATTACK")){
                 tossentity(self, Vy, xDir, zDir);
+                mpCost(costMp);
                 performattack(self, openborconstant("ANI_FOLLOW8"), 0);
                 changeentityproperty(self, "aiflag", "jumping", 1);
                 changeentityproperty(self, "takeaction", "common_jump");
@@ -97,6 +99,7 @@ void rageCancel()
 
             if(vAniID == openborconstant("ANI_SPECIAL2")){
                 tossentity(self, Vy, xDir, zDir);
+                mpCost(costMp);
                 performattack(self, openborconstant("ANI_FOLLOW8"), 0);
                 changeentityproperty(self, "aiflag", "jumping", 1);
                 changeentityproperty(self, "takeaction", "common_jump");
