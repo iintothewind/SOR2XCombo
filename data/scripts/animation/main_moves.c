@@ -184,17 +184,19 @@ void targetJump()
 
     if(!selfAlive()){return;}
 
-    void subType = getentityproperty(found, "subtype"); //GET TARGET'S SUBTYPE
     int dir      = getentityproperty(self, "direction"); //GET PLAYER'S FACING DIRECTION
     float x      = getentityproperty(self, "x"); //GET PLAYER'S X COORDINATE
     float z      = getentityproperty(self, "z"); //GET PLAYER'S Z COORDINATE
-    float fZ      = getentityproperty(found, "z"); //GET TARGET'S Z COORDINATE
     float minZ     = openborvariant("player_min_z");
     float jumpS     = getentityproperty(self, "jumpspeed"); //GET SELF JUMPSPEED VALUE
 
-    if(subType != openborconstant("SUBTYPE_NOTGRAB")){
-        if(fZ >= minZ){
-            setlocalvar("target"+self, found); //PUT FOUND TARGET IN LOCAL VARIABLE
+    if(found != NULL()){ //GUARD: skip target-dependent reads below when no target
+        void subType = getentityproperty(found, "subtype"); //GET TARGET'S SUBTYPE
+        float fZ      = getentityproperty(found, "z"); //GET TARGET'S Z COORDINATE
+        if(subType != openborconstant("SUBTYPE_NOTGRAB")){
+            if(fZ >= minZ){
+                setlocalvar("target"+self, found);
+            }
         }
     }
 

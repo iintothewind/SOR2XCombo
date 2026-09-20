@@ -116,7 +116,6 @@ void musicBear()
     void folder;
 
     if(mStyle == "custom"){folder = "Musics/";}else{folder = "data/music/"+mStyle+"/";}
-    void music  = "18.ogg";
     playmusic(folder+music, 1);
     setglobalvar("musicPlaying", music);
 }

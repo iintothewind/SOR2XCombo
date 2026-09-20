@@ -201,8 +201,8 @@ void tossXZ(void name, void ani, float dx, float dy, float dz, float Vy, float m
         changeentityproperty(vShot, "type", openborconstant("TYPE_SHOT"));
         tossentity(vShot, Vy, xVel/mult, zVel/mult);
     }else{
-        changeentityproperty(vShot, "animation", openborconstant(ani));
         vShot = projectile(name, x+dx, z+dz, y+dy, direction, 0, 0, 0);
+        changeentityproperty(vShot, "animation", openborconstant(ani));
         changeentityproperty(vShot, "speed", 0);
         changeentityproperty(vShot, "base", 0);
         changeentityproperty(vShot, "parent", self);
