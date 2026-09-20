@@ -8,8 +8,8 @@ void main()
     void vSpawn;
     int frame    = getentityproperty(self, "animpos");
     float xPos    = openborvariant("xpos");
-    float xR    = rand()%50+50; //Random spawn from left/right
-    float zR    = rand()%50+50; //Random spawn from up/down
+    float xR    = rand()%100; //Random spawn from left/right
+    float zR    = rand()%100; //Random spawn from up/down
     float hRes    = openborvariant("hresolution");
     float vx    = 3;
     float xDist    = 450;

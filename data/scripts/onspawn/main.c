@@ -182,7 +182,7 @@ void spawnX(void name1, void name2, void name3, void name4, float dx, float dy, 
     void vSpawn;
     void vName = getentityproperty(self,"defaultname");
     int  iDir    = getentityproperty(self,"direction");
-    int  iR     = rand()%50+50;
+    int  iR     = rand()%100;
 
     if(iR >= 0 && iR < 25){
         vName = name1;
@@ -291,7 +291,7 @@ void enemyX2(void name1, void name2, float dx, float dy, float dz)
     int map;
 
     //RANDOM NAME
-    iR = rand()%50+50;
+    iR = rand()%100;
 
     if(iR >= 0 && iR < 50){
         vName = name1;
@@ -302,7 +302,7 @@ void enemyX2(void name1, void name2, float dx, float dy, float dz)
     }
 
     //RANDOM LEVEL
-    iR = rand()%50+50;
+    iR = rand()%100;
 
     if(level == 0){
         map = 0;
@@ -378,7 +378,7 @@ void enemyX3(void name1, void name2, void name3, float dx, float dy, float dz)
     int map;
 
     //RANDOM NAME
-    iR = rand()%50+50;
+    iR = rand()%100;
 
     if(iR >= 0 && iR < 33){
         vName = name1;
@@ -393,7 +393,7 @@ void enemyX3(void name1, void name2, void name3, float dx, float dy, float dz)
     }
 
     //RANDOM LEVEL
-    iR = rand()%50+50;
+    iR = rand()%100;
 
     if(level == 0){
         map = 0;

@@ -12,7 +12,7 @@ void enemyTime(float dx, float dy, float dz)
     void vName;
     void vSpawn;
     int  iDir    = getentityproperty(self,"direction");
-    int  iR     = rand()%12+12;
+    int  iR     = rand()%19+1;
 
     if(getglobalvar("end") != 1){
         if(iR == 1)    {vName = "BasicX1";}else
@@ -119,7 +119,7 @@ void spawnX(void name1, void name2, void name3, void name4, float dx, float dy, 
     void vSpawn;
     void vRName = getentityproperty(self,"defaultname");
     int  iDir    = getentityproperty(self,"direction");
-    int  iR     = rand()%50+50;
+    int  iR     = rand()%100;
     float xR     = rand()%240+240;
     float xPos    = openborvariant("xpos");
 

@@ -56,7 +56,7 @@ void main()
         iMap        = level;
     }
 
-    int iR = rand()%6+6;
+    int iR = rand()%11+1;
 
     if(iR == 1){    vAlias = "Galsia";}else
     if(iR == 2){    vAlias = "Joseph";}else

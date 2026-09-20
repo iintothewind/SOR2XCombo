@@ -16,7 +16,7 @@ void sampleAlias(void sample, void alias, int loop)
 
 void sampleRandom(void sample1, float chance1, void sample2, float chance2, int loop)
 {//Play two random samples with defined chance (ST1C THUNDER/CROWDS)
-    float iR = rand()%50+50;
+    float iR = rand()%100;
 
     if(iR >= 0 && iR < chance1){
         playsample(sample1, 0, openborvariant("effectvol"), openborvariant("effectvol"), 100, loop);

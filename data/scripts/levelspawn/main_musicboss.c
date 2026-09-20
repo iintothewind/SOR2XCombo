@@ -68,7 +68,7 @@ void musicBossX()
     void music8 = "40.ogg"; //SOR3 DR. ZERO THEME
     void music;
     void folder;
-    float iR     = rand()%50+50;
+    float iR     = rand()%100;
 
     if(mStyle == "custom"){folder = "Musics/";}else{folder = "data/music/"+mStyle+"/";}
 

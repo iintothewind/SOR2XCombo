@@ -36,7 +36,7 @@ void main()
     }
 
     //RANDOM PALETTES
-    int iR1 = rand()%50+50;
+    int iR1 = rand()%100;
 
     if(iR1 >= 0 && iR1 < 20){
         iMap = 0;
@@ -59,7 +59,7 @@ void main()
     }
 
     //RANDOM NAMES
-    int iR2 = rand()%9+9;
+    int iR2 = rand()%16+1;
 
     if(iR2 == 1){    vAlias = "Fog";}else
     if(iR2 == 2){    vAlias = "Gale";}else

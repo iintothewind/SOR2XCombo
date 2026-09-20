@@ -94,7 +94,7 @@ void cancelRandom(int xMin, int xMax, int yMin, int yMax, int limit, void ani)
     int y         = getentityproperty(self, "y");
     int mp         = getentityproperty(self, "mp");
     int dir     = getentityproperty(self, "direction");
-    float iR     = rand()%50+50;
+    float iR     = rand()%100;
 
     if(target != NULL() && selfAlive()){
         int Tx = getentityproperty(target, "x");
@@ -281,7 +281,7 @@ void cancelBack(void ani)
 void cancelFall(float chance, void ani)
 {//Cancel throw or slam fall RANDOMLY with defined animation (ENEMIES/JET FALL)
     void self  = getlocalvar("self");
-    float iR   = rand()%50+50;
+    float iR   = rand()%100;
 
     if(selfAlive()){
         if(iR >= 0 && iR <= chance){executeanimation(self, openborconstant(ani), 1);}

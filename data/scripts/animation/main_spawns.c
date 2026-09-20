@@ -323,7 +323,7 @@ void spawnScreenX(void name, float fX, float fY, float fZ)
     void vSpawn = spawn01(name, 0, 0, 0);
     float xPos     = openborvariant("xpos");
     float xR     = rand()%220+240; //RANDOM XPOS
-    float sR     = rand()%50+50; //RANDOM SPAWN
+    float sR     = rand()%100; //RANDOM SPAWN
 
     if(sR >= 0 && sR < 50){
         fX = fX+xPos+xR; //CHANGES POSITION RELATIVE TO XPOS

@@ -55,7 +55,7 @@ void main()
         iMap        = level;
     }
 
-    int iR = rand()%50+50;
+    int iR = rand()%100;
 
     if(iR < 50){vAlias = "McBride";}else
     {vAlias = "Bronz";}

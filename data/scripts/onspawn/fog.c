@@ -67,7 +67,7 @@ void main()
         }
     }
 
-    int iR = rand()%9+9;
+    int iR = rand()%16+1;
 
     if(iR == 1){    vAlias = "Fog";}else
     if(iR == 2){    vAlias = "Gale";}else

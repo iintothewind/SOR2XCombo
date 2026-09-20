@@ -55,7 +55,7 @@ void main()
         iMap        = level;
     }
 
-    int iR = rand()%10+10;
+    int iR = rand()%18+1;
 
     if(iR == 1){    vAlias = "Kusanagi";}else
     if(iR == 2){    vAlias = "Ryouhin";}else

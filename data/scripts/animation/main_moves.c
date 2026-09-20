@@ -26,8 +26,8 @@ void dashRandom(float Vx, float Vz)
 {//Dash with random X/Z axis (ALL DODGE MOVES LIKE KUSANAGI DODGE)
     void self = getlocalvar("self");
     int dir   = getentityproperty(self,"direction");
-    float iR1 = rand()%50+50;
-    float iR2 = rand()%50+50;
+    float iR1 = rand()%100;
+    float iR2 = rand()%100;
 
     if(!selfAlive()){return;}
 
@@ -74,8 +74,8 @@ void leapRandom(float Vx, float Vy, float Vz)
 {//Leap with desired speed and random X/Z axis (ALL DODGE JUMPS, LIKE SHIVA DODGE)
     void self = getlocalvar("self");
     int dir   = getentityproperty(self,"direction");
-    float iR1 = rand()%50+50;
-    float iR2 = rand()%50+50;
+    float iR1 = rand()%100;
+    float iR2 = rand()%100;
 
     if(!selfAlive()){return;}
 
