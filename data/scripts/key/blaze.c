@@ -389,12 +389,12 @@ void upperAttack()
     int gpCostAmt    = maxGp/3;
 
     if(playerkeys(iPIndex, 1, "attack4") && playerkeys(iPIndex, 0, "moveup")){
-        if(    vAniID == openborconstant("ANI_IDLE")
+        if(( vAniID == openborconstant("ANI_IDLE")
          || vAniID == openborconstant("ANI_WALK")
          || vAniID == openborconstant("ANI_RUN")
          || vAniID == openborconstant("ANI_ATTACK3")
          || vAniID == openborconstant("ANI_SPECIAL2")
-         || vAniID == openborconstant("ANI_JUMPLAND") && height == base){
+         || vAniID == openborconstant("ANI_JUMPLAND")) && height == base){
             if(getentityproperty(self, "animvalid", openborconstant("ANI_ATTACK9")) == 1 && gp >= gpCostAmt){
                 mpCost(-6);
                 gpCost(gpCostAmt);
