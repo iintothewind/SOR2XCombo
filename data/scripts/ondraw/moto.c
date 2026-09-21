@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/animation/main_spawns.c"
 
 void main()
@@ -60,7 +61,7 @@ void zLimit()
     void branch = openborvariant("current_branch");
     void type     = getentityproperty(self, "type");
     int z         = getentityproperty(self, "z");
-    float zR    = rand()%20+430;
+    float zR    = rnd(20)+429;
     
     if(branch == "sor2_st6b"){
         if(type == openborconstant("TYPE_ENEMY")){if(z <= 409){changeentityproperty(self, "z", zR);}}

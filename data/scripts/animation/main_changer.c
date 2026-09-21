@@ -73,7 +73,7 @@ void aniMp(void ani, int limit)
 void aniRandom(void ani)
 {//Random animation changer (SOR3 LAMPS)
     void self = getlocalvar("self");
-    float iR  = rand()%100;
+    float iR  = rnd(100)-1;
 
     if(!selfAlive()){return;}
 
@@ -408,7 +408,7 @@ void flipRandom()
 {//Flip to opposite direction Randomly (JET LANDSAFE, ROO RISEATTACK)
     void self = getlocalvar("self");
     int dir   = getentityproperty(self,"direction");
-    float iR  = rand()%100;
+    float iR  = rnd(100)-1;
 
     if(!selfAlive()){return;}
 

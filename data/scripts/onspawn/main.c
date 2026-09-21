@@ -1,3 +1,5 @@
+#import "data/scripts/main.c"
+
 void onspawnEnemy(void vAlias, float iMHealth, float iHealth, float iSpeed, float iAggre, float iScore, float iMap)
 {//Set attributes for each spawned character (FOR ENEMIES)
     void self        = getlocalvar("self");
@@ -182,21 +184,21 @@ void spawnX(void name1, void name2, void name3, void name4, float dx, float dy, 
     void vSpawn;
     void vName = getentityproperty(self,"defaultname");
     int  iDir    = getentityproperty(self,"direction");
-    int  iR     = rand()%100;
+    int  iR     = rnd(100);
 
-    if(iR >= 0 && iR < 25){
+    if(iR >= 1 && iR < 26){
         vName = name1;
     }
     else
-    if(iR >= 25 && iR < 50){
+    if(iR >= 26 && iR < 51){
         vName = name2;
     }
     else
-    if(iR >= 50 && iR < 75){
+    if(iR >= 51 && iR < 76){
         vName = name3;
     }
     else
-    if(iR >= 75 && iR <= 100){
+    if(iR >= 76 && iR <= 100){
         vName = name4;
     }
 
@@ -291,67 +293,67 @@ void enemyX2(void name1, void name2, float dx, float dy, float dz)
     int map;
 
     //RANDOM NAME
-    iR = rand()%100;
+    iR = rnd(100);
 
-    if(iR >= 0 && iR < 50){
+    if(iR >= 1 && iR <= 50){
         vName = name1;
     }
     else
-    if(iR >= 50 && iR <= 100){
+    if(iR >= 51 && iR <= 100){
         vName = name2;
     }
 
     //RANDOM LEVEL
-    iR = rand()%100;
+    iR = rnd(100);
 
     if(level == 0){
         map = 0;
     }
     else
     if(level == 1){
-        if(iR >= 0 && iR < 50){
+        if(iR >= 1 && iR <= 50){
             map = 0;
         }
         else
-        if(iR >= 50 && iR <= 100){
+        if(iR >= 51 && iR <= 100){
             map = 1;
         }
     }
     else
     if(level == 2){
-        if(iR >= 0 && iR < 50){
+        if(iR >= 1 && iR <= 50){
             map = 1;
         }
         else
-        if(iR >= 50 && iR <= 100){
+        if(iR >= 51 && iR <= 100){
             map = 2;
         }
     }
     else
     if(level == 3){
-        if(iR >= 0 && iR < 33){
+        if(iR >= 1 && iR <= 33){
             map = 1;
         }
         else
-        if(iR >= 33 && iR < 67){
+        if(iR >= 34 && iR <= 67){
             map = 2;
         }
         else
-        if(iR >= 67 && iR <= 100){
+        if(iR >= 68 && iR <= 100){
             map = 3;
         }
     }
     else
     if(level == 4){
-        if(iR >= 0 && iR < 33){
+        if(iR >= 1 && iR <= 33){
             map = 2;
         }
         else
-        if(iR >= 33 && iR < 67){
+        if(iR >= 34 && iR <= 67){
             map = 3;
         }
         else
-        if(iR >= 67 && iR <= 100){
+        if(iR >= 68 && iR <= 100){
             map = 4;
         }
     }
@@ -378,71 +380,71 @@ void enemyX3(void name1, void name2, void name3, float dx, float dy, float dz)
     int map;
 
     //RANDOM NAME
-    iR = rand()%100;
+    iR = rnd(100);
 
-    if(iR >= 0 && iR < 33){
+    if(iR >= 1 && iR <= 33){
         vName = name1;
     }
     else
-    if(iR >= 33 && iR < 67){
+    if(iR >= 34 && iR <= 67){
         vName = name2;
     }
     else
-    if(iR >= 67 && iR <= 100){
+    if(iR >= 68 && iR <= 100){
         vName = name3;
     }
 
     //RANDOM LEVEL
-    iR = rand()%100;
+    iR = rnd(100);
 
     if(level == 0){
         map = 0;
     }
     else
     if(level == 1){
-        if(iR >= 0 && iR < 50){
+        if(iR >= 1 && iR <= 50){
             map = 0;
         }
         else
-        if(iR >= 50 && iR <= 100){
+        if(iR >= 51 && iR <= 100){
             map = 1;
         }
     }
     else
     if(level == 2){
-        if(iR >= 0 && iR < 50){
+        if(iR >= 1 && iR <= 50){
             map = 1;
         }
         else
-        if(iR >= 50 && iR <= 100){
+        if(iR >= 51 && iR <= 100){
             map = 2;
         }
     }
     else
     if(level == 3){
-        if(iR >= 0 && iR < 33){
+        if(iR >= 1 && iR <= 33){
             map = 1;
         }
         else
-        if(iR >= 33 && iR < 67){
+        if(iR >= 34 && iR <= 67){
             map = 2;
         }
         else
-        if(iR >= 67 && iR <= 100){
+        if(iR >= 68 && iR <= 100){
             map = 3;
         }
     }
     else
     if(level == 4){
-        if(iR >= 0 && iR < 33){
+        if(iR >= 1 && iR <= 33){
             map = 2;
         }
         else
-        if(iR >= 33 && iR < 67){
+        if(iR >= 34 && iR <= 67){
             map = 3;
         }
         else
-        if(iR >= 67 && iR <= 100){
+        if(iR >= 68 && iR <= 100){
             map = 4;
         }
     }

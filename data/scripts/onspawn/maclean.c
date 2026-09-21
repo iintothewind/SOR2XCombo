@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/onspawn/main.c"
 #import "data/scripts/attributes.h"
 
@@ -55,7 +56,7 @@ void main()
         iMap        = level;
     }
 
-    int iR = rand()%100;
+    int iR = rnd(100)-1;
 
     if(iR < 50){vAlias = "Maclean";}else
     {vAlias = "Silver";}

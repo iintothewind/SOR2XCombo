@@ -36,7 +36,7 @@ void targetLock()
     float time    = openborvariant("elapsed_time");
     float endC    = 359;
     float rate    = 2;
-    float iR    = rand()%10;
+    float iR    = rnd(10)-1;
     float hRes   = openborvariant("hresolution")/2;
     
     //START AND RENEW VARIABLES

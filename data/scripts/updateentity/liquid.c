@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/animation/main_spawns.c"
 
 void main()
@@ -13,8 +14,8 @@ void main()
     int limit    = 208;
     float yVel    = 1;
     float time     = openborvariant("elapsed_time");
-    float xR     = rand()%10+10; //RANDOM XPOS
-    float yR     = rand()%50+50; //RANDOM YVEL
+    float xR     = rnd(10)+9; //RANDOM XPOS
+    float yR     = rnd(50)+49; //RANDOM YVEL
     float xAdd    = 254;
     float yAdd    = 160;
     float yMult    = 0.1;

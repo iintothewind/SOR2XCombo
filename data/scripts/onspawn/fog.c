@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/onspawn/main.c"
 #import "data/scripts/attributes.h"
 
@@ -67,7 +68,7 @@ void main()
         }
     }
 
-    int iR = rand()%16+1;
+    int iR = rnd(16);
 
     if(iR == 1){    vAlias = "Fog";}else
     if(iR == 2){    vAlias = "Gale";}else

@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/onspawn/main.c"
 #import "data/scripts/attributes.h"
 
@@ -36,7 +37,7 @@ void main()
     }
 
     //RANDOM PALETTES
-    int iR1 = rand()%100;
+    int iR1 = rnd(100)-1;
 
     if(iR1 >= 0 && iR1 < 20){
         iMap = 0;
@@ -59,7 +60,7 @@ void main()
     }
 
     //RANDOM NAMES
-    int iR2 = rand()%16+1;
+    int iR2 = rnd(16);
 
     if(iR2 == 1){    vAlias = "Fog";}else
     if(iR2 == 2){    vAlias = "Gale";}else

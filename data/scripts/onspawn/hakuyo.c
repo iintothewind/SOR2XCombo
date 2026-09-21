@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/onspawn/main.c"
 #import "data/scripts/attributes.h"
 
@@ -56,7 +57,7 @@ void main()
         iMap        = level;
     }
 
-    int iR = rand()%13+1;
+    int iR = rnd(13);
 
     if(iR == 1){    vAlias = "Hakuyo";}else
     if(iR == 2){    vAlias = "Kahoh";}else

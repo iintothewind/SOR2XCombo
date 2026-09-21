@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/updatelevel/main.c"
 
 void main()
@@ -12,7 +13,7 @@ void enemyTime(float dx, float dy, float dz)
     void vName;
     void vSpawn;
     int  iDir    = getentityproperty(self,"direction");
-    int  iR     = rand()%19+1;
+    int  iR     = rnd(19);
 
     if(getglobalvar("end") != 1){
         if(iR == 1)    {vName = "BasicX1";}else
@@ -119,8 +120,8 @@ void spawnX(void name1, void name2, void name3, void name4, float dx, float dy, 
     void vSpawn;
     void vRName = getentityproperty(self,"defaultname");
     int  iDir    = getentityproperty(self,"direction");
-    int  iR     = rand()%100;
-    float xR     = rand()%240+240;
+    int  iR     = rnd(100)-1;
+    float xR     = rnd(240)+239;
     float xPos    = openborvariant("xpos");
 
     dx = xPos+xR;

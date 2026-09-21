@@ -197,27 +197,31 @@ void invinc(float duration)
 }
 
 void rnd(int n) {
-    int ticks =  openborvariant("ticks");
-    int elapsed =  openborvariant("elapsed_time");
-    int playedSecond     = getglobalvar("playedSecond");
-    int randSeed     = rand();
+    int ticks        = openborvariant("ticks");
+    int elapsed      = openborvariant("elapsed_time");
+    int playedSecond = getglobalvar("playedSecond");
+    int seed;
 
-    if(ticks != NULL()) {
-        srand(ticks);
-    } else if(elapsed != NULL()) {
-        srand(elapsed);
-    } else if(playedSecond != NULL()) {
-        srand(playedSecond);
-    } else {
-        srand(randSeed);
+    if (ticks != NULL()) seed = ticks;
+    else if (elapsed != NULL()) seed = elapsed;
+    else if (playedSecond != NULL()) seed = playedSecond;
+    else seed = 0;
+
+    // Reseed only when the source changes (per ms), not every call:
+    // within a ms rand() advances -> adjacent rnd() are independent.
+    // Per-ms reseed keeps the stream fresh so it doesn't feel "fixed".
+    // Mix rand() in for extra per-process entropy.
+    // NOTE: OpenBOR scripting has no 'static'; track lastSeed via a global var (reuse `seed`).
+    int lastSeed = getglobalvar("seed");
+    if (seed != lastSeed) {
+        srand(seed ^ rand());
+        setglobalvar("seed", seed);
     }
 
-    if(n > 1) {
-        int rnd = rand() % n;
-        if(rnd < 0) {
-            rnd = -rnd;
-        }
-        return rnd + 1;
+    if (n > 1) {
+        int r = rand() % n;
+        if (r < 0) r = -r;
+        return r + 1;
     }
     return n;
 }

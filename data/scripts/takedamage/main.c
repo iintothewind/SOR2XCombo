@@ -198,7 +198,7 @@ void escapeCount()
         void type      = getentityproperty(self, "type");
         int dif        = 1;
         int chance     = 0;
-        int iR         = rand()%100;
+        int iR         = rnd(100)-1;
 
         if(type == openborconstant("TYPE_ENEMY")){
             //100% CHANCE

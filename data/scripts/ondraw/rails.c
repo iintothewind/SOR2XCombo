@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 #import "data/scripts/animation/main_spawns.c"
 
 void main()
@@ -8,8 +9,8 @@ void main()
     void vSpawn;
     int frame    = getentityproperty(self, "animpos");
     float xPos    = openborvariant("xpos");
-    float xR    = rand()%100; //Random spawn from left/right
-    float zR    = rand()%100; //Random spawn from up/down
+    float xR    = rnd(100)-1; //Random spawn from left/right
+    float zR    = rnd(100)-1; //Random spawn from up/down
     float hRes    = openborvariant("hresolution");
     float vx    = 3;
     float xDist    = 450;

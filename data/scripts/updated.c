@@ -125,7 +125,6 @@ void main()
         loadScore();
         saveAtt();
         saveAssets();
-        randomSeed();
         arcadeLock();
 
         //WORKS WITH "CLEARALL" FUNCTION

@@ -1,3 +1,4 @@
+#import "data/scripts/main.c"
 void spawn01(void vName, float fX, float fY, float fZ, int map, int dir, int mp, int layer, void anim, float delay)
 {    //spawn01 (Generic spawner)
     //Damon Vaughn Caskey
@@ -322,8 +323,8 @@ void spawnScreenX(void name, float fX, float fY, float fZ)
     void self     = getlocalvar("self");
     void vSpawn = spawn01(name, 0, 0, 0);
     float xPos     = openborvariant("xpos");
-    float xR     = rand()%220+240; //RANDOM XPOS
-    float sR     = rand()%100; //RANDOM SPAWN
+    float xR     = rnd(220)+239; //RANDOM XPOS
+    float sR     = rnd(100)-1; //RANDOM SPAWN
 
     if(sR >= 0 && sR < 50){
         fX = fX+xPos+xR; //CHANGES POSITION RELATIVE TO XPOS

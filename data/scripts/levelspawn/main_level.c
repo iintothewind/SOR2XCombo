@@ -109,7 +109,7 @@ void spawnX(void name1, void name2, void name3, void name4, float dx, float dy, 
     void vRName;
     int  iR     = rnd(100);
     int  iDir = iR%2;
-    float xR     = rand()%240+240;
+    float xR     = rnd(240)+239;
     float xPos    = openborvariant("xpos");
 
     dx = xPos+xR;

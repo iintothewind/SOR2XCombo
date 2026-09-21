@@ -2,19 +2,6 @@
 #import "data/scripts/keyall/menu_level.c"
 
 
-void randomSeed()
-{//Thanks to msmalik681 RANDOM++ SCRIPT
-
-    if(getlocalvar("seed") == NULL()){
-        float seed; //INITIALIZE SEED.
-
-        if(seed == NULL()){seed = 1;} //START IT OFF
-
-        seed++; //INCREMENT SEED
-        srand(seed); //APPLY SEED TO RANDOM FUNCTION
-        setlocalvar("seed", 1);
-    }
-}
 
 void screenshotsOff()
 {//Set screenshots on/off according to extra menu option
