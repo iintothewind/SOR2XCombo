@@ -408,7 +408,7 @@ anim grabattack #STAB PUNCH
     frame    data/chars/enemies/jack/a201.png
         delay    16
     bbox     134 124 30 62
-    attack8 156 124 52 21 8 1 0 0 30 12
+    attack8 156 124 52 21 15 1 0 0 30 12
     dropv 3 5
     frame    data/chars/enemies/jack/a202.png
         delay    8
@@ -450,7 +450,8 @@ anim freespecial2 #PUNCH
     frame    data/chars/enemies/jack/a201.png
         delay    16
     bbox     134 124 30 62
-    attack 156 124 52 21 8 1 0 0 30 12
+    attack 156 124 52 21 15 1 0 0 30 12
+    dropv 3 5
     frame    data/chars/enemies/jack/a202.png
         delay    8
     attack 0 0 0 0 0 0 0 0 0 0
@@ -540,6 +541,7 @@ anim follow7 #counter
         delay    16
     #bbox     134 124 30 62
     attack 156 124 52 21 25 1 0 0 30 12
+    dropv 3 5
     frame    data/chars/enemies/jack/a202.png
         delay    8
     attack 0 0 0 0 0 0 0 0 0 0
