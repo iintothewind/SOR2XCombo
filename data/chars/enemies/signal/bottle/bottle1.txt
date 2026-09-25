@@ -26,15 +26,15 @@ anim idle
     offset    25 30
     bbox     18 22 15 15
     sound    data/sounds/HighAttack.wav
-    attack 18 22 15 15 8 1 0 0 0 12
+    attack 18 22 15 15 20 1 0 0 0 12
     frame    data/chars/enemies/signal/bottle/bottle00.png
-    attack 18 22 15 15 8 1 0 0 0 12
+    attack 18 22 15 15 20 1 0 0 0 12
     bbox     18 22 15 15
     frame    data/chars/enemies/signal/bottle/bottle01.png
-    attack 18 22 15 15 8 1 0 0 0 12
+    attack 18 22 15 15 20 1 0 0 0 12
     bbox     18 22 15 15
     frame    data/chars/enemies/signal/bottle/bottle02.png
-    attack 18 22 15 15 8 1 0 0 0 12
+    attack 18 22 15 15 20 1 0 0 0 12
     bbox     18 22 15 15
     frame    data/chars/enemies/signal/bottle/bottle03.png
     attack 0 0 0 0 0 0 0 0 0 0

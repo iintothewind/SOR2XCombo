@@ -25,7 +25,7 @@ anim idle
     offset    31 27
     bbox     23 22 16 7
     hitfx    data/sounds/Cutter.wav
-    attack 23 22 16 7 15 0 0 10 24
+    attack 23 22 16 7 20 0 0 10 24
     frame    data/chars/weapons/kunai08.png
     sound    data/sounds/Whoosh.wav
     frame    data/chars/weapons/kunai08.png

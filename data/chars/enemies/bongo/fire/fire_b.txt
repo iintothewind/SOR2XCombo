@@ -19,7 +19,7 @@ anim idle
     delay    6
     offset    49 77
     sound    data/sounds/Fire2.wav
-    burn 41 58 16 23 4 2 0 0 0 12
+    burn 41 58 16 23 9 2 0 0 0 12
     frame    data/chars/enemies/bongo/fire/original/fire00.png
     frame    data/chars/enemies/bongo/fire/original/fire01.png
     frame    data/chars/enemies/bongo/fire/original/fire02.png

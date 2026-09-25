@@ -22,6 +22,6 @@ anim idle
     delay    2
     offset    25 27
     sound    data/sounds/Shot.wav
-    attack 20 25 8 3 9 1 1 0 0 12
+    attack 20 25 8 3 9 0 1 0 0 12
     dropv 1.5 1 0
     frame    data/chars/bosses/mrx/shot/shot00.png

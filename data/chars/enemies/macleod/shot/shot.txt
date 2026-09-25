@@ -21,6 +21,6 @@ anim idle
     delay    2
     offset    25 27
     sound    data/sounds/Shot2.wav
-    attack 20 25 8 3 6 1 1 0 0 12
+    attack 20 25 8 3 60 1 1 0 0 12
     dropv 1.5 1 0
     frame    data/chars/enemies/macleod/shot/shot00.png

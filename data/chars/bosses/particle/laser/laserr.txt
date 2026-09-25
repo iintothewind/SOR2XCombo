@@ -20,6 +20,6 @@ anim idle
     delay    8
     offset    26 26
     hitfx    data/sounds/StrongPunch.wav
-    attack 0 20 50 11 8 1 0 0 10 12
+    attack 0 20 50 11 9 1 1 0 10 12
     seal 1 1
     frame    data/chars/bosses/particle/laser/laser01.png

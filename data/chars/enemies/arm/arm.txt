@@ -149,7 +149,7 @@ anim attack3 #SHOCK ATTACK
     frame    data/chars/enemies/arm/arm10.png
     frame    data/chars/enemies/arm/arm11.png
         seta    0
-    shock 86 222 30 68 48 3 1 0 0 12
+    shock 86 222 30 68 48 25 1 0 0 12
     sound    data/sounds/Wind3.wav
     frame    data/chars/enemies/arm/arm10.png
     frame    data/chars/enemies/arm/arm11.png

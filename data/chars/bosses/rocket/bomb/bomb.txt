@@ -24,7 +24,7 @@ anim idle
     delay    80
     offset    25 33
     sound    data/sounds/grenade1.wav
-    burn 21 18 8 15 16 1 1 0 0 36
+    burn 21 18 8 15 35 1 1 0 0 36
     dropv 4 4 0
     frame    data/chars/bosses/rocket/bomb/bomb00.png
         delay    32
@@ -76,7 +76,7 @@ anim follow1
     delay    80
     offset    25 33
     sound    data/sounds/grenade1.wav
-    burn 21 18 8 15 16 1 1 0 0 36
+    burn 21 18 8 15 35 1 1 0 0 36
     dropv 4 4 0
     frame    data/chars/bosses/rocket/bomb/bomb00.png
         delay    32
@@ -128,7 +128,7 @@ anim follow2
     delay    80
     offset    25 33
     sound    data/sounds/grenade1.wav
-    burn 21 18 8 15 16 1 1 0 0 36
+    burn 21 18 8 15 35 1 1 0 0 36
     dropv 4 4 0
     frame    data/chars/bosses/rocket/bomb/bomb00.png
         delay    32
@@ -179,7 +179,7 @@ anim follow3 #EXPLOSION
     offset    25 33
     @cmd spawnBind "Destruction" 0 0 1
     frame    data/chars/bosses/rocket/bomb/empty.png
-    burn 0 0 50 50 16 1 1 0 0 36
+    burn 0 0 50 50 35 1 1 0 0 36
     dropv 4 4 0
     frame    data/chars/bosses/rocket/bomb/empty.png
     @cmd suicide

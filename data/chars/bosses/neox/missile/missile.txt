@@ -27,7 +27,7 @@ anim idle
     delay    4
     offset    36 26
     sound    data/sounds/Wind3.wav
-    burn 24 24 12 4 20 2 1 0 0 12
+    burn 24 24 12 4 25 2 1 0 0 12
     dropv 3 4 0
     frame    data/chars/bosses/neox/missile/missile00.png #LEFT-RIGHT
     frame    data/chars/bosses/neox/missile/missile01.png
@@ -45,7 +45,7 @@ anim follow1 #EXPLOSION
     offset    36 26
     @cmd spawnBind "Destruction" 0 0 1
     frame    data/chars/bosses/neox/missile/empty.png
-    burn 12 0 50 50 20 2 1 0 0 12
+    burn 12 0 50 50 25 2 1 0 0 12
     dropv 3 4 0
     frame    data/chars/bosses/neox/missile/empty.png
     @cmd suicide
@@ -62,7 +62,7 @@ anim fall #EXPLOSION
     offset    36 26
     @cmd spawnBind "Destruction" 0 0 1
     frame    data/chars/bosses/neox/missile/empty.png
-    burn 12 0 50 50 20 2 1 0 0 12
+    burn 12 0 50 50 25 2 1 0 0 12
     dropv 3 4 0
     frame    data/chars/bosses/neox/missile/empty.png
     @cmd suicide
@@ -79,7 +79,7 @@ anim death #EXPLOSION
     offset    36 26
     @cmd spawnBind "Destruction" 0 0 1
     frame    data/chars/bosses/neox/missile/empty.png
-    burn 12 0 50 50 20 2 1 0 0 12
+    burn 12 0 50 50 25 2 1 0 0 12
     dropv 3 4 0
     frame    data/chars/bosses/neox/missile/empty.png
     @cmd suicide

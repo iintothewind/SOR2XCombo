@@ -49,18 +49,12 @@ anim follow7 #COUNTER
     loop    0
     delay    1000
     offset    143 200
-    frame    data/chars/bosses/zamza/block00.png
-    frame    data/chars/bosses/zamza/upper00.png
-    frame    data/chars/bosses/zamza/upper01.png
-    frame    data/chars/bosses/zamza/upper01.png
-    frame    data/chars/bosses/zamza/upper02.png
-    frame    data/chars/bosses/zamza/upper03.png
-    frame    data/chars/bosses/zamza/upper04.png
-    frame    data/chars/bosses/zamza/upper05.png
-    frame    data/chars/bosses/zamza/upper06.png
-    frame    data/chars/bosses/zamza/upper07.png
-    frame    data/chars/bosses/zamza/upper08.png
-    frame    data/chars/bosses/zamza/upper09.png
+    frame    data/chars/bosses/zamza/slam00.png
+    frame    data/chars/bosses/zamza/slam01.png
+    frame    data/chars/bosses/zamza/slam02.png
+    frame    data/chars/bosses/zamza/slam03.png
+    frame    data/chars/bosses/zamza/slam03.png
+    frame    data/chars/bosses/zamza/jumpland00.png
 
 anim dodge
     loop    0

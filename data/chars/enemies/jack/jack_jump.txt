@@ -330,7 +330,8 @@ anim riseattack
     frame    data/chars/enemies/jack/a201.png
         delay    16
     bbox     134 124 30 62
-    attack 156 124 52 21 8 1 0 0 30 12
+    attack 156 124 52 21 15 1 0 0 30 12
+    dropv 3 5
     frame    data/chars/enemies/jack/a202.png
         delay    8
     attack 0 0 0 0 0 0 0 0 0 0
@@ -373,7 +374,8 @@ anim attack2
     frame    data/chars/enemies/jack/a201.png
         delay    16
     bbox     134 124 30 62
-    attack 156 124 52 21 8 1 0 0 30 12
+    attack 156 124 52 21 15 1 0 0 30 12
+    dropv 3 5
     frame    data/chars/enemies/jack/a202.png
         delay    8
     attack 0 0 0 0 0 0 0 0 0 0
@@ -530,18 +532,18 @@ anim follow7 #counter
     loop    0
     delay    8
     offset    131 184
-    bbox     120 120 30 66
+    #bbox     120 120 30 66
     hitfx    data/sounds/HighPunch.wav
     sound    data/sounds/HighAttack.wav
     frame    data/chars/enemies/jack/a200.png
     frame    data/chars/enemies/jack/a201.png
         delay    16
-    bbox     134 124 30 62
-    attack 156 124 52 21 8 1 0 0 30 12
+    #bbox     134 124 30 62
+    attack 156 124 52 21 25 1 0 0 30 12
     frame    data/chars/enemies/jack/a202.png
         delay    8
     attack 0 0 0 0 0 0 0 0 0 0
-    bbox     120 120 30 66
+    #bbox     120 120 30 66
     frame    data/chars/enemies/jack/a201.png
 
 anim block
