@@ -427,6 +427,11 @@ anim freespecial #SPAWN KNIFE
     bbox     120 118 31 68
     frame    data/chars/enemies/jack/getknife00.png
         delay    44
+    #KNOWN ISSUE: the knife is not caught right after landing. While Jack plays this
+    #animation, ai_check_busy() (!idling) makes common_think() return before
+    #common_move(), so the AI item-pickup branch never runs. The knife sits for ~1s
+    #until the animation ends, then Jack picks it up (ANI_GET). A script-side instant
+    #pickup (ondraw) was tried and reverted: it caught the knife even while hit/flying.
     @cmd spawnToss "Knife" 33 60 -1 0 2.5 0 "ANI_FOLLOW1"
     frame    data/chars/enemies/jack/getknife01.png
     bbox 10127 10122 40 16
