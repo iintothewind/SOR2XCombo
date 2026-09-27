@@ -130,6 +130,7 @@ anim idle
     frame    data/chars/bosses/chunli/idle01.png
     frame    data/chars/bosses/chunli/idle02.png
     frame    data/chars/bosses/chunli/idle03.png
+    @cmd vulner
     @cmd looper 4 9
         delay    24
     bbox 225 98 25 81

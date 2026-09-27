@@ -137,6 +137,7 @@ anim idle
     frame    data/chars/heroes/axel/idle00.png
     frame    data/chars/heroes/axel/idle01.png
     frame    data/chars/heroes/axel/idle02.png
+    @cmd vulner
     frame    data/chars/heroes/axel/idle03.png
         delay    24
     @cmd looper 4 9

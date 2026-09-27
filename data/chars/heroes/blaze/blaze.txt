@@ -145,6 +145,7 @@ anim idle
     frame    data/chars/heroes/blaze/idle02.png
     frame    data/chars/heroes/blaze/idle03.png
         delay    12
+    @cmd vulner
     @cmd looper 4 9
     frame    data/chars/heroes/blaze/idle04.png
     frame    data/chars/heroes/blaze/idle05.png

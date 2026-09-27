@@ -121,6 +121,7 @@ anim idle
     frame    data/chars/bosses/kage/idle05.png
     frame    data/chars/bosses/kage/idle06.png
     frame    data/chars/bosses/kage/idle07.png
+    @cmd vulner
     frame    data/chars/bosses/kage/idle08.png
 
 anim select

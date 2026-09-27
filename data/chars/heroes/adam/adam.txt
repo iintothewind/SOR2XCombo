@@ -132,6 +132,7 @@ anim idle
     frame    data/chars/heroes/adam/idle00.png
     frame    data/chars/heroes/adam/idle01.png
     frame    data/chars/heroes/adam/idle02.png
+    @cmd vulner
     frame    data/chars/heroes/adam/idle03.png
 
 anim chargeattack

@@ -132,15 +132,15 @@ anim idle
     delay    16
     offset    238 172
     bbox 221 86 30 90
+    frame    data/chars/bosses/bison/idle00.png
+    frame    data/chars/bosses/bison/idle01.png
+    frame    data/chars/bosses/bison/idle02.png
+    frame    data/chars/bosses/bison/idle03.png
+    frame    data/chars/bosses/bison/idle00.png
+    frame    data/chars/bosses/bison/idle01.png
+    frame    data/chars/bosses/bison/idle02.png
+    frame    data/chars/bosses/bison/idle03.png
     @cmd vulner
-    frame    data/chars/bosses/bison/idle00.png
-    frame    data/chars/bosses/bison/idle01.png
-    frame    data/chars/bosses/bison/idle02.png
-    frame    data/chars/bosses/bison/idle03.png
-    frame    data/chars/bosses/bison/idle00.png
-    frame    data/chars/bosses/bison/idle01.png
-    frame    data/chars/bosses/bison/idle02.png
-    frame    data/chars/bosses/bison/idle03.png
     @cmd looper 4 3
     bbox 223 74 30 102
     delay    24
@@ -1430,7 +1430,7 @@ anim follow10 #DODGE
     frame    data/chars/bosses/bison/run05.png
     @cmd dasher 0 0 0
     @cmd invinc 1
-    frame    data/chars/bosses/bison/walk00.png
+    frame    data/chars/bosses/bison/idle00.png
 
 anim follow11 #BLOCK
     @cmd checkBlock

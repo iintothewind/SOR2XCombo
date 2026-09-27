@@ -119,6 +119,7 @@ anim idle
     bbox     128 114 18 80
     frame    data/chars/bosses/shiva/idle00.png
     frame    data/chars/bosses/shiva/idle01.png
+    @cmd vulner
     frame    data/chars/bosses/shiva/idle02.png
 
 anim chargeattack

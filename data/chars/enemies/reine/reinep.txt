@@ -118,6 +118,7 @@ anim idle
     frame    data/chars/enemies/reine/idle01.png
     frame    data/chars/enemies/reine/idle01.png
     frame    data/chars/enemies/reine/idle01.png
+    @cmd vulner
     @cmd looper 0 9
     frame    data/chars/enemies/reine/idle02.png
     sound    data/voices/morrigan05.wav

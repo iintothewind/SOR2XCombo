@@ -142,6 +142,7 @@ anim idle
     frame    data/chars/heroes/sammy/idle02.png
     frame    data/chars/heroes/sammy/idle03.png
         delay    12
+    @cmd vulner
     @cmd looper 4 5
     frame    data/chars/heroes/sammy/idle04.png
     frame    data/chars/heroes/sammy/idle05.png

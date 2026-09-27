@@ -243,7 +243,7 @@ anim follow10 #DODGE
     frame    data/chars/bosses/bison/run03.png
     frame    data/chars/bosses/bison/run04.png
     frame    data/chars/bosses/bison/run05.png
-    frame    data/chars/bosses/bison/walk00.png
+    frame    data/chars/bosses/bison/idle00.png
 
 anim dodge
     loop    0
@@ -255,4 +255,4 @@ anim dodge
     frame    data/chars/bosses/bison/run03.png
     frame    data/chars/bosses/bison/run04.png
     frame    data/chars/bosses/bison/run05.png
-    frame    data/chars/bosses/bison/walk00.png
+    frame    data/chars/bosses/bison/idle00.png

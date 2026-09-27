@@ -1506,9 +1506,7 @@ anim follow10 #DODGE
         delay    12
     @cmd dasher 0 0 0
     @cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold"
-    #@cmd keyAni "attack3" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
-    #@cmd keyAni "special" "ANI_FOLLOW11" "blockType" "hold_(alt._mode_on)"
-    frame    data/chars/bosses/bison/walk00.png
+    frame    data/chars/bosses/bison/idle00.png
 
 anim follow11 #BLOCK
     @cmd checkBlock
@@ -1567,5 +1565,5 @@ anim dodge
         delay    12
     @cmd mpCost -10
     @cmd dasher 0 0 0
-    frame    data/chars/bosses/bison/walk00.png
+    frame    data/chars/bosses/bison/idle00.png
 

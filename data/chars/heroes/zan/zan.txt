@@ -130,6 +130,7 @@ anim idle
     frame    data/chars/heroes/zan/idle00.png
     frame    data/chars/heroes/zan/idle01.png
     frame    data/chars/heroes/zan/idle02.png
+    @cmd vulner
     frame    data/chars/heroes/zan/idle03.png
 
 anim chargeattack
