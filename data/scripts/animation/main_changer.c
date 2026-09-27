@@ -279,6 +279,17 @@ void invinc(float duration)
     }
 }
 
+void vulner()
+{
+    void self  = getlocalvar("self");
+
+    if(!selfAlive()){
+        return;
+    }else {
+        changeentityproperty(self, "aiflag", "invincible", 0);
+    }
+}
+
 
 void invincible(int flag, float duration)
 {//Turns invincible status, used on riseattack and aerial recovery animations

@@ -217,7 +217,8 @@ void block()
     //DEFAULT BLOCK COMMAND
     if(blockT == "hold"){
         if(vAniID == openborconstant("ANI_IDLE") || vAniID == openborconstant("ANI_ATTACK1")){
-            if(playerkeys(iPIndex, 0, "attack3")){
+            if(playerkeys(iPIndex, 0, "attack3") || playerkeys(iPIndex, 1, "attack3")){
+                changeentityproperty(self, "aiflag", "invincible", 0);
                 executeanimation(self, openborconstant("ANI_FOLLOW11"), 1);
                 changeentityproperty(self, "velocity", 0, 0, 0);
             }
@@ -227,7 +228,8 @@ void block()
     //DEFAULT + ALTERNATIVE BLOCK COMMAND
     if(blockT == "hold_(alt._mode_on)"){
         if(vAniID == openborconstant("ANI_IDLE") || vAniID == openborconstant("ANI_ATTACK1")){
-            if(playerkeys(iPIndex, 0, "attack3") || playerkeys(iPIndex, 0, "attack", "special") || playerkeys(iPIndex, 1, "attack", "special")){
+            if(playerkeys(iPIndex, 0, "attack3") || playerkeys(iPIndex, 1, "attack3") || playerkeys(iPIndex, 0, "attack", "special") || playerkeys(iPIndex, 1, "attack", "special")){
+                changeentityproperty(self, "aiflag", "invincible", 0);
                 executeanimation(self, openborconstant("ANI_FOLLOW11"), 1);
                 changeentityproperty(self, "velocity", 0, 0, 0);
             }

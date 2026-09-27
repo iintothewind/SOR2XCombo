@@ -33,7 +33,7 @@ void clearL()
 {//Clears all local variables
     void self = getlocalvar("self");
     changeentityproperty(self, "aiflag", "invincible", 0);
-  grabEnd();
+    grabEnd();
     clearlocalvar();
 }
 

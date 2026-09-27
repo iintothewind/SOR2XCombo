@@ -132,6 +132,7 @@ anim idle
     delay    16
     offset    238 172
     bbox 221 86 30 90
+    @cmd vulner
     frame    data/chars/bosses/bison/idle00.png
     frame    data/chars/bosses/bison/idle01.png
     frame    data/chars/bosses/bison/idle02.png
@@ -142,7 +143,7 @@ anim idle
     frame    data/chars/bosses/bison/idle03.png
     @cmd looper 4 3
     bbox 223 74 30 102
-  delay    24
+    delay    24
     @cmd hpCost -150
     sound    data/voices/bison72.wav
     frame    data/chars/bosses/bison/win00.png
@@ -841,6 +842,7 @@ anim special #DEFENSIVE SPECIAL
     attack 0 0 0 0 0 0 0 0 0 0
     frame    data/chars/bosses/bison/idle00.png
     @cmd clearL
+    bbox 221 86 30 90
     frame    data/chars/bosses/bison/idle00.png
 
 anim special2 #OFFENSIVE SPECIAL

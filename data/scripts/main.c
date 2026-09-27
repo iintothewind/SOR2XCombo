@@ -196,6 +196,18 @@ void invinc(float duration)
     }
 }
 
+void vulner()
+{
+    void self  = getlocalvar("self");
+
+    if(!selfAlive()){
+        return;
+    }else {
+        changeentityproperty(self, "aiflag", "invincible", 0);
+    }
+}
+
+
 void rnd(int n) {
     int ticks        = openborvariant("ticks");
     int elapsed      = openborvariant("elapsed_time");
